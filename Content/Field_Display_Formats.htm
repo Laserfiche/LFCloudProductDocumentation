@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="4748" MadCap:lastWidth="867">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Field Display Formats</h1>
+        <p>You can customize the way that Laserfiche displays date, time and number field values.&#160;This customizing can be done on a field-by-field basis. For example, you might choose to always display one number field as a percentage (so that the value "90" will be displayed as "90%"), and a different number field as currency (so that the value "345.98" will be displayed as "$345.98").</p>
+        <p>Laserfiche provides several default field displays:</p>
+        <ul>
+            <li><b>Number field:</b> General, Percent, Scientific (scientific notation), and Currency (select the specific currency you want to display from the list)</li>
+            <li><b>Date field:</b> Long date, Short date. </li>
+            <li><b>Time field:</b> Long time, Short time.</li>
+            <li><b>Date/Time field:</b> Long date/time, Short date/time. </li>
+        </ul>
+        <p class="note"><b>Note:</b>&#160;Long and short date and time display will match the locale settings of your browser.</p>
+        <p>You can also create a custom field display format.The syntax depends on whether you are working with a number field, or a date or time field.</p>
+        <h2 class="topicheading">Custom Number Field Display</h2>
+        <p>A number pattern is a string of characters that consists of some combination of literal characters and symbols. A literal character is a character that will be displayed as you type it in the field format; a symbol will be replaced by the value or values it represents. The pattern determined by the combination of these will control how numbers are displayed in that field. In some cases, a symbol might indicate that a particular operation will be performed on the value for display purposes.</p>
+        <p>The table below lists the possible elements of a number pattern and the symbol used to represent them in the pattern. Examples are provided below the table.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the syntax elements for custom number field display formatting.">
+            <caption>Custom Number Field Display Format Syntax Elements</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Description</b>
+                    </th>
+                    <th><b>Symbol</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Digit</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>Rounding increment</td>
+                    <td>1-9</td>
+                </tr>
+                <tr>
+                    <td>Significant digit</td>
+                    <td>@</td>
+                </tr>
+                <tr>
+                    <td>Digit, zero shown as absent</td>
+                    <td>#</td>
+                </tr>
+                <tr>
+                    <td>Decimal separator or monetary decimal separator</td>
+                    <td>.</td>
+                </tr>
+                <tr>
+                    <td>Minus sign</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Grouping separator</td>
+                    <td>,</td>
+                </tr>
+                <tr>
+                    <td>Separator between mantissa and exponent in scientific notation</td>
+                    <td>E</td>
+                </tr>
+                <tr>
+                    <td>Prefix positive exponents with a localized plus sign</td>
+                    <td>+</td>
+                </tr>
+                <tr>
+                    <td>Separator between positive and negative sub-patterns</td>
+                    <td>;</td>
+                </tr>
+                <tr>
+                    <td>Multiply by 100 and show as percentage</td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>Multiply by 1000 and show as per mille</td>
+                    <td>‰</td>
+                </tr>
+                <tr>
+                    <td>Currency sign, replaced by currency symbol</td>
+                    <td>¤</td>
+                </tr>
+                <tr>
+                    <td>Currency sign, replaced by international currency symbol</td>
+                    <td>¤¤</td>
+                </tr>
+                <tr>
+                    <td>Currency sign, replaced by currency plural names (e.g., "US&#160;dollars")</td>
+                    <td>¤¤¤</td>
+                </tr>
+                <tr>
+                    <td>Quote special characters in prefix or suffic</td>
+                    <td>'</td>
+                </tr>
+                <tr>
+                    <td>Pad character indicator</td>
+                    <td>*</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-weight: bold;">Examples</p>
+        <table class="tablesorter" style="" summary="This table lists examples of custom number field display formatting.">
+            <caption>Custom Number Field Display Format Examples</caption>
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Pattern</th>
+                    <th>User Input</th>
+                    <th><b>Display Value</b>
+                    </th>
+                    <th><b>Notes</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>#,###,##0.0#</td>
+                    <td>1234567.8</td>
+                    <td>1,234,567.8</td>
+                    <td>The character used to separate groups of digits depends on your local settings. &#160;In some regions, a comma is used, as in the display value in this example, but in other regions another character (such as a period)&#160;might be used.</td>
+                </tr>
+                <tr>
+                    <td>#,###,##0.0#</td>
+                    <td>-1234567.8</td>
+                    <td>-1234,567.8</td>
+                    <td>This pattern is identical to the above. If no special formatting is indicated for negative numbers, the same formatting as for positive numbers will be used, prepended with a minus sign.</td>
+                </tr>
+                <tr>
+                    <td>###,##0.0;'('-###,##0.0')'</td>
+                    <td>1234.5</td>
+                    <td>1,234.5</td>
+                    <td>If you want to display positive and negative numbers differently beyond simply adding a minus sign, you can separate a positive and negative pattern with a semicolon. This pattern contains both a positive and negative subpattern, and this example of user input demonstrates the handling for positive numbers, specified by the pattern before the ";" symbol.</td>
+                </tr>
+                <tr>
+                    <td>###,##0.0;'('-###,##0.0')'</td>
+                    <td>-1234.5</td>
+                    <td>(-1,234.5)</td>
+                    <td>As with the above example, this pattern specifies both a positive and negative display pattern. This example of user input demonstrates the handling for negative numbers, specified by the pattern after the ";" symbol. In this case, negative numbers are indicated by a minus sign before the value, and are contained within parentheses.</td>
+                </tr>
+                <tr>
+                    <td>#1,000</td>
+                    <td>1234567.8</td>
+                    <td>1,234,570</td>
+                    <td>The "100"&#160;preceding the final 0 in the string indicates that the value should be rounded to the nearest hundreds place. Note that the actual value set has not been lost; the server is still storing the entire value down to the tenth place. The rounded value is for display purposes only.</td>
+                </tr>
+                <tr>
+                    <td>###,##0' kph'</td>
+                    <td>55.5</td>
+                    <td>55.5 kph</td>
+                    <td>The value in single quotes is a suffix. It is printed as-is and is not parsed, but provides additional information about the value (in this case, indicates that it is a speed in kilometers per hour).</td>
+                </tr>
+                <tr>
+                    <td>#,###,###,###0.00 ¤¤¤</td>
+                    <td>1159.9</td>
+                    <td>1,159.90 US&#160;Dollars</td>
+                    <td>The ¤ symbol written three times in a row indicates that the currency type should be written out in full.</td>
+                </tr>
+                <tr>
+                    <td>*0#####0.0</td>
+                    <td>1234.5</td>
+                    <td>0012345.6</td>
+                    <td>The "*0" string at the beginning of the pattern indicates that the character 0 should be used as a padding character if the input value is shorter than the number of digits specified. Since the pattern specifies six digits before the decimal point, two 0 characters are prepended to the string for display. This allows you to maintain consistent display lengths even for input numbers of varying lengths.</td>
+                </tr>
+                <tr>
+                    <td>@@@</td>
+                    <td>1234.5</td>
+                    <td>1230</td>
+                    <td>The @ character indicates the number of significant digits to display. In this example, exactly three significant digits should be displayed. The entire number is saved on the server, but only the specified significant digits will be visible to users browsing the repository.</td>
+                </tr>
+                <tr>
+                    <td>@@##</td>
+                    <td>1234.5</td>
+                    <td>1234</td>
+                    <td>Combining the @ and # characters allows you to set a maximum and minimum number of significant digits to display. In this example and the next, a value will be displayed with no fewer than two or more than four significant digits. The input string for this example contains five digits, so the fifth is not displayed.</td>
+                </tr>
+                <tr>
+                    <td>@@##</td>
+                    <td>1</td>
+                    <td>1.0</td>
+                    <td>As in the above example, this pattern indicates that no fewer than two or more than four significant digits should be displayed. Thus, the value "1" will be displayed with two significant digits, as "1.0".</td>
+                </tr>
+                <tr>
+                    <td>0.###E0</td>
+                    <td>1234.5</td>
+                    <td>1.234E3</td>
+                    <td>Scientific notation is a way of expressing numbers as a combination of a mantissa (the significant digits of the number)&#160;and an exponent. This example displays a number in scientific notation with four significant digits.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Custom Date and Time Field Display</h2>
+        <p>A date or time pattern is a string of characters that will be replaced by the actual date and time value input in a field. The pattern determines what date or time information will be displayed, and how it will be displayed. Since the default date and time display options use the client computer settings, you can use a custom date, time or date/time field if you want to display dates and times consistently between client computers. You can also use them to display information not contained within the default date and time fields, such as the quarter or era.</p>
+        <p>The table below lists all of the possible elements of a date or time pattern, the symbol used to represent them, and an example of how the final value would be displayed. In some cases, the same element may have several different display options. &#160;For example, the symbol y is used for the year, but you can control whether to display all four digits, such as "1999"&#160;(in which case you would use the pattern "y"&#160;or "yyyy"), or to display just the last two digits, such as "99"&#160;(in which case you would use the pattern "yy"). </p>
+        <p>"Stand Alone" values refer to those designed to stand on their own, as opposed to being with other formatted values. if you want to store the current quarter alone, as “2nd quarter”, you would use the stand alone format (QQQQ), whereas “2nd quarter 2007” would use the regular format (qqqq yyyy). In some locales the “Stand Alone” outputs might differ from those of their regular symbol counterparts.    </p>
+        <table class="tablesorter" style="" summary="This table lists the syntax elements for custom date and time field display formatting.">
+            <caption>Custom Date and Time Field Display Format Syntax Elements</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Description</b>
+                    </th>
+                    <th><b>Symbol</b>
+                    </th>
+                    <th><b>Example</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Era Designator</td>
+                    <td>G</td>
+                    <td>AD</td>
+                </tr>
+                <tr>
+                    <td>Year (full)</td>
+                    <td>y <i>or</i> yyyy</td>
+                    <td>1998</td>
+                </tr>
+                <tr>
+                    <td>Year (abbreviated)</td>
+                    <td>yy</td>
+                    <td>98</td>
+                </tr>
+                <tr>
+                    <td>Year for "Week of Year"</td>
+                    <td>Y</td>
+                    <td>1999</td>
+                </tr>
+                <tr>
+                    <td>Quarter (numeric)</td>
+                    <td>Q <i>or</i> QQ</td>
+                    <td>02</td>
+                </tr>
+                <tr>
+                    <td>Quarter (abbreviated)</td>
+                    <td>QQQ</td>
+                    <td>Q2</td>
+                </tr>
+                <tr>
+                    <td>Quarter (full)</td>
+                    <td>QQQQ</td>
+                    <td>2nd Quarter</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Quarter (numeric)</td>
+                    <td>q <i>or</i> qq</td>
+                    <td>02</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Quarter (abbreviated)</td>
+                    <td>qqq</td>
+                    <td>Q2</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Quarter (full)</td>
+                    <td>qqqq</td>
+                    <td>2nd Quarter</td>
+                </tr>
+                <tr>
+                    <td>Month (numeric)</td>
+                    <td>M  <i>or</i> MM</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td>Month (abbreviated)</td>
+                    <td>MMM</td>
+                    <td>Sept</td>
+                </tr>
+                <tr>
+                    <td>Month (full)</td>
+                    <td>MMMM</td>
+                    <td>September</td>
+                </tr>
+                <tr>
+                    <td>Month (initial)</td>
+                    <td>MMMMM</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Month (numeric)</td>
+                    <td>L <i>or</i> LL</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Month (abbreviated)</td>
+                    <td>LLL</td>
+                    <td>Sept</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Month (full)</td>
+                    <td>LLLL</td>
+                    <td>September</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Month (initial)</td>
+                    <td>LLLLL</td>
+                    <td>S</td>
+                </tr>
+                <tr>
+                    <td>Week of Year</td>
+                    <td>w</td>
+                    <td>182</td>
+                </tr>
+                <tr>
+                    <td>Week of Month</td>
+                    <td>W</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Day of Month</td>
+                    <td>d</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Day of Month (two-digit)</td>
+                    <td>dd</td>
+                    <td>05</td>
+                </tr>
+                <tr>
+                    <td>Day of Year</td>
+                    <td>D</td>
+                    <td>205</td>
+                </tr>
+                <tr>
+                    <td>Day of Week in Month (e.g., 2nd Wed. in July)</td>
+                    <td>f</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Modified Julian Day Number</td>
+                    <td>g</td>
+                    <td>2451334</td>
+                </tr>
+                <tr>
+                    <td>Day of Week (abbreviated)</td>
+                    <td>E, EE or EEE</td>
+                    <td>Tues</td>
+                </tr>
+                <tr>
+                    <td>Day of Week (full)</td>
+                    <td>EEEE</td>
+                    <td>Tuesday</td>
+                </tr>
+                <tr>
+                    <td>Day of Week (initial)</td>
+                    <td>EEEEE</td>
+                    <td>T</td>
+                </tr>
+                <tr>
+                    <td>Local Day of Week (if Mon. is 1, Tue. is 2, etc)</td>
+                    <td>e</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Stand Alone Local Day of Week</td>
+                    <td>c</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>AM/PM&#160;marker</td>
+                    <td>a</td>
+                    <td>AM</td>
+                </tr>
+                <tr>
+                    <td>Hours in AM or PM (1-12)</td>
+                    <td>h</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>Hours in AM or PM&#160;(1-12) (two-digit)</td>
+                    <td>hh</td>
+                    <td>07</td>
+                </tr>
+                <tr>
+                    <td>Hours in AM or PM (0-11)</td>
+                    <td>K</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Hours in AM or PM (0-11) (two-digit)</td>
+                    <td>KK</td>
+                    <td>05</td>
+                </tr>
+                <tr>
+                    <td>Hours in Day (0-23)</td>
+                    <td>H</td>
+                    <td>8</td>
+                </tr>
+                <tr>
+                    <td>Hours in Day (0-23) (two-digit)</td>
+                    <td>HH</td>
+                    <td>08</td>
+                </tr>
+                <tr>
+                    <td>Hours in Day (1-24)</td>
+                    <td>k</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Hours in Day (1-24)&#160;(two-digit)</td>
+                    <td>kk</td>
+                    <td>20</td>
+                </tr>
+                <tr>
+                    <td>Minute in Hour</td>
+                    <td>m</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Minute in Hour (two-digit)</td>
+                    <td>mm</td>
+                    <td>03</td>
+                </tr>
+                <tr>
+                    <td>Second in Hour</td>
+                    <td>s</td>
+                    <td>9</td>
+                </tr>
+                <tr>
+                    <td>Second in Hour (two-digit)</td>
+                    <td>ss</td>
+                    <td>09</td>
+                </tr>
+                <tr>
+                    <td>Single Quote</td>
+                    <td>''</td>
+                    <td>'</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Letters may be included in the pattern, but they must be enclosed in single quotes. For example, the pattern "qqqq 'of' yyyy"&#160;would be returned as "2nd Quarter of 2009". Other characters besides single quotes and letters may be included as-is, without needing to be enclosed. For example, the pattern "hh:mm:ss" would return "09:15:45".</p>
+        <p style="font-weight: bold;">Examples</p>
+        <table class="tablesorter" style="" summary="This table lists examples of custom date and time field display formatting.">
+            <caption>Custom Date and Time Field Display Format Examples</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Pattern</th>
+                    <th><b>Result</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>yyyy-MM-dd hh:mm:ss a</td>
+                    <td>2009-02-19 04:31:16 PM</td>
+                </tr>
+                <tr>
+                    <td>EEE, MMM d, ''yy</td>
+                    <td>Wed, Feb 19, '09</td>
+                </tr>
+                <tr>
+                    <td>qqqq 'of' yyyy</td>
+                    <td>1st Quarter of 2009</td>
+                </tr>
+                <tr>
+                    <td>h:mm a</td>
+                    <td>4:31 PM</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

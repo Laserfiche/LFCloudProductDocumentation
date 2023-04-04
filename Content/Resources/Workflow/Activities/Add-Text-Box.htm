@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="11" MadCap:lastHeight="1127" MadCap:lastWidth="1068" MadCap:conditions="Default.Complete">
+    <head />
+    <body>
+        <h1>Add Text Box</h1>
+        <p style="text-align: center;">
+            <img src="Images/addTextBoxCanvas.PNG" title="Add Text Box activity" alt="Add Text Box activity" />
+        </p>
+        <p>This activity adds a text box to a page of a Laserfiche document. A text box is a small, moveable box that contains text. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Add-Text-Box-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Text Box Options</b> property box, configure settings for the text box using the following options:</li>
+            <ul>
+                <li><b>Text</b>:&#160;Type the text that will appear inside the text box. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+                <li><b>Font Size</b>:&#160;Select how large you want the text to be.</li>
+                <li><b>Fill Color</b>: Select the color inside the text box.</li>
+                <li><b>Opacity (%)</b>: Select the amount of visibility of the text box. At <b>100%</b> opacity, the text box is completely visible. At <b>0%</b>, it is transparent.</li>
+                <li><b>Rotation</b>: Select how many degrees you want to rotate the text box when it is added to the page:  <b>0</b>, <b>90</b>, <b>180</b>, or <b>270</b> degrees.</li>
+                <li><b>Color</b>:&#160;Select the border color of the text box. The default color is black.</li>
+                <li><b>Thickness (px)</b>:&#160;Type how thick, in pixels, the text box's border will be, where 0 pixels will not have a border.</li>
+                <li><b>Style</b>: Select the border style of the text box.</li>
+                <li><b>Page</b>:&#160;Select the page on which you want to place the text box. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+                <li><b>Location</b>: Select where the text box will appear on the Laserfiche document. Select <b>Custom</b> to place it on X and Y coordinates (in pixels)&#160;starting from Top/Left.</li>
+                <li>If you have more than one text box in the same location, use <b>Merging</b> to select how you want to display the text box.<ul><li><b>None</b>:&#160;Places the new text box on top of the existing text box.</li><li><b>Replace</b>:&#160;Replaces the existing text box with the new text box.</li><li><b>Append</b>: Adds the text of the new text box to the existing text box.</li><li><b>Cascade</b>:&#160;Places the new text box slightly offset from the existing text box. <MadCap:toggler targets="cascade2">Show me what this looks like</MadCap:toggler></li><p><img src="../../../Images/Text box cascade.png" MadCap:targetName="cascade2" /></p></ul></li>
+            </ul>
+            <li>In the <b>Text Box Protection</b> property box, specify the rights for who can view and modify the text box.<ul><li><b>Public</b>: Anyone who has access to the document can view and modify public annotations.</li><li><b>Protected</b>:&#160;Anyone who has access to the document can view protected annotations, but only the user who created the annotations can modify them.</li><li><b>Private</b>: Only the user who created the private annotations can view and modify the annotations.</li></ul></li>
+            <li>In the <b>Add Text Box To</b> property box, select the Laserfiche document you want to place the text box on. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

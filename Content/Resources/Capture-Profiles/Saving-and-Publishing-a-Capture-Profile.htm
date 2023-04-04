@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete" style="mc-master-page: url('../../MasterPages/WebHelp.flmsp');" MadCap:lastBlockDepth="6" MadCap:lastHeight="1027" MadCap:lastWidth="1364">
+    <head><title>Saving and Publishing a Capture Profile</title>
+    </head>
+    <body>
+        <h1>Saving and Publishing a Capture Profile</h1>
+        <p>Once your <a href="Creating-and-Configuring-a-Capture-Profile.htm" title="Click here for more information about creating a configuring a capture profile." alt="Click here for more information about creating a configuring a capture profile.">capture profile has been created and configured</a>, you can save it as a draft or publish it for use by Workflow.  Saving does not make it available to Workflow, but publishing does. Before publishing, you can <a href="Testing-a-Capture-Profile.htm" title="Click here for more information about testing a capture profile." alt="Click here for more information about testing a capture profile.">test the profile</a> using sample documents to make sure it runs as intended.</p>
+        <p class="note"><b>Note:</b> Profiles that are not published will display "Draft"  next to their name to make them easily detectable.</p>
+        <ul>
+            <li>Click the <b><MadCap:toggler targets="Save">Save</MadCap:toggler></b> button in the toolbar to save the profile draft.<p MadCap:targetName="Save"> <img src="../../Images/Capture-Profiles/SaveButton.PNG" alt="Save Button" title="Click Save to save a profile draft." style="width: 25px;height: 29px;" /></p></li>
+            <li>Click the <b><MadCap:toggler targets="Publish">Publish</MadCap:toggler></b> button in the toolbar to publish the profile and make it available to Workflow. <p MadCap:targetName="Publish"><img src="../../Images/Capture-Profiles/PublishButton.PNG" alt="Publish Button" title="Click Publish to publish the profile to be available for use by workflow." style="width: 71px;height: 32px;" /></p></li>
+        </ul>
+        <p><b>To edit and republish profile</b>
+        </p>
+        <ol>
+            <li>Search for the profile on the Capture Profiles page. </li>
+            <li>Once found, double-click the desired profile to open and edit it. You can also select the checkbox next to the profile and click the <b><MadCap:toggler targets="EditDelete">Edit</MadCap:toggler></b> button in the toolbar. To delete the profile, select it in the Capture Profiles list then click the <b>Delete</b> button in the toolbar.<p MadCap:targetName="EditDelete"><img src="../../Images/Capture-Profiles/EditDelete.PNG" alt="Edit and Delete Button" title="Click the Edit butto to open and edit the profile and Delete to delete the profile." /></p></li>
+            <li>When opening a profile created with a previous version of OCR, you will see a dialog box notifying you that your sample documents are being updated to use the new and improved OCR. While updating, do not close the browser. When it's finished, click <b>Continue</b>.
+            </li>
+            <li>Edit the profile as desired, save it, test it, then click <b>Publish</b> to publish it. Once it has been republished, the profile will be reversioned. You can see the version number on the main Capture Profiles page in the <MadCap:toggler targets="Versions">profile's version column</MadCap:toggler>. Adding, removing, or renaming zones will be a major version change and result in an increment of the first number (e.g., 2.1.0 to 3.1.0). Moving and resizing zones, renaming the profile, or updating the profile description will be a minor version change and result in an increment of the second number (e.g., 2.1.0 to 2.2.0).<p class="note"><b>Note:</b> If you make a major version change, the existing workflows using the capture profile will need to be updated to use the newest major version. Otherwise, it will use the previous major version's most recent minor version.</p><p MadCap:targetName="Versions"><img src="../../Images/Capture-Profiles/Version.PNG" alt="Version" title="Editing and saving a profile creates a new version." /></p></li>
+        </ol>
+    </body>
+</html>

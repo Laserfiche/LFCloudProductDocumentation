@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1244" MadCap:lastWidth="1202">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring Auditing</h1>
+        <p>Auditing is configured in the Users section of Repository Administration. Audit configuration has two parts. First, specify what actions you want to audit and whether you want to audit success, failure, or both. Second, optionally, you can require users to provide a reason for actions such as document deletion or export.</p>
+        <h2 class="topicheading">Determine Which Events to Log</h2>
+        <p>Most  actions performed in <MadCap:variable name="DoNotTranslate.Laserfiche" /> can be logged. Individual actions are grouped into event groups based on the event type—for instance, the <b>Session</b> event group includes the <b>Log On</b> and <b>Log Off</b> events. 
+ In addition to logging events that have occurred, you can also choose 
+ to log unsuccessful attempts to perform a specific action and events performed by a particular 
+ user or group. The effects of assigning audit configuration to users and 
+ groups are explained below. </p>
+        <p>Audit events are collected into event classes, allowing you to quickly select categories of events to audit. For a complete list of audit event classes and the events they contain, see <a href="Audit_Events_Cloud.htm">Audit Events</a>.</p>
+        <p>Auditing determines which events will be logged by first 
+ checking who is logged into the repository. Once it knows which user has 
+ logged into the repository, it will check that user's audit 
+ settings for two possible types.</p>
+        <ul type="disc">
+            <li><b>Group membership:</b> 
+ &#160;If the logged in user has been configured to inherit its audit settings
+ by group membership, and any of the groups to which the user belongs 
+ have been configured to audit an event, that event will be audited 
+ for the user.</li>
+            <li><b>User configuration:</b> 
+ &#160;If 
+ events  have been specifically assigned to the 
+ logged in user, only those events will be audited. The 
+ selected auditing events for the groups to which the user belongs to will 
+ be ignored.</li>
+        </ul>
+        <p><span>In addition, auditing configured on the Everyone group will be applied to all users. If a user or group already has auditing configured, the audit settings of both will be combined.</span>
+        </p>
+        <ol>
+            <li>If you are not already in the repository administration section of <MadCap:variable name="DoNotTranslate.Laserfiche" />, click the app picker in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>On the <b>Overview</b> page, under <b>Users and Groups</b>, click <b>Users</b> to configure auditing for a specific user, <b>Groups</b> to configure auditing for a specific group, or click <b>Everyone</b> to configure auditing for all users. You can also click <b>Users</b> or <b>Everyone</b> on the left to configure auditing on users, groups, or all users.</li>
+            <li>If you clicked <b>Users</b> or <b>Groups</b>, click the name of the user or group whose audit settings you want to configure.</li>
+            <li>Select the <b>Auditing</b> tab.</li>
+            <li>If you selected a user, clear <b>Inherit audit settings from group membership</b> to configure audit settings for the user independent of group membership; if you want the user's audit settings to be determined by group membership, leave this option selected. (This setting does not affect audit settings configured on the Everyone group.)</li>
+            <li>For each audit event class, select <b>Success</b> to audit when the relevant actions are successfully performed, and/or <b>Failure</b> to audit when the relevant actions are attempted but fail.&#160;See <a href="Audit_Events_Cloud.htm">Audit Events</a> for explanations of the event classes.</li>
+            <li>Click <b>Save</b> to save your changes. Repeat steps 2-6 for each user or group you want to configure.</li>
+        </ol>
+        <h2 class="topicheading">Prompting Users for Reasons</h2>
+        <p>You can configure auditing to require a reason before a user deletes, exports, or prints a document. Reasons can be configured by user, by group, and/or for everyone in the repository using the Everyone group. If a reason is required, the user will be prompted to select from a 
+ list of reasons when he or she tries to perform one of these actions. Users can also provide optional comments, which will be stored in the audit logs with the selected reason.</p>
+        <ol>
+            <li>If you are not already in the repository administration section of <MadCap:variable name="DoNotTranslate.Laserfiche" />, click the app picker in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>On the left, select <b>Users</b> to configure auditing for a specific user or group, or <b>Everyone</b> to configure auditing for all users.</li>
+            <li>If you selected <b>Users</b>, click the name of the user or group whose audit settings you want to configure.</li>
+            <li>Select the <b>Auditing</b> tab.</li>
+            <li>Under <b>Reasons</b>, select the event (<b>Delete</b>, <b>Export</b>, or <b>Print</b>)&#160;for which you want to require a reason.</li>
+            <li>In the <b>Add Reasons</b> option, type a reason and click <b>Create</b>. Repeat until you have added as many reasons as you want for that event.</li>
+            <li>Click <b>Save</b>. Repeat steps 2-6 for each user or group you want to configure.</li>
+        </ol>
+    </body>
+</html>

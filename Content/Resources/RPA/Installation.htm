@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:searchable="True" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Installing Laserfiche Bots</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Installing Laserfiche Bots</h1>
+        <p>This section contains the information you'll need to successfully install the Laserfiche bot recorder and local tool. For information about installing bot workers, see the <a href="../Integrations/Remote-Agents/Worker-Agents.htm">worker help documentation</a>.</p>
+        <h2 class="topicheading">System requirements</h2>
+        <p><b>Supported Operating Systems:</b> </p>
+        <ul>
+            <li>Windows 10</li>
+            <li>Windows 8.1</li>
+            <li>Windows Server 2019</li>
+            <li>Windows Server 2016</li>
+            <li>Windows Server 2012</li>
+            <li>Windows Server 2012 R2</li>
+        </ul>
+        <h2 class="topicheading">Software requirements</h2>
+        <ul>
+            <li>Microsoft Visual C++ 2017 Redistributable (x64) -14.11.25325</li>
+            <li>Microsoft Visual C++ 2017 Redistributable (x86) -14.11.25325</li>
+            <li>.NET 4.7.2</li>
+        </ul>
+        <h2 class="topicheading">Installing Laserfiche Bot Recorder and Local Tool</h2>
+        <p>You can install the bot recorder and local tool from the following places:</p>
+        <p>
+            <ul>
+                <li>When adding a recording in the <a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">bot designer</a>. Drag <b>Add a Recording</b> from the Toolbox to the canvas and click <b>Open bot recorder</b>.</li>
+                <li>From the <b>Test bot</b> button  in the bot designer. </li>
+                <li>From the <b>Run</b> button in the bot Manage page, when you select to run the bot locally. </li>
+                <li>From the Dedicated Bot Remote Agent's <a href="../Integrations/Remote-Agents/Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">Worker</a> tab. </li>
+            </ul>
+            <p style="font-weight: bold;">Installation</p>
+        </p>
+        <ol>
+            <li>Download the autorun package.</li>
+            <li>Click the .exe file to open it. </li>
+            <li>Click <b>Local Tools/ Recorder Installation</b>.</li>
+            <li>In the <b>Welcome</b> step, click <b>Next</b>.</li>
+            <li>In the <b>End-User License Agreement</b> step, read the license agreement and select <b>I accept the terms in the License Agreement</b> if you agree to the terms of the license agreement. Click <b>Next</b>.</li>
+            <li>In the <b>Custom Setup</b> step, ensure <b>Recorder</b> and <b>Local Tools</b> are selected.</li>
+            <li>Specify the desired install directory on this page. Click the <b>Disk Usage</b> button to see how much space is available on the specified disk and how much space the installation requires, to ensure you have enough space to install the product. Click <b>Next</b>.</li>
+            <li>On the <b>Laserfiche Service Settings</b> step, provide a Windows account for the Laserfiche Robotic Process Automation Agent service to run as. </li>
+            <li>In the <b>Ready to Install</b> step, click <b>Install</b> to start the installation process.</li>
+            <li>The <b>Prerequisites</b> step may appear if Laserfiche Bots needs to install additional components. A green check will appear next to installed items and a red X will appear next to items that have not been installed. If one or more of the items on the list has a red X next to it, install that item and then click <b>Retry</b>. Click <b>Next</b>. </li>
+            <div class="w"><b>Important:</b> Bypassing prerequisites may cause bots to function incorrectly and is not recommended.</div>
+            <li>When the installation is complete, click <b>Next</b>.</li>
+            <li>We recommend leaving the <b>Open the Laserfiche Bots Local Tool</b> checkbox selected. This will start the local tool (which provides an action history as bots run). It will also add the Laserfiche Bots icon to your tray menu. </li>
+            <li>Click <b>Finish</b> to exit the installation wizard.</li>
+        </ol>
+        <h2 class="topicheading">Configuring Bots to Run with a Remote Agent</h2>
+        <p>Remote agents  perform work outside Laserfiche Cloud's security domain and are necessary if you want to run bots via a timer <a href="../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting event</a> or the <a href="../Workflow/Activities/Invoke-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Invoke Bots</a> activity in Workflow. You can also run bots via remote agent from the <a href="Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page. </p>
+        <p> Bots will automatically be assigned to run with the Dedicated Bot Remote Agent that has been created for you. <a href="../Integrations/Remote-Agents/Remote-Agents.htm">Learn more</a>. </p>
+        <p class="note"><b>Note:</b> If you configured your own remote agents to run bots in previous versions of Laserfiche Cloud, you will need to migrate your bots to the new Dedicated Bot Remote Agent. <a href="Migrate-to-Dedicated-Remote-Agent.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</p>
+        <p>It's important to note:</p>
+        <ul>
+            <li>Although the remote agent is created for you, you must still install <a href="../Integrations/Remote-Agents/Worker-Agents.htm">workers</a>. </li>
+            <li>Additionally, the Laserfiche Bots local tool must be running for associated bots to run on the worker. You can launch the local tool from the Windows Start menu after Laserfiche Bots has been installed.</li>
+        </ul>
+        <h2 class="topicheading"><a name="Accessin"></a>Accessing Laserfiche Bots</h2>
+        <ol>
+            <li>Navigate to the Process Automation Overview page in Laserfiche Cloud.</li>
+            <li>Click <b>Bots</b>. </li>
+        </ol>
+    </body>
+</html>

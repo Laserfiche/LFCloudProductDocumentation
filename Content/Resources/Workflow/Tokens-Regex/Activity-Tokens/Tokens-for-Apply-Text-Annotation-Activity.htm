@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Apply Text Annotation Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp" />
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Match_Found</td>
+                    <td class="tabletext">
+                        (Boolean) Returns "true" if at least one match is found based on the pattern. Otherwise, returns "false".
+                    </td>
+                    <td class="tabletext">%(ApplyTextAnnotation_Match_Found)</td>
+                </tr>
+                <tr>
+                    <td>Num_Matches</td>
+                    <td class="tabletext">(Integer) Returns the number of items that match the pattern.</td>
+                    <td class="tabletext">%(ApplyTextAnnotation_Num_Matches)</td>
+                </tr>
+                <tr>
+                    <td>Annotated_Pages</td>
+                    <td class="tabletext">(List) Returns a number for each page that is annotated with this activity.</td>
+                    <td class="tabletext">%(ApplyTextAnnotation_Annotated_Pages)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "ApplyTextAnnotation" portion of the syntax changes to match the activity's name.</p>
+        <p class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "(Note) Progress!", the syntax for the Match_Found token is "%(NoteProgress_Match_Found)".</p>
+    </body>
+</html>

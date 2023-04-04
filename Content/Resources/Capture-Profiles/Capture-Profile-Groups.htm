@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2236" MadCap:lastWidth="1149" MadCap:conditions="Default.In Progress">
+    <head><title>Capture Profile Groups</title>
+    </head>
+    <body>
+        <h1>Capture Profile Groups</h1>
+        <p>Capture Profile Groups let you create a group of profiles that the <a href="../Workflow/Activities/Run-Capture-Profile.htm">Run Capture Profile</a> activity can use to choose the best matched profile in order to identify and capture accurate information from a document.</p>
+        <div class="ex"><b>Example:</b> Sunshine Daycare is processing old and new admission forms for their child care program. The forms contain the same information, but the layout has been updated and information has been moved to different locations on the new form. In this scenario, you could create a capture profile to retrieve the information on the old form, and another capture profile to retrieve the information on the new form. Then, create a capture profile group and add these two profiles to the group. When the Run Capture Profile Workflow activity runs, it will compare each form scanned to the profiles in the group, identify which form matches which profile, and extract the correct information from each one. </div>
+        <p><b>To create a Capture Profile Group</b>
+        </p>
+        <ol>
+            <li>On the Capture Profiles page, click <b>Capture Profile Groups</b> in the left pane. You can also click the <b>New</b> button or click the drop-down and select <b>Capture Profile Group</b>.</li>
+            <li>Give the Capture Profile Group a name and optional description, then click <b>Create</b>.</li>
+            <li>On the Capture Profile Groups page, select  profiles you want in the group from the <b>Available Profiles</b> list on the left. Use the <b>Search bar</b> at the top to search for a profile.<ul><li>Double-click the profile to add it to the group.</li><li>Select the profile and click the right-facing arrow.</li><li>To add multiple profiles at once, press Ctrl, select them, and click the right-facing arrow.</li></ul></li>
+            <li>The added profiles will be displayed in the <b>Profiles in Group</b> section, along with the profile version. If changes are made to a profile, you will have the option to update the profile listed in this group by clicking <b>Update</b>.<p>If changes are made to a profile:</p><ol><li>Save  the profile changes.</li><li>Click the <b>Refresh</b> button <img src="../../Images/Capture-Profiles/Refresh.png" title="Refresh" alt="Refresh" /> to refresh the profiles in the group.</li><li>Click <b>Update</b> next to the updated profile.</li><li>Click the <b>Publish</b> button to republish the profile group.</li><li>In Workflow, update the version of the capture profile group used in the Run Capture Profile activity.</li></ol><p class="note"><b>Note:</b> If a profile added to a profile group has no anchored zones, it will not be selected to run by the profile group.</p></li>
+            <li>Clicking on a profile in the <b>Profiles in Group</b> section will display a preview of the first page of the sample document in that profile. You can click <b>Open profile</b> to view and make changes to the profile.</li>
+            <li>Under <b>All Profile Zones</b> on the right, you will see a list of every zone created by every profile in the <b>Profiles in Group</b> list. Since only one profile is ultimately run, zones not provided by every profile may not have a value. To see the profile a zone is missing from, hover over the <b>Not captured by # profiles</b> link next to the zone.<p class="ex"><b>Example:</b> Typically, profile groups are used when documents contain the same information located in different places, maybe due to a document format update. Sometimes, profiles added to a profile group contain different or additional zones to be captured. In this case, if the profile chosen to run contains zones that do not exist in the other profile, those zones will return empty.</p></li>
+            <li>To remove a profile from a group, select it in the <b>Profiles in Group</b> section and click the left-facing arrow.</li>
+            <li>When finished creating the group, you can  save it, then publish it.</li>
+        </ol>
+        <p class="note"><b>Note:</b> Capture Profile Groups replaced the Auto-classification feature previously configured in the Run Capture Profile activity. </p>
+        <p class="note"><b>Note:</b> Smart Invoice profiles are not supported when using Capture Profile Groups.</p>
+        <p class="note"><b>Note:</b> The more anchored zones configured per capture profile, the more accurate identification and capture will be. At least one anchored zone must be configured per capture profile in order for it to work properly.</p>
+    </body>
+</html>

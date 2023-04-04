@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Custom HTML Fields | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Explains how to insert custom HTML in a Laserfiche form. Custom HTMl can be used to embed documents and images ih a form." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Custom HTML</h1>
+        <p>In the form designer, the Custom HTML&#160;field is not a field that users can insert data into. Instead, the Custom HTML element lets form creators insert static rich-text or custom HTML that will be displayed on the form a read-only element.</p>
+        <p>With the Custom HTML field, you can:</p>
+        <ul>
+            <li>Add rich text to your form. With this field, you can style instructions for sections of your form.</li>
+            <li>Insert a block of your own custom HTML&#160;onto the form. You can use Custom HTML&#160;to create <a href="#Creating" title="Click here to learn more." alt="Click here to learn more.">scrolling text boxes</a>, insert images, <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/Forms/Content/Javascript-and-CSS/Displaying Documents in a Form.htm%3FTocPath%3DForms|Creating%2520a%2520Form|Customizing%2520a%2520Form%2520with%2520CSS%2520and%2520JavaScript|_____15">display documents in an IFrame</a>, and more. You can use any valid HTML&#160;markup inside the Custom HTML&#160;container. </li>
+        </ul>
+        <h2 class="topicheading">Custom HTML settings</h2>
+        <p><b>To edit a Custom HTML block</b>
+        </p>
+        <ol>
+            <li>Select the collection on the canvas and click <b>Edit</b> in Classic mode, in Modern mode the options will appear in the right pane once selected.</li>
+            <li>Under <b>Content</b>, enter text and use the rich text editor to format text the way you want. You can also insert <a href="../Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm#Insertin" title="Insert variables in a custom html block" alt="Insert variables in a custom html block">variables</a> and <a href="../Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm#Adding" title="Insert pictures in a custom HTML block" alt="Insert pictures in a custom HTML block">images</a>.</li>
+            <li>If you want to add HTML formatting that's not provided by the rich text editor buttons, switch to the HTML&#160;view by clicking the <b>HTML</b> tab. Enter the desired HTML.</li>
+            <p class="note"><b>Note</b>: If you use headers in custom HTML, be aware that the header for a field in a form is an <b>h2</b> header, not an <b>h1</b> header. Only the header of the form can be an <b>h1</b> header.</p>
+            <li>When you are finished, click <b>Done</b> (Classic mode only). Your changes will be saved to the form automatically.</li>
+        </ol>
+        <p class="w"><b>Warning:</b> The html &lt;pre&gt; tag may not correctly display the spacing and line breaks that you specify. See this <a href="https://support.laserfiche.com/KB/1013348" target="_top">KB article</a> for more information.</p>
+        <p class="note"><b>Note for Classic mode:</b> Users may see slightly different styling on Custom HTML&#160;elements than what is displayed when previewing the form in the form designer. If this is a concern, you can include the <a href="http://getbootstrap.com/" target="_top">bootstrap.js</a> library on the CSS&#160;and JavaScript page. </p>
+        <h2 class="topicheading"><a name="Creating"></a>Creating a scrolling text box using custom HTML</h2>
+        <p>Scrolling text boxes are useful for displaying a lot of text in a small area and are most often used for license agreements and terms of conditions. You can create a scrolling text box using custom HTML.</p>
+        <p>To create a scrolling text box, click the HTML&#160;button on the top left of the editor. In the contents of your Custom HTML block, insert the following HTML&#160;markup.</p>
+        <p class="Code"> &lt;div style="overflow:auto; height:100px; width:600px"&gt; whatever your content is &lt;/div&gt; </p>
+        <h2 class="topicheading">More Applications</h2>
+        <p>You can also use the custom HTML field to <a href="../Javascript-and-CSS/Displaying Documents in a Form.htm">embed a document from WebLink or the web client in a form</a>.</p>
+    </body>
+</html>

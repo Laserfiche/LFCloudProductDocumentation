@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="369" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Set Entry Owner Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>New User Name</td>
+                    <td class="tabletext">The account name of the new entry owner.</td>
+                    <td class="tabletext">%(SetEntryOwner_New User Name)</td>
+                </tr>
+                <tr>
+                    <td>Old User Name</td>
+                    <td class="tabletext">The account name of the entry's owner before this activity assigned a new owner.</td>
+                    <td class="tabletext">%(SetEntryOwner_Old User Name)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "SetEntryOwner" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Assign-to-@Initiator", the syntax for the New User Name token will be "%(AssigntoInitiator_New User Name)".</div>
+    </body>
+</html>

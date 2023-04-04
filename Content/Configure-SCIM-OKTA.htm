@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2249" MadCap:lastWidth="1506">
+    <head><title>Configure SCIM Integration with Okta</title>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Configuring SCIM Integration with Okta</h1>
+        <p><b>To configure SCIM&#160;in Okta:</b>
+        </p>
+        <ol>
+            <li>Open and sign into Okta.</li>
+            <li>Expand <b>Applications</b> on the left, then click <b>Applications</b>.</li>
+            <li>Select the desired app integration.
+            </li>
+            <li>Click the <b>Provisioning</b> tab.</li>
+            <li>Click <b>Integration</b>.</li>
+            <li>Click <b>Edit</b> next to <b>SCIM Connection</b>.</li>
+            <li>Paste the Management Endpoint URL you copied in step 7 of the <a href="Configure-SCIM-in-Laserfiche.htm">Configuring SCIM&#160;in Laserfiche Cloud</a> section next to <b>SCIM connector base URL</b>.</li>
+            <li>Next to <b>Unique identifier field for users</b>, we recommend you enter your email and login. In Okta, these fields are displayed as <b>Primary Email</b> and <b>Username</b>.<p><img src="Resources/Images/OktaFields.png" title="Fields for display" alt="Okta Fields" /></p></li>
+            <li>Next to <b>Supported provisioning actions</b>, select <b>Push New Users</b> and <b>Push Profile Updates</b>.</li>
+            <li>Next to <b>Authentication Mode</b>, select <b>HTTP Header</b>.</li>
+            <li>Paste the bearer token you copied in step 6 of the <a href="Configure-SCIM-in-Laserfiche.htm">Configuring SCIM&#160;in Laserfiche Cloud</a> section next to <b>Authorization</b>, under <b>HTTP Header</b>.<p class="note"><b>Note:</b> If you misplace the bearer token, you can create a new one by clicking <b>Rotate Token</b> next to <b>Rotate Bearer Token</b> in the <b>SCIM&#160;Provisioning</b> tab in Laserfiche Account Administration.</p><p><img src="Resources/Images/SCIM-Connection.png" title="Okta SCIM Conection" alt="Okta SCIM Conection" /></p></li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p>Review <a href="https://help.okta.com/en/prod/Content/Topics/users-groups-profiles/usgp-people.htm" target="_blank">Okta's user administration instructions</a>. Once SCIM is configured, adding, updating, or removing a user in Okta, will automatically add, update, or disable the user in Laserfiche. </p>
+        <p class="note"><b>Note:</b> Users updated in Laserfiche will not be synced to Okta. This is a one-way communication from Okta to Laserfiche. </p>
+        <p>For more information on configuring SCIM with Okta, see the <a href="https://help.okta.com/en/prod/Content/Topics/Apps/Apps_App_Integration_Wizard_SCIM.htm" target="_blank">Okta Help Center</a>.</p>
+    </body>
+</html>

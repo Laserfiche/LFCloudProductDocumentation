@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Section Registrations by Person ID and Term ID</title>
+    </head>
+    <body>
+        <h1>Search Section Registrations by Person ID and Term ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action could be used for searching all sections currently registered for a student for a given Term.</p>
+        <ul>
+            <li><b>Category:</b> Section Registration</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Person ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the registrant (which is a person) of the section registration</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Term ID (Value)*</p>
+                    </td>
+                    <td>
+                        <p>An identifier of the Term of the section registrations.</p>
+                        <p>Retrieve the identifier using the Get Term List action.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <p>The output fields are the same as the <a href="Search-Section-Registrations-by-Person-ID.htm">Search Section Registrations by Person ID</a> action.</p>
+        <div class="note">
+            <p><b>Notes:</b> </p>
+            <p>If any of the "Section/Term" related fields (code, title, or registration) are included in the output, the Search results will be sorted by "Section/Term/Code" in descending order. If two sections have the same term code, they will be sorted by "Section/CRN" in ascending order.</p>
+            <p>If none of the "Section/Term" related fields (code, title, or registration) are included in the output, the Search results will be sorted by "Section/CRN" in ascending order.</p>
+        </div>
+    </body>
+</html>

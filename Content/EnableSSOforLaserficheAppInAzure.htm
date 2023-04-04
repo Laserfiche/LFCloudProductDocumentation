@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Enable Single Sign-On for your <MadCap:variable name="DoNotTranslate.Laserfiche" /> App</h1>
+        <p> After you finish <a href="CreateAppinAzureAD.htm">adding a <MadCap:variable name="DoNotTranslate.Laserfiche" /> application</a> to <MadCap:variable name="DoNotTranslate.Azure AD" />, follow the steps below to set up single sign-on (<MadCap:variable name="DoNotTranslate.SSO" />):&#160;</p>
+        <ol>
+            <li>In the <MadCap:variable name="DoNotTranslate.Azure AD" /> portal, select <b>Enterprise applications</b>. </li>
+            <li>Find and select the <a href="CreateAppinAzureAD.htm"><MadCap:variable name="DoNotTranslate.Laserfiche" /> App</a>. 			</li>
+            <li>Select <b><MadCap:variable name="DoNotTranslate.SAML" /></b> to open the <MadCap:variable name="DoNotTranslate.SSO" /> configuration page. </li>
+            <li>On the <MadCap:variable name="DoNotTranslate.SSO" /> Configuration page, you may choose between one of the options below:<ul><li><u style="font-style: italic;">Option A</u>:&#160;Manually fill in the required fields:<ul style="list-style-type: circle;"><li>In the <b>Basic <MadCap:variable name="DoNotTranslate.SAML" /> Configuration</b> section, click the <b>Edit</b> button. </li><li>Navigate to <b>Account Administration</b> in <MadCap:variable name="DoNotTranslate.LF Cloud" />. <ul style="list-style-type: square;"><li>Click the <b>Settings</b> tab.</li><li> Click the <b>Single Sign-On</b> tab.</li><li>Click <b>Service Provider Information</b>. Keep the dialog box open to use the information to finish filling out the required fields in Azure. </li><p class="note"><b>Note</b>: If this is your first time configuring single sign-on in <MadCap:variable name="DoNotTranslate.LF Cloud" />, please see <a href="ConfiguringSSO.htm">Configuring <MadCap:variable name="DoNotTranslate.LF Cloud" /> for Single Sign-On (<MadCap:variable name="DoNotTranslate.SSO" />)</a>.</p></ul></li><li>Navigate back to <MadCap:variable name="DoNotTranslate.Azure AD" /> and finish filling out all required fields. </li></ul></li><li><i style="text-decoration: underline;">Option B</i>:&#160;Upload metadata file: <ul style="list-style-type: circle;"><li>Navigate to <b>Account Administration</b> in <MadCap:variable name="DoNotTranslate.LF Cloud" />.<ul style="list-style-type: square;"><li>Click the <b>Settings</b> tab. </li><li>Click the <b>Single Sign-On</b> tab.</li><li>Click <b>Service Provider Information</b>.</li><li>Click download <b>Laserfiche metadata file</b>. </li></ul></li></ul><ul style="list-style-type: circle;"><li>Navigate back to <MadCap:variable name="DoNotTranslate.Azure AD" /> and click <b>Upload metadata file</b> button. </li><li>Click <b>Select a file</b>.</li><li>Navigate to the location the <MadCap:variable name="DoNotTranslate.Laserfiche" /> metadata file was downloaded on your computer.</li><li>Click <b>Add</b> to finish. </li></ul></li></ul></li>
+            <p class="note"><b>Note</b>: To learn more about next steps, see <a href="AzureAD.htm">Configuring Single Sign-On with <MadCap:variable name="DoNotTranslate.Azure AD" /></a>.</p>
+        </ol>
+    </body>
+</html>

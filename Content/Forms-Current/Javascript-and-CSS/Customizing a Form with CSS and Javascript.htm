@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:onlyLocalStylesheets="False" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Laserfiche Forms | Customizations | Finding HTML Elements | CSS and JavaScript</title>
+        <meta name="description" content="Introduction to determining which HTML elements you need to target when customizing forms in Laserfiche using CSS and JavaScript." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Introduction" />Customizing a Classic Form with CSS and Javascript</h1>
+        <p class="note"><b>Note:</b>&#160;This section applies to classic forms. For CSS&#160;and Javascript in the Form Designer, see <a href="scripting-in-forms-desgner.htm">this section</a>.</p>
+        <p>
+            <MadCap:concept term="Forms" />The form designer provides several ways for you to customize your forms. If you want to change the general appearance of your forms, the options available on the <b>Themes</b> pages of the form designer may be sufficient. For further customizations, adding CSS rules may be necessary. For dynamic customizations, such as filling certain fields with values or changing the form's appearance if certain user actions happen, you can insert your own JavaScript code.</p>
+        <p>This page introduces you to the basics of how JavaScript and CSS&#160;selectors work, and the potential applications of these selectors. Selectors pick out the parts of a form which you want to modify. For more information on the syntax of CSS, see <a href="CSS Selectors.htm">CSS Selectors</a>. See <a href="Javascript Selectors.htm">JavaScript Selectors</a> to learn more about the syntax of JavaScript.</p>
+        <h2 class="topicheading"><a name="HTML"></a>HTML Elements</h2>
+        <p>The appearance of a web page is determined by the structure of the underlying Hypertext Markup Language (HTML) it's coded in. The HTML of a page is made up of <b>elements</b>. Each element is identified by the pointed brackets (<b>&lt; &gt;</b>) with text in them that surround it. For example, a <b>table</b> element is surrounded by <b>&lt;table&gt; &lt;/table&gt;</b> tags.</p>
+        <p>Each element possesses <b>attributes</b> that you can use to identify the element. For the purposes of Forms customizations, the most important attributes are an element's <b>id</b> and <b>class</b>. For example, a text box on a form might be represented by the following element:</p><pre xml:space="preserve"><code>&lt;input type="text" id="Field2" name="Field2" class="singleline cf-medium" maxlength="4000"&gt;</code></pre>
+        <p>This element has the attributes <b>type</b>, <b>id</b>, <b>name</b>, <b>class</b>, and <b>maxlength</b>. The value of the <b>id</b> attribute is unique to each element and is not shared by other elements on the same page. It is helpful for identifying a specific element on the page to modify or to read values from. The <b>class</b> attribute is not unique. Multiple elements on a page may be assigned the same CSS classes. Selecting on CSS classes is useful when you want to apply a customization that references several elements at once. An element may also have multiple classes. If so, the classes will be separated by a space. In the snippet above, the text box has the classes <b>singleline</b> (indicating that it is a single-line field) and <b>cf-medium</b>.</p>
+        <p>Elements can be contained within other elements. Sometimes, you will have to <a href="CSS Text Customizations.htm#Changing">target the container of an element</a> in order to change attributes that affect the appearance of the elements within it. An element may be nested within several layers of elements. The elements containing the nested element are known as its <i>ancestors</i>. The elements that are nested within an element are known as the latter's <i>descendants</i>. This terminology will be relevant when you use <a href="Javascript Selectors.htm#jQuery">JavaScript methods</a> that look within an element's ancestors or descendants.</p>
+        <h2 class="topicheading">Viewing Page Elements in Forms</h2>
+        <p>As we saw above, web pages are composed out of elements, which each have their own attributes. Web customizations in Forms work by referencing those attributes:&#160;either to change them, or to use them to change other elements. CSS and JavaScript pick out the elements that will be used in customizations using strings known as <b>selectors</b>. Using selectors, you can make customizations like the following:</p>
+        <ul>
+            <li>Change how an element looks</li>
+            <li>Take the value of one element and mathematically manipulate it to fill out another element</li>
+            <li>Fill an element (e.g. a text box) with a value that depends on user actions like clicks, page loading, or changes in another element's value.</li>
+        </ul>
+        <p>There are a couple of ways to display element attributes so that you can use selectors on them. When you are editing a form in the form designer, you can see the ids and classes of some elements by navigating to the <b>CSS and JavaScript</b> tab. The right pane will display a version of the form that has ids and classes listed for the field elements. The following image shows how part of a form might look like in this view:</p>
+        <p>
+            <img src="../Resources/Images/forms_id-class-display.PNG" style="border-style: solid;border-width: 1px;" alt="The right pane of the CSS and Javascript tab displays IDs and classes for each field." title="If this pane does not provide enough information for you to construct the selector you want, open the preview page for the form and use your browser's inspection tool." />
+        </p>
+        <p>The ids and classes are listed above the field they belong to. In this form, the field labeled "Two Per Line Field B" has an id of <b>q3</b> and the following classes: <b>TwoPerLine</b> and <b>form-q</b>.</p>
+        <h2 class="topicheading"><a name="Viewing"></a>Viewing Page Elements in a Web Browser</h2>
+        <p>Another way to display element attributes is to use your web browser's functions for viewing source code. This can be done on either a published version of the form, or on the preview version. In Chrome and Firefox, you can highlight a part of the web page that you are interested in, right-click on the highlighted region, and select <b>Inspect</b> (Chrome) or <b>Inspect Element</b> (Firefox). A&#160;pane will then open in your browser showing you the part of the HTML code that corresponds to the highlighted region. Alternatively, you can right-click anywhere on the page and select <b>View page source</b>. This will open a new tab that shows you the raw HTML underlying the page. In Internet Explorer, you can right-click on the element of interest and select <b>Inspect element</b> to see the HTML for the element, or right-click anywhere in the page and select <b>View source</b> to see the page's source code. In Microsoft Edge, press F12 and right-click on the region of interest, then click&#160;<b>Inspect element</b>. Pressing F12 brings up the page's source code automatically, and is required to make the <b>Inspect element</b> option is available.</p>
+        <p>The following series of images show how a browser's inspection tool can easily map the visual areas that elements occupy to snippets of HTML. While the following images are from Chrome, the general visuals are similar in other browsers. In the first screenshot, we select the element containing an entire field. The Chrome Developer Tools pane on the right highlights in blue the portion of the HTML that corresponds to the selected area.</p>
+        <p>
+            <img src="../Resources/Images/forms_entire-field-element.PNG" style="border-style: solid;border-width: 1px;width: 799px;height: 182px;" alt="Using Chrome's Developer Tools to view the HTML element corresponding to a form field." title="To view the HTML corresponding to a text snippet, highlight the text, right-click, and click Inspect or Inspect Element." />
+        </p>
+        <p>Within the <b>li</b> element that contains the field label and input box, we have the following elements, which are shown indented under the <b>li</b> element:</p>
+        <ul>
+            <li>A <b>label</b> element, which is the container for the field label "Field in new section." In this container, there is a <b>span</b> element with the actual text of the label.</li>
+            <li>A <b>div</b> element with class <b>cf-field</b>, that contains an <b>input</b> element. The latter is the box where the user would actually enter the value of the field.</li>
+        </ul>
+        <p>The following images show how you can use your browser's inspection tool to home in on the various components of this field.</p>
+        <p style="font-weight: bold;">The field label container</p>
+        <p>In the right pane, you can see that this container is a <b>label</b> element with class <b>cf-label</b>.</p>
+        <p>
+            <img src="../Resources/Images/forms_field-label-container.PNG" style="border-style: solid;border-width: 1px;width: 779px;height: 160px;" alt="Source code corresponding to the container for a field label, as viewed in Chrome." title="You can also select a block of code in the right pane to see which visual element on the webpage it corresponds to." />
+        </p>
+        <p style="font-weight: bold;">The field label</p>
+        <p>Note that the label area is composed of the text only—the field label <i>container</i> covers a slightly larger area. In the right pane, you can see that the field label is a <b>span</b> element.</p>
+        <p style="font-weight: bold;">
+            <img src="../Resources/Images/forms_field-label.PNG" style="border-style: solid;border-width: 1px;width: 787px;height: 158px;" alt="The HTML code corresponding to the text of a field label." title="The black tooltip in Chrome shows you the type of the element and its dimensions." />
+        </p>
+        <p style="font-weight: bold;">The input box's container</p>
+        <p>In the right pane, you can see that the input box's container is a <b>div</b> element with the class <b>cf-field</b>.</p>
+        <p style="font-weight: bold;">
+            <img src="../Resources/Images/forms_field-input-box-container.PNG" style="border-style: solid;border-width: 1px;width: 812px;height: 168px;" alt="The HTML code corresponding to an input box's container, as viewed in Chrome's Developer Tools." title="Knowing how to select for containers like this is important for controlling field widths." />
+        </p>
+        <p style="font-weight: bold;">The input box</p>
+        <p>As with the field label, the input box is smaller than its container. The right pane shows that the input box is an <b>input</b> element with type <b>text</b> and id <b>Field5</b>. It also has the <b>singleline</b> and <b>cf-medium</b> classes.</p>
+        <p style="font-weight: bold;">
+            <img src="../Resources/Images/forms_field-input-box.PNG" style="border-style: solid;border-width: 1px;width: 815px;height: 170px;" title="The input box itself is distinct from its container. There is blank space outside the input box that is inside the input box's container." alt="The code corresponding to a field's input box, as seen in Chrome's Developer Tools." />
+        </p>
+        <p>While we have used a text input box as our example here, in general, fields in Laserfiche Forms are contained in a <b>li</b> container, which itself has containers for the field label and the input area (which could be radio buttons, checkboxes, signature fields, and so on). Containers are also known as <i>wrappers</i>. See <a href="CSS Selectors.htm#Wrappers">CSS&#160;selectors</a> for more examples of elements inside containers.</p>
+    </body>
+</html>

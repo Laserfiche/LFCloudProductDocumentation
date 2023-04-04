@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head>
+    </head>
+    <body>
+        <h1>Email Confirmation Fields</h1>
+        <p>It is common to require users to enter their email address twice to minimize the chance of a mistake. If the two fields do not match, a warning displays to ask the user to correct the inputs. You can create an email confirmation field by following these steps.</p>
+        <ol>
+            <li>Create two email fields on the <b>Layout</b> page of the form designer.</li>
+            <li><a href="CSS Selectors.htm#Adding">Assign the custom class</a> <code>email</code> to the first email field.</li>
+            <li>Assign the custom class <code>confirm</code> to the second email field.</li>
+            <li>Paste the following code in the JavaScript area of the <b>CSS and JavaScript</b> page, replacing the warning text with your own choice of warning text:
+					<pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+    $('.email, .confirm').on('blur input', function () {
+        if ($('.email input').val() != $('.confirm input').val()) {
+            $('.Submit').attr("disabled", "disabled");
+            if ($('.warningText').length &gt; 0 || $('.confirm input').val() == ''){
+                return; 
+            } else {
+                $('&lt;p class="warningText"&gt;The email addresses you entered do not match.&lt;/p&gt;').insertAfter('.confirm');
+            }
+        }
+        else
+            $('.warningText').remove();
+        $('.Submit').removeAttr('disabled');
+    });
+});</code></pre></li>
+        </ol>
+        <p>The code works as follows:</p>
+        <ul>
+            <li>After the document loads, the browser watches for the user to change focus away from the input boxes of either of the two email fields.</li>
+            <li>When a change of focus happens, the code compares the values in both input boxes. If the values do not match, then:<ul><li>The Submit button on the form is disabled.</li><li>If the warning text already exists or if the user has not entered anything in the second email field yet, nothing happens.</li><li>If neither of the above two conditions holds, a warning message is displayed.</li></ul></li>
+            <li>If the values in the two fields match when a change of focus happens, the warning message is removed, and the Submit button is enabled again.</li>
+        </ul>
+    </body>
+</html>

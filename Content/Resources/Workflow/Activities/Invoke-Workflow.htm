@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Invoke Workflow</title>
+    </head>
+    <body>
+        <h1>Invoke Workflow</h1>
+        <p style="text-align: center;">
+            <img src="Images/invokeWorkflowCanvas.PNG" title="Invoke Workflow activity" alt="Invoke Workflow activity" />
+        </p>
+        <p>This activity starts another workflow in process automation.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Workflow</b> property box, click <b>Select a workflow</b> to choose which workflow to execute.
+			<ul><li>Search through the available workflows by typing part of the workflow name to shorten the list.</li><li>If the desired workflow does not appear in the list, click <b>Manage Workflows</b> to open the Manage page, find the workflow, and verify that it has been published with the <b>Allow this workflow to be started by other processes</b> option selected in <a href="../Workflow-Properties.htm" title="Click here to learn more." alt="Click here to learn more.">Workflow Properties</a>.</li><li>Once completed, click the refresh button  <img src="../../Images/wf-refresh-list-icon.png" title="Refresh button icon" alt="Refresh button icon" style="width: auto;height: auto;vertical-align: text-top;" /> to refresh the list of available workflows.</li></ul></li>
+            <li>Once selected, the input parameters of the workflow become available.
+			<ul><li>Click the Value of a parameter to assign a static value or token to send to the invoked workflow. </li><li>To view or edit the selected workflow, click <b>Open selected workflow</b> to open it in another Design window.</li></ul></li>
+            <li>If the selected workflow is expected to return values for use, select the <b>Wait for the invoked workflow to finish running...</b> checkbox to expose it's output parameters as tokens within this workflow.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

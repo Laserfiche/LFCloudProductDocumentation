@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.In Progress" style="mc-master-page: url('../../MasterPages/WebHelp.flmsp');" MadCap:lastBlockDepth="8" MadCap:lastHeight="5377" MadCap:lastWidth="1296">
+    <head>
+    </head>
+    <body>
+        <h1>Smart Invoice Profiles</h1>
+        <p>A smart invoice profile  uses machine learning to automatically capture the invoice date, invoice number, purchase order number, and total amount due, in typed or handwritten form, and can also  determine the vendor of the invoice by comparing invoice data to a vendor lookup table. Similar to other capture profiles, the <a href="../Workflow/Activities/Run-Capture-Profile.htm">Run Capture Profile</a> Workflow activity runs this smart invoice profile and outputs tokens for the captured data to be used later in the workflow. This activity can also retrieve information from a vendor <a href="../Entities/lookup-tables.htm">lookup table</a> to automatically <a href="Smart-Invoice-Capture-Profile.htm#Vendor">gather vendor information</a> from invoices.</p>
+        <p class="note"><b>Note:</b> Currently, making changes to the default smart invoice profile and saving it fails.  If you need to configure a smart invoice profile, create a new one. </p>
+        <h2 class="topicheading">Creating a Smart Invoice Profile</h2>
+        <p><b>To create a smart invoice profile</b>
+        </p>
+        <ol>
+            <li>On the Capture Profiles page, click <b>Smart Invoice Profiles</b> in the left pane. You can also click the <b>New</b> button or click the drop-down and select <b>Smart Invoice Profile</b>.</li>
+            <li>Click <b>New</b> or click the drop-down next to <b>New</b> and select <b>Smart Invoice Profile</b>. </li>
+            <li>Give the profile a name and description, then click <b>Create</b>.</li>
+            <li>If you want to identify the invoice vendor and retrieve additional vendor information from the invoice, select <b>Include vendor information</b>, then select the table containing the vendor information.</li>
+            <li>The <b>Include a token with the 10 best matches</b> option will return multi-value tokens for the ten vendors with the closest match, not just the first vendor match. These tokens are: <i>Top10VendorName, Top10VendorId</i>, and <i>Top10VendorConfidence</i>. This allows an invoice reviewer to quickly choose alternate vendor information if there are close matches. </li>
+            <li>When finished, save <img src="../../Images/Capture-Profiles/SaveButton.PNG" />, <a href="#Test">test</a>, <img src="../../Images/Capture-Profiles/Test.png" /> and publish <img src="../../Images/Capture-Profiles/PublishButton.PNG" /> the profile.</li>
+        </ol>
+        <h2><a name="Vendor"></a>Vendor Identification</h2>
+        <p>By enabling vendor identification, you can dynamically retrieve vendor information from invoices, as part of Smart Invoice Capture. Enabling vendor identification will make the following tokens available:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td style="font-weight: bold;">Token Name</td>
+                    <td style="font-weight: bold;">Description</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TopVendorName</td>
+                    <td>The name of the vendor as defined in the lookup table column: vendor_name</td>
+                </tr>
+                <tr>
+                    <td>TopVendorID</td>
+                    <td>The vendor ID as defined in the lookup table column: vendor_id</td>
+                </tr>
+                <tr>
+                    <td>TopVendorConfidence</td>
+                    <td>The confidence that the vendor was identified correctly, as a percentage. 100% being completely confident. </td>
+                </tr>
+                <tr>
+                    <td>Top10VendorName (Optional)</td>
+                    <td>The names of the top 10 vendors with the closest match, not just the first match</td>
+                </tr>
+                <tr>
+                    <td>Top10VendorID (Optional)</td>
+                    <td>The IDs of the top 10 vendors with the closest match, not just the first match</td>
+                </tr>
+                <tr>
+                    <td>Top10VendorConfidence (Optional)</td>
+                    <td>The confidence levels of the top 10 vendors with the closest match, not just the first match</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To use vendor identification, you'll need to first create a vendor table with the required columns listed below. Vendor tables are created as <a href="../Entities/lookup-tables.htm">lookup tables</a> under Data Management in Process Automation. Lookup tables can be created by importing Excel or CSV files, which is helpful if you have a list of approved vendors in this format or can export data in this format from a financial application.</p>
+        <p>
+            <img src="../Images/vendorTable.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 632px;height: 355px;" alt="Sample vendor lookup table" title="Ensure your vendor lookup table has the required columns" />
+        </p>
+        <p>You will need to change the column names in the lookup table to match the column labels expected by Capture Profiles. You can include columns in addition to the ones required by Laserfiche to augment your lookup table. </p>
+        <p class="ex"><b>Example:</b> In addition to the required columns, you may want to add a Default GL&#160;Code column to reduce the need for users to manually perform invoice coding. You could also add a Payment Terms column to notate payment schedules or discounts.</p>
+        <p class="note"><b>Note:</b> When importing your vendor table, we recommend editing the column types so they are all set to "Text."</p>
+        <h3><a name="Required"></a><b>Required Column Names</b>
+        </h3>
+        <ul>
+            <li>vendor_id</li>
+            <li>vendor_name</li>
+            <li>city</li>
+            <li>zip</li>
+            <li>state</li>
+            <li>street</li>
+        </ul>
+        <p class="note"><b>Note:</b> Vendor Identification is currently only supported for vendors with U.S. addresses.</p>
+        <div class="note">
+            <p><b>Note:</b> If you need to update your vendor list at any point, you can do so in a variety of ways. <ul><li>Manually export the <a href="../Entities/lookup-tables.htm">lookup table</a>, make your edits, and then import it again.</li><li>Automatically import updated lookup tables using the <a href="../Workflow/Activities/Replace-Lookup-Table-Data.htm">Replace Lookup Table Data</a> activity. </li><li>Automatically add vendors, row by row, using the Capture Profile designer.</li></ul></p>
+        </div>
+        <p>
+        </p>
+        <div class="note"><b>Note:</b> When the Workflow activity runs the smart invoice profile, eight tokens will be captured: <i>TotalAmount, TotalAmountConfidence, InvoiceNumber, InvoiceNumberConfidence, InvoiceDate, InvoiceDateConfidence, PONumber,</i> and <i>PONumberConfidence</i>. Additionally, if vendor identification is enabled, three vendor identification tokens will be captured: <i>TopVendorName, TopVendorID</i>, and <i>TopVendorConfidence</i>. Additionally, if you selected to <b>Include a token with the 10 best matches</b>, the <i>Top10VendorName</i>, <i>Top10VendorID</i>, and <i>Top10VendorConfidence</i> tokens will also be captured. The confidence tokens reflect how confident the machine learning algorithm was in capturing the correct data. Process designers can use these confidence tokens to create conditions to set their own thresholds and route data for additional manual validation. </div>
+        <h2 class="topicheading">Testing an Invoice with the Smart Invoice Profile<a name="Test"></a></h2>
+        <ol>
+            <li>On the Capture Profiles page, click <b>Smart Invoice Profile</b> in the left pane, then open the <b>Invoices</b> profile. </li>
+            <li>Click the <MadCap:toggler targets="TestProfile" style="font-weight: bold;">Test profile</MadCap:toggler> button <img src="../../Images/Capture-Profiles/Test.png" /> at the top of the page. <p MadCap:targetName="TestProfile"><img src="../../Images/Capture-Profiles/Test-ICP.PNG" alt="Test profile button" title="Test the Invoice Capture Profile against some invoices." /></p></li>
+            <li>
+               In the <b>Run Test</b> dialog box, upload the sample invoices you want to test the profile against by clicking  <b>Add sample documents</b>.It's best to add invoices that are similar to the invoices you want the profile to run on so your results will be more accurate and meaningful.
+</li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>If you clicked <b>add a sample document</b>, you can add one or more image files (.png, .jpg, .gif, .bmp, and .tiff)  that are samples of the pages you want to capture data from. You can add multi-page .tiff and .pdf documents if needed. </li>
+                <li>Then, click <b>choose files to upload</b> to select image files. </li>
+                <li>After uploading sample documents, click <b>Save</b> to start uploading the image files. </li>
+            </ol>
+            <p class="note"><b>Note:</b> Smart Invoice Capture supports multi-page invoices; however, the profile will only search for data across the first 10 pages of the invoice.</p>
+            <li>
+                  Select the checkboxes next to the documents you want to include in the test, and click <b>Run test</b>. You will be prompted to save the profile if you have not already saved it.</li>
+            <li>Follow steps 3 and 4 to add additional sample documents to test against. </li>
+            <li>
+                <MadCap:toggler targets="ICP-Results">The test results will be listed in table format</MadCap:toggler>. Each sample document will be listed in the left most column and the four values captured from each sample document, along with their confidence percentages, will be in the remaining columns. <p MadCap:targetName="ICP-Results"><img src="../../Images/Capture-Profiles/ICP.PNG" alt="Invoice Capture Profile" title="View the values and confidence percentages of each invoice tested." /></p><img src="../../Images/Capture-Profiles/Handwriting.png" title="Invoice with handwriting" alt="Invoice with handwriting" MadCap:targetName="ICP-Results" /><ul><li> The confidence percentages reflect how confident the machine learning algorithm is that the displayed data was captured correctly. When the Workflow activity runs this smart profile, the confidence levels will be captured as tokens so process designers can use conditions to set their own confidence thresholds and route data for additional manual validation. <ul><li> Green indicates a high confidence (81% - 100%)</li><li>Blue indicates a medium confidence (31% - 80%)</li><li>Red indicates a low confidence (0% - 30%).  </li></ul></li><li>Click a sample document will display a preview of the document on the right so you can see the information that was captured. </li><li>Hover over a green box on the image or text will display the value captured. </li><li>The <b>Fit width</b> drop-down menu lets you zoom the image to different zoom levels.  </li><li>Click <b>Text</b> above the image preview to display the OCRed text of the sample document. Viewing the document text can help diagnose accuracy issues. If OCR results are poor, a higher quality document may be needed. </li><li>Click the <b>Prev</b> or <b>Next</b> links to move to the previous or next sample document.</li></ul></li>
+        </ol>
+        <p>Once tested, you can run this profile using the <a href="../Workflow/Activities/Run-Capture-Profile.htm" title="Click here for more information about the Run Capture Profile activity." alt="Click here for more information about the Run Capture Profile activity.">Run Capture Profile</a> activity in Workflow. </p>
+    </body>
+</html>

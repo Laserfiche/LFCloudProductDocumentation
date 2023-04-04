@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens</h1>
+        <p>Tokens are bits of text that are replaced with values when a workflow runs. This provides a way to use current information in your workflows. For example, you can use a date token in an email to display the current date when the workflow runs. The <a href="Using-Token-Editor.htm" title="Click here to learn more." alt="Click here to learn more.">token editor</a> lets you modify the values in tokens temporarily.</p>
+        <h2>Retrieving Starting Entry Tokens</h2>
+        <p>You can select the <b>Retrieve starting entry tokens</b> option in the <MadCap:snippetText src="../../Snippets/Properties Pane.flsnp" /> to receive tokens about the entry that starts the workflow.</p>
+        <p>
+            <img src="../../../Images/tokensimage.png" />
+        </p>
+        <h2><a name="Multi-va"></a>Multi-value Tokens</h2>
+        <p>Multi-value tokens are tokens that contain two or more values. You can produce a multi-value token in the following ways:</p>
+        <ul>
+            <li>Create a new token in the <a href="../Activities/Assign-Token-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Assign Token Values</a> activity and make it a multi-value token.</li>
+            <li>Create a new token in the <a href="../Activities/Token-Calculator.htm" title="Click here to learn more." alt="Click here to learn more.">Token Calculator</a> activity and apply a function to make it a multi-value token.</li>
+            <li>Modify an existing token in the <a href="Using-Token-Editor.htm" title="Click here to learn more." alt="Click here to learn more.">token editor</a>.</li>
+        </ul>
+        <p>Only the first value in a multi-value token can be returned. If you want to return more than one value, you must iterate over each value in the token. You can extract a specific value from a multi-value token using the <a href="Token-Index.htm" title="Click here to learn more." alt="Click here to learn more.">Apply Index</a> option in the <a href="Using-Token-Editor.htm" title="Click here to learn more." alt="Click here to learn more.">token editor</a>.</p>
+        <h2>List of Tokens</h2>
+        <p>The following list describes the general tokens in a workflow.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>General Tokens in Workflow</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(Date)</td>
+                    <td class="tabletext">Date</td>
+                    <td class="tabletext">The date when the activity ran.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Time)</td>
+                    <td class="tabletext">Time</td>
+                    <td class="tabletext">The time when the activity ran.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(DateTime)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">The date and time when the activity ran.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Has Starting Entry)</td>
+                    <td class="tabletext">Has Starting Entry</td>
+                    <td class="tabletext">A Boolean that only is true if the workflow has a starting entry.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Instance URL)</td>
+                    <td class="tabletext">Instance URL</td>
+                    <td class="tabletext">The URL to the instance report.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Initiator)</td>
+                    <td class="tabletext">Initiator	</td>
+                    <td class="tabletext">The user who satisfied the workflow's <a href="../../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting event</a>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Initiator SID)</td>
+                    <td class="tabletext">Initiator SID</td>
+                    <td class="tabletext">The SID (security identifier) of the user that satisfied the workflow's starting event.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Starting Date Time)</td>
+                    <td class="tabletext">Starting Date Time</td>
+                    <td class="tabletext">The date and time when the workflow started based on the workflow’s <a href="../../Settings/Work-Schedules.htm" title="Click here to learn more." alt="Click here to learn more.">default work schedule profile</a>. It differs in Search Results if a backlog of items is waiting to run.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Starting Date Time (UTC))</td>
+                    <td class="tabletext">Starting Date Time (UTC)</td>
+                    <td class="tabletext">The date and time when the workflow started in UTC. It differs in Search Results if a backlog of items is waiting to run.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(WorkflowName)</td>
+                    <td class="tabletext">WorkflowName</td>
+                    <td class="tabletext">The workflow's name used when the Workflow is converted into Windows Workflow Foundation code.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(WorkflowID)</td>
+                    <td class="tabletext">WorkflowID</td>
+                    <td class="tabletext">The workflow's ID number. The first workflow you publish is assigned ID 1.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(DisplayName)</td>
+                    <td class="tabletext">DisplayName</td>
+                    <td class="tabletext">The name of the workflow as defined in the <b>Workflow Name</b> property box.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(WorkflowVersion)</td>
+                    <td class="tabletext">WorkflowVersion</td>
+                    <td class="tabletext">The workflow's version number. Each time you republish a workflow, it gets a new number starting with 1.	</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Entry ID)</td>
+                    <td class="tabletext">Entry ID</td>
+                    <td class="tabletext">The Laserfiche ID number of the routed entry.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Entry Name)</td>
+                    <td class="tabletext">Entry Name</td>
+                    <td class="tabletext">The name of the routed entry.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Entry Path)</td>
+                    <td class="tabletext">Entry Path</td>
+                    <td class="tabletext">The folder path of the routed entry.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Entry Repository)</td>
+                    <td class="tabletext">Entry Repository</td>
+                    <td class="tabletext">The repository the routed entry is in.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Entry Server)</td>
+                    <td class="tabletext">Entry Server</td>
+                    <td class="tabletext">The Laserfiche Server the routed entry is on.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(LFServer)</td>
+                    <td class="tabletext">LFServer</td>
+                    <td class="tabletext">The name of the starting entry's Laserfiche Server.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(LFRepository)</td>
+                    <td class="tabletext">LFRepository</td>
+                    <td class="tabletext">The name of the Laserfiche Repository the starting entry is in.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(&lt;parameterName&gt;)</td>
+                    <td class="tabletext">&lt;parameterName&gt;</td>
+                    <td class="tabletext">When defined in the <a href="../Workflow-Properties.htm" title="Click here to learn more." alt="Click here to learn more.">Workflow Properties</a>, the input or output parameter(s), where &lt;parameterName&gt; is the name of the parameter as defined.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Import Agent Tokens</h1>
+        <p>A token is a placeholder value that is automatically replaced with actual values  when a document is imported. </p>
+        <table style="border-left-width: medium;border-left-color: #ffffff;border-right-width: medium;border-right-color: #ffffff;border-top-width: medium;border-top-color: #ffffff;border-bottom-width: medium;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;" summary="A list of tokens that can be used with Import Agent and their descriptions.">
+            <caption style="font-weight: bold;">
+                <MadCap:concept term="Import Agent">
+                </MadCap:concept>Tokens in Import Agent and Email Archive</caption>
+            <col style="width: 98px;">
+            </col>
+            <col style="width: 98px;">
+            </col>
+            <col style="width: 164px;">
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th style="background-color: #c0c0c0;"><b>Name in Import Agent</b>
+                    </th>
+                    <th style="background-color: #c0c0c0;">Name in Email Archive</th>
+                    <th style="background-color: #c0c0c0;"><b>Symbol</b>
+                    </th>
+                    <th style="background-color: #c0c0c0;"><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">File Name</td>
+                    <td>Name</td>
+                    <td class="tabletext">%(FileName)</td>
+                    <td class="tabletext">The original file name of the imported file.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">File Path</td>
+                    <td><i>N/A</i>
+                    </td>
+                    <td class="tabletext">%(FilePath)</td>
+                    <td class="tabletext">The full Windows path to the imported file. The  notation for the path (i.e., full path or UNC) will match the notation used to  specify the <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/Overview-of-Laserfiche-Import-Agent.htm" title="Click here to learn more." alt="Click here to learn more.">monitored directory</a>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Extension</td>
+                    <td>Extension</td>
+                    <td class="tabletext">%(Extension)</td>
+                    <td class="tabletext">The file name extension for the imported file (e.g., tif, txt, doc, etc.).</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">File Creation Date</td>
+                    <td>Creation Date</td>
+                    <td class="tabletext" MadCap:conditions="">%(FileCreated)</td>
+                    <td class="tabletext" MadCap:conditions="">The date the imported file  was created. </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">File Modification Date</td>
+                    <td>Modified Date</td>
+                    <td class="tabletext" MadCap:conditions=""> %(FileModified)</td>
+                    <td class="tabletext" MadCap:conditions="">The date the imported file  was last modified.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Monitored Folder</td>
+                    <td><i>N/A</i>
+                    </td>
+                    <td class="tabletext">%(MonitoredDirectory)</td>
+                    <td class="tabletext">The path to the monitored  directory. The notation for the path (i.e., full path or UNC) will match the  notation used to specify the monitored directory.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Subfolder</td>
+                    <td><i>N/A</i>
+                    </td>
+                    <td class="tabletext">%(Subfolder)</td>
+                    <td class="tabletext">The relative path to the imported file (relative to the monitored directory). If the file was  retrieved from the monitored directory, this token will be replaced by a  blank value.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Date</td>
+                    <td>Date</td>
+                    <td class="tabletext">%(Date)</td>
+                    <td class="tabletext">The system date on which the file was imported. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Time</td>
+                    <td>Time</td>
+                    <td class="tabletext">%(Time)</td>
+                    <td class="tabletext">The system time when the file was imported. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Date/Time</td>
+                    <td>DateTime</td>
+                    <td class="tabletext">%(DateTime)</td>
+                    <td class="tabletext">The  system date and time when the file  was imported. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Session Count*
+                    </td>
+                    <td><i>N/A</i>
+                    </td>
+                    <td class="tabletext">%(Count)
+                    </td>
+                    <td class="tabletext">A per user/session token that starts at 1 by default. This token can be configured in the Import Agent Configuration Utility by selecting <b>Options</b> under <b>Profile</b> in the menu bar.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Profile Count</td>
+                    <td><i>N/A</i>
+                    </td>
+                    <td class="tabletext">%(ProfileCount)</td>
+                    <td class="tabletext">A sequential number that starts at 1 by default. Each profile has a unique Profile Count token which can be configured inside the profile's <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/Creating-a-Profile.htm#Properties" title="Click here to learn more." alt="Click here to learn more.">Properties</a> tab.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" style="font-weight: normal;">Repository Count</td>
+                    <td>Repository Count</td>
+                    <td class="tabletext">%(GCount)</td>
+                    <td class="tabletext">Repository-wide, globally incrementing token that starts at 1 by default.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">User Name
+                    </td>
+                    <td>Username</td>
+                    <td class="tabletext">%(UserName)
+                    </td>
+                    <td class="tabletext">The name of the user through which  files were imported.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Name</td>
+                    <td>Name</td>
+                    <td class="tabletext">%(Name)</td>
+                    <td class="tabletext">The name of the document in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Parent Name</td>
+                    <td>Parent Name</td>
+                    <td class="tabletext">%(ParentName)</td>
+                    <td class="tabletext">The name of the parent folder in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry ID</td>
+                    <td>ID</td>
+                    <td class="tabletext">%(ID)</td>
+                    <td class="tabletext">The document's entry ID number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Parent ID</td>
+                    <td>Parent ID</td>
+                    <td class="tabletext">%(ParentID)</td>
+                    <td class="tabletext">The entry ID assigned to the parent folder.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Parent Field</td>
+                    <td>Parent Field</td>
+                    <td class="tabletext">%(Parent:FieldName)</td>
+                    <td class="tabletext">The value of a field assigned to the parent folder. Replace <b>FieldName</b> with the name of a field.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Sender</td>
+                    <td>Sender</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailSender)</td>
+                    <td class="tabletext" MadCap:conditions="">The name of the user who sent the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Sender Email</td>
+                    <td>Sender Address</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailSenderAddr)</td>
+                    <td class="tabletext" MadCap:conditions="">The email address of the user who sent the imported email. </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Recipients</td>
+                    <td>Recipients</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailRecipients)</td>
+                    <td class="tabletext" MadCap:conditions="">The names of the users who received the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Recipient Emails</td>
+                    <td>Recipient Addresses</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailRecipientAddrs)</td>
+                    <td class="tabletext" MadCap:conditions="">The email addresses of the users who received the imported email. </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">CCs</td>
+                    <td>CCs</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailCCs)</td>
+                    <td class="tabletext" MadCap:conditions="">The names of the users who were CCed on the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">CC Emails</td>
+                    <td>CC Addresses</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailCCAddrs) </td>
+                    <td class="tabletext" MadCap:conditions="">The email addresses of the users who were CCed on the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">BCCs</td>
+                    <td>BCCs</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailBCCs)</td>
+                    <td class="tabletext" MadCap:conditions="">The names of the users who were BCCed on the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">BCC Emails</td>
+                    <td>BCC Addresses</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailBCCAddrs) </td>
+                    <td class="tabletext" MadCap:conditions="">The email addresses of the users who were BCCed on the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Subject</td>
+                    <td>Subject</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailSubject)</td>
+                    <td class="tabletext" MadCap:conditions="">The subject of the imported email.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Time Sent</td>
+                    <td>Sent Time</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailSentTime) </td>
+                    <td class="tabletext" MadCap:conditions="">The time the imported email was sent.</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Time Received</td>
+                    <td>Received Time</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailReceivedTime)</td>
+                    <td class="tabletext" MadCap:conditions="">The time the imported email was received. </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Priority</td>
+                    <td>Priority</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailPriority) for text fields and %(EmailPriorityInt) for number, integer, and long integer fields</td>
+                    <td class="tabletext" MadCap:conditions="">The priority applied to the imported email. If the token is in a text field, the token will be replaced by a word describing the priority (e.g., High, Normal, or Low). If the token is in a number, integer, or long integer field, the token will be replaced by a number corresponding to the priority (e.g., High = 1, Normal = 3, and Low  = 5.)</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Conversation ID</td>
+                    <td>Conversation ID</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailConversationID)</td>
+                    <td class="tabletext" MadCap:conditions="">The ID of the conversation the imported email was part of. </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td class="tabletext" MadCap:conditions="">Unique Message ID</td>
+                    <td>Unique Message ID</td>
+                    <td class="tabletext" MadCap:conditions="">%(EmailUniqueMessageID) </td>
+                    <td class="tabletext" MadCap:conditions="">The unique message ID of the email being imported. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ex"><b>Tip:</b> Click <b>Display parsed token</b> in the token menu to see the value of tokens that can be resolved immediately. For example, if you select <b>Display parsed token</b> and insert the Date token, the current date will be inserted into the text box instead of the token syntax %(Date).</p>
+        <p class="note"><b>Note:</b> To format date, time, or number tokens, use ICU formatting for dates and times or ICU formatting for numbers. To apply a token format, append the format to the token:<br></br>%(Date,<i>format</i>)<br></br>%(Time,<i>format</i>)<br></br>%(DateTime,<i>format</i>)<br></br>%(Count,<i>format</i>)<br></br>For example, to configure a date token to use the MM/dd/yyyy format, configure the date token to be: <b>%(Date,MM/dd/yyyy)</b></p>
+        <p style="font-weight: bold;">*Notes about the Session Count token:</p>
+        <ul>
+            <li> To set a minimum width on the Session Count token, use  the following notation: <b>%(Count, #)</b>. The variable <b>#</b> should be replaced by the  minimum width that the value returned by the Count token must meet. If the width  of the returned value is smaller than the specified number, leading spaces  will be added to the value. For example, if the Count token has been specified  as <b>%(Count, 3)</b> and the value returned is a single digit, two leading spaces  would be inserted before the current Count value.</li>
+            <li> If you want for the Session Count  token to use leading zeros, prepend the current value  of the token with the desired number of zeros.</li>
+        </ul>
+    </body>
+</html>

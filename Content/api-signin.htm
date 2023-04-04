@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.API">
+    <head>
+    </head>
+    <body>
+        <h1>Creating a Connection</h1>
+        <p>Create a connection to the repository to begin using the Laserfiche Repository Web API. Subsequent requests can use the access token received in the response from the initial connection creation request. After your application's task is finished, the connection should be closed.</p>
+        <h2>Creating a Session</h2>
+        <p><b>Request Overview</b>
+        </p>
+        <p class="note">[POST] https://api.laserfiche.com/repository/{version}/Repositories/{repository-id}/AccessToken/Create</p>
+        <div><pre class="Code" xml:space="preserve">{
+  "username": "Username"
+  "password": "Password",
+  "applicationName": "ExampleClient123"
+}
+</pre>
+        </div>
+        <ul>
+            <li><b>username:</b> The username that is provided should be the same as the username entered when signin in to <MadCap:variable name="DoNotTranslate.LF Cloud" /></li>
+            <li><b>password:</b> The password that is provided should be the same as the password entered when signin in to <MadCap:variable name="DoNotTranslate.LF Cloud" />.</li>
+            <li><b>applicationName:</b> The application name provided should be the name of your application. All actions performed through the API with be logged in the system logs with this application name.</li>
+        </ul>
+        <p><b>Response Overview</b>
+        </p>
+        <div><pre class="Code" xml:space="preserve">
+{
+  "@odata.context": "https://api.laserfiche.com/repository/v1-alpha/$metadata#Laserfiche.Repository.SessionKeyInfo",
+  "authToken": "AAaaAAAaaaaaaAAAaaagOu/OMsMSawLsLWMcoUcSuVTHiX+6sL2kH9qNtKnMp/khZCAApUGGQtp/jvbnsg==",
+  "expireTime": "2021-01-01T01:01:11.1111111Z"
+}</pre>
+        </div>
+        <ul>
+            <li><b>authToken:</b> Take note of the authToken value. This value should be saved and stored somewhere in your application cache and provided in the Authorization header, in the form of:
+            <p class="ex">"Authorization" : "Bearer {authToken}"</p><p>For example, with the authToken returned in the above example response.  your requests should have an Authorization header with the value:</p><p class="ex">"Bearer AAaaAAAaaaaaaAAAaaagOu/OMsMSawLsLWMcoUcSuVTHiX+6sL2kH9qNtKnMp/khZCAApUGGQtp/jvbnsg=="</p></li>
+            <li><b>expireTime:</b> This value provides the date/time of when the session expires. If you would like to keep the session alive longer, use the <b>Refresh</b> route, which will be discussed below.</li>
+        </ul>
+        <h2>Keeping the Session Alive</h2>
+        <p><b>Request Overview</b>
+        </p>
+        <p class="note">[POST] https://api.laserfiche.com/repository/{version}/Repositories/{repository-id}/AccessToken/Refresh</p>
+        <p>There is no request body associated with this route.</p>
+        <p>The session does not need to be refreshed if requests are actively being made. The Refresh route only applies if your session is idle, but still alive. If your session has already expired, it cannot be refreshed.</p>
+        <h2>Closing the Session</h2>
+        <p><b>Request Overview</b>
+        </p>
+        <p class="note">[POST] https://api.laserfiche.com/repository/{version}/Repositories/{repository-id}/AccessToken/Invalidate</p>
+        <p>There is no request body associated with this route.</p>
+        <p><b>Response Overview</b>
+        </p>
+        <div><pre class="Code" xml:space="preserve">{
+  "@odata.context": "https://api.laserfiche.com/repository/v1-alpha/$metadata#Edm.Boolean",
+  "value": true
+}</pre>
+        </div>
+        <ul>
+            <li><b>value:</b> Boolean value that indicates whether the session was close successfully. A value of "true" means the connection was closed.</li>
+        </ul>
+    </body>
+</html>

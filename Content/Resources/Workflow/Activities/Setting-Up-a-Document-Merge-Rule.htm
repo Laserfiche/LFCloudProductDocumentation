@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring a Document Merge Rule</h1>
+        <p>This configuration of <a href="Run-Business-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">the Run Rule activity</a> allows you to update a document or PDF using a <a href="../../Rules/Document-Merges/Getting-Started-with-Document-Merges.htm" title="Click here to learn more." alt="Click here to learn more.">document merge rule</a>. The document contains simple and/or table merge fields that update the document in different ways. Simple merge fields are replaced by single values, while table merge fields are replaced by iterative data in a table-like structure. The activity produces a file that contains the result of the document merge.</p>
+        <p>To configure a document merge rule:</p>
+        <ol>
+            <li>Drag the <b>Run Rule</b> activity from the toolbox pane and drop it in the designer pane.</li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Rule</b> property box, select <b>Document Merge Rule</b>.</li>
+            <li>Select the rule and version.&#160;The version corresponds to the "Major"&#160;<a href="../../Rules/Versioning-for-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">version number</a> for the  rule.</li>
+            <li>Under <b>Input Values</b>, choose the values you want to update the simple merge fields with. The values can be hard-coded or from a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            <li>Under <b>Output Tokens</b>, provide a name for the <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a> containing the resulting file from the merge. You do not have to modify the <a href="../Tokens-Regex/Token-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">token tag</a> labeled <i>File</i>.<p class="ex"><b>Example</b>: The following output token <i>DocumentMergeResult</i> contains the resulting file.</p><p><img src="../../../Images/exampledmr2.png" /></p></li>
+            <li>Under <b>Table Merge Options</b>, first select the source of the table merge and then choose the data you want to populate each field with.<p class="ex"><b>Example</b>: You select <i>Output Entries</i> from a <a href="Find-Entries.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entries</a> activity. In the first field in the document <i>Creator</i>, you can use the <b>Created By</b> property, which can be found in <b>Additional Properties</b> in the <b>Find Entries</b> activity. This updates the table for each entry found.</p><p><img src="../../../Images/docmergetablemerge.png" /></p></li>
+        </ol>
+    </body>
+</html>

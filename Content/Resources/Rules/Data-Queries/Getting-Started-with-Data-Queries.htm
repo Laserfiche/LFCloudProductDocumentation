@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Getting Started with Queries</h1>
+        <p>Queries allow you to perform queries on <a href="../../Entities/lookup-tables.htm" title="Click here to learn more." alt="Click here to learn more.">lookup tables</a> or <a href="../../Integrations/External-Data-Sources/External-Data-Sources.htm" title="Click here to learn more." alt="Click here to learn more.">external data sources</a>. The queries editor includes a set of boxes that allow you to build SQL-like expressions to extract information from data sources.</p>
+        <p MadCap:conditions="Default.Do not include">Differences with Entity Queries: one table, no reference members, you can define the output parameter name directly in the query (but you can define the output token name in the Workflow activity), you cannot group statements</p>
+        <p style="font-weight: bold;">To create a new query:</p>
+        <ol>
+            <li>On the <b>Rules</b> page, select the arrow beside <b>New</b> and select <b>Query</b> as your rule type.</li>
+            <li>In the Create Query Rule dialog, specify the <b>Name</b> and <b>Description</b> for your rule.</li>
+            <li>Select whether you want to query a lookup table or a data source.<ol style="list-style-type: lower-alpha;"><li>If you choose to query a data source, specify the <a href="../../Integrations/External-Data-Sources/External-Data-Sources.htm" title="Click here to learn more." alt="Click here to learn more.">external data source</a> that you want to query.</li></ol></li>
+            <li>Choose whether to build a <b>Select</b>, <b>Insert</b>, <b>Update</b>, or <b>Delete</b> query type.<p class="note"><b>Note</b>: Delete is only available on the Lookup Table query type.</p></li>
+            <li>Click <b>Create</b>.</li>
+            <li>Build the query statement with the following sections of the query editor:</li>
+            <ul>
+                <li><a href="Specifying-a-Table.htm" title="Click here to learn more." alt="Click here to learn more.">FROM</a>: Specify the table you want to query.</li>
+                <li><a href="Selecting-Columns.htm" title="Click here to learn more." alt="Click here to learn more.">SELECT</a>: Pick the columns from the table.</li>
+                <li><a href="Searching-Individual-Values-in-a-Column.htm" title="Click here to learn more." alt="Click here to learn more.">WHERE</a>: Pick individual values in a column.</li>
+                <li><a href="Specifying-Order-of-Data-in-Query-Results.htm" title="Click here to learn more." alt="Click here to learn more.">ORDER BY</a>: Indicate the order of the query results.</li>
+                <li><a href="Organizing-Data-in-a-Column-Using-Operators.htm" title="Click here to learn more." alt="Click here to learn more.">GROUP BY</a>: Organize the data in a column.</li>
+            </ul>
+            <li>
+                Test that the query works as you expect. The query results section in the box at the bottom displays only the first 100 results, along with the total number of results found.
+            </li>
+            <li><a href="../../Workflow/Activities/Setting-Up-a-Data-Query-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">Add the query to your processes</a>.
+</li>
+        </ol>
+        <p>Alternatively, you can <a href="../Importing-Exporting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">import a query</a> from a .bri file. After import, double-click on the rule to open the rule editor.</p>
+        <MadCap:snippetBlock src="../../Snippets/migrating-form-tables-into-word-documents.flsnp" />
+    </body>
+</html>

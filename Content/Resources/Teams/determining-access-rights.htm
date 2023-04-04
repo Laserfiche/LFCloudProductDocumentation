@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Determining Access Rights</title>
+    </head>
+    <body>
+        <h1>Determining Access Rights</h1>
+        <p>Access to Process Automation (PA)Teams features relies on the interaction of both the user's access rights set within the <a href="../Managing-Account-Administration.htm">Account Administration</a> portal  and their Team role. </p>
+        <p class="note"><b>Note:</b> All users  must have a minimum account right of <b>Access to Process Automation</b>.</p>
+        <p>On each team there are rights governing:</p>
+        <ul>
+            <li>Task visibility - who can take Business Process tasks assigned to the team.</li>
+            <li>Management of team membership and settings.</li>
+            <li>PA resources visibility and design privilege.</li>
+            <li>Process data visibility.</li>
+        </ul>
+        <p>The charts below provides information on how the users access rights interact with the team roles to control access to the actions available to that user.</p>
+        <h3 class="topicheading"><a name="basic"></a>Basic Team Rights</h3>
+        <table id="myTable" class="tablesorter" border="0">
+            <col style="width: 211px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Required Rights and/or Roles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Create Teams</b>
+                    </td>
+                    <td>Account rights of PA&#160;<b>Process Administrator</b> or <b>Process Manager</b></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p><b>Edit Teams and Create Projects</b>
+                        </p>
+                        <ul>
+                            <li>Edit team information</li>
+                            <li>Add and remove members</li>
+                            <li>Delete team</li>
+                            <li>Create Project
+</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Account rights of PA&#160;<b>Process Administrator</b> or <b>Process Manager</b></p>
+                        <p>OR</p>
+                        <p>Team role of <b>Team Manager</b></p>
+                        <p class="note"><b>Note:</b>&#160;<b>Process Managers</b> can only delete a team if that team has no projects. If the user is a <b>Process Administrator</b> or a <b>Process Manager</b> with the <b>Team Manager</b> role, then the team and its projects can be deleted at once.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p><b>Edit Project</b>
+                        </p>
+                        <ul>
+                            <li>Project Name and Alias </li>
+                            <li>Contributors</li>
+                            <li>Enable external project access </li>
+                            <li>Transfer ownership </li>
+                            <li>Delete project</li>
+                            <li> Set resource access</li>
+                        </ul>
+                    </td>
+                    <td>
+                        <p>Account rights of PA&#160;<b>Process Administrator</b></p>
+                        <p>OR</p>
+                        <p>Team role of <b>Team Manager</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Migrate Resources</b>
+                    </td>
+                    <td>
+                        <p>Team role of <b>Team Developer</b> PLUS Account rights of PA <b>Process Administrator</b></p>
+                        <p>
+OR</p>
+                        <p>
+Team role of <b>Team Developer</b> and <b>Team Manager</b> PLUS Account rights of PA <b>Process Developer </b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>View Project Landing Page</b>
+                    </td>
+                    <td>Team role of <b>Team Manager</b>, <b>Team Developer</b>, <b>Analyst</b>, or <b>Viewer</b></td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>View  Resources</b>
+                    </td>
+                    <td>
+                        <p>Team Role of <b>Team Manager</b>, <b>Team Developer</b>, <b>Analyst</b>, or <b>Viewer
+</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Create and Edit  Resources</b>
+                    </td>
+                    <td>
+                        <p>
+Team role of <b>Team Developer</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>View Data</b>
+                    </td>
+                    <td>
+                        <p>Team role of <b>Analyst</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Custom Reports</b>
+                    </td>
+                    <td>
+                        <p><b>Analyst
+</b>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 class="topicheading"><a name="external"></a>External Access Rights</h3>
+        <p>If <b>External Access</b> is enabled for the project, the following table provides information on what actions are possible for other users that have been granted access.</p>
+        <table id="myTable2" class="tablesorter" border="0">
+            <col style="width: 211px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Required Rights and/or Roles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top"><b>Migrate Resources</b>
+                    </td>
+                    <td>
+                        <p>User has been granted <b>External Project Access</b> PLUS Account rights of PA&#160;<b>Process Administrator</b></p>
+                        <p>
+OR</p>
+                        <p><![CDATA[
+]]><b>External Project Access</b> PLUS&#160;Team role of  <b>Team Manager</b> PLUS Account rights of PA <b>Process Developer </b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>View Project Landing Page</b>
+                    </td>
+                    <td><b>External Project Access</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>View  Resources</b>
+                    </td>
+                    <td>
+                        <p><b>External Project Access</b>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Create and Edit Resources</b>
+                    </td>
+                    <td>
+                        <p><b>External Project Access</b>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>View Data</b>
+                    </td>
+                    <td>
+                        <p><b>External Project Access</b> WITH <b>View Submitted Data</b> checked
+</p>
+                        <p class="note"><b>Note:</b><b>Survey developers</b> can only view business process data if they have the <b>Analyst</b> team role, not if they only have <b>External Project Access</b></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Custom Reports</b>
+                    </td>
+                    <td>
+                        <p><b>External Project Access</b>  PLUS  Account rights of PA&#160;<b>Process Administrator</b>, <b>Process Manager</b>,  <b>Developer</b>, or <b>Asset Manager</b></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <h3 class="topicheading"><a name="bizproc"></a>Business Process Specific Access Rights</h3>
+        <p>Some management actions for business processes within a project require specific rights. The following tables provide information on what actions are possible for users that have been granted access.</p>
+        <p><b>Monitor Page: Draft Management</b>
+        </p>
+        <table id="myTable3" class="tablesorter" border="0">
+            <col style="width: 211px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Actions</th>
+                    <th>Required Rights and/or Roles</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="vertical-align: top"><b>View Production Draft</b>
+                    </td>
+                    <td>
+                        <p>Team role of <b>Analyst</b></p>
+                        <p>OR</p>
+                        <p>Team role of <b>Team Developer</b> PLUS&#160;Account rights of PA <b>Process Administrator</b> </p>
+                        <p>OR&#160;</p>
+                        <p><b>External Project Access</b>  granted WITH <b>View Submitted Data</b> checked
+</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top">
+                        <p><b>View  Development Draft</b>
+                        </p>
+                        <p><b>Search Draft</b>
+                        </p>
+                    </td>
+                    <td>
+                        <p>Team role of <b>Analyst</b></p>
+                        <p>OR</p>
+                        <p>Team role of <b>Team Developer</b> PLUS&#160;Account rights of PA&#160;<b>Process Administrator</b> or <b>Developer</b></p>
+                        <p>OR</p>
+                        <p><b>External Project Access</b> granted WITH <b>View Submitted Data</b> checked
+</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="vertical-align: top"><b>Delete Draft</b>
+                        <p><b>Resend Email Notification</b>
+                        </p>
+                        <p><b>Update Email Address</b>
+                        </p>
+                    </td>
+                    <td>
+                        <p>Team role of <b>Analyst</b></p>
+                        <p>OR</p>
+                        <p>Team role of <b>Team Developer</b> PLUS&#160;Account rights of PA <b>Process Administrator</b> or <b>Developer</b></p>
+                        <p>OR</p>
+                        <p><b>External Project Access</b>  granted AND&#160;Account rights of PA <b>Process Administrator</b>&#160;or <b>Developer</b>  WITH <b>View Submitted Data</b> checked
+						</p>
+                        <p class="note"><b>Note: Resend Email Notification</b> and <b>Update Email Address</b> are only available with public drafts.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note:</b> Development drafts are related to drafts saved from a submission or task which has been triggered from the process diagram, while production drafts are related to drafts saved from a submission or task which has been triggered from either a  form or the manage page. The two modes apply to the three categories (public, private, and task) of drafts.
+		</p>
+    </body>
+</html>

@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Ellucian Banner Integration</title>
+    </head>
+    <body>
+        <h1>Ellucian Banner Integration</h1>
+        <h2>Overview</h2>
+        <p>Ellucian Banner Integration through Ethos is available as an add-on in Laserfiche Process Automation for all accounts. It allows customers to easily push and pull information from Ellucian without requiring code. It supports auto-populating registrar forms built in a <a href="../../Forms-Current/Business-Processes.htm">business process</a> and updating records in Banner with course or student personal information through a <a href="../Workflow/Workflow.htm">workflow</a>.</p>
+        <h2>Connecting Laserfiche to Ellucian</h2>
+        <MadCap:snippetBlock src="../Snippets/EllucianEthosConnection.flsnp" />
+        <h3>The Objects tab</h3>
+        <p>Once the connection has been established, you can review and edit how Laserfiche maps fields to Ellucian fields for each object. Laserfiche has provided a default mapping, although many of these can be altered if necessary. Some objects will not have an editable map while others may be highly editable.</p>
+        <p>The Default mapping follows the format: </p>
+        <p>[Laserfiche Field] -&gt; [Ellucian type title] [(Ellucian type category)]</p>
+        <p class="note"><b>Note:</b> Type title and category correspond to Description and Translation in the Ellucian Banner frond-end respectively.</p>
+        <p>For more information refer to the <a href="ellucian-objects.htm">Ellucian Objects</a> page.</p>
+        <h2>Working with Ellucian in Process Automation</h2>
+        <p>The two major components used for integration with Ellucian are business processes and workflows. Using these tools, you can pull data from Ellucian through both business processes and workflows, but can only push data into Ellucian through a workflow.</p>
+        <h3>Using Lookup Rules in Business Process Forms</h3>
+        <ol>
+            <li>To access Ellucian data within a form, choose “Application Connection” under the “Select rule type” drop-down when creating a <a href="../../Forms-Current/Filling-Fields-with-Lookup-Rules.htm">new lookup rule</a>.</li>
+            <li>The second drop-down will list the connections created on the Integrations page. Select the connection created for the Ellucian data desired.</li>
+            <li>Once a valid connection profile is selected, select the action to perform.</li>
+            <li>Select the desired lookup action. See <a href="ellucian-actions.htm">Ellucian Actions</a> for available actions.</li>
+            <li>Once an action is selected, configure the rule to fill form fields and/or variables as desired when one or more form fields match Ellucian fields. <p class="note"><b>Note:</b> These actions do not support the form <a href="../../Forms-Current/Form-Fields/Address.htm">Address type</a> field, use a <a href="../../Forms-Current/Form-Fields/Multi-Line.htm">Multi-line field</a> instead.</p></li>
+        </ol>
+        <p class="note"><b>Note:</b> To access the Update actions, use a Workflow Service Task to pass the information to a Run Application Activity in a workflow as described later in this document.</p>
+        <h3 class="subheader">Form Creation Best Practices</h3>
+        <p>Since most Ellucian fields are plain text, we suggest that single line input fields (or other single line inputs such as Date fields) are used when creating the form.</p>
+        <p>For fields that may contain multiple values, Multi-line fields may be used. Examples include "Billing Address - Address" and "Mailing Address - Address".</p>
+        <p>When retrieving or updating an email or phone, use a collection with multiple single-line fields for the sub-fields, as these fields may have multiple values. For example, a user might have multiple mobile phone numbers. In order to display all numbers, the Mobile Phone field needs to be retrieved into a collection. When retrieving or updating a collection field, ensure "as new sets" is selected for each individual sub-field (e.g. Mobile Phone - Number) in the lookup rule.</p>
+        <p>Use the lookup actions like Get Marital Status List and Get Ethnicity List to populate a drop-down in a form to ensure that the update request contains the values necessary, as Ellucian uses GUID-type values for updates.</p>
+        <p class="w"><b>Note:</b> If a connection is not updated after a change on Ellucian, then the lookup rules will use the data from the last saved version of the connection. This can cause errors, for example, if the mapped type of a field is made inaccessible from the Ellucian side and the connection has not been updated: the field can still be used in the lookup rule but the action will fail due to a third-party error.<br />If a selected connection is deleted, the associated lookup rules will be disabled and cleared.</p>
+        <h3 class="subheader">Passing the Information to a Workflow</h3>
+        <p>Once information about the changes to be made to a record in Ellucian have been gathered by the form, place a <a href="../../Forms-Current/Service-Tasks.htm#WorkflowServiceTasks">Workflow Service Task</a> in the process diagram and configure the inputs and outputs as required. This step may need to be performed after creating the workflow for the type of request desired.</p>
+        <h3>Working with Ellucian in Workflows</h3>
+        <p>For the workflow to be started from a business process, the output parameters need to be configured in the business process, and the workflow must be allowed to be started from other processes. See the following two links for additional details:</p>
+        <ul>
+            <li><a href="../Workflow/Workflow-Properties.htm">Workflow Properties</a>
+            </li>
+            <li><a href="../Workflow/Workflow-Parameters.htm">Workflow Parameters</a>
+            </li>
+        </ul>
+        <p>Add a <a href="execute-application-action.htm">Run Application Action</a> activity to the workflow.</p>
+        <p>In the Integration section of the activity, select the Ellucian connection profile created earlier.</p>
+        <ol>
+            <li>Select the action to be performed. See <a href="ellucian-actions.htm">Ellucian Actions</a> for details about the available actions.</li>
+            <li>For the selected action, enter values or assign tokens to the input fields and edit the output token names in the output section if necessary.<ol style="list-style-type: lower-alpha;"><li>Certain fields support multi-value tokens, these fields include: Billing Address - Address, Mailing Address - Address, Email - Email address, Home/Mobile Phone (Number, Extension, Country Calling Code).</li><li>Add/remove input tokens for the update action(s) to decide which fields will be updated. Fields that are not added will not be updated.</li></ol></li>
+        </ol>
+        <p class="note"><b>Note:</b> Removing certain fields can improve performance if they are not required. These fields include: Ethnicity, Martial Status, Billing Address and Mailing Address.</p>
+        <h3 class="subheader">Behavior of Updates and Searches in Workflow:</h3>
+        <p>All updates require a valid ID (person ID) as defined by Ellucian. Use a Search action to retrieve the ID directly from Ellucian. The person ID is not to be confused with a “Banner ID”.</p>
+        <p>&#160;</p>
+    </body>
+</html>

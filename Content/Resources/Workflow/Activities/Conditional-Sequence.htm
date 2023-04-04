@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Conditional Sequence</h1>
+        <p style="text-align: center;">
+            <img src="Images/conditionalSequenceCanvas.PNG" title="Conditional Sequence activity" alt="Conditional Sequence activity" />
+        </p>
+        <p>This activity runs the contained activities if its conditions are satisfied.</p>
+        <p class="ex"><b>Example</b>:&#160;A human resources department wants to automate the vacation approval process. To do this, they use a <b>Conditional Sequence</b> activity. First, the workflow must check if the person is requesting five days or fewer. If not, the <b>Conditional Sequence</b> activity is skipped. If so, the workflow runs the <b>Conditional Sequence</b> activity, which does the following: notifies the human resources department using an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity. The human resources is notified, and the workflow waits for an approval using a <a href="Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a> activity. Finally, a sticky note is applied with the approval date using an <a href="Add-Sticky-Note.htm" title="Click here to learn more." alt="Click here to learn more.">Add Sticky Note</a> activity.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>Select  the activity in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" />.</li>
+            <li>In the <b>Condition</b> property box, click <b>Edit conditions...</b>.</li>
+            <li><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more."><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">Configure the conditions for the branch</a>.</a> If the conditions are not met, the workflow skips this activity.</li>
+            <li>Click <b>OK</b>.</li>
+            <li>Drag and drop activities into the conditional sequence activity.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

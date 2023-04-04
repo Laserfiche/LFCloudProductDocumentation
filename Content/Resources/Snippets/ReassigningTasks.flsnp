@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="356" MadCap:lastWidth="686">
+    <head>
+    </head>
+    <body>
+        <ol start="2">
+            <li style="font-weight: normal;">Click the more button <img src="../Forms Images/OverflowButton.png" title="Click for more options" alt="Overflow menu" /> next to the task or in the form, and select <b>Reassign</b>.</li>
+            <li style="font-weight: normal;"> In the <b>Reassign Task</b> dialog box, select to reassign the task to one or more users or to an entire team.<ul><li style="font-weight: normal;">If you only specified one user, the task will be assigned to that user. It will appear in the list of assigned team tasks and will appear in that user's <b>My Tasks</b> section. </li><li style="font-weight: normal;">If you specified more than one user or a team, the task will appear in the <b>Available</b> tab for the users and/or the team. A manager can then reassign the task to an individual user (effectively assigning the task to them) or a user can assign the task to themselves. </li></ul></li>
+            <li style="font-weight: normal;"><b>Optional:</b> Type a comment describing why you are reassigning the task. This message will appear in the task's action history.</li>
+            <li style="font-weight: normal;">Click <b>Reassign</b>.</li>
+        </ol>
+    </body>
+</html>

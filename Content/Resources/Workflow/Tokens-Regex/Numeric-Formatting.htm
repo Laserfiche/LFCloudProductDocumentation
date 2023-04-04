@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Numeric Formatting</h1>
+        <p>You can use .NET formatting specifiers to have the data stored in tokens automatically formatted to specified numeric settings. Standard format specifiers can be used to format numbers according to some of the most frequently used choices. Custom format specifiers work for the same options allowed by the standard ones and also allow you to further customize or combine formatting choices. You can type these specifiers directly in the tokens or use the token editor to insert the specifier and test the formatted token.</p>
+        <p class="ex"><b>Example</b>: Lisa is processing order forms. She wants to use the numbers in the "Order" field as document names. The order numbers can have various numbers of digits, so she wants to add leading zeros so the names will be sorted in true numeric order. Currently, the maximum number of digits in an order number is five, but she decides to allow eight digits so she can continue to use the same system well into the future. She can do this using either standard or custom numeric format specifiers. In either case, she can begin by opening the token editor and selecting <b>Apply Formatting</b>. Then she can use either of the following options: "%(Order#"D8")" or "%(Order#"00000000"#)". When tested with "334", both formats return "00000334".</p>
+        <p style="font-weight: bold;">Standard Numeric Format Specifiers</p>
+        <p>The following specifiers can be used to format numbers according to standard rules.</p>
+        <p class="ex"><b>Example</b>: Maggie creates a workflow that retrieves text from a document. The reports include numbers in decimal form that she wants to store as percentages. She can format the token as "%(RetrieveDocumentText_Text#"P"#)". When tested with ".12", she receives "12.00%".</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Standard Numeric Strings</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: normal;"><b>Specifier</b>
+                    </th>
+                    <th style="font-weight: normal;"><b>Type</b>
+                    </th>
+                    <th style="font-weight: normal;"><b>Function</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">C or c</td>
+                    <td class="tabletext">Currency</td>
+                    <td class="tabletext">Formats to local currency.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">D or d</td>
+                    <td class="tabletext">Decimal</td>
+                    <td class="tabletext">Formats numbers <i>before</i> a decimal point and appends leading zeroes (e.g., "D8" for a minimum of eight digits).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">E or e</td>
+                    <td class="tabletext">Exponent</td>
+                    <td class="tabletext">Formats number of digits in exponent (e.g., "e3" for three digits after decimal. "12345.6789" returns "1.235e+004").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">F or f</td>
+                    <td class="tabletext">Fixed point</td>
+                    <td class="tabletext">Formats numbers <i>after</i> a decimal point (e.g., "F3" for three digits after the decimal).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">P or p</td>
+                    <td class="tabletext">Percent</td>
+                    <td class="tabletext">Formats to percentage.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To learn more about standard numeric formatting specifiers, see the <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/standard-numeric-format-strings" title="Click here to learn more." alt="Click here to learn more." target="_blank">Microsoft Docs site</a>.</p>
+        <p style="font-weight: bold;">Custom Numeric Format Specifiers</p>
+        <p>The following specifiers can be combined to format numbers to specific patterns.</p>
+        <p class="ex"><b>Example</b>: Maggie creates a workflow that retrieves text from a document.  She wants to format the value of the corresponding token so that the numbers before the decimal place have a comma separating the thousands place, if one exists, but she does not want to append leading zeroes. She also wants the numbers to have exactly four digits after the decimal, even if that means appending zeroes. She can format the token as "%(RetrieveDocumentText_Text#"#,###.0000"#)". When tested with "1425.99", she receives "1,425.9900". When tested with "623.877", she receives "623.8770".</p>
+        <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Custom Numeric Strings</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: normal;"><b>Specifier</b>
+                    </th>
+                    <th style="font-weight: normal;"><b>Type</b>
+                    </th>
+                    <th style="font-weight: normal;"><b>Function</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">0</td>
+                    <td class="tabletext">Zero placeholder</td>
+                    <td class="tabletext">Formats number of places. A zero appears if no value in a position.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">#</td>
+                    <td class="tabletext">Digit placeholder</td>
+                    <td class="tabletext">Formats number of places. Nothing appears if no value in a position.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">.</td>
+                    <td class="tabletext">Decimal point</td>
+                    <td class="tabletext">Represents location of decimal separator. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">,</td>
+                    <td class="tabletext">Thousand separator and number scaling</td>
+                    <td class="tabletext">Insert comma (e.g. "0,," on "3,000,000"&#160;returns 3).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%</td>
+                    <td class="tabletext">Percentage placeholder</td>
+                    <td class="tabletext">Formats to percentage (e.g., "###%" on "0.09" returns 9%; "000%" returns 009%).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">E0, E+0, E-0, e0, e+0, e-0</td>
+                    <td class="tabletext">Scientific notation</td>
+                    <td class="tabletext">Formats displayed exponent. "0" indicates the minimum number of digits.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\</td>
+                    <td class="tabletext">Escape character</td>
+                    <td class="tabletext">Interprets next character literally.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">'ABC' or "ABC"</td>
+                    <td class="tabletext">Literal string</td>
+                    <td class="tabletext">
+                        Interprets strings in quotes literally.                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">;</td>
+                    <td class="tabletext">Section separator</td>
+                    <td class="tabletext">Formats first of three numbers for positives, second for negatives, third for zeros.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> To learn more about custom numeric formatting specifiers, see the <a href="https://docs.microsoft.com/en-us/dotnet/standard/base-types/custom-numeric-format-strings" title="Click here to learn more." alt="Click here to learn more." target="_blank">Microsoft Docs site</a>.</p>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Feature Rights and Privileges</h1>
+        <p>Feature rights and privileges determine what actions users can perform across the repository. Unlike access rights and field rights, which are specific to particular documents, folders, and fields, feature rights and privileges control more general actions, such as the ability to print or export, move a copy, set access rights, or create and edit metadata definitions.</p>
+        <p>In general, feature rights control actions that basic users can perform on documents, such as scanning, importing, printing, and deleting. Privileges, on the other hand, control more high-level administrative actions, such as setting security, creating templates and fields, or configuring auditing. In general, you should be careful when assigning privileges to users, and they can be very powerful. Feature rights, which are less powerful, can be assigned more freely.</p>
+        <p>Feature rights work in conjunction with other types of security. In order to delete a document from the folder browser, for instance, a user must have both the Delete feature right (to allow them to access the delete command at all), and the Delete Entry access right on the document they want to delete (to enable them to delete that particular document.) The Delete feature right alone would not be enough to delete the document.</p>
+        <p class="note"><b>Important:</b> Feature rights are enforced by client applications and should not be considered as a replacement for <a href="Access_Rights.htm">access rights</a>. Take the previous example involving the Delete feature right. If a user does not have the Delete feature right, they will not have the option to delete documents from within the web client. However, that same user could still delete documents through other client applications that do not enforce feature rights. For example, a custom integration created using the Laserfiche API may not enforce feature rights, and could allow that user to delete documents if the user has sufficient access rights to delete documents.</p>
+        <h2 class="topicheading">Configuring Feature Rights and Privileges for a Trustee</h2>
+        <ol>
+            <li>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</li>
+            <li>On the left, select <b>Users</b>, and then select a user or group, or select <b>Everyone</b>.</li>
+            <li>In the <b>Rights</b> tab, select a feature right or privilege to grant it, or clear it to remove that right. 
+			<p class="note"><b>Note:</b> If a user is inheriting a feature right or privilege, the right will be selected and grayed out.</p></li>
+            <li>Click <b>Save</b> to save your changes. The change will take effect when the user next logs in.</li>
+        </ol>
+        <h2 class="topicheading">Feature Rights</h2>
+        <p>The following feature rights can be granted to users:</p>
+        <ul>
+            <li><b>Scan:</b> Scan into Laserfiche.</li>
+            <li><b>Import:</b> Import files into Laserfiche.</li>
+            <li><b>Search:</b>&#160;Search for documents and folders. </li>
+            <li><b>Print/Export:</b> Print and export documents and folders.</li>
+            <li><b>Edit Text:</b>&#160;Modify text in documents.</li>
+            <li><b>Move Entry:</b>&#160;Move a document or folder from one folder to another, or pages from one document to another.</li>
+            <li><b>Process:</b>&#160;Index documents and retrieve text from electronic files.</li>
+            <li><b>Extended Properties:</b>&#160;View additional information about documents and folders, such as entry ID, indexing status, and the extension of associated files.</li>
+            <li><b>Delete:</b> Delete documents, folders, and pages.</li>
+            <li><b>Apply Optional Watermark:</b>&#160;Apply an optional watermark when exporting or printing a document.</li>
+        </ul>
+        <h2 class="topicheading">Privileges</h2>
+        <p>The following privileges can be granted to users:</p>
+        <ul>
+            <li><b>Manage Entry Access:</b> Browse to and configure security for all entries. This privilege allows the user to see (but not open)&#160;all entries in the repository, regardless of access right configuration. Users with Manage Entry Access can also view, restore, and delete all deleted documents in the recycle bin, and view all checked out or locked entries and release the check-out or lock.</li>
+            <li><b>Manage Templates and Fields:</b> Create, edit, and delete all templates and field definitions. Users with this privilege can also modify field security. A metadata definition is the structure of the metadata item, not the value placed within it. For instance, elements of an Author field's definition include the field type, width, whether it's multi-valued or required, and what template it belongs to. The value of the Author field on a particular document is not part of its definition.</li>
+            <li><b>Create Templates and Fields:</b>&#160;Create new templates and fields. Unlike <b>Manage Templates and Fields</b>, this does not allow you to modify existing template and field definitions.</li>
+            <li><b>Manage Stamps:</b>&#160;Modify and delete existing stamps. (Stamp creation is governed by the <b>Annotate</b> entry access right.)</li>
+            <li><b>Manage Tags:</b>&#160;Create and modify tag definitions.</li>
+            <li><b>Manage Links:</b>&#160;Create and modify document relationship definitions. </li>
+            <li><b>Manage Repository Configuration:</b>&#160;Administer general repository options as well as attributes on the Everyone group.</li>
+            <li><b>Purge Entries:</b>&#160;Purge entries that you deleted from the recycle bin. In conjunction with <b>Manage Entry Access</b>, allows you to purge any entry in the recycle bin.</li>
+            <li><b>View Activity Log:</b>&#160;Configure and view the repository's activity log. Any user can view the activity log for an entry for which they have the <b>Read </b>right; this privilege allows users to see the activity log for all entries, regardless of whether they have <b>Read</b>. The activity log is generally used in integrations and is only accessible via scripts; it cannot be viewed through the&#160;Laserfiche web client.</li>
+            <li><b>Bypass Browse:</b>&#160;See the existence of all entries in the repository, regardless of whether the user has the Browse right for those entries or not. This can enhance performance, as Laserfiche does not need to calculate rights for each entry in each folder. Does not allow users to see documents if they are tagged with a security tag the user does not have or to see the contents of a folder if they do not have the <b>Read </b>right on the folder.</li>
+            <li><b>Manage Audit Settings:</b>&#160;Specify which actions will be audited for which users and groups, and configure reasons for deletion, exporting, and printing.</li>
+            <li><b>Records Management:</b>&#160;Create records management definition such as retention schedules and cutoff instructions in Repository Administration, and perform record actions such as cutoff and final disposition in the repository. Users with this privilege must still have other appropriate rights to view and modify records. The Records Management privilege is not necessary for viewing or modifying the contents of records, as long as a user has other necessary rights.</li>
+            <li><b>Edit Version Comments:</b>&#160;Edit the existing comments on a document's versions. This privilege is not necessary for a user to create or edit their own version comments.</li>
+            <li><b>Delete Document Versions:</b>&#160;Permanently delete individual versions from a document's version history. Deleted versions will not be sent to the recycle bin.</li>
+        </ul>
+    </body>
+</html>

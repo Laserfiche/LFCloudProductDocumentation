@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring <MadCap:variable name="DoNotTranslate.DocuSign" /> Settings</h1>
+        <p>Configuring <MadCap:variable name="DoNotTranslate.DocuSign" /> and <MadCap:variable name="DoNotTranslate.Laserfiche" /> to allow you to directly request signatures on your documents requires some additional steps:</p>
+        <ul>
+            <li>You must configure <MadCap:variable name="DoNotTranslate.DocuSign" /> to communicate with <MadCap:variable name="DoNotTranslate.Laserfiche" />.</li>
+            <li>You must specify account information for your <MadCap:variable name="DoNotTranslate.DocuSign" /> account in <MadCap:variable name="DoNotTranslate.Laserfiche" />, and determine what <MadCap:variable name="DoNotTranslate.DocuSign" /> information to store in your documents.</li>
+        </ul>
+        <p class="note"><b>Note:</b> The integration requires a DocuSign production account.</p>
+        <h2 class="topicheading">Setting Up <MadCap:variable name="DoNotTranslate.DocuSign" /> to Communicate with <MadCap:variable name="DoNotTranslate.Laserfiche" /><![CDATA[        ]]></h2>
+        <ol>
+            <li>In <MadCap:variable name="DoNotTranslate.DocuSign" />, view your <b><MadCap:variable name="DoNotTranslate.DocuSign" /> Settings</b>.</li>
+            <li>Under <b>Integrations</b>, click <b>Connect</b>.</li>
+            <li>Under <b>Add Configuration</b>, click <b>Custom</b>.</li>
+            <li>In the <b>URL to publish to</b> option, specify the URL to the import web service. By default, the URL will look similar to the following, with <i>000ab000</i> replaced with the actual value in your URL:</li>
+            <p class="ex">https://app.laserfiche.com/DocuSignConnectService/ReceivePDF?repo=r-<i>000ab000</i></p>
+            <p class="note"><b>Note:</b> If your repository is hosted on the Canada or EU datacenters, replace .com with .ca or .eu respectively.</p>
+            <li>In the <b>Name</b> option, specify a display name for this <MadCap:variable name="DoNotTranslate.DocuSign" /> Connect service.</li>
+            <li>Enable the <b>Legacy</b> data format option.</li>
+            <li>Enable the <b>Aggregate</b> event message delivery mode.</li>
+            <li>Enable the following general options:<ul><li>Enable Log (maximum 100)</li><li>Require Acknowledgment</li></ul></li>
+            <li>In the <b>Envelope and Recipients</b> section, enable the following options:
+			<ul><li>Document PDFs</li><li>Time Zone Information</li><li>Include Sender Account as Custom Field</li></ul></li>
+            <li>In the <b>Trigger Events for Envelope and Recipients</b> section, configure when <MadCap:variable name="DoNotTranslate.DocuSign" /> will send information to <MadCap:variable name="DoNotTranslate.Laserfiche" />. <MadCap:variable name="DoNotTranslate.Laserfiche" /> supports the following event types:<ul><li>Envelope Signed/Completed</li><li>Envelope Declined</li><li>Envelope Voided</li><li>Envelope Sent</li><li>Envelope Delivered</li></ul></li>
+            <li>In the <b>Associated Users/Groups</b> section, specify which <MadCap:variable name="DoNotTranslate.DocuSign" /> users will be affected by the integration.</li>
+            <li>Click <b>Add Configuration</b>.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Configur"></a>Configuring <MadCap:variable name="DoNotTranslate.DocuSign" /> Import Settings in <MadCap:variable name="DoNotTranslate.Laserfiche" /></h2>
+        <ol>
+            <li>If you are not already in the repository administration section of <MadCap:variable name="DoNotTranslate.Laserfiche" />, click the app picker in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Under <b>Integrations</b>, select <b><MadCap:variable name="DoNotTranslate.DocuSign" /></b>.</li>
+            <li>In the <b><MadCap:variable name="DoNotTranslate.DocuSign" /> Account Integrations</b> section, specify the DocuSign API account ID, email address, and app password linked to the email profile (instead of the DocuSign account password for your DocuSign account).<![CDATA[				]]><p class="note"><b>Note:</b> The specified account must have the <b>Allow send on behalf of other users through API</b> permission enabled.</p><p class="note"><b>Note:</b>&#160;To locate your application password, sign in to your DocuSign account and select your user name in the upper right corner. Select <b>Manage Profile</b> and then <b>Privacy &amp; Security</b>. The password will be available under the <b>Additional Security</b> header. To locate your integration key, select <b>Apps and Keys</b> under Integrations in the sidebar.</p></li>
+            <li><b>Optional:</b>&#160;In the <b>Envelope Status</b> section, specify how signed documents will be stored in <MadCap:variable name="DoNotTranslate.Laserfiche" />. For each event (<b>Completed</b>, <b>Declined</b>, <b>Voided</b>, <b>Sent</b>, and <b>Delivered</b>), you can select the corresponding event tab and do the following:<ul><li>To store <MadCap:variable name="DoNotTranslate.DocuSign" /> information in <MadCap:variable name="DoNotTranslate.Laserfiche" /> fields, click <b>Add/remove fields</b> and select one or more fields, then type a token or use the token picker to select a token that corresponds to the <MadCap:variable name="DoNotTranslate.DocuSign" /> information you want to store. See <a href="DocuSign_Tokens.htm"><MadCap:variable name="DoNotTranslate.DocuSign" /> Tokens</a> for more information on available tokens.</li><li>To specify where documents will be stored, type a path in the <b>Folder path</b> option. You can also make the path dynamic using tokens; type a token or use the token picker to select a token that corresponds to the <MadCap:variable name="DoNotTranslate.DocuSign" /> information that you want to use to create the path. See <a href="DocuSign_Tokens.htm"><MadCap:variable name="DoNotTranslate.DocuSign" /> Tokens</a> for more information on available tokens.</li></ul></li>
+            <li><b>Optional:</b>&#160;If you want to receive error messages pertaining to errors encountered when using the <MadCap:variable name="DoNotTranslate.DocuSign" /> integration, select <b>Send error notifications</b>. In the <b>Recipients</b> option, type the email address or addresses (separated with a comma)&#160;to which you want the messages to be sent, and then select the desired event log level:
+                <ul><li><b>Error:</b> Only log major errors.</li><li><b>Warning:</b> In addition to major errors, the integration also logs minor issues (e.g., field mismatch errors).</li><li><b>Information:</b> Verbose logging.</li></ul></li>
+            <li>Click <b>Save</b> to save your changes.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Referencing Custom JavaScript and CSS Files</h1>
+        <p>In addition to writing JavaScript and CSS on the <b>CSS and JavaScript</b> page, you can also include references to other JavaScript and CSS files. Including external JavaScript and CSS files can make it easier to maintain your code.</p>
+        <p>
+            <MadCap:concept term="Forms" />You can reference any JavaScript or CSS file hosted on the web. </p>
+        <p><b>To reference a JavaScript file</b>
+        </p>
+        <ol>
+            <li>Enter the following code in the <b>JavaScript</b> section of the <b>CSS and JavaScript</b> page:</li><pre><code class="language-javascript">$(document).ready(function () {
+    $.getScript('ScriptURL/scriptname.js', function() {
+        //code goes here
+    });
+});
+</code></pre>
+            <li>Replace <i>ScriptURL/scriptname.js</i> with the URL of the JavaScript file.</li>
+            <li>Replace <i>code goes here</i> with your code that references the external JavaScript file.
+			<p class="note"><b>Note:</b> Placing your code in this function ensures that it will wait for the external script to load before running.</p></li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">To reference a CSS file</p>
+        <ol>
+            <li>Enter the following code in the <b>JavaScript</b> section of the <b>CSS and JavaScript</b> page:</li><pre xml:space="preserve"><code class="language-javascript"><code class="language-javascript">$(document).ready(function () {
+    $('head').append('&lt;link rel="stylesheet" href="server/CSSFileName.css" type="text/css" /&gt;'); 
+}); 
+</code></code></pre>
+            <li>Replace <i>server/CSSFileName.css</i> with the URL of the CSS file.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

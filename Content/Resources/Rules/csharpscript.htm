@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Creating a C# Script</h1>
+        <p>This topic provides an overview on creating a sample C# script for use with a Laserfiche Cloud <a href="scripts.htm">script rule</a>.</p>
+        <ol>
+            <li>Within your Visual Studio class library project, you must include at least one entry point for Laserfiche Cloud that has the following signature: <p class="ex">public static Task&lt;IDictionary&lt;string,object&gt;&gt; <i>SampleMethodName</i>(IDictionary&lt;string,object&gt; <i>SampleInputName</i>){…}</p><p class="note"><b>Note:</b> In the above example, "static"&#160;is optional, as the entry point may or may not be static.</p><p>When running your script from a workflow, this entry point will be the method that is first called and the only method that can receive data from Laserfiche and return data to Laserfiche. You class can contain additional methods that can act as additional entry points for Laserfiche. When configuring <a href="scripts.htm">script rules</a>, create additional rules to 
+            access the additional class methods.</p><p>Any inputs you need from Laserfiche can be accessed by your script as items in the <i>SampleInputName</i> Dictionary, with the Dictionary key being the name of the configured input as defined in the <a href="scripts.htm">script rule</a>, and the Dictionary value being the runtime value of the input.</p><p>Any outputs you need to return to Laserfiche should be stored in the returned Dictionary object, with the Dictionary key being the name of the configured output as defined in the <a href="scripts.htm">script rule</a>, and the Dictionary value being the runtime value of the output.</p><p>The same method signature should be used even if your script does not require inputs and does not return an output.</p></li>
+            <li>The following is an example of a Class Library that contains a function takes 2 input values and returns 2 output values to Laserfiche.
+<pre class="ex" xml:space="preserve">
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ClassLibrary1
+{
+	public class MyClass
+	{
+		//This is a method that takes inputs and returns outputs
+		//The names of the input and output parameters configured in the Rule are used as input and output Dictionary keys
+		public static Task&lt;IDictionary&lt;string, object&gt;&gt; MyScript(IDictionary&lt;string, object&gt; inputsFromRule) 
+		{
+			//Initialize a Dictionary to store your outputs
+			var outputsFromScript = new Dictionary&lt;string, object&gt;();
+
+			//Do all of your actions here
+			outputsFromScript["EchoInputs"] = inputsFromRule["firstInput"] + " " + inputsFromRule["secondInput"];
+			outputsFromScript["HelloWorld"] = "Hello World";
+
+			//Return your outputs as a Task result 
+			return Task.FromResult &lt;IDictionary&lt;string, object&gt;&gt; (outputsFromScript);
+		}
+	}
+}
+</pre></li>
+        </ol>
+        <h3>Related Links</h3>
+        <p>See the following Laserfiche Support Site link to download blank script templates for your C#, Node.js, or Python scripts.</p>
+        <p><a href="https://support.laserfiche.com/download/4146" target="_blank" title="Laserfiche Support Site download link" alt="Laserfiche Support Site download link">https://support.laserfiche.com/download/4146</a>
+        </p>
+        <p class="note"><b>Note:</b>&#160;If you do not use the Laserfiche script template, be sure that your Visual Studio script targets .Net 4.8. </p>
+    </body>
+</html>

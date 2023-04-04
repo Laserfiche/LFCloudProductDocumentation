@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Token Calculator</h1>
+        <p style="text-align: center;">
+            <img src="Images/tokenCalculatorCanvas.PNG" title="Token Calculator activity" alt="Token Calculator activity" />
+        </p>
+        <p>This activity uses standard arithmetic operations to create custom tokens. This activity uses existing tokens combined with arithmetic operations to create new tokens.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Calculated Tokens</b> property box, click <b>New token...</b> to define the custom tokens created by the Token Calculator activity.</li>
+            <li>Type a name for your token next to <b>Token</b>.</li>
+            <li>Under <b>Token</b>, select a <a href="Formulas-for-Token-Calculator.htm" title="Click here to learn more." alt="Click here to learn more.">formula</a>.</li>
+            <li>Click the <b>Add</b> button <img src="../../../Images/image96.png" /> to add the selected token formula.</li>
+            <li><b>Optional</b>: Click <b>Test Formula</b> to make sure you set up the formula correctly.<p class="note"><b>Note</b>: To test a function that allows for multi-value tokens, separate each value with a semicolon. For example, to use the expression <b>SUM(%(token))</b>, type <b>1;2;3</b> and click <b>OK</b>.</p></li>
+            <li>In <b>Token Tags</b>, set the token type to evaluate the tokens in conditions correctly. If the type of the token value is a number, for example, you must select <b>Number</b> in <b>Token Tags</b>.<p class="note"><b>Note</b>: To use mathematical expressions to create custom date and time tokens, use the <a href="Date-Token-Calculator.htm" title="Click here to learn more." alt="Click here to learn more.">Date Token Calculator</a> activity.</p><p class="note"><b>Note</b>: Typing in decimal numbers (e.g., 3.5) in the <b>Sum</b> and <b>Average</b> functions is not supported when your regional settings use a comma as the decimal separator.</p></li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p class="note"><b>Note</b>: You can use tokens created with this activity to create more tokens within the same activity. To reference a token created in this activity, the referenced token must be listed before the token that refers to it in the <b>Calculated Tokens</b> property box.</p>
+        <p class="ex"><b>Tip</b>: To easily create a complex mathematical expression, first create a series of simpler expressions. Then, reference the tokens of those simpler expressions in an additional calculated token.</p>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

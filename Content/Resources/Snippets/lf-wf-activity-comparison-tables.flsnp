@@ -1,0 +1,1058 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>
+            <MadCap:toggler targets="AutomationFeatures">See Process Automation Features.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="AutomationFeatures">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation features available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Process Automation Features</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Workflow Designer</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Business Process Designer</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Rules</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Ellucian Banner integration through Ethos</td>
+                        <td>✓</td>
+                        <td>Coming Soon</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>In-App Notifications</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Work Schedules</td>
+                        <td>✓
+                        </td>
+                        <td><a href="#1">(1)</a>
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>File Attachment&#160;<a href="#2">(2)</a></td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Capture Profiles</td>
+                        <td>✓
+                        </td>
+                        <td>Coming Soon</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Smart Invoice Capture</td>
+                        <td>✓</td>
+                        <td>Coming Soon</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Workflow Bots</td>
+                        <td>✓</td>
+                        <td>Coming Soon</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Surveys</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;
+						</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <h3>Included Workflow activities <a href="#3">(3)</a></h3>
+        <p>
+            <MadCap:toggler targets="AutoActions">Workflow activities for Process Automation Actions.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="AutoActions">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Actions available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Process Automation Workflow Actions</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="even">
+                        <td>Invoke Bot (pre-release)</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;
+						</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Run Capture Profile</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;
+						</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Run Rule</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;
+						</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Read Barcode</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;
+						</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Execute Application Action</td>
+                        <td>✓
+                        </td>
+                        <td>Coming Soon						</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Replace Lookup Table Data</td>
+                        <td>✓
+                        </td>
+                        <td>&#160;
+						</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="RoutingActivities">Workflow activities for Routing Activities.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="RoutingActivities">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Routing Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Routing Activities</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Route Entry to Folder</td>
+                        <td><a href="#4">(4)</a>
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Route Entry to Group</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Route Entry to User</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="LFActions">Workflow activities for Laserfiche Actions.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="LFActions">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Laserfiche Actions Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Laserfiche Actions</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Add Sticky Note</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Add Text Box</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Apply Stamp</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Apply Text Annotation</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Assign Geographical Location</td>
+                        <td>&#160;</td>
+                        <td>✓</td>
+                    </tr>
+                    <tr class="even">
+                        <td>Assign Rights</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Attach Electronic Document</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Create Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Delete Annotation</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Delete Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Delete Shortcuts</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Download Electronic Document</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Email</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Fill Out PDF Form</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Migrate Entry</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Move Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Move Pages</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>PDF Metadata</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Rename Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Replicate Entries</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Retrieve Version History</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Schedule PDF&#160;generation</td>
+                        <td>&#160;</td>
+                        <td>Coming Soon</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Schedule OCR</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Set Entry Owner</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Set Records Management Properties</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Version Control</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="LFMetadata">Workflow activities for Laserfiche Metadata.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="LFMetadata">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Laserfiche Metadata available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Laserfiche Metadata</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Append List Field Choices</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Assign Field Values</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Assign Tags</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Copy Metadata</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Create Link</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Delete Document Signatures</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Delete Links</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Sign Document</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="FlowControl">Workflow activities for Flow Control.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="FlowControl">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Flow Control available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Flow Control</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Conditional Decision</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Conditional Parallel</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Conditional Sequence</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Deadline</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Delay</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>End Workflow</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Escalation</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Parallel</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Rethrow</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Sequence</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Try-Catch</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Wait for Entry Change</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="Repeating">Workflow activities for Repeating.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="Repeating">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Repeating Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Repeating</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>For Each Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>For Each File</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>For Each Row</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>For Each User</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>For Each Value</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Repeat</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="Information">Workflow activities for Information Gathering.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="Information">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Information Gathering Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Information Gathering</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Find Entries</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Find Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Find Group</td>
+                        <td>Coming Soon</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Find Manager</td>
+                        <td>Coming Soon</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Find User</td>
+                        <td>Coming Soon</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Get Document Signatures</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Retrieve Document Text</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Retrieve Field Values</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Retrieve PDF Form Content</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Retrieve Shortcuts</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Search Repository</td>
+                        <td>✓<a href="#5">(5)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Verify PDF Signatures</td>
+                        <td>&#160;</td>
+                        <td>&#160;</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="TokenCreators">Workflow activities for Token Creators.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="TokenCreators">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Token Creation Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Token Creators</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Assign Token Values</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Date Token Calculator</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Generate Web Access URLs</td>
+                        <td><a href="#6">(6)</a>
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Generate WebLink URLs</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Pattern Matching</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Read JSON</td>
+                        <td>✓<a href="#7">(7)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Read XML</td>
+                        <td>Coming Soon</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Token Calculator</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="Enterprise">Workflow activities for Enterprise Integration.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="Enterprise">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Enterprise Integration Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Enterprise Integration</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Create iCalendar File</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Custom Query</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>HTTP Form Post</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>HTTP Web Request</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Insert Data</td>
+                        <td>✓<a href="#8">(8)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Query Data</td>
+                        <td>✓<a href="#8">(8)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Update Data</td>
+                        <td>✓<a href="#9">(9)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Delete Data</td>
+                        <td>✓<a href="#10">(10)</a></td>
+                        <td>&#160;</td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Update Word Document</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="WFActions">Workflow activities for Workflow Actions.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="WFActions">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Workflow Actions Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Workflow Actions</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Change Starting Entry</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Create Checkpoint</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Invoke Workflow</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Script</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>SDK Script</td>
+                        <td><a href="#11">(11)</a>
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Simple Synchronization Sequence</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Track Tokens</td>
+                        <td>✓
+                        </td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="BizProcess">Workflow activities for Business Process.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="BizProcess">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Business Process Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Business Process</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Associate Entries</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Business Process Step</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Update Business Process</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Update Participants</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Update Step Due Date</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Update Step Instructions</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="Exchange">Workflow activities for Integration with Exchange Servers.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="Exchange">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Exchange Server Integration Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Integration with Exchange Servers</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Configure Automatic Replies</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Create Exchange Item</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Delete Exchange Item</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Update Exchange Item</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="sharepoint">Workflow activities for Integration with SharePoint Sites.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="sharepoint">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Sharepoint Integration Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Integration with SharePoint Sites</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Create List Item</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Delete List Item</td>
+                        <td>&#160;</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p>
+            <MadCap:toggler targets="LFForms">Workflow activities for Laserfiche Forms.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="LFForms">
+            <table id="myTable" class="tablesorter" border="0" summary="This table lists the Process Automation Forms Activities available for Cloud and on premise Laserfiche.">
+                <thead>
+                    <tr>
+                        <th width="60%">Laserfiche Forms</th>
+                        <th width="20%">SaaS</th>
+                        <th width="20%">SELF HOSTED</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="odd">
+                        <td>Invoke Business Process</td>
+                        <td>✓</td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="even">
+                        <td>Retrieve Laserfiche Forms Content</td>
+                        <td>✓<a href="#12">(12)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                    <tr class="odd">
+                        <td>Set Business Process Variables</td>
+                        <td>✓<a href="#13">(13)</a></td>
+                        <td>✓
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div>
+            <p class="tip"><b>Footnotes:</b>
+                <ol>
+                    <li><a name="1"></a>Self-hosted Workflow does allow configuration of weekends and holidays, but not business hours and creating different profiles of different work schedules.</li>
+                    <li><a name="2"></a>For SaaS, certain files can be made available for the workflow designer to reference using the "Files" feature in Process Automation. For self-hosted Workflow, this can be done using the server attachment feature.</li>
+                    <li><a name="3"></a>As Process Automation further develops, many functionalities available in Workflow may not have a direct one to one match in the Process Automation features set, but may be available in a more optimized way to accomplish the same purpose.</li>
+                    <li><a name="4"></a>"Route Entry to Folder" activity can be accomplished by multiple activities currently already available on SaaS.</li>
+                    <li><a name="5"></a>For SaaS, the "Search Repository" activity currently supports search by field value.</li>
+                    <li><a name="6"></a>"Find Entry" activity on SaaS has the option to generate URLs (web access and mobile) plus .lfe attachments to the document.</li>
+                    <li><a name="7"></a>"Read JSON" functionality is available natively in the "Run Web Request Rule" activity on SaaS.</li>
+                    <li><a name="8"></a>"Query Data" and "Insert Data" can be accomplished using the "Run Rule" activity available for SaaS. This applies to both lookup tables (data local to the SaaS environment) and external databases behind a firewall. External databases currently supported include SQL, PostgreSQL, MySQL, CSV, and Oracle. </li>
+                    <li><a name="9"></a>For both data local to the SaaS environment and data in external databases, "Update Data" is possible with the "Run Rule" activity.</li>
+                    <li><a name="10"></a> Delete Data is available for data local to the SaaS environment.</li>
+                    <li><a name="11"></a>Use of the Laserfiche SDK is supported through the SaaS Run Script Rule activity.</li>
+                    <li><a name="12"></a>Workflows started by business processes can accept incoming data from processes.</li>
+                    <li><a name="13"></a>Workflows can invoke business processes and pass over token data.</li>
+                </ol>
+            </p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,664 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Workflow" />Formulas for Token Calculator</h1>
+        <p>The <a href="Token-Calculator.htm" title="Click here to learn more." alt="Click here to learn more.">Token Calculator</a> activity contains the following formulas. Browse the formulas by their categories using the right-hand menu.</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <p>&#160;</p>
+        <h2 class="topicheading">Mathematics</h2>
+        <table id="myTable" class="tablesorter" border="0">
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Format</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Absolute</td>
+                    <td class="tabletext">ABS(<i>number</i>)</td>
+                    <td class="tabletext">Returns the absolute value of <i>number</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Addition</td>
+                    <td class="tabletext"><i>number1</i> + <i>number2</i>; <i>date</i> + <i>number</i>; <i>number</i> + <i>date</i></td>
+                    <td class="tabletext">Adds two numbers or a number and a date.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Average</td>
+                    <td class="tabletext">AVG(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Averages the input list, ignoring nonnumerical items.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">AverageAnyway</td>
+                    <td class="tabletext">AVERAGEA(<i>value1</i>, <i>value2</i>, ...)</td>
+                    <td class="tabletext">Averages the input list, treating boolean TRUE as 1 and other nonnumerical items as 0.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Average If</td>
+                    <td class="tabletext">AVERAGEIF([<i>value1</i>, <i>value2</i>, ...], <i>condition</i>)</td>
+                    <td class="tabletext">Averages the items that satisfy the condition.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Ceiling</td>
+                    <td class="tabletext">CEILING(<i>number</i>)</td>
+                    <td class="tabletext">Returns the smallest integer that is greater than or equal to the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Choose</td>
+                    <td class="tabletext">CHOOSE(<i>index</i>, <i>value1</i>, <i>value2</i>, ...)</td>
+                    <td class="tabletext">Chooses the item at the given index in the list.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">ChooseAnyway</td>
+                    <td class="tabletext">CHOOSEA(<i>index</i>, <i>value1</i>, <i>value2</i>, ...)</td>
+                    <td class="tabletext">
+                        <p> Expands array items as part of the list and chooses the item at the given index in the list. Multi-value tokens are treated as arrays.</p>
+                        <p><b>Example</b>: CHOOSEA(5, 1, 3, [5, 6, 7]) returns 7.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">CountAny</td>
+                    <td class="tabletext">COUNTA(<i>value1</i>, <i>value2</i>, ...)</td>
+                    <td class="tabletext">Counts items in the input list, including items in arrays and multi-value tokens.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Count If</td>
+                    <td class="tabletext">COUNTIF([<i>value1</i>, <i>value2</i>, ...], <i>condition</i>)</td>
+                    <td class="tabletext">Counts the number of items that satisfy <i>condition</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Count Number</td>
+                    <td class="tabletext">COUNT(<i>item1</i>, <i>item2</i>, ...)</td>
+                    <td class="tabletext">
+                        <p>Counts numerical items in the input list.</p>
+                        <p><b>Example</b>: COUNT(2, "sit", "stand", 9) returns 2.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Count Unique</td>
+                    <td class="tabletext">COUNTUNIQUE([<i>value1</i>, <i>value2</i>, ...])</td>
+                    <td class="tabletext">Counts the distinct items in the input list.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Division</td>
+                    <td class="tabletext"><i>number1</i> / <i>number2</i></td>
+                    <td class="tabletext">Divides <i>number1</i> by <i>number2</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Even</td>
+                    <td class="tabletext">EVEN(<i>number</i>)</td>
+                    <td class="tabletext">Returns the closest even number to the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Epoch</td>
+                    <td class="tabletext">EPOCH(<i>n</i>)</td>
+                    <td class="tabletext">Returns the datetime that is <i>n</i> seconds after the Unix epoch time.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Exponent</td>
+                    <td class="tabletext">EXP(<i>p</i>)</td>
+                    <td class="tabletext">Returns e<sup style="font-style: italic;">p</sup>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Floor</td>
+                    <td class="tabletext">FLOOR(<i>number</i>)</td>
+                    <td class="tabletext">Returns the largest integer that is less than or equal to the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Integer Division</td>
+                    <td class="tabletext"><i>number1</i> // <i>number2</i></td>
+                    <td class="tabletext">Divides the two numbers, dropping the fractional part.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Large</td>
+                    <td class="tabletext">LARGE([<i>number1</i>, <i>number2</i>, ...], <i>n</i>)</td>
+                    <td class="tabletext">Returns the <i>n</i>th largest item in the list of numbers.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Logarithm</td>
+                    <td class="tabletext">LOG(<i>number</i>, <i>base</i>)</td>
+                    <td class="tabletext">The power to which <i>base</i> must be raised to produce <i>number</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Logarithm (base 10)</td>
+                    <td class="tabletext">LOG10(<i>number</i>)</td>
+                    <td class="tabletext">Logarithm with base 10.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LogarithmE</td>
+                    <td class="tabletext">LN(<i>number</i>)</td>
+                    <td class="tabletext">Logarithm with base e.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Maximum</td>
+                    <td class="tabletext">MAX(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Returns the maximum number in the list, ignoring nonnumerical items.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MaximumAnyway</td>
+                    <td class="tabletext">MAXA(<i>value1</i>, <i>value2</i>, ...)</td>
+                    <td class="tabletext">Returns the maximum number in the list, treating boolean TRUE as 1 and any other nonnumerical items as 0.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Median</td>
+                    <td class="tabletext">MEDIAN(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Returns the median value of the input list.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Minimum</td>
+                    <td class="tabletext">MIN(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Returns the smallest number in the input list, ignoring nonnumerical items.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MinimumAnyway</td>
+                    <td class="tabletext">MINA(<i>value1</i>, <i>value2</i>, ...)</td>
+                    <td class="tabletext">Returns the smallest number in the input list, treating boolean TRUE as 1 and any other nonnumerical items as 0.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Minus</td>
+                    <td class="tabletext">-<i>number</i></td>
+                    <td class="tabletext">Inverts the sign of the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Mode</td>
+                    <td class="tabletext">MODE(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Returns the most common item in the input list.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Mod</td>
+                    <td class="tabletext"><i>number1</i> # <i>number2</i></td>
+                    <td class="tabletext">Returns the remainder of <i>number1</i> divided by <i>number2</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Multiplication</td>
+                    <td class="tabletext"><i>number1</i> * <i>number2</i></td>
+                    <td class="tabletext">Multiplies two numbers.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Odd</td>
+                    <td class="tabletext">ODD(<i>number</i>)</td>
+                    <td class="tabletext">Returns the closest odd number to the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Pi</td>
+                    <td class="tabletext">PI()</td>
+                    <td class="tabletext">Mathematical constant: The ratio of a circle's circumference to its diameter.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Power</td>
+                    <td class="tabletext"><i>x</i> ^ <i>y</i></td>
+                    <td class="tabletext">Returns <i>x</i> raised to the <i>y</i>th power.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Product</td>
+                    <td class="tabletext">PRODUCT(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Returns the product of numbers in the list.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Quotient</td>
+                    <td class="tabletext">QUOTIENT(<i>number1</i>, <i>number2</i>)</td>
+                    <td class="tabletext">Divides two numbers, dropping the fractional part.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Round</td>
+                    <td class="tabletext">
+                        <p>ROUND(<i>x</i>)</p>
+                        <p>ROUND(<i>x</i>; <i>n</i>)</p>
+                    </td>
+                    <td class="tabletext">If only one argument is provided, rounds <i>x</i> to the nearest integer. If both <i>x</i> and n are provided, rounds <i>x</i> to <i>n</i> decimal places.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Round Down</td>
+                    <td class="tabletext">
+                        <p>ROUNDDOWN(<i>x</i>)</p>
+                        <p>ROUNDDOWN(<i>x</i>; <i>n</i>)</p>
+                    </td>
+                    <td class="tabletext">Rounds <i>x</i> down to the nearest integer if only one argument is provided. If both <i>x</i> and <i>n</i> are specified, rounds <i>x</i> down to the specified number of decimal places.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Round Mult</td>
+                    <td class="tabletext">MROUND(<i>number</i>, <i>multiple</i>)</td>
+                    <td class="tabletext">Rounds <i>number</i> to the nearest multiple of <i>multiple</i>. If there are two nearest multiples, MROUND rounds up.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Round Up</td>
+                    <td class="tabletext">
+                        <p>ROUNDUP(<i>x</i>)</p>
+                        <p>ROUNDUP(<i>x</i>; <i>n</i>)</p>
+                    </td>
+                    <td class="tabletext">Rounds <i>x</i> up to the nearest integer if only one argument is provided. If both <i>x</i> and <i>n</i> are specified, rounds <i>x</i> up to the specified number of decimal places.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Sign</td>
+                    <td class="tabletext">SIGN(<i>number</i>)</td>
+                    <td class="tabletext">Returns a number indicating the sign of the input number. For negative inputs, it returns -1; for zero-value inputs, 0; for positive inputs, 1.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Square Root</td>
+                    <td class="tabletext">SQRT(<i>number</i>)</td>
+                    <td class="tabletext">Returns the square root of the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Subtraction</td>
+                    <td class="tabletext"><i>number1</i> - <i>number2</i></td>
+                    <td class="tabletext">Subtracts <i>number2</i> from <i>number1</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Sum If</td>
+                    <td class="tabletext">SUMIF([<i>number1</i>, <i>number2</i>, ...], <i>condition</i>)</td>
+                    <td class="tabletext">Sums the items that satisfy the provided condition.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Summation</td>
+                    <td class="tabletext">SUM(<i>number1</i>, <i>number2</i>, ...)</td>
+                    <td class="tabletext">Sums a list, ignoring nonnumerical items.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Truncate</td>
+                    <td class="tabletext">TRUNC(<i>number</i>, <i>n</i>)</td>
+                    <td class="tabletext">
+                        <p>Truncates <i>number</i> to have only <i>n</i> decimal places. Unlike ROUNDDOWN and ROUNDUP, no rounding is carried out. For example, TRUNC(123.456, 2) returns 123.4.</p>
+                        <p>If <i>n</i> is negative, truncation occurs to the left of the decimal point. For example, TRUNC(123, -1) returns 120.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Boolean</h2>
+        <table id="myTable2" class="tablesorter" border="0">
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Format</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">And</td>
+                    <td class="tabletext"><i>boolean1</i> &amp;&amp; <i>boolean2</i></td>
+                    <td class="tabletext">Boolean "AND" operation on the input list. Use AND( , ) syntax for lists or multi-value tokens.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Equal</td>
+                    <td class="tabletext"><i>value1</i> = <i>value2</i></td>
+                    <td class="tabletext">Returns TRUE if <i>value1</i> and <i>value2</i> are equal, otherwise returns FALSE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Greater Than</td>
+                    <td class="tabletext"><i>value1</i> &gt; <i>value2</i></td>
+                    <td class="tabletext">Returns TRUE if <i>value1</i> is greater than <i>value2</i>, otherwise returns FALSE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Greater Than Or Equal</td>
+                    <td class="tabletext"><i>value1</i> &gt;= <i>value2</i></td>
+                    <td class="tabletext">Returns TRUE if <i>value1</i> is greater than or equal to <i>value2</i>, otherwise returns FALSE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">If</td>
+                    <td class="tabletext">IF(<i>condition</i>, <i>true_case</i>, <i>false_case</i>)</td>
+                    <td class="tabletext">If <i>condition</i> is true, returns <i>true_case</i>. Otherwise, <i>false_case</i> is returned.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Email</td>
+                    <td class="tabletext">ISEMAIL(<i>value</i>)</td>
+                    <td class="tabletext">Checks if the input item is a valid email string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Even</td>
+                    <td class="tabletext">ISEVEN(<i>number</i>)</td>
+                    <td class="tabletext">Checks if the input item is an even number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Not Text</td>
+                    <td class="tabletext">ISNONTEXT(<i>value</i>)</td>
+                    <td class="tabletext">Checks if the input item is not a string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Number</td>
+                    <td class="tabletext">ISNUMBER(<i>value</i>)</td>
+                    <td class="tabletext">Checks if the input item is a number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Odd</td>
+                    <td class="tabletext">ISODD(<i>number</i>)</td>
+                    <td class="tabletext">Checks if the input item is an odd number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Less Than</td>
+                    <td class="tabletext"><i>value1</i> &lt; <i>value2</i></td>
+                    <td class="tabletext">Returns TRUE if <i>value1</i> is less than <i>value2</i>, otherwise returns FALSE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Less Than Or Equal</td>
+                    <td class="tabletext"><i>value1</i> &lt;= <i>value2</i></td>
+                    <td class="tabletext">Returns TRUE if <i>value1</i> is less than or equal to <i>value2</i>, otherwise returns FALSE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Not</td>
+                    <td class="tabletext">!<i>value1</i></td>
+                    <td class="tabletext">Logical NOT; treats 0 as FALSE, other values as TRUE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Not Equal</td>
+                    <td class="tabletext"><i>value1</i> &lt;&gt; <i>value2</i></td>
+                    <td class="tabletext">Returns TRUE if <i>value1</i> and <i>value2</i> are not equal, otherwise returns FALSE.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Or</td>
+                    <td class="tabletext"><i>boolean1</i> || <i>boolean2</i></td>
+                    <td class="tabletext">Boolean "OR" operation on the input list. Use [OR( , )] syntax for lists or multi-value tokens.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Date</h2>
+        <p class="note"><b>Note:</b> The correct syntax for a date argument is "Date(year, month, day)." For example, if you want to enter April 15, 2017 in the workday formula, do not write "WORKDAY(4/15/2017, 4)." Instead, write "WORKDAY(DATE(2017, 4, 15), 4)" or, if you are using a date token, "WORKDAY(%(date), 4)."</p>
+        <table id="myTable3" class="tablesorter" border="0">
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Format</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Add Month</td>
+                    <td class="tabletext">ADD_MONTHS(<i>date</i>, <i>number</i>)</td>
+                    <td class="tabletext">Returns the date that is <i>number</i> months after <i>date</i>. Supports fractional month numbers.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Date</td>
+                    <td class="tabletext">Date(<i>year</i>, <i>month</i>, <i>day</i>)</td>
+                    <td class="tabletext">Constructs a date value from the arguments.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Date Diff</td>
+                    <td class="tabletext">DATEDIF(<i>date1</i>, <i>date2</i>, <i>string</i>)</td>
+                    <td class="tabletext">Returns the difference between <i>date1</i> and <i>date2</i>. <i>string</i> specifies the unit: "Y"/"y" for years, "M"/"m" for months, "D"/"d" for days.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Date Value</td>
+                    <td class="tabletext">DATEVALUE(<i>string</i>)</td>
+                    <td class="tabletext">Constructs a date from the input string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Day</td>
+                    <td class="tabletext">DAY(<i>date</i>)</td>
+                    <td class="tabletext">Returns the day of the input date.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Days 360</td>
+                    <td class="tabletext">DAYS360(<i>date1</i>, <i>date2</i>)</td>
+                    <td class="tabletext">Returns the number of days between <i>date1</i> and <i>date2</i>, assuming that a year is 360 days.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Epoch</td>
+                    <td class="tabletext">EPOCH(<i>n</i>)</td>
+                    <td class="tabletext">Returns the datetime that is <i>n</i> seconds after the Unix epoch time.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Hour</td>
+                    <td class="tabletext">HOUR(<i>date</i>)</td>
+                    <td class="tabletext">Returns the hour of the input datetime.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Minute</td>
+                    <td class="tabletext">MINUTE(<i>date</i>)</td>
+                    <td class="tabletext">Returns the minute of the input datetime.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Month</td>
+                    <td class="tabletext">MONTH(<i>date</i>)</td>
+                    <td class="tabletext">Returns the month of the input datetime.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Now</td>
+                    <td class="tabletext">NOW()</td>
+                    <td class="tabletext">Returns the current date and time.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Round Date</td>
+                    <td class="tabletext">EDATE(<i>date</i>, <i>number</i>)</td>
+                    <td class="tabletext">Returns a date that is <i>date</i> plus <i>number</i> months.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Round Month</td>
+                    <td class="tabletext">EOMONTH(<i>date</i>, <i>number</i>)</td>
+                    <td class="tabletext">Adds <i>number</i> months to <i>date</i>, then rounds the result to the last day of the month.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Second</td>
+                    <td class="tabletext">SECOND(<i>datetime</i>)</td>
+                    <td class="tabletext">Returns the second of the input datetime.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Time</td>
+                    <td class="tabletext">TIME(<i>hours</i>, <i>minutes</i>, <i>seconds</i>)</td>
+                    <td class="tabletext">Returns the input time as a fraction of the day.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Time Value</td>
+                    <td class="tabletext">TIMEVALUE(<i>string</i>)</td>
+                    <td class="tabletext">Returns the input time as a fraction of the day. Inputs can be in the form HH:MM, HH:MM:SS, or YYYY-MM-DD HH:MM:SS.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Today</td>
+                    <td class="tabletext">TODAY()</td>
+                    <td class="tabletext">Returns the current date.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Week Number</td>
+                    <td class="tabletext">WEEKNUM(<i>date</i>)</td>
+                    <td class="tabletext">Returns the week of the year that the input date falls in.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Work Date</td>
+                    <td class="tabletext">WORKDAY(<i>date</i>, <i>number</i>)</td>
+                    <td class="tabletext">Returns a date that is <i>date</i> plus <i>number</i> work days. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Work Days</td>
+                    <td class="tabletext">NETWORKDAYS(<i>date1</i>, <i>date2</i>)</td>
+                    <td class="tabletext">Returns the number of work days between <i>date1</i> and <i>date2</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Year</td>
+                    <td class="tabletext">YEAR(<i>date</i>)</td>
+                    <td class="tabletext">Returns the year of  <i>date</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Year Fraction</td>
+                    <td class="tabletext">
+                        <p>YEARFRAC(<i>date1</i>, <i>date2</i>)</p>
+                        <p>YEARFRAC(<i>date1</i>, <i>date2</i>, <i>basis</i>)</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>Calculates the difference between <i>date1</i> and <i>date2</i> in years, including fractions of years. Returns a positive value regardless of whether <i>date1</i> or <i>date2</i> is the later date.</p>
+                        <p>If <i>date1</i> and <i>date2</i> are the only arguments provided, the calculation assumes the US (NASD) 30/360 day count convention. Otherwise, year fractions are calculated depending on the value of <i>basis</i> as follows:</p>
+                        <ul>
+                            <li><i>basis</i>=0: US (NASD) 30/360 day count convention</li>
+                            <li><i>basis</i>=1:&#160;Actual/Actual day count convention</li>
+                            <li><i>basis</i>=2: Actual/360 day count convention</li>
+                            <li><i>basis</i>=3: Actual/365 day count convention</li>
+                            <li><i>basis</i>=4: European 30/360 day count convention</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">String</h2>
+        <table id="myTable4" class="tablesorter" border="0">
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Format</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Char To Code</td>
+                    <td class="tabletext">CODE(<i>char</i>)</td>
+                    <td class="tabletext">Returns the ASCII code of the input character.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Code To Char</td>
+                    <td class="tabletext">CHAR(<i>number</i>)</td>
+                    <td class="tabletext">Converts the input ASCII code to a string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Concatenate</td>
+                    <td class="tabletext"><i>string1</i> &amp; <i>string2</i></td>
+                    <td class="tabletext">Concatenates the input strings.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Dollar</td>
+                    <td class="tabletext">DOLLAR(<i>number</i>)</td>
+                    <td class="tabletext">
+                        <p>Returns the input number as a string representing a dollar amount.</p>
+                        <ul>
+                            <li>Prepends a dollar sign to the start of the string.</li>
+                            <li>Removes any negative sign from the number.</li>
+                            <li>If the number has more than two decimal places, rounds the number to two decimal places.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Exact</td>
+                    <td class="tabletext">EXACT(<i>value1</i>, <i>value2</i>)</td>
+                    <td class="tabletext">Determines whether the two inputs are identical strings.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Find</td>
+                    <td class="tabletext">FIND(<i>key</i>, <i>string</i>)</td>
+                    <td class="tabletext">Searches for <i>key</i> in the input string in a case-sensitive manner. Returns the first matched position or -1 if not found.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Fixed</td>
+                    <td class="tabletext">FIXED(<i>number</i>)</td>
+                    <td class="tabletext">Rounds the number to a specified number of decimal places and formats the result as text.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Join</td>
+                    <td class="tabletext">JOIN(<i>string</i>_<i>separator</i>, [<i>string1</i>, <i>string2</i>, ...])</td>
+                    <td class="tabletext">Joins the items of the string array with <i>string_separator</i> between them.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Left</td>
+                    <td class="tabletext">LEFT(<i>string</i>, <i>n</i>)</td>
+                    <td class="tabletext">Returns the <i>n</i> leftmost characters in the input string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Lower</td>
+                    <td class="tabletext">LOWER(<i>string</i>)</td>
+                    <td class="tabletext">Returns a lowercase version of the string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Mid</td>
+                    <td class="tabletext">MID(<i>string</i>, <i>n</i>, <i>length</i>)</td>
+                    <td class="tabletext">Returns  <i>length</i> characters from <i>string</i>, starting at the <i>n</i>th character.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Number Value</td>
+                    <td class="tabletext">
+                        <p>NUMBERVALUE(<i>string</i>)</p>
+                        <p>NUMBERVALUE(<i>string</i>, <i>decimal_separator</i>, <i>group_separator</i>)</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>Parses the input string as a number. You can specify optional decimal point and group separators. If no separators are specified, Workflow assumes that you use periods for decimal points and commas to separate thousands.</p>
+                        <p>Percentages are also converted. For example, NUMBERVALUE("35%") returns 0.35.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Proper Text</td>
+                    <td class="tabletext">PROPER(<i>string</i>)</td>
+                    <td class="tabletext">Returns the input string with the first letter of each word converted to uppercase and the remaining letters converted to lowercase.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Repeat</td>
+                    <td class="tabletext">REPT(<i>string</i>, <i>number</i>)</td>
+                    <td class="tabletext">Returns the string repeated <i>number</i> times.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Replace</td>
+                    <td class="tabletext">REPLACE(<i>input_string</i>, <i>n</i>, <i>length</i>, <i>new_string</i>)</td>
+                    <td class="tabletext">Replaces part of <i>input_string</i>, starting from its <i>n</i>th character and going for <i>length</i> characters, with <i>new_string</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Right</td>
+                    <td class="tabletext">RIGHT(<i>string</i>, <i>n</i>)</td>
+                    <td class="tabletext">Returns the <i>n</i> rightmost characters in the input string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Roman</td>
+                    <td class="tabletext">ROMAN(<i>number</i>)</td>
+                    <td class="tabletext">Returns a Roman numeral string representing the input number.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Search</td>
+                    <td class="tabletext">SEARCH(<i>key</i>, <i>string</i>)</td>
+                    <td class="tabletext">Searches for key in the input string, returning the first matched position or -1 if not found.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Split</td>
+                    <td class="tabletext">SPLIT(<i>string</i>, <i>delimiter</i>)</td>
+                    <td class="tabletext">Splits the input string at each instance of the delimiter into an array.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">String Length</td>
+                    <td class="tabletext">LEN(<i>string</i>)</td>
+                    <td class="tabletext">Returns the length of the input string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Substitute</td>
+                    <td class="tabletext">SUBSTITUTE(<i>input_string</i>, <i>old_string</i>, <i>new_string</i>)</td>
+                    <td class="tabletext">
+                        <p>Substitutes <i>new_string</i> for <i>old_string</i> in the input string.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Text</td>
+                    <td class="tabletext">TEXT(<i>value</i>)</td>
+                    <td class="tabletext">Returns a string version of the input value.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Trim</td>
+                    <td class="tabletext">TRIM(<i>string</i>)</td>
+                    <td class="tabletext">Removes leading and trailing spaces, and replaces all internal multiple spaces with a single space in the input string.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Upper</td>
+                    <td class="tabletext">UPPER(<i>string</i>)</td>
+                    <td class="tabletext">Returns an uppercase version of <i>string</i>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Value</td>
+                    <td class="tabletext">VALUE(<i>string</i>)</td>
+                    <td class="tabletext">Converts the input string into a number.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="topicheading">Substituting Double Quotes</h3>
+        <p>Because double quotes are special characters, using them in string functions necessitates some workarounds. As a rule of thumb, you can use CHAR(34) instead of a double quote when you want to carry out a string operation on a double quote. For example, to remove all double quotes from a string, you can enter SUBSTITUTE(<i>input_string</i>, CHAR(34), ""). This replaces all double quotes in <i>input_string</i> with the empty string, effectively removing them.</p>
+    </body>
+</html>

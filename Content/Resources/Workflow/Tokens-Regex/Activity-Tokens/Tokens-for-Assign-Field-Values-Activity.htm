@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="603" MadCap:lastWidth="1133" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Assign Field Values Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp" />
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Template_Id</td>
+                    <td class="tabletext">
+                        The ID number of the template assigned to the entry. Note that this token's value will be "-1" if no template is assigned to the document.
+                    </td>
+                    <td class="tabletext">%(AssignFieldValues_Template_Id)</td>
+                </tr>
+                <tr>
+                    <td>Template Name	</td>
+                    <td class="tabletext">The name of the template assigned to the entry.</td>
+                    <td class="tabletext">%(AssignFieldValues_Template Name)</td>
+                </tr>
+                <tr>
+                    <td>Template_Name	</td>
+                    <td class="tabletext">The name of the template assigned to the entry. (Legacy format)</td>
+                    <td class="tabletext">%(AssignFieldValues_Template_Name)</td>
+                </tr>
+                <tr>
+                    <td>Parent</td>
+                    <td class="tabletext">If an entry and the folder it is in (its parent folder) have the same field, this token represents the field value of the parent folder’s field. The token %(Parent:Fieldname) represents the value of a different parent field. These tokens can only be used with fields.</td>
+                    <td class="tabletext">%(Parent)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "AssignFieldValues" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Update--HR_Fields", the syntax for the Template_Id token is "%(UpdateHR_Fields_Template_Id)".</div>
+    </body>
+</html>

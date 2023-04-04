@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1042" MadCap:lastWidth="1321">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Edit Service Principal</h1>
+        <p>After creating a Service Principal, you can create Service Principal keys by following the steps below:&#160;</p>
+        <ol>
+            <li>In <MadCap:variable name="DoNotTranslate.LF Account Administration" />, navigate to the <b>Service Principals</b> tab. </li>
+            <li>Click the name of the Service Principal user you want to edit. <p class="note"><b>Note:</b> By default, new service principal keys expire after 90 days. Once created, the expiration date <i style="font-weight: bold;">cannot</i> be modified. To disable or change the expiration date, click <b>Settings</b>. Then, click <b>Integration Configuration</b>. Under the <b>Service Principals</b> section, modify the value in <b>Number of days before service principal key</b> expires. Alternatively, you can disable key expiration by clearing the checkbox for <b>Enable service principal key expiration</b>. </p></li>
+            <li>Click the <b>Create Service Principal Key(s)</b> button. </li>
+            <li>In the <b>Create Service Principal Key(s) for ServicePrincipalUsername</b> dialog box, two keys are automatically created. To save these keys, click <b>Download .txt file</b> or <b>Copy all key(s) to the clipboard</b>. You may use either of these keys for authentication. <p class="note"><b>Note: </b> Once you open the Create Service Principal Key(s) for ServicePrincipalUsername box, you can only view the keys once. You cannot recover the authentication keys later. However, you can recreate or rotate the key(s) at any time. </p></li>
+            <li>Under the <b>Service Principal Key</b> section, you will see the following columns:<ul><li><b>Status</b>:&#160;Shows the status of the key as Active, Deactivated, or Expired. </li><li><b>Created Date</b>: Shows the date and time for when the key was created. </li><li><b>Expiration Date</b>:&#160;Shows the date and time for when the key will expire. <p class="note"><b>Note:</b>  By default, new service principal keys expire after 90 days. Once created, the expiration date <i>cannot</i> be modified. </p></li><li><b>Last Invoked</b>:&#160;Shows the last date and time for when the key was used for authentication. </li><li><b>Actions</b>:&#160;Allows administrators to <b>rotate</b>, <b>disable</b>, or <b>enable</b> the authentication keys. Once a key is rotated, a new Service Principal Key will be provided. The old key cannot be used or recovered. </li><li><b>Notes</b>:&#160;Allows administrators to save notes of their choice by clicking <b>Edit</b> to get started. </li></ul></li>
+        </ol>
+    </body>
+</html>

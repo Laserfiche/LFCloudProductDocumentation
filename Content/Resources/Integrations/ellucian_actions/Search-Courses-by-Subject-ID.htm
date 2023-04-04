@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Courses by Subject ID</title>
+    </head>
+    <body>
+        <h1>Search Courses by Subject ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used to find course information by Course ID.</p>
+        <ul>
+            <li><b>Category:</b> Course</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Subject ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the subject to filter the courses by</p>
+                        <p>Use the <a href="Get-Subject-List.htm">Get Subject List</a> action to find the Subject ID.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>ID</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for a given course.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Title</p>
+                    </td>
+                    <td>
+                        <p>The course title.</p>
+                        <p>Can be mapped to different types in the connection page.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Description</p>
+                    </td>
+                    <td>
+                        <p>The course description.</p>
+                        <p>Can be mapped to different types in the connection page</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Number</p>
+                    </td>
+                    <td>
+                        <p>The numbering scheme that distinguishes courses within a subject.</p>
+                        <p>This is typically an integer.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit/Measure</p>
+                    </td>
+                    <td>
+                        <p>The unit or standard of measurement for the course credit (for example, ‘credit’).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit/Minimum</p>
+                    </td>
+                    <td>
+                        <p>The lower, inclusive bound of the range of values for the course credit.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit/Maximum</p>
+                    </td>
+                    <td>
+                        <p>The upper, inclusive bound of the range of values for the course credit.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit/Increment</p>
+                    </td>
+                    <td>
+                        <p>The increment by which the range of values for the course credit can change from the minimum to the maximum. For example, a range of 1 to 3 with an increment of 1 would evaluate to 1, 2, or 3.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Status</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Includes sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="StatusSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="StatusSubFields">
+                            <li>Status/Category: The category associated with the course status (for example, ‘active’).</li>
+                            <li>Status/Title: The full name of the course status (for example, ‘Active’).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Levels</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Includes sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="LevelsSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="LevelsSubFields">
+                            <li>Academic Level ID: The Guid identifier of the academic level.</li>
+                            <li>Code: The code that identifies the academic level (for example, ‘UG’).</li>
+                            <li>Title: The full name of the academic level (for example, ‘Undergraduate’).</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note:</b> The results will be sorted alphabetically by the "Title" field (ascending order).</p>
+    </body>
+</html>

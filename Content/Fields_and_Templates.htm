@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Fields and Templates</h1>
+        <p>Fields and templates are metadata types that allow you to store, search for, and retrieve information about documents and folders. A field contains a piece of information about a document, such as an author name, an invoice number, a document category, a phone number, or an address. A template is a collection of related fields; assigning a template to an entry allows you to assign multiple related field at once. Laserfiche comes with some default templates, which you can add to or modify to store any information that is important to your documents.</p>
+        <p>Only one template may be applied to a document or folder at a time. Fields can be added to the entry individually, either alongside or instead of a template, and there is no limit to how many fields can be added.</p>
+        <p>Field and template information has several purposes. It can provide a quick overview of the content or important identifying characteristics of a document or folder, such as the document type or category, or the document's author. It also makes it easier to search for an item: you can search for a document or folder by its template or its field values, allowing you to quickly locate documents based on information such as an invoice number or customer name. Fields and templates also allow you to store additional information with the document, such as a customer e-mail address or phone number.</p>
+        <p>Before a field or a template can be applied to a document, it must be defined in Repository Administration. Laserfiche provides you with two starting templates:&#160;General, which contains general information about documents, and Email, which contains information specific to imported emails. You can modify these templates to better suit your needs, and you can add additional templates and fields specific to your repository. See <a href="#Creating2">Creating and Modifying Field and Template Definitions</a>, below, for more information.</p>
+        <h2 class="topicheading"><a name="Viewing,"></a>Viewing, Assigning, and Modifying Fields and Templates on Documents and Folders</h2>
+        <p>You can view the currently-assigned field and template information, add or change fields or templates, or update field information from the right pane of both the Document Viewer and the Folder Browser.</p>
+        <ol>
+            <li>Select a document or folder in the folder browser, or open a document in the document viewer. In the right pane, select the <b>Fields</b> tab.</li>
+            <li>Any currently-assigned template and field information will be displayed. If no template has yet been assigned to the document, it will say <b>No template assigned</b>. </li>
+            <li>Do one or more of the following:</li>
+            <ul>
+                <li>To apply a template, or change the current template to a different template, open the <b>Template</b> drop-down menu and select the template you want to apply to the document. Changing or removing a template will also remove all of the field information associated with that template, unless you change to another template with the same fields.</li>
+                <li>To display a field separate from a template, click <b>Add/remove fields</b>. Select the field or fields you want to add and click <b>Apply</b>.</li>
+                <li>To assign a field value to a document, or modify an existing field value, type a value in the box (or, if it is a list field, select it from the list). If the field is a multi-value field, once you type a value, another box will appear to allow you to type an additional value. You can also use tokens to automatically populate field values. See <a href="Tokens.htm">Tokens</a> for more information.
+                <p class="note"><b>Note:</b>&#160;Different fields permit different type of information. For example, you cannot type letters in a number field, and a date field can only contain dates. See <a href="#Field">Field and Template Types and Properties</a>, below, for more information. In addition, field security may prevent you from modifying some fields. See <a href="#Disabled">Disabled Fields and Field Security</a>, below, for more information.</p></li>
+                <li>To remove an independently-added field, click <b>Add/remove fields</b>. Currently-applied fields will be listed at the top. Clear the fields you want to remove and click <b>Apply</b>. Removing a field will delete the value associated with that field.</li>
+            </ul>
+            <li>Save your changes to the document.</li>
+        </ol>
+        <p class="ex"><b>Tip:</b> Pressing the 
+			SPACEBAR on an empty date field will enter the current date based on your computer's date settings.</p>
+        <p class="note"><b>Note:</b>&#160;Required fields are marked with a red asterisk. A template cannot be saved unless its required fields are all populated.</p>
+        <p>You can modify the field and template information applied to multiple entries (documents and folders) by selecting more than one entry in the Folder Browser. This allows you to set template and field information for multiple entries at once.</p>
+        <p>If the selected entries already have an assigned template, the template will be listed. If they have multiple, different templates assigned , the Template drop-down will list "Multiple templates assigned." Changing the template will cause all original template field information to be lost, unless both templates share the same field.</p>
+        <p>If documents have the same field with the same value assigned (including no value), the value will be displayed; if they have the same field but with different values, the field will display "Entries have different values assigned." Changing a value will save that value for all selected documents, even if that would overwrite existing values.</p>
+        <p>Adding a new, individual field will apply that field and its new value to all selected documents, but will not affect any other field or template information.</p>
+        <h2 class="topicheading"><a name="Creating2"></a>Creating and Modifying Field and Template Definitions</h2>
+        <p>Although fields and templates work together, they are separate metadata types. This means that you can either create a template definition first and then create fields to add to it, or you can create field definitions first and then collect them into templates.</p>
+        <p>Laserfiche provides you with two starting templates:&#160;General, which contains general information about documents, and Email, which contains information specific to imported emails. You can modify these templates to better suit your needs, and you can add additional templates and fields specific to your repository.</p>
+        <h3><a name="Creating"></a>Creating or Modifying a Field Definition</h3><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Creating-Fields-in-Laserfiche/Creating-Fields-in-Laserfiche.html"></iframe>
+        <ol>
+            <li>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</li>
+            <li>On the left, under <b>Metadata</b>, select <b>Fields</b>.</li>
+            <li>In the web client, select the <b>Add</b> button (<img src="Resources/Images/admin_add_button.png" title="The Add button allows you to add a new item." alt="The Add button, a dark gray plus sign." />). To modify a field, click the name of an existing field to modify it.</li>
+            <li>In the <b>Name</b> option, type a name for the field.</li>
+            <li><b>Optional:</b>&#160;In the <b>Description</b> option, type a description for the field. </li>
+            <li>In the <b>Type</b> option, select the field type. For more information about available field types, see <a href="#Field">Field and Template Types and Properties</a>, below.
+            <p class="note"><b>Note:</b>&#160;If you are modifying an existing field, be aware that changing a field type from a less restrictive type to a more restrictive type can lead to data loss. </p></li>
+            <li><b>List fields only:</b>&#160;To specify list items, type the items you want to include in the Enter new list items option, and then click Insert. You can You can sort the list items manually by selecting an item and clicking Up or Down, or automatically by selecting <b>Ascending</b> or <b>Descending</b>. To allow users to select a blank value, select <b>Add blank to the list</b>.</li>
+            <li><b>Text and List fields only:</b>&#160;In the <b>Width</b> option, specify a maximum width for the field. 
+            <p class="note"><b>Note:</b>&#160;If you are modifying an existing field, be aware that decreasing a field width can lead to data loss.</p></li>
+            <li><b>Optional:</b>&#160;In the <b>Default value</b> option, specify a default value for the field. You can also use tokens to create a dynamic default value. See <a href="Tokens.htm">Tokens</a> for more information.</li>
+            <li><![CDATA[
+]]><b>Optional:</b>&#160;To allow users to store multiple values in the field, select <b>Allow multiple values</b>.</li>
+            <li><b>Optional:</b>&#160;To make the field required, select <b>Required for all templates</b>. This will prevent users from saving a document with this field until the field has been filled in.</li>
+            <li><b>Optional:</b>&#160;To index the field, select <b>Indexed</b>. </li>
+            <li><b>Optional (Number, Date, and Date/Time fields only):</b>&#160;In the <b>Field Format</b> option, select the format you want to use, or type a custom field format. For more information about field formats, see <a href="#Field">Field and Template Types and Properties</a>, below.</li>
+            <li><b>Optional&#160;(Number and Text fields only):</b>&#160;In the <b>Constraint</b> option, select an example constraint, or type a custom regular expression constraint and constraint violation message. For more information about field constraints, see <a href="#Field">Field and Template Types and Properties</a>, below.</li>
+            <li>In the Templates tab, you can view the templates to which the field belongs. To add the field to a template, see <a href="#Creating3">Creating or Modifying a Template Definition</a>, below.</li>
+            <li>To configure alternate template names for different languages, you can do so in the <b>Language</b> tab. See <a href="#Field2">Languages</a>, below, for more information. </li>
+            <li>When you are finished, save your field definition.</li>
+        </ol>
+        <h3>Creating or Modifying a Template Definition</h3><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Creating-Templates-in-Laserfiche/Creating-Templates-in-Laserfiche.html"></iframe>
+        <ol>
+            <li>
+                <p>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</p>
+            </li>
+            <li>On the left, under <b>Metadata</b>, select <b>Templates</b>.</li>
+            <li>In the web client, select the <b>Add</b> button (<img src="Resources/Images/admin_add_button.png" title="The Add button allows you to add a new item." alt="The Add button, a dark gray plus sign." />) to add a new template. To modify a template, click the name of an existing field to modify it.</li>
+            <li>In the <b>Name</b> option, type a name for the template.</li>
+            <li><b>Optional:</b>&#160;In the <b>Description</b> option, type a description for the template. </li>
+            <li><b>Optional</b>:&#160;To assign a color to the template, click the drop-down menu next to <b>Color</b> and choose a color. This color will be displayed alongside documents and folders that have been assigned this template.</li>
+            <li>To add an existing field to this template, click the <b>Insert</b> button and select the field from the list.</li>
+            <li>To create a new field for use with this template, click the <b>Add</b> button (<img src="Resources/Images/admin_add_button.png" alt="The Add button, a dark gray plus sign." title="The Add button allows you to add a new item." />). The <b>Add Field</b> dialog box will open. Add the field, following the instructions in <a href="#Creating">Creating or Modifying a Field</a>, above, starting from step 3.</li>
+            <li>Repeat steps 7 and 8 until you have added all the fields you want. To rearrange fields, select a field and click the <b>Move Up</b> or <b>Move Down</b> buttons. To remove a field, click <b>Remove</b>.
+            <p class="note"><b>Note</b>:&#160;If you remove a field from an existing template, that field and all of its values will be removed from all the documents and folders that have been assigned that template. This cannot be undone.</p></li>
+            <li>If you want to add dynamic fields to the template, you can do so in the <b>Dynamic Fields</b> tab. See <a href="Dynamic-Fields.htm">Dynamic Fields</a> for more information.</li>
+            <li>If you want to add multi-value field groups to the template, you can do so in the <b>Multi-Value Field Groups</b> tab. See <a href="#Multi-Va">Multi-Value Field Groups</a>, below, for more information.</li>
+            <li>To configure alternate template names for different languages, you can do so in the <b>Language</b> tab. See <a href="#Field2">Languages</a>, below, for more information. </li>
+            <li>When you are finished, save your template definition.</li>
+        </ol>
+        <h3>Deleting a Field or Template Definition</h3>
+        <p style="font-weight: normal;">To delete a field or template definition, open <b>Fields</b> or <b>Templates</b>, select the field or template you want to remove, and click the <b>Delete</b> button (<img src="Resources/Images/admin_delete_button.png" alt="The Delete button, a dark gray trash can." title="The Delete button allows you to delete selected items." />). This will permanently remove the field or template. The field or template will also be removed from all documents and folders that contained it.</p>
+        <h3>Duplicating a Field or Template Definition</h3>
+        <p>To duplicate a field or template definition in the web client, select the definition in the <b>Fields</b> section of the web client management page and press the copy button (<img src="Resources/Images/admin-copy-button.png" />). The field or template definition will be duplicated, and can be opened and modified.</p>
+        <h2 class="topicheading"><a name="Field"></a>Field and Template Types and Properties</h2>
+        <p>Fields and templates have various properties that determine what you can input into a field, and how existing field and template information will be displayed.</p>
+        <h3><b>Field Types</b>
+        </h3>
+        <p>A field's type determines what kind of information can be stored in that field. &#160;For instance, a text field can contain any combination of characters, but a number field can only contain numbers. In addition, the field type determines how the information in the field will be sorted when displayed in columns. &#160;A field's type is determined when the field is created.</p>
+        <p>Laserfiche supports the following field types:</p>
+        <ul>
+            <li><b>Text:</b>&#160;The Text type is the most permissive type of field. Any character 
+					can be entered into it. By default, the only limitation Text fields have is the width or number of characters that can be assigned 
+					to it. The width is set when the field is created.</li>
+            <li><b>List:</b>&#160;A List field type allows you to select a value from a predefined 
+					list. The values available from this list and the order in which 
+			they appear are configured when the field is created. </li>
+            <li><b>Number:</b>&#160;Only number values, including decimals and negative numbers, can be type into a Number field. A number value must fall within the following range: -9,999,999,999,999.999 and 9,999,999,999,999.999. Number fields support up to five places after a decimal point (e.g., 0.00001).</li>
+            <li><b>Integer:</b>&#160;Only number values can be specified for an Integer field. An 
+ integer value must fall within the following range: 0 to 64,999. Decimals and negative numbers cannot be saved in an Integer field.</li>
+            <li><b>Long Integer</b>:&#160;Only number values can be specified for a Long Integer field. 
+ A long integer value must fall within the following range: 0 to 3,999,999,999. 
+ Decimals and negative numbers cannot be saved in a Long Integer field.</li>
+            <li><b>Date:</b>&#160;Only date values can be specified for a Date field type. A date value 
+					must be formatted using short date format (e.g., 06/05/2014). </li>
+            <li style="font-weight: normal;"><b>Date/Time:</b>&#160;A Date/Time field allows you to specify date/time values. A 
+					date/time value must be formatted using short date format followed by 
+					the time (e.g., 06/05/2014 &#160;06:00:00 
+					PM). </li>
+            <li style="font-weight: normal;"><b>Time:</b>&#160;A Time field type allows you to specify time values. </li>
+            <li style="font-weight: normal;"><b>Data:</b>&#160;A Data field allows you to associate binary files with a field. This is primarily used in integrations.
+ </li>
+        </ul>
+        <h3>Field Display Formats</h3>
+        <p>You can customize the way that Laserfiche displays date, time and number field values.&#160;This customizing can be done on a field-by-field basis. For example, you might choose to always display one number field as a percentage (so that the value "90" will be displayed as "90%"), and a different number field as currency (so that the value "345.98" will be displayed as "$345.98").</p>
+        <p>You can choose from several pre-defined display formats options for Date, Time, Date/Time, and Number fields, or you can create a custom field display. For more information on customizing the field display, see <a href="Field_Display_Formats.htm">Field Display Formats</a>.</p>
+        <h3>Field Constraints</h3>
+        <p>Text and number fields can be constrained to a certain format or range of values to ensure consistency 
+ in how a value is specified across your organization. For example, you might want to ensure that all phone numbers are input in the format 123-456-7890. Similarly, you might have a number field to store four-digit invoice numbers, and want to ensure that all values in that field fall between 1000 and 9999. </p>
+        <p> You can choose from pre-defined example constraints, or create your own custom constraint. For more information, see <a href="Field_Constraints.htm">Field Constraints</a>. </p>
+        <h3><b>Multi-Value Fields</b>
+        </h3>
+        <p>Fields may be configured to accept multiple values. For example, if a report may have multiple authors, the Author field may be configured to allow you to type more than one author name. Any value in a multi-value field can be searched on, regardless of its position in the field. Fields are marked as multi-value fields in Repository Administration. You can mark a field as multi-value when you create it, or you can modify an existing field to allow it to accept multiple values.</p>
+        <p class="note"><b>Note:</b> There is no limit to the number of values you can type into a multi-value field. The number of values on a field may vary from document to document, depending on user input.</p>
+        <p>After the first value is typed into a multi-value field, a new line will appear below it, allowing you to type a second value for the field, and so on. To remove a value from a field, click the remove button to the right of the field value. </p>
+        <h4><a name="Multi-Va"></a>Multi-Value Field Groups</h4>
+        <p>Multi-value field groups are groups of multi-value fields that are related in some way. When multi-value fields are collected into a multi-value field group, the first value for each field will be displayed together, and then the second value for each field will be displayed together, and so on. If a multi-value field is not part of a multi-value field group, all the values for the first field will be displayed together, and then all the values for the second field will be displayed together, and so on.</p>
+        <p>For example, you might store invoices in Laserfiche and include information about those invoices in the fields. An invoice might have multiple items on it, each of which has information that needs to be stored in the metadata:&#160;the item's name, product ID, quantity, and price. If you are not using multi-value field groups, each field will be listed separately, making it difficult to tell which product corresponds to which ID, quantity, and price. </p>
+        <p>However, if you are using multi-value field groups, multi-value fields will be arranged so that the first values of each member of the group are displayed together, making it easier to interpret the results.</p>
+        <p>You can define multiple multi-value field groups for a single template. Multi-value field groups can collect any fields in the template as long as they are multi-value fields, including dynamic fields. Multi-value field groups are specific to a particular template. If the fields also exist in another template, they will not automatically be collected as a multi-value field group in that other template. </p>
+        <p><b>Creating a Multi-Value Field Group</b>
+        </p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</li>
+            <li>On the left, under <b>Metadata</b>, select <b>Templates</b>.</li>
+            <li>Select the template to which you want to add a multi-value field group.</li>
+            <li>On the <b>Template Properties</b> page, select the <b>Multi-Value Field Groups</b> tab.</li>
+            <li>All multi-value fields in this template will be listed. In the <b>Group</b> option, click and select the group to which you want to assign the field. If you do not want to add a particular multi-value field to any group, leave the group set to <b>No group</b>.<p class="note"><b>Example:</b> An organization's Invoices template contains seven multi-value fields:&#160;Product Name, Product ID, Price, Quantity, Customer Name, Customer Email Address, and Approved By. The administrator wants to group Product Name, Product ID, Price, and Quantity into one group named Product Information, Customer Name and Customer Email Address into a second group named Customer Contacts, and leave Approved By separate from the other groups. The administrator could do so by assigning the first four fields to Group 1, the second two fields to Group 2, and leaving the final field set to No group.</p></li>
+            <li><b>Optional:</b>&#160;In the <b>Group Name</b> option, click and type a name for the multi-value field group. This name will be displayed to users in the client.</li>
+            <li>Click <b>Save</b>&#160;to save your changes.</li>
+        </ol>
+        <h3>Dynamic Fields</h3>
+        <p>A dynamic field is a type of field in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a parent&#160;field determines what value are available in the child&#160;fields. See <a href="Dynamic-Fields.htm">Dynamic Fields</a> for more information.</p>
+        <h3><a name="Field2"></a>Field and Template Languages</h3>
+        <p>You can configure an alternate language for the name of a field or template. When a user whose locale settings match that language views the template or field, they will see its name in the alternate language. If an alternate name has not been configured for a particular language, or the language isn't supported, the primary name (as configured in the General tab of the template or field's properties)&#160;will be displayed. For example, if a repository is primarily used by people who speak English, but some who speak Spanish or Arabic, the primary name could be set in English, with alternate names for Spanish and Arabic. If a repository is primarily used by people who speak French, but some who speak English or Chinese, the primary name could be set in French, with alternate names for Spanish and Arabic.</p>
+        <p>Alternate field and template names must be set manually for each field and template. Only the field or template name will be affected; field values are not affected by this setting.</p>
+        <p style="font-weight: bold;">Setting Alternate Field or Template Names</p>
+        <ol style="list-style: decimal;list-style-type: decimal;">
+            <li>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</li>
+            <li>On the left, under <b>Metadata</b>, select <b>Templates</b> or <b>Fields</b>.</li>
+            <li>Select the field or template to which you want to add an alternate name and select the <b>Language</b> tab.</li>
+            <li>Under <b>Language</b>, select the language for which you want to configure an alternate name.</li>
+            <li>Under <b>Alternate Name</b>, type the translation of the name.</li>
+            <li>To add additional languages, select <b>Add Language</b> and then repeat steps 4-5.</li>
+            <li>When you have configured all desired languages, click <b>Save</b>&#160;to save your changes.</li>
+        </ol>
+        <p>Languages into which the client has been localized also support alternate language names. The supported languages are Arabic, Chinese (Traditional), Chinese (Simplified), English, French, Italian, Portuguese (Brazilian), and Spanish. Thai is also supported in the web client only.</p>
+        <h3><b>Required Fields</b>
+        </h3>
+        <p> A 
+			required field can never be blank. Whenever it is applied as part of a template, it must be filled in before you can save the document. You can mark a field as required when you create it, or you can modify an existing field to make it required, or to remove that setting.</p>
+        <p>Required fields are marked with a red asterisk.</p>
+        <h2 class="topicheading"><a name="Disabled"></a>Disabled Fields and Field Security</h2>
+        <p>When working with field data, you may run across fields that are disabled, or grayed out. 
+ A disabled field indicates you do not have sufficient rights
+ to make changes to that field. However, you are allowed to view the information 
+ in that field. Fields may also be disabled if a document has been checked out by another user.</p>
+        <p>Field security is configured in Repository Administration. See <a href="Field_Rights.htm">Field and Template Rights</a> for more information.
+</p>
+        <p>&#160;</p>
+    </body>
+</html>

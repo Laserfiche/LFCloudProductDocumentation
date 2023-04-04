@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Monitoring Repository Activity</h1>
+        <p>Laserfiche provides tools for administrators to monitor and manage repository activity. Users can generate reports of documents in the repository, based on folder contents, records management lifecycle stages, search results, starred documents, or recycle bin contents. Users with the Manage Entry Access privilege can review which documents are currently checked out, locked, or in the recycle bin, and can release locked and checked out documents and restore deleted documents.</p>
+        <h2 class="topicheading">Document and Folder Reports</h2>
+        <p>You can export a report of all items in the current folder, search results list, or view (such as starred, documents in use, or records management quick access views). When generating the report, you can specify exactly what information about the documents and folders you want to include. You can choose whether to download the report as an Excel spreadsheet, as an HTML&#160;table, as an HTML list, or as CSV text.</p>
+        <p>To generate a document and folder report, select the document, search results, or quick access view you want to report on, and click the <b>More Actions</b> button. Select <b>Generate Report</b> and select the type of report you want to run. In the <b>Generate Report</b> dialog box, you can specify what information you want to include in the report, and drag and drop to reorder it. You can also specify whether to use a comma or a tab as the delimiter character in the CSV file. Click <b>OK</b>&#160;to generate the report.</p>
+        <h2 class="topicheading">Checked Out Documents</h2>
+        <p>In Repository Administration, you can view all <a href="Working_with_Doc_Contents.htm#Checking">checked out documents</a> in the repository. Users with the Manage Entry Access privilege can select <b>Checked Out Documents</b> to see a list of all documents that are currently checked out, along with their locations, who checked them out and when, and what comments (if any)&#160;they provided when checking it out.</p>
+        <p>You can also select one or more documents and click <b>Undo check out</b> to release the check out. Be aware that this may cause a user's changes to be lost.</p>
+        <h2 class="topicheading">Entry Locks</h2>
+        <p>You can view all entries that are currently locked because users are making changes to them. Users with the Manage Entry Access privilege can select the Entry Locks to view all locked entries. In contrast to the locks placed on checked out documents, which are applied when a document is checked out of the repository and removed when it is checked in, these entry locks are applied any time a document is in the process of being modified, such as when a user adds new field values to a document, and are removed as soon as the changes are saved.</p>
+        <p>You can also select one or more documents and click <b>Release lock</b> to release the check out. Be aware that this may cause a user's changes to be lost.</p>
+        <h2 class="topicheading">Recycle Bin</h2>
+        <p>The <b>Recycle Bin</b> section of Repository Administration lists all of the deleted documents that are currently in the <a href="Deleting.htm">recycle bin</a>.&#160;If you have the Manage Entry Access privilege, you can see all deleted items in the repository; if you do not, you will only see items you deleted.</p>
+        <p>Administrators can also configure the age limit at which Laserfiche will automatically purge items from the recycle bin. </p>
+        <ol>
+            <li>From the App Picker, click <b>Repository Administration</b>.</li>
+            <li>View the <b>General</b> page.</li>
+            <li>On the Settings tab, click <b>Show advanced</b>.</li>
+            <li>Select the <b>Age limit (days) on recycled items</b> checkbox and specify the maximum age in days for documents in the recycle bin. Laserfiche will periodically check the recycle bin for documents that have exceeded the allotted time and automatically purge them.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

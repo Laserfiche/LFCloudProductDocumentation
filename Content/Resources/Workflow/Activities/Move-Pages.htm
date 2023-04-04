@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="837" MadCap:lastWidth="1024" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Move Pages</h1>
+        <p style="text-align: center;">
+            <img src="Images/movePagesCanvas.PNG" title="Move Pages activity" alt="Move Pages activity" />
+        </p>
+        <p>This activity moves or copies pages between two documents or within the same document. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Move-Pages-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about the token this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Action</b> property box, select the type of action to be taken on the entry: <b>Copy pages</b> or <b>Move pages</b>.</li>
+            <li><b>Optional</b>: If you select <b>Move pages</b>, you can select <b>Delete the source document if all its pages have been moved</b>.
+            </li>
+            <li>In the <b>Move Pages From</b> property box, select the entries you want to copy or move pages from. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+            <li>
+                In the <b>Move Pages To</b> property box, select the entries you want to move the pages to. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+            <li>In the <b>Page Range</b> property box, select the pages that will be copied or moved with this activity. The pages specified in this property box will be moved from the document selected in the <b>Move Pages From</b> property box to the document selected in the <b>Move Pages To</b> property box.</li>
+            <ul>
+                <li><b>All pages</b>: Select to copy or move all pages.</li>
+                <li><b>Pages</b>: Specify a list of pages or a <a href="Page-Range.htm" title="Click here to learn more." alt="Click here to learn more.">page range</a> to copy or move.<p class="ex"><b>Example</b>: Specify <b>1, 3, 5-7</b> to include pages 1, 3, 5, 6, and 7. You can also specify a page range that skips pages.  For instance, specifying <b>2@2</b> will include all even-numbered pages, whereas specifying <b>2@3</b> will include every third page starting with page two.</p></li>
+            </ul>
+            <li>In the <b>Insert Pages</b> property box, specify where to insert the copied or moved pages.<p class="note"><b>Note</b>: The pages will be inserted into the document selected in the <b>Move Pages To</b> property box.</p><ul><li><b>Before first page</b>: Inserts the pages before the first page of the document selected in the <b>Move Pages To</b> property box.</li><li><b>After last page</b>: Inserts the pages after the last page of the document selected in the <b>Move Pages To</b> property box.</li><li><b>After page</b>: Inserts the pages after the specified page of the document selected in the <b>Move Pages To</b> property box.</li></ul></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

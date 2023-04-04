@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditionTagExpression="include[Default.Complete] exclude[&quot;Default.DO NOT COMMIT&quot; or &quot;Default.Do not include&quot; or &quot;Default.For Next Version&quot; or &quot;Default.In Progress&quot; or &quot;Default.Needs Review&quot; or &quot;Default.Needs Screenshot&quot; or &quot;Default.Update 1&quot; or &quot;Default.Update 2&quot;] ">
+    <head>
+    </head>
+    <body>
+        <h1>Publish and Test a Workflow</h1>
+        <p>After you build a workflow, you can publish it to make it ready to run. If you make changes to a workflow after it is published, republish it to update the workflow with the newest changes.</p>
+        <h2>To publish a workflow:</h2>
+        <ol>
+            <li>Click the <b>Save</b> button in the workflow designer toolbar to save your changes.</li>
+            <li>Click the <b>Validate</b> button to check for missing or incorrectly configured steps.</li>
+            <li>Click the <b>Publish</b> button.</li>
+        </ol>
+        <p class="note"><b>Note:</b> Publishing will automatically save and validate the workflow.</p>
+        <p>While the validation step checks for missing or incorrectly configured steps, it is a good idea to test-run the workflow to ensure that the workflow runs as expected.</p>
+        <h2>To test-run a workflow:</h2>
+        <ol>
+            <li>Click the <b>Run</b> button in the workflow designer toolbar.</li>
+            <li><b>Optional</b>: Next to <b>Starting Entry ID</b>, specify the ID&#160;of the starting entry (the entry the workflow begins with).</li>
+            <li><b>Optional</b>: Next to <b>Initiator</b>, specify the initiator of the workflow to ensure the workflow runs correctly with the selected initiator.</li>
+            <li><b>Optional:</b> If input parameters have been defined for the workflow, set test values for each input parameter to be tested.</li>
+            <li>Click <b>Run Workflow</b>.</li>
+        </ol>
+        <p>After you test-run the workflow, the new instance opens in the instance report<MadCap:conditionalText MadCap:conditions="Default.Do not include"> on the Design page</MadCap:conditionalText>. You use this report to determine if the workflow performed as you expected. If it did, you can <a href="../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">assign starting events</a> to the workflow to run the workflow automatically. If it did not, you can navigate back to the workflow designer to edit the workflow<MadCap:conditionalText MadCap:conditions="Default.Do not include"> or use the run button on the top left of the instance report to test-run again</MadCap:conditionalText>.</p>
+        <h2>See also:</h2>
+        <p><a href="Advanced-Testing-Concepts.htm" title="Click here to learn more." alt="Click here to learn more.">Advanced Testing Concepts</a>
+        </p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Performing Records Management Actions</h1>
+        <p>Records management features allow users to manage records throughout their lifecycle. You can perform records management actions from the record timeline in the right-hand pane, or from the toolbar.</p>
+        <h2 class="topicheading"><a name="Closing"></a>Closing and Reopening Record Folders</h2>
+        <p>Record folders can be closed during their active life cycle, and they can be reopened until they are cutoff. Closing a record folder prevents it, and its contained records, from having any further modification. New records cannot be filed into closed record folders except by users granted the Close/Reopen Folder entry access right. This entry access right grants users the ability to close and reopen record folders, and file new records into closed record folders; however, closed record folders cannot be reopened after they are cut off.</p>
+        <p style="font-weight: bold;">To close a record folder</p>
+        <ol>
+            <li>Select the 
+					record folder you want to close.</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Close</b>.</li>
+            <li>Confirm that you want to close the record folder.</li>
+        </ol>
+        <p style="font-weight: bold;">To reopen a record folder</p>
+        <ol>
+            <li>Select the 
+					record folder you want to close.</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Reopen</b>.</li>
+            <li>Confirm that you want to reopen the record folder.</li>
+        </ol>
+        <h2 class="topicheading">Setting an Event Date</h2>
+        <p>An event is an occurrence that may cause certain types of records to be cutoff. Events are used with in Event, Time+Event,or Interval+Event cutoff instructions or in an alternate retention schedule, and are defined in Repository Administration. (See <a href="Records-Management-Administration.htm#Events">Events</a> for more information.)&#160;</p>
+        <p>Users with the Set Event Date entry access right can set an event date associated with a record folder's cutoff instructions, or with an alternate retention schedule. Setting all event dates implicitly <a href="#Closing">closes</a> a record folder. Event dates can still be changed or unset before a record folder is cutoff, though changing the critical event date can also change a record 
+ folder's cutoff eligibility date. </p>
+        <p style="font-weight: bold;">To set an event date</p>
+        <ol>
+            <li>Select the record folder you want to set an event 
+						date on.</li>
+            <li>Do one of the following:
+            <ul><li>In the right-hand pane, click the <b>Set Event Date</b> button.</li><li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Set Event Date</b>.</li></ul></li>
+            <li>For each event whose date you want to set, type the event date or click the calendar button (<img src="Resources/Images/calendar_button.png" />) to set an event date. 
+You can set today's date automatically by pressing the spacebar. 					 You can also set an event date in the future.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">To unset an event date</p>
+        <ol>
+            <li>Select the record folder you want to unset an event 
+						date on.</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Set Event Date</b><![CDATA[
+            ]]></li>
+            <li>Clear the event dates that you want to unset.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <h2 class="topicheading">Cutting Off a Record or Record Folder</h2>
+        <p>Cutoff represents the beginning of a record's retention phase. A folder that has been cut off is closed and cannot be modified or deleted, and ceases to be considered an active record; it is at the point of cutoff that the retention schedule becomes relevant to the record. Note that the cutoff eligibility date dictates future retention regardless of when the cutoff action is performed.</p>
+        <p>Records that have been cut off can be uncutoff as long as no disposition actions have been performed on them. This will also reopen the record folder. If the record folder has an Event, Time+&#160;Event, or Interval+Event cutoff instruction, the uncutoff action automatically unsets the critical event date; if the record folder has a Superseded or Disposition Action cutoff instruction, it removes the relevant document relationship. If you uncutoff a record, it will match the cutoff status of its parent record folder. This can mean that the record will still be cutoff, if the parent record folder has itself been cutoff.</p>
+        <p>A user must have the Records Management privilege to perform cutoff or uncutoff on a record. </p>
+        <p class="note"><b>Note:</b>&#160;Record folder cutoff can be performed on individual records, but we recommend performing cutoff on record folders unless your regulatory compliance instructions require otherwise. (The Superseded and Disposition Action cutoff instruction types are exceptions, as they are always record-specific). Performing cutoff on the record folder level will help you keep your record management consistent and streamlines administrative tasks.</p>
+        <p><b>To perform cutoff on a record or record folder</b>
+        </p>
+        <ol>
+            <li>Select the record or record folder you want to cut off.</li>
+            <li>Do one of the following:
+            <ul><li>In the right-hand pane, click the <b>Cutoff</b> button.</li><li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Cutoff</b>.</li></ul></li>
+            <li>Confirm that you want to cut off the record or record folder.</li>
+        </ol>
+        <p><b>To uncutoff a record or record folder</b>
+        </p>
+        <ol>
+            <li>Select the record or record folder you want to uncutoff.</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Uncutoff</b><![CDATA[
+            ]]></li>
+            <li>Confirm that you want to undo cutoff of the record or record folder.</li>
+        </ol>
+        <h2 class="topicheading">Interim Transfers</h2>
+        <p>After a record or record folder has been cutoff, it can be transferred from one location to another. Transfer eligibility dates and locations are defined in the retention schedule, but they do not need to be strictly adhered to in the way that the cutoff or final disposition eligibility dates do  because transfers are intended purely for the organization's convenience. (In general, transfers are not regulated or mandated.)</p>
+        <p>A user must have the Records Management privilege to transfer a record. </p>
+        <p>If a record's retention period includes a transfer, the record's retention schedule will equal the sum of the initial retention plus each of its transfers. The record will become eligible for final disposition after both its retention and transfer times.</p>
+        <p>When a transfer is performed on a record folder, the records within that folder will be transferred as long as they are cutoff and have not already be transferred to that location. Records within the folder that have not been cutoff, or that have already been transferred to that location, will not be transferred. In addition, records within the record folder that do not have the same retention schedule as their parent folder will not be transferred unless they are also eligible for transfer under their own retention schedule. When a transfer is performed on an individual record, only that record will be transferred.</p>
+        <p style="font-weight: bold;">To transfer a record or record folder</p>
+        <ol>
+            <li>Select the record or record folder you want to transfer.</li>
+            <li>Do one of the following:
+            <ul><li>In the right-hand pane, click the <b>Transfer</b> button.</li><li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Transfer</b>.</li></ul></li>
+            <li>Select the transfer location and confirm that you want to transfer the record or record folder.</li>
+        </ol>
+        <h2 class="topicheading">Final Disposition</h2>
+        <p>Final disposition is the last action performed in a retention schedule. 
+ Typically upon final disposition, your organization no longer retains the records 
+ in question. There are three types of final disposition: Accession, Destruction, and None. </p>
+        <p>When a record undergoes Accession or Destruction, you can elect to destroy the records in Laserfiche, but keep the record metadata. It is highly recommended that you keep record metadata, so that you can track a record's retention history. If the record is destroyed with metadata retained, the version history will be deleted. This ensures that page and electronic file contents are entirely removed, even in the history. </p>
+        <h3>Accession</h3>
+        <p>When a retention schedule has a final disposition of accession, record 
+			data and the records management responsibility for that data are transferred 
+			to a separate organization. Record data is removed from the Laserfiche 
+		repository, although you have the option to retain record metadata. You must be assigned the Records Management privilege to perform accession.</p>
+        <p>Accessioning a record folder will also accession the records within that folder, as long as they do not have a hold on them, are eligible for final disposition, and have a final disposition that matches the record folder, including location. (Most records within record folders will have a matching final disposition, because in most cases records will have the same retention schedule as their parent folders.) If a record within a record folder meets these criteria it will be accessioned when its parent record folder is accessioned, even if it has a differing retention schedule. When accession is performed on an individual record, only that record will be accessioned.</p>
+        <p style="font-weight: bold;">To accession a record or record folder</p>
+        <ol>
+            <li>Select the record or record folder you want to accession.</li>
+            <li>Do one of the following:
+            <ul><li>In the right-hand pane, click the <b>Accession</b> button.</li><li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Accession</b>.</li></ul></li>
+            <li><b>Optional</b>:&#160;Click the <b>Export</b> button to export the records as a <a href="Printing_and_Exporting.htm#Exportin">briefcase</a>.</li>
+            <li>Click <b>Confirm</b> to accession the record or record folder.</li>
+        </ol>
+        <h3>Destruction</h3>
+        <p>When a retention schedule has a final disposition of Destruction, the record 
+			data no longer needs to be preserved, or legally cannot be, it can be completely removed from the records management system. Destruction will remove all
+			record data  from the Laserfiche repository; however, the record's
+		metadata can be retained. (The option to retain metadata is available when configuring the retention schedule, learn more.)</p>
+        <p>When a destruction operation is performed on a record folder, all records within that folder that are eligible for destruction will be destroyed (except any that have holds). When a destruction operation is performed on an individual record, only that record is destroyed.</p>
+        <p style="font-weight: bold;">To destroy a record or record folder</p>
+        <ol>
+            <li>Select the record or record folder you want to destroy.</li>
+            <li>Do one of the following:
+            <ul><li>In the right-hand pane, click the <b>Destroy</b> button.</li><li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Destroy</b>.</li></ul></li>
+            <li>Click <b>Destroy</b> to destroy the record or record folder.</li>
+        </ol>
+        <h3>None</h3>
+        <p>When a retention schedule has a final disposition of None, the records should be retained indefinitely. </p>
+        <h2 class="topicheading"><a name="Vital"></a>Vital Record Review</h2>
+        <p>Vital records contain information without which an organization 
+ could not operate and that is subject to periodic review and update. 
+ Examples of vital records are emergency operating records 
+ or legal and financial records. Record series and record folders contain a vital records property to indicate the need for review and the record review cycle or interval. See <a href="Creating-Record-Series-Folders-Records.htm">Creating Record Series, Record Folders, and Records</a> for more information.</p>
+        <p>Vital records require periodic review. Laserfiche helps track vital record review cycles, helping you review records on a consistent basis. To quickly locate vital records, see <a href="Locating-Viewing-Records-Management-Information.htm">Locating and Viewing Records Management Information</a>.</p>
+        <p><b>To mark a vital record as being reviewed</b>
+        </p>
+        <ol>
+            <li>Select the record or record folder you want to mark as reviewed.</li>
+            <li>Do one of the following:
+            <ul><li>In the right-hand pane, click the <b>Review</b> button.</li><li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Record Actions</b>, and select <b>Review Vital Records</b>.</li></ul></li>
+            <li>In the <b>Review Vital Records</b> dialog box, set the review date.</li>
+            <li>Click <b>Reviewed</b>.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Adding"></a>Adding and Removing Holds</h2>
+        <p>Adding a hold to a document prevents modification to it and halts its records management life cycle (for example, a record subject to a hold cannot be cut off). When adding a hold to a document, you must provide a reason for the hold, such as legal or regulatory actions. 
+			You can also, optionally, add a due date. Both the reason and the due date can be used in searches. Once the need for the hold has passed, the hold can be removed, and the document will become modifiable again and continue its record life cycle. Adding a hold to a record does not affect its disposition eligibility date.</p>
+        <p>You can add holds to individual documents or entire folders. Holds obey the 
+			folder hierarchy such that adding a hold to a parent will effectively add the hold to all child entries. You can also place multiple holds on documents or folders; they will remain un-modifiable until all holds are removed.</p>
+        <p class="note"><b>Note:</b> Adding a hold to an 
+			active record folder or series prevents the removal of records. However, additional 
+			records can still be filed into that record folder. Any records 
+		added to a folder with a hold will also be subject to that hold.</p>
+        <p>Because of the ability to place holds on individual records, a record folder may contain records both with and without holds. While records with holds are not affected by any disposition actions performed on the record folder, 
+			other records are. Therefore, performing disposition actions on a record folder can create a situation where the record folder contains records at different stages of a retention schedule, depending on whether some records are subject to holds. This also means that 
+			you may be able to perform the same disposition action multiple times on the same record folder.</p>
+        <p>Removing a hold can only be performed on the entry on which the hold was placed. If you add a hold to a folder, you cannot directly 
+			remove a hold from a document within that folder; you must instead remove the hold from the record folder.</p>
+        <p>Holds restrict modifying or removing content from the entry, and prevents users from moving entries with holds to other locations (this excludes transfers of records, which are allowed with a hold in place). Adding or removing a hold requires the <b>Add/Remove Hold</b> entry access right for the specified entry.</p>
+        <p><b>To add a hold</b>
+        </p>
+        <ol>
+            <li>Select the entry on which you want to add a hold.</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Hold Actions</b>, and select <b>Add Hold</b>.            </li>
+            <li>In the <b>Hold reason</b> option, specify the reason for placing the hold. If other holds currently exist in the repository, you can select an existing reason instead.</li>
+            <li><b>Optional:</b>&#160;In the <b>Due date</b> option, specify a due date for this hold.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p><b>To remove a hold</b>
+        </p>
+        <ol>
+            <li>Select the entry from which you want to remove a hold.</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), point to <b>Hold Actions</b>, and select <b>Remove Hold</b>.            </li>
+            <li>Select the hold that you want to remove, or choose <b>Select all</b> to remove all holds. (Any holds that are present on the entry, but that cannot be removed because they are inherited from higher in the folder tree, will be displayed but cannot be selected.)</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p class="note"><b>Note:</b>&#160;When a specific hold has been removed from all entries to which it is applied, the hold will be removed from the repository.</p>
+    </body>
+</html>

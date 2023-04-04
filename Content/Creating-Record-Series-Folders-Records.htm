@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Creating Record Series,&#160;Record Folders, and Records</h1>
+        <p>Records in <MadCap:variable name="DoNotTranslate.Laserfiche" /> are stored within record series (which contain the rules by which records will be governed)&#160;and record folders (which contain records that are at the same life cycle stage). When implementing records management, you will first need to create and configure record series, and then create record folders and records within them.</p>
+        <h2 class="topicheading">Record Series</h2>
+        <p>A record series includes information about the cutoff and retention instructions that will govern the records within it. While individual records and record folders can have different instructions, in general a record series will contain documents that follow the same rules.</p>
+        <p style="font-weight: bold;">To create a record series</p>
+        <ol>
+            <li>Open the root folder of your repository, or open an existing record series.</li>
+            <p class="note"><b>Note:</b>
+				Record series can only be created under the root folder 
+				or under another record series. Also, a record series cannot be created within a record series if a record folder already exists within the parent record series.
+			</p>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />)&#160;and point to <b>Record Actions</b>, then select <b>Create Record Series</b>.</li>
+            <li><b>Optional:</b>&#160;In the <b>Code</b> 
+						option, enter a record series code.</li>
+            <li>In the <b>Name</b> 
+						text box, enter a record series name.</li>
+            <li><b>Optional:</b> Set any or all of the following additional properties:</li>
+            <ul>
+                <li>In the <b>Description</b> 
+							option, enter a description.</li>
+                <li>Select the <b>Permanent records</b> option if the record series will contain permanent records.</li>
+                <li>Under <b>Cutoff 
+							Instruction</b>, select the desired <a href="Records-Management-Administration.htm#Cutoff">cutoff instruction</a> (must be created in repository administration before it can be applied here).</li>
+                <li>Under <b>Retention 
+							Schedule</b>, select the desired <a href="Records-Management-Administration.htm#Retentio">retention schedule</a> (must be created in repository administration before it can be applied here).</li>
+                <li>Under <b>Vital 
+								Records</b>, choose if the records contained in the record series 
+							will be marked as <a href="Performing-Records-Management-Actions.htm#Vital">vital</a>. If so, select one of the following:</li>
+                <ul>
+                    <li><b>Review cycle:</b>&#160;Select the cycle that will determine when the records need to be reviewed. (Only cycles that have already been created can be selected. See <a href="Records-Management-Administration.htm#Cycle">Cycle Definitions</a> for more information.)</li>
+                    <li><b>Review interval:</b>&#160;Specify the interval after which the records need to be reviewed. Select <b>Day(s)</b>&#160;or <b>Month(s)</b>&#160;and specify the number of days or months.</li>
+                </ul>
+                <li>In the <b>Disposition 
+							Authority</b> text box, specify a disposition authority.</li>
+            </ul>
+            <li>Click <b>OK</b> 
+						to create the record series.</li>
+        </ol>
+        <p style="font-weight: bold;">To modify record series properties</p>
+        <ul>
+            <li>Select the record series. In the right-hand pane, select the <b>Records</b> tab. Click <b>Edit properties</b> and make your changes, then click <b>Save</b>.</li>
+        </ul>
+        <h2 class="topicheading">Record Folders</h2>
+        <p>Any folder created in or moved into a record series is automatically a record folder. No further actions are required. (See <a href="Creating_Folders.htm">Creating Folders</a> and <a href="Organizing_Documents.htm#Moving">Moving Documents and Folders</a> for more information.)&#160;</p>
+        <p>Record folders can only exist immediately within record series. A&#160;folder created within a record folder will be a regular folder.</p>
+        <p>When a record folder is first created, <MadCap:variable name="DoNotTranslate.Laserfiche" /> will set default records management properties using the values of the record folder's parent. These values are retained unless  explicitly changed on the individual record folder, and they are not affected by any subsequent changes made to the parent's  properties. If a life cycle property is set directly on a record folder, that property will take precedence.</p>
+        <p style="font-weight: bold;">To modify record folder properties</p>
+        <ul>
+            <li>Select the record folder. In the right-hand pane, select the <b>Records</b> tab. Click <b>Edit properties</b> and make your changes, then click <b>Save</b>.</li>
+        </ul>
+        <h2 class="topicheading">Records</h2>
+        <p>Any document created in or moved into a record folder, or a record folder's subfolders, is automatically a record. This is the case regardless of how the document arrives in the folder, whether it is scanned, imported, or moved from elsewhere in the repository. No further actions are required to make the record part of that record folder or series. (See <a href="Adding_Content.htm">Adding Documents and Folders</a> and <a href="Organizing_Documents.htm#Moving">Moving Documents and Folders</a> for more information.)</p>
+        <p>By default, a record will inherit record properties from its parent record folder. Although an individual record cannot have a different cutoff instruction or vital status than its parent folder, you can assign a different retention schedule for individual records, if your regulatory compliance requires it. </p>
+        <p class="ex"><b>Tip:</b>&#160;Record properties can be set on individual records, but setting and maintaining properties on the record series and/or record folder is recommended, unless regulatory compliance requires otherwise. Setting record properties on the record folder or record series level will help you keep your record management consistent and streamline administrative tasks.</p>
+        <p style="font-weight: bold;">To modify record properties</p>
+        <ul>
+            <li>Select the record. In the right-hand pane, select the <b>Records</b> tab. Click <b>Edit properties</b> and make your changes, then click <b>Save</b>.</li>
+        </ul>
+    </body>
+</html>

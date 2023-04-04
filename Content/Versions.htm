@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Versions</h1>
+        <p>Versions are a metadata type in Laserfiche that provide a way to save changes to a document without overwriting the document or losing that document's history. When version control is enabled on a document, modifications of the document will be saved as new versions, with older versions of the document also retained in the document history. For example, if you open a document that is under version control and change the value in a field, and then save the changes, a new version would be created with the new field information. The same is true of other changes, such as modifications to pages, electronic files, annotations, templates, or fields.</p>
+        <p>A document's prior versions are saved in the document's version history. This allows you to retain and review older versions of a document, compare the differences between two versions, or revert to an older version if you want to discard changes. You can also copy an old version and paste it as a new document, or export it to your desktop.</p>
+        <p>You can also save comments on individual versions of a document. For example, you could use a comment to summarize the changes you made to a document. These comments can later be searched.</p>
+        <p>When a document is under version control, most parts of that document will be saved in the version history when they are modified. &#160;For example, if you change the image pages of a document that is under version control, the original pages will be stored intact in the version history for future reference. All of the following properties of a version are saved in the version history:&#160;image pages, text pages, electronic files, annotations, templates, and fields. However, a few properties cannot be saved in the version history:&#160;the document's name, location in the repository, security settings, tags, and link information.</p>
+        <h2 class="topicheading">Enabling Version Control</h2>
+        <p>To start tracking versions of a document, you will need to enable version control for the document.</p>
+        <p>There are two ways to enable version control: by tracking versions on individual documents, or by configuring a folder to automatically place all new documents contained in it under version control.</p>
+        <p>Once a document is under version control, you can review information about the document's versions, open past versions, view or modify version comments, compare versions, revert to past versions, delete versions, and export versions. In addition, you can search for documents based on information about their versions.</p>
+        <p class="note"><b>Note:</b> Once version control has been enabled for a document, it cannot be disabled.</p>
+        <h3>Tracking Versions on Individual Documents</h3>
+        <ol>
+            <li>Select a document in the Folder Browser, or open a document in the Document Viewer.</li>
+            <li>Select the <b>Details</b> tab in the right pane. If the document is already under version control, the number of versions will be listed in the <b>Versions</b> option. If not, <b>Start tracking versions</b> will be listed next to the <b>Versions</b> option.</li>
+            <li>If the document is not yet under version control, click <b>Start tracking versions</b>.</li>
+            <li><b>Optional</b>:&#160;Type an initial version comment in the <b>Comment</b> option. This will be the version comment for the first version of the document.</li>
+            <li>Click <b>Start tracking</b> to begin tracking versions for this document.</li>
+        </ol>
+        <h3>Tracking Versions on New Documents in a Folder</h3>
+        <ol>
+            <li>Select a folder in the Folder Browser.</li>
+            <li>Select the <b>Details</b> tab in the right pane.</li>
+            <li>Under <b>Track versions for new documents</b>, toggle the option to <b>ON</b>. New documents in that folder will be created under version control. Optionally, configure the following options:<ul><li><b>Apply to all subfolders</b>: This setting will also apply to all subfolders of this folder.</li><li><b>Track versions on all existing documents</b>:&#160;This setting will start version tracking for documents contained within the folder (and subfolders, if the prior option was selected).</li></ul></li>
+        </ol>
+        <h2 class="topicheading">Creating a New Version</h2>
+        <p>Once you have enabled version control on a document, changes you make to that document will be saved as new versions of the document.</p>
+        <p>If you make changes to the pages of a document (such as adding or removing pages, or replacing one page with another), to the document's text, to annotations applied to the document's pages, or to the document's metadata, the changes will be saved as a new version as soon as you release your lock on the document. (This will happen when you save and close the document for documents that are not checked out, or when you check in the document if it is checked out.)</p>
+        <p>If you make changes to a Microsoft Office electronic file (such as a Word document or an Excel spreadsheet) using the Laserfiche Office Integration, you can choose to save changes as a new version using the <b>Save to Laserfiche</b> command and selecting <b>as a New Version</b>. You will also be prompted to save the document to Laserfiche when you close the Office application, and can choose <b>Save as a new version</b> at that point.</p>
+        <p>If you make changes to a Microsoft Office document in the document viewer using Office 365, versions will be saved automatically as you work.</p>
+        <p>If you make changes to other types of electronic files, you will be prompted to save the document to Laserfiche when you check the document in.</p>
+        <p>Once a version has been created, you can add a comment to it by opening the version history and editing a specific version.</p>
+        <h2 class="topicheading">Viewing the Version History for a Document</h2>
+        <p>Viewing a document's version history will list all of the versions of the document, including information about those versions. From the version history dialog box, you can view older versions, compare versions, modify version comments, upload a new version from files on your computer, revert to an older version of the document, delete versions, export versions, and copy versions.</p>
+        <p>You can view the version history by selecting a document in the Folder Browser, or open a document in the Document Viewer. Select the <b>Details</b> tab, and click the version number under <b>Versions</b>. The version history will open. (If there is no version number, and instead <b>Start tracking versions</b> is displayed, the document is not yet under version control.) You can view the date the version was created, the user who created it, any comments that were saved with the version, and what parts of the document changed when this version was saved.</p>
+        <h2 class="topicheading">Opening a Version from the Version History</h2>
+        <p>You can open any version of a document from the version history. This allows you to review the contents of the version, including any electronic file, image page, metadata or annotation information in the version. </p>
+        <p>Versions opened from the version history are read-only and cannot be modified.To modify the latest version, you can open it from the folder browser and make your changes. Past versions cannot be modified. If you want to modify a past version and save it as a new version, first revert to that version and then make the changes in the new, latest version. If you want to modify a past version and save it as a document, first copy the version and paste it as a new document, then modify that new document.</p>
+        <p>To view a particular version, selecting a document in the Folder Browser, or open a document in the Document Viewer. Select the Details tab, and click the version number under <b>Versions</b>. The version history will open. Click the version number corresponding to the version you want to open.</p>
+        <h2 class="topicheading">Comparing, Reverting to, Deleting, and Downloading Versions</h2>
+        <p>You can perform a variety of actions on versions in the version history.</p>
+        <p>To perform any of these actions, select a document in the Folder Browser, or open a document in the Document Viewer. Select the Details tab, and click the version number under <b>Versions</b>. The version history will open.Select the version that you want to perform an action on (or two versions, if you will be comparing them), and click the <b>More...</b> button to select the action you want to perform.</p>
+        <h3 class="topicheading">Comparing Versions</h3>
+        <p>You can compare two versions of a document to determine what elements of the document have been changed. The <b>Compare Version</b> dialog box indicates whether changes have been made to the electronic file, pages, text, annotations, and metadata of a document. (If you select only a single document, it will be compared to the most recent version.)</p>
+        <h3 class="topicheading">Reverting to a Version</h3>
+        <p>When working with a document under version control, you may want to revert the document to a previous version. &#160;When reverting a document, you select a target version to revert to. The revert process creates a new version and modifies its contents to match those of the target version. &#160;All the intermediate versions between the target and the newest version are retained. Reverting a document allows you to quickly remove unwanted changes from a document without losing the complete history of information about those changes. </p>
+        <p>When a document is reverted, the version comments for the new version will note that the document was reverted, and what version was used as the revert target.</p>
+        <h3 class="topicheading">Deleting Versions</h3>
+        <p>Deleting a version will permanently remove that version from the version history. &#160;Deleting a version will not have any effect on subsequent versions. Once a version has been deleted, you will not be able to open or review the version, compare it to another version, or revert to it. It will no longer appear in the version history, but the version history numbering will remain the same. &#160;For example, if you delete version 3 of a document, the version numbering in the history would appear as "1, 2, 4, 5."</p>
+        <p>You cannot delete the latest version of a document. If you want to remove the most recent version of a document and go back to a prior version, you can revert to the version you want to return to, and then delete the intervening versions.</p>
+        <p class="note"><b>Note:</b>&#160;Versions are deleted immediately and permanently, and do not go to the recycle bin. You cannot restore a deleted version.</p>
+        <h3 class="topicheading">Downloading Versions</h3>
+        <p>You can download any version of a document from its version history. This will follow your standard export settings.</p>
+        <h2 class="topicheading">Uploading a New Version</h2>
+        <p>You can import a file from your computer as a new version of an existing document. This will make the file the newest version of the document. If the file is an electronic document, it will replace the existing electronic file portion of the document in the new version; if the file is an image, it will replace the pages of the document in the new version.</p>
+        <p>To upload a file as a new version, click the Upload button (<img src="Resources/Images/metadata_version_upload.png" title="The Upload button allows you to upload a file as the latest version of a document." alt="The Upload button, a black upward-pointing arrow." />) in the version history. In the <b>Import New Version</b> dialog, click Upload and browse to a file to import. Click <b>OK</b>. The file will be uploaded and saved as the latest version of the document.</p>
+    </body>
+</html>

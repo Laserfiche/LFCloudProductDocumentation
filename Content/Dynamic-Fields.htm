@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Dynamic Fields</h1>
+        <p>A dynamic field is a type of field in which the value of one field controls the values that a user can choose in another field. In a dynamic field, selecting a value for a parent&#160;field determines what values are available in the "child"&#160;fields. Dynamic fields can contain multiple levels (for instance, only displaying the available states or provinces for a particular country once the Country field has been filled), or can depend on more than one parent field (for instance, only displaying years relevant to a particular combination of car manufacturer and model).</p>
+        <h2 class="topicheading">Setting Dynamic Fields on Documents or Folders</h2>
+        <p>Dynamic fields are set or modified just like list fields:&#160;select a value from the field's drop-down in the Fields tab. (See <a href="Fields_and_Templates.htm#Viewing,">Viewing, Assigning, and Modifying Fields and Templates on Documents and Folders</a> for more information on setting field values.)&#160;When selecting values for dynamic fields, you must assign values to them in order. In the example above, if a user tried to select a state or province before selecting a country,&#160;there would be no values available for selection. In some cases, additional fields may depend on more than one parent field (such as a "City"&#160;field that depends on both "Country"&#160;and "State or Province"), in which case all of the parent fields must be filled in before the child field can.</p>
+        <p>If a dynamic field is configured such that only one value is possible once the parent fields have been filled in, that value will automatically be filled in the child field. For example, if you have "Employee Name"&#160;and "Email Address"&#160;fields bound to the "Employee ID"&#160;field, and the "Employee ID"&#160;field is unique, the employee name and email address will automatically be populated.</p>
+        <p>Dynamic fields are configured on the repository management page. Administrators can choose exactly what values they want to include and how they want those values to be constrained or bound. Any type of field can be configured as a dynamic field.</p>
+        <h2 class="topicheading">Planning Dynamic Fields</h2>
+        <p>Before you create your dynamic fields, you should plan what values you want to allow users to set dynamically. These values will be stored in a lookup table in Process Automation. See <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Entities/lookup-tables.htm" target="_blank">Lookup Tables</a> for more information. As lookup tables support the import of Microsoft Excel and CSV files, you should prepare your dynamic fields in a spreadsheet program that can export files of those types. You can also provide an existing Microsoft Excel or CSV file.</p>
+        <p class="note"><b>Note:</b>&#160;Because dynamic fields use lookup tables for data management, the service limits for lookup tables apply to dynamic fields. See <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Service-Limits.htm" target="_blank">Service Limits</a> for more information.</p>
+        <p>Any collection of information where one value is associated with another can be turned into a dynamic field. You can also create dynamic fields in which one piece of information controls more than one other field. Below are some examples of this kind of information, and how you could set up your tables to reflect it.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Example:&#160;Simple hierarchy of fields</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>You may want to use a dynamic field that filters a list of employees by department, so that once a department has been chosen, only those employees that are part of that department can be selected. You would begin with a list like the one below. If the following list is used in a dynamic field, for instance, when the HR department is selected, Tanya Wu and Pat Tomson would be available in the employee field, but the other employees would not be.<br /><br /><img src="Resources/Images/dynamic-fields-example-1.png" /></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Example:&#160;Fields linked to multiple parent fields</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>In some cases, you might want to link more than two pieces of information in a dynamic field. For instance, you might create a set of dynamic fields to track car manufacturers, models, and years, such that if you selected, say, Dodge as the manufacturer, only Dodge models would appear in the models list; once you'd selected Dodge and Caravan, you would then be able to select only years relevant to Dodge Caravan automobiles. You could do so with a list like the one below.<br /><br /><img src="Resources/Images/dynamic-fields-example-2.png" /></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="topicheading">Creating and Updating Lookup Fields</h2>
+        <p> Lookup tables are created (and updated, if the information contained in them changes)&#160;in the Data Management section of Process Automation. See <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Entities/lookup-tables.htm" target="_blank">Lookup Tables</a> for more information. </p>
+        <p class="note"><b>Important:</b>&#160;When creating or modifying a lookup table for use with a dynamic field, be sure to select the Enable for Dynamic Fields option for the table.</p>
+        <h2 class="topicheading">Adding Dynamic Fields to a Template</h2>
+        <p>Once you have added your dynamic field information as a lookup table, you can add the fields to a template. There are three basic steps for adding dynamic fields to a template. First, you must add the fields you want to handle dynamically to the template. Both&#160;the parent fields and the child fields must be added. Second, you must associate the fields with columns in your external table. Finally, you must specify which fields depend on which other fields.</p>
+        <ol>
+            <li>Open the app picker in the upper right corner, and select <b>Repository Administration</b>.</li>
+            <li>Under <b>Metadata</b>, select <b>Templates</b>.</li>
+            <li>Select the template to which you want to add dynamic fields, or create a new template. (See <a href="Fields_and_Templates.htm#Creating2">Creating and Modifying Template Definitions</a> for more information on template creation.)</li>
+            <li>Open the <b>Dynamic Fields</b> tab, and add a field using the <b>Insert Field</b> button.</li>
+            <li>Set the properties for the dynamic field:</li>
+            <ul>
+                <li>In the <b>Name</b> option, select the field you want to manage dynamically.</li>
+                <li>In the <b>External table</b> option, select the lookup table in which the information is stored.</li>
+                <li>In the <b>External column</b> option, select the column that corresponds to the field you selected.</li>
+                <li>In the <b>Parent Fields</b> option, select the field or fields that will determine the possible contents of this field. &#160;(If this is the field that will determine the possible contents of other fields, and is not itself bound to any other fields, leave this option blank.)</li>
+                <li>In the <b>Sort direction</b> field, select <b>Ascending</b> or <b>Descending</b>.</li>
+                <li><b>Optional:</b>&#160;The <b>Restrict values</b> option determines the behavior of the field when accessed using the Laserfiche SDK or another application such as Quick Fields. If you select <b>False</b>, external applications will be able to save values to that field even if they do not exactly match the values in the external table. For example, if you have a Quick Fields session attempting to store a value obtained via OCR it would be able to save that value even if it contained a small mismatch due to an OCR&#160;inaccuracy. If you select <b>True</b>, the value must match the value in the external table exactly, or it cannot be saved. This value is recommended if you are using dynamic fields for data verification. If you are unsure which option to select, we recommend leaving it set to the default, False.<br /></li>
+            </ul>
+            <li>Repeat step 4 for each additional field that you want to handle dynamically.</li>
+            <li>When you are finished, save your template definition.</li>
+        </ol>
+    </body>
+</html>

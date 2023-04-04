@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="5" MadCap:lastHeight="500" MadCap:lastWidth="943" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Quick Fields" />Metacharacters</h1>
+        <p>The following <a href="../Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expression</a> characters cause a match to succeed or fail depending on the position of the match within the text.</p>
+        <p class="ex"><b>Example:</b> The regular expression 
+<b>^FTP </b>returns only those occurrences of the character string "FTP" that occur at the beginning of a line.
+
+</p>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular expression metacharacters and their descriptions">
+            <caption style="font-weight: bold;">Regular Expression Metacharacters</caption>
+            <col style="width: 165px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">^</td>
+                    <td class="tabletext">The match must occur at the beginning of the text or the beginning of the line.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">$</td>
+                    <td class="tabletext">The match must occur at the end of the text, before <b>\n</b> at the end of the text, or at the end of the line. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\A</td>
+                    <td class="tabletext">The match must occur at the beginning of the text (ignores the Multiline option).*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\Z</td>
+                    <td class="tabletext">The match must occur at the end of the text or before <b>\n</b> at the end of the text (ignores the Multiline option).*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\G</td>
+                    <td class="tabletext">The match must occur at the point where the previous match ended. When used with 
+<b>Match.NextMatch()</b>, this ensures that matches are all contiguous.*</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <MadCap:concept term="Laserfiche" />*These expressions are not available when configuring field constraints in the Laserfiche Administration Console. </p>
+    </body>
+</html>

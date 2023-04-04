@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1566" MadCap:lastWidth="1050" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Token Functions</h1>
+        <p>This feature lets you edit the token value with one or more pre-configured operations.
+
+</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Apply Function Options</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Average</td>
+                    <td class="tabletext">Replaces a  token with the average of the numeric values.</td>
+                </tr>
+                <tr>
+                    <td>Encode URI</td>
+                    <td class="tabletext">
+                        Converts a token's characters (except RFC 2396 unreserved characters) to the hexadecimal representation so the token can be used in a web address. For example, "http://My Website.com" is converted to "http://My%20Website.com".
+                    </td>
+                </tr>
+                <tr>
+                    <td>Encode URL</td>
+                    <td class="tabletext">
+                        Converts a token's characters (except RFC 3987 unreserved characters) to the hexadecimal representations so that the token can be used in a web address. This activity converts more characters than Encode URI does. For example, " ?parameter1=1&amp;1parameter2=2" is converted to "%3Fparameter1%3D1%26parameter2%3D2".
+                    </td>
+                </tr>
+                <tr>
+                    <td>Encode XML</td>
+                    <td class="tabletext">
+                        Replaces a token with encoded values of XML characters. For example, "&lt;tag&gt;" is displayed as "&amp;lt;tag&amp;gt;".
+                    </td>
+                </tr>
+                <tr>
+                    <td>Escape Search Name</td>
+                    <td class="tabletext">
+                        Includes a backslash (<b>\</b>) in a query that contains an escape character.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Escape Search Phrase</td>
+                    <td class="tabletext">
+                        Includes a backslash (<b>\</b>) in a query that contains Laserfiche search syntax and an escape character.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Max</td>
+                    <td class="tabletext">Replaces a  token with the largest numeric value in the token.</td>
+                </tr>
+                <tr>
+                    <td>Min</td>
+                    <td class="tabletext">Replaces a  token with the smallest numeric value in the token.</td>
+                </tr>
+                <tr>
+                    <td>Remove</td>
+                    <td class="tabletext">
+                        Removes exact matches from a token value. For example, when you type "def" in the text box under the drop-down menu, and type "abcdefg" in the Test Value text box, you will still see "abcdefg" in the Result Value box. If you type "def" in the Test Value text box, the value will be removed.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remove At</td>
+                    <td class="tabletext">
+                        Removes the value at the index, where "1"&#160;is the first value in the token.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Remove Duplicates</td>
+                    <td class="tabletext">Removes duplicate values from the token.</td>
+                </tr>
+                <tr>
+                    <td>Remove Empty Items</td>
+                    <td class="tabletext">Removes empty values from the token.</td>
+                </tr>
+                <tr>
+                    <td>Remove Text</td>
+                    <td class="tabletext">
+                        Removes the matched substring from the string. For example, when you type "def"&#160;in the text box under the drop-down menu, and type "abcdefg" in the Test Value text box, you will see "abcg" in the Result Value box.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sort Ascending</td>
+                    <td class="tabletext">
+                        Organizes the values in the token from smallest to largest.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sort Descending</td>
+                    <td class="tabletext">
+                        Organizes the values in the token from largest to smallest.
+                    </td>
+                </tr>
+                <tr>
+                    <td>Split</td>
+                    <td class="tabletext">
+                        <p>Divides a single-value token into a multi-value token based on specified characters in the token. When you apply this function, a text box appears for you to specify the characters the token will be divided at.</p>
+                        <p>For example, if the token's value is "Jan;Bob;Sue" and you specify <b>;</b> as the delimiter, then the result of this function will be a token with three values: Jan, Bob, Sue. If the token's value is Animal Control Department Health Department Human Resources Department Accounting Department, and you specify "Department" as the delimiter, the resulting multi-value token will have four values: Animal Control, Health, Human Resources, Accounting.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sum</td>
+                    <td class="tabletext">Replaces token with the sum of the values in the token.</td>
+                </tr>
+                <tr>
+                    <td>Text Length</td>
+                    <td class="tabletext">Replaces token with the number of characters in the token.</td>
+                </tr>
+                <tr>
+                    <td>To Lower</td>
+                    <td class="tabletext">Converts all letters in the token to lowercase.</td>
+                </tr>
+                <tr>
+                    <td>To Title Case</td>
+                    <td class="tabletext">
+                        <p>Converts the first letter of each word in the token to uppercase.</p>
+                        <p class="ex"><b>Tip</b>: If your token is in all capital letters and you want to convert it to title case, first apply the <b>To Lower</b> function and then the <b>To Title Case</b> function.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>To Upper</td>
+                    <td class="tabletext">Converts all letters in a token to uppercase.</td>
+                </tr>
+                <tr>
+                    <td>Trim</td>
+                    <td class="tabletext">Removes whitespace before and after a token's value.</td>
+                </tr>
+                <tr>
+                    <td>Value Count</td>
+                    <td class="tabletext">Replaces token with the number of values in the token.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

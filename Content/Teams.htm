@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="4924" MadCap:lastWidth="1216" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Forms">
+    <head>
+    </head>
+    <body>
+        <h1>Teams</h1>
+        <p>
+            <MadCap:concept term="Forms" />Teams provide a way to organize and route tasks in Laserfiche Forms. Tasks can be assigned to an entire team and be visible to all team members in a central list. From this list, team members can chose to complete tasks that interest them or managers can directly assign the tasks to team members. </p>
+        <p class="ex"><b>Example:</b> The City of Scranton gets about 50 records requests a day. These requests come from community members who fill out a form on the city's website. The request forms are routed as tasks to the Records Department for processing. Instead of routing all these tasks to a single individual, the tasks go to the team's list of available tasks. (The tasks can also be found in each team member's list of available tasks.) Different team members interact with this list of team tasks in different ways. Sally skims through the lists for tasks that interest her and tasks concerning property rights (her area of specialty). She assigns all those tasks to herself so the rest of the team knows not to work on them. Mark has a hectic schedule, but he'll check the list when he has a few spare minutes and work on any tasks that can be completed quickly. Around mid-day, team manager Jan will go down the list and assign tasks directly to Jim and Lynn the most junior members of the team. </p>
+        <h2 class="topicheading"><a name="Teams"></a>Team management</h2>
+        <p>Team managers can do the following:</p>
+        <ul>
+            <li><a href="#Editing" title="Click here to learn more." alt="Click here to learn more.">Edit  the team</a>
+                <ul>
+                    <li>Add, edit, and delete team members</li>
+                    <li>Add, edit, and delete team roles</li>
+                    <li>Create and remove managers</li>
+                    <li>Determine if team members can see all team tasks</li>
+                </ul>
+            </li>
+            <li>See assigned team tasks</li>
+            <li><a href="#Changing">Change the due date and priority of team tasks</a>
+            </li>
+            <li><a href="#Assignin" title="Click here to learn more." alt="Click here to learn more.">Reassign tasks to other users or groups</a>
+            </li>
+        </ul>
+        <h3 class="topicheading"><a name="Creating"></a>Creating a team</h3>
+        <ol>
+            <li>Click the <b>Administration</b> icon in the top right corner.</li>
+            <li>Select <b>Team Management</b>.</li>
+            <li>From the <b>Add team</b> drop-down menu, select <b>Create team</b>. </li>
+            <li>In the <b>Create Team</b> dialog box, enter a name for the team and short description. </li>
+            <li MadCap:conditions="Default.In Progress">The the <b>Task Visibility</b> section, you can select to have all team tasks be visible to all team members. Alternatively, you can select to only show team tasks to managers and to the team members specifically assigned to the tasks. With the latter option, if a team member is not assigned to a task, they will not see that task in the team task list or in their list of available tasks. </li>
+            <li>Under <b>Members</b>, type the names of users you want to add to the team, and click <b>Add</b>.</li>
+            <li>By default, the user you are signed in as will be  the team's manager. To make another user the manager, use the drop-down menu next to their name to select <b>Manager</b>. The team must always have one manager. </li>
+            <li><b>Optional:</b> You can remove users from a team by clicking the <b>X</b> to the right of their name. </li>
+            <li>Click <b>Create</b>.</li>
+        </ol>
+        <h3 class="topicheading">Importing or exporting a team</h3>
+        <p> If you want to copy your teams between Forms servers, you can export teams as XML files from one server and import them on another server. </p>
+        <p style="font-weight: bold;">To export a team</p>
+        <ol>
+            <li>Click the <b>Administration</b> icon in the top right corner.</li>
+            <li>Select <b>Team Management</b>.</li>
+            <li>Select the team you want to export, </li>
+            <li>Click the <b>Export</b> button <img src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/ExportButton.png" alt="Export button" title="Click to export a team" /> in the top right, and save the XML&#160;file. </li>
+        </ol>
+        <p style="font-weight: bold;">To import a team</p>
+        <ol>
+            <li>Click the <b>Administration</b> icon in the top right corner.</li>
+            <li>Select <b>Team Management</b>.</li>
+            <li>From the <b>Add team</b> drop-down menu, select <b>Import team</b>. </li>
+            <li>Either drag an exported team file (.xml) into the <b>Import Team</b> dialog box, or click <b>Select file</b> to browse for a team file. </li>
+            <p class="note"><b>Note:</b> If the team you are importing already exists on the Forms server, the teams will be merged. Any members, managers, and roles not already on the team will be added. These roles will be applied to both new and existing members. Existing members, managers, and roles will not otherwise be affected.</p>
+            <li>Continue to import teams by clicking <b>Select another file</b>, or click <b>Done</b>. </li>
+        </ol>
+        <h3 class="topicheading"><a name="Editing"></a>Editing teams</h3>
+        <p style="font-weight: bold;">Accessing team management options</p>
+        <ul>
+            <li>Managers can edit a team by clicking the team's name and selecting <b>Team members</b>. </li>
+            <p>
+                <img src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/TeamEditOption.png" title="Click the down arrow to edit the team" alt="Editing a team" />
+            </p>
+            <li>Administrators can edit teams by clicking the <b>Administration</b> icon in the top right corner, and selecting <b>Team Management</b>. Then select the team you want to edit. </li>
+        </ul>
+        <p style="font-weight: bold;">Editing team members</p>
+        <ul>
+            <li><b>Add team members:</b> In the <b>Members</b> tab, click <b>Add Members</b>. <ol><li>Under <b>Members</b>, type the names of the users you want to add to the team. </li><li>Click <b>Make a manager</b>, to make the new members <a href="#Teams" title="Click here to learn more." alt="Click here to learn more.">managers</a>. </li><li>Under <b>Roles</b>, select one or more roles for the team member. Click <b>Create role</b> to create a new role directly from this dialog box. Roles can be used in the process modeler to automatically assign tasks to specific users. <a href="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Inbox-And-Teams/Creating-Team-Filters.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>. </li><li>Click <b>Save</b>.</li></ol></li>
+            <li><b>Remove team members:</b> In the <b>Members</b> tab, click the more button <img alt="Overflow menu" src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/OverflowButton.png" title="Click for more options" /> next to the team member you want to remove. Select <b>Remove from team</b>. </li>
+            <li><b>Designate or remove a manager:</b> In the <b>Members</b> tab, click the more button <img alt="Overflow menu" src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/OverflowButton.png" title="Click for more options" /> next to the team member you want to make a manager or remove the manager status from. Select <b>Make a manager</b> or <b>Remove manager status</b>. The team must have at least one manager. </li>
+        </ul>
+        <p style="font-weight: bold;">Editing roles</p>
+        <ul>
+            <li style="font-weight: normal;"><b>Create or edit a role:</b> In the <b>Roles</b> tab, either click <b>Create role</b> to make a new role or click the more button <img alt="Overflow menu" src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/OverflowButton.png" title="Click for more options" /> next to an existing role and select <b>Edit role</b>. In the dialog box that opens, define the roles name, description, and members. Roles can be used in the process modeler to automatically assign tasks to specific users. <a href="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Inbox-And-Teams/Creating-Team-Filters.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>. </li>
+            <li style="font-weight: normal;"><b>Assign roles to team members:</b> In the <b>Members</b> tab, click the more button <img alt="Overflow menu" src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/OverflowButton.png" title="Click for more options" /> next to the team member you want to edit. Select <b>Assign roles</b>. In the <b>Assign Roles</b> dialog box, add or remove roles as needed. Click <b>Create role</b> to create a new role directly from this dialog box. After assigning all desired roles, click <b>Save</b>. </li>
+        </ul>
+        <p style="font-weight: bold;">Editing team information </p>
+        <ul>
+            <li><b>Edit the team name or description:</b> Click the <b>Edit</b> link next to the team's name. In the <b>Edit Team</b> dialog box, modify the name and description as needed. </li>
+            <li MadCap:conditions="Default.In Progress"><b>Edit task visibility:</b> The task visibility setting is noted below the team name. Either all team tasks will be visible to all team members, or team tasks will only appear to managers and to the team members specifically assigned to the tasks. With the latter option, if a team member is not assigned to a task, they will not see that task in the team task list or in their list of available tasks. You can change this setting by clicking the <b>Show tasks</b> or <b>Hide tasks</b> link.</li>
+        </ul>
+        <p style="font-weight: bold;">Deleting a team</p>
+        <ul>
+            <li><b>Delete the team entirely:</b> Click the <b>Edit</b> link next to the team's name. In the <b>Edit Team</b> dialog box, click the <b>Delete team</b> button. </li>
+        </ul>
+        <h2 class="topicheading">Completing team tasks</h2>
+        <p>Team tasks are listed in the <b>Tasks</b> section under each team. </p>
+        <ul>
+            <li>The tasks in the <b>Assigned</b> tab have been assigned to a single user on the team. (These tasks will also appear in the <b>My Tasks</b> tab for the user they are assigned to.) </li>
+            <li>The tasks in the <b>Available</b> tab can be claimed by team members, or a manager can assign them to specific users. Team members will also see unassigned team tasks in the <b>Available</b> tab when viewing their tasks.</li>
+        </ul>
+        <p style="font-weight: bold;">To complete a team task</p>
+        <ol>
+            <li>Click the task to open it.</li>
+            <li>Click the <b>Assign to me</b> button.</li>
+            <li>Complete the form, and submit it. </li>
+            <li>Completed team tasks will appear in the <b>Completed</b> tab. </li>
+        </ol>
+        <h3 class="topicheading"><a name="Assignin"></a>Assigning team tasks to others or yourself</h3>
+        <p style="font-weight: normal;">You can assign tasks to yourself as a way to let your teammates and manager know that you will take responsibility for completing the task.</p>
+        <p style="font-weight: bold;">To assign a task to yourself</p>
+        <ol>
+            <li style="font-weight: normal;">Select a task in the <b>Available</b> tab.</li>
+            <div class="ex">
+                <p><b>Tip:</b> You can search for and categorize tasks to easily find the ones you want to assign. Use the search box at the top of the page to search by the process name, the task name, or the person who submitted the form or started the process. </p>
+                <p>
+                    <img src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/SearchPending Tasks.png" alt="Search field" title="Searching lets you easily find tasks" />
+                </p>
+                <p>Use the drop-down menu to categorize the tasks by date assigned, priority, process, or who started the task. Alternatively, you can sort each column by clicking on the column's name.</p>
+            </div>
+            <li style="font-weight: normal;">Click the <b>Assign to me</b> button. </li>
+            <li style="font-weight: normal;">The task will now appear in your <b>My Tasks</b> list. </li>
+        </ol>
+        <p class="ex"><b>Tip:</b> If you later decide you aren't going to complete the task, you can release it back to the original group of users it was assigned to. Click the more menu <img alt="Overflow menu" src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/OverflowButton.png" title="Click for more options" /> on the task, and select <b>Release</b>. Alternatively, follow the instructions below to reassign the task to someone else. </p>
+        <p style="font-weight: bold;">To assign a task to someone else</p>
+        <p>Managers can assign team tasks to specific individuals or  to a group of users. Individuals who have been assigned tasks can reassign those specific tasks to someone else or to a group of users. </p>
+        <p class="note"><b>Note:</b> Users and managers can only assign  tasks if the <b>Allow task to be reassigned</b> option is selected in the User Task. If this option is not selected, then users can only assign tasks to themselves but not to anyone else. <a href="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/User-Tasks.htm#The2" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>. </p>
+        <ol>
+            <li>Navigate to the task you want to reassign. </li>
+        </ol>
+        <MadCap:snippetBlock src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Snippets/ReassigningTasks.flsnp" />
+        <h3 class="topicheading" MadCap:conditions="Default.In Progress"><a name="Changing"></a>Changing the due date or priority of team tasks</h3>
+        <ol MadCap:conditions="Default.In Progress">
+            <li>Navigate to the task you want to change the due date or priority of .</li>
+            <li>
+               Click the more menu <img src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/OverflowButton.png" style="width: 41px;height: 32px;" alt="Overflow menu" title="Click for more options" /> next to the task and select <b>Edit due date</b> or <b>Edit priority</b>. 
+            </li>
+            <li style="font-weight: normal;">Configure a new due date or priority and click <b>OK</b>. </li>
+        </ol>
+        <h3 class="topicheading">Automatically routing tasks to a team or subset of a team</h3>
+        <p>You can configure processes to automatically route specific tasks to a team or to a subset of a team by configuring the <a href="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/User-Tasks.htm#The2" title="Click here to learn more." alt="Click here to learn more.">Assign tab</a> of the User Task in the Process Modeler. </p>
+        <h3 class="topicheading">Reviewing completed tasks</h3>
+        <p>Completed team tasks are listed in the <b>Completed</b> tab. </p>
+        <ol>
+            <li style="font-weight: normal;">Click the <b>Completed</b> tab.  </li>
+            <div class="ex">
+                <p><b>Tip:</b> You can search for and categorize tasks to easily find the ones you want to review. Use the search box at the top of the page to search by the process name, the task name, or the person who submitted the form or started the process. </p>
+                <p>
+                    <img src="../../../../Forms/Trunk/English/Laserfiche Forms Help Project/Content/Resources/Images/SearchPending Tasks.png" alt="Search field" title="Searching let you easily find tasks" />
+                </p>
+                <p>Use the drop-down menu to categorize the tasks by date completed, process, or who started the task. Alternatively, you can sort each column by clicking on the column's name.</p>
+            </div>
+            <li>To see even more information, click a task. A pane will open with the task's status, the step it's currently on, its process timeline (the tasks completed in the process), and the form itself. Click <b>X</b> to close the pane.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Section Registrations by Person ID</title>
+    </head>
+    <body>
+        <h1>Search Section Registrations by Person ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used for searching all the sections currently registered for a student.</p>
+        <ul>
+            <li><b>Category:</b> Section Registration</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Person ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the registrant (which is a person) of the section registration</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Section Registration ID</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the section registration.</p>
+                        <p>May be used in section registration create/update actions.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit/Measure</p>
+                    </td>
+                    <td>
+                        <p>The unit or standard of measurement for the section registration credit (for example, ‘hours’).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit/Registration Credit</p>
+                    </td>
+                    <td>
+                        <p>The numeric value of the section registration credit.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Section Registration Status</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Includes sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="RegStatusSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="RegStatusSubFields">
+                            <li>Section Registration Status ID: The unique identifier of the section registration status.</li>
+                            <li>Code: The code of the section registration status (for example, "C").</li>
+                            <li>Title: The title of the section registration status (for example, "Cancelled (Elevate) 2").</li>
+                            <li>Section Registration Status: The status of the section registration section status (for example, "notRegistered").</li>
+                            <li>Section Registration Status Reason: The reason of the section registration status (for example, "canceled").</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Levels</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call</p>
+                        <p>Include sub-fields:</p>
+                        <p>
+                            <MadCap:toggler targets="LevelsSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="LevelsSubFields">
+                            <li>Academic Level ID: The Guid identifier of the academic level.</li>
+                            <li>Code: The code that identifies the academic level (for example, ‘UG’).</li>
+                            <li>Title: The full name of the academic level (for example, ‘Undergraduate’).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Grade Schemes</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Includes sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="GradeSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="GradeSubFields">
+                            <li>Grade Scheme ID: The Guid identifier of the grade scheme.</li>
+                            <li>Code: The code for the grade scheme that may be used a reference or for reporting (for example, ‘UG’).</li>
+                            <li>Title: The full name of the grade scheme (for example, ‘Undergraduate/Standard.’).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Section</p>
+                    </td>
+                    <td>
+                        <p>The same as <a href="Search-Section-by-CRN-and-Term-ID.htm">Search Sections by CRN and Term ID</a> action output.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <p>You can search a maximum of 1000 section registrations.</p>
+            <p>If any of the "Section/Term" related fields (code, title, or registration) are included in the output, the Search results will be sorted by "Section/Term/Code" in descending order. If two sections have the same term code, they will be sorted by "Section/CRN" in ascending order.</p>
+            <p>If none of the "Section/Term" related fields (code, title, or registration) are included in the output, the Search results will be sorted by "Section/CRN" in ascending order.</p>
+        </div>
+    </body>
+</html>

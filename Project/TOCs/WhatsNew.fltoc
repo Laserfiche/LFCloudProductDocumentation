@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Overview of Laserfiche Cloud"
+    Link="/Content/Overview.htm"></TocEntry>
+  <TocEntry
+    Title="Release History">
+    <TocEntry
+      Title="2023">
+      <TocEntry
+        Title="January 2023"
+        Link="/Content/2023.01.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Recent Changes"
+      Link="/Content/changelog.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="2022">
+      <TocEntry
+        Title="December 2022"
+        Link="/Content/2022.12.htm" />
+      <TocEntry
+        Title="November 2022"
+        Link="/Content/2022.11.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+      <TocEntry
+        Title="October 2022"
+        Link="/Content/2022.10.htm" />
+      <TocEntry
+        Title="September 2022"
+        Link="/Content/2022.09.htm" />
+      <TocEntry
+        Title="August 2022"
+        Link="/Content/2022.08.htm" />
+      <TocEntry
+        Title="July 2022"
+        Link="/Content/2022.07.htm" />
+      <TocEntry
+        Title="June 2022"
+        Link="/Content/2022.06.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="April 2022"
+        Link="/Content/2022.04.htm" />
+      <TocEntry
+        Title="March 2022"
+        Link="/Content/2022.03.htm" />
+      <TocEntry
+        Title="February 2022"
+        Link="/Content/2022.02.htm" />
+      <TocEntry
+        Title="January 2022"
+        Link="/Content/2022.01.htm"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="2021">
+      <TocEntry
+        Title="2021.4"
+        Link="/Content/2021.4.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+      <TocEntry
+        Title="2021.3"
+        Link="/Content/2021.3.htm" />
+      <TocEntry
+        Title="2021.2"
+        Link="/Content/2021.2.htm" />
+      <TocEntry
+        Title="2021.1"
+        Link="/Content/2021.1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="2020">
+      <TocEntry
+        Title="2020.4"
+        Link="/Content/2020.4.htm"></TocEntry>
+      <TocEntry
+        Title="2020.3"
+        Link="/Content/2020.3.htm" />
+      <TocEntry
+        Title="2020.2"
+        Link="/Content/2020.2.htm" />
+      <TocEntry
+        Title="2020.1"
+        Link="/Content/2020.1.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="2019">
+      <TocEntry
+        Title="2019.4"
+        Link="/Content/2019.4.htm" />
+      <TocEntry
+        Title="2019.3"
+        Link="/Content/2019.3.htm" />
+      <TocEntry
+        Title="2019.2"
+        Link="/Content/2019.2.htm" />
+      <TocEntry
+        Title="2019.1"
+        Link="/Content/2019.1.htm"
+        StartSection="false" />
+    </TocEntry>
+    <TocEntry
+      Title="2018">
+      <TocEntry
+        Title="October 2018"
+        Link="/Content/october-2018.htm" />
+      <TocEntry
+        Title="August 2018"
+        Link="/Content/August-2018.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="July 2018"
+        Link="/Content/july-2018.htm" />
+      <TocEntry
+        Title="March 2018"
+        Link="/Content/March-2018-updates.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="2017">
+      <TocEntry
+        Title="November 2017"
+        Link="/Content/november-2017-updates.htm" />
+      <TocEntry
+        Title="May 2017"
+        Link="/Content/may-2017-updates.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="2016">
+      <TocEntry
+        Title="December 2016"
+        Link="/Content/december-2016-update.htm" />
+      <TocEntry
+        Title="August 2016"
+        Link="/Content/August-2016-update.htm" />
+      <TocEntry
+        Title="June 2016"
+        Link="/Content/june-2016-updates.htm" />
+      <TocEntry
+        Title="May 2016"
+        Link="/Content/may-2016-updates.htm" />
+      <TocEntry
+        Title="April 2016"
+        Link="/Content/April-2016-updates.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="2015">
+      <TocEntry
+        Title="August 2015"
+        Link="/Content/August-2015-update.htm" />
+      <TocEntry
+        Title="June 2015"
+        Link="/Content/June-2015-update.htm"></TocEntry>
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Sign In"
+    Link="https://signin.laserfiche.com"></TocEntry>
+</CatapultToc>

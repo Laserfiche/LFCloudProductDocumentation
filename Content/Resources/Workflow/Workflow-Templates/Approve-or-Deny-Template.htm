@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="1403" MadCap:lastWidth="967" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Approve or Deny Template</h1>
+        <p>The <i>Approve or Deny</i> template routes an entry to a manager’s folder for approval. It defines different courses of action based on if the manager processes the entry by a specific deadline. It also provides different courses of action based on if the entry is approved or denied.</p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <ol>
+            <li>A <a href="../Activities/Deadline.htm" title="Click to learn more." alt="Click to learn more.">Deadline</a> activity runs its primary branch first. A <a href="../Activities/Move-Entry.htm" title="Click to learn more." alt="Click to learn more.">Move Entry</a> activity routes the entry to the manager’s folder and waits for the field named, “Workflow Templates: Approval” to be set to “Approved” or “Denied.”</li>
+            <li>If the “Workflow Templates: Approval” field is not set by the time specified in the deadline branch, the primary branch is canceled and the deadline branch runs. If the deadline branch runs, the Move Entry activity will move the entry to the Urgent folder and wait for the “Workflow Templates: Approval” field to be set to “Approved” or “Denied.”</li>
+            <li>After the Deadline activity, a <a href="../Activities/Conditional-Decision.htm" title="Click to learn more." alt="Click to learn more.">Conditional Decision</a> activity runs the first branch that has satisfied conditions– evaluating from left to right.<ol style="list-style-type: lower-alpha;"><li> The first branch will run if the “Workflow Templates: Approval” field is set to “Approved.” In this branch, a Move Entry activity moves the entry to the Workflow Templates - Test Entries\Research and Development\Archive\Approved Plans folder.</li><li>The second branch will run if the “Workflow Templates: Approval” fields is set to "Denied." In this branch, a Move Entry activity sends a shortcut to the Employee folder of the person who submitted the entry for approval and another Move Entry activity moves the entry to the Workflow Templates - Test Entries\Research and Development\Archive\Denied Plans folder.</li><li>The last branch is an exception branch that does not have any conditions on it. If the conditions are not met on the first two branches, this branch will run and the <a href="../Activities/Email.htm" title="Click to learn more." alt="Click to learn more.">Email</a> activity will send an email to an administrator alerting the administrator that the activity did not run as expected. </li><p class="ex"><b>Tip:</b> It is a best practice to include an exception branch (a right-most branch with no conditions) when configuring a Conditional Decision activity. If the activity does not have an exception branch, and none of the branch conditions are met, the activity is skipped without warning.</p></ol></li>
+        </ol>
+        <h2>To run this workflow template in the provided test environment</h2>
+        <ol>
+            <li>
+                <p>Ensure the WT- Approve or Deny starting event is enabled.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Navigate to the <b>Condition</b> page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li>
+                    <li>Select the starting event, and click <b>Enable</b> in the top right. </li>
+                </ol>
+            </li>
+            <li>	Configure the Email activity in the Workflow Designer.<ol style="list-style-type: lower-alpha;"><li>Type one or more email addresses in the <b>To</b> field.</li><li>Edit the email message as desired.</li></ol></li>
+            <li>Republish the workflow.</li>
+            <li>In your Laserfiche repository, create an entry in the Workflow Templates - Test Entries\Research and Development\Proposed Plans folder. Ensure the Workflow Templates: Approval field is set to Needs Review. </li>
+            <li>Check the \Workflow Templates - Test Entries\Employee Folders\Department Manager folder for the entry, and set the “Workflow Templates: Approval” field. (If you waited longer than two minutes before this step, the entry will be in the \Workflow Templates - Test Entries\Research and Development\URGENT folder.)<ol style="list-style-type: lower-alpha;"><li>If you approve the entry, the workflow will move the entry the Workflow Templates - Test Entries\Research and Development\Archive\Approved Plans folder.</li><li>If you deny the entry, it will move to the Workflow Templates - Test Entries\Reserach and Development\Archive\Denied Plans folder. Additionally, a shortcut to the entry will be created in an Employee Folder named after the user you are signed as.</li></ol></li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> button in the Workflow Designer. You can test this workflow on Plan_G or Plan_H in the Workflow Templates - Test Entries\Research and Development\Proposed Plans folder.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p>Give the deadline branch a reasonable time frame. By default, the branch is set to two minutes since short deadlines are ideal for testing the workflow.</p>
+        <p>Remember to rename and republish the workflow once you made all desired changes.</p>
+    </body>
+</html>

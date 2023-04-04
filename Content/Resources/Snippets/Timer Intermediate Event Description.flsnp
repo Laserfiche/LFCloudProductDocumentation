@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <p>Intermediate events happen during the course of a process. Forms supports one kind of intermediate event, a timer event.</p>
+        <ul>
+            <li>Timer intermediate events used within the main process flow delay the flow.</li>
+            <li>Timer intermediate events attached to user tasks are used for exception handling and cause an exception flow to be taken.</li>
+        </ul>
+    </body>
+</html>

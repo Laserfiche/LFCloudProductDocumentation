@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="997" MadCap:lastWidth="1050" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Rethrow</h1>
+        <p style="text-align: center;">
+            <img src="Images/rethrowCanvas.PNG" title="Rethrow activity" alt="Rethrow activity" />
+        </p>
+        <p>This activity rethrows the error from the catch branch in a <a href="Try-Catch.htm" title="Click here to learn more." alt="Click here to learn more.">Try-Catch</a> activity, potentially terminating the workflow. This activity must be used inside a catch branch of a <b>Try-Catch</b> activity.
+</p>
+        <div class="ex"><b>Example</b>: Sally puts an <a href="Update-Word-Document.htm" title="Click here to learn more." alt="Click here to learn more.">Update Word Document</a> activity that she suspects will encounter an error in the try branch of a <a href="Try-Catch.htm" title="Click here to learn more." alt="Click here to learn more.">Try-Catch</a> activity. If the Update Word Document activity encounters an error, Sally wants to notify the IT team. If the IT team can fix the problem, she wants the workflow to continue, but if they cannot fix the problem, she wants to recreate the original error so the workflow terminates. She puts an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity in the catch branch that notifies IT and waits for them to set a field to say if they have fixed the problem. If IT fixes the problem, a <a href="Conditional-Decision.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Decision</a> activity runs the <b>Update Word Document</b> activity and the workflow continues. If IT cannot fix the problem, the <b>Conditional Decision</b> activity rethrows the original error, terminating the workflow.
+<MadCap:toggler targets="Image">Show me what this looks like</MadCap:toggler><![CDATA[        ]]><p><img MadCap:targetName="Image" src="../../../Images/Image_Rethrow_Example.png" style="width: 100%" /></p></div>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

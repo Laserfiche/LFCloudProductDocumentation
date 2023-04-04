@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="1" MadCap:lastHeight="89" MadCap:lastWidth="877">
+    <body><b>Participants</b> are limited-functionality users. Non-Laserfiche Directory Server participant users can sign in with a particular email address that has been assigned a participant license from the Participants tab of the System Security page. Directory Server user accounts with participant licenses can sign in with their expected user names. Participant users can start process instances and perform user tasks, but they cannot create or administer business processes.</body>
+    <head>
+    </head>
+</html>

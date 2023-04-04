@@ -1,0 +1,315 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Condition Type Options</h1>
+        <p>This page describes all the options in the condition type in the <a href="Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">condition editor</a>. The options available depend on where the condition is configured.</p>
+        <h2 class="topicheading">Document</h2>
+        <p>You can use the following options in reference to a repository document.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Document</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Extension</td>
+                    <td class="tabletext">Document file extension compared to extension in "&lt;empty&gt;". </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Page Count</td>
+                    <td class="tabletext">Number of pages compared to "&lt;empty&gt;".**</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Version Controlled</td>
+                    <td class="tabletext">Returns true if document is under version control.  Use this to keep track of the edits to an important document.</td>
+                </tr>
+                <tr id="document-signature">
+                    <td class="tabletext">Signature Status</td>
+                    <td class="tabletext">Signature status, can be either <i>is signed</i> or <i>is not signed</i>. (Option currently disabled.)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Signature Count</td>
+                    <td class="tabletext">Number of signatures compared to number in "&lt;empty&gt;". (Option currently disabled.)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Signature Reason</td>
+                    <td class="tabletext">Reason for signing document compared to reason in "&lt;empty&gt;". (Option currently disabled.)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Signed By</td>
+                    <td class="tabletext">User who signed document compared to user in "&lt;empty&gt;".  (Option currently disabled.)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Signed By (Group)</td>
+                    <td class="tabletext">User who signed document is a member of the group compared to group in "&lt;empty&gt;". (Option currently disabled.)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Stamp Names</td>
+                    <td class="tabletext">Stamp name compared to name in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Annotation Text</td>
+                    <td class="tabletext">Annotation text compared to text in "&lt;empty&gt;".</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>**Note that Laserfiche Server only records the number of pages in a document when the page has text in it (e.g., a document with two pages of images and two of text has two pages), and Laserfiche pages have been generated for the file.</p>
+        <h2 class="topicheading">Entry</h2>
+        <p>You can use the following options in reference to a repository entry (document or folder).</p>
+        <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Entry</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Field</td>
+                    <td class="tabletext">Entry field values compared to the field in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Name</td>
+                    <td class="tabletext">Entry name compared to the name in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Parent Name</td>
+                    <td class="tabletext">Entry parent name compared to the name in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Parent ID</td>
+                    <td class="tabletext">	Entry with the parent ID compared to the one in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Volume</td>
+                    <td class="tabletext">Entry in a volume (a sub-location of a Laserfiche Server)&#160;compared to the one in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Path</td>
+                    <td class="tabletext">Entry path compared to the path in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Tag</td>
+                    <td class="tabletext">	Check whether the Entry tag is or is not set.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Template Name</td>
+                    <td class="tabletext">Entry template name compared to name in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Is Record</td>
+                    <td class="tabletext">Returns true if the entry is in a record series, or has Records Management properties applied.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Folder</h2>
+        <p>You can use the following options in reference to a repository folder.</p>
+        <table id="myTable3" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Folder</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Document Count</td>
+                    <td class="tabletext">Document count in folder compared to count in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Folder Count</td>
+                    <td class="tabletext">Folder count compared to count in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Count</td>
+                    <td class="tabletext">Entry count compared to count in "&lt;empty&gt;".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Contents (recursive)</td>
+                    <td class="tabletext">Folder name compared to name in "an entry with 'Name equals'".***</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Contents</td>
+                    <td class="tabletext">Folder content compared to content in "an entry with 'Name equals'". Use the sub-condition to specify conditions that apply to one entry in a folder.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>***The recursive part means you apply the conditions to subfolders too. When you specify a value for these conditions, a separate sub-condition editor will open so that you can specify conditions that will apply to a single entry within a folder.</p>
+        <p class="note"><b>Note</b>: Because the contents option is resource-intensive, a <a href="Activities/Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a> activity will only evaluate the contents of a folder when a change occurs to the main folder, and not when a change occurs within the folder. For example, you have a folder A with contents x, y, and z. If a change occurs to x, but no change occurs to the folder A, then no change is caught. However, if you have a change to folder A, and to the content in x, both changes are caught.</p>
+        <h2 class="topicheading">Token</h2>
+        <p>You can use the following option in reference to a token.</p>
+        <table id="myTable4" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Token</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Token</td>
+                    <td class="tabletext"><a href="Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Token</a> compared to the token in "&lt;empty&gt;". You can only use tokens on the left side of conditions.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Repository</h2>
+        <p>You can use the following option in reference to a repository.</p>
+        <table id="myTable5" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Repository</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Repository</td>
+                    <td class="tabletext">
+                        <p>Repository ID compared to the one in "&lt;empty&gt;". The repository ID is the string with the format <code>r-<i>XXXXXXXX</i></code> that appears in your repository URL, where each <code style="font-style: italic;">X</code> is an alphanumeric character. For example, if your repository URL is </p>
+                        <p><code>https://cloudserver.com/laserfiche/browse.aspx?repo=r-1e1d4f4g#?id=1</code>, that means your repository ID&#160;is <code>r-1e1d4f4g</code>.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">User</h2>
+        <p>You can use the following option in reference to a user action.</p>
+        <table id="myTable6" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>User</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">User</td>
+                    <td class="tabletext">User who performs the action in <b>Event Type</b> compared to the one in "&lt;empty&gt;".</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Entry Change</h2>
+        <p>You can use the following option in reference to a change to a repository entry.</p>
+        <table id="myTable7" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Entry Change</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Entry Change</td>
+                    <td class="tabletext">
+                        <p>Define the starting events based on the types of changes applied to the document. For example, include <b>Template Field Deleted</b> to catch when a field value is removed from a document, either by setting a field value in the template as blank or by removing an independent field.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">User's Groups</h2>
+        <p>You can use the following option in reference to a change to a repository user group.</p>
+        <table id="myTable8" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>User's Groups</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">User's Groups</td>
+                    <td class="tabletext">	The user who performs the action in <b>Event Type</b> is a user who is in the same user group as the one specified in <b>&lt;empty&gt;</b>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Parent Folder</h2>
+        <p>You can use the following options in reference to a repository parent folder.</p>
+        <table id="myTable9" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Parent Folder</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Parent Contents (recursive)</td>
+                    <td class="tabletext">The parent folder name compared to the name specified in <b>an entry with 'Name equals '</b>. The recursive part means you apply the conditions to subfolders too. When you specify a value for these conditions a separate sub-condition editor will open so that you can specify conditions that will apply to a single entry within a folder.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Parent Contents</td>
+                    <td class="tabletext">
+                        <p>The parent folder content name compared to the name specified in <b>an entry with 'Name equals '</b>. When you specify a value for these conditions a separate sub-condition editor will open so that you can specify conditions that will apply to a single entry within a folder.</p>
+                        <p class="ex"><b>Example</b>: A wait condition waits for a specific document to be present in the starting entry's parent folder or subfolders. By selecting the <b>Parent Folder: Contents (recursive)</b> condition, the workflow will check the starting entry's parent folder and the parent folder's subfolders.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

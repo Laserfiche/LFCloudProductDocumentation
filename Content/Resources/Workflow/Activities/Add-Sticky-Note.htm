@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Add Sticky Note</h1>
+        <p style="text-align: center;">
+            <img src="Images/addStickyNoteCanvas.PNG" title="Add Sticky Note activity" alt="Add Sticky Note activity" />
+        </p>
+        <p>This activity adds a sticky note to a page of a Laserfiche document. A sticky note is a small, movable note that contains text. When a user selects the sticky note on a Laserfiche document, a text box appears, where the user can view and modify the text depending on the user's access rights. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Add-Sticky-Note-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces.</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Sticky Note Options</b> property box, configure settings for the sticky note using the following options:</li>
+            <ul>
+                <li><b>Sticky note</b>: Type the text that will appear on the sticky note. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+                <li><b>Color</b>: Select the sticky note's color.</li>
+                <li><b>Page</b>:&#160;Select the page on which you want to place the sticky note. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+                <li><b>Location</b>: Select where the sticky note will appear on the Laserfiche document. Select <b>Custom</b> to place it on X and Y coordinates (in pixels)&#160;starting from Top/Left.</li>
+                <li>If you have two sticky notes in the same location, use <b>Merging</b> to select how you want to display the new sticky note.<ul><li><b>None</b>:&#160;Places the new one on top of the existing one.</li><li><b>Replace</b>:&#160;Replaces the old one with the new one.</li><li><b>Append</b>: Adds the text of the new one to the text of the old one.</li><li><b>Cascade</b>:&#160;Places the new one offset from the existing one. <MadCap:toggler targets="cascade2">Show me what this looks like</MadCap:toggler></li><p><img src="../../../Images/Image_Cascading_Sticky_Notes_2.png" MadCap:targetName="cascade2" /></p></ul></li>
+            </ul>
+            <li>In the <b>Sticky Note Protection</b> property box, specify the rights for who can view and modify the sticky note.<ul><li><b>Public</b>: Anyone who has access to the document can view and modify public annotations.</li><li><b>Protected</b>:&#160;Anyone who has access to the document can view protected annotations, but only the user who created the annotations can modify them.</li><li><b>Private</b>: Only the user who created the private annotations can view and modify the annotations.</li></ul></li>
+            <li>In the <b>Add Sticky Note To</b> property box, select the Laserfiche document you want to place the sticky note on. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry.</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

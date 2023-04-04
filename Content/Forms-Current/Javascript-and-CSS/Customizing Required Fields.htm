@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Dynamically required fields | Laserfiche Forms | Customizations</title>
+        <meta name="description" content="Use custom JavaScript to make a field required or optional based on other conditions." />
+    </head>
+    <body>
+        <h1>Customizing Required Fields with JavaScript</h1>
+        <p>The form designer allows you to specify which fields in your form are required or not required. If a field is required, users cannot submit the form without filling that field. Here, we provide examples of how you can customize behavior related to required fields.</p>
+        <h2 class="topicheading">Dynamically Make a Field Required or Optional</h2>
+        <p>You can insert custom JavaScript that makes a normally required field optional if a certain checkbox or radio button is selected. In this example, we have a checkbox that is <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>checkbox</code>. We also <a href="CSS Selectors.htm#Adding">assign the custom  class</a> <code>req</code> to all fields that we want to make required if the checkbox is selected. In our example, this class contains just the signature field. These custom classes allow us to insert the appropriate HTML around the signature field to make it required (or not) depending on whether the checkbox is selected.</p>
+        <p>
+            <img src="../Resources/Images/forms_dyn-req-field.PNG" style="border-style: solid;border-width: 1px;" alt="Form with checkbox that makes signature field required when checkbox is selected." title="By default, fields are not required." />
+        </p>
+        <p>The following JavaScript snippet implements this dynamic behavior:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+    $('.checkbox input').change(function () { 
+        if ($(this).is(':checked')) { //if box is selected
+            $('.req label').append('&lt;span class="cf-required"&gt;*&lt;/span&gt;');
+            $('.req input').attr('required', 'True');
+        } else { //if box is not checked
+            $('.req span.cf-required').remove();
+            $('.req input').removeClass('required').removeAttr('required');
+        }
+    })
+});</code></pre>
+        <p><code>$('.checkbox input').change</code> is triggered when the checkbox's input is changed. If a change happens, then one of two options happens:</p>
+        <ul>
+            <li>If the box is selected, the appropriate HTML is added  to make the field required.</li>
+            <li>If the box is not selected, any HTML that specifies that the field is required is removed.</li>
+        </ul>
+        <p>If you need to pick out one radio button or checkbox among multiple buttons or checkboxes in the same field, use the button or checkbox's id instead of using <code>this</code>. For example, in the screenshot below, we have <a href="Customizing a Form with CSS and Javascript.htm#Viewing">used Chrome's Developer Tools</a> to highlight the part of the HTML code that corresponds to the "No" radio button. In that snippet, we can see that the id of that button is <code>Field6-1</code>. Consequently, if we want to make another field required if "No" is selected, then we would use <code>$('#Field6-1').is(':checked')</code> in line 3 of the JavaScript snippet, rather than <code>$(this).is(':checked')</code>.</p>
+        <p>
+            <img src="../Resources/Images/forms_radio-button-id.PNG" style="border-style: solid;border-width: 1px;width: 803px;height: 250px;" alt="Viewing the HTML element corresponding to a radio button using Chrome's Developer Tools." title="In general, radio buttons have an ID of the form FieldN-M." />
+        </p>
+        <p class="note" style="font-weight: normal;"><b>Note</b>: When using JavaScript to dynamically make fields required or not, avoid setting the fields in question as "Required" on the form designer Layout page. &#160;This minimizes any potentially problematic interactions between the two different ways of making fields required.</p>
+        <h2 class="topicheading">Hide "Next" Button on Paginated Form Until Required Fields Completed</h2>
+        <p>
+            <MadCap:concept term="Forms" />If you have a multi-page form, you may want users to fill out all the required fields on one page before proceeding to the next page. The following example accomplishes this for Forms 10.2 or later.</p>
+        <p>First, make sure that your form uses a progress bar instead of tabs (so that users cannot click to other tabs at their own will). Then, insert the following JavaScript snippet:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(){
+  $("#form1").change(validate); //run validate function if anything on form changes
+  validate();
+  $('.cf-next-btn').click(validate); //run validate function when next button clicked
+  $('.cf-prev-btn').click(validate); //run validate function when previous button clicked
+  function validate() {
+    //exclude hidden fields when validating fields with parsley
+    if ($("#form1").parsley({excluded:":hidden"}).isValid()) {
+      $('.cf-next-btn').show(); //show next button if form valid
+    }
+    else {
+      $('.cf-next-btn').hide(); //hide next button if form not valid
+    }
+  }
+})</code></pre>
+        <p>The snippet ensures that the form is validated (using the <b>validate</b> function defined in the snippet) whenever one of the following events happens:</p>
+        <ul>
+            <li>When the document finishes loading</li>
+            <li>When any changes are made to inputs</li>
+            <li>When the "Next" button is clicked</li>
+            <li>When the "Previous" button is clicked</li>
+        </ul>
+        <p>Validation means that, among other things, required fields are checked to make sure that they have been filled in. To validate, the JavaScript snippet uses a  function that does the following:</p>
+        <ul>
+            <li>Uses the <a href="http://parsleyjs.org/" target="_blank">Parsley library</a> to check that the fields on the current page have been filled out according to requirements. Hidden fields are excluded from this check.<ul><li>If the page inputs are valid, the "Next" button is shown.</li><li>If the page inputs are not valid, the "Next" button is hidden.</li></ul></li>
+        </ul>
+    </body>
+</html>

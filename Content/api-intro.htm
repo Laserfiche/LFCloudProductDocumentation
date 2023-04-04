@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.API">
+    <head>
+    </head>
+    <body>
+        <h1>Introduction</h1>
+        <p>The Laserfiche API development team is using Swagger UI to allow you to interact with the API through a visual playground. Test out the Laserfiche API by visiting one of the following links depending on where your Laserfiche Cloud repository resides:</p>
+        <ul>
+            <li>For the United States Datacenter: <a href="https://api.laserfiche.com/repository/swagger/index.html" target="_blank" style="color: #0000ff;"><u>https://api.laserfiche.com/repository/swagger/index.html</u></a></li>
+            <li>For the Canadian Datacenter:  <a href="https://api.laserfiche.ca/repository/swagger/index.html" target="_blank" style="color: #0000ff;">https://api.laserfiche.ca/repository/swagger/index.html</a></li>
+        </ul>
+        <h2>How to first authenticate in the Swagger UI&#160;sandbox</h2>
+        <ol>
+            <li>In the <b>AccessToken</b> section, expand the <b>Post /v1-alpha/Repositories/{repoId}/AccessToken/Create</b> endpoint</li>
+            <li>Click <b>Try it out</b>.
+                <img src="Resources/Images/api-swagger-01.png" style="width: 100%;" /></li>
+            <li>Within the <b>repoId</b>, type in the repository ID for your Laserfiche Cloud repository in the format: r-xxxxxxxx</li>
+            <p class="note"><b>Note:</b> The repository ID can be seen on the Plan page of the Laserfiche Cloud Administration site, the Overview page of the Repository Administration site, and in your web browser address bar when viewing your Laserfiche documents.</p>
+            <li>Leave the <b>CreateCookie</b> query option blank. It will default to “false”</li>
+            <li>Within <b>customerId</b>, add your 9-digit Laserfiche Cloud account ID.</li>
+            <li>Scroll down to the <b>Request body</b> section<img src="Resources/Images/api-swagger-02.png" style="width: 100%;" /></li>
+            <li>Type in a username and password. Note that this must be a real user account.</li>
+            <li>Optionally, type in a value for the <b>applicationName</b>. All of the activity in the repository authenticated from this token will appear in your Audit logs with this information.</li>
+            <li>Click <b>Execute</b></li>
+            <li>Locate the response body and copy the <b>authToken</b> value.<img src="Resources/Images/api-swagger-03.png" style="width: 100%;" /></li>
+            <li>Scroll to the top of the page, and click <b>Authorize</b> to display the following dialog box.<img src="Resources/Images/api-swagger-04.png" style="border-style: solid; border-width: 1px;" /></li>
+            <li>Within <b>Value</b>, copy the authToken value copied from step 10.</li>
+            <li>Click <b>Authorize</b>.</li>
+            <li>This will automatically add the Authorization header to your requests with the bearer token.</li>
+            <li>Now you're ready to make any other Laserfiche API call in the playground.</li>
+        </ol>
+        <p class="note"><b>Note:</b> The playground will automatically append the <i>Bearer</i> prefix to your authToken. When creating your integration, please make sure the Authorization header value has <i>Bearer</i> before your authToken, e.g., "Authorization: Bearer {authToken}"</p>
+    </body>
+</html>

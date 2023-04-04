@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Replace Lookup Table Data</title>
+    </head>
+    <body>
+        <h1>Replace Lookup Table Data</h1>
+        <p style="text-align: center;">
+            <img src="Images/replaceLookupTableDataCanvas.PNG" title="Replace Lookup Table Data activity" alt="Replace Lookup Table Data activity" />
+        </p>
+        <p>This activity replaces the data in a <a href="../../Entities/lookup-tables.htm">lookup table</a> based on a spreadsheet (.csv or .xlsx). This activity will overwrite the entire contents of the lookup table with the contents of the spreadsheet.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>In the <b>Lookup Table to Replace</b> property box, select the lookup table to be updated.</li>
+            <li>In the <b>Source Data</b> property box, select the spreadsheet file.</li>
+            <ol style="list-style-type: lower-alpha;">
+                <li><![CDATA[
+			
+			
+			]]><b>Server Attachment</b>: Select a document attached in <a href="../../Assets/Files.htm">Files</a>.			
+			
+			</li>
+                <li><b>Activity</b>: Select a document from an activity earlier in your workflow. <a href="../Selecting-an-Entry.htm">Learn more about selecting an entry</a>.<p class="note">Note: This activity cannot act directly on a <MadCap:variable name="DoNotTranslate.Laserfiche" /> entry. If retrieving an entry from your <MadCap:variable name="DoNotTranslate.Laserfiche Repository" />, use the <a href="Download-Electronic-Document.htm">Download Electronic Document</a> activity to make the file accessible to this activity. <MadCap:toggler targets="downloadex">Show me what this looks like.</MadCap:toggler><br /><img MadCap:targetName="downloadex" src="../../Images/Replace-Lookup-Table-Data-Structure1.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" /></p></li>
+            </ol>
+            <li>
+                <p>In the <b>Replacement Options</b> property box, select how this activity will handle spreadsheets if they do not match the format of your lookup table. This determines if the workflow should stop or continue if the new data contains additional columns that do not exist in the lookup table.</p>
+                <p class="note"><b>Note</b>: The activity will not allow a file with completely different structure to be used in order to prevent accidentally overwriting data with structurally different data.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>
+                        <p><b>Terminate the workflow</b>: If selected, the columns in the spreadsheet must exactly match the columns in your lookup table, including non-imported columns. </p>
+                    </li>
+                    <li>
+                        <p><b>Ignore extra columns</b>: If selected, the new spread sheet must contain all included columns in the existing lookup table, but there may be additional columns in the spreadsheet. These additional columns will be ignored.</p>
+                    </li>
+                </ol>
+            </li>
+        </ol>
+        <p class="w"><b>Important</b>: This activity can only run if the lookup table has not been updated within the last hour. Otherwise the activity will report the error <i>DM81106: Request to replace model before minimum interval of X minutes.</i> in the activity monitor. See the Lookup Data Table section on the <a href="../../Service-Limits.htm">Service Limits</a> page.</p>
+        <p class="note"><b>Note</b>: When using this activity, it is recommended to mark the Lookup Table as 'Read-Only' to prevent data changes caused by Update, Insert, or Delete queries. Doing so does not prevent this activity from replacing the data.</p>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

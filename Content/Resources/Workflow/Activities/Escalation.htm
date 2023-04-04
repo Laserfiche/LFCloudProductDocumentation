@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Escalation</h1>
+        <p style="text-align: center;">
+            <img src="Images/escalationCanvas.PNG" title="Escalation activity" alt="Escalation activity" />
+        </p>
+        <p>This activity runs a sequence of activities based on a timeout period. You can define one initial sequence of activities to run in the primary branch, and one or more to run after a specified wait time in the escalation branch. </p>
+        <p>You can add as many escalation branches as you would like, but you can only have one primary branch. All branches that start must complete before the workflow can continue. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Escalation-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p class="ex"><b>Example</b>: Henry is asked to comment on a document. The workflow designer starts by adding an <b>Escalation</b> activity. In the Primary Branch, the designer adds a <a href="Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a> activity to wait for Henry to leave his comments. If he does not do so in two days, an Escalation Branch engages and sends an email to his manager using an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity and tags the document as <b>Urgent</b> using an <a href="Assign-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">Assign Tags</a> activity. If Henry does not comment on the document after another day, another <b>Escalation Branch</b> engages and sends a high-priority email to his manager using one <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity and emails a warning to Henry with another <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity. If Henry does not comment on the document after two more days, his manager will receive an email each day, and Henry will receive a warning each day. For the workflow to continue, Henry must satisfy the wait condition in the <b>Primary Branch</b> by commenting on the document.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>Select the escalation branch in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" />.</li>
+            <li>
+                In the <b>Initial Wait</b> property box in the <MadCap:snippetText src="../../Snippets/Properties Pane.flsnp" />, specify a wait period.</li>
+            <ul>
+                <li><b>Escalate after</b> times out after a length of time.</li>
+                <ul>
+                    <li>With the <b>Exclude weekends and holidays</b> option, you can exclude weekends and holidays from the specified length of time. The excluded weekends and holidays are based on those set up in your <a href="../../Settings/Settings.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule profile</a>.</li>
+                    <li>With the <b>Test Duration Date</b> option, you can test the time out period based on a provided value. When you select this option, a dialog appears, in which you can type a start date and (if you have tokens in the <b>Escalate after</b> section) sample values. When you click <b>OK</b>, the resulting escalation date is returned.</li>
+                </ul>
+                <li><b>Escalate on</b> times out after a specific date and time.            </li>
+            </ul>
+            <li>In the <b>Repeat Options</b> property box, select <b>Run branch multiple times</b> to have the escalation branch repeat if the primary branch has not been completed. You can exclude weekends and holidays based on the schedule set in your <a href="../../Settings/Settings.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule profile</a>.<p class="note"><b>Note</b>: The wait time between each repetition of an escalation branch starts after the escalation branch last finished. For example, if an escalation branch has an <b>Email</b> and <b>Wait Condition</b> activity and is set to repeat after one hour, the branch will repeat one hour after the wait condition is met. It will not repeat one hour after the escalation branch started.</p></li>
+            <li>Drag and drop activities into <b>Primary Branch</b>. <b>Primary Branch</b> defines the routing criteria for an entry before a wait period.</li>
+            <li>Drag and drop activities into <b>Escalation Branch</b>. <b>Escalation Branch</b> defines the routing criteria for an entry after a wait period.</li>
+            <li><b>Optional</b>:&#160;Add one or more branches by clicking the following <b>Plus</b> in the center of the activity.<p><img src="../../../Images/Plusbutton.png" /></p><p class="note"><b>Note:</b> When there are multiple escalation branches, the wait time for all branches start at the same time. The times are not additive.</p></li>
+        </ol>
+        <p>To delete an escalation branch:</p>
+        <ol>
+            <li>Select an escalation branch in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" /> to highlight it.</li>
+            <li>Click the <b>Delete Selected Activity</b> button <img src="../../../Images/image14.png" /> in the toolbar.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

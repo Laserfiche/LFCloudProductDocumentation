@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="5" MadCap:lastHeight="982" MadCap:lastWidth="943" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Quick Fields" />Character Escapes</h1>
+        <p>Most <a href="../Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expression</a> language operators are unescaped single characters. The escape character <b>\</b> (a single backslash) signals to the regular expression parser that the character following the backslash is not a literal character, but instead represents a regular expression symbol.</p>
+        <p class="ex"><b>Example:</b> The parser treats an asterisk (<b>*</b>) as a repeating quantifier and a backslash followed by an asterisk (<b>\*</b>) as the Unicode character 002A.
+ </p>
+        <p class="note"><b>Note:</b> The character escapes listed are recognized both in regular expressions and in replacement patterns.</p>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular expression character escapes and their descriptions">
+            <caption style="font-weight: bold;">Regular Expression Character Escapes</caption>
+            <col style="width: 122px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">
+                    </td>
+                    <td class="tabletext">Characters other than <b>. $ ^ { [ ( | ) * + ? \</b> match themselves.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\a</td>
+                    <td class="tabletext">Matches a bell (alarm) <b>\u0007</b>.*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\b</td>
+                    <td class="tabletext">Matches a backspace <b>\u0008</b> if in a <b>[]</b> character class. Otherwise, see the note following this table.*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\t</td>
+                    <td class="tabletext">Matches a tab <b>\u000B</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\r</td>
+                    <td class="tabletext">Matches a carriage return <b>\u000D</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\v</td>
+                    <td class="tabletext">Matches a vertical tab <b>\u000B</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\f</td>
+                    <td class="tabletext">Matches a form feed <b>\u000C</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\n</td>
+                    <td class="tabletext">Matches a new line <b>\u000A</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\e</td>
+                    <td class="tabletext">Matches an escape <b>\u001B</b>.*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\040</td>
+                    <td class="tabletext">Matches an ASCII character as octal (up to three digits); numbers with no leading zero are back references if they have only one digit or if they correspond to a capturing group number. For example, the character<b> 
+\040</b>represents a space.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\x20</td>
+                    <td class="tabletext">Matches an ASCII character using hexadecimal representation (exactly two digits).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\cC</td>
+                    <td class="tabletext">Matches an ASCII control character. For example, <b>\cC</b> is Control+C.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <MadCap:concept term="Laserfiche" />* These regular expressions are not available when configuring field constraints in the Laserfiche Administration Console. </p>
+        <p class="note"><b>Note:</b> The escaped character<b> \b</b> is a special case. In a regular expression,<b> \b</b> denotes a word boundary (between <b>\w</b> and<b> \W</b> characters) except within a <b>[]</b> character class, where <b>\b</b> refers to the backspace character. In a replacement pattern, <b>\b</b> always denotes a backspace.</p>
+    </body>
+</html>

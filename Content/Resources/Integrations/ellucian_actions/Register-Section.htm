@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Register Section</title>
+    </head>
+    <body>
+        <h1>Register Section Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action could be used for registering a course section.</p>
+        <ul>
+            <li><b>Category:</b> Section Registration</li>
+            <li><b>Supported in:</b> Workflow</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Section ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the section the student is attempting to register for.</p>
+                        <p>Retrieve this from one of the Search actions for "Section"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Person ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the Student that is attempting to register for a section.</p>
+                        <p>Retrieve this from one of the Search actions from the "Student" model, as the field "Person Id".</p>
+                        <p>The student must be valid for enrollment in the academic period that the section is from.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Level ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the Academic level of the section the student is attempting to register for.</p>
+                        <p>Retrieve this from one of the Search actions for "Section" or from the Get Academic Level List action.</p>
+                        <p>The value must be from the list of valid Academic levels for the section.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit</p>
+                    </td>
+                    <td>
+                        <p>Consists of 1 sub-field: <b>registrationCredit</b>.</p>
+                        <p><b>registrationCredit</b> is an integer representing how much credit the student will receive.</p>
+                        <p>Valid values are based on the minimum, maximum and increment fields from the "CourseCredit" fields gotten from the Search/get actions for "Section" or "Course".</p>
+                        <p>Optional, a default of the minimum value for the section/course credit will be selected if not specified.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Grade Scheme ID</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the Grade Scheme of the section the student is attempting to register for.</p>
+                        <p>Retrieve this from one of the Search actions for "Section".</p>
+                        <p>The value must be from the list of valid Grade Schemes for the section.</p>
+                        <p>If not using the default value, the academic level must be a part of the acceptable academic levels for that grade scheme. If not, a third-party error will be encountered when trying to run the action.</p>
+                        <p>Optional, the value will default to the first Grade Scheme if not specified.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action returns a single result.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Section Registration ID</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the registration created/updated by this action.</p>
+                        <p class="note"><b>Note:</b> If an error occurs, this value will not be returned.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <p>If the student was previously enrolled in or is currently enrolled in the section, this action will act as an update action. It will ensure the registration is set to "registered" and will try to update the other fields in the case that they are different than what is currently in the existing registration. (If the previous registration is "not registered", after executing the register section action, the credit field will not be updated due to Ellucian update api behavior and will be reverted back to old value.)</p>
+            <p>The student must be enrolled in the academic period and be eligible to enroll in the course.</p>
+        </div>
+    </body>
+</html>

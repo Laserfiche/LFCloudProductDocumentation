@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>You may want to disable activities if you only want to test specific sections of your workflow. To disable activities:</p>
+        <ol>
+            <li>Select an activity in the <MadCap:snippetText src="Designer Pane.flsnp" /> to highlight it.</li>
+            <li>In the <b>Description</b> property box, clear <b>Enable</b>.</li>
+        </ol>
+    </body>
+</html>

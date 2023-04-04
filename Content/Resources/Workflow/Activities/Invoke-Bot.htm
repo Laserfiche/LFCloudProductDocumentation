@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Invoke Bot</h1>
+        <p style="text-align: center;">
+            <img src="Images/invokeBotCanvas.PNG" title="Invoke Bot activity" alt="Invoke Bot activity" />
+        </p>
+        <p>This activity makes use of robotic process automation technology to start a bot. This activity can receive values from bots run on <a href="../../Integrations/Remote-Agents/Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">remote agents</a> and pass values back to the bots. <a href="../../RPA/Getting-Started-with-RPA.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about bots</a>. </p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Bot</b> property box, select the bot you want the workflow to run.</li>
+            <ul>
+                <li>Click <b>Open bot</b> to view the selected bot.</li>
+                <li>Under <b>Version</b>, select the version of the bot you want to invoke. Generally, you'll want to invoke the latest version.</li>
+                <li>Under <b>Inputs</b> is a list of the values the bot expects as input parameters. Specify tokens and values to send to the bot. </li>
+                <li>Under <b>Output Tokens</b> are the <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> and values the bot sends to workflow. Use <a href="../Tokens-Regex/Token-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">token tags</a> to help place tokens on appropriate token menus in Workflow, as well as ensure your tokens are evaluated correctly in conditions.</li>
+                <li>Under <b>Priority</b>, if you have multiple bot <a href="../../Integrations/Remote-Agents/Queues.htm" title="Click here to learn more." alt="Click here to learn more.">queues</a>, you can set the bot's priority. Unless you choose to use the bot's settings, the priority set here will override the priority set on the bot.</li>
+                <ul>
+                    <li><b>High</b> priority bots will be run first.</li>
+                    <li><b>Normal</b> priority bots run after high priority bots have been run. </li>
+                    <li><b>Low</b> priority bots run after high and low priority bots have been run.</li>
+                    <li><b>Use bot settings</b> follows the setting configured on the bot definition from the bot <a href="../../RPA/Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page.  </li>
+                </ul>
+            </ul>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

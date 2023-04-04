@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.All,Default.Installation,Default.Cloud">
+    <head>
+        <link href="Resources/Stylesheets/Styles.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="WebLink" />Configuring Access to Public Portal</h1>
+        <p>Your Laserfiche installation comes with a special account named <b>PublicPortalUser</b>. Everyone who accesses your repository via Public Portal will automatically be signed in as <b>PublicPortalUser</b>. This means that you can set security for the user, and those settings will be used by everyone who accesses your repository through the Public&#160;Portal page.</p>
+        <p>It is important to set security carefully for the public portal user. For example, if the public should only be able to see the contents of one folder, you should make sure that the <b>PublicPortalUser</b> has&#160;Browse and Read rights for that folder, but does not have rights for any other folder in your repository. You can also use security to restrict them in other ways:&#160;if you do not grant the <b>PublicPortalUser</b> the Print/Export privilege, they will not be able to download files from your repository or print them. See the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Security.htm" target="_parent">Security</a> chapter of the Laserfiche Cloud help files for more information.</p>
+        <p>By default, <b>PublicPortalUser</b> does not have access to your repository. This allows you to configure your security before giving public users  access to the repository. Once you have configured security for PublicPortalUser, open the <b>Account Administration</b> page, select <b>Users</b>, select the <b>PublicPortalUser</b> user, and then set <b>Access to Repository</b> to <b>Allow</b>.</p>
+        <p class="note"><b>Note:</b> Once you set the <b>Access to Repository</b> to <b>Allow</b>, the PublicPortalUser will be a part of the Everyone group. By default, the Everyone group is set with full entry access rights on the root folder of the repository. Ensure you set explicit entry access rights, feature rights, and privileges for the PublicPortalUser, otherwise the PublicPortalUser will inherit all rights of the Everyone group.</p>
+        <h2>View Public Portal</h2>
+        <p>To view the public portal, click the username at the top right, then click <b>View Public Portal</b>.</p>
+        <p>The URL&#160;used to access the portal public is:</p>
+        <p> <b>https://portal.laserfiche.com/Portal/browse.aspx?repo=r-</b><i style="font-weight: bold;">repositoryID</i>, where <i>repositoryID</i>&#160;is the ID number of the repository.</p>
+    </body>
+</html>

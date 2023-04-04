@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Preparing to Scan in Basic Mode</h1>
+        <p>Before you begin scanning in basic mode, you can configure options for image enhancements and text generation. </p>
+        <h2 class="topicheading">Launching Scanning</h2>
+        <p>When scanning in basic mode, documents will always be stored in the folder from which you launched Scanning. Be sure to launch Scanning from the folder in which you want to save your documents. If you want to store documents in multiple folders, either close Scanning and navigate to the new folder in between documents, or use standard mode.</p>
+        <h2 class="topicheading">Image Enhancements</h2>
+        <p>Image enhancements help make your images clearer and more readable. This is useful both for users who will be viewing the documents in Laserfiche, and for improving the results of OCR text generation.</p>
+        <p>To begin configuring image enhancements, click the <b>Enhancements</b> button (<img src="Resources/Images/scanning_enhancements_button.png" />), or open the <b>File</b> menu and select <b>Enhancements</b>.</p>
+        <p>You can configure the following image enhancements in basic mode:</p>
+        <ul>
+            <li><b>Deskew Image</b>: Straightens images that have been scanned at an angle.</li>
+            <li><b>Despeckle</b>: Removes stray marks from scanned documents. Specify a <b>Noise Level</b> to configure the smallest character size (in pixels) that should not be removed.
+            </li>
+            <li><b>Rotate Image</b>: Rotates a scanned image. Configure whether this process should be performed automatically or by a specific amount (in degrees clockwise). Automatic rotation will detect the correct orientation of your images and attempt to rotate them to match.</li>
+            <li><b>Invert the image colors</b>: Reverses the colors present on an image. This process can be useful for converting white text to black, which is more conducive to OCR processing. </li>
+            <li><b>Blank Page Removal</b>: Deletes a page from a document based on the image's size (in bytes). </li>
+            <li><b>Horizontal Line Removal</b>: Removes horizontal lines from scanned images to improve OCR accuracy.</li>
+            <li><b>Vertical Line Removal</b>: Removes vertical lines from scanned images.</li>
+        </ul>
+        <p>The following options can be used with image enhancements to improve their performance:</p>
+        <ul>
+            <li><b>For OCR Only:</b> With the exception of Blank Page Removal, image enhancements can be set to For OCR Only. This configures Laserfiche Scanning to undo changes made to an image after OCR processing is complete, enabling you to preserve the original state of an image. Select <b>Configure</b> to define which enhancements should utilize this feature.</li>
+            <li><b>Sample Image:</b> To preview how image enhancements will affect scanned images, select <b>Import</b> or <b>Scan</b> to acquire a sample image. Sample images should be as similar as possible to the document(s) you will be scanning. After acquiring a sample image, click <b>Test</b> to display a preview.</li>
+        </ul>
+        <h2 class="topicheading">Text Generation with OCR&#160;(Optical Character Recognition)</h2>
+        <p>OCR text generation "reads" the text on your scanned images and converts them to computer-readable text that can be edited or used for searching. When scanning images that contain text, we strongly recommend using OCR to generate text from them, as this will ensure that your documents are full-text searchable.</p>
+        <p>To enable and configure OCR, click the <b>OCR&#160;Settings</b> button (<img src="Resources/Images/scanning_OCR_button.png" />) or open the <b>File</b> menu and select <b>OCR&#160;Settings</b>. Select <b>Perform OCR on new images</b>.</p>
+        <p>Once you have enabled OCR, you can configure the following options:</p>
+        <ul>
+            <li>Select a language to determine which type of characters will be preferred.</li>
+            <li>Select <b>Decolumnize</b> to remove column formatting from the text.</li>
+            <li>In the <b>Optimization Priority</b> option, select <b>Speed</b>, <b>Standard</b>, or <b>Accuracy</b>. </li>
+        </ul>
+        <h2 class="topicheading">Default Properties</h2>
+        <p>You can choose to configure default properties for scanned documents before you begin scanning. This allows you to set a standardized name for new documents, and to configure standard metadata such as fields or tags. Even if you configure default properties, you can still customize them on a document-by-document basis before you store the documents in Laserfiche.</p>
+        <p>See <a href="Metadata.htm">Metadata</a> for more information about document metadata and properties. </p>
+        <p>You can also use tokens, which will be dynamically replaced with relevant information, in your default properties. You can select a token by pressing the token dropdown button (&gt;) and selecting from the list. See <a href="Tokens.htm">Tokens</a> for more information.</p>
+        <p>You can configure the following default properties:</p>
+        <ul>
+            <li>To set a default document name, type the name in the <b>Default document name</b> option.</li>
+            <li>To set default <a href="Fields_and_Templates.htm">template and field values</a>, select the <b>Fields</b> tab. Choose a template and then fill in any field values.</li>
+            <li>To add default <a href="Tags.htm">tags</a>, select the <b>Tags</b> tab. Select the tag you want to apply by default.</li>
+        </ul>
+        <p style="font-weight: bold;">&#160;</p>
+    </body>
+</html>

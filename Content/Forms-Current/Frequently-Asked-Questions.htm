@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Frequently Asked Questions | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Learn about common customizations and the basics of business processes." />
+    </head>
+    <body>
+        <h1>Frequently Asked Questions</h1>
+        <p><b>General</b>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: What is the difference between a variable and a token?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: In general, they are both containers for values that you do not have. Much like tokens, variables store a value so that it can be referenced later on another form or page within Process Automation. Tokens have more advanced formatting and editing options that are not yet available for variables. Learn more about <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variables</a>.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: Can I customize the templates a user can choose from when creating a new business process?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: Yes, you can make any business process into a template that users will be able to select when creating a new business process. Simply <a href="Managing-Processes.htm#import" title="Click here to learn more." alt="Click here to learn more.">download</a> the business process as an XML file and <a href="Building-a-Process.htm#Upload:" title="Click here to learn more." alt="Click here to learn more.">upload</a> the file as a new business process.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: How do I create a form?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: Forms are created within <a href="Business-Processes.htm" title="Click here to learn more." alt="Click here to learn more.">business processes</a>. From the <b>Manage</b> page, select or create the business process you want the form to be associated with, click the <b>Forms</b> tab, and then click the <b>New Form</b> button. Learn more about <a href="Creating-a-New-Form.htm" title="Click here to learn more." alt="Click here to learn more.">creating a form</a>.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: Is it possible to pre-fill the fields on a form by passing in URL&#160;parameters?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: Yes, it is!&#160;You can <a href="populating-a-form-with-url-parameters.htm" title="Click here to learn more." alt="Click here to learn more.">add variable parameters to the form's URL</a> to pre-fill the form. In order to do so, you will need to know the variable name associated with the field you want to fill in, and have the link to that form. Once you have this information, build the URL&#160;with the following structure:</p>
+                <p class="Code"><i>base URL</i>?<b>variable1</b>=<b>value</b>&amp;<b>variable2</b>=<b>value</b></p>
+                <p>Replace <b>variable1</b> and <b>variable2</b> with the variable names of the fields you want to populate on the form, and replace <b>value</b> with the value you want to appear in those fields.  Append other variables to the URL by inserting an &amp; symbol followed by the variable name, as shown above.</p>
+                <p class="note"><b>Note:</b> Only fields outside of <a href="Form-Fields/Collection.htm" title="Click here to learn more." alt="Click here to learn more.">collections</a> and <a href="Form-Fields/Table.htm" title="Click here to learn more." alt="Click here to learn more.">tables</a> can be populated using URL parameters. In addition, <a href="Form-Fields/Address.htm" title="Click here to learn more." alt="Click here to learn more.">address</a>, <a href="Form-Fields/File-Upload.htm" title="Click here to learn more." alt="Click here to learn more.">file upload</a>, and <a href="Form-Fields/Signatures.htm" title="Click here to learn more." alt="Click here to learn more.">signature</a> fields cannot be populated in this way. </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p><b>Process Designer</b>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: I have already created a process for this business process but, when I open the process designer, everything is gone. Where did it go?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p> A: Sometimes if you accidentally scroll too far in any direction it can be difficult to find your process. If you cannot locate it, click the <b>Zoom to Fit</b> button in the bottom right corner of the canvas. This will center the canvas on your process and adjust the zoom level so the entire process is visible.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>Q: What is the difference between an <a href="Service-Tasks.htm#Email" title="Click here to learn more." alt="Click here to learn more.">email service task</a> and a <a href="User-Tasks.htm#NotificationsTab" title="Click here to learn more." alt="Click here to learn more.">user task with an email notification</a>?</MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p> A: In both cases, the business process will send an email to the specified users. The biggest difference is that an email service task will only send the email notification, while a user task will  send the email as a notification to users informing them that they have a task assigned to them. If you want to assign a task to users and notify them, choose a user task. To notify users without assigning them a task, use an email service task.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <p><b>Form Designer</b>
+        </p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: What is the maximum size for an uploaded file?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: 25 MB.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: I&#160;have space constraints and need to make a scrollable text box to display  terms and conditions. Is this possible?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: Yes! You can easily make a read-only, scrollable text box. You will use the <a href="Form-Fields/Custom-HTML.htm" title="Click here to learn more." alt="Click here to learn more."><b>Custom HTML</b></a> field type for this. In the input box for the field, enter: </p>
+                <p class="Code"> &lt;div style="overflow:auto; height:100px; width:600px"&gt; whatever your content is &lt;/div&gt; </p>
+                <p> You can adjust the height and width specified in the <code>&lt;div&gt;</code> to match your needs.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: I entered a variable name for a field. Now I&#160;want to change the name, but the variable field is grayed out. How can I&#160;change the variable name?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: You can make changes to your <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variables</a> from the <b>Variables</b> tab of the palette in the <a href="Key-Concepts-in-Forms.htm#Form" title="Click here to learn more." alt="Click here to learn more.">form designer</a>. In the <b>Variables</b> tab, click the cog icon that appears to the right of the variable to open the <b>Variable settings</b> dialog box. Here you can change the variables name, delete it, and select whether the variable will be included on the instances page.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: Can you specify field constraints to limit the accepted values for a given field and  create error messages to tell users how to properly fill in those fields?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: Yes, you can specify <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm">regular expressions</a> for single line fields to specify their accepted values. You can supply text above the field to explain the format to users, or use JavaScript to show a warning message when input is not properly formatted. You can also <a href="Custom-Error-Messages-Form.htm" title="Click here to learn more." alt="Click here to learn more.">configure custom error messages</a> in the form designer.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: Is it possible to dynamically hide a form field from the submitter but show it after the form is submitted?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p style="font-weight: normal;">A: You can accomplish this with JavaScript. On the <b>CSS and JavaScript</b> page in the <a href="Key-Concepts-in-Forms.htm#Form" title="Click here to learn more." alt="Click here to learn more.">form designer</a>, find the ID&#160;associated with the field you want to hide. Then, in the <b>JavaScript</b> section, enter the following code, substituting <b>ID</b> for the field's ID.</p>
+                <p class="Code">
+					$(document).ready(
+					function() {<br />					if($('input[name="routingResumeId"]').val() =="") {<br />					$("#<b>ID</b>").addClass('hidden');<br />					}<br />				});</p>
+                <p class="note"><b>Note:</b> The hidden field cannot be  required.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Q: Is it possible to show the current user's name in a field while they are filling out the form?</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>A: Yes, enter the current user <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a>, <b>{/_currentuser}</b>, as the default value for that field.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Import Agent;Email Archive" /><MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" />
+        </h1>
+        <p><MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> allows you to automatically archive emails to a <MadCap:variable name="DoNotTranslate.Laserfiche" /> repository. Emails can be archived to multiple locations based on various conditions. Additionally, <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> can assign metadata to the messages and save email attachments.</p>
+        <p class="ex"><b>Example:</b> An organization needs to keep all incoming client messages. Client messages are all routed to a shared mailbox on their mail server and from there <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> sends them to a <MadCap:variable name="DoNotTranslate.Laserfiche" /> repository without requiring any action on the user's part. Based on the conditions set in the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> profiles, the emails are saved to a Correspondences folder inside each client's folder. Additionally, metadata is applied each message, allowing them to be easily searched in the future.</p>
+        <h2><a name="How"></a>How Does <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Work?</h2>
+        <p><MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> profiles use IMAP to periodically poll a monitored email folder for emails to send messages to Laserfiche. Your email server's settings can be used to determine which emails are moved to the monitored folder. Emails from that folder are then saved as EML electronic documents in a Laserfiche repository based on an import profile.
+        </p>
+        <h2>Setting up a Mail Folder for <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> to Monitor</h2>
+        <p>When setting up <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" />, you'll want a mailbox dedicated specifically to emails that will be archived to <MadCap:variable name="DoNotTranslate.Laserfiche" />. This mailbox can be a shared mailbox or a single-account mailbox but should not be associated with a particular user. Most organizations prefer to create a shared mailbox for <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> to monitor. With a shared mailbox, multiple users can work with emails in the mailbox, and emails will be archived to <MadCap:variable name="DoNotTranslate.Laserfiche" /> as well. </p>
+        <p><a href="https://docs.microsoft.com/en-us/exchange/collaboration/shared-mailboxes/create-shared-mailboxes?view=exchserver-2019" target="_blank" title="Click to learn more." alt="Click to learn more.">Microsoft documentation on how to create a shared mailbox</a>.</p>
+        <h2>Routing Messages to the Monitored Folder</h2>
+        <p>Once you've designated a mailbox for <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> to monitor, you'll want to create server-side  rules on your mail server to specify which emails will be routed to that mailbox. For example, you may want to automatically BCC&#160;certain outgoing emails to the mailbox so that they are automatically archived to <MadCap:variable name="DoNotTranslate.Laserfiche" />.</p>
+        <p>
+            <h3>Incoming mail</h3>
+            <p>There are a couple tools to ensure incoming mail is routed to the folder <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> is monitoring. </p>
+            <p style="font-weight: bold;">Create main rules</p>
+            <p style="font-weight: normal;">Create rules on your mail server to route messages to the folder <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> is monitoring. </p>
+            <p style="font-weight: normal;">For example, you can use server-side <MadCap:variable name="DoNotTranslate.Outlook (Microsoft)" /> rules to ensure messages are routed before they land in the inbox. If the emails you want to archive to <MadCap:variable name="DoNotTranslate.Laserfiche" /> may be sent to a variety of different addresses,  create rules to automatically forward those emails to the monitored mailbox. <a href="https://support.office.com/en-us/article/Server-side-vs-client-only-rules-E1847992-8AA1-4158-8E24-AD043DECF1EB." target="_blank">Learn more about server-side <MadCap:variable name="DoNotTranslate.Outlook (Microsoft)" /> rules</a>.</p>
+            <p style="font-weight: bold;">When rules aren't needed</p>
+            <p style="font-weight: normal;">If all the mail you want to archive to <MadCap:variable name="DoNotTranslate.Laserfiche" /> is always sent to the same mailbox, then you do not need to set up rules to handle mail sent to other mailboxes. </p>
+            <p class="ex"><b>Example:</b> You created a mailbox with the address HumanResources@domain.com. Any correspondence with the Human Resources department is sent to this address. Email archive monitors this mailbox and archives emails to <MadCap:variable name="DoNotTranslate.Laserfiche" /> accordingly. Since employees only ever send Human Resources-related messages to this address, there's no need to create rules to forward email sent to other addresses to this mailbox. </p>
+            <h3>Outgoing mail rules</h3>
+            <p>If you want specific outgoing emails to be archived to <MadCap:variable name="DoNotTranslate.Laserfiche" />, you can use client-side mail rules to automatically CC specific messages to the mailbox <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> is polling. </p>
+        </p>
+        <h2>Configuring an <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Profile</h2>
+        <p style="font-weight: normal;">Once all relevant mail is being routed to the correct folder, create an <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-profile.htm" title="Click here to learn more." alt="Click here to learn more.">profile</a> to monitor the folder. Profiles ensure different types of messages are saved to different locations in <MadCap:variable name="DoNotTranslate.Laserfiche" /> and given different metadata. </p>
+        <ul>
+            <li><a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-profile.htm" title="Click here to learn more." alt="Click here to learn more.">Creating a Profile</a>
+            </li>
+            <li><a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-edit-profile.htm" title="Click here to learn more." alt="Click here to learn more.">Editing  a Profile</a>
+            </li>
+            <li>
+                <MadCap:xref href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-run-profile.htm">Running a Profile</MadCap:xref>
+            </li>
+        </ul>
+        <p style="font-weight: normal;">Additionally, after mail is archived to Laserfiche, you can create a <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/LFWorkflow/Content/Resources/Overview.htm" target="_blank">workflow</a> that will route and organize messages in the correct folders. </p>
+        <h3>Advanced Options</h3>
+        <ul>
+            <li><a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Mail Cache Information</a>
+            </li>
+            <li>
+                <MadCap:xref href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-config.htm">Editing the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Service's Configuration File</MadCap:xref>
+            </li>
+        </ul>
+    </body>
+</html>

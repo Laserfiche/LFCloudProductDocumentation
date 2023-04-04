@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Release Notes"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  Skin="/Project/Skins/LF HTML5.flskn"
+  MasterToc="/Project/TOCs/Apiserver.fltoc"
+  DefaultUrl="/Content/api-preview.htm"
+  ConditionTagExpression="exclude[Default.Exclude or Default.FullDocsOnly] "
+  ExcludeUnreferencedContent="true"
+  MasterPage="/Content/Resources/MasterPages/api.flmsp"
+  OutputFile="welcome.htm">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true" />
+</CatapultTarget>

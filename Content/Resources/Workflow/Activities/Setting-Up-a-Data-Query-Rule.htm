@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Using a Query Rule in Workflow</h1>
+        <p>This configuration of <a href="Run-Business-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">the Run Rule activity</a> allows you to use a <a href="../../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">query</a> to find specific data in lookup table or external data source.</p>
+        <p style="font-weight: bold;">To use a query rule in Workflow:</p>
+        <ol>
+            <li>Drag the <b>Run Rule</b> activity from the toolbox pane and drop it in the designer pane.</li>
+            <li>In the properties pane, type a name and description of the activity.</li>
+            <li>In the <b>Rule</b> property box, select whether you want to run a <b>Data Query</b> or <b>Lookup Table Query</b>.</li>
+            <li>Select the rule and rule version.</li>
+            <li>Under <b>Input Values</b>, specify the token or hard-coded values you want to use for each input field. The input values presented here correspond to the Input Value column in the <a href="../../Rules/Data-Queries/Searching-Individual-Values-in-a-Column.htm" title="Click here to learn more." alt="Click here to learn more.">WHERE section</a> of the data query, when the input value is set as an input parameter.</li>
+            <li>Under <b>Output Tokens</b>, specify the name and tag of the single-value token that contains the result of the rule. The output values presented here correspond to the Output Parameter column in the <a href="../../Rules/Data-Queries/Selecting-Columns.htm" title="Click here to learn more." alt="Click here to learn more.">SELECT section</a> of the data query.</li>
+            <li>Under <b>Rows to Return</b>, specify the number of results to return when more than one row matches the inputs. This is especially useful when a data query finds all rows in a table of 10,000 rows, but you only want the first three rows.</li>
+        </ol>
+    </body>
+</html>

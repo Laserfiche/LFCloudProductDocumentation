@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1150" MadCap:lastWidth="1133" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Change Starting Entry Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp" />
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>PreviousEntry_Name</td>
+                    <td class="tabletext">The name of the previous starting entry.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>PreviousEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID number of the previous starting entry.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>PreviousEntry_Path</td>
+                    <td class="tabletext">The folder path of the previous starting entry. </td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>PreviousEntry_FullPath</td>
+                    <td class="tabletext">The folder path of the previous starting entry, including the entry's name in the path. </td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>PreviousEntry_Repository</td>
+                    <td class="tabletext">The repository the previous starting entry was in.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>PreviousEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contained the previous starting entry.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>PrevousEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the previous starting entry.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_PreviousEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Name</td>
+                    <td class="tabletext">The name of the starting entry specified in this activity.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID number of the starting entry specified in this activity.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Path</td>
+                    <td class="tabletext">The folder path of the starting entry specified in this activity.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_FullPath</td>
+                    <td class="tabletext">The folder path of the starting entry specified in this activity, including the entry's name in the path.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Repository</td>
+                    <td class="tabletext">The repository that contains the starting entry specified in this activity.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the starting entry specified in this activity.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the starting entry specified in this activity.
+                </td>
+                    <td class="tabletext">%(ChangeStartingEntry_OutputEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>EntryWasFound</td>
+                    <td class="tabletext">Whether the new starting entry selected in this activity was successfully found in the Laserfiche repository. This token can have one of two values: True or False.</td>
+                    <td class="tabletext">%(ChangeStartingEntry_EntryWasFound)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "ChangeStartingEntry" portion of the syntax changes to match the activity's name.</p>
+        <p class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "'Refresh' Tokens", the syntax for the PreviousEntry_Id token will be "%(RefreshTokens_PreviousEntry_Id)".</p>
+    </body>
+</html>

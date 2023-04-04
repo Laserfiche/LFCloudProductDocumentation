@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Managing Tasks | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Complete, reassign, and view tasks in your inbox." />
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Managing Tasks</h1>
+        <p>The <b>Tasks</b> tab on the Laserfiche home screen helps you easily view and manage all the tasks you have rights to see. Navigate between your tasks and team tasks, and assign, release, or change properties like due dates and priorities.</p>
+        <h2 class="topicheading">Viewing Lists of Tasks</h2>
+        <p>The two main sections in the Tasks tab are <b>My Tasks</b> and <b>Team Tasks</b>. <b>My Tasks</b> includes tasks assigned to you that have not been completed (including <a href="#Drafts">drafts</a>), tasks that you can perform but are not assigned to anyone on a team, and tasks you have completed. <b>Team Tasks</b> includes tasks associated with the team you select in the following drop-down in the top left.</p>
+        <p>
+            <img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/teamdropdown.png" alt="Finding Team Tasks and My Tasks" title="In the My Tasks tab, you can also view drafts of tasks that you are working on." />
+        </p>
+        <p>To change the column display in the list of tasks, click on <b>Change column display</b> (<img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/forms_columndisplay.png" />). This will bring up a dialog that lets you specify the columns shown in the list and their order.</p>
+        <p>For displayed columns, you can order the list of tasks by the tasks' column values. You can also filter on those column values by clicking the <b>Edit filter</b> icon (<img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/forms_inbox_columnfilter.png" />) and entering a string that you want the filtered column values to match.</p>
+        <p>Besides filtering by column, you can also search for tasks in the search bar at the top of the list of tasks.</p>
+        <h2 class="topicheading"><a name="Viewing"></a>Viewing Task Details</h2>
+        <p>Select a task and then click on the <b>Details</b> pane on the right to see more task details. In both tabs of the pane, you can open the task or carry out an action on it (unless it has been completed). In the <b>Summary</b> tab, you can view task information, reassign the task, change its due date, or change its priority.</p>
+        <p>
+            <img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/Capture.bmp" style="width: 335px;height: 307px;" />
+        </p>
+        <p>In the <b>Action History</b> tab, you can see when the various stages of the instance happened and which user or team is responsible for that stage. For a completed task, the time of completion is also shown.</p>
+        <p>
+            <img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/Capture1.bmp" style="width: 338px;height: 292px;" />
+        </p>
+        <p>The task details pane can also be accessed from within the task window itself. When you open a task to work on it, it appears as a expandable/collapsible pane on the right.</p>
+        <p>
+            <img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/taskwindow_details.png" style="width: 780px;height: 279px;" />
+        </p>
+        <h2 class="topicheading">Modifying the Display of Completed Tasks</h2>
+        <p>On the <b>Completed Tasks</b> page, you can view the tasks that the signed-in user completed, which includes forms submitted, processes started, and user tasks finished. The tab displays the 5,000 most recent completed tasks with a link at the bottom to display more.</p>
+        <p class="ex" MadCap:conditions="Default.Do not include"><b>Tip:</b> To modify the default display limit, change the value of GridLoadLimit in the cf_options table. See the <a href="https://support.laserfiche.com/resources/3902/advanced-options-for-laserfiche-forms">Advanced Options for Laserfiche Forms</a> white paper for more details.</p>
+        <h2 class="topicheading">Completing Tasks</h2>
+        <p>You can complete tasks from the main pane of the Tasks tab, or from the <a href="#Viewing">task details pane</a>.</p>
+        <p><b>To complete a task from the main pane</b>:</p>
+        <ol>
+            <li>Click on the name of a task.</li>
+            <li>Complete the form that pops up.</li>
+            <li>Select an action button.</li>
+        </ol>
+        <p>When you submit the form, the process automatically advances to the next task in the process. If you are assigned that task, and the process is set to <a href="User-Tasks.htm#Message">load the following task automatically</a>, the task will appear in your list of assigned tasks.</p>
+        <h2 class="topicheading"><a name="Drafts"></a>Drafts</h2>
+        <p>If you do not have time to complete the form, save it as a draft. The task will be available in the <b>Drafts</b> section of <b>My Tasks</b>. You can complete the task later, or you can reassign the task and save it, and the draft will be removed from your list of assigned tasks. If you begin working and want to discard your changes, click the <b>X</b> in the top right to return to your last saved draft.</p>
+        <h2 class="topicheading">Assigning  Tasks</h2>
+        <p>Tasks can be (re)assigned from the list of tasks, from the <a href="#Viewing">task details pane</a>, or from the task window itself (if you are in the middle of working on a task). Select the task(s) you want to reassign, then click the <b>Reassign selected tasks</b> (<img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/reassign.png" />) icon. If you are in the middle of the task and want to reassign it, you can click the same icon in the top right corner of the task window.</p>
+        <h2 class="topicheading">Changing Due Dates and Priorities on Tasks</h2>
+        <p>You can change due dates and priorities from the <a href="#Viewing">task details pane</a>, from the list of tasks, or from within the task window itself (if you are in the middle of a task).</p>
+        <p><b>To change due dates and priorities from the list of tasks</b>:</p>
+        <ol>
+            <li>Select one or more tasks.</li>
+            <li>Select one of the following options:<ul><li>Click the <b>Modify selected tasks' due dates</b> button  <img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/duedates.png" /> in the toolbar to modify the due date of the task.</li><li>Click the <b>Modify selected tasks' priorities</b> button  <img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/priorities.png" /> in the toolbar to modify the priority of the task.</li></ul></li>
+            <li>Specify the due date or priority.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p><b>To change due dates and priorities from within the task window</b>:</p>
+        <ol>
+            <li>Open the task by clicking on its name (if it is not already open).</li>
+            <li>In the <b>Details</b> pane on the right, click on the value of the property you want to change. Alternatively, click <b>Edit due date</b> (<img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/duedates.png" />) or <b>Edit priority</b> (<img src="../Output/HTML5/Subsystems/ProcessAutomation/Content/Resources/Forms Images/priorities.png" />) in the top right corner.</li>
+            <li>Make your changes and click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

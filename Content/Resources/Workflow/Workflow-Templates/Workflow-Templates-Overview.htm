@@ -1,0 +1,88 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Workflow Templates Overview</h1>
+        <p>Each template is a fully functional workflow that automates a common process. Some run behind the scenes to keep your repository organized, and others drive processes that interact with users.</p>
+        <p><a href="https://support.laserfiche.com/resources/3935" title="Click to go to the support site." alt="Click to go to the support site." target="_blank">Download the Workflow Templates</a>. </p>
+        <p>You can use these templates as:</p>
+        <ul>
+            <li>A starting point for your own workflows. These templates are configured to work with the documents in the <i>Workflow Templates – Test Entries</i> briefcase. You can change the paths, metadata, and other repository specific details in the workflow so that they run with your repository configuration.</li>
+            <li>Hands-on learning tools. The templates demonstrate common workflow concepts and activity combinations. Examine the activities in the templates and then run the templates to see how the activities work. Make small changes to the templates, republish them, and watch how your changes affect the workflows’ actions.</li>
+            <li>An entry point to other workflow help resources. Each activity and option in Workflow is fully documented in the online help files.</li>
+        </ul>
+        <p>The templates will run with minimal or no extra configuration in the folders in the briefcase. If you import the templates without the accompanying briefcase, be aware that you must manually configure the paths, metadata, and starting events before the workflows will run successfully in your repository. We recommend importing the briefcase and running the templates at least once to get an idea of how they work before configuring them to work with your specific entries and metadata.</p>
+        <h2>Importing Laserfiche Briefcases and Workflow templates</h2>
+        <p>The Workflow templates are configured to run with the entries and metadata contained in the <i>Workflow Templates – Test Entries</i> briefcase. While you can edit the Workflow templates to run in any repository configuration, we recommend trying them first with the entries and metadata in the briefcase before editing them to fit your configuration.</p>
+        <h3>Requirements</h3>
+        <p>Before using Workflow templates, you must be able to log in to your repository as a user who has the following rights to the entries in the Workflow Templates – Test Entries folder: the Import feature right and the Browse, Read, Write Metadata, Annotate, Create Documents, and Create Folders entry access rights. <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Security.htm" title="Click to learn more." alt="Click to learn more." target="_blank">Learn more about Laserfiche security.</a></p>
+        <h2>Importing the Workflow Templates - Test Entries briefcase</h2>
+        <p>The Workflow templates come with a <i>Workflow Templates - Test Entries</i> briefcase filled with folders, documents, and Laserfiche metadata. This briefcase functions as a miniature test environment, allowing you to run workflow templates and see how they interact with Laserfiche entries, metadata, and users without interfering with your production environment.</p>
+        <p class="note"><b>Note:</b> Importing the Workflow Templates - Test Entries briefcase will import a Laserfiche template, called Workflow Templates, and its corresponding fields. The fields are named according to the format: Workflow Templates: Field Name. If desired, you can hide this template from other users using <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Field_Rights.htm" title="Click to learn more." alt="Click to learn more." target="_blank">template access rights</a>.</p>
+        <h3>To import the Workflow Templates - Test Entries briefcase</h3>
+        <ol>
+            <li>Open your Laserfiche repository.</li>
+            <li>Browse to the <i>Workflow Templates - Test Entries</i> briefcase in the Workflow Templates package you downloaded from the <a href="https://support.laserfiche.com/resources/3935" title="Click to go to the support site." alt="Click to go to the support site." target="_blank">support site</a>. </li>
+            <li>Drag the briefcase into the root level of the repository.</li>
+            <p class="w"><b>Important</b>: If you import the briefcase into a subfolder, you will need to change the paths in the Workflow templates and starting events for the workflow templates to run.</p>
+            <li>In the <b>Import Briefcase</b> dialog box, click <b>OK</b>.</li>
+            <li>The template selection dialog box will appear informing you that the Workflow Templates template will be created in the repository. Click <b>OK</b>.</li>
+            <li>Once the import is complete, the <i>Workflow Templates - Test Entries</i> briefcase is ready for workflows to be run.</li>
+            <li>Configure security on the Workflow Templates – Test Entries folder. If you want to work with the templates without interference from other users, you may want to only give yourself access to this portion of the repository. <a href="https://doc.laserfiche.com/laserfiche.documentation/english/docs/Default.htm#Security.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Laserfiche security.</a></li>
+        </ol>
+        <h2>Importing the Workflow templates</h2>
+        <p>After you import the workflow templates, they will be ready to interact with entries imported into your Laserfiche repository from the <i>Workflow Templates - Test Entries</i> briefcase.</p>
+        <h3>To import the Workflow templates</h3>
+        <ol>
+            <li>Open Workflows in Process Automation.</li>
+            <li>On the <b>Manage</b> page, click the <b>Import</b> button next to <b>New</b>.</li>
+            <li>Click <b>Choose File</b>, and browse to the .wfi file you want to import from the package you downloaded from the <a href="https://support.laserfiche.com/resources/3935" title="Click to go to the support site. " alt="Click to go to the support site. " target="_blank">support site</a>.  Click <b>Open</b>, and then click <b>Next</b>.</li>
+            <li>	In the <b>Update Connection Profiles</b> step, select your repository. Click <b>Next</b>.</li>
+            <li>In the <b>Update Condition Starting Events</b> step, select the checkboxes on the right to enable the events. Click <b>Next</b>.</li>
+            <li>In the <b>Update Starting Events Repositories</b> step, select all the starting events and use the drop-down at the bottom of the page to select your repository. Click <b>Apply</b> and then <b>Next</b>. </li>
+            <li>In the <b>Update Timer Starting Events</b> step, select the checkbox on the right to enable the WT - Scheduled Approval event. Click&#160;<b>Next</b>. </li>
+            <li>In the <b>Update Starting Events Repositories</b> step, select your repository. Click <b>Next</b>.</li>
+            <li>The <b>Workflows to Import</b> step lists each workflow being imported and the publishing options for each. Select the checkboxes on the right to publish the workflows, then click <b>Next</b>. </li>
+            <li>Confirm the information in the <b>Import Summary</b>, and then click <b>Finish</b> to complete the import.</li>
+            <li>The templates will be listed, along with any of your current workflows on the <b>Manage</b> page. When you select the workflow, you can see its starting events in the pane to the right. The naming scheme for the starting events is “WT - [<i>Rule Name</i>].”</li>
+            <li>You are now ready to work with the workflow templates.</li>
+        </ol>
+        <h2>Using the templates</h2>
+        <p>The template workflows interact with entries in the Workflow Templates – Test Entries folder of your repository. Ensure the briefcase and templates have been imported successfully before interacting with the workflow templates. </p>
+        <p>Learn more about  the using individual templates here:</p>
+        <ul>
+            <li>
+                <MadCap:xref href="Approve-or-Deny-Template.htm">Approve or Deny Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Create-Shortcut-Template.htm">Create Shortcut Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Email-Entry-That-Was-Created-or-Changed-Template.htm">Email Entry That Was Created or Changed Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Metadata-Syncing-Template.htm">Metadata Syncing Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Notify-Project-Team-Template.htm">Notify Project Team Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Rename-and-Move-Template.htm">Rename and Move Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Repeat-Routing-for-Approval-Template.htm">Repeat Routing for Approval Template</MadCap:xref>
+            </li>
+            <li>
+                <MadCap:xref href="Schedule-Approval-Template.htm">Schedule Approval Template</MadCap:xref>
+            </li>
+        </ul>
+        <p>If you want to customize the templates for your own use, you will need to edit them to reflect your specific business process needs. Here are tips to keep in mind when turning a template into a production workflow:</p>
+        <ul>
+            <li>Define and diagram your business process before building a workflow. Ensure everyone who is involved in the process is on board with the proposed automation. Additionally, map out all the details and exceptions that need to be accounted for in your process. Running workflows that do not fit the expectations of the people involved only creates confusion and frustration. To learn more about mapping your process, see the <a href="https://support.laserfiche.com/resources/2178/defining-and-diagramming-business-processes" target="_blank" title="Click to learn more." alt="Click to learn more.">Defining and Diagramming Business Processes</a> white paper on the Laserfiche Support Site.</li>
+            <li>Configure the activities to use your repository’s metadata and folder structure. Select each activity, and from the properties pane, browse your repository to select the fields, templates, tags,  and paths that match your specific needs.</li>
+        </ul>
+        <h3>Rename and republish</h3>
+        <p>After you make all desired changes to the template, change the workflow’s name and <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">publish</a> it as a new workflow. You can attach the condition and schedule starting events from the template to your newly created workflow, or you can create your own starting events.</p>
+    </body>
+</html>

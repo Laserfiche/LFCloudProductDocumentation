@@ -1,0 +1,357 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Records Management Administration</h1>
+        <p>Certain administrative configuration is necessary before you can begin creating and managing records. You will need to ensure that your records managers have the correct rights to perform records management actions, and you will need to create the relevant records management instructions and definitions (such as retention schedules and cutoff instructions)&#160;that will be used to govern records.</p>
+        <h2 class="topicheading">Records Management Security</h2>
+        <p>There are several rights that are specific to records management:&#160;the Records Management privilege, and several records management-specific entry access rights. In addition, records managers must have all other relevant rights to view record information. </p>
+        <h3 class="topicheading">Records Management Privilege</h3>
+        <p>The Records Management privilege allows records managers to create records management definition such as retention schedules and cutoff instructions in Repository Administration, and perform record actions such as cutoff and final disposition in the repository. This privilege does not bypass other forms of security; users must still have other appropriate rights to view and modify records. (Users without this privilege can still view and modify record contents such as pages and metadata, and view but not modify record properties such as life cycle status, as long as they have sufficient other rights.)</p>
+        <p>Retention schedules, cutoff instructions, events, cycle definitions, and locations must be created in Repository Administration before they can be applied to record series, record folders, and records.</p>
+        <h3 class="topicheading">Records Management Entry Access Rights</h3>
+        <p>Records management operations that are not controlled by the Records 
+ Management privilege are controlled through four entry access 
+ rights: </p>
+        <ul>
+            <li><b>Set Last Review Date:</b> Set, unset, or modify the review date on a vital record. </li>
+            <li><b>Close/Reopen Folder
+:</b> Close and reopen record folders, and file new records into closed record folders.</li>
+            <li><b>Add/Remove Hold:</b> Add and remove holds on entries. </li>
+            <li><b>Set Event Time:</b> Set, unset, or modify the event date on a record 
+ folder.  Set, unset, or modify the alternate retention event date. 
+		</li>
+        </ul>
+        <p><b>Records Management Entry Access Rights and Basic Laserfiche Security</b>
+        </p>
+        <p>In addition to records management entry access rights, standard 
+ Laserfiche security rules still apply. If users are unable to see a record, 
+ they will be unable to perform records management actions on that record. Users must have the Browse  and Read entry access rights on 
+ a record folder or record to perform any records management functions 
+ on it.</p>
+        <p>For more information, see <a href="Security.htm">Security</a>.</p>
+        <h2 class="topicheading">Records Management Instructions and Definitions</h2>
+        <p>In Repository Administration, you can set up retention schedules, cutoff instructions, events, cycle definitions , and locations that are used to govern records in your repository.</p>
+        <h3 class="topicheading"><a name="Retentio"></a>Retention Schedules</h3>
+        <p>Records enter 
+ their retention period after they are cutoff. A retention schedule is a collection of rules, usually dictated by compliance regulations, that governs how records 
+ are to be stored and for how long. </p>
+        <p>Retention schedules are created and defined in repository administration and are applied to record series, record folders, or individual records in the repository itself. You must be assigned the Records Management privilege to create, modify, and apply retention schedules.</p>
+        <p><b>Metadata retention</b>
+        </p>
+        <p>When configuring retention schedules, you can select to retain record's metadata information after the record is removed from the Laserfiche repository. This means that the record's images, text, and electronic 
+ files will be removed from the repository, but field values, 
+ records management state, and other metadata (with the exception of version history)&#160;are retained. Metadata is retained by default, and should not be deleted unless there is a valid reason to do so, since it also proves the records were retained correctly even after they are destroyed.</p>
+        <p><b>The retention schedule defines the following:</b>
+        </p>
+        <ul>
+            <li>How long records must be retained.</li>
+            <li>The order, duration, location, and 
+ instructions for interim transfers.</li>
+            <li>The final disposition of the records.</li>
+            <li>The event or events that would trigger an alternate retention schedule, if applicable.</li>
+        </ul>
+        <p><b>To create a retention schedule</b>
+        </p>
+        <p>Before creating a retention schedule, first create any <a href="#Locations">locations</a> and <a href="#Events">events</a> that will be used .</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares." />)&#160;in the upper right corner and select <b>Repository Administration</b>.					</li>
+            <li>Select     <b>Records</b> on the left.</li>
+            <li>Select the <b>Retention&#160;Schedules</b> tab.</li>
+            <li>Click the <b>Add</b> button (<img src="Resources/Images/admin_add_button.png" alt="The Add button, a dark gray plus sign." title="The Add button allows you to add a new item." />).</li>
+            <li>In the <b>General</b> 
+					tab, enter a name and description. </li>
+            <li>In the <b>Instructions</b> tab, specify 
+					the initial retention period. </li>
+            <li>Click <b>Add</b> if you want to insert transfer instructions as part of the retention schedule. Fill in the following:</li>
+            <ul>
+                <li>Select a location for the transfer in the <b>Location</b> option of the <b>Transfers</b> table. If the transfer is within the current file area, select <b>Current file area</b>. (Locations other than <b>Current file area</b> must have already been defined in the repository. See <a href="#Locations">Locations</a> for more information.)</li>
+                <li>In the <b>Retain (months)</b>&#160;option, select the number of months the record should be kept at this location.</li>
+                <li>In the <b>Action</b> option, select <b>Retain all data</b> to keep all information when the record is stored at this location, <b>Retain metadata</b> to keep the metadata about the document but destroy the pages or electronic file, or <b>Destroy records</b> to destroy the entire record.</li>
+            </ul>
+            <li>In <b>Final disposition</b>, select the final disposition action for the retention schedule.</li>
+            <li>If you selected <b>Accession</b> as the final disposition action, 
+					choose the <b>Archival Location</b>. Note that you will not be able to select the current filing system as an archival location, because accession means you are transferring records management responsibility and authority for the records. (Locations  must have already been defined in the repository. See <a href="#Locations">Locations</a> for more information.)</li>
+            <li>Select or clear the option to <b>Retain metadata</b> after performing the final disposition action. In general, we recommend that you retain your record metadata unless your compliance regulations require otherwise</li>
+            <li>Click <b>OK</b> 
+						to close the <b>New Retention Schedule</b> 
+					dialog box and save the retention schedule.</li>
+        </ol>
+        <h3 class="topicheading"><a name="Cutoff"></a>Cutoff Instructions</h3>
+        <p>A cutoff instruction defines when a record folder or record will become eligible for cutoff, and therefore when its retention schedule will begin. Each type of cutoff instruction provides a different way of calculating cutoff eligibility , offering you a more flexible solution to managing your records. </p>
+        <p>Laserfiche offers the following types of cutoff instructions:</p>
+        <ul>
+            <li>
+                <MadCap:toggler targets="time" style="font-weight: bold;">Time</MadCap:toggler> </li>
+            <div MadCap:targetName="time">
+                <p> Time-based cutoff instructions cause records to become eligible for cutoff based on both a cycle definition (e.g., monthly or yearly)&#160;and the filing date of the record folder. The record becomes eligible for cutoff at the start of the next cycle following the record folder's filing date. Cutoff eligibility for time cutoff is calculated based on cycles 
+				and not on an absolute time interval. If you want to use an absolute time interval, you can do so with the Interval cutoff instruction.</p>
+                <p>Time cutoff allows record series or record folders from a specific time period to become eligible for cutoff at the same time so that records managers can group and cutoff all eligible entries at the same time. By default, the filing date is the creation date of the record folder, but it can be manually set to a different date (including future dates).</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me an example</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>If a Time cutoff instruction has a cycle of one month, records with this cutoff instruction will always be eligible for cutoff on the first day of the next month. On the other hand, if an Interval cutoff instruction is set to one month, records with this instruction will be eligible for cutoff exactly one month after the filing date (i.e. records filed on March 15 will be eligible for cutoff on April 15th).</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+            </div>
+            <li>
+                <MadCap:toggler targets="Event" style="font-weight: bold;">Event</MadCap:toggler> </li>
+            <div MadCap:targetName="Event">
+                <p>Event-based cutoff instructions cause records to become eligible for cutoff based on the occurrence of one or more events. When an event occurs, a user with the Set Event Time entry access right can set the event date. </p>
+                <p>If a cutoff instruction only contains one event, the record folder will become eligible based on that event date. If a cutoff instruction contains multiple events, the administrator who configured the cutoff instruction can determine how the multiple events are handled: if <b>Cutoff eligibility requires all events</b> is selected, records are eligible when all event dates have been set and the final event date chronologically has passed (cutoff is based on the final event date); if <b>Cutoff eligibility requires any events is selected</b>, the record is eligible when at least one event date has been set and has passed (cutoff is based on the first event date set).	</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me examples</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>An event-based cutoff 
+							instruction assigned to a record folder has only one event, "Patient discharged from hospital." An authorized user sets the date for this event to January 14, 2008, and the record folder becomes eligible for cutoff on January 14, 2008.<br /><br /></p>
+                            <p>An event-based	cutoff instruction assigned to a record folder has three events. The administrator who configured the cutoff instruction set it to <b>Cutoff eligibility requires all events</b>. The three events are set with the dates June 3, 2010; July 15, 2010 and October 29, 2010. The record is eligible for cutoff on October 29, 2010.<br /><br /></p>
+                            <p>An event-based 
+							cutoff instruction assigned to a record folder has three events. The administrator who configured the cutoff instruction set it to <b>Cutoff eligibility requires any events</b>. The three events are set with the dates June 3, 2010; July 15, 2010 and October 29, 2010. The record is eligible for cutoff on June 3, 2010.</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+                <p class="note"><b>Note:</b> If a record folder is uncutoff, the date for the event that caused the record to be eligible for cutoff (the final event date if all events were required, or the first if any event was required)&#160;will be unset.</p>
+                <p class="note"><b>Note:</b> An event date 
+				can be set to a date in the future. This will close the record folder immediately, but the record folder will not become eligible for cutoff until the event date.</p>
+            </div>
+            <li>
+                <MadCap:toggler targets="TE" style="font-weight: bold;">Time+Event</MadCap:toggler>
+            </li>
+            <div MadCap:targetName="TE">
+                <p>Time+Event-based cutoff instructions combine 
+						the properties of Time and Event cutoff instructions. Records 
+						affected by a Time+Event cutoff instruction become eligible for 
+					cutoff based both the occurrence of one or more events and the cycle definition (e.g., monthly or yearly)</p>
+                <p>Eligibility for cutoff is based on both the cycle time and the events set. If the cutoff instruction is set to require all events, the relevant event is the final event by date once all dates have been set; if the cutoff instruction requires any event, the relevant event is the first event by date. Once the event date passes (whether first or final), the record will be eligible for cutoff on the first day of the next time cycle.</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me an example</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>Two record folders 
+ are both associated with the same monthly Time+Event-based cutoff instruction, with eligibility requiring all dates to be set. The final event date chronologically on one record folder is January 1, while the 
+ final event date chronologically on the second record folder is January 31. Both record 
+ folders become eligible for cutoff on February 1.</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+                <p class="note"><b>Note:</b> If a record folder is uncutoff, the date for the event that caused the record to be eligible for cutoff (the final event date if all events were required, or the first if any event was required)&#160;will be unset.</p>
+            </div>
+            <li>
+                <MadCap:toggler targets="Interval" style="font-weight: bold;">Interval</MadCap:toggler>
+            </li>
+            <div MadCap:targetName="Interval">
+                <p>Interval-based cutoff instructions cause records to become eligible for cutoff based on both the passing of a certain number (interval)&#160;of months and the filing date of the record folder.</p>
+                <p>Cutoff eligibility occurs at the end of a specific interval of months. Interval cutoff instructions are triggered on individual record folders and require the passing of an exact number of months. If you want to use a time interval that is dependent on specific time cycles, you can do so with the Time cutoff instruction (where cutoff eligibility occurs on the first day of the <i>next</i> cycle period). Time cutoff allows record series or record folders from a specific time period to become eligible for cutoff at the same time, allowing the records manager to group and cutoff all eligible entries at the same time.</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me an example</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>If an Interval cutoff instruction is set to one month, records with this instruction will be eligible for cutoff exactly one month after the filing date (e.g., records filed on March 15 will be eligible for cutoff on April 15th). On the other hand, if a Time cutoff instruction has a cycle of one month, records with this cutoff instruction will always be eligible for cutoff on the first day of the next month (e.g., records filed on either March 10th or March 28th will be eligible for cutoff on April 1st).</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+            </div>
+            <li>
+                <MadCap:toggler targets="IE" style="font-weight: bold;">Interval+Event</MadCap:toggler>
+            </li>
+            <div MadCap:targetName="IE">
+                <p>Interval+Event-based cutoff instructions combine 
+						the properties of Interval and Event cutoff instructions. Records 
+						affected by an Interval+Event cutoff instruction become eligible for 
+					cutoff based both the occurrence of one or more events and the passing of a certain number of months (interval).</p>
+                <p>The record becomes eligible for cutoff based on both the critical event and the interval. If the cutoff instruction is set to require <b>all</b> events, the critical event is the final event by date; if the cutoff instruction requires <b>any</b> event, the critical event is the first event. After the critical event date occurs, the specified interval of months begins counting down.&#160;The record will be eligible for cutoff when the interval ends.</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me an example</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>A school has a record series containing record folders for students at the school.&#160;The record folders should be eligible for cutoff six months after the student's graduation. The cutoff instruction contains both the event of the student's graduation and the interval of 6 months. When the student's graduation date occurs, the event is triggered and the interval begins; when six months have passed (after the date of graduation), the record folder can be cutoff.</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+                <p class="note"><b>Note:</b> If a record folder is uncutoff, the date for the event that caused the record to be eligible for cutoff (the final event date if all events were required, or the first if any event was required)&#160;will be unset.</p>
+            </div>
+            <li>
+                <MadCap:toggler targets="Superseded" style="font-weight: bold;">Superseded</MadCap:toggler>
+            </li>
+            <div MadCap:targetName="Superseded">
+                <p>Superseded-based cutoff instructions cause records to become eligible for cutoff based on whether the record has been superseded by another entry.</p>
+                <p>Linking the record to another entry using the "Superseded by" document relationship will trigger the record's cutoff. For this instruction type, cutoff happens automatically, and does not require a records manager to perform cutoff. (If the record is set with the "Supersedes" document relationship, which is the complementary half of the same link, it will not trigger cutoff for the record on the "Supersedes" side of the relationship.) </p>
+                <p>Superseded cutoff is a record-specific cutoff instruction. Simply applying the correct document relationship will automatically trigger cutoff, regardless of what else is happening in the record folder.</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me an example</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>A superseded cutoff instruction is assigned to a record folder containing four documents. An updated copy of a record in that folder is uploaded, and is linked to the older copy such that the older copy is assigned the "Superseded by" end of the document relationship. The older copy is automatically cutoff, even though the other records in the record folder are not.</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+            </div>
+            <li>
+                <MadCap:toggler targets="DA" style="font-weight: bold;">Disposition Action</MadCap:toggler>
+            </li>
+            <div MadCap:targetName="DA">
+                <p>Disposition action-based cutoff instructions cause records to become eligible for cutoff based on two factors:&#160;whether a record has a particular type of document relationship to another record, and whether a particular records management action has been performed on the document that the record is linked to. You can specify any document relationship to use with this disposition type. Cutoff can be triggered based on the linked document either being transferred or entering final disposition.</p>
+                <p>Disposition Action cutoff is a record-specific cutoff instruction. Cutoff will happen as soon as the specified disposition action is performed on the linked record. Cutoff is automatically triggered once the specified records management action is performed on the document the record is linked to, regardless of what else is happening in the record folder.</p>
+                <div class="ex">
+                    <MadCap:dropDown>
+                        <MadCap:dropDownHead>
+                            <MadCap:dropDownHotspot>Show me an example</MadCap:dropDownHotspot>
+                        </MadCap:dropDownHead>
+                        <MadCap:dropDownBody>
+                            <p>A repository contains a set of records, each of which also has a file of associated information. The record and its associated information are connected with a document relationship. When the associated information reaches its final disposition, the file should not be modified any longer. The disposition action cutoff instruction can be used to ensure that, once the document has entered final disposition, the file containing its associated information will be cutoff.</p>
+                        </MadCap:dropDownBody>
+                    </MadCap:dropDown>
+                </div>
+            </div>
+        </ul>
+        <p style="font-weight: bold;">To create cutoff instructions</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares." />)&#160;in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Select       <b>Records</b> on the left.<br /></li>
+            <li>Select the <b>Cutoff Instructions</b> tab.<br /></li>
+            <li>Click the <b>Add</b> (<img src="Resources/Images/admin_add_button.png" alt="The Add button, a dark gray plus sign." title="The Add button allows you to add a new item." />) button.</li>
+            <li>Enter a <b>Name</b> and optional 					<b>Description</b>.</li>
+            <li>In the <b>Type</b> option, select the desired 
+					cutoff instruction. Depending on the cutoff type selected:</li>
+            <ul>
+                <li>
+                    <MadCap:toggler targets="time2" style="font-weight: bold;">Time</MadCap:toggler> </li>
+                <p MadCap:targetName="time2">Select the desired 
+						cycle from the <b>Cycle</b> drop-down menu. (You can create additional cycle definitions if you want to use one that isn't already in the list. See <a href="#Cycle">Cycle Definitions</a> for more information.)</p>
+                <li>
+                    <MadCap:toggler targets="Event2" style="font-weight: bold;">Event</MadCap:toggler> </li>
+                <p MadCap:targetName="Event2">Select an existing event from the drop-down menu, or click <b>Create new event</b>. Repeat for as many events as you want to include. For cutoff instructions with multiple events, select <b>Cutoff eligibility requires any event</b> to allow cutoff as soon as one event date is set, or <b>Cutoff eligibility requires all events</b> to allow cutoff only after all event dates have been set.	To remove an event, select it and click <b>Remove</b><![CDATA[					]]></p>
+                <li>
+                    <MadCap:toggler targets="TE2" style="font-weight: bold;">Time+Event</MadCap:toggler> </li>
+                <p MadCap:targetName="TE2">Select the 
+							desired cycle from the <b>Cycle</b> drop-down menu.
+							(You can create additional cycle definitions if you want to use one that isn't already in the list. See <a href="#Cycle">Cycle Definitions</a> for more information.) In the <b>Events</b> section, click <b>Create new event</b> and  type the name of an event or select one from the drop-down menu. Repeat for as many events as you want to include. For cutoff instructions with multiple events, select <b>Cutoff eligibility requires any event</b> to allow cutoff as soon as one event date is set, or <b>Cutoff eligibility requires all events</b> to allow cutoff only after all event dates have been set.	To remove an event, select it and click <b>Remove</b><![CDATA[					
+							]]></p>
+                <li><b><MadCap:toggler targets="Interval2">Interval</MadCap:toggler></b> </li>
+                <p MadCap:targetName="Interval2">Type the length, in months, of the interval you want to configure in the <b>Interval</b> field.</p>
+                <li><b><MadCap:toggler targets="IE2">Interval+Event</MadCap:toggler></b>
+                </li>
+                <p MadCap:targetName="IE2">Type the length, in months, of the interval you want to configure in the <b>Interval</b> field.
+							In the <b>Events</b> section, click <b>Add</b> and  type the name of an event or select one from the drop-down menu. Repeat for as many events as you want to include. For cutoff instructions with multiple events, select <b>Cutoff eligibility requires any event</b> to allow cutoff as soon as one event date is set, or <b>Cutoff eligibility requires all events</b> to allow cutoff only after all event dates have been set.	To remove an event, select it and click <b>Remove</b><![CDATA[						]]></p>
+                <li><b><MadCap:toggler targets="Sup2">Superseded</MadCap:toggler></b>
+                </li>
+                <p MadCap:targetName="Sup2"> No further configuration is necessary.</p>
+                <li><b><MadCap:toggler targets="DA2">Disposition Action</MadCap:toggler></b>
+                </li>
+                <p MadCap:targetName="DA2">From the <b>Document Relationship</b> drop-down menu, select the 
+							<a href="Links.htm">document relationship</a> type that will satisfy the cutoff instruction. Next, in the <b>Linked action</b> drop-down menu, select which action performed on the linked document will trigger the record's cutoff eligibility.
+If you select <b>Transfer</b> from the Linked Document Action drop-down menu, specify the transfer location that will satisfy the cutoff instruction from the <b>Location</b> drop-down menu. (Locations must have already been defined in the repository. See <a href="#Locations">Locations</a> for more information.)						</p>
+            </ul>
+            <li>Click <b>OK</b> 
+					to close the dialog box and create the new cutoff instruction.</li>
+        </ol>
+        <h3 class="topicheading"><a name="Events"></a>Events</h3>
+        <p>An event is an occurrence that causes records with an Event, Time+Event, or Interval+Event cutoff instruction to be cut off, or that may trigger an alternate retention schedule. </p>
+        <p><b>To create an event</b>
+        </p>
+        <p class="note"><b>Tip:</b> Events can also be created while creating <a href="#Cutoff">cutoff instructions</a>.</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares." />)&#160;in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Select <b>Records</b> on the left.</li>
+            <li>Select the <b>Record Properties</b> tab.</li>
+            <li>Click the <b>Add</b> (<img src="Resources/Images/admin_add_button.png" alt="The Add button, a dark gray plus sign." title="The Add button allows you to add a new item." />) button.</li>
+            <li>In the <b>Name</b> option, specify a name for this event.</li>
+            <li><b>Optional:</b>&#160;In the <b>Description</b> option, type a description for the event.</li>
+            <li>Click <b>OK</b>&#160;to add the event.</li>
+        </ol>
+        <h3 class="topicheading"><a name="Cycle"></a>Cycle Definitions</h3>
+        <p>Cycle definitions are used by Time and Time+Event cutoff instructions 
+ to determine cutoff eligibility, as well as to determine 
+ vital record review cycles. Laserfiche includes nine predefined cycle 
+ definitions, which can be modified, and allows you to create new 
+ definitions. Each cycle definition is composed of the following 
+ properties:</p>
+        <ul>
+            <li>Code</li>
+            <li>Description</li>
+            <li>Type of cycle</li>
+            <li>Individual periods that determine the cycle</li>
+        </ul>
+        <p><b>Types of cycle definitions</b>
+        </p>
+        <p>There are two types of cycle definitions:</p>
+        <ul>
+            <li><b>Monthly </b>cycle definitions can contain anywhere from a single month to 
+ 12 months. The month specified in a monthly cycle definition indicates 
+ the end of the period. Any applicable records management actions that 
+ depend on the cycle become eligible at the start of the following period. 
+ <p class="ex"><b>Example: </b>A monthly cycle definition with one period set to December 
+ creates a yearly cycle where records would become eligible for cutoff 
+ and vital records would be due for review on January 1. Another monthly cycle definition with six periods (i.e., February, April, June, August, October, December) creates a bimonthly cycle where records would become eligible for cutoff on the first day of the month following the end of the period (e.g., March 1 for the February period).</p></li>
+            <li><b>Daily </b>cycle definitions can contain anything from a single day to seven days. 
+ Any applicable records management actions that depend on the cycle become 
+ eligible at the start of the specified day. <p class="ex"><b>Example: </b>A daily cycle 
+ definition that has one period set to Wednesday creates a weekly cycle 
+ where records would become eligible for cutoff on Wednesday.</p></li>
+        </ul>
+        <p class="note"><b>Note:</b> Monthly cycle definitions and daily cycle definitions behave differently. 
+ A monthly cycle period definition indicates the end of the period, 
+ with records management actions becoming eligible on the first day of 
+ the next month. A daily cycle period definition indicates the 
+ day of the week on which records management actions become eligible.</p>
+        <p style="font-weight: bold;">To create a cycle definition</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares." />)&#160;in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Select <b>Records</b> on the left.</li>
+            <li>Select the <b>Record Properties</b> tab.</li>
+            <li>Under <b>Review Cycles</b>, click the <b>Add</b> (<img src="Resources/Images/admin_add_button.png" alt="The Add button, a dark gray plus sign." title="The Add button allows you to add a new item." />) button.</li>
+            <li>In the <b>Code</b> option, specify a cycle definition code to identify the cycle.</li>
+            <li><b>Optional:</b>&#160;In the <b>Description</b> option, type a description for the cycle definition.</li>
+            <li>In the <b>Cycle definition</b> option, select Set cycle by and then specify the month or months.</li>
+            <li>Click <b>OK</b>&#160;to add the cycle definition.</li>
+        </ol>
+        <h3 class="topicheading"><a name="Locations"></a>Locations</h3>
+        <p>Before you can select a location in a retention schedule, you must first define the physical location that your records will be transferred or accessioned to. </p>
+        <p><b>To create a location</b>
+        </p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares." />)&#160;in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Select <b>Records</b> on the left.</li>
+            <li>Select the <b>Record Properties</b> tab.</li>
+            <li>In the <b>Locations</b> section, click the <b>Add</b> (<img src="Resources/Images/admin_add_button.png" alt="The Add button, a dark gray plus sign." title="The Add button allows you to add a new item." />) button.</li>
+            <li>In the <b>Name</b> option, specify a name for the location.</li>
+            <li><b>Optional:</b>&#160;In the <b>Description</b> option, type a description for the location.</li>
+            <li><b>Optional</b>:&#160;In the <b>Contact information</b> option, add any contact information that you want to include for this location. You can provide a fax number, address, name, phone number and email for up to two contacts.</li>
+            <li>Click <b>OK</b>&#160;to add the event.</li>
+        </ol>
+        <h3 class="topicheading"><a name="Holds"></a>Holds</h3>
+        <p>Holds prevent modification to documents and halt their records management life cycles. Administrators with the Records Management privilege can view all the holds that are currently assigned to entries in the repository and their due dates (if any), view lists of which entries have specific holds applied to them, and delete holds, which will also remove the hold from all entires to which it is assigned.</p>
+        <p><b>To view holds</b>
+        </p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares."></img>)&#160;in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Select <b>Records</b> on the left.</li>
+            <li>Select the <b>Holds</b> tab.</li>
+            <li>The list of all existing hold reasons and their due dates (if any)&#160;will be displayed.</li>
+            <li>To view the entries assigned a particular hold, select the hold name. In the <b>Edit Hold</b> dialog box, select <b>View entries</b>. </li>
+        </ol>
+        <p style="font-weight: bold;">To delete a hold</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click the grid icon (<img src="Resources/Images/grid_widget_icon.png" title="The grid button allows you to move between your documents and folders, Repository Administration, Account Administration, and Audit Reports." alt="The grid button, a three by three grid of white squares."></img>)&#160;in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Select <b>Records</b> on the left.</li>
+            <li>Select the <b>Holds</b> tab.</li>
+            <li>The list of all existing hold reasons and their due dates (if any)&#160;will be displayed. Select the hold that you want to remove and then select the Delete button (<img src="Resources/Images/fb_delete_button.png" />). This will delete the hold and remove it from all entires to which it was assigned.</li>
+        </ol>
+    </body>
+</html>

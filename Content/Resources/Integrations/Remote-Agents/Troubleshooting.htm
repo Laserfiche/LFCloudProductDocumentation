@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Troubleshooting Remote Agents | Process Automation | Laserfiche Cloud</title>
+        <meta name="description" content="Learn to view the status of your workers and read their logs." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Troubleshooting Workers</h1>
+        <p>You can troubleshoot and view the status of your <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">workers</a> by navigating to the worker  in the <b>Workers</b> tab of a <a href="Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">remote agent</a>. These logs can help you determine why a worker stopped, when you need to reconfigure a worker, or when a worker is not performing as expected.
+</p>
+        <p>The logs contain the following sections:
+</p>
+        <ul>
+            <li><b>Worker Status</b>: This section states the last time the worker made a successful call to Process Automation.</li>
+            <li><b>Status</b>: This section says whether the worker is enabled or disabled.</li>
+            <li><b>Events</b>: This section provides a detailed log of when major events occur for the selected worker (e.g., when there is a connection error, when a resource is deleted, when authorization fails, etc.).</li>
+            <li><b>History</b>: This section describes the progress of the worker's work items. For example, if the work item involves looking up a data source, it can indicate whether the data query successfully ran.</li>
+        </ul>
+        <h2 class="topicheading">Viewing the Version of a Remote Agent Worker</h2>
+        <ol>
+            <li>From the configuration page for your remote agent, click the Workers tab. For each registered worker take note of the displayed version number.<p><img src="../images/worker-version.png" title="screenshot showing remote agent worker version" alt="screenshot showing remote agent worker version" style="border-style:solid; border-width:1px; width:100%; " /></p></li>
+        </ol>
+        <h2>Viewing the Event Log for a Remote Agent Worker</h2>
+        <ol>
+            <li>From the configuration page for your remote agent, click the Workers tab. For a specific registered worker, expand the <b>Events</b> section, to view a log of when major events occur for the selected worker.</li>
+        </ol>
+        <h3>Common Error Events</h3>
+        <p>View the <b>Events</b> of a registered worker to see a log of major events.</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Event Type</b>
+                    </td>
+                    <td class="tableheading"><b>Notes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Authorization failure</td>
+                    <td class="tabletext">
+                        <p>The worker cannot connect to Laserfiche Cloud.</p>
+                        <p>One common cause for this error type is if the worker version is outdated.</p>
+                        <p>If the worker version is outdated:</p>
+                        <ol>
+                            <li>Remove the outdated worker.</li>
+                            <li>Download the latest version of worker installation package.</li>
+                            <li>Reinstall the worker on the appropriate machine and re-register the worker.</li>
+                        </ol>
+                        <p>Current version number for the data source remote agent worker:</p>
+                        <ul>
+                            <li>11.4.2208.01001 (updated in November 2022)</li>
+                            <li>11.5.2211.22001 (updated in December 2022)</li>
+							<li>11.5.2301.02001 (updated in January 2023)</li>
+                        </ul>
+                        <p>Current version number for the Dedicated Bot Remote Agent Bot Worker:</p>
+                        <ul>
+                            <li>11.0.2208.01001</li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

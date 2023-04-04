@@ -1,0 +1,463 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Find Entries Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>EntriesFoundCount</td>
+                    <td class="tabletext">The number of entries found with the Find Entries activity. (Legacy format)</td>
+                    <td class="tabletext">%(FindEntries_EntriesFoundCount)</td>
+                </tr>
+                <tr>
+                    <td>Result Count</td>
+                    <td class="tabletext">The number of entries found with the Find Entries activity.</td>
+                    <td class="tabletext">%(FindEntries_Result Count)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "FindEntries" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Look-For-Forms", the syntax for the Result Count token is "%(LookForForms_Result Count)".</div>
+        <p style="font-weight: bold;">Tokens for each entry found</p>
+        <p>More tokens are available after you use this activity with the <b>For Each Entry</b> activity. The <b>For Each Entry</b> activity runs one time per entry. Each time it runs, the tokens are replaced by information relevant to the entry it is currently processing.</p>
+        <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>CurrentEntry_Name</td>
+                    <td class="tabletext">The name of the current entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID number of the current entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Path</td>
+                    <td class="tabletext">The folder path of the current entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_FullPath</td>
+                    <td class="tabletext">The folder path of the current entry, including the entry's name.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Repository</td>
+                    <td class="tabletext">The repository the current entry is in.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the current entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the current entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CheckOutComment</td>
+                    <td class="tabletext">The comment associated with the current version of the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckOutComment)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CheckedOutBy</td>
+                    <td class="tabletext">The user account that checked out the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckedOutBy)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CheckedOutBySID	</td>
+                    <td class="tabletext">The Security Identifier of the user account that checked out the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckedOutBySID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ClassificationLevel</td>
+                    <td class="tabletext">The VERS classification level of the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ClassificationLevel)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CreatedBy</td>
+                    <td class="tabletext">The user account that created the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CreatedBy)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CreatedBySID</td>
+                    <td class="tabletext">The Security Identifier of the user account that created the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CreatedBySID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CreationDate</td>
+                    <td class="tabletext">When the entry was created.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CreationDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CutoffCycle</td>
+                    <td class="tabletext">The name of the records management cutoff cycle governing the entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CutoffCycle)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CutoffDate</td>
+                    <td class="tabletext">When the record was cut off.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CutoffDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CutoffEligibility</td>
+                    <td class="tabletext">When the record become eligible for cutoff.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CutoffEligibility)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CutoffInstruction</td>
+                    <td class="tabletext">The name of the records management cutoff instruction that governs the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CutoffInstruction)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CutoffInstructionType</td>
+                    <td class="tabletext">The type of cutoff instruction.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CutoffInstructionType)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ParentID</td>
+                    <td class="tabletext">The Laserfiche ID number of the parent folder containing the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ParentID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ElectronicFileLastModifiedDate</td>
+                    <td class="tabletext">When the electronic file associated with the document was last modified.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ElectronicFileLastModifiedDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ElectronicFileSize</td>
+                    <td class="tabletext">The file size of the electronic file associated with the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ElectronicFileSize)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_EntryLock</td>
+                    <td class="tabletext">Specifies whether the found entry is currently locked.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_EntryLock)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_EventDate</td>
+                    <td class="tabletext">The set event date on a record.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_EventDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Extension</td>
+                    <td class="tabletext">The file extension of the electronic file.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Extension)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_FilingDate</td>
+                    <td class="tabletext">The filing date of the found entry, if the found entry is under records management.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_FilingDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_FinalDispositionAction</td>
+                    <td class="tabletext">The final disposition action type on the retention schedule governing the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_FinalDispositionAction)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_FinalDispositionDate</td>
+                    <td class="tabletext">The final disposition date on the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_FinalDispositionDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasSubfolders</td>
+                    <td class="tabletext">Indicates whether the found entry contains subfolders.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasSubfolders)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasDocumentRelationships</td>
+                    <td class="tabletext">Indicates whether the found entry contains document relationships.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasDocumentRelationships)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasElectronicDocument</td>
+                    <td class="tabletext">Indicates whether the found entry is associated with an electronic file.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasElectronicDocument)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasImage</td>
+                    <td class="tabletext">Specifies whether the found entry is a document that contains image pages.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasImage)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasLocations</td>
+                    <td class="tabletext">Indicates whether the document text is linked to locations on page images.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasLocations)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasTags</td>
+                    <td class="tabletext">Indicates whether the found entry has assigned tags.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasTags)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasText</td>
+                    <td class="tabletext">Indicates whether the found entry contains text pages.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasText)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasThumbnails</td>
+                    <td class="tabletext">Indicates whether the found entry contains thumbnail images.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasThumbnails)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HitCount</td>
+                    <td class="tabletext">The number of context hits.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HitCount)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsCheckedOut</td>
+                    <td class="tabletext">Indicates whether the found entry is currently checked out.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsCheckedOut)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsClosed</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is closed.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsClosed)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsCutoff</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is cutoff.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsCutoff)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsDispositioned</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is in final disposition.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsDispositioned)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsFrozen</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is currently frozen.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsFrozen)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsIndexed</td>
+                    <td class="tabletext">Indicates whether the found entry is indexed.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsIndexed)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsLatestVersion</td>
+                    <td class="tabletext">Indicates whether the found entry is the highest position in a document link group. This value defaults to True for documents that are not in a link group.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsLatestVersion)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsSigned</td>
+                    <td class="tabletext">Indicates whether the found entry contains a digital signature.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsSigned)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsVersionControlled</td>
+                    <td class="tabletext">Indicates whether the found entry is under version control.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsVersionControlled)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_IsVitalRecord</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is marked as vital.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsVitalRecord)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LastModifiedBy</td>
+                    <td class="tabletext">The user account that last modified the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LastModifiedBy)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LastModifiedBySID</td>
+                    <td class="tabletext">The SID of the user account that last modified the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LastModifiedBySID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LastModifiedDate</td>
+                    <td class="tabletext">The last modified date of the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LastModifiedDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LastReviewDate	</td>
+                    <td class="tabletext">The last time that a vital record was reviewed.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LastReviewDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LatestVersionNumber</td>
+                    <td class="tabletext">The latest version number of a document under version control.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LatestVersionNumber)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LinkGroupNumber</td>
+                    <td class="tabletext">The ID of the link group that found entry belongs to.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LinkGroupNumber)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Location</td>
+                    <td class="tabletext">The current location of the found record.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Location)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LocationID</td>
+                    <td class="tabletext">The ID of the current location of the found record.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LocationID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LockedBy</td>
+                    <td class="tabletext">The user account that has a lock on the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LockedBy)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LockedBySID</td>
+                    <td class="tabletext">The SID of the user account that has a lock on the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LockedBySID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_MimeType</td>
+                    <td class="tabletext">The MimeType of the electronic file associated with the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_MimeType)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_NextReviewDate</td>
+                    <td class="tabletext">When the vital record is next due for review.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_NextReviewDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_OCRedPages</td>
+                    <td class="tabletext">The number of OCRed pages in the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_OCRedPages)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_OwnerName</td>
+                    <td class="tabletext">The user account that is marked as the owner of the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_OwnerName)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_OwnerSID</td>
+                    <td class="tabletext">The user account that is marked as the owner of the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_OwnerSID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_PageCount</td>
+                    <td class="tabletext">The number of pages in the found document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_PageCount)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CheckOutComment</td>
+                    <td class="tabletext">The check out comment if the found entry is currently checked out.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckOutComment)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_RecordFolderId</td>
+                    <td class="tabletext">The entry ID of the record folder that contains the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_RecordFolderId)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Relevance</td>
+                    <td class="tabletext">The Laserfiche Full-Text Search Engine's relevance score for a found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Relevance)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_RetentionSchedule</td>
+                    <td class="tabletext">The Retention Schedule governing a record.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_RetentionSchedule)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ReviewandUpdateCyclePeriod</td>
+                    <td class="tabletext">The review cycle that governs a vital record.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ReviewandUpdateCyclePeriod)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Security</td>
+                    <td class="tabletext">The allowed entry access rights for the user that is doing the search.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Security)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_SeriesCode</td>
+                    <td class="tabletext">The record series code. This value only returns on the actual record series.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_SeriesCode)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ShortcutTargetID</td>
+                    <td class="tabletext">The entry ID of the target of a shortcut.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ShortcutTargetID)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_ShortcutTargetType</td>
+                    <td class="tabletext">The entry type of the target of a shortcut.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_ShortcutTargetType)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_SignatureCount</td>
+                    <td class="tabletext">The number of digital signatures on the document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_SignatureCount)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_TemplateColor</td>
+                    <td class="tabletext">The color of the template that is assigned to the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_TemplateColor)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_TemplateId</td>
+                    <td class="tabletext">The ID of the template that is assigned to the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_TemplateId)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_TemplateName</td>
+                    <td class="tabletext">The name of the template that is assigned to the found entry.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_TemplateName)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_TotalDocumentSize</td>
+                    <td class="tabletext">The sum of the sizes of all parts of the found Laserfiche document (images, text, electronic file).</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_TotalDocumentSize)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Type</td>
+                    <td class="tabletext">Whether the found entry is a record series, folder, or document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Type)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_Volume</td>
+                    <td class="tabletext">The name of the Laserfiche volume that contains the pages of the found document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Volume)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_VolumeId</td>
+                    <td class="tabletext">The ID of the Laserfiche volume that contains the pages of the found document.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_VolumeId)
+</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "ForEachEntry" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Apply [Settings] to Each", the syntax for the CurrentEntry_Id token is "%(ApplySettingstoEach_CurrentEntry_Id)".</div>
+    </body>
+</html>

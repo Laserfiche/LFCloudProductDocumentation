@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Creating a Python Script</h1>
+        <p>This topic provides an overview on creating a sample Python script for use with a Laserfiche Cloud <a href="scripts.htm">Script Rule</a>.</p>
+        <ol>
+            <li>Ensure that Python is installed on the remote agent host, and that the system variables have been configured to allow "python" or "python.exe" to run command-line python scripts.</li>
+            <li>Create a .py script file or use our <a href="https://support.laserfiche.com/download/4146/laserfiche-cloud-custom-scripting-starting-templates" title="Python Script Starting Template" alt="Python Script Starting Template">helper script</a>. Inputs in the script can be accessed by:
+            <p class="ex">sys.argv[1] (…) sys.argv[n]</p><p> which will return the inputs to the script in the format:</p><p class="ex">"inputName1=value1" (…) "inputNamen=valuen"</p><p>which can be parsed in your script.</p><p>Outputs from the script should be printed to the standard output in the format:</p><p class="ex">"outputName1:value1"</p></li>
+            <li>The following is an example of a Python script that takes two inputs, combines them, and returns them as a single output value.</li><pre class="ex" xml:space="preserve">
+import sys
+def main():
+	inputval1 = sys.argv[1].split("=")[1]
+	inputval2 = sys.argv[2].split("=")[1]
+
+	print(f"OutputValue:{inputval1} {inputval2}")
+
+if __name__ == '__main__':
+	main()
+</pre>
+        </ol>
+        <h3>Related Links</h3>
+        <p>See the following Laserfiche Support Site link to download blank script templates for your C#, Node.js, or Python scripts.</p>
+        <p><a href="https://support.laserfiche.com/download/4146" target="_blank" title="Laserfiche Support Site download link" alt="Laserfiche Support Site download link">https://support.laserfiche.com/download/4146</a>
+        </p>
+    </body>
+</html>

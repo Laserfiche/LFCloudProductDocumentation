@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="573" MadCap:lastWidth="1133" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Wait for Entry Change Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col style="width: 97px;">
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Initially Satisfied</td>
+                    <td class="tabletext">
+                        The token returns "True"&#160;if the wait condition was initially satisfied.                    </td>
+                    <td class="tabletext">%(WaitforEntryChange_Initially Satisfied)</td>
+                </tr>
+                <tr>
+                    <td>Duration</td>
+                    <td class="tabletext">How long it took the wait condition to be satisfied.</td>
+                    <td class="tabletext">%(WaitforEntryChange_Duration)</td>
+                </tr>
+                <tr>
+                    <td>Event Id</td>
+                    <td class="tabletext">The event ID number for the wait condition being satisfied.</td>
+                    <td class="tabletext">%(WaitforEntryChange_Event ID)</td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td class="tabletext">The user who satisfied the wait condition.*</td>
+                    <td class="tabletext">%(WaitforEntryChange_User)</td>
+                </tr>
+                <tr>
+                    <td>User SID</td>
+                    <td class="tabletext">The SID (Security Identifier) of the user who satisfied the activity's wait condition.*</td>
+                    <td class="tabletext">%(WaitforEntryChange_User SID)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "WaitforEntryChange" portion of the syntax changes to match the activity's name.</p>
+        <p class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Wait for (Approval)", the syntax for the Event Id token will be "%(WaitforApproval_Event Id)".</p>
+        <div><b>*</b>When a wait condition is satisfied, two tokens are created that indicate who satisfied the condition (User Name and User SID). However, in the unlikely event that two users make changes to the entry within a short time period, the tokens indicate the user who made the changes that caused the wait condition to be evaluated, not necessarily the user who made the changes that caused the wait condition to be satisfied.</div>
+    </body>
+</html>

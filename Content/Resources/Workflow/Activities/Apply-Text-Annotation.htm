@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Apply Text Annotation</h1>
+        <p style="text-align: center;">
+            <img src="Images/applyTextAnnotationCanvas.PNG" title="Apply Text Annotation activity" alt="Apply Text Annotation activity" />
+        </p>
+        <p>The Text Annotation activity allows you to hide, partially hide, or emphasize text on a document. The activity includes various annotation types, such as redaction, highlight, strikethrough, and underline. You can use one activity for each annotation you want to apply.
+<a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Apply-Text-Annotation-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Type of Annotation</b> property box, select the annotation you want to apply to the entry. (More information below)</li>
+            <li>Use the <b>New pattern...</b> option to specify the text you want to annotate using regular expressions. The annotation applies to all text on the document that matches the regular expression pattern specified with this option. <a href="../Tokens-Regex/Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about regular expressions</a></li>
+            <li>
+                In the <b>Add Annotation To</b> property box, select the entry on which the actions are applied. For example, you can use a <a href="Find-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entry</a> activity to find the entry that contains the text you want to annotate and then use the <b>Text Annotation</b> activity to reference the found entry.
+            </li>
+        </ol>
+        <h2>Types of Annotations</h2>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Types of Annotations</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Annotation</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Redaction</td>
+                    <td class="tabletext">Redaction is a method of hiding or censoring text for security or legal purposes. The redaction option in this activity applies a black or white coloring to text, hiding the underlying text. The option also requires you to select from a list of reasons as to why the text was redacted. You can learn how to modify the list of reasons in the <b><a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/LFAdmin/Content/redaction-reasons.htm#tabs-2" style="font-weight: normal;">Redaction Reasons</a></b> topic.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Highlight</td>
+                    <td class="tabletext">Highlight places a coloring over text to emphasize the underlying text.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Strikethrough</td>
+                    <td class="tabletext">Strikethrough places a horizontal line through the center of a block of text. The text is still readable and not completely censored.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Underline</td>
+                    <td class="tabletext">Underline places a horizontal line below a block of text to emphasize the text.</td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

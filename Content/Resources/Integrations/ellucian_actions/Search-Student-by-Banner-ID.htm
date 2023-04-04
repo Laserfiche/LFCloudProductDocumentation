@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Student by Banner ID</title>
+    </head>
+    <body>
+        <h1>Search Student by Banner ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action could be used for searching all the personal information of a student and returns one or no results.</p>
+        <ul>
+            <li><b>Category:</b> Student</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="&#160;" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Banner ID*</p>
+                    </td>
+                    <td>
+                        <p>Is the Guid identifier for the searched student.</p>
+                        <p>User must input Banner Id exactly as is on Ellucian.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>Returns a single result set.</p>
+        <table id="SearchStudentByBannerID-OUT" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Banner Username</p>
+                    </td>
+                    <td>
+                        <p>The Username for the searched student on Ellucian.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Billing Address</p>
+                        <p>Mailing Address</p>
+                    </td>
+                    <td>
+                        <p>Billing and Mailing addresses are identical in format.</p>
+                        <p>Requires additional API call.</p>
+                        <p>
+                            <MadCap:toggler targets="AddressSubFields">See the Address sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="AddressSubFields">
+                            <li>Address: A list of strings.</li>
+                            <li>City: Has no particular format.</li>
+                            <li>Country: A 3 letter ISO 3166-1 string (e.g. USA).</li>
+                            <li>Postal Code: Has a different format depending on the input for "country" and is validated so must follow the format of the Country selected.</li>
+                            <li>State: An ISO 3166-2 string (e.g. US-NC)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Citizenship Country</p>
+                    </td>
+                    <td>
+                        <p>
+                            <p>A 3 letter ISO 3166-1 string (e.g. USA)</p>
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date of Birth</p>
+                    </td>
+                    <td>
+                        <p>A date string.
+                        </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Email/Email Address</p>
+                    </td>
+                    <td>
+                        <p>A list of strings.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Ethnicity</p>
+                    </td>
+                    <td>
+                        <p>Includes sub-fields: Ethnicity ID (Value), Title</p>
+                        <p>Requires additional API call</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Gender</p>
+                    </td>
+                    <td>
+                        <p>Includes sub-fields: Ethnicity ID (Value), Title</p>
+                        <p>Requires additional API call</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Home Phone</p>
+                        <p>Mobile Phone</p>
+                    </td>
+                    <td>
+                        <p>Home and Mobile Phone fields are identical in format.</p>
+                        <p>Includes sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="PhoneSubFields">See the Phone sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="PhoneSubFields">
+                            <li>Country Code: A 4-character string the can have a preceding '+' (the 4 character limit includes the '+').</li>
+                            <li>Extension: A string that is at most 10 characters.</li>
+                            <li>Number: A string that is at least 1 character, can be any length but is cut off after 18 characters.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Marital Status</p>
+                    </td>
+                    <td>
+                        <p>Includes sub-fields: Marital Category (Value), Marital Category ID, Code, Title</p>
+                        <p>Requires additional API call</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>Includes sub-fields: First Name, Last Name, Middle Name and Pedigree</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Person ID</p>
+                    </td>
+                    <td>
+                        <p>Is the Guid identifier of the student</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>SSN</p>
+                    </td>
+                    <td>
+                        <p>Male/Female/Unknown (case sensitive)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Student Terms</p>
+                    </td>
+                    <td>
+                        <p>Requires additional API call</p>
+                        <p>Includes sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="TermsSubFields">See the Student Terms sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="TermsSubFields">
+                            <li>Student Terms/Student Term ID: The Guid identifier for the Student Term.</li>
+                            <li>Student Terms/Academic Levels: Requires additional API call, and has additional sub-fields (<MadCap:toggler targets="AcedemicLevelSubFields">See the Academic Levels sub-fields</MadCap:toggler>).
+                        <ul MadCap:targetName="AcedemicLevelSubFields"><li>Academic Level/Academic Level ID: The Guid identifier for the academic levels under the Student Term.</li><li>Academic Level/Code: The code that identifies the academic levels under the Student Term (for example, ‘UG’).</li><li>Academic Level/Title: The full name of the academic levels under the Student Term (for example, ‘Undergraduate’).</li><li>Priority: The priority of an Academic Level for a given period (for example, "primary").</li></ul></li>
+                            <li>Student Terms/Term: Requires additional API call and includes sub-fields. <MadCap:toggler targets="TermSubFields">See the Term sub-fields.</MadCap:toggler><ul MadCap:targetName="TermSubFields"><li>Term ID: The Guid identifier for the term under the Student term.</li><li>Code: The code that identifies the academic period under the Student Term (for example, ‘UG’).</li><li>Title: The full name of the term under the Student Term (for example, ‘Undergraduate’)</li><li>Registration: The availability for registration for the term under the Student Term (for example, 'open')</li><li>Start On: The date the term under the Student Term starts/started (for example, ‘2015-01-05T00:00:00+00:00’)</li><li>End On: The date the term under the Student Term ends/ended (for example, ‘2016-01-05T00:00:00+00:00’)</li></ul></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="note">
+            <p style="font-weight: bold;">Search Student by Banner ID Notes:</p>
+            <p>For fields with mapping, the search results will reflect the mappings. For example, if a connection has "Name" mapped to "Legal" and a search is performed on a Student with no "Legal" name, then the "Name" fields in the results will be empty.</p>
+            <p>Student Term is a collection for each Student, they are sorted by Academic Period - Start On.</p>
+            <p>Academic levels is a collection under Student Term.</p>
+            <p>The academic levels listed under Student Terms, they are all the academic levels of any programs the student was actively enrolled in for that specific term.</p>
+            <p>For the Student Terms under the Student model, each represents a Term that the student was enrolled in an active program. These will not be removed after the student has completed the term and/or the program.</p>
+        </div>
+    </body>
+</html>

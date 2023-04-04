@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head />
+    <body>
+        <h1>Assign Field Values</h1>
+		<p style="text-align: center;">
+			<img src="Images/assignFieldValuesCanvas.PNG" title="Assign Field Values activity" alt="Assign Field Values activity" />
+		</p>
+		<p>This activity assigns and reassigns a template and field values in a Laserfiche entry. A field value is a piece of information in a field about a document or folder. This could be, for example, an author’s name, an invoice number, or an address. A template is a collection of fields. Only one template may be applied to a document or folder at a time. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Assign-Field-Values-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Template</b> property box, select a template.</li>
+            <ul>
+                <li><![CDATA[
+			
+			
+			]]><b>Keep the current template</b>: Keeps the template currently assigned to the Laserfiche entry.
+			
+			
+			</li>
+                <li><b>Unassign the current template</b>: Removes the template from the Laserfiche entry.</li>
+                <li><b>Assign the following template</b>: Assigns a new template to the Laserfiche entry. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            </ul>
+            <li>When you unassign or assign a template, select <b>Remove fields from unassigned templates</b> to remove all fields associated with the entry's starting template. Clear the checkbox so that the template's fields remain associated with the entry even though the template is removed.</li>
+            <li>In the <b>Field Values</b> property box, click <b>Choose fields...</b> to add fields.</li>
+            <li>Select the fields from the list you want to assign values to. If a template is assigned in the <b>Template</b> property box, only the fields in that property box are available.</li>
+            <li>Click <b>OK</b>.</li>
+            <li>Configure the field in the property box.</li>
+            <li>In the <b>Assign Field Values To</b> property box, select the Laserfiche entry you want to assign field values to. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

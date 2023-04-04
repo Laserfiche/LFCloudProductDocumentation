@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Importing Files</h1>
+        <p>You can add any file on your computer to Laserfiche by importing it. This allows you to store all your content in one place. You can also import files saved in Google Drive, OneDrive, or OneDrive for Business directly into Laserfiche.</p>
+        <p>When you import image files, they will be made into pages in a Laserfiche document, which allows you to use Laserfiche annotations with them. When you import non-image files, such as Word documents, Excel spreadsheets, or Photoshop projects, they will remain in their original formats. When you import a PDF, it will be converted to pages that you can annotate, but your original PDF will be retained in the document as well. </p>
+        <p class="note"><b>Note:</b>&#160;If you want to convert an imported file that is not an image or a PDF to pages, you can do so using <a href="Snapshot.htm#Snapshot/Snapshot_Overview.htm">Snapshot</a>. If you want to scan paper documents, or perform image processing on already-scanned documents before importing them, you can do so with <a href="Scanning.htm">Laserfiche Scanning</a>.</p>
+        <p>When importing non-image files, including PDFs, Laserfiche will also automatically generate text from them to make them full-text searchable. (To generate text from image files, you should use Import Agent, or scan them with <a href="Scanning.htm">Laserfiche Scanning</a> and Universal Capture.)&#160;You can customize the document's name, as well as other metadata such as field values, tags, and locations. See <a href="Metadata.htm">Metadata</a> for more information.</p>
+        <p>You can import using the Import command, or by dragging and dropping.</p><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/importing/Importing+Documents.html"></iframe>
+        <h2 class="topicheading">Importing with the Import Command</h2>
+        <ol>
+            <li>Open Laserfiche and navigate to the folder into which you want to import a file.</li>
+            <li>Click the <b>Import</b> button (<img src="Resources/Images/import_button.png" />). The <b>Import Files</b> dialog box will open.</li>
+            <li>Perform one of the following:<ul><li>To import a file from your computer:
+					<ol style="list-style:lower-roman"><li>Under <b>Drag files here or select one or more files to upload</b>, drag in your files or  select <b>Browse</b> and select the files you want to upload.</li><li>Once you have added all the files you want to import and they have finished uploading, click <b>OK</b>. </li></ol></li><li>To import a file from Google Drive, OneDrive, or OneDrive for Business:
+						            <p class="note"><b>Note:</b>&#160;Web applications will only be displayed in the Import dialog if they have been enabled in Repository Administration. See <a href="#Enabling">Enabling Import Services</a>, below, for more information.</p><ol style="list-style:lower-roman"><li>Under <b>Import files from these web applications</b>, select the cloud import service you want to import from.</li><li>If you are not already logged in, you will be prompted to provide your credentials. You may also be prompted to allow Laserfiche to access information about your account. Once you have logged in and given permission for Laserfiche to access your account, the list of documents and folders in your web application will be displayed.</li><li>Browse to the file or files you want to import and select them, then click <b>Import</b>. The files will be uploaded, and when the upload has completed, you will be directed back to Laserfiche.</li></ol></li></ul></li>
+            <li>The <b>Import</b> dialog box will open.
+            <p class="note"><b>Note:</b> If you do not want to see the Import dialog box when importing files, you can hide it. To do so, click your user name in the upper right corner and select <b>Options</b>. In the <b>New Document</b> section, clear the option <b>Always show import dialog</b>. If you choose not to display the Import dialog box, the document will automatically be imported into the currently-selected folder with the same name as the original file, and with no field, template, or tag information set.</p></li>
+            <li>In the <b>General</b> tab, specify the following information:&#160;</li>
+            <ul>
+                <li><b>Name</b> and <b>Folder</b>:&#160;By default, the file name and the folder you currently have open will be used.</li>
+                <li><b>Template:</b>&#160;Select a template from the list, or select <b>Use parent folder's template</b> to use the same template as the parent folder. If you don't want to set a template, select <b>No template assigned</b>. See <a href="Fields_and_Templates.htm">Fields and Templates</a> for more information.</li>
+                <li><b>Tags:</b>&#160;Select a tag, or type a new tag name to add a new informational tag. Leave this option blank if you do not want to assign any tags. See <a href="Tags.htm">Tags</a> for more information.</li>
+                <li><b>Optional</b>:&#160;If you are importing multiple documents at once, you can select <b>Apply these properties to all entries imported in this batch</b>. This allows you to import multiple documents without having to configure each one individually.</li>
+            </ul>
+            <li>In the <b>Fields</b> tab, you can modify the field information for your new document. See <a href="Fields_and_Templates.htm">Fields and Templates</a> for more information.</li>
+            <li>In the <b>Location</b> option, you can optionally specify a location to associate the file. If the file is a JPG with location data in its EXIF information, the location will automatically be extracted, but can still be manually modified. If it is not a JPG, or the JPG has no EXIF information, you can manually specify a location by address. Note that if you are importing JPGs with location data in their EXIF&#160;information, each location will be extracted separately even if the <b>Apply these properties to all entries imported in this batch</b> option is selected. See <a href="Locations.htm">Locations</a> for more information.</li>
+            <li>Click <b>OK</b>&#160;to complete the import.</li>
+        </ol>
+        <h2 class="topicheading">Importing with Drag and Drop</h2>
+        <ol>
+            <li>Locate the file or files you want to import in Windows.</li>
+            <li>Open Laserfiche and navigate to the folder into which you want to import the file.</li>
+            <li>Drag the file or files from Windows into your folder. A <b>Drop files here</b> box will appear.</li>
+            <li>Drop the file or files into the box. The <b>Import</b> dialog box will open.<p class="note"><b>Note:</b> If you do not want to see the Import dialog box when importing files, you can hide it. To do so, click your user name in the upper right corner and select <b>Options</b>. In the <b>New Document</b> section, clear the option <b>Always show import dialog</b>. If you choose not to display the Import dialog box, the document will automatically be imported into the currently-selected folder with the same name as the original file, and with no field, template, or tag information set.</p></li>
+            <li>In the <b>General</b> tab, specify the following information:&#160;</li>
+            <ul>
+                <li><b>Name</b> and <b>Folder</b>:&#160;By default, the file name and the folder you currently have open will be used.</li>
+                <li><b>Template:</b>&#160;Select a template from the list, or select <b>Use parent folder's template</b> to use the same template as the parent folder. If you don't want to set a template, select <b>No template assigned</b>. See <a href="Fields_and_Templates.htm">Fields and Templates</a> for more information.</li>
+                <li><b>Tags:</b>&#160;Select a tag, or type a new tag name to add a new informational tag. Leave this option blank if you do not want to assign any tags. See <a href="Tags.htm">Tags</a> for more information.</li>
+                <li><b>Optional</b>:&#160;If you are importing multiple documents at once, you can select <b>Apply these properties to all entries imported in this batch</b>. This allows you to import multiple documents without having to configure each one individually.</li>
+            </ul>
+            <li>In the <b>Fields</b> tab, you can modify the field information for your new document. See <a href="Fields_and_Templates.htm">Fields and Templates</a> for more information.</li>
+            <li>In the <b>Location</b> option, you can optionally specify a location to associate the file. If the file is a JPG with location data in its EXIF information, the location will automatically be extracted, but can still be manually modified. If it is not a JPG, or the JPG has no EXIF information, you can manually specify a location by address. Note that if you are importing JPGs with location data in their EXIF&#160;information, each location will be extracted separately even if the <b>Apply these properties to all entries imported in this batch</b> option is selected. See <a href="Locations.htm">Locations</a> for more information.</li>
+            <li>Click <b>OK</b>&#160;to complete the import.</li>
+        </ol>
+        <p class="ex"><b>Tip</b>:&#160;By default, PDF annotations will be converted to Laserfiche annotations when a PDF is imported. If you do not want to perform this conversion, you can disable it. Click your user name in the upper right corner and select <b>Options</b>. In the <b>General</b> section, clear the option <b>Preserve PDF annotations on Laserfiche pages</b>. You can re-enable it in the future if you would like to begin converting PDF annotations again.</p>
+        <h2 class="topicheading"><a name="Enabling"></a>Enabling Import Services</h2>
+        <p>Before you can import files from Google Drive, OneDrive, or OneDrive for Business, you will need to enable them in Repository Administration.</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, open the app picker (<img src="Resources/Images/app-picker.png" />)&#160;in the upper left corner and select <b>Repository Administration</b>.</li>
+            <li>Under <b>Additional Items</b>, select <b>Integrations</b>, and then select the <b>Import Services</b> tab.</li>
+            <li>Enable the web applications that you want to permit import from.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h3>Batch Importing Of <MadCap:variable name="DoNotTranslate.Laserfiche" /> User Accounts With a Comma Separated Values (CSV) File</h3>
+        <p>Administrators can predefine a list of SAML&#160;accounts in a comma separated values (CSV) file for import into <MadCap:variable name="DoNotTranslate.LF Cloud" />.</p>
+        <p>On the Users page, view the <b>Federated Users</b> tab. Click <b>Add</b> and select <b>Import from CSV&#160;file</b>.  The import process supports these <MadCap:variable name="DoNotTranslate.Active Directory" /> user attributes:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b><MadCap:variable name="DoNotTranslate.Active Directory" /> User Attribute</b>
+                    </td>
+                    <td class="tableheading"><b>Corresponding <MadCap:variable name="DoNotTranslate.LF Cloud" /> User Account Attribute</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Name</td>
+                    <td class="tabletext">User name*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">FederatedID</td>
+                    <td class="tabletext">Unique ID*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">GivenName</td>
+                    <td class="tabletext">First Name*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Surname</td>
+                    <td class="tabletext">Last Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">EmailAddress</td>
+                    <td class="tabletext">Email*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DisplayName</td>
+                    <td class="tabletext">Display Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Company</td>
+                    <td class="tabletext">Company</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Title</td>
+                    <td class="tabletext">Title</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note</b>: The <b>Federated ID</b> is configured in your SAML identity provider's configuration page. For <MadCap:variable name="DoNotTranslate.Okta" />, this is usually the <b>Email</b> address, unless modified.</p>
+        <p>Attributes with a * are required.</p>
+        <p><b>Sample CSV file:</b>
+        </p>
+        <p class="ex">"Name","FederatedID","GivenName","Surname","EmailAddress","DisplayName","Company","Title", "LicenseType"<br />"johnsmith","johnsmith@Company.com","John","Smith","johnsmith@Company.com","John Smith","Company","Engineer II","Full"<br />"janesmith","janesmith@Company.com","Jane","Smith","janesmith@Company.com","Jane Smith","Company","Engineer III","Full"<br /></p>
+    </body>
+</html>

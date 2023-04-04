@@ -1,0 +1,214 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="2175" MadCap:lastWidth="1119" MadCap:changes="1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Quick Fields" />Token Formatting in Workflow and Quick Fields: Numeric</h1>
+        <p>You can use .NET formatting specifiers to have data stored in tokens automatically <a href="Token-Formatting.htm" title="Click here to learn more." alt="Click here to learn more.">formatted</a>  to specified numeric settings. Standard format specifiers can be used  to format numbers according to some of the most frequently used choices.  Custom format specifiers will work for the same options allowed by the  standard ones and also allow you to further customize or combine  formatting choices. You can type these specifiers directly in the tokens  or use the Token Editor to insert the specifier and test the formatted token.</p>
+        <div class="ex">
+            <p class="ex">
+                <MadCap:concept term="Forms" /><b>Example:</b> Lisa is processing order forms.  She wants to use the numbers in the "Order" field as document names. The order numbers  can have various numbers of digits, so she wants to add leading zeros so  the names will be sorted in true numeric order. Currently, the maximum  number of digits in an order number is five, but she decides to allow  eight digits so she can continue to use the same system well into the  future. She can do this using either standard or custom numeric format  specifiers. In either case, she can begin by opening the Token Editor  and selecting <b>Apply Formatting</b>. Then she can use either of the following options:         </p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="Example comparing standard and custom specifiers. ">
+                <caption style="font-weight: bold;">Comparing Standard and Custom Specifiers</caption>
+                <col style="width: 144px;" />
+                <col style="width: 159px;" />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Formatting specifier</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Formatted token</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Test value</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Result when tested with "334"</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td style="font-weight: bold;" class="tabletext">Standard</td>
+                        <td class="tabletext">D8</td>
+                        <td class="tabletext">%(Order#"D8"#)</td>
+                        <td class="tabletext">00000334</td>
+                    </tr>
+                    <tr>
+                        <td style="font-weight: bold;" class="tabletext">Custom</td>
+                        <td class="tabletext">00000000</td>
+                        <td class="tabletext">%(Order#"00000000"#)</td>
+                        <td class="tabletext">00000334</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <p class="note"><b>Note:</b> The regional settings such as date and currency  are Windows regional settings found in the Control Panel for the  computer.</p>
+        <h2>Standard Numeric Format Specifiers</h2>
+        <p>The following  specifiers can be used to format numbers according to standard rules.</p>
+        <div class="ex">
+            <p class="ex">
+                <MadCap:concept term="Laserfiche" /><b>Example:</b> Maggie creates a workflow that retrieves values from lab reports saved as PDF forms. The reports include numbers in decimal form that she wants to store as  percentages in Laserfiche fields.         </p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="A standard specifier applied to a token and the resulting value. ">
+                <caption style="font-weight: bold;">Sample Standard Specifier and Result</caption>
+                <col style="width: 144px;" />
+                <col style="width: 362px;" />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Formatting specifier</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Formatted token</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Test value</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tabletext">P</td>
+                        <td class="tabletext">%(RetrievePDFFormContents_Lab Number1#"P"#)</td>
+                        <td class="tabletext">.12</td>
+                        <td class="tabletext">12.00 %</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Standard numeric format specifiers, their types, and their functions.">
+            <caption style="font-weight: bold;">Standard Numeric Format Specifiers</caption>
+            <col style="width: 100px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Specifier</th>
+                    <th style="font-weight: bold;">Type</th>
+                    <th style="font-weight: bold;">Function</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">C or c</td>
+                    <td class="tabletext">Currency</td>
+                    <td class="tabletext">Formats the value to the local currency settings.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">D or d</td>
+                    <td class="tabletext">Decimal</td>
+                    <td class="tabletext">Formats the part of the number <i>before</i>  any decimal point. Specify a minimum number of digits. Example: D8 for a  minimum of eight digits. Leading zeroes will be appended to create the  appropriate number of digits.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">E or e</td>
+                    <td class="tabletext">Exponent</td>
+                    <td class="tabletext">Specify a number of digits after the decimal point for a number in exponential format. Example: e3 for three digits after the decimal. The number 12345.6789 will be formatted 1.234e+004</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">F or f</td>
+                    <td class="tabletext">Fixed point</td>
+                    <td class="tabletext">Formats the part of the number <i>after</i>  the decimal point. Specify the desired number of decimal places.  Example: F3 for three digits after the decimal. Zeroes will be used to  create the appropriate number if necessary.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">P or p</td>
+                    <td class="tabletext">Percent</td>
+                    <td class="tabletext">Converts the value to a percentage.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Custom Numeric Format Specifiers</h2>
+        <p>The following specifiers can be combined to format numbers to specific patterns. </p>
+        <div class="ex">
+            <p class="ex"><b>Example:</b> Homer's workflow retrieves values from the field "Measurement." He wants to format the value  of the corresponding token so that the numbers before the decimal place  have a comma separating the thousands place, if one exists, but he does not  want to append leading zeroes. He also wants the numbers to have  exactly four digits after the decimal, even if that means appending  zeroes.         </p>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="Custom specifiers applied to tokens and their results.">
+                <caption style="font-weight: bold;">Sample Custom Specifiers and Results</caption>
+                <col style="width: 144px;" />
+                <col style="width: 356px;" />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Formatting specifier</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Formatted token</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Test value</th>
+                        <th style="font-weight: bold;background-color: #d3d3d3;text-align: left;" class="tabletext">Result</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="tabletext">#,###.0000</td>
+                        <td class="tabletext">%(RetrieveFieldValues_Measurement#"#,###.0000"#)</td>
+                        <td class="tabletext">1425.99</td>
+                        <td class="tabletext">1,425.9900</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">#,###.0000</td>
+                        <td class="tabletext">%(RetrieveFieldValues_Measurement#"#,###.0000"#)</td>
+                        <td class="tabletext">623.877</td>
+                        <td class="tabletext">623.8770</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <table id="myTable2" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Custom numeric format specifiers, their types, and their functions. ">
+            <caption style="font-weight: bold;">Custom Numeric Format Specifiers</caption>
+            <col style="width: 99px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Specifier</th>
+                    <th style="font-weight: bold;">Type</th>
+                    <th style="font-weight: bold;">Function</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">0</td>
+                    <td class="tabletext">Zero placeholder</td>
+                    <td class="tabletext">Will be replaced if there is a value in that position; otherwise, will appear as a 0 in the result.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">#</td>
+                    <td class="tabletext">Digit placeholder</td>
+                    <td class="tabletext">Will be replaced if there is a value in that position; otherwise, nothing will appear.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">.</td>
+                    <td class="tabletext">Decimal point</td>
+                    <td class="tabletext">Represents the location of the decimal separator. Only the first decimal point in a string will be used.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">,</td>
+                    <td class="tabletext">Thousand separator and number scaling</td>
+                    <td class="tabletext">Can be used to insert commas  as a thousands separator in numbers. Also, one or more immediately to  the left of the explicit or implicit decimal point can be used to  display numbers in terms of some other amount (e.g., The format 0,, applied to 3,000,000  is 3).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%</td>
+                    <td class="tabletext">Percentage placeholder</td>
+                    <td class="tabletext">Multiplies a number by 100 and inserts a % sign.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">E0, E+0, E-0, e0, e+0, e-0</td>
+                    <td class="tabletext">Scientific notation</td>
+                    <td class="tabletext">Formats the number using  scientific notation. The number of 0 characters indicates the minimum  number of digits to output for the exponent.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\</td>
+                    <td class="tabletext">Escape character</td>
+                    <td class="tabletext">Causes the following character to be used literally, even if it is otherwise one of the formatting specifiers.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">'ABC' or "ABC"</td>
+                    <td class="tabletext">Literal string</td>
+                    <td class="tabletext">The characters inside single or double quotation marks (excepting the quotation marks around the entire expression) will be used in the result as is, and do not affect formatting. Example: Paul's ID number is 435. The token %(ID Number#"D4"#) returns 0435. The token %(ID Number#""D"D4"#) returns D0435.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">;</td>
+                    <td class="tabletext">Section separator</td>
+                    <td class="tabletext">Used to separate formats for  positive, negative, and zero numbers in the format string. Using these,  you can specify three different types of formats to be applied depending  on the type of number. Positive numbers and zeros are formatted according to the first section (before the first semicolon), negative numbers are formatted according to the second section, and zeros are formatted according to the third section. If you leave the second section blank, then the first section will apply to all nonzero numbers.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p> To learn more about .NET numeric formatting specifiers, see the Microsoft Developers' Network (MSDN) site at:</p>
+        <ul>
+            <li><a href="http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx" title="Click here to learn more." alt="Click here to learn more.">http://msdn.microsoft.com/en-us/library/dwhawy9k.aspx</a>
+            </li>
+            <li><a href="http://msdn.microsoft.com/en-us/library/0c899ak8.aspx" title="Click here to learn more." alt="Click here to learn more.">http://msdn.microsoft.com/en-us/library/0c899ak8.aspx</a>
+            </li>
+        </ul>
+    </body>
+</html>

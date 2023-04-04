@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultConditionTagSet>
+  <ConditionTag
+    Comment=""
+    Name="ScreenOnly"
+    BackgroundColor="Blue" />
+  <ConditionTag
+    Comment=""
+    Name="PrintOnly"
+    BackgroundColor="Red" />
+  <ConditionTag
+    BackgroundColor="#ff0000"
+    Name="Exclude"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ffff00"
+    Name="In Progress"
+    Comment=""
+    OriginalName="In Progress" />
+  <ConditionTag
+    BackgroundColor="#228b22"
+    Name="Complete"
+    Comment=""
+    OriginalName="Complete" />
+  <ConditionTag
+    BackgroundColor="#00bfff"
+    Name="Out for Review"
+    Comment=""
+    OriginalName="Out for Review" />
+  <ConditionTag
+    BackgroundColor="#800080"
+    Name="Needs Screenshots"
+    Comment=""
+    OriginalName="Needs Screenshots" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="Needs Review"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ffe4c4"
+    Name="SolutionProviderOnly"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="FullDocsOnly"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="Forms"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b008b"
+    Name="BlogOnly"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#000000"
+    Name="Delete This After Review"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00ff00"
+    Name="API"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#837715"
+    Name="Add Variables"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#f322ea"
+    Name="Start_Adding_Variables"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b4513"
+    Name="Do not include"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ff00ff"
+    Name="CSH"
+    Comment="These pages are used for context sensitive help links and shouldn't be deleted."
+    OriginalName="CSH" />
+  <ConditionTag
+    BackgroundColor="#e78597"
+    Name="DO NOT COMMIT"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#0000ff"
+    Name="For Next Version"
+    Comment="These pages or snippets only apply to the next version of the product. When that is available, removing these tags will cause this content to show up."
+    OriginalName="For Next Version" />
+  <ConditionTag
+    BackgroundColor="#66ff00"
+    Name="Update 1"
+    Comment="These pages include changes to Workflow for R1U1, including BEQ, BED, and BE activites." />
+  <ConditionTag
+    Name="Update 2"
+    Comment="These pages include workflow navigation UI changes, notification settings, business rule usage statistics."
+    OriginalName="Update 2"
+    BackgroundColor="#00ffff" />
+  <ConditionTag
+    BackgroundColor="#00bfff"
+    Name="Update Q1"
+    Comment="These pages include changes to Workflow for R2." />
+  <ConditionTag
+    BackgroundColor="#2f4f4f"
+    Name="Cloud"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#9acd32"
+    Name="Installation"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#fa8072"
+    Name="OnPrem"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#008000"
+    Name="Reviewed by QA"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#ffa500"
+    Name="UsingWebLink"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#8b008b"
+    Name="Administration"
+    Comment="" />
+  <ConditionTag
+    BackgroundColor="#00ff00"
+    Name="All"
+    Comment="" />
+</CatapultConditionTagSet>

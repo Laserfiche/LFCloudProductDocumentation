@@ -1,0 +1,8 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <li>In the properties pane, type a <a href="../Workflow/Activity-Name.htm">name</a> and <a href="../Workflow/Activity-Description.htm">description</a> of the activity.<br /><img src="../Images/wf-name-desc-area.PNG" title="The name and description editors" alt="The name and description editors" /></li>
+    </body>
+</html>

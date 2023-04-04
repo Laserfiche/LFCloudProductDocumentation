@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="155" MadCap:lastWidth="812">
+    <head>
+    </head>
+    <body>
+        <h3>Invalid users and groups</h3>
+        <p>Users  that are no longer named users in the Laserfiche repository, groups that no longer exist in the Laserfiche repository, and users and groups that no longer have a valid LDAP profile are marked as <b>invalid</b> in the Named Users list. Invalid users cannot access Laserfiche Forms until they are restored on the Laserfiche server or in LDAP. You can delete theses users from this list by clicking the <b>x</b> in the <b>Status</b> column. </p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Getting Started With Scripts</h1>
+        <p>A Script Rule allows you to send information to a custom script running on a <a href="../Integrations/Remote-Agents/Remote-Agents.htm">remote agent</a>.</p>
+        <p style="font-weight: bold;">To create a new script rule:</p>
+        <ol>
+            <li>On the <b>Rules</b> page, select the arrow beside <b>New</b> and select <b>Script</b> as your rule type.</li>
+            <li>In the <b>Create Script</b> dialog box, specify the <b>Name</b> and <b>Description</b> for your rule, as well as the remote agent where your script will run.
+            <p class="note"><b>Note:</b> Ensure that the selected remote agent contains a queue with the <b>Remote Script Source Plugin</b>.</p></li>
+            <li>Click <b>Create</b>.</li>
+            <li>In the Rule editor page, specify the location of the .dll/.py/.js file on the remote agent host (for example, "C:\ProcessAutomationWorker\bin\Script.dll"). For C# scripts, include the class name and the <a href="csharpscript.htm" title="Click for C# Scripting Tips." alt="Click for C# Scripting Tips.">entry point</a> name. If your C# class library contains multiple entry points, create another rule to 
+            access the additional entry points.
+            <p class="note"><b>Note:</b> By default, scripts must be located within the <b>bin</b> subfolder within the <a href="../Integrations/Remote-Agents/Worker-Agents.htm">remote agent worker</a> installation folder (for example, C:\ProcessAutomationWorker\bin).</p></li>
+            <li><b>Optional:</b>  Modify the the <b>plugin_settings.json</b> file within the remote agent worker installation's <b>bin</b> subfolder to allow the worker to access additional paths on the remote agent computer. Append additional paths to the <b>AllowList</b> attribute in the <b>RemoteScriptSourcePlugin</b> block. For example, if you would like to open up access to the entire C:\ drive and a shared network path, you can update the attribute to <b>"AllowList": [ "C:\\", "\\\\samplehost\\scriptsfolder" ]</b>. If you have multiple remote agent workers, it is recommended that all scripts be located in a single directory accessible by all of the workers. The remote agent worker service user must still have appropriate Windows access rights to any specified paths.</li>
+            <li>Add any input or output parameters used.</li>
+            <li>Test your script by clicking the <b>Test Script</b> button. The output values will be displayed in the Text box at the bottom of the page. If you do not have any outputs configured you will just get a generic success message. If your script performs actions on the remote agent host, please verify the expected output is available. </li>
+            <li>Publish the rule to make it available for Workflow.</li>
+            <li>Create a workflow and add a <b>Run Script Rule</b> activity to run your script. Select the rule created in the previous steps. Specify the input values with either static values or workflow tokens. The output values will be available as tokens in the rest of your workflow.</li>
+        </ol>
+        <h3>Related Topics:</h3>
+        <ul>
+            <li><a href="csharpscript.htm">Creating a C#&#160;script</a>
+            </li>
+            <li><a href="pythonscript.htm">Creating a Python script</a>
+            </li>
+            <li><a href="nodejsscript.htm">Creating a Node.js script</a>
+            </li>
+        </ul>
+        <p>See the following Laserfiche Support Site link to download blank script templates for your C#, Node.js, or Python scripts.</p>
+        <p><a href="https://support.laserfiche.com/download/4146" target="_blank" title="Laserfiche Support Site download link" alt="Laserfiche Support Site download link">https://support.laserfiche.com/download/4146</a>
+        </p>
+    </body>
+</html>

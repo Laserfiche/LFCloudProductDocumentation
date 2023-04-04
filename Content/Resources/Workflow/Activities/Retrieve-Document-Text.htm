@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Retrieve Document Text</h1>
+        <p style="text-align: center;">
+            <img src="Images/retrieveDocumentTextCanvas.PNG" title="Retrieve Document Text activity" alt="Retrieve Document Text activity" />
+        </p>
+        <p>This activity retrieves existing text from a Laserfiche or electronic document and stores it in a token as plain text. <a href="../Tokens-Regex/Activity-Tokens/Token-for-Retrieve-Document-Text.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about the token this activity produces.</a></p>
+        <p class="note"><b>Note:</b> The preview text when monitoring the activity is limited to 500 characters. The entire text is still retrieved in the token during processing.</p>
+        <p class="ex"><b>Tip</b>: Using this activity in conjunction with the <a href="Pattern-Matching.htm" title="Click here to learn more." alt="Click here to learn more.">Pattern Matching</a> activity can help you extract useful information from pages of text.</p>
+        <p>To set up the activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Pages to Retrieve</b> property box, select the pages you want to retrieve from the entry you select in the <b>Retrieve Text From</b> property box. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.<ul><li><b>All pages</b>: Store the text from all pages of the document in a token.</li><li><b>Pages</b>: Specify a <a href="Page-Range.htm" title="Click here to learn more." alt="Click here to learn more.">range of pages</a> from which you want to retrieve text.</li></ul><p class="ex"><b>Example</b>: Specify <b>1, 3, 5-7</b> to include pages 1, 3, 5, 6, and 7. You can also specify a page range that skips pages.  For instance, specifying <b>2@2</b> will include all even-numbered pages, whereas specifying <b>2@3</b> will include every third page starting with page two.</p></li>
+            <li>In the <b>Token Options</b> property box, select the checkbox to store each page of text in a separate value in the multi-value "Text" token, instead of in a single-value token.<p class="note"><b>Note</b>: The multi-value token's index starts with 1 -- not the page number of the retrieved text. For example, if your page range is 2, 3, 5, then page 2 is indexed as <b>1</b>, page 3 as <b>2</b>, and page 5 as <b>3</b>.</p></li>
+            <li>In the <b>Retrieve Text From</b> property box, select the entry you want this activity to retrieve text from. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

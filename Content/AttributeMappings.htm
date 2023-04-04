@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Attribute Mappings in <MadCap:variable name="DoNotTranslate.LF Cloud" /> &amp; <MadCap:variable name="DoNotTranslate.Okta" /></h1>
+        <p>Follow the steps below to map attributes between <MadCap:variable name="DoNotTranslate.LF Cloud" /> and <MadCap:variable name="DoNotTranslate.Okta" />.</p>
+        <h2>Attribute Mappings in <MadCap:variable name="DoNotTranslate.Okta" /></h2>
+        <ol>
+            <li>Sign in to <MadCap:variable name="DoNotTranslate.Okta" />. </li>
+            <li>Click the <b>Applications</b> tab and click your <MadCap:variable name="DoNotTranslate.Laserfiche" /> application. To learn more about creating an application, see <a href="LaserficheAppInOkta.htm">Create a <MadCap:variable name="DoNotTranslate.Laserfiche" /> Application in <MadCap:variable name="DoNotTranslate.Okta" /></a>.</li>
+            <li>Click the <b>General</b> tab. </li>
+            <li>In the <b>SAML&#160;Settings</b> section, click <b>Edit</b>. <ul><li>Click <b>Next</b> to navigate to the <b>Configure SAML</b>&#160;section. </li><li>Scroll down to the <b>Attribute Statements</b> section. </li><li>Enter the <b>Name</b> of the attribute. Leave <b>Name format</b> as <b>Unspecified</b>. Enter a <b>Value</b> for the attribute. <p class="note"><b>Note</b>: To view a complete list of attributes, click the <b>Assignments</b> tab. Click the name of a person in the <b>People</b> tab. Click the <b>Profile</b> tab. To learn more, navigate to <a href="https://help.okta.com/en/prod/Content/Topics/Apps/Apps_App_Integration_Wizard_SAML.htm?cshid=csh-attribute-statements-saml#SAMLAttributeStatements"><MadCap:variable name="DoNotTranslate.Okta" />'s help</a> documentation. </p></li><li>Click <b>Add Another</b> to add more attribute statements. </li><li>When finished, scroll down and click <b>Next</b>. Then click <b>Finish</b>. </li></ul></li>
+        </ol>
+        <h2>Attribute Mappings in <MadCap:variable name="DoNotTranslate.LF Cloud" /></h2>
+        <ol>
+            <li>Navigate to <MadCap:variable name="DoNotTranslate.LF Cloud" /> and sign in.</li>
+            <li>Click the <b>Settings</b> tab under <b><MadCap:variable name="DoNotTranslate.Account Administration (LF)" /></b>. </li>
+            <li>Click <b>Single Sign-On</b> tab. If you have not configured <MadCap:variable name="DoNotTranslate.LF Cloud" /> with your identity provider, see <a href="Okta.htm">Configuring SAML&#160;Single Sign-On with <MadCap:variable name="DoNotTranslate.Okta" /></a>.</li>
+            <li>Click the <b>Attribute Mappings</b> tab. </li>
+            <li>Enter the attribute <b>Name</b> that you specified in <MadCap:variable name="DoNotTranslate.Okta" />. Do not use the attribute <b>Value</b>. </li>
+            <li>Once finished, click <b>Save changes</b>. </li>
+        </ol>
+    </body>
+</html>

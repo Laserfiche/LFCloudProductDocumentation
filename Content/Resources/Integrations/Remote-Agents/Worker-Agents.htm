@@ -1,0 +1,444 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="../../TableStyles/NewStyle.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Workers | Process Automation | Laserfiche Cloud</title>
+        <meta name="description" content="Register local machines as workers so that they can process work items and send the results to Laserfiche Process Automation." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Workers</h1>
+        <p>Workers are locally installed, registered machines that can process the work items added to the <a href="Queues.htm" title="Click here to learn more." alt="Click here to learn more.">queues</a> of a <a href="Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">remote agent</a>. The workers request work items from the remote agent. The remote agent sends workers work items from the queues. When the workers are done, they return the completed work items back to the remote agent.</p>
+        <p>The number of workers and queues you can have for the dedicated bot remote worker is determined by your license. </p>
+        <h2 class="topicheading"><a name="Download"></a>Installing and Registering a Worker</h2>
+        <h3>System requirements</h3>
+        <ul>
+            <li>Windows 10, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
+            </li>
+            <li>
+               Microsoft Visual C++ 2017 Redistributable (x64) -14.11.25325
+            </li>
+            <li>
+               Microsoft Visual C++ 2017 Redistributable (x86) -14.11.25325
+            </li>
+            <li>.NET 4.7.2 or later</li>
+        </ul>
+        <h3>Components included on installation</h3>
+        <ul>
+            <li><b>Remote Workers:</b> These workers are used with general remote agents that contain the Remote Agent Web Service Plugin, the Laserfiche Remote Data Source Plugin, or the Remote Script Source Plugin.
+            </li>
+            <li><b>Bot Worker:</b> This worker is only used with the Dedicated Bot Remote Agent that contains Laserfiche Bot Remote Process Plugin.
+            </li>
+            <li><b>Laserfiche Worker Configuration Tool:</b> This tool allows you to register and deregister workers.
+                        </li>
+        </ul>
+        <h3>Services installed</h3>
+        <table style="width: 100%;mc-table-style: url('../../TableStyles/NewStyle.css');margin-left: 0;margin-right: auto;" summary="A list of the services installe with the component name, service name, and service display name. " class="TableStyle-NewStyle" cellspacing="0">
+            <caption><b>Services Installed</b>
+            </caption>
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-NewStyle-Head-Header1">
+                    <td style="font-weight: bold;" class="TableStyle-NewStyle-HeadE-Column1-Header1">Component Name</td>
+                    <td style="font-weight: bold;" class="TableStyle-NewStyle-HeadE-Column1-Header1">Service Name</td>
+                    <td style="font-weight: bold;" class="TableStyle-NewStyle-HeadD-Column1-Header1">Service Display Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Remote Worker 1</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">LFPALocalAgent</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Laserfiche Remote Worker 1</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Remote  Worker 2</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">LFPALocalAgent2</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Laserfiche Remote Worker 2</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Remote  Worker 3</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">LFPALocalAgent3</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Laserfiche Remote Worker 3</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyB-Column1-Body1">Bot Worker</td>
+                    <td class="TableStyle-NewStyle-BodyB-Column1-Body1">LFPABotAgent</td>
+                    <td class="TableStyle-NewStyle-BodyA-Column1-Body1">Laserfiche Bot Worker</td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Installing workers</h3>
+        <ol>
+            <li>On the configuration page for your <a href="Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">remote agent</a>, click the <b>Workers</b> tab in the top left.
+</li>
+            <li>Under <b>Installation Instructions</b>, select  <b>Download</b>. This will download an executable file to your computer. </li>
+            <li>
+               Run the setup.exe file. This creates a Windows service that automatically performs work when your machine starts up.
+</li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>If you downloaded the file from the Dedicated Bot Remote Agent, select <b>Bot Worker Installation</b>. If you downloaded the file from another remote agent, select <b>Remote Worker Installation</b>.</li>
+                <li>In the installation wizard's <b>Welcome</b> step, click <b>Next</b>.</li>
+                <li>Read the terms of the <b>End-User License Agreement</b>. If you agree, select <b>I accept the terms in the License Agreement</b> and click <b>Next</b>.</li>
+                <li>In the <b>Choose Setup Type</b> step, select the workers you want to install. You can install up to three remote workers and one bot worker.</li>
+                <li><b>Optional:</b> Configure where the workers will be installed, next to <b>Install directory</b>.</li>
+                <li>Click <b>Next</b>.</li>
+                <li>In the <b>Laserfiche Service Settings</b> step, specify the credentials the workers will use. Click <b>Next</b>.</li>
+                <li>In the <b>Ready to Install</b> step, click <b>Install</b> to start the installation process.</li>
+                <li>In the <b>Prerequisites</b> step, a green check will appear next to installed items and a red X will appear next to items that have not been installed. If one or more of the items on the list has a red X next to it, install that item and then click <b>Retry</b>. Alternatively, select <b>Bypass Prerequisites</b> and click <b>Next</b>.</li>
+                <p class="w"><b>Important:</b> Bypassing prerequisites may cause workers to function incorrectly and is not recommended.</p>
+                <li>If all the items installed successfully, click <b>Next</b>.</li>
+                <li>Click <b>Finish</b> to exit the installation wizard. The <b>Laserfiche Worker Configuration Tool</b> will start by default.</li>
+            </ol>
+        </ol>
+        <h3>Configuring workers</h3>
+        <ol>
+            <li>
+                The <b>Laserfiche Worker Configuration</b> tool lets you register the worker to the remote agent pool.
+You can launch this tool from the last page of the installation wizard or from the Windows Start menu.</li>
+            <li>In the <b>Laserfiche Worker Configuration</b> tool, click the <b>Register worker</b> button next to the worker you want to register. </li>
+            <li>Choose how you want to register the worker:<ul><li><b>Generating a registration token:</b> Navigate to the Worker tab of the remote agent's web page in Laserfiche Cloud. Click <b>Generate new registration token</b> at the bottom of the installation instructions, and copy the token. Then, in the <b>Laserfiche Worker Configuration</b> tool, enter your Laserfiche account ID number and the token, and click <b>Register</b>.</li><li><b>Signing into Laserfiche:</b> Click the <b>Sign into Laserfiche</b> button and then enter your credentials. Select the remote agent you want to register a worker to from the drop-down menu in the <b>Laserfiche Worker Configuration</b> tool. Click <b>Register</b>.</li></ul></li>
+            <li>The <b>Current registered worker</b> page shows a summary of the registered worker and offers and option to deregister it, if desired. Click <b>Close</b>.</li>
+            <li>Continue registering workers from the <b>Laserfiche Worker Configuration</b> tool. You can also start and stop workers' services here. Click <b>Refresh</b> to view the workers' current statuses. </li>
+        </ol>
+        <h3>Removing workers</h3>
+        <p>To remove a worker, you must both deregister it on the local machine and delete it in Laserfiche Cloud.</p>
+        <p class="note"><b>Note:</b> Depending on the connection between the local machine and Laserfiche Cloud, the worker may be deleted from Laserfiche Cloud when it's deregistered or you may need to delete it manually. </p>
+        <p style="font-weight: bold;">To deregister a worker</p>
+        <ol>
+            <li>
+               Open the <b>Laserfiche Worker Configuration</b> tool.
+            </li>
+            <li>
+               Click the <b>Register worker</b> gear button next to the worker you want to deregister.
+            </li>
+            <li>
+               Click <b>Deregister</b>. </li>
+        </ol>
+        <p style="font-weight: bold;">To delete a worker </p>
+        <ol>
+            <li>
+                Open the remote agent you want to delete a worker from.
+            </li>
+            <li>
+               On the <b>Workers</b> tab, click the trashcan button next to the worker you want to delete.
+            </li>
+            <li>Confirm the deletion. </li>
+        </ol>
+        <h2 class="topicheading">Unattended Installation and Configuration</h2>
+        <p>Unattended installation and registration is supported for users to install and register workers by running command line scripts. </p>
+        <h3>Unattended Installation</h3>
+        <p>You can append parameters to the setup file to customize the installation.</p>
+        <ol>
+            <li>On the configuration page for your <a href="Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">remote agent</a>, click the <b>Workers</b> tab in the top left.
+</li>
+            <li>Under <b>Installation Instructions</b>, select  <b>Download</b>. This will download an executable file to your computer. </li>
+            <li>Copy the .exe file to a permanent location. </li>
+            <li>Right-click the .exe file and extract the contents.               </li>
+            <li>Open the Windows Command Prompt from the Windows System folder.  </li>
+            <li>
+               Enter command line arguments in the format: <b>setup_exe_path operation argument_name=argument_value</b>. The setup_exe path is here:&#160;<b>[<i>ExtractedFolder</i>]\en\LocalAgent\SetupLf.exe</b> for both remote workers and bot workers. </li>
+            <p class="note"><b>Note:</b> By default, the worker service will run as local system. </p>
+            <li>Use the following parameters to customize the installation:</li>
+        </ol>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="Parameters, their definitions, examples, and notes.">
+            <caption><b>Parameters</b>
+            </caption>
+            <col style="width: 355px;" />
+            <col style="width: 193px;" />
+            <col style="width: 174px;" />
+            <col />
+            <thead>
+                <tr>
+                    <td style="font-weight: bold;">SetupLF.exe Parameters</td>
+                    <td style="font-weight: bold;">Definition</td>
+                    <td style="font-weight: bold;">Example</td>
+                    <td style="font-weight: bold;">Notes</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>-log <i>logpath</i></td>
+                    <td>Specifies the directory in which the installation logs will be stored. If this parameter is not specified, no log file will be saved.</td>
+                    <td>-log "C:\Logs"</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>-silent</td>
+                    <td>
+                        <p>	
+The installation will proceed without displaying any dialogs to the user.
+
+</p>
+                        <p><b>Note:</b> Microsoft Installer 4.5 must already be installed on the computer for a silent install to complete successfully.</p>
+                    </td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>-noui</td>
+                    <td>The installation will prompt the user to accept the license agreement but will not prompt them for any other information. The user will see the installation progress and any error messages.</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>-iacceptlicenseagreement</td>
+                    <td>This parameter allows you to indicate your acceptance of the license agreement within the command line string itself. This parameter is meant to be used in tandem with -noui, in which case -noui will display progress bars and error messages but will not prompt the user to accept the license agreement.</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>-botagent</td>
+                    <td>Only install the bot worker component</td>
+                    <td>&#160;</td>
+                    <td>If this parameter is not added, only the remote worker 1 component will be installed </td>
+                </tr>
+                <tr>
+                    <td>INSTALLDIR="InstallDir"</td>
+                    <td>Install or uninstall package to a specified directory</td>
+                    <td>	INSTALLDIR="D:\Laserfiche"</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>ADDLOCAL="LFPALocalAgent"</td>
+                    <td>Only install remote  worker 1</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>ADDLOCAL="LFPALocalAgent2"</td>
+                    <td>Only instal remote worker 2</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>ADDLOCAL="LFPALocalAgent3"</td>
+                    <td>Only install remote worker 3</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>ADDLOCAL="LFPABotAgent"</td>
+                    <td>Only install the bot worker</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>INSTALLLEVEL="1"</td>
+                    <td>	Only install remote  worker 1</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>INSTALLLEVEL="2"</td>
+                    <td>	Only install remote worker 1 and remote  worker 2</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>INSTALLLEVEL="3"</td>
+                    <td>	Only install remote  worker 1,  remote  worker 2, and  remote  worker 3</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>INSTALLLEVEL="100"</td>
+                    <td>Install all components</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>ADDLOCAL="ALL"</td>
+                    <td>	Install all components</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>LFPALocalAgentSVCACCOUNTNAME="<i>Account</i>"</td>
+                    <td>Specify an account name for the remote worker 1 service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used </td>
+                </tr>
+                <tr>
+                    <td>LFPALocalAgentSVCACCOUNTPASSWORD="<i>Password</i>"</td>
+                    <td>Specify a password for the remote  worker 1 service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>LFPALocalAgent2SVCACCOUNTNAME="<i>Account</i>"</td>
+                    <td>Specify an account name for the remote  worker 2 service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>LFPALocalAgent2SVCACCOUNTPASSWORD="<i>Password</i>"</td>
+                    <td>Specify a password for the remote  worker 2 service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>LFPALocalAgent3SVCACCOUNTNAME="<i>Account</i>"</td>
+                    <td>Specify an account name for the remote worker 3 service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>LFPALocalAgent3SVCACCOUNTPASSWORD="<i>Password</i>"</td>
+                    <td>Specify a password for the remote worker 3 service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>LFPABotAgentSVCACCOUNTNAME="<i>Account</i>"</td>
+                    <td>	Specify an account name for the bot worker service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>LFPABotAgentSVCACCOUNTPASSWORD="<i>Password</i>"</td>
+                    <td>Specify a password for the bot worker service</td>
+                    <td>&#160;</td>
+                    <td>If no value is specified for this parameter, the default service account in local system will be used</td>
+                </tr>
+                <tr>
+                    <td>REMOVE="LFPALocalAgent"</td>
+                    <td> Uninstall remote worker 1</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>REMOVE="LFPALocalAgent2"</td>
+                    <td> Uninstall remote worker 2</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>REMOVE="LFPALocalAgent3"</td>
+                    <td> Uninstall remote  worker 3</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>REMOVE="LFPABotAgent"</td>
+                    <td>Uninstall the bot worker</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td>REMOVE="ALL"</td>
+                    <td>	Uninstall all components</td>
+                    <td>&#160;</td>
+                    <td>&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+        <div class="ex">
+            <p style="font-weight: bold;">Examples:</p>
+            <p style="font-weight: bold;">&#160;</p>
+            <p style="font-weight: bold;">To install worker 1 with a specific account: </p>
+            <p>SetupLf.exe -silent -log "{<i>log path</i>}" ADDLOCAL="LFPALocalAgent" LFPALocalAgentSVCACCOUNTNAME="DOMAIN\USERNAME" LFPALocalAgentSVCACCOUNTPASSWORD="<i>xxxx</i>"</p>
+            <p>&#160;</p>
+            <p style="font-weight: bold;">To Install worker 1 and the bot worker with local system in directory "D:\test": </p>
+            <p>SetupLf.exe -silent -log "{log path}" ADDLOCAL="LFPALocalAgent,LFPABotAgent" INSTALLDIR="D:\\test\"</p>
+            <p>&#160;</p>
+            <p style="font-weight: bold;">Uninstall bot worker in directory "D:\test":</p>
+            <p> SetupLf.exe -silent -log "{log path}" REMOVE="LFPABotAgent" INSTALLDIR="D:\\test\"</p>
+            <p>&#160;</p>
+            <p style="font-weight: bold;">Install all workers with specific accounts: </p>
+            <p>SetupLf.exe -silent -log "{log path}" INSTALLLEVEL="100" LFPALocalAgentSVCACCOUNTNAME="DOMAIN\USERNAME" LFPALocalAgentSVCACCOUNTPASSWORD="<i>xxxx</i>" LFPALocalAgent2SVCACCOUNTNAME="DOMAIN\USERNAME" LFPALocalAgent2SVCACCOUNTPASSWORD="<i>xxxx</i>" LFPALocalAgent3SVCACCOUNTNAME="DOMAIN\USERNAME" LFPALocalAgent3SVCACCOUNTPASSWORD="<i>xxxx</i>" LFPABotAgentSVCACCOUNTNAME="DOMAIN\USERNAME" LFPABotAgentSVCACCOUNTPASSWORD="<i>xxxx</i>"</p>
+            <p>&#160;</p>
+            <p style="font-weight: bold;">Uninstall all workers: </p>
+            <p>SetupLf.exe -silent REMOVE="ALL"</p>
+        </div>
+        <h3>Unattended Configuration</h3>
+        <p>Unattended configuration supports three operations:</p>
+        <ul>
+            <li><b>register</b>: Use a registration token to register a worker
+            </li>
+            <li><b>credential</b>: Sign into Laserfiche, and then choose the remote agent to register            </li>
+            <li><b>deregister</b>: Deregister a worker            </li>
+        </ul>
+        <ol>
+            <li>
+               Open the Windows Command Prompt from the Windows System folder.  </li>
+            <li>
+               Enter command line arguments in the format: <b>config_exe_path operation argument_name:argument_value</b>. By default, the unattended configuration utility's path is <b>[InstallDir]\ProcessAutomationWorkerAgent\[WorkerFeatureFolder]\ConfigTools\Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe</b></li>
+            <p class="note"><b>Note:</b> If the argument value has spaces, use quotation marks around the value. For example, remoteAgentName:'Dedicated Bot Remote Agent'</p>
+            <li>Use the following launch arguments to register or deregister workers.</li>
+            <ul>
+                <li><![CDATA[           ]]><b>token:</b> The worker's registration token. You can generate tokens from the Worker tab of the remote agent's web page in Laserfiche Cloud. Click <b>Generate new registration token</b> at the bottom of the installation instructions, and copy the token.</li>
+                <li><b>accountid</b>: Your Laserfiche Cloud account ID </li>
+                <li><b>username</b>: The username of the account that will sign into Laserfiche Cloud</li>
+                <li><b>password</b>: The password for the account that will sign into Laserfiche Cloud </li>
+                <li><b>remoteAgentName</b>: The display name of the remote agent you want to register to </li>
+            </ul>
+        </ol>
+        <div class="ex">
+            <p style="font-weight: bold;">Examples:</p>
+            <p style="font-weight: bold;">&#160;</p>
+            <p style="font-weight: bold;">To register a worker using a registration token, use these argument:</p>
+            <p>../Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe register accountid:<i>accountid</i> token:<i>token</i></p>
+            <p>&#160;</p>
+            <p><b>Note:</b> accountid is used to retrieve the region-based default server name. </p>
+            <p>&#160;</p>
+            <p><b>Note:</b> The accountid and token command line parameters are required when registering a token via registration token. </p>
+            <p>&#160;</p>
+            <p style="font-weight: bold;">To register a worker by signing in to Laserfiche, use this argument:</p>
+            <p>../Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe credential accountid:<i>accountid</i> username:<i>username</i> password:<i>password</i> remoteagentname:<i>remoteagentname</i></p>
+            <p>&#160;</p>
+            <p style="font-weight: normal;"><b>Note:</b> The  accounted, username, password, and remoteagentname command line parameters are required when registering a worker using credentials.</p>
+            <p>&#160;</p>
+            <p style="font-weight: bold;">To deregister a worker</p>
+            <p>../Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe deregister</p>
+        </div>
+        <h2 class="topicheading"><a name="Running"></a>Running the Worker</h2>
+        <p>Once registered, the worker  appears in the <b>Workers</b> tab as a new subsection titled with the name you provided during registration. You may have to refresh the <b>Workers</b> tab to see any recent changes.</p>
+        <p>The Windows service for the worker will automatically start after installation. It will also start whenever Windows starts. Services for each component are:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="A list of the services installe with the component name, service name, and service display name. ">
+            <caption><b>Services</b>
+            </caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td style="font-weight: bold;">Component Name</td>
+                    <td style="font-weight: bold;">Service Name</td>
+                    <td style="font-weight: bold;">Service Display Name</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Remote Worker 1</td>
+                    <td>LFPALocalAgent</td>
+                    <td>Laserfiche Remote  Worker 1</td>
+                </tr>
+                <tr>
+                    <td>Remote  Worker 2</td>
+                    <td>LFPALocalAgent2</td>
+                    <td>Laserfiche Remote  Worker 2</td>
+                </tr>
+                <tr>
+                    <td>Remote  Worker 3</td>
+                    <td>LFPALocalAgent3</td>
+                    <td>Laserfiche Remote Worker 3</td>
+                </tr>
+                <tr>
+                    <td>Bot Worker</td>
+                    <td>LFPABotAgent</td>
+                    <td>Laserfiche Bot Worker</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-weight: bold;">Next Steps</p>
+        <ul>
+            <li><a href="Troubleshooting.htm" title="Click here to learn more." alt="Click here to learn more.">Troubleshooting</a>
+            </li>
+            <li><a href="../../Service-Limits.htm" title="Click here to learn more." alt="Click here to learn more.">Service Limits</a>
+            </li>
+        </ul>
+    </body>
+</html>

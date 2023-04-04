@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="5" MadCap:lastHeight="458" MadCap:lastWidth="943" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Quick Fields" />Grouping Constructs</h1>
+        <p>The following <a href="../Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expression</a> grouping constructs let you extract a subset of information from a token or text. </p>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular expression grouping constructs and their descriptions">
+            <caption style="font-weight: bold;">Regular Expression Grouping Constructs</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">(<i>expr</i>)
+                    </td>
+                    <td class="tabletext">Match or capture group. Captures the information that matches the expression in parentheses</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?:<i>expr</i>)</td>
+                    <td class="tabletext">Non-capturing group. Groups the contained expressions together (e.g., to apply a quantifier to multiple symbols at once), but does not restrict the information to be captured to only that group.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?=<i>expr</i>)</td>
+                    <td class="tabletext">Captures information that is followed by the expression if the expression is true and the input matches the pattern that follows this expression.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?&lt;&gt;) </td>
+                    <td class="tabletext">Named capture group.*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\k&lt;&gt;</td>
+                    <td class="tabletext">Named back reference. *</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <MadCap:concept term="Laserfiche" />*These regular expressions are not available when configuring field constraints in the Laserfiche Administration Console.</p>
+    </body>
+</html>

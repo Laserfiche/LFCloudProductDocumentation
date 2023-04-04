@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Creating a Condition Event</h1>
+        <p>Use the <b>Set Conditions</b> step to specify the conditions that must be satisfied for the starting event to run.</p>
+        <ol>
+            <li>In the <b>Event type</b> menu, select the type of event in the repository for the starting event to run. (More information below)</li>
+            <li>In the <b>Repository</b> menu, select the repository you want to monitor for the selected event type.</li>
+            <li MadCap:conditions="Default.Update 2">Select the <b>Exclude process automation user</b> option to ignore triggers created by the <a href="../Entry-Access-Rights.htm" title="Click here to read more about the ProcessAutomationUser account." alt="Click here to read more about the ProcessAutomationUser account.">ProcessAutomationUser account</a>. (More information below)</li>
+            <li>In the box below, <a href="../Workflow/Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">set the conditions</a> that must be matched for the starting event to run.  You can have up to 16 conditions per starting event.</li>
+        </ol>
+        <p class="ex"><b>Example</b>:&#160;You want to start a workflow when a document containing three pages is created in a specific repository. You can do this by selecting <b>Entry Created</b> as the event type and <b>Document:&#160;Page Count equals 3</b> as the condition.</p>
+        <p class="note" MadCap:conditions="Default.Do not include"><b>Note</b>:&#160;The <a href="../Workflow/Condition-Type-Options.htm#document-signature" title="Click here to learn more." alt="Click here to learn more.">document signature options</a> are currently disabled.</p>
+        <h2>Selecting an Event Type</h2>
+        <p>You can select from the following types of event types:</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Event Type Options</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Event Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Entry Created</td>
+                    <td class="tabletext">An entry is created in the repository.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Moved</td>
+                    <td class="tabletext">An entry is moved in the repository.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Copied</td>
+                    <td class="tabletext">An entry is copied from within the repository.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Changed</td>
+                    <td class="tabletext">An entry undergoes some type of change in the repository.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Deleted</td>
+                    <td class="tabletext">An entry is deleted from the repository.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Entry Restored</td>
+                    <td class="tabletext">An entry is restored after being deleted from the repository.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Document Signed</td>
+                    <td class="tabletext">An entry is signed in the repository.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 MadCap:conditions="Default.Update 2">Excluding the Process Automation User</h2>
+        <p MadCap:conditions="Default.Update 2">In some cases, a workflow or <a href="../../Forms-Current/Business-Processes.htm" title="Click to learn more about business processes." alt="Click to learn more about business processes.">business process</a> performs an event type that also satisfies a condition within a starting event. For example, a starting event starts a workflow when an entry is created in the repository, and the workflow associated with the starting event creates an entry in the repository. The workflow and starting event together can start a loop of workflows which will exhaust your limit, in which the creation of an entry in the repository also triggers the start of that workflow. The <b>Exclude Process Automation user</b> option prevents this from happening. When selected, the starting event does not start a workflow when the action is performed by the workflow application or a business process.</p>
+    </body>
+</html>

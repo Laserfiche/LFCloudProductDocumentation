@@ -1,0 +1,1795 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Search Syntax</h1>
+        <p>The search syntax  gives you more flexibility when creating searches, through the use of operators, wildcards and search filters. Although it is possible to perform most searches without using search syntax, this capability provides additional options for more powerful searching.</p>
+        <h2 class="topicheading">Performing Search Syntax Searches</h2>
+        <p>To perform a search syntax search, click <b>Search&#160;Filters</b> next to the search box at the top of the Folder Browser. The <b>Search&#160;Filters</b> pane will open. In the <b>Search Filters</b> option, select <b>Add Filter</b>, select <b>Search Syntax</b>, and then click <b>OK</b>. You can then type the desired search syntax in the <b>Search&#160;Syntax</b> box. See <a href="#Search">Search Syntax Reference</a>, below, for more information about individual search types.</p>
+        <h2 class="topicheading">Search Syntax Considerations</h2>
+        <p>When using search syntax, keep the following in mind:</p>
+        <ul>
+            <li>Multiple search syntaxes can be combined in
+					a single search.</li>
+            <li>Use 
+<a href="Search_Wildcards_Operators.htm">operators</a> to combine different search syntaxes.</li>
+            <li>Parentheses and the order in which the search syntax is listed determine how the search syntax will be interpreted. For example, each of the following will produce different search results: </li>
+            <ul>
+                <li>(A &amp; B) | C</li>
+                <li>A &amp; (B | C)</li>
+                <li>C | A &amp; B</li>
+            </ul>
+            <li>Search syntax supports the use of  
+					<a href="Search_Wildcards_Operators.htm">wildcards</a> (i.e., *, ?, [], and -).</li>
+            <li>Characters that are neither in the alphabet nor are a number can only be searched upon if enclosed in double quotation marks. There are four exceptions to this rule: #, $, %, &amp;.
+					<ul><li>For example, searching for "in the city, a car" will return any one of the following results: 
+			<ul><li>in the city? A car</li><li>in the city. A car</li><li> in the city! A car</li><li>in the city a car</li></ul></li><li>In other words, the search will return any result that has non-alphanumeric character in the place of the original non-alphanumeric character (in this case the comma) or it will ignore the delimiter altogether.</li></ul></li>
+            <li>If other search filters are used, a document or folder will not qualify as a search result unless it meets all of the specified criteria. </li>
+        </ul>
+        <h2 class="topicheading">Viewing the Search Syntax for an Search</h2>
+        <p>When performing an search, you can view the search syntax for the search as you create it. To do so, open Search Filters and click <b>Show search syntax</b> at the bottom of the dialog box. This will display the syntax for the search you currently have configured. As you make edits to your search, the syntax will automatically be updated. This is a useful way to learn how to create a search syntax search. You can also copy the syntax from this box and paste it into the <b>Search syntax</b> search option, and then fine-tune it without having to write the syntax from scratch.</p>
+        <h2 class="topicheading"><a name="Search"></a>Search Syntax Reference</h2>
+        <p>For each search type, the sections below will provide the basic syntax and one or more examples.(See <a href="#Records">Records Management Search Syntax Reference</a>, below, for information about records management searches.)</p>
+        <h3 class="topicheading">Annotation Comments Search Syntax</h3>
+        <p>This search type searches for the comments associated with annotations in your documents. Annotation comment searches search across all types of annotations.</p>
+        <p>By default, an annotation comment search with multiple words will match any annotation comment that contains both words, even if they are not present as that exact phrase. To search for an exact phrase, enclose it in single quotes within the double quotes of the syntax.</p>
+        <p><b>Annotation comment:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:AnnComment~="<i>Value</i>"} </span>
+            </li>
+        </ul>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                    </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To search for annotation comments that contain the word "Due":</p>
+                    <ul>
+                        <li>
+                            <p><span class="Code">{LF:AnnComment~="Due"}</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <p>To search for annotation comments that contains the phrase "Review materials" (note that, as this is a phrase search, the phrase has been enclosed in single quotes within the standard double quotes): : <ul><li><p><span class="Code">{LF:AnnComment~="'Review materials'"}</span></p></li></ul></p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Annotation Content Search Syntax</h3>
+        <p>Search syntax can be used to search for text contained in sticky notes, callout text, comments, and text boxes.</p>
+        <p>By default, an annotation content search with multiple words will match any annotation comment that contains both words, even if they are not present as that exact phrase. To search for an exact phrase, enclose it in single quotes within the double quotes of the syntax.</p>
+        <p><b>Any text annotation (sticky note, callout text, or text box):</b>
+        </p>
+        <ul>
+            <li style="font-style: normal;"><span class="Code">{LF:AnnText~="<i>Value</i>", Type=<i>Type</i>} </span>
+            </li>
+        </ul>
+        <p style="font-style: normal;"><i>Type</i> is optional, and can be set to S, T, and/or C for sticky notes, text boxes, or callout text respectively. If the Type parameter is omitted, the search will be performed on all three annotation types. </p>
+        <p><b>Sticky note:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:Sticky~="<i>Value</i>"} </span>
+            </li>
+        </ul>
+        <p><b>Callout text:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:Callout~="<i>Value</i>"} </span>
+            </li>
+        </ul>
+        <p><b>Text box:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:Textbox~="<i>Value</i>"} </span>
+            </li>
+        </ul>
+        <p><i>Value</i> is the annotation text to be searched for; it must be enclosed by quotation marks.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                    </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>
+                        <p>To search for text in any text annotation (sticky note, callout text, or text box)&#160;that contains the word "Due":<ul><li><p><span class="Code">{LF:AnnText~="Due"}</span></p></li></ul></p>
+                        <p>To search for text in sticky notes or callout text (but not text boxes) that contains the word "Upload": <ul><li><p><span class="Code">{LF:AnnText="Upload", Type=SC}</span></p></li></ul></p>To search for sticky note text that contains the phrase "Ready for review" (note that, as this is a phrase search, the phrase has been enclosed in single quotes within the standard double quotes): <ul><li><p><span class="Code">{LF:Sticky~="'Ready for review'"}</span></p></li></ul><p>To search for sticky note text that contains the word "rodent" <i>or</i> text box text that contains the word "gopher":</p><ul><li><p><span class="Code">{LF:Sticky~="rodent"}  | {LF:TextBox~="gopher"}</span></p></li></ul></p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Creation and/or Modification Date Search Syntax</h3>
+        <p>Search syntax can be used to find items created or modified on a certain date.</p>
+        <p><b>Creation date:</b> </p>
+        <ul>
+            <li><span class="Code">{LF:Created="<i>mm/dd/yyyy</i>"}</span>
+            </li>
+        </ul>
+        <p><b>Modification 
+ date:</b> </p>
+        <ul>
+            <li><span class="Code">{LF:Modified="<i>mm/dd/yyyy</i>"} </span>
+            </li>
+        </ul>
+        <p class="note"><b>Note:</b> Valid month/day/year search patterns are: <i>mm</i>/<i>dd</i>/<i>yyyy</i>, <i>mm</i>/<i>dd</i>/<i>yy</i>, <i>mm</i>/<i>yyyy</i>, and <i>mm</i>/<i>yy</i>. The order in which the month, day, and year are specified is determined by the short date format of your browser.</p>
+        <p class="note"><b>Note:</b> Although creation and modification dates are displayed using date/time format, you can only search for them by date, not by time. 
+ </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all documents created or modified the week of March 16, 2008.</p>
+                    <ul>
+                        <li><span class="Code">({LF:Created&gt;="3/16/2008"} &amp; {LF:Created&lt;="3/22/2008"}) | ({LF:Modified&gt;="3/16/2008"} &amp; {LF:Modified&lt;="3/22/2008"})</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Document Relationship Search Syntax</h3>
+        <p>Search syntax allows you to perform searches for documents that have been linked together.</p>
+        <p><b>Document relationship:</b>
+        </p>
+        <p>This search will return entries given <i>either side</i> of a specific document relationship. This search will return at least two entries.</p>
+        <ul>
+            <li>
+                <p><span class="Code">{LF:Relation = "<i>Relationship Name</i>"}</span>
+                </p>
+            </li>
+        </ul>
+        <p><i>Relationship Name</i> is the name of the document relationship being searched for; the name must be enclosed by quotation marks.</p>
+        <p><b>Source relationship:</b>
+        </p>
+        <p>This search will only return entries given the source relationship half of a document relationship.</p>
+        <ul>
+            <li><span class="Code">{LF:RelationSRC = "<i>Relationship Name</i>"}</span>
+            </li>
+        </ul>
+        <p><i>Relationship Name</i> is the name of the source side of the document relationship being searched for; the name must be enclosed by quotation marks.</p>
+        <p><b>Reverse relationship:</b>
+        </p>
+        <p> This search will only return entries given the reverse relationship half of a document relationship.</p>
+        <ul>
+            <li><span class="Code">{LF:RelationDST = "<i>Reverse Relationship Name</i>"}</span>
+            </li>
+        </ul>
+        <p><i>Reverse Relationship Name</i> is the name of the reverse side of the document relationship being searched for; the name must be enclosed by quotation marks.</p>
+        <p class="note"><b>Note:</b> Relationship and reverse relationship names are configured in Repository Administration.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all documents that are either the message <i>or</i> attachment side of an Message/Attachment document relationship.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Relation = "Attachment"}</span>
+                        </li>
+                    </ul>
+                    <p>To find all documents that supersede another document.</p>
+                    <ul>
+                        <li><span class="Code">{LF:RelationSRC = "Supersedes"}</span>
+                        </li>
+                    </ul>
+                    <p>To find all documents that are superseded by another document.</p>
+                    <ul>
+                        <li><span class="Code">{LF:RelationDST = "Superseded by"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Electronic File Type Search Syntax</h3>
+        <p>Search syntax can be used to search for electronic documents associated with electronic files with specific file extensions.  </p>
+        <p><b>Electronic file extension:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:Ext="<i>Extension</i>"}</span>
+            </li>
+        </ul>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all electronic documents associated with PDF files. </p>
+                    <ul>
+                        <li><span class="Code">{LF:Ext="pdf"}}</span>
+                        </li>
+                    </ul>
+                    <p>The following sample search will find all electronic documents associated with Word documents (DOC&#160;or DOCX). </p>
+                    <ul>
+                        <li><span class="Code">{LF:Ext="doc"}  | {LF:Ext="docx"}</span>
+                        </li>
+                    </ul>
+                    <p>The following sample search will find all electronic documents associated with Web pages (HTM or HTML).</p>
+                    <ul>
+                        <li><span class="Code">{LF:Ext="htm"} | {LF:Ext="html"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Entry ID Search Syntax</h3>
+        <p>Search syntax can be used to search for documents or folders by their entry ID, a unique number assigned to each document and folder in a Laserfiche repository.</p>
+        <p><b>Entry ID:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:ID = <i>EntryID</i>}</span>
+            </li>
+        </ul>
+        <p>The entry ID of a particular document or folder can be found by selecting the <b>Metadata</b> tab of the right pane in either the Document Viewer or Folder Browser. Click <b>Show advanced</b> to display the entry ID.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot> Show me an example.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find the Laserfiche entry whose Entry ID equals 3. </p>
+                    <ul>
+                        <li><span class="Code">{LF:ID = 3}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Entry Name Search Syntax</h3>
+        <p>Search syntax can be used to look for all entries with a particular name. Entry name search is performed as an exact search unless you use wildcards. </p>
+        <p style="font-weight: bold;">Entries with a specific name</p>
+        <ul>
+            <li><span class="Code">{LF:Name="<i>EntryName</i>", Type=<i>Type</i>}</span>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Entries whose parent folder has a specific name</p>
+        <ul>
+            <li>
+                <p style="font-weight: normal;"><span class="Code">{LF:ParentName="<i>EntryName</i>"</span>
+                </p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">Folders containing entries with a specific name</p>
+        <ul>
+            <li>
+                <p><span class="Code">{LF:ChildName="<i>EntryName</i>", Type=<i>Type</i>}</span>
+                </p>
+            </li>
+        </ul>
+        <p><i>EntryName</i> is the name of the document or folder you want to search for; the value must be enclosed in quotation marks. </p>
+        <p>The <i>Type</i> parameter is optional and should be set to the type of entries that you want to be included in the search results. This parameter can be set to include any combination of folders (F), documents (D), shortcuts (S), etc. that you want to include. Note that the ParentName search does not support the Type parameter, as parents are always folders. The following table explains the acceptable values for the Type parameter:</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the possible values for the Type parameter in Entry Name search.">
+            <caption>Type Parameter Values for Entry Name Search</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>D                </td>
+                    <td>Documents</td>
+                </tr>
+                <tr>
+                    <td>B</td>
+                    <td>Documents <i>without</i> templates</td>
+                </tr>
+                <tr>
+                    <td>F</td>
+                    <td>Folders</td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>Shortcut</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following search will return all folders and documents (including record folders and record series) with the exact name "Travel Request."</p>
+                    <ul>
+                        <li><span class="Code">{LF:Name="Travel Request", Type=FD}</span>
+                        </li>
+                    </ul>
+                    <p>The following search will return  all documents that contain the word "report" in the name." <MadCap:dropDownBody><ul><li><span class="Code">{LF:Name="*Report*", Type=D}
+</span><![CDATA[				]]></li></ul></MadCap:dropDownBody></p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Folder Search Syntax</h3>
+        <p>Search syntax can be used to find items located in a particular folder. </p>
+        <p><b>Folder:</b>
+        </p>
+        <ul>
+            <li><![CDATA[	]]><span class="Code">{LF:Lookin="<i>Path</i>", Subfolders=<i>Y/N</i>}</span></li>
+        </ul>
+        <p><i>	Path</i> represents the folder path searched, and must be enclosed by quotation marks. </p>
+        <p><i>Subfolders</i> is an optional term; it determines whether subfolders of the specified folder path will also be searched. This parameter can be set to "Y" for yes or "N" for no. The default is “yes”; if the term is omitted, subfolders will be searched. </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following illustrates sample syntax you can use to limit search results to specific folders.</p>
+                    <p>&#160;</p>
+                    <p><b>To search in a single folder only</b>
+                    </p>
+                    <p>The following search will return all entries in the General\Accounting folder. </p>
+                    <ul>
+                        <li><span class="Code">{LF:Lookin="\General\Accounting", Subfolders=N}</span>
+                        </li>
+                    </ul>
+                    <p>The following examples will search in the \Accounting folder, and its  subfolders, for documents containing the word "Transportation," and will return identical results.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Lookin="\General\Accounting", Subfolders=N}</span>
+                        </li>
+                        <li><![CDATA[	]]><span class="Code">{LF:Lookin="\General\Accounting", Subfolders=Y} &amp; Transportation</span></li>
+                        <li><![CDATA[	]]><span class="Code">{LF:Lookin="\General\Accounting"} &amp; Transportation</span></li>
+                    </ul>
+                    <p><b>To search in multiple folders at once</b>
+                    </p>
+                    <p>You can combine multiple folder searches with the OR&#160;(|) operator. The following syntax will search in both the General\Accounting and General\Sales folders.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Lookin="\General\Accounting"} |&#160;{LF:Lookin="\General\Sales"}</span>
+                        </li>
+                    </ul>
+                    <p>The following illustrates how to search in both the General\Accounting and General\Sales folders for the word "Transportation."</p>
+                    <ul>
+                        <li><span class="Code">{LF:Lookin="\General\Accounting"} |&#160;{LF:Lookin="\General\Sales"} &amp;&#160;Transportation</span>
+                        </li>
+                    </ul>
+                    <p><b>To exclude folders from searches</b>
+                    </p>
+                    <p>You can exclude specific folders from your search using the NOT&#160;operator (-). The following search syntax will search for all documents containing the word "Report"&#160;that are not in the folder General\Accounting.</p>
+                    <ul>
+                        <li><span class="Code">Report - {LF:Lookin="\General\Accounting"}
+</span><![CDATA[                            ]]></li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Full-Text Search Syntax</h3>
+        <p>One of the benefits of using search syntax to perform text searches is performing more complex text searches, such as searching for multiple words or phrases.  </p>
+        <p>To perform a simple text search, type the word you want to search for. To search for the word pruning, type the following:</p>
+        <ul>
+            <li><span class="Code">	pruning</span>
+            </li>
+        </ul>
+        <p>To search for a phrase, enclose it in quotes. To search for the phrase “pruning shears” type the following:</p>
+        <ul>
+            <li><![CDATA[	]]><span class="Code">“pruning shears”</span></li>
+        </ul>
+        <p>You can make searches more powerful by combining words or phrases with operators. To find all documents that pertain to "pruning" and contain the word "maple" <i>or</i> "cherry," you would use one of the following:</p>
+        <ul>
+            <li class="List" style="margin-left: 0px;"><span class="Code">pruning &amp; 
+ (maple | cherry)
+</span><![CDATA[					]]></li>
+            <li class="List" style="margin-left: 0px;"><![CDATA[
+					]]><span class="Code">(maple | cherry) 
+ &amp; pruning
+</span><![CDATA[					]]></li>
+        </ul>
+        <p>
+			In the search criteria specified above, the pipe "|" represents "OR" and the ampersand "&amp;" represents "AND." In the above example, the order in which search criteria are listed does not matter, however, in other cases, the order can make a huge difference. If you remove the parentheses from the above example, you end up with the following:
+			</p>
+        <ul>
+            <li class="List" style="margin-left: 0px;"><![CDATA[
+				]]><span class="Code">pruning &amp; 
+ maple | cherry
+</span><![CDATA[				]]></li>
+        </ul>
+        <p>
+This would find all documents containing the words "pruning" and "maple." It would also find all documents that contain the word "cherry."
+</p>
+        <ul>
+            <li><span class="Code">
+				maple | cherry &amp; pruning
+</span><![CDATA[					]]></li>
+        </ul>
+        <p>
+			This would find all documents containing the word "maple." It would also find all documents that contain the words "cherry" and "pruning." 
+				</p>
+        <p>
+			Proximity searches can also be performed using search syntax. To specify a proximity search, separate two phrases with a caret (^) followed by the maximum number of words that can come between the two phrases. If you were only interested in documents where the word "pruning" occurs within 15 words of either the word "maple" or "cherry," you would use one of the following:
+			</p>
+        <ul>
+            <li class="List"><span class="Code">(maple | cherry) ^15 pruning
+</span><![CDATA[			]]></li>
+            <li class="List"><span class="Code">pruning ^15 (maple | cherry)</span>
+            </li>
+        </ul>
+        <h3 class="topicheading">Image Search Syntax</h3>
+        <p>Search syntax can be used to search for documents that do or do not contain image pages.</p>
+        <p><b>Image page:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:Img=<i>Y/N</i>}</span>
+            </li>
+        </ul>
+        <p>This search parameter can be set to "Y" for yes or "N" for no. </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following search will return all documents that have images.</p>
+                    <ul>
+                        <li class="List"><span class="Code">{LF:Img=Y}</span>
+                        </li>
+                    </ul>
+                    <p>The following search will return all documents that do not have images.</p>
+                    <ul>
+                        <li class="List"><span class="Code">{LF:Img=N}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Searchable Text Search Syntax</h3>
+        <p>Search syntax can be used to search for documents by whether searchable text has been generated for them or not.</p>
+        <p><b>Searchable text:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:OCR=<i>All/Some/None</i>}</span>
+            </li>
+        </ul>
+        <p>The following table explains the acceptable values for the OCR parameter of the searchable text search.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the values for the searchable text search type.">
+            <caption>Values for Searchable Text Search</caption>
+            <col />
+            <col style="width: %10" />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Value</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>All
+                </td>
+                    <td>Only documents where all pages have been processed by OCR will be considered valid search results.                 </td>
+                </tr>
+                <tr>
+                    <td>Some
+                </td>
+                    <td>Documents where at least one page but not all pages have been processed by OCR will be considered valid search results.                 </td>
+                </tr>
+                <tr>
+                    <td>None</td>
+                    <td>All documents without a single page that has been processed by OCR will be considered valid search results. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all documents with searchable text. </p>
+                    <ul>
+                        <li><span class="Code">{LF:OCR=All}</span>
+                        </li>
+                    </ul>
+                    <p>The following sample search will find documents  with searchable text on some pages. </p>
+                    <ul>
+                        <li><span class="Code">{LF:OCR=Some}</span>
+                        </li>
+                    </ul>
+                    <p>The following sample search will only find documents  with no searchable text.</p>
+                    <ul>
+                        <li><span class="Code">{LF:OCR=None}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Location Search Syntax</h3>
+        <p>Search syntax can be used to search for documents within a specified distance of a particular location, or by location description. Locations in search syntax use GPS&#160;coordinates.</p>
+        <p><b>Location description:</b>
+        </p>
+        <p>
+            <p>Search syntax allows you to search for entries with a specific description.</p>
+            <ul>
+                <li>{LF:GeoText="<i>Value</i>"}</li>
+            </ul>
+            <p><i>Value</i> is the location description that will be searched for. </p>
+            <div class="ex">
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The first sample search below will find all entries with a location description
+								of <i>Beach City Police Department</i> exactly. </p>
+                        <ul>
+                            <li>{LF:GeoText="Beach City Police Department"}</li>
+                        </ul>
+                        <p>The second sample will find all entries with a hold reason that contains the word <i>Police</i>.</p>
+                        <ul>
+                            <li>{LF:GeoText="*Police*"}</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+        </p>
+        <p><b>Location:</b>
+        </p>
+        <p>Search syntax allows you to search for entries within a certain distance of a specified location, as defined by GPS coordinates. The distance is specified in meters.</p>
+        <ul>
+            <li>{LFGEO:Type="POINT"}&#160;&amp;&#160;{LFGEO:Distance&lt;<i>Distance</i>, Object="POINT(<i>CoordinateTwo</i> <i>CoordinateOne</i>)"}</li>
+        </ul>
+        <p class="ex"><i>Distance</i> is the distance in meters within which you want to search, and <i>CoodiateTwo</i> and <i>CoordinateOne</i> are the pair of GPS coordinates that define the center of the radius. Note that the coordinates are reversed from the GPS&#160;standard.</p>
+        <p class="ex"><b>Tip:</b> Use 
+						a mathematical operator (=, &gt;, &gt;=, &lt;, and &lt;=) and wildcards 
+					to determine the results that will be returned.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The first sample search below will find all entries within one kilometer of Laserfiche&#160;Corporate Headquarters.</p>
+                    <ul>
+                        <li>{LFGEO:Type="POINT"} &amp; {LFGEO:Distance&lt;1000, Object="POINT(-118.18958900000001 33.82126400000001)"}</li>
+                    </ul>
+                    <p>The second sample will find all entries with a location more than one hundred kilometers away from Laserfiche Corporate Headquarters.</p>
+                    <ul>
+                        <li>{LFGEO:Type="POINT"} &amp; {LFGEO:Distance&gt;=10000, Object="POINT(-118.18958900000001 33.82126400000001)"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Page Count Search Syntax</h3>
+        <p>Search syntax can be used to search for documents with a particular number of pages or a number of pages that fall within a particular range.</p>
+        <p><b>Page count:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:PageCount = <i>Value</i>}</span>
+            </li>
+        </ul>
+        <p><i>Value</i> must be an integer that represents the number of pages in your target documents.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following search will return all documents with more than 50 pages.</p>
+                    <ul>
+                        <li><span class="Code">{LF:pagecount &gt;&#160;50}
+</span><![CDATA[                        ]]></li>
+                    </ul>
+                    <p>The following search will return all documents with less than or equal to two pages.</p>
+                    <ul>
+                        <li><span class="Code">{LF:pagecount &lt;=&#160;2}</span>
+                        </li>
+                    </ul>
+                    <p>Using the AND&#160;(&amp;)&#160;operator to combine searches, the following search will return all documents with more than five and less than ten pages.</p>
+                    <ul>
+                        <li><span class="Code">{LF:pagecount &gt; 5} &amp; {LF:pagecount &lt; 10}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Pages Search Syntax</h3>
+        <p>Search syntax can be used to search for documents that do or do not contain pages.</p>
+        <p><b>Pages:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:AssociatedPages=Y/N}</span>
+            </li>
+        </ul>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all documents that have pages.</p>
+                    <ul>
+                        <li><span class="Code">{LF:AssociatedPages=Y}</span>
+                        </li>
+                    </ul>
+                    <p>The following sample search will find documents that do not have pages.</p>
+                    <ul>
+                        <li><span class="Code">{LF:AssociatedPages=N}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p class="note"><b>Note:</b> 
+ For the purposes of this search, a document is considered to have no pages if it contains neither TIFF&#160;image pages nor text pages.</p>
+        <h3 class="topicheading">Size Search Syntax</h3>
+        <p>Search syntax can be used to search for documents with a particular image, text, thumbnail, or location data size. You can search based on whether you want to find a document where one or more individual image pages, text pages, thumbnails or location data items are a particular size, or to find a document with a specific total image, text, thumbnail or location data size. </p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available search syntax options for performing document size searches.">
+            <caption>Size Search Syntax Options</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th> Entry component</th>
+                    <th> Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Individual Image Page
+                </td>
+                    <td><span class="Code"> {LF:ImageSize = <i>Value</i>}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Individual Text Page</td>
+                    <td><span class="Code">{LF:TextSize = <i>Value</i>} </span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Image Pages</td>
+                    <td><span class="Code">{LF:TotalImageSize = <i>Value</i>}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Total Text Pages</td>
+                    <td><span class="Code">  {LF:TotalTextSize = <i>Value</i>}</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Electronic File</td>
+                    <td><span class="Code">{LF:EDocSize=<i>Value</i>}</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p><i>Value</i> must be an integer that represents the target size in bytes.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples. </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To search for all documents with at least one image page greater than 5MB (which equals 5242880 bytes).</p>
+                    <ul>
+                        <li><span class="Code">{LF:ImageSize &gt;&#160;10485760}</span>
+                        </li>
+                    </ul>
+                    <p>To search for all  documents with at least one text page smaller than 5KB (which equals 5120 bytes).</p>
+                    <ul>
+                        <li><span class="Code">{LF:TextSize &lt;&#160;5120}</span>
+                        </li>
+                    </ul>
+                    <p>To search for all  documents with the sum of the sizes of all its image pages smaller than or equal to 70KB (which equals 71680 bytes).</p>
+                    <ul>
+                        <li><span class="Code">{LF:TotalImageSize &lt;= 71680}
+</span><![CDATA[                    ]]></li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Tag Search Syntax</h3>
+        <p>Search syntax can be used to find documents and folders  assigned a particular tag.</p>
+        <p><b>Tags:</b>
+        </p>
+        <p>
+            <ul>
+                <li><span class="Code">{LF:Tags="<i>TagName</i>"}</span>
+                </li>
+            </ul>
+        </p>
+        <p><i>TagName</i> is the name of the tag being searched for; it must be enclosed by quotation marks.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                            </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all documents and folders that have been assigned the Top Secret tag. </p>
+                    <ul>
+                        <li><span class="Code">{LF:Tags="Top Secret"}</span>
+                        </li>
+                    </ul>
+                    <p>The following search will return all documents tagged with both the Top Secret tag and the Requires Review&#160;tag.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Tags="Top Secret"} &amp; {LF:Tags="Requires Review"}</span>
+                        </li>
+                    </ul>
+                    <p>The following search will return all documents tagged with the Top Secret tag but not tagged with the Requires Review&#160;tag.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Tags="Top Secret"} - {LF:Tags="Requires Review"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Template and Field Search Syntax</h3>
+        <p>Search syntax can be used to look for all entries associated with a particular template, field, or field value.  </p>
+        <p><b>Templates:</b>
+        </p>
+        <ul>
+            <li><span class="Code"> {[<i>TemplateName</i>]}</span>
+            </li>
+        </ul>
+        <p>To search across any template, leave the Template name blank "[]".</p>
+        <p><i>TemplateName</i> is the name of the template being searched for.</p>
+        <p><b>Fields:</b>
+        </p>
+        <ul>
+            <li>
+                <p><span class="Code">{[]:[FieldName]="<i>Value</i>"}
+</span>
+                </p>
+            </li>
+        </ul>
+        <p><i>Value</i> is the field content you are searching for. To search across <i>any</i> field, leave the name blank: "[]", or to search for fields that are unpopulated, leave the <i>Value</i> blank:<span class="Code"> {[]:[<i>FieldName</i>]=""}</span> (this is the only way to search for a blank field; wildcards will not return blank fields).</p>
+        <p><i>FieldName</i> is the name of the field whose values are being searched for.</p>
+        <p style="font-weight: bold;">Text fields:</p>
+        <p>If the field you are searching for is a text field, you may be able to use the following syntax:</p>
+        <ul>
+            <li><span class="Code">{[]:[FieldName]~="<i>Value</i>"}
+</span>
+            </li>
+        </ul>
+        <p>This will allow you to take advantage of additional search features such as fuzzy search and the ability to find variants of root words (such as searching for "ran"&#160;and also returning "run"&#160;and "running"). However, in some cases this search may not be possible. In that case, you should use the standard field search syntax (<span class="Code">{[]:[FieldName]="<i>Value</i>"}
+</span>).</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following will find all documents assigned the Document field  (whether it be an independent field or a field associated with a template) that <i>begin</i> with the text Maui.</p>
+                    <ul>
+                        <li><span class="Code">{[]:[Document]="Maui*"}</span>
+                        </li>
+                    </ul>
+                    <p>The following will find all documents assigned the Document field  (whether it be an independent field or a field associated with a template) that <i>begin</i> with the text Honolulu, and will take advantage of fuzzy search and other text search features. </p>
+                    <ul>
+                        <li><span class="Code">{[]:[Document]~="Honolulu*"}</span>
+                        </li>
+                    </ul>
+                    <p>To find all documents assigned the Date field  (whether it be an independent field or a field associated with a template) containing a value that occurs after May 27, 2004:</p>
+                    <ul>
+                        <li>
+                            <p><span class="Code">{[]:[Date]&gt;"5/27/2004"}
+</span>
+                            </p>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b>Template and field:</b>&#160;</p>
+        <ul>
+            <li><span class="Code">{[<i>TemplateName</i>]:[<i>FieldName</i>]="<i>Value</i>"}</span>
+            </li>
+        </ul>
+        <p><i>Value</i> is the field content you are searching for. To search across any template or field, leave the name blank "[]".</p>
+        <p>As noted above, in some cases you can use the syntax <span class="Code">{[<i>TemplateName</i>]:[<i>FieldName</i>]~="<i>Value</i>"}</span> if the field is a text field, to take advantage of additional features.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p> The following will find all entries that are assigned the General template, where the Document field <i>begins</i> with the text Maui. </p>
+                    <ul>
+                        <li><span class="Code">{[General]:[Document]="Maui*"}</span>
+                        </li>
+                    </ul>
+                    <p>To find all entries assigned the General template, where the Date field contains a value that occurs <i>after</i> May 27, 2004:</p>
+                    <ul>
+                        <li><span class="Code">{[General]:[Date]&gt;"5/27/2004"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b><a name="Multiple_Field_Criteria"></a>Multiple fields:</b>
+        </p>
+        <p>When searching for multiple fields/values, the following search syntaxes are interchangeable:</p>
+        <ul>
+            <li><span class="Code">{[]:[<i>Field1</i>]="<i>Value1</i>",
+ [<i>Field2</i>]="<i>Value2</i>"}</span>
+            </li>
+            <li><span class="Code">{[]:[<i>Field1</i>]="<i>Value1</i>"} 
+ &amp; {[]:[<i>Field2</i>]="<i>Value2</i>"}</span>
+            </li>
+        </ul>
+        <p>The following Search Filters syntax uses operators and will return a range of values:</p>
+        <ul>
+            <li><span class="Code">{[]:[<i>Field1</i>]&gt;="<i>Value1</i>", &lt;="<i>Value2</i>"}</span>
+            </li>
+        </ul>
+        <p><i>Value</i> is the field content you are searching for.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all documents with a Billing ID field <i>between</i> 6500 and 7000.</p>
+                    <ul>
+                        <li><span class="Code">{[]:[Billing ID]&gt;="6500", &lt;="7000"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b><a name="Date_and_DateTime_SearchSyntax"></a>Date and Date/Time Fields</b>
+        </p>
+        <p> The order in which the month, day, and year should be specified is determined by the short date format configured on your workstation.</p>
+        <p class="ex"><b>Example: </b> A date/time value is: 05/31/2012 09:45:13 AM.
+        </p>
+        <p><b>Date or date/time field:</b>
+        </p>
+        <ul>
+            <li><span class="Code">[]:[<i>FieldName</i>]="<i>mm/dd/yyyy</i>"}</span>
+            </li>
+            <li><span class="Code">{[]:[<i>FieldName</i>]="<i>mm/dd/yyyyhh:mm: tt</i>"}</span>
+            </li>
+        </ul>
+        <p><b>Template and date or date/time
+ field:</b>
+        </p>
+        <ul>
+            <li><span class="Code"> {[<i>TemplateName</i>]:[<i>FieldName</i>]="<i>mm/dd/yyyy</i>"}</span>
+            </li>
+            <li><span class="Code">{[<i>TemplateName</i>]:[<i>FieldName</i>]="<i>mm/dd/yyyy hh:mm:sstt</i>"}</span>
+            </li>
+        </ul>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Show me date and date/time operators.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <br />
+                <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the search operators for date and date/time searches.">
+                    <caption>Date and Date/Time Operators</caption>
+                    <col />
+                    <col />
+                    <thead>
+                        <tr>
+                            <th><b>Symbol</b>
+                            </th>
+                            <th><b>Description</b>
+                            </th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><i>dd</i>
+                            </td>
+                            <td>The desired day of the month. </td>
+                        </tr>
+                        <tr>
+                            <td><i>mm</i>
+                            </td>
+                            <td>The desired month. </td>
+                        </tr>
+                        <tr>
+                            <td><i>yyyy</i>
+                            </td>
+                            <td>The desired year. A four-digit year must be specified 
+ (i.e., 2004). </td>
+                        </tr>
+                        <tr>
+                            <td><i>hh</i>
+                            </td>
+                            <td>The desired hour.
+                </td>
+                        </tr>
+                        <tr>
+                            <td><i>mm</i>
+                            </td>
+                            <td>The desired minute.
+                </td>
+                        </tr>
+                        <tr>
+                            <td><i>ss</i>
+                            </td>
+                            <td>The desired second.
+                </td>
+                        </tr>
+                        <tr>
+                            <td><i>tt</i>
+                            </td>
+                            <td>The time of day (i.e., AM or PM). </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h3 class="topicheading">User Search Syntax</h3>
+        <p>Search syntax can be used to find all documents and folders created by, checked out by, or last modified by a particular user. </p>
+        <p><b>Created by:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:Creator="<i>User Name</i>"}</span>
+            </li>
+        </ul>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all documents and folders created by the user JSmith.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Creator="JSmith"}</span>
+                        </li>
+                    </ul>
+                    <p>The following sample search will find all documents and folders created by the user JSmith or a Laserfiche user called JDoe.</p>
+                    <ul>
+                        <li><span class="Code">{LF:Creator="JSmith"} | {LF:Creator="JDoe"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b>Checked out by:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:CheckOutUser="<i>User Name</i>"}</span>
+            </li>
+        </ul>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all documents and folders checked out by a user whose name includes "Smith".&#160;</p>
+                    <ul>
+                        <li><span class="Code">{LF:CheckOutUser="*Smith*"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b>Last modified by:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LF:LastModifiedBy="<i>User Name</i>"}</span>
+            </li>
+        </ul>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find all documents and folders last modified by the user JSmith.</p>
+                    <ul>
+                        <li><span class="Code">{LF:LastModifiedBy="JSmith"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Version Search Syntax</h3>
+        <p>Search syntax can be used to search for documents that contain a particular version. A document under version control will contain multiple versions, and each version will have its own attributes (such as the date the version was created, the user who created the version, and the version comment). You can perform a search for characteristics of a single version, or a search for characteristics contained in any version or combination of versions in that document. In order to allow you to specify more than one search criteria within a single version, we use a special version search namespace.</p>
+        <p>The following version searches can be used separately or combined:</p>
+        <p><a name="Version_Created_By:"></a>
+        </p>
+        <p><b>Version created by:</b>
+        </p>
+        <ul>
+            <li><span class="Code"> {LFVER:ModifiedBy="<i>User Name</i>"}</span>
+            </li>
+        </ul>
+        <p><i>User Name</i> is the name of the user in Laserfiche who created the version you are searching for. It must be enclosed in quotes.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following will search for a document with a version created by the user JSmith.</p>
+                    <ul>
+                        <li><span class="Code">{LFVER:ModifiedBy="JSmith"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><a name="Version_Comment:"></a>
+        </p>
+        <p><b>Version comment:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LFVER:Comment~="<i>Value</i>"}</span>
+            </li>
+        </ul>
+        <p><i>Value</i> is the comment or part of the comment on the version you are searching for. &#160;It must be enclosed in quotes.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following will search for all versions created by the user JSmith and that have a version including the comment Import.</p>
+                    <ul>
+                        <li><span class="Code">{LFVER:ModifiedBy="JSmith"} &amp;&#160;{LFVER:Comment~="Import"}</span>
+                        </li>
+                    </ul>
+                    <p><b>Note:</b>&#160;The example immediately above would return both documents in which the user JSmith created a version with the comment "Import", and documents containing versions created by the user JSmith where another version in the document contains the comment "Import". &#160;The "Import"&#160;comment would not have to be on a version created by JSmith.</p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><a name="Version_Modified_Date:"></a>
+        </p>
+        <p><b>Version modified date:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LFVER:Modified="<i>mm/dd/yy</i>"}</span>
+            </li>
+        </ul>
+        <p><i>mm/dd/yy</i> is the date on which the version you are searching for was created. It must be in the format mm/dd/yy, mm-dd-yy, mm/dd/yyyy, or mm-dd-yyyy, and must be enclosed in quotes.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following will search for versions created since December 1, 2011.</p>
+                    <ul>
+                        <li><span class="Code">{LFVER:Modified&gt;="12/1/2011"}</span>
+                        </li>
+                    </ul>
+                    <p>The following will search for versions created by Laserfiche user DOMAIN\JSmith&#160;in December of 2011.</p>
+                    <ul>
+                        <li><span class="Code">{LFVER:ModifiedBy="DOMAIN\JSmith",Modified&gt;="12/1/2011",Modified&lt;="12/31/2011"}</span>
+                        </li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><a name="Version_Number:"></a>
+        </p>
+        <p><b>Version number:</b>
+        </p>
+        <ul>
+            <li><span class="Code">{LFVER:Version=<i>Value</i>}</span>
+            </li>
+        </ul>
+        <p><i>Value</i> is the version number of the version you are searching for. It must be an integer value.</p>
+        <h2 class="topicheading"><a name="Records"></a>Records Management Search Syntax Reference</h2>
+        <p>For each records management search type, the sections below will provide the basic syntax and one or more examples.</p>
+        <h3 class="topicheading">Current Location Search Syntax</h3>
+        <p>Search syntax can be used to perform searches for records 
+		that are currently in a specific location.</p>
+        <p><b>Current location:</b>
+        </p>
+        <ul>
+            <li>{LFRM:CurrentLocation="<i>Value</i>"}</li>
+        </ul>
+        <p><i>Value</i> is the location that will be searched for and must 
+		be enclosed in quotation marks.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The following sample search will find 
+						all records currently at the Storage Location Alpha location. 
+					</p>
+                    <ul>
+                        <li>{LFRM:CurrentLocation="Storage Location Alpha"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Cutoff Search Syntax</h3>
+        <p>Search syntax can be used to search for all records that have specific cutoff characteristics. </p>
+        <p><b>Cutoff:</b>
+        </p>
+        <p>This search will return records that are already cutoff or records that are due for cutoff before a certain date.</p>
+        <ul>
+            <li><b>All records:</b>
+                <ul>
+                    <li>{LFRM:ActualCutoffDate="*"}</li>
+                </ul>
+            </li>
+            <li><b>Specific date:</b>
+                <ul>
+                    <li>{LFRM:ActualCutoffDate="<i>mm</i>/<i>dd</i>/<i>yyyy</i>"}</li>
+                </ul>
+            </li>
+        </ul>
+        <p><b>Cutoff instruction:</b>
+        </p>
+        <p>This search will return records that have a specific cutoff instruction.
+                <ul><li>{ LFRM:CoffCritID="<i>ID</i>"}
+			<p><i>ID</i> represents the automatically assigned ID number of the cutoff instruction.</p></li></ul></p>
+        <p class="ex"><b>Tip: </b> Located the cutoff instruction's ID&#160;number by searching for the cutoff instruction from the Search Pane and opening <b>Search Filters</b> from the Customize Search drop-down. <MadCap:toggler targets="ID">Show me.</MadCap:toggler><br /></p>
+        <p class="topicheading"><b>Cutoff instruction type:</b>
+        </p>
+        <p> This search will return records that are assigned specific types of cutoff, such as Event or Time+Event cutoff instruction. If you select more than one cutoff instruction type, results will be returned for either.</p>
+        <ul>
+            <li>{LFRM:RetentionType="<i>Value</i>"}</li>
+        </ul>
+        <p><i>Value</i> specifies whether search results will contain 
+ records with Event-based cutoff instructions, Time-based cutoff instructions, 
+ Time+Event-based cutoff instructions, or no cutoff instructions. Use the table below to choose values.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available search syntax options for cutoff instruction type searches.">
+            <caption>Cutoff Instruction Type Search Syntax Options</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Value
+                </th>
+                    <th>Description
+                </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>E
+                </td>
+                    <td>All records with an Event-based cutoff instruction.
+                </td>
+                </tr>
+                <tr>
+                    <td>T
+                </td>
+                    <td>All records with a Time-based cutoff instruction.
+                </td>
+                </tr>
+                <tr>
+                    <td>N
+                </td>
+                    <td>All records with a Time+Event-based cutoff instruction.
+                </td>
+                </tr>
+                <tr>
+                    <td>S</td>
+                    <td>All records with a Superseded-based cutoff instruction.</td>
+                </tr>
+                <tr>
+                    <td>I</td>
+                    <td>All records with an Interval-based cutoff instruction.</td>
+                </tr>
+                <tr>
+                    <td>R</td>
+                    <td>All records with an Interval+Event-based cutoff instruction.</td>
+                </tr>
+                <tr>
+                    <td>L</td>
+                    <td>All records with a Disposition Action-based cutoff instruction.</td>
+                </tr>
+                <tr>
+                    <td>NULL
+                </td>
+                    <td>All records with no cutoff instruction.
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples:</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>The first sample search below finds all records that have either an Event-based 
+ cutoff instruction or a Time-based cutoff instruction. The second finds all records with no cutoff instruction.     
+                <ul><li>{LFRM:RetentionType="E,T"}</li><li>{LFRM:RetentionType="NULL"}</li></ul></p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b>Cutoff eligibility:</b>
+        </p>
+        <p> This search will return records	that are eligible for cutoff on or before a specified date. Records that are already cutoff are not returned in a search of this type.  
+               
+			    <ul><li>{LFRM:EligibleForCutoff&lt;="<i>mm/dd/yyyy</i>"}</li></ul></p>
+        <p class="ex"><b>Tip:</b> Use a mathematical operator (=, &gt;, &gt;=, &lt;, and &lt;=) and wildcards to determine the type of results that will be returned.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example:</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p> The following sample search will find all records and records folders that are eligible for cutoff between January 1, 2008, and June 1, 2008. (This search will not return already cutoff entries.)
+       <ul><li>{LFRM:EligibleForCutoff&gt;="01/01/2008"} 
+							&amp; {LFRM:EligibleForCutoff&lt;="06/01/2008"}</li></ul></p>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Disposition Authority Search Syntax</h3>
+        <p>Search syntax allows you to perform searches for records 
+ governed by a specific disposition authority.</p>
+        <p><b>Disposition authority:</b>
+        </p>
+        <ul>
+            <li>{LFRM:DispositionAuthority="<span style="font-style: italic;">Value</span>"}</li>
+        </ul>
+        <p>The DispositionAuthority parameter determines the disposition authority 
+ that will be searched for, represented by the term <span style="font-style: italic;">Value</span>, 
+ which must be enclosed in quotation marks. </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                    </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all records with a disposition authority 
+ of <b>auth</b>. </p>
+                    <ul>
+                        <li>{LFRM:DispositionAuthority="<b>auth</b>"}</li>
+                    </ul>
+                    <p>To find all records with no disposition authority. </p>
+                    <ul>
+                        <li>{LFRM:DispositionAuthority=""}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Disposition Eligibility Search Syntax</h3>
+        <p>Search syntax allows you to perform searches for records that have 
+ a calculated disposition eligibility date. It can also be extended 
+ to perform searches for records that have a disposition eligibility date 
+ on a given date.</p>
+        <p><b>Disposition eligibility:</b>
+        </p>
+        <ul>
+            <li>{LFRM:DispEligibilityAction="<i>Value</i>"}</li>
+            <li>{LFRM:DispEligibilityAction="<i>Value</i>", 
+ EligibilityDate="mm/dd/yyyy"}</li>
+        </ul>
+        <p><i>Value</i> specifies the type of disposition 
+ action to search for. The EligibilityDate 
+ parameter specifies the disposition eligibility date.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available search syntax options for disposition eligibility searches.">
+            <caption>Disposition Eligibility Search Syntax Options</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>U
+                </td>
+                    <td>All records that have a calculated eligibility date for any disposition 
+ action.
+                </td>
+                </tr>
+                <tr>
+                    <td>T
+                </td>
+                    <td>All eligible records with a projected transfer eligibility date.
+                </td>
+                </tr>
+                <tr>
+                    <td>A </td>
+                    <td>All records with an Accession final disposition and a final disposition 
+ eligibility date.</td>
+                </tr>
+                <tr>
+                    <td>D </td>
+                    <td>All records with a Destruction final disposition and a final disposition 
+ eligibility date.
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all records with transfers that have 
+ a projected date. &#160; 
+ </p>
+                    <ul>
+                        <li>{LFRM:DispEligibilityAction="T}</li>
+                    </ul>
+                    <p>To find all records with either a destruction 
+ or accession final disposition and  a calculated final disposition 
+ eligibility date. </p>
+                    <ul>
+                        <li>{LFRM:DispEligibilityAction="D"} | {LFRM:DispEligibilityAction="A"}</li>
+                    </ul>
+                    <p>To find all records that become 
+ eligible for destruction between June 1, 2008, and December 31, 2008.</p>
+                    <ul>
+                        <li>{LFRM:DispEligibilityAction="D", EligibilityDate&gt;="06/01/2008", 
+ EligibilityDate&lt;="12/31/2008"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Event Type Search Syntax</h3>
+        <p>Search syntax can be used to perform searches for records 
+ that have been assigned a certain event or have had a certain event set.</p>
+        <p><b>Assigned event types:</b>
+        </p>
+        <p>
+            <ul>
+                <li>{LFRM:Event="<i>Value</i>"}</li>
+            </ul>
+        </p>
+        <p><i>Value</i> specifies the assigned event that you want to search for. When you enter the event name, it must be enclosed in quotation marks.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.
+							</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all records that have the Termination event assigned to them.</p>
+                    <ul>
+                        <li>{LFRM:Event="Termination"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b>Set event types:</b>
+        </p>
+        <ul>
+            <li>{LFRM:SetEvent="<i>Value</i>"}</li>
+        </ul>
+        <p><i>Value</i> specifies the set event that you want to search for. When you enter the event name, it must be enclosed in quotation marks.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.
+							</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all records that have the End of Lease event set.</p>
+                    <ul>
+                        <li>{LFRM:SetEvent="End of Lease"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Final Disposition Action Search Syntax</h3>
+        <p>Search syntax allows you to perform searches for records that are assigned a specified type of final disposition action. </p>
+        <p><b>Final disposition action:</b>
+        </p>
+        <ul>
+            <li>{LFRM:FinalDispAction="<i>DispositionAction</i>"}</li>
+        </ul>
+        <p><i>DispositionAction</i>  specifies the type of final disposition 
+ action to search for; choose values from the table below.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available search syntax options for disposition action searches.">
+            <caption>Disposition Action Search Syntax Options</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Value</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                    A
+                </td>
+                    <td>
+                    All records that follow a retention schedule with an accession final 
+ disposition.
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                    D
+                </td>
+                    <td>
+                    All records that follow a retention schedule with a destruction final 
+ disposition.
+                </td>
+                </tr>
+                <tr>
+                    <td>
+                    N
+                </td>
+                    <td>
+                    All records with no assigned final disposition action.
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.
+                </MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all records currently assigned 
+ a retention schedule with an accession final disposition.  </p>
+                    <ul>
+                        <li>{LFRM:FinalDispAction="A"}</li>
+                    </ul>
+                    <p>To find all records currently assigned a retention schedule 
+ with a destruction final disposition.</p>
+                    <ul>
+                        <li>{LFRM:FinalDispAction="D"}</li>
+                    </ul>
+                    <p>To find 
+ all records with no assigned final disposition action.</p>
+                    <ul>
+                        <li>{LFRM:FinalDispAction="N"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Hold Status Search Syntax</h3>
+        <p>Search syntax can be used to search for 
+		entries with or without holds, with a specific hold reason, or with a specific hold due date.</p>
+        <p><b>Entries with holds:</b>
+        </p>
+        <p>
+            <ul>
+                <li>{LF:Hold="Y"}</li>
+            </ul>
+            <p><b>Entries without holds:</b>
+            </p>
+            <ul>
+                <li>{LF:Hold="N"}</li>
+            </ul>
+        </p>
+        <p><b>Hold reasons:</b>
+        </p>
+        <p>
+            <p>Search syntax allows you to search for entries with a specific hold reason.</p>
+            <ul>
+                <li>{LF:HoldReason="<i>Value</i>"}</li>
+            </ul>
+            <p><i>Value</i> is the hold reason that will be searched for. </p>
+            <div class="ex">
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>The first sample search below will find all entries with a hold reason 
+								of <i>Court Order</i> exactly. </p>
+                        <ul>
+                            <li>{LF:HoldReason="Court Order"}</li>
+                        </ul>
+                        <p>The second sample will find all entries with a hold reason that contains the word <i>Court</i>.</p>
+                        <ul>
+                            <li>{LF:HoldReason="*Court*"}</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+            <p>Hold due date:</p>
+            <p>Search syntax allows you to search for entries with a specific hold due date.</p>
+            <ul>
+                <li>{LF:HoldDueDate="<i>mm/dd/yyyy</i>"}</li>
+            </ul>
+            <p class="ex"><b>Tip:</b> Use 
+						a mathematical operator (=, &gt;, &gt;=, &lt;, and &lt;=) and wildcards 
+					to determine the results that will be returned.</p>
+            <div class="ex">
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>To find all documents with a hold due date between August 1, 2018 and August 15, 2018:</p>
+                        <ul>
+                            <li>
+                                <p>{LF:HoldDueDate&gt;="08/01/2018",NextReviewDate&lt;="08/15/2018"}</p>
+                            </li>
+                        </ul>
+                        <p>To find all records that will be eligible for review before January 1, 2019:</p>
+                        <ul>
+                            <li>
+                                <p>{LF:HoldDueDate&lt;"01/01/2019",NextReviewDate&lt;="08/15/2018"}</p>
+                            </li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+        </p>
+        <h3 class="topicheading">Immediate Disposition Eligibility Search Syntax</h3>
+        <p>Search syntax allows you to perform searches for records that are 
+ currently eligible for the specified disposition action. </p>
+        <p><b>Immediate disposition eligibility:</b>
+        </p>
+        <ul>
+            <li>{LFRM:ImmediateDispEligibility="<i>Value</i>"}</li>
+        </ul>
+        <p><i>Value</i> represents  the type of disposition 
+ action to search for, use type values from the following table. </p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available search syntax options for disposition action searches.">
+            <caption>Disposition Action Search Syntax Options</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Value
+                </th>
+                    <th>Description
+                </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="TableText">
+                    U
+                </td>
+                    <td class="TableText">
+                    All records currently eligible for any disposition action.
+                </td>
+                </tr>
+                <tr>
+                    <td class="TableText">
+                    T
+                </td>
+                    <td class="TableText">
+                    All records currently eligible for a transfer.
+                </td>
+                </tr>
+                <tr>
+                    <td class="TableText">
+                    A
+                </td>
+                    <td class="TableText">
+                    All records currently eligible for accession.
+                </td>
+                </tr>
+                <tr>
+                    <td class="TableText">
+                    D
+                </td>
+                    <td class="TableText">
+                    All records currently eligible for destruction.
+                </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+            <br />
+        </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>                To find all records currently eligible 
+ for transfer that have not yet been transferred. 
+ </p>
+                    <ul>
+                        <li>{LFRM:ImmediateDispEligibility="T"}</li>
+                    </ul>
+                    <p>To find all records that are either currently 
+ eligible for destruction or currently eligible for accession.</p>
+                    <ul>
+                        <li>{LFRM:ImmediateDispEligibility="D"} 
+ | {LFRM:ImmediateDispEligibility="A"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Permanent Record Search Syntax</h3>
+        <p>Search syntax can be used to search for permanent records 
+ or non-permanent records. </p>
+        <p style="font-weight: bold;">Permanent records:</p>
+        <ul>
+            <li>{LFRM:PermanentRecord="Y"}</li>
+        </ul>
+        <p><b>Non-permanent records:</b>
+        </p>
+        <ul>
+            <li>{LFRM:PermanentRecord="N"}</li>
+        </ul>
+        <p>The PermanentRecord parameter specifies whether search results will 
+ contain permanent records or non-permanent records.<br /></p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find all records that are permanent records. 
+ </p>
+                    <ul>
+                        <li>{LFRM:PermanentRecord="Y"}</li>
+                    </ul>
+                    <p>To find all records that are not permanent records.</p>
+                    <ul>
+                        <li>{LFRM:PermanentRecord="N"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Series Code Search Syntax</h3>
+        <p>Search syntax allows you to search for record series by either their record series code or their description. Searching by record series code or description will also return the record folders that are contained in that record series.</p>
+        <p><b>Record series code:</b>
+        </p>
+        <p>Search syntax can be used to look for all record series 
+			with a given series code. It will also return all records and 
+		folders contained within the record series.    </p>
+        <ul>
+            <li>{LFRM:Code="<i>Code</i>"}</li>
+        </ul>
+        <p><i>Code</i> represents the record series code that will be searched 
+		for. </p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me an example.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find a record series with a series code 
+					of "1-3-4-7." </p>
+                    <ul>
+                        <li>{LFRM:Code="1-3-4-7"}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <p><b>Record series description:</b>
+        </p>
+        <p>Search syntax allows you to perform searches for record 
+			series with a given description. It will also return all records 
+		and folders contained within the record series.  </p>
+        <ul>
+            <li>{LFRM:SeriesDesc="<i>Description</i>"}</li>
+        </ul>
+        <p><i><i>Description</i></i> represents the series description that will be searched for.</p>
+        <div class="ex">
+            <MadCap:dropDown>
+                <MadCap:dropDownHead>
+                    <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                </MadCap:dropDownHead>
+                <MadCap:dropDownBody>
+                    <p>To find record series with a description of "California State Registrations." </p>
+                    <ul>
+                        <li>{LFRM:SeriesDesc="California State Registrations"}</li>
+                    </ul>
+                    <p>To find all record series with no description. </p>
+                    <ul>
+                        <li>{LFRM:SeriesDesc=""}</li>
+                    </ul>
+                </MadCap:dropDownBody>
+            </MadCap:dropDown>
+        </div>
+        <h3 class="topicheading">Vital Records Search Syntax</h3>
+        <p>Search syntax allows you to search for vital or 
+ non-vital records, or for vital records that are assigned particular review dates or review cycles.</p>
+        <p><b>Vital records:</b>
+        </p>
+        <p>
+            <ul>
+                <li>{LFRM:VitalRecord="Y"}</li>
+            </ul>
+            <p><b>Non-vital records:</b>
+            </p>
+            <ul>
+                <li>{LFRM:VitalRecord="N"}</li>
+            </ul>
+            <p>The VitalRecord parameter specifies whether search results will contain 
+					vital records or non-vital records. </p>
+            <br>
+            </br>
+            <div class="ex">
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p> To find all vital records.  </p>
+                        <ul>
+                            <li>{LFRM:VitalRecord="Y"}</li>
+                        </ul>
+                        <p>To find all non-vital records.</p>
+                        <ul>
+                            <li>{LFRM:VitalRecord="N"}</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+        </p>
+        <p><b>Specific review dates:</b>
+        </p>
+        <p>
+            <p>Search syntax can be used to search for vital records that 
+						need to be reviewed on a certain date or vital records that were last 
+					reviewed on a given date.      </p>
+            <ul>
+                <li>{LFRM:NextReviewDate="<i>mm/dd/yyyy</i>"}</li>
+                <li>{LFRM:LastReviewDate="<i>mm/dd/yyyy</i>"}</li>
+            </ul>
+            <p>The VitalRecord parameter specifies whether search results will contain 
+					vital records or non-vital records. </p>
+            <p class="ex"><b>Tip:</b> Use 
+						a mathematical operator (=, &gt;, &gt;=, &lt;, and &lt;=) and wildcards 
+					to determine the type of results that will be returned.</p>
+            <br>
+            </br>
+            <div class="ex">
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>To find all records that are eligible for review between October 1, 2012 and October 8, 2012.</p>
+                        <ul>
+                            <li>
+                                <p>{LFRM:NextReviewDate&gt;="10/1/2012",NextReviewDate&lt;="10/8/2012"}</p>
+                            </li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+        </p>
+        <p><b>Review cycles:</b>
+        </p>
+        <p>
+            <p>Search syntax allows you to search for vital records by 
+					their type of review cycle.  </p>
+            <ul>
+                <li>{LFRM:VitalRecordReviewCycle="<i>Value</i>"}</li>
+            </ul>
+            <p><i>Value</i> determines the cycle code that 
+					will be searched for.</p>
+            <div class="ex">
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot>Show me examples.</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p> The following sample search will find all records that have a monthly 
+								review cycle. </p>
+                        <ul>
+                            <li>{LFRM:VitalRecordReviewCycle="mon"}</li>
+                        </ul>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </div>
+        </p>
+    </body>
+</html>

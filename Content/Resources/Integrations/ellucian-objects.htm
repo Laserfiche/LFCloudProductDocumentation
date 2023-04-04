@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>The Ellucian Objects</title>
+    </head>
+    <body>
+        <h1>The Ellucian Objects</h1>
+        <h2>Mapping</h2>
+        <p>Under the object tab,  select which field types for Ellucian fields are mapped to Laserfiche fields.</p>
+        <p>There is a default type selection, however you can always update the type in the connection.</p>
+        <h3>The selected connection will use the following default mappings.</h3>
+        <p>Default mappings follow the format: [Laserfiche Field] -&gt; [Ellucian type title] [(Ellucian type category)]</p>
+        <p class="note"><b>Note:</b> Each type title and type category correspond to the Description and Translation in the Ellucian Banner front-end. <MadCap:toggler targets="exampleBannerUI">Show me an example.</MadCap:toggler></p>
+        <div class="ex" MadCap:targetName="exampleBannerUI">
+            <p>Example: Ellucian Banner UI showing Description and Translation.</p>
+            <img src="images/EB-interface-example.png" />
+        </div>
+        <p class="note"><b>Note:</b> The titles below can be changed on an Ellucian system. For example, Billing (billing) can be updated to Billing2 (billing)</p>
+        <ul>
+            <li>Billing Address -&gt; Billing (billing)</li>
+            <li>Email/Email Address -&gt; School (school) Email Address</li>
+            <li>Home Phone -&gt; Home (home) Address</li>
+            <li>Mailing Address -&gt; Mailing (mailing)</li>
+            <li>Mobile Phone -&gt; Cell Phone (mobile)</li>
+            <li>Name -&gt; Legal Name (legal)</li>
+            <li>Section Title  -&gt; Short Course Title (In Banner, if user creates a section without giving a title, the short course title will be used as section title. Also, if the section title is exactly the same as the course title, will only be able to get short course title value from ethos.)</li>
+            <li>Section Description -&gt;  Schedule Description (Derived from short &amp; long description based on their availability)</li>
+            <li>Course Title -&gt; Short Course Title  (In Banner, there must be a short course title for each course.)</li>
+            <li>Instructor Name -&gt; Legal Name (legal)</li>
+            <li>Instructor Email -&gt; School (school) Email Address</li>
+        </ul>
+        <p>For each value in the type selection, the "category" is in the parentheses. </p>
+        <p class="ex">Example, "Email/Email Address -&gt; School (school) Email Address", where "(school)" denotes the category.</p>
+        <p class="note"><b>Note:</b> The type selection drop-down will not include duplicate categories for Name (due to special handling). For example, if the  Ellucian system is configured to have two types with the exact the same category for names then both will be hidden in the object tab.</p>
+        <p>Under the same group, the type will stay consistent. Updates made to the type for any of the fields under the same groupwill be applied to all the fields under the same group. For example, if the mapping of Billing Address/City is changed from Billing (billing) City to Business (business) City, then Billing Address/Address, Billing Address/Country, Billing Address/Postal Code and Billing Address/State will also be updated to the "Business" type.</p>
+        <h3>Duplicate mapping</h3>
+        <p>The type selection drop-down will not be filtered based on previous selection (used options shared between fields are not removed.) If a duplicate type is selected, a warning icon next to each duplicated field will be displayed, and a warning message will be displayed on save.</p>
+        <p>If the two "Address" fields are configured to have the same mapping, when performing an action, it will follow the following behavior:</p>
+        <ul>
+            <li>Update: One of the two addresses will arbitrarily be picked.</li>
+            <li>Search/Get: Both addresses will share the same values on return.</li>
+        </ul>
+        <p>If the two "Phone" fields are configured to have the same mapping the action will succeed as Ellucian allows a record to have multiple phone numbers with the same type. The effect is that a get/search action will return both the Home Phone and Mobile Phone as the same result, and on update both the Home Phone and Mobile Phone will be added.</p>
+        <h3>Mapping Empty Fields</h3>
+        <p>Fields can be mapped as empty using "--", the empty mapping. For addresses, phones and email,  empty mapping will render the fields as unable to perform retrieve or update, and they will be removed from Workflow and Lookup as a field option. In addition, giving the email field an empty mapping will remove the following actions from Workflow and Lookup: <a href="ellucian_actions/Search-Students-by-Email.htm">Search Students by Email</a>, <a href="ellucian_actions/Search-Student-by-Banner-ID-and-Email.htm">Search Student by Banner ID and Email</a> and <a href="ellucian_actions/Search-Student-by-Banner-Username-and-Email.htm">Search Student by Banner Username and Email</a>.</p>
+        <p>On save, a warning will be displayed if  email is mapped empty, alerting that the search actions requiring email will be unavailable.</p>
+        <p>The empty mapping is a valid option for names  on the Ellucian system and will not change the ability to retrieve or update names.</p>
+        <h2>The Object Mapping Interface</h2>
+        <p>The <b>Expand all</b> button will expand all the objects and group mappings, such as Billing/Mailing Address under the Student object. The <b>Collapse all</b> button will collapse all the objects and group mapping fields. <MadCap:toggler targets="exampleObjectUI">Show me an example.</MadCap:toggler></p>
+        <p MadCap:targetName="exampleObjectUI">
+            <img src="images/sampleobjects.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+        <p>Some Objects have fields that is referencing to another model. Clicking on the model name will take user to that referenced model. <MadCap:toggler targets="exampleLinkedObject">Show me an example.</MadCap:toggler></p>
+        <p MadCap:targetName="exampleLinkedObject">
+            <img src="images/linkedObject.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+        <h2>Possible Warning Messages</h2>
+        <p><b>Field type is not available</b>
+        </p>
+        <ul>
+            <li>When refreshing the page, the previously mapped field type or default field type does not exist, or its Value was changed in Ellucian.</li>
+        </ul>
+        <p><b>Field type properties have been changed</b>
+        </p>
+        <ul>
+            <li>When creating Ellucian connection for the first time, users will see a "Data Has Been Changed" popup with this warning message and are expected to save the changes in order to proceed.</li>
+            <li>When refreshing the page, the previously mapped field type's title or category has been changed in Ellucian.</li>
+        </ul>
+    </body>
+</html>

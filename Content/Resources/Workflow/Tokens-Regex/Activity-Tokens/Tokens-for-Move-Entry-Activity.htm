@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1150" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Move Entry Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OutputEntry_Name</td>
+                    <td class="tabletext">The name of the moved entry.</td>
+                    <td class="tabletext">%(MoveEntry_OutputEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID number of the moved entry.</td>
+                    <td class="tabletext">%(MoveEntry_OutputEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Path</td>
+                    <td class="tabletext">	The folder path of the moved entry.</td>
+                    <td class="tabletext">%(MoveEntry_OutputEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_FullPath</td>
+                    <td class="tabletext">The folder path of the moved entry, including the entry's name.</td>
+                    <td class="tabletext">%(MoveEntry_OutputEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Repository</td>
+                    <td class="tabletext">The repository the moved entry is in.</td>
+                    <td class="tabletext">%(MoveEntry_OutputEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the moved entry.</td>
+                    <td class="tabletext">%(MoveEntry_OutputEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the moved entry.</td>
+                    <td class="tabletext">	%(MoveEntry_OutputEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Name</td>
+                    <td class="tabletext">	The name of the folder the entry was moved into.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID of the folder the entry was moved into.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Path</td>
+                    <td class="tabletext">The folder path of the folder the entry was moved into.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_FullPath</td>
+                    <td class="tabletext">The folder path of the folder the entry was moved into, including the folder's name.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Repository</td>
+                    <td class="tabletext">The repository that contains the folder the entry was moved into.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the folder the entry was moved into.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the folder the entry was moved into.</td>
+                    <td class="tabletext">%(MoveEntry_ParentEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>Created Parent Folder</td>
+                    <td class="tabletext">Whether the Move Entry activity created the folder the entry was moved into. This token can have one of two possible values: True or False.</td>
+                    <td class="tabletext">%(MoveEntry_Created Parent Folder)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "MoveEntry" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Transfer to ~Sales_Top~", the syntax for the OutputEntry_Id token will be "%(TransfertoSales_Top_OutputEntry_Id)".</div>
+    </body>
+</html>

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Remote Agents | Process Automation | Laserfiche Cloud</title>
+        <meta name="description" content=" Remote agents provide a secure connection to resources that are behind a firewall so work can be performed locally and the results sent back to process automation securely." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Remote Agents</h1>
+        <p>Some work you want to perform requires resources (e.g., data sources or <a href="../../RPA/Getting-Started-with-RPA.htm" title="Click here to learn more." alt="Click here to learn more.">running bots</a>) that you do not want to expose to the outside world. Placed behind a firewall, these resources are secure but inaccessible from your processes. Remote agents provide a secure connection to those resources so work can be performed locally and the results sent back to process automation securely.</p>
+        <p>Remote agents consist of <a href="Queues.htm" title="Click here to learn more." alt="Click here to learn more.">queues</a> and <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">workers</a>. Workers are installed on your local machine and make requests for work by calling process automation. The queues schedule the work. Each work item is added to a queue. When the worker  is able to perform work, it requests work from the remote agent. The remote agent then sends queued work items (if available) to the worker. When the worker  completes the work items, it returns them to the remote agent and requests more work from the remote agent.</p>
+        <p>Each customer can have <a href="../../Service-Limits.htm#Worker" title="Click here to learn more." alt="Click here to learn more.">at most two</a> remote agents. Remote agents will be disabled when <a href="../../Service-Limits.htm" title="Click here to learn more." alt="Click here to learn more.">specific inactivity conditions</a> are met.</p>
+        <h2>Using Remote Agents</h2>
+        <p>Remote agents can be used in conjunction with <a href="../External-Data-Sources/External-Data-Sources.htm" title="Click here to learn more." alt="Click here to learn more.">external data sources</a>, web services, and <a href="../../RPA/Getting-Started-with-RPA.htm" title="Click here to learn more." alt="Click here to learn more.">running bots</a>. You can register a worker on a computer in your organization's network to perform data queries or run bots. For example, if your remote agent has a queue with the data query <a href="Queues.htm#Plugins" title="Click here to learn more." alt="Click here to learn more.">plugin</a>, you can use that remote agent's workers to query data sources in your organization's network. </p>
+        <p>When you <a href="../External-Data-Sources/External-Data-Sources.htm#Creating" title="Click here to learn more." alt="Click here to learn more.">create an external data source</a>, you have an option to specify the remote agent associated with it. For <a href="../../RPA/Migrate-to-Dedicated-Remote-Agent.htm" title="Click here to learn more." alt="Click here to learn more.">bots</a>, a dedicated bot remote agent has been created for you. </p>
+        <h2>Creating a Remote Agent</h2>
+        <p>Remote agents are created  in the <b>Integrations</b> page in Process Automation.</p>
+        <p class="note"><b>Note:</b>&#160;You do not need to create a remote agent for running bots. One has already been created for you. You will need to install an associate <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">workers</a> with the dedicated remote agent bot to run bots  via a timer <a href="../../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting event</a> or the <a href="../../Workflow/Activities/Invoke-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Invoke Bot</a> activity in Workflow.</p>
+        <ol>
+            <li>On the <b>Integrations</b> page, click <b>Remote Agents</b> in the left pane. A list of existing remote agents will appear.</li>
+            <li>Click <b>New</b> to create a new remote agent.</li>
+            <li>Enter a name and description for your remote agent.</li>
+            <li>Click <b>Create</b>. This takes you to a configuration page where you can create <a href="Queues.htm" title="Click here to learn more." alt="Click here to learn more.">queues</a>, add plugins, and create <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">workers</a>.</li>
+        </ol>
+        <h2>Monitoring a Remote Agent</h2>
+        <ol>
+            <li>On the <b>Integrations</b> page, click <b>Remote Agents</b> in the left pane. </li>
+            <li>Select a remote agent.</li>
+            <li>In the left pane, you can see <ul><li><b>Queues:</b> The queues associated with the agent, including how many items are in a queue, and which workers are assigned for a queue. For the Dedicated Bot Remote Agent, you can also review the queue's capabilities. </li><li><b>Workers:</b> The workers assigned to the agent including their machine names, statuses, and versions. </li><li><b>History:</b> The work that has been completed and queued for the agent, as well as any errors. </li></ul></li>
+        </ol>
+        <h2>Relevant Ports</h2>
+        <p>Process Automation communicates with workers using port 443. The machines hosting the worker agents do not need SSL certificates for this communication.</p>
+        <p>When using the <a href="Queues.htm#Plugins" title="Click here to learn more." alt="Click here to learn more.">data query plugin</a>, the workers communicate with databases using TCP port 1433.</p>
+        <p style="font-weight: bold;">Next Steps</p>
+        <ul>
+            <li><a href="Queues.htm" title="Click here to learn more." alt="Click here to learn more.">Create queues for your remote agent</a>
+            </li>
+            <li><a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">Create workers</a>
+            </li>
+            <li><a href="../../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">Set up a data query rule</a>
+            </li>
+            <li><a href="../../RPA/Getting-Started-with-RPA.htm" title="Click here to learn more." alt="Click here to learn more.">Set up a bot</a>
+            </li>
+            <li><a href="../../Workflow/Activities/Setting-Up-a-Data-Query-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">Use a data query rule in Workflow</a>
+            </li>
+            <li><a href="../../Workflow/Activities/Invoke-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Invoke a bot with Workflow</a>
+            </li>
+            <li><a href="Troubleshooting.htm" title="Click here to learn more." alt="Click here to learn more.">Troubleshooting remote agents</a>
+            </li>
+            <li><a href="../../Service-Limits.htm#Worker" title="Click here to learn more." alt="Click here to learn more.">Service limits for remote agents</a>
+            </li>
+        </ul>
+    </body>
+</html>

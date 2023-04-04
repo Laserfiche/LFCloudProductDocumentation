@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Managing Business Processes | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="View and administer business processes on one page. On the Forms Manage page, you can download/export, copy, delete, update process instances to a specific version, or enable/disable processes. You can also edit process details (including version history) and configure process notifications." />
+    </head>
+    <body>
+        <h1>Managing Processes</h1>
+        <p>The <b>Manage</b> page lets you view all processes and carry out actions on them. The available actions depend on your <a href="../Resources/Managing-Account-Administration.htm#Process" title="Click here to learn more." alt="Click here to learn more.">security role</a> for the process.</p>
+        <h2 class="topicheading"><a name="List"></a>List of Processes</h2>
+        <p>The list of processes shows, for each process, the process name, the version number of the process, when it was last modified, and whether the process is enabled or disabled (under <b>Status</b>). Click on a column name to sort processes by their values in that column, or search for processes using the search bar at the top of the page.</p>
+        <div class="note">
+            <p><b>Note</b>: The <b>Status</b> column does not show whether a process is published or unpublished, but whether it is enabled or disabled. You can tell whether a process is published or unpublished by whether it has a version number. Processes without version numbers are unpublished. Any process that has a version number is published.</p>
+        </div>
+        <p>For each process, you can use the following buttons  in the top right corner when the process is selected. </p>
+        <ul>
+            <li><b>Download</b>:&#160;Export the process in XML&#160;format so that you can <a href="Importing-A-Process.htm" title="Click here to learn more." alt="Click here to learn more."><a name="import"></a>import</a> it somewhere else later.</li>
+            <li><b>Copy</b>:&#160;Duplicate the process with the text "- Copy"&#160;appended to the new process' name.</li>
+            <li><b>Delete</b>: Delete the process and its forms entirely. You can delete multiple processes at once by selecting multiple processes (by holding down the SHIFT button) before clicking <b>Delete</b>.</li>
+            <li><b>Run</b>: Start a process. If the process starts with a form, clicking on <b>Run</b> will open the form for you to fill, and the process will start once you submit the form. If the process does not start with a form, clicking <b>Run</b> will start the process.</li>
+            <li><b>Enable/Disable</b>:&#160;Enable or disable the process.</li>
+            <li><b>Edit</b>: Go to the process designer to edit the process. Clicking on the process name also takes you to the process designer.</li>
+            <li><b>Report</b>: View <a href="Analytics/Analytics-Reports.htm" title="Click here to learn more." alt="Click here to learn more.">analytics and reports</a> for the process.</li>
+            <li><b>Monitor</b>: <a href="Monitoring-Process-Instances-and-Tasks.htm" title="Click here to learn more." alt="Click here to learn more.">View information</a> about the process' instances.</li>
+        </ul>
+        <h2 class="topicheading"><a name="Viewing"></a>Viewing and Modifying Process Details</h2>
+        <p>You can click on each process' <b>Details</b> button to view information about the process. In the <b>Process Details</b> dialog box, you can edit or view the following:</p>
+        <ul>
+            <li><b>Name</b>: The name of the process.</li>
+            <li><b>Description</b>: The process description, as provided by the process' creator.</li>
+            <li><b>Process status</b>: Whether the process is enabled or disabled. This does not indicate whether the process is published. Published processes have a version number. If a process does not have a version number displayed on the <b>Manage</b> page, it is unpublished. Processes must be both published and enabled before they can be started.<ul><li>Click on the toggler to enable or disable the process.</li></ul></li>
+            <li><b>Link</b>: The URL of the process' starting form, if there is a starting form.<ul><li>You can modify the URL in the provided text box.</li><li>To copy a link, click <b>Share</b>, then <b>Copy</b>. This copies the full URL to your clipboard.</li><li>To share a link by email, click <b>Share</b>, then <b>Email link</b>.</li></ul></li>
+            <li><b>Action history privacy</b>: Enable or disable the ability to hide task history when the participant is viewing tasks in the inbox or monitor page. When enabled, this setting overrides the message start event or user task level settings.</li>
+            <li><b>Invoke business process</b>: Enable or disable the ability for this process to be started from another process or workflow.<ul><li>If enabled, input and output parameters, and a link to <b>View Parameters</b>, will be displayed.</li><li>See <a href="StartingProcessFromWorkflow.htm" title="Click here for more information." alt="Click here for more information.">Starting a Process From a Workflow</a> for additional details.</li></ul></li>
+            <li><b>Instance name</b>: How the process' instance names are formatted.</li>
+            <li><b>Summary details</b>: The process variables that should be shown in the <b><a href="Managing-Tasks-in-the-Inbox.htm" title="Click here to learn more." alt="Click here to learn more."><b>Tasks</b> tab</a></b>.<ul><li>In the left box, select the variables that you want displayed as columns in the Tasks tab.</li></ul></li>
+        </ul>
+        <p>If you modify any details, make sure to click <b>Save</b> at the bottom of the dialog box. Otherwise, your changes will not be applied.</p>
+        <h2 class="topicheading">Configuring Process Notifications</h2>
+        <p>Process notifications are configured in the <b>Details</b> pane on the right.</p>
+        <ol>
+            <li>Select the process you want to configure notifications for.</li>
+            <li>Expand the <b>Details</b> pane on the right.</li>
+            <li>Open the <b>Notifications</b> tab within the <b>Details</b> pane.</li>
+            <li>You can configure notifications for yourself and the process initiator. Scroll to the role for which you want to configure notifications.</li>
+            <li>Find the event for which you want to configure notifications. Toggle <b>Web</b> or <b>Email</b> notifications on or off for that event.</li>
+            <li>Repeat steps 4-5 as required. Click <b>Save</b> when you're done.</li>
+            <li>If you have turned on email notifications for any role, you can configure whether the notifications arrive as a daily digest or individual emails, or both. To do this, click <b>Configure email notifications</b> at the bottom of the <b>Notifications</b> pane.<ol style="list-style-type: lower-alpha;"><li>In the <b>Configure Email Notifications</b> dialog box, select the format of email notifications for each role that has email notifications.</li><li>Click <b>Save</b> when you're done.</li></ol></li>
+        </ol>
+        <h2 class="topicheading"><a name="Process"></a>Process Versions</h2>
+        <p>You can view the version history of a published process by clicking its version number. This will open a <b>Version History</b> dialog box that lets you download XML files representing each version of the process.</p>
+        <ul>
+            <li>Click on the version name to view a read-only process diagram of that version.</li>
+            <li>Click on the download button next to a version to download an .xml file that represents the process. The file can be used to <a href="Importing-A-Process.htm" title="Click here to learn more." alt="Click here to learn more.">import</a> the process back into the same environment or to a different environment.</li>
+        </ul>
+        <h3>Promoting a Previous Version to the Current Published Version</h3>
+        <p>For a process with multiple versions, the <b>Version History</b> will show a <b>Promote to latest</b> <img src="../Resources/Forms Images/forms_updateinstances.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 25px;height: 21px;" /> icon next to previous versions. Click the <b>Promote to latest</b> icon next to a version to make that the latest version and optionally, update running instances to that version. In the <b>Update Instances</b> dialog box, select:</p>
+        <ul>
+            <li><b>None</b> if you do not want any running instances to be updated.</li>
+            <li><b>All</b> if you want all running instances to be updated to the version for which you clicked the <img src="../Resources/Forms Images/forms_updateinstances.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 24px;height: 20px;" /> icon.</li>
+            <li><b>Specific Versions</b> if you want to pick which versions should have their running instances updated to the version for which you clicked the <img src="../Resources/Forms Images/forms_updateinstances.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 24px;height: 20px;"></img> icon.</li>
+        </ul>
+        <h2 class="topicheading">Other Actions</h2>
+        <p>You can also do the following from the <b>Manage</b> page:</p>
+        <ul>
+            <li>Edit any process by clicking on its <b>Edit</b> button. Alternatively, click on the process name.</li>
+            <li>Create a new process by clicking <b>New Process</b> in the top right corner.</li>
+            <li><a href="Importing-A-Process.htm" title="Click here to learn more." alt="Click here to learn more.">Import a process</a> by clicking <b>Import</b> in the top left.</li>
+            <li>Search for specific processes using the <b>Search processes</b> text box.</li>
+            <li>Export a process to move it from a test environment to a production environ by clicking the download <img src="../Images/image26.png" /> icon.</li>
+        </ul>
+    </body>
+</html>

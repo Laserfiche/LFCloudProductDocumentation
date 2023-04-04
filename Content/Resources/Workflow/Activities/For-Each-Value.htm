@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>For Each Value</h1>
+        <p style="text-align: center;">
+            <img src="Images/forEachValueCanvas.PNG" title="For Each Value activity" alt="For Each Value activity" />
+        </p>
+        <p>This activity  runs the contained activities using each specified token value. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-For-Each-Value-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p class="ex"><b>Example 1</b>:&#160;Sally wants to send an email to each email address in a multi-value field. To accomplish this goal, she retrieves all the email addresses in the Email Address field using the <a href="Retrieve-Field-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Retrieve Field Values</a> activity. She adds the Email Address field value token from the <b>Retrieve Field Values</b> activity to the <b>For Each Value</b> activity, and she places an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity inside the <b>For Each Value</b> activity. The <b>Email</b> activity uses the Current Value token as the email address.</p>
+        <p class="ex"><b>Example 2</b>: James wants to translate a  <a href="../../../Forms-Current/Form-Fields/Table.htm">table</a> (or <a href="../../../Forms-Current/Form-Fields/Collection.htm">collection</a>) from a <a href="../../../Forms-Current/Creating-a-New-Form.htm">business process form</a> into a <a href="../../Entities/lookup-tables.htm">lookup table</a> for use later in the workflow. To accomplish this, he has already prepared a <b>lookup table</b> and a <b><a href="../../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" style="font-weight: normal;">lookup table query rule</a></b>  that match the form's table/collection format. The workflow parses through every row of the table using the <b>For Each Value</b> activity and iteration count, which contains a <b><a href="Run-Business-Rules.htm" style="font-weight: normal;">Run Rule</a></b> activity to insert the values into the table and a <a href="Track-Tokens.htm">Track Tokens</a> activity to move to the next row.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Values</b> property box, type a value in the text box. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            <li><b>Optional</b>: Change the order in which the <b>For Each Value</b> activity uses the values using the up-down arrows <img src="../../../Images/Icon_Up_Down.png" />.</li>
+            <li>Drag the activities you want performed for each token value from the toolbox pane into the designer pane.</li>
+            <li>Configure the activities you dragged into this activity. If the activity you have selected accepts tokens, you can use the Current Value token produces within the selected activity.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/migrating-form-tables-into-word-documents.flsnp" />
+    </body>
+</html>

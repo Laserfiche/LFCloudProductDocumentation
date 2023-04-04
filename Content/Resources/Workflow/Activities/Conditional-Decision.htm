@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Conditional Decision</h1>
+        <p style="text-align: center;">
+            <img src="Images/conditionalDecisionCanvas.PNG" title="Conditional Decision activity" alt="Conditional Decision activity" />
+        </p>
+        <p>This activity runs the first branch that has satisfied conditions, starting with the left-most branch. If none of the branches have satisfied conditions, then the activity is skipped. All branches but the far-right branch  must be assigned a condition. As a best practice, do not assign a condition to the far-right branch to act as a catch-all branch if the other branch conditions are not met.</p>
+        <p class="ex"><b>Example</b>: An employee asks a supervisor to review a document. If the supervisor approves the document, the document is emailed to the entire team. If it is denied, the document is sent back to the employee. The workflow designer builds this workflow using an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity to send the document to the supervisor. Then, the designer adds a <b>Conditional Decision</b> activity. In the first branch, if the supervisor approves the document, a sticky note is added to the document saying it was approved using an <a href="Add-Sticky-Note.htm" title="Click here to learn more." alt="Click here to learn more.">Add Sticky Note</a> activity and then an email is sent to the entire team with the document using an <b>Email</b> activity. If the supervisor denies the document, the second branch runs and an <b>Email</b> activity is used to send the document back to the employee.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>Select a branch of the activity in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" />.</li>
+            <li>In the <b>Condition</b> property box, click <b>Edit conditions...</b>.</li>
+            <li><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">Configure the conditions for the branch</a>. If the conditions are not met, the workflow skips this branch.</li>
+            <li>Click <b>OK</b>.</li>
+            <li>Drag and drop activities into the branch.</li>
+            <li>Repeat the steps above for each branch.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/Plus-Branch.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/delete-branch.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/disable-branch.flsnp" />
+    </body>
+</html>

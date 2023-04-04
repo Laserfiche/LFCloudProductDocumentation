@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="462" MadCap:lastWidth="1133" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Retrieve Field Values Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Template Name</td>
+                    <td class="tabletext">The name of the template assigned to the entry.</td>
+                    <td class="tabletext">%(RetrieveFieldValues_Template Name)</td>
+                </tr>
+                <tr>
+                    <td>Field Name</td>
+                    <td class="tabletext">A token is created for each field retrieved. The token name is the same as the field name. If the field is a multi-value field, the field name is followed by _All.</td>
+                    <td class="tabletext">
+                        <p>%(RetrieveFieldValues_Field1)</p>
+                        <p>%(RetrieveFieldValues_MultiValueField_All)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "RetrieveFieldValues" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Get: Info!", the syntax for the Date field will be "%(GetInfo_Date)".</div>
+    </body>
+</html>

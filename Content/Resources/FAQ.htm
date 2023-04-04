@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Frequently Asked Questions</h1>
+        <p style="font-weight: bold;">Q:&#160;What is Laserfiche Workflow?</p>
+        <blockquote>
+            <p>A:&#160;Laserfiche Workflow lets you automate complex business tasks, like:</p>
+            <ul>
+                <li>Moving documents with activities like the <a href="Workflow/Activities/Conditional-Decision.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Decision</a> activity.</li>
+                <li>Extracting and inputting data with activities like the <a href="Workflow/Activities/Copy-Metadata.htm" title="Click here to learn more." alt="Click here to learn more.">Copy Metadata</a> and <a href="Workflow/Activities/Update-Word-Document.htm" title="Click here to learn more." alt="Click here to learn more.">Update Word Document</a> activities.</li>
+                <li>Setting deadlines with activities like activities like the <a href="Workflow/Activities/Deadline.htm" title="Click here to learn more." alt="Click here to learn more.">Deadline</a> activity.</li>
+            </ul>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What is the difference between saving, publishing and running a workflow?</p>
+        <blockquote>
+            <p>A: Saving a workflow creates a new draft of the workflow. To save, the workflow must have a unique name. Publishing the workflow makes the workflow ready to run. A published workflow cannot have validation errors. If you try to run a published workflow after you make unpublished changes, then the workflow without the changes still runs. Running workflows create an instance of the workflow. You can view details about the workflow in the instance report.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What is a draft?</p>
+        <blockquote>
+            <p>A: A draft is a workflow that contains saved but unpublished changes. When you delete a draft, the workflow reverts to its state when it was published.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: Can I import a workflow from Workflow 10?</p>
+        <blockquote>
+            <p>A: No, currently you can only import workflows and starting events built on the site.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: How do I back up my workflows?</p>
+        <blockquote>
+            <p>A: All your workflows are stored on Laserfiche Cloud. If you still want a copy of your workflow, <a href="Workflow/Exporting-Workflows.htm" title="Click here to learn more." alt="Click here to learn more.">export the workflow</a>.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What is the difference between the Conditional Decision, Conditional Parallel, and Conditional Sequence activities?</p>
+        <blockquote>
+            <p>A: The following table outlines the difference between the three activities:</p>
+            <ul>
+                <li><a href="Workflow/Activities/Conditional-Decision.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Decision</a>: The first branch (or sequence of activities) that has its conditions satisfied runs.</li>
+                <li><a href="Workflow/Activities/Conditional-Parallel.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Parallel</a>: One or more of the branches (or sequences of activities) run at the same time based on the specified conditions for each branch.</li>
+                <li><a href="Workflow/Activities/Conditional-Sequence.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Sequence</a>: One sequence of activities is performed when the sequence's conditions are satisfied.</li>
+            </ul>
+        </blockquote>
+        <p style="font-weight: bold;">Q: How do I add a branch to an activity?</p>
+        <blockquote>
+            <p style="font-weight: normal;">A:&#160;Instead of right-clicking to add a branch, all branches in Workflow on Laserfiche Cloud can be added from the toolbox pane. For example, to add a <b>Conditional Decision</b> branch to a <a href="Workflow/Activities/Conditional-Decision.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Decision</a> activity, add a <b>Conditional Decision</b> activity to the canvas and then add the <b>Conditional Decision Branch</b> onto the activity.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What are entries?</p>
+        <blockquote>
+            <p>A: Entries are the documents and folders in your repository that you can use in your workflow definitions.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What are conflicting starting events?</p>
+        <blockquote>
+            <p>A:&#160;If a workflow is not running as intended, ensure that you do not have conflicting starting events. Conflicting starting events are two or more events that start their respective workflows based on starting events that evaluate to true at the same time. Because the workflows want to run at the same time on the same entry, the workflows fight for access to the entry. When that happens, the workflow may not run as intended.</p>
+            <p class="ex"><b>Example</b>: A starting rule runs Workflow A when a document is created in the repository and the document page count is less than 100 pages. The same starting event runs Workflow B when a document is created in the repository and the document page count is greater than 50 pages. If a document is created in the repository that has between 51 and 99 pages, the two workflows run at the same time, meaning one or both workflows may not run as intended.</p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What is a runaway workflow?</p>
+        <blockquote>
+            <p>A: You have a runaway workflow when the way the workflow was configured causes the workflow to not end. Workflow on Laserfiche Cloud has preset <a href="Service-Limits.htm#ratelimit" title="Click here to learn more." alt="Click here to learn more.">rate limits</a> that ensure your workflow does not run forever.</p>
+            <p class="ex"><b>Example</b>: For Workflow A, whenever a document is copied into Folder A, the workflow copies the document into Folder B. For Workflow B, whenever a document is copied into Folder B, the workflow copies the document into Folder A. </p>
+        </blockquote>
+        <p style="font-weight: bold;">Q: Why will my workflow not finish running?</p>
+        <blockquote>
+            <p>A: Use the following list to determine why your workflow did not finish running:</p>
+            <ol>
+                <li>Go to the <a href="Workflow/Viewing-an-Instance-Report.htm" title="Click here to learn more." alt="Click here to learn more.">instance report</a>.</li>
+                <li>Determine the point at which the workflow failed using the color-coded activity borders.</li>
+                <li>Ensure that the activity at which the workflow stopped is configured correctly.</li>
+                <li>Select the Messages tab and review any warnings or errors.</li>
+            </ol>
+        </blockquote>
+        <p style="font-weight: bold;">Q: What is the benefit of using a rule?</p>
+        <blockquote>
+            <p>A: Rules provide some major benefits:</p>
+            <ul>
+                <li>Separate Tasks. Because you can configure a rule in one place and use it in another, you can separate the person who designs a rule from the one who uses it in a workflow. </li>
+                <li>Security. The separation between configuration and use also ensures that the rule designers change the rules and the workflow designers change the workflows.</li>
+                <li>Easy to Use. The design of each rule lets you perform complex tasks in easy-to-use tables that would otherwise require long conditional expressions.</li>
+            </ul>
+        </blockquote>
+        <p style="font-weight: bold;">Q: I received an "Access denied." error for my terminated workflow. What do I&#160;do?</p>
+        <blockquote>
+            <p>A: Process automation uses a system account “ProcessAutomationUser” to connect to your Laserfiche Cloud repository. Please ensure that this system account has the proper access rights and permissions to perform the action that was denied. See <a href="Entry-Access-Rights.htm" title="Click here to learn more." alt="Click here to learn more.">Configuring Process Automation Entry Access Rights</a> to learn more about this system account.</p>
+        </blockquote>
+        <p>&#160;</p>
+        <p><b>Still have a question?</b>
+        </p>
+        <p>Ask it on <a target="_blank" href="https://answers.laserfiche.com/">Laserfiche Answers</a></p>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultToc
+  Version="1">
+  <TocEntry
+    Title="Getting Started with Bots"
+    Link="/Content/Resources/RPA/Getting-Started-with-RPA.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+  <TocEntry
+    Title="How Business Processes, Workflows, and Bots Work Together"
+    Link="/Content/Resources/How-PA-Components-Work-Together.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Installing Bots"
+    Link="/Content/Resources/RPA/Installation.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Recording a Bot"
+    Link="/Content/Resources/RPA/Recording-a-Process.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Using Bots with Google Chrome"
+      Link="/Content/Resources/RPA/Using-RPA-with-Other-Applications.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Editing and Publishing a Bot"
+    Link="/Content/Resources/RPA/Editing-a-Bot.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Tokens"
+      Link="/Content/Resources/RPA/Tokens.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Using Bots with Workflow"
+    Link="/Content/Resources/RPA/rpa-and-workflow.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Running a Bot"
+    Link="/Content/Resources/RPA/Running-a-Bot.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Migrating to the Dedicated Bot Remote Agent"
+      Link="/Content/Resources/RPA/Migrate-to-Dedicated-Remote-Agent.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+  <TocEntry
+    Title="Monitoring a Bot"
+    Link="/Content/Resources/RPA/Monitoring-a-Bot.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Managing Bots"
+    Link="/Content/Resources/RPA/Managing-a-Bot.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Troubleshooting Bots"
+    Link="/Content/Resources/RPA/Troubleshooting-Bots.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  <TocEntry
+    Title="Remote Agents"
+    Link="/Content/Resources/Integrations/Remote-Agents/Remote-Agents.htm"
+    MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <TocEntry
+      Title="Queues"
+      Link="/Content/Resources/Integrations/Remote-Agents/Queues.htm"
+      MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Workers"
+      Link="/Content/Resources/Integrations/Remote-Agents/Worker-Agents.htm"
+      MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
+      Title="Troubleshooting Remote Agents"
+      Link="/Content/Resources/Integrations/Remote-Agents/Troubleshooting.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+  </TocEntry>
+</CatapultToc>

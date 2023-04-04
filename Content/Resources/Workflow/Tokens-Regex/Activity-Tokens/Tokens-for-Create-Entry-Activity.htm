@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1093" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Create Entry Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OutputEntry_Name	</td>
+                    <td class="tabletext">The name of the new entry.</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID number of the new entry.</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Path	</td>
+                    <td class="tabletext">The folder path of the new entry.	</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_FullPath	</td>
+                    <td class="tabletext">The folder path of the new entry, including the entry's name.	</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Repository</td>
+                    <td class="tabletext">The repository the new entry is in.</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the new entry.</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the new entry.</td>
+                    <td class="tabletext">%(CreateEntry_OutputEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Name</td>
+                    <td class="tabletext">The name of the folder in which the new entry was created.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID of the folder in which the new entry was created.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_FullPath</td>
+                    <td class="tabletext">The path to the folder in which the new entry was created, with the folder's name.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Repository</td>
+                    <td class="tabletext">The repository that contains the folder in which the new entry was created.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the folder in which the new entry was created.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the folder in which the new entry was created.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_Guid)</td>
+                </tr>
+                <tr>
+                    <td>Created Parent Folder</td>
+                    <td class="tabletext">Whether the Create Entry activity created the folder in which the new entry was placed. This token can have one of two possible values: True or False.</td>
+                    <td class="tabletext">%(CreateEntry_Created Parent Folder)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "CreateEntry" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "New *Sales* Document", the syntax for the OutputEntry_Id token will be "%(NewSalesDocument_OutputEntry_Id)".</div>
+    </body>
+</html>

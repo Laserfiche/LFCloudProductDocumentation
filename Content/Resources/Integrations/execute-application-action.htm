@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Run Application Action</h1>
+        <p>Use the Run Application&#160;Action activity to create, delete, or retrieve data from your integrated system. The activity requires a configured <a href="integrationplatform.htm" title="Click here to learn more." alt="Click here to learn more.">application connection</a> to your Salesforce, Redtail, Microsoft Dynamics 365 or Ellucian account.</p>
+        <p><b>To configure a Run Application&#160;Action activity:</b>
+        </p>
+        <ol>
+            <li>Drag the <MadCap:toggler targets="runcrm">Run Application Action activity</MadCap:toggler> from the toolbox pane and drop it in the designer pane.<p MadCap:targetName="runcrm"><img src="../../Images/run-crm-action.png" /></p></li>
+            <li>In the properties pane, select a <a href="integrationplatform.htm" title="Click here to learn more." alt="Click here to learn more.">connection profile</a>. To create or manage connections, click the <b>Manage connections</b> link, which opens a new Application Connections window.<p><img src="../../Images/run-crm-action-connection.png" style="border-style: solid;border-width: 1px;" /></p></li>
+            <li>Select an action category. Categories will be based on the selected connection properties.<p><img src="../../Images/run-crm-action-sample-categories-1.png" title="Sample Categories Redtail CRM" alt="Sample Categories Redtail CRM" style="border-style: solid;border-width: 1px;" /> <img src="../../Images/run-crm-action-sample-categories-2.png" title="Sample Categories Saleforce CRM" alt="Sample Categories Saleforce CRM" style="border-style: solid;border-width: 1px; vertical-align: top;" /></p><p class="note"><b>Note:</b>&#160;Above images are for example only, actual categories may vary depending on the connection properties.</p></li>
+            <li>Select the action to perform. Depending on the selected application, you will be presented with different actions.</li>
+            <li>Under <b>Input Values</b>, select the desired values you want to input in your integrated system. Use <a href="../Workflow/Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Workflow tokens</a> to insert dynamic values based on the running workflow. For creation and update actions, this is where you specify what you want to change in the integrated system. In addition to default values required by the system, you can click <b>Add</b> to insert additional information.<p><img src="../../Images/run-crm-action-input-values.png" style="border-style: solid;border-width: 1px;" /></p><p class="note"><b>Note:</b>&#160;Refer to the associated CRM product documentation for input value requirements.</p></li>
+            <li>Under <b>Output Tokens</b>, take note of the output <a href="../Workflow/Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> created upon completion of the <b>Run Application&#160;Action</b> activity. The value of these tokens can be used later in your workflow. Rename the token names as desired. For example, after creating an new account, the system will return the <b>Account Id</b> of the newly created account. <p><img src="../../Images/run-crm-action-output-tokens.png" style="border-style: solid;border-width: 1px;" /></p></li>
+        </ol>
+        <p class="w"><b>Important</b>: If a custom object is altered or deleted, the connection profile and the activities associated will not automatically be notified of those changes. First refresh and save the connection profile, then refresh, save, and republish the workflow to receive the updated changes to the custom objects.</p>
+    </body>
+</html>

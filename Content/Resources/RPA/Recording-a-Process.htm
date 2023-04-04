@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Recording a Laserfiche Bot</title>
+        <meta name="description" content="Recording a process lets you capture the actions you want your bot to automate. You can edit the process after you record it in the bot designer. " />
+    </head>
+    <body>
+        <h1>Creating a Bot by Recording Tasks</h1>
+        <p>Recording a process lets you capture the actions you want your bot to automate. You can <a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">edit</a> the process after you record it in the bot designer. </p>
+        <p class="ex"><b>Example:</b> All of an organization's client information is stored in a legacy CRM system. They want to move this information into their new system but it requires a lot of copy and pasting data and clicking through multiple screens. By creating a bot that can perform these actions, the migration is automated and completed quickly without any manual work. </p>
+        <p class="ex"> <b>Example:</b> When a new client's paperwork is added to the repository, a workflow runs that creates a folder structure, adds metadata, and more. Then the workflow invokes a bot that automatically updates the company's CRM&#160;system with the client's information. </p>
+        <h2>Recording a process</h2>
+        <ol>
+            <li>Open the applications you want to automate tasks in. It's helpful to have a clear idea of the exact sequence and clicks you want the bot to perform so you don't add in any unnecessary or redundant actions. You can always edit out those actions later, but the cleaner your first pass is, the better.</li>
+            <p class="ex"><b>Tip:</b> If you want the bot to open an application for the user, add a <a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Launch Application</a> activity  in the bot designer after you've recorded the process. </p>
+            <li>Navigate to the bot designer: from the <b>Process Automation Overview</b> page, click <b>Bots</b>. Then, select the <b>Design</b> tab. </li>
+            <li>Click the <b>Plus</b> button <img src="../Images/plusButton.png" title="Click this button to open a bot." alt="Plus button." /> at the top of the page to create a new bot or open an existing bot.</li>
+            <li>In the <b>Select a Bot</b> dialog box, click the <b>New</b> button <img src="../Images/newButton.png" title="Click to create a new bot." alt="New button." />.</li>
+            <li>Provide a name and description for your bot, and click <b>Create</b>. </li>
+            <li>Drag the <b>Add recording</b> activity from the toolbox to the canvas. </li>
+            <p class="note"><b>Note:</b> If you need to run your bot in administrator mode (e.g., if your bot is installing software, updating drivers, or changing system settings), select the <b>Settings</b> button in the toolbar and select <b>Run as administrator</b>. </p>
+            <li>Click <b>Open the bot recorder</b>.</li>
+            <li>If you have not already installed the bot recorder, you will be prompted to install it. <a href="Installation.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about the installation process</a>. </li>
+            <li>Click <b><MadCap:concept term="RPA" />Open Laserfiche Bots WebLauncher</b> to run the recorder.</li>
+            <li>In the bot recorder, click the red record button <img src="../Images/recordButton.png" title="Click to record a bot." alt="Record button" />.</li>
+            <li>Move your cursor to the element you want the bot to interact with and wait for the red highlight box to appear around the element. </li>
+            <li>Perform your action: <ul><li>Click an element</li><li>Copy text using CTRL+C</li><li>Paste text using CTRL+V. See the <a href="#Writing" title="Click here to learn more." alt="Click here to learn more.">Writing Data</a> section below for more information.</li><li>Type text. See the <a href="#Writing" title="Click here to learn more." alt="Click here to learn more.">Writing Data</a> section below for more information.</li></ul><p>Continue performing tasks as you normally would, ensuring you pause before each action you want to record and wait for the red highlight box. The bot recorder will record each action so it can replicate it later. </p></li>
+            <p class="note"><b>Note:</b> If you want your bot to interact with a website opened in Google Chrome you may be prompted to open a new browser window. Click <b>Launch a new instance of Chrome</b> and then, in the new browser window, navigate to the web page you want to record. <a href="Using-RPA-with-Other-Applications.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</p>
+            <ul>
+                <li>Pause the recording at any time by clicking the red pause button. This lets you perform actions that you don't want the bot to repeat. </li>
+                <li>If you accidentally record extraneous actions, you can delete them from the recorder or from the bot designer after you've finished recording. </li>
+            </ul>
+            <h3><a name="Writing"></a>Writing Data</h3>
+            <ol>
+                <li>When you paste (using CTRL+V) or write data as part of the recording, a token button (sideways arrow) <img src="../Images/tokenButton.png" alt="Token button." title="Click this button to add tokens." /> will appear next to the field you wrote in. Click the button to open a dialog box where you can edit the text you want to enter in the field. </li>
+                <ul>
+                    <li>Click the token button <img src="../Images/tokenButton.png" title="Click this button to add tokens." alt="Token button." /> to add <a href="Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> to your text. Tokens are placeholders for information that will be known when the bot runs.</li>
+                    <p class="ex"><b>Example:</b> Insert a token for data you've copied earlier in the recording, <a href="Editing-a-Bot.htm#Configur" title="Click here to learn more." alt="Click here to learn more.">input parameters</a>, or the Windows Account running the bot. When the bot runs, those tokens will be replaced with&#160;the copied data,&#160;parameters, or account name.</p>
+                    <li>Click <b>Show token editor</b> to edit the token so it's replaced by a subset of its value. <a href="Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about editing tokens.</a></li>
+                </ul>
+                <li>Click <b>Save</b>.</li>
+            </ol>
+            <h3>Capturing secure data and passwords</h3>
+            <p>If you've copied or written secure data or passwords in the course of recording your bot, select the recorded item in the list of actions and click the lock button <img src="../Images/lockButton.png" alt="Lock button" title="Click this button to secure your data." /> to encrypt the data. Click the button again to leave the value in plain text. </p>
+            <h3>Copying and pasting tables </h3>
+            <p> If the data you want copy is part of a dynamic table, use the drop-down menu at the top of the recorder to select <b>Table Element</b>, and then copy the table. The first row will be shown under <b>Data</b> as an example of the type of information the bot has captured. Data from other rows will be captured as well and can be accessed and worked with in the <a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">bot designer</a>, using the <b>For Each</b> activity. </p>
+            <h3>Working with the actions and data you're recording</h3>
+            <ul>
+                <li>Click <b>Actions</b> to see the actions the bot has recorded. You can edit, annotate, and test these actions. </li>
+                <ul>
+                    <li><b>Add description:</b> You can add a description  to an activity as a note to yourself or others explaining the step. Select the action, and click the description button <img src="../Images/descriptionBots.png" title="Click this button to add a description in the bot recorder." alt="Description button" />. Write a description, and click <b>Save</b>. The description will appear in the <a href="Editing-a-Bot.htm#Recorded" title="Click here to learn more." alt="Click here to learn more.">bot designer</a>. </li>
+                    <li><b>Delete actions:</b> You can delete actions you've erroneously recorded by selecting the action and clicking the trash can button <img src="../Images/deleteButton.png" alt="Delete button" title="Click this button to delete an item." />.</li>
+                    <li><b>Replay/test actions:</b> If you want to see how the bot will perform an action you've recorded, select the action and click the play button <img src="../Images/testButton.png" title="Click this button to test an action. " alt="Test button." /> to the right of <b>Actions</b> in the recorder. If your bot runs into an error or ends unexpectedly, click <b>Download Log</b>. </li>
+                    <p class="note"><b>Note:</b> To ensure your tests run accurately, keep the applications you are recording open at least until the recording has been saved to the bot designer. </p>
+                </ul>
+                <li>Click <b>Data</b> to see any information you copied while recording. Each piece of data captured will have a label and value. <ul><li>The label will become the name of the <a href="Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a> created for the captured data, and can be edited to be more descriptive. To edit the label, click the existing label in the <b>Label</b> column, edit the label as desired, and press <b>ENTER</b> to save your changes.</li><li>If multiple values are recorded from an element, use the drop-down menu to select the value you want to use in the bot. </li></ul></li>
+            </ul>
+            <li>When you're done recording, click the blue <b>Finish Recording</b> button. </li>
+            <li><a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Review and edit the bot in the bot designer</a>.</li>
+        </ol>
+    </body>
+</html>

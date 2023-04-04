@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="10" MadCap:lastHeight="1144" MadCap:lastWidth="998" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Retrieve Field Values</h1>
+        <p style="text-align: center;">
+            <img src="Images/retrieveFieldValuesCanvas.PNG" title="Retrieve Field Values activity" alt="Retrieve Field Values activity" />
+        </p>
+        <p>This activity retrieves the template name and field values from an entry and returns tokens for those values that other activities in your workflow can use. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Retrieve-Field-Values-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Fields</b> property box in the <MadCap:snippetText src="../../Snippets/Properties Pane.flsnp" />, click <b>Select fields to retrieve…</b> to select the fields you want to retrieve values from.</li>
+            <li>In the <b>Choose Field</b> dialog box, select the fields you want to retrieve a value from.<ul><li><b>Name</b>: Type a field name.</li><li><b>Template</b>: Display fields associated with a specific template.</li><li><b>Only show selected fields</b>: View only the selected fields.</li></ul></li>
+            <li><b>Optional</b>: Select or clear all fields by selecting <b>Select all / Clear all</b> at the bottom of the dialog box.</li>
+            <li>If the selected field allows for multiple values, click the <b>No values</b> link next to the field to configure the values the activity will retrieve.<ul><li><b>All values (as a multi-value token)</b>: Stores all of the values assigned to the field in a multi-value token.</li><li><b>The values at the following indices</b>: Specify the index number of a value in a multi-value field that will be stored in a token. Values are given an index number according to the order in which they are added to the field. The higher the number, the newer the value.<p class="note"><b>Note</b>: The Assign Field Values activity may change the order of values in a multi-value field so that the indices do not reflect the order in which values were added.</p><ul><li>Leave the <MadCap:toggler targets="Green Text">start</MadCap:toggler> option so that you can retrieve a value from the start of a multi-value list. Specifying an index value of <b>1</b> retrieves the first value in the list, <b>2</b> retrieves the second value, etc.<p><img MadCap:targetName="Green Text" src="../../../Images/image41.png" /></p></li><li>Select the <b>start</b> option (so that it says <b>end</b>) to retrieve a value from the end of a multi-value list. Specifying an index value of <b>1</b> retrieves the last value in the list, <b>2</b> retrieves the second to last value, etc.</li><li><b>Optional</b>: Select <b>Add another index</b> to retrieve additional field values.</li></ul></li></ul></li>
+            <li>Click <b>OK</b>.</li>
+            <li>
+                In the <b>Field Value Source</b> property box, select the entry you want to retrieve field values from. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

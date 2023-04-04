@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Referencing Custom Javascript and CSS Files | Laserfiche Forms</title>
+        <meta name="description" content="Add entire JavaScript or CSS files  to your Forms installation folder. Reference these files in your custom JavaScript to use them in a form." />
+    </head>
+    <body>
+        <h1>Referencing Custom Javascript and CSS Files</h1>
+        <p>In addition to writing JavaScript and CSS on the <b>CSS and JavaScript</b> page, you can also include references to other JavaScript and CSS files. Including external JavaScript and CSS files can make it easier to maintain your code.</p>
+        <p>
+            <MadCap:concept term="Forms" />You can reference any JavaScript or CSS file located in your Forms install directory or hosted on the web. </p>
+        <p><b>To add JavaScript or CSS files to your Forms installation directory</b>
+        </p>
+        <ul>
+            <li>On the computer hosting the Forms Server, browse to <b>C:\Program Files\Laserfiche\Laserfiche Forms\Forms\js</b>. Put any JavaScript or CSS files you want to use in this directory.</li>
+        </ul>
+        <p style="font-weight: bold;">To reference a JavaScript file on the Forms Server from the <b>CSS and JavaScript</b> page</p>
+        <ol>
+            <li>Enter the following code in the <b>JavaScript</b> section of the <b>CSS and JavaScript</b> page:</li><pre><code class="language-javascript">var script = document.createElement('script');
+script.src = "http://FormsServer/Forms/js/scriptname.js";
+document.getElementsByTagName('head')[0].appendChild(script);
+</code></pre>
+            <p><b>Optional:</b> You can also use jQuery's <span style="font-family: 'Courier New';">getScript()</span> function. See the <a target="_blank" href="http://api.jquery.com/jQuery.getScript/" title="Click here to learn more." alt="Click here to learn more.">jQuery documentation</a> for more information.</p><pre><code class="language-javascript">$.getScript('http://FormsServer/Forms/js/scriptname.js');</code></pre>
+            <li>Replace <b>FormsServer</b> with the name of your Forms Server. Replace <b>scriptname.js</b> with the JavaScript file's name.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p class="w"><b>Important:</b> Do not use "localhost" as the value for <b>FormsServer</b>. Use the server name or IP address.</p>
+        <p class="ex"><b>Tip:</b> Be sure to put this code inside an appropriate function so it knows when to run. For example, if the code should run when the document loads, you'd include this inside<span style="font-family: 'Courier New';"> $(document).ready(function() { <i>code goes here...</i>}</span>.</p>
+        <p><b>To reference an externally hosted JavaScript file</b>
+        </p>
+        <ol>
+            <li>Enter the following code in the <b>JavaScript</b> section of the <b>CSS and JavaScript</b> page:</li><pre><code class="language-javascript">$(document).ready(function () {
+    $.getScript('ScriptURL/scriptname.js', function() {
+        //code goes here
+    });
+});
+</code></pre>
+            <li>Replace <b>ScriptURL/scriptname.js</b> with the URL of the JavaScript file.</li>
+            <li>Replace <i>code goes here</i> with your code that references the external JavaScript file.
+			<p class="note"><b>Note:</b> Placing your code in this function ensures that it will wait for the external script to load before running.</p></li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">To reference a CSS file</p>
+        <ol>
+            <li>Enter the following code in the <b>JavaScript</b> section of the <b>CSS and JavaScript</b> page:</li><pre xml:space="preserve"><code class="language-javascript"><code class="language-javascript">$(document).ready(function () {
+    $('head').append('&lt;link rel="stylesheet" href="FormsServer/Forms/js/CSSFileName.css" type="text/css" /&gt;'); 
+}); 
+</code></code></pre>
+            <li>If the CSS file is on the Forms Server, replace <b>FormsServer</b> with the Forms Server URL. Replace <b>CSSFileName.css</b> with the name of the CSS file.</li>
+            <li>If the CSS file is hosted on a website, replace <b>FormsServer/Forms/js/CSSFileName.css</b> with the URL of the CSS file.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

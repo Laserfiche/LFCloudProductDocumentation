@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" class="concept">
+    <head><title>Workflow Properties</title>
+        <meta name="description" content="Covers using the properties that apply to a workflow, and how to enable the workflow to be started from external processes." />
+    </head>
+    <body>
+        <h1>Workflow Properties</h1>
+        <p>The workflow Properties pane provides access to settings and information for the selected workflow. </p>
+        <p>
+            <MadCap:toggler targets="wf-properties-window">Show me what this looks like.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="wf-properties-window">
+            <p>
+                <img src="../Images/wf-properties.png" style="border-style: solid;border-width: 1px;" />
+            </p>
+        </div>
+        <h2 class="topicheading">Workflow name</h2>
+        <p>You can rename a workflow at any time  by clicking the name at the top of the properties pane in the workflow designer. This provides the flexibility to rename a workflow after the initial creation.</p>
+        <p>After you rename and publish the workflow, the name is applied and all process automations are updated. These include the tab on the workflow designer canvas, the workflow list, the starting events that use the old workflow name, and the workflow instances created after the workflow was published. Additionally, the search results on the Monitor page include the new and old name of the workflow.</p>
+        <p class="note"><b>Note</b>:&#160;Unlike Workflow 10+, when using the cloud a new copy of the workflow is not created when renaming it. Instead, the existing workflow name is updated.</p>
+        <h2 class="topicheading">Description</h2>
+        <p>Provide a short (less than 100 character) description of the purpose of this workflow to make it easy to remember what the workflow should do.</p>
+        <h2 class="topicheading">Properties</h2>
+        <p>The <b>Retrieve starting entry tokens</b> option exposes starting entry tokens to the rest of the workflow. This option is selected by default.</p>
+        <p>The <b>Allow this workflow to be started by other processes</b> option makes this workflow available to other processes in Laserfiche. For other processes to be able to start this workflow, it must have this item selected, and be published.</p>
+        <p>The work schedule profile and work schedule time zone display which schedule and timezone this workflow will use according to the account preferences.</p>
+        <h2 class="topicheading">Input / Output Parameters</h2>
+        <p>This section provides access to parameters that can be used to send and receive data to and from other processes.</p>
+        <p>To add, edit, or remove parameters and their values, click on <b>View Parameters</b> to open the Workflow Parameters dialog.</p>
+        <h3>Workflow Parameters Dialog</h3>
+        <p>
+            <MadCap:toggler targets="wf-parameters-dialog">Show me what this looks like.</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="wf-parameters-dialog">
+            <p>
+                <img src="../Images/wf-parameters-setparams.png" style="border-style: solid;border-width: 1px;" />
+            </p>
+        </div>
+        <p>Input parameters will be set, or populated, by the process that starts this workflow, while the output parameters are what this workflow will send back to the starting process. Any parameter expected to be used by the starting process must be defined here. The input parameters can be used by the workflow as token values in activities. </p>
+        <p style="font-weight: bold;">To add parameters to the workflow</p>
+        <ol>
+            <li>Click either <b>Add Input</b> or <b>Add Output</b> to create a new parameter.</li>
+            <li>Specify the name.</li>
+            <li>If the parameter will accept or provide a multi-value list, check the box for <b>Multivalued</b>.</li>
+            <li><b>Optional:</b> Input <b>Default Value</b> or <b>Output Value</b>: A default value can be set to prevent empty values where not expected in the workflow process. You can type in a value, or use a workflow token or calculated value.</li>
+            <li>Use <b>Tags</b> to set the type of value to be used.</li>
+        </ol>
+        <p><b>To remove a parameter</b>
+        </p>
+        <ul>
+            <li>Click the trash can icon for the parameter to be removed. <img src="../../Images/icon_trash_grey_wf.png" /></li>
+        </ul>
+        <p>The <b>Set output values with Assign Token Values activity</b> option provides for two options of dynamic output values:</p>
+        <ol>
+            <li>When unchecked, the tokens defined within the workflow can be used to provide the final output values that will be sent to the starting process, but activities will not be able to directly assign values to the parameters.</li>
+            <li>When checked, the values defined here can be over-written by using an <a href="Activities/Assign-Token-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Assign Token Values</a> activity, and the output values will be visible as tokens within the workflow.</li>
+        </ol>
+        <p>Click <b>OK</b> to save any changes made to the parameters, or <b>Cancel</b> to close the dialog without saving.</p>
+        <MadCap:snippetBlock src="../Snippets/migrating-form-tables-into-word-documents.flsnp" />
+    </body>
+</html>

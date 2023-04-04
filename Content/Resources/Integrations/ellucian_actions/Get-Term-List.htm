@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Get Term List</title>
+    </head>
+    <body>
+        <h1>Get Term List Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action returns a list of objects of which each is a term.</p>
+	<p>This action can be used as input for actions that require term information.</p>
+        <ul>
+            <li><b>Category:</b> Other</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Registration</p>
+                    </td>
+                    <td>
+                        <p>The registration status for the academic period.</p>
+                        <p>Options include "All", "Open" and "Closed". Selecting one of these will filter the results by the selected option. The "All" option will return all terms.</p>
+                        <p>This input is optional.
+			<ul>
+				<li>If this input is added and left blank, the input value will be treated as an empty string. In this case, workflow will not pass input validation since an empty string is not a valid option.</li>
+				<li>If this input is added and passed with an empty token, an empty result will be returned. </li>
+				<li>If this input is not added, the action will return all terms.</li>
+			</ul></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr>
+                    <td>
+                        <p>Term ID (Value)</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the academic term.</p>
+                        <p>This field is best used as the value for a term drop-down.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Title</p>
+                    </td>
+                    <td>
+                        <p>The full name of an academic term (for example, 'Fall 2014').</p>
+                        <p>This field is best used as the display for a term drop-down.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Code</p>
+                    </td>
+                    <td>
+                        <p>A unique identifier for an academic period.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Registration</p>
+                    </td>
+                    <td>
+                        <p>The registration status for the academic period. The value can be open or closed.</p>
+                        <p>If this field has been selected as the dropdown display value, there will be an issue with the dropdown due to duplicate display values.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Start On</p>
+                    </td>
+                    <td>
+                        <p>The date the term under the Student Term starts/started (for example, ‘2015-01-05T00:00:00+00:00’)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>End On</p>
+                    </td>
+                    <td>
+                        <p>The date the term under the Student Term ends/ended (for example, ‘2016-01-05T00:00:00+00:00’)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note:</b> The results will be sorted by <b>Code</b> in descending order.</p>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Create Entry</h1>
+        <p style="text-align: center;">
+            <img src="Images/createEntryCanvas.PNG" title="Create Entry activity" alt="Create Entry activity" />
+        </p>
+        <p>This activity creates an entry (a folder or document). <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Create-Entry-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Entry Name</b> property box, type a name for the new folder or document in the text box. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            <li>In the <b>Entry Type</b> property box, select the type of entry you want the activity to create.</li>
+            <li>In the <b>Destination</b> property box, specify the folder in which you want to place the new entry by clicking the <b>Browse</b> button (ellipsis) <img src="../../../Images/Icon_Ellipsis_White.png" />. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            <li>Specify what you want the workflow to do if the destination you specify does not exist.<ul><li><b>Create it</b>: Creates a new folder path.</li><li><b>Create it and report a warning</b>: Creates a new folder path, and displays a warning in the workflow instance details.</li><li><b>Terminate the workflow</b>: Ends the workflow when it cannot find the folder path, and displays an error in the workflow instance details.</li></ul></li>
+            <li>In the <b>Default Volume</b> property box, specify the volume where you want to put the new entry. A volume is the place where the files that make up the documents in the repository are stored. Select which volume the entry will be created in using one of the following options:<ul><li><b>Use parent folder's volume</b>: Create the new entry in the volume of the folder specified under <b>Destination</b>.</li><li><![CDATA[
+                        ]]><b>Look up volume by name</b>: Create the new entry in a different Laserfiche volume. Type the name of a volume in the text box, or click the <b>Browse</b> button (ellipsis) <img src="../../../Images/Icon_Ellipsis_White.png" /> to browse to one. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.
+                    </li></ul></li>
+            <li>In the <b>Creation Options</b> property box, select any additional options.<ul><li><b>Return existing entry if found</b>: If a document or folder with the same name already exists in the destination, the activity's output entry is set to the existing entry.</li><li><b>Place new entry under version control</b>: Record changes to the new document over time, creating multiple versions of the document for each new published version.</li><li><b>Change starting entry to be the output entry</b>: Set the workflow's starting entry to the new entry after this activity runs.</li></ul></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/migrating-form-tables-into-word-documents.flsnp" />
+    </body>
+</html>

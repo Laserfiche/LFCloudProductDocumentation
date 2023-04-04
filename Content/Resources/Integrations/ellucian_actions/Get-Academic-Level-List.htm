@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Get Academic Level List</title>
+    </head>
+    <body>
+        <h1>Get Academic Level List Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action returns a list of objects of which each is an Academic Level.</p>
+	<p>This action can be used as input for actions that require this type of information.</p>
+         <ul>
+            <li><b>Category:</b> Other</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <p>This action does not have any input fields.</p>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Academic Level ID (Value)</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the academic level.</p>
+                        <p>The value used by update actions (ideally used as the value for a drop down).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Title</p>
+                    </td>
+                    <td>
+                        <p>The full name of a academic level (for example, ''Undergraduate'', and ideally used as the label for a drop down).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Code</p>
+                    </td>
+                    <td>
+                        <p>The abbreviated name of an academic level (for example, 'UG').</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note:</b> The results will be sorted alphabetically by the "Title" field (ascending order).</p>
+    </body>
+</html>

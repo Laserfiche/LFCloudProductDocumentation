@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="332" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Token for Move Pages Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Move Pages Count</td>
+                    <td class="tabletext">The number of pages this activity moved or copied.</td>
+                    <td class="tabletext">%(MovePages_Moved Pages Count)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "MovePages" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Transfer~Pages!", the syntax for the Shortcut Count token will be "%(TransferPages_Move Pages Count)".</div>
+    </body>
+</html>

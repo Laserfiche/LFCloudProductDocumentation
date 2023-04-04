@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Field and Template Access Rights</h1>
+        <p>Field and template rights allow you to control how fields can be accessed and modified in your repository. For instance, you could secure a sensitive field, such as a social security number, so that only users who should be able to see that sensitive information can access it. You can also secure fields to prevent people from modifying them, secure templates to hide the entire template from certain users, and use security to determine what users or groups should be able to modify a field or template's definition in Repository Administration.</p>
+        <h2 class="topicheading">Securing a Field</h2>
+        <ol>
+            <li>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</li>
+            <li>On the left, under <b>Metadata</b>, select <b>Fields</b>.</li>
+            <li>Select the field you want to set security for and click <b>View Security</b>.</li>
+            <li>Select a trustee whose rights you want to modify, or click <b>Add</b> to configure security for a new trustee.</li>
+            <li>Under <b>Current Field Access Rights</b>, allow or deny the appropriate rights.</li>
+        </ol>
+        <h2 class="topicheading">Securing a Template</h2>
+        <ol>
+            <li>Open repository management by selecting the app picker and then selecting <b>Repository Administration</b>.</li>
+            <li>On the left, under <b>Metadata</b>, select <b>Templates</b>.</li>
+            <li>Select the template you want to set security for and click <b>View Security</b>.</li>
+            <li>Select a trustee whose rights you want to modify, or click <b>Add</b> to configure security for a new trustee.</li>
+            <li>Under <b>Current Template Access Rights</b>, allow or deny the appropriate rights.</li>
+        </ol>
+        <h2 class="topicheading">List of Field Rights</h2>
+        <p>The following is a list of available field access rights:</p>
+        <ul>
+            <li><b>Read:</b> The ability to see the value of a field.</li>
+            <li><b>Create:</b> 
+ The ability to set a value for a field during document creation. With this right, a user can fill in a field at the time of document creation whether that field has been applied as part of a template or independently. Automatically grants the <b>Read</b> right.</li>
+            <li><b>Edit:</b> The ability to set a value for a field after document creation or apply an independent field to a document after document creation. Automatically grants the <b>Create</b> right.</li>
+            <li><b>Modify Definition:</b> The ability to modify the field's definition in Repository Administration, including changing the field name, type, default value, and constraints.</li>
+            <li><b>Delete:</b>&#160;The ability to delete the field's definition in Repository Administratoin.</li>
+            <li><b>Read Security:</b>&#160;The ability to read the field access rights for the field.</li>
+            <li><b>Write Security:</b>&#160;The ability to write field access rights for the field. Implicitly grants the <b>Read Security </b>right.</li>
+        </ul>
+        <h2 class="topicheading">List of Template Rights</h2>
+        <p>The following is a list of available template access rights:</p>
+        <ul type="disc">
+            <li><b>Read:</b>&#160;The ability to view a template's fields when the template is applied to a document, or to select it to apply to a document. Even if a user has the rights to all fields in a template, if they do not have this right for the template and the template has been applied to a document, they will not be able to see those fields. (This right has no effect on fields applied independently to the document, or fields applied via a different template, even if those fields are also present in this template.)</li>
+            <p class="note"><b>Note:</b> The <b>Read</b> template access right does not control whether a user can see the template name in the document's metadata, just whether the user can see the fields.</p>
+            <li><b>Modify Template:</b> 
+ The ability to change the template definition in Repository Administration, including the template name, the fields the template contains, and the order of the fields.</li>
+            <li><b>Delete Template:</b> 
+ The ability to delete a template definition in Repository Administration.&#160;Note that a user must also have the <b>Delete </b>field access right to delete the fields contained within the template. If the user lacks these rights, the template definition will be deleted, but the individual fields will remain in the repository.</li>
+            <li><b>Read Template Security:</b> 
+ The ability to view template security for the template. </li>
+            <li><b>Change Template Security:</b>&#160;The ability to modify template security for the template.</li>
+        </ul>
+    </body>
+</html>

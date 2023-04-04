@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" style="mc-master-page: url('..\..\MasterPages\WebHelp.flmsp');">
+    <head>
+    </head>
+    <body>
+        <h1>Application&#160;Connections</h1>
+        <p>Laserfiche Cloud includes pre-built integration points with external applications and customer relationship management (CRM) systems. The Laserfiche Cloud integration platform currently supports the following CRM&#160;systems:</p>
+        <ul>
+            <li>Salesforce</li>
+            <li>Redtail CRM</li>
+            <li>Microsoft Dynamics 365 CRM</li>
+            <li>Ellucian Banner Integration through Ethos</li>
+        </ul>
+        <p>By providing Laserfiche Cloud with access to Salesforce, Redtail, Microsoft Dynamics, and Ellucian Banner, you can create workflows to add, update, remove, and retrieve data from the respective CRM system.</p>
+        <p class="note"><b>Note</b>: Ellucian Banner Integration through Ethos is available through your Laserfiche provider, please contact your provider for more details.</p>
+        <h2 class="topicheading">To start integrating with the above CRM systems</h2>
+        <ol>
+            <li>Create an external connection profile. A connection profile contains authentication information for your CRM system. Depending on the CRM system, you will need multiple pieces of information, such as a username, password, and API key needed to create a connection to the CRM system.</li>
+            <li>Configure a <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">Execute Application Action activity</a> in a workflow or access data to <a href="../../Forms-Current/Filling-Fields-with-Lookup-Rules.htm">auto-fill form fields with lookup rules</a> in a business process.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Creating"></a><b>Creating an Application Connection</b>
+        </h2>
+        <ol>
+            <li>From the Process Automation landing page, select the <b>Integrations</b> option.<br /><img src="../../Images/integrationsButton.PNG" title="Integrations button" alt="Integrations button" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /></li>
+            <li>On the Application connections listing page, choose to create a new Salesforce, Redtail, Microsoft Dynamics 365, or Ellucian connection. You will need authentication information from your CRM system in order to complete the process. <p class="ex"><b>Example:</b> In order to create a connection to Salesforce, you must have created a <b>Connected App</b> in Salesforce for Laserfiche Cloud and turned on the <b>Enable OAuth Settings</b> option for the connected app. Make sure that the <b>Access and manage your data (api)</b> OAuth Scope is selected for the connected app. Take note of the <b>Consumer Key</b> and <b>Consumer Secret</b> for the connected app. In addition, you will need the username and password for the Salesforce user Laserfiche Cloud will sign in as, as well as the a generated security token value for that user. Salesforce requests a "callback URL" when enabling OAuth Settings, but Laserfiche does not use the redirect authentication approach, so any valid URL can be used for the callback URL.</p><p class="note"><b>Note:</b>&#160;Microsoft Dynamics allows two user types to be used for authentication. See the <a href="https://docs.microsoft.com/en-us/dynamics365/customer-engagement/developer/walkthrough-register-dynamics-365-app-azure-active-directory" title="Click here to learn more." alt="Click here to learn more.">Microsoft Dynamics documentation</a> for specific details about creating a Microsoft Dynamics connection.</p></li>
+            <li>Verify and save the connection information.<p class="note"><b>Note:</b>&#160;the new connection will be enabled by default. Use the <b>Connection Status</b> toggle switch to disable the connection in order to prevent immediate use.</p></li>
+        </ol>
+        <h2 class="topicheading">Importing and Exporting Connection Profiles</h2>
+        <p>You can export existing connection profiles and save them to your local computer as .dsi files. You can also import .dsi files into Process Automation and create new connection profiles from them.</p>
+        <p style="font-weight: bold;">To export a connection profile</p>
+        <ol>
+            <li>On the <b>Application&#160;Connections</b> page, select the connection profiles you want to export.</li>
+            <li>Click the <b>Export</b> icon in the top right corner.</li>
+            <li>In the <b>Export Connection</b> dialog box, specify the name of the .dsi file that will be downloaded. Even if you had selected multiple profiles in step 1, they will still be exported into one .dsi file.</li>
+            <li>Click <b>Export</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">To import a connection profile</p>
+        <ol>
+            <li>On the <b>Application&#160;Connections</b> page, click the <b>Import</b> button in the top left corner.</li>
+            <li>In the <b>Import Connections</b> dialog box, click <b>Choose file</b> and browse for a .dsi file to import.</li>
+            <li>Click <b>Next</b>. This takes you to a dialog where you can choose what to do for each connection in the .dsi file that has the same name as an existing connection.</li>
+            <li>For each  connection with the same name as an existing connection, select whether you want to replace an existing connection, rename the imported connection, or discard the connection.<ul><li>You can also select an action for multiple connections at once by holding down the SHIFT or CTRL&#160;key as you click on multiple connections, then selecting the appropriate bulk action below the list of connections. Click <b>Apply</b> to set all the selected connections to use that bulk action.</li></ul></li>
+            <li>Click <b>Next</b>.</li>
+            <li>Review the summary of the import. Click <b>Back</b> to make more changes, or click <b>Finish</b> if you're satisfied.</li>
+        </ol>
+        <h2 class="topicheading">List View Right Pane Tabs</h2>
+        <p>When a connection is selected in the list of application connections, the right pane displays additional information and options. Three tabs are available: <b>Details</b>, <b>API&#160;usage</b>, and <b>Notifications</b>.</p>
+        <p>The <b>Details</b> pane displays an easily readable summary of the information from the columns of the table.</p>
+        <p>The <b>API&#160;usage</b> pane displays statistics for the selected connection. These cards display a graph of the number of times the connection has been used to read or write from the external application, and the average response time of the application. You can choose to view information about the current cycle, the last 7 days, or the last 30 days.</p>
+        <p>The <b>Notifications</b> panel allows you to configure alerts regarding usage of the connection. Notifications can be created which will show in the notification bell within the cloud interface, or send an email, when the following occurs:</p>
+        <ul>
+            <li>Usage of the connection reaches 100% of the defined limit.</li>
+            <li>Usage reaches 80% of the defined limit.</li>
+            <li>If the status of the connection is changed (from enabled to disabled or back.)</li>
+        </ul>
+        <p>If email notifications are desired, click <b>Configure email settings...</b> and for each enabled notification select whether it should send an email.</p>
+        <h2 class="topicheading">Connection Status Control</h2>
+        <p>Application connections can either be enabled for use or disabled. The connection status will be indicated in the Status column of the <b>Application Connections</b>list view.</p>
+        <p>Each connection may be disabled to prevent over-use in one of two ways - manually in the right pane when viewing connection details, or automatically by setting up daily usage limits in the <b>API&#160;Limit</b> panel. </p>
+        <p>To set daily usage limits:</p>
+        <ol>
+            <li>Set the maximum number of calls to the connection that can be made from Laserfiche to the connection.</li>
+            <li>Specify what time in UTC the limit should reset.</li>
+            <li>Click <b>Disable connection when reaching limit</b> to disable the connection if the specified limit is reached.</li>
+        </ol>
+        <h2 class="topicheading">Object Field Mapping</h2>
+        <p>Many object fields allow you to change which internal field name is mapped to the application fields. To adjust field mappings, expand the Fields section, and when available, select the alternate application field to be used in the connection to the <MadCap:variable name="DoNotTranslate.Laserfiche" /> field.</p>
+        <p>
+            <MadCap:toggler targets="example">Show me what this looks like.</MadCap:toggler>
+            <p>
+                <img src="images/object-mapping-2.PNG" style="border-style: solid;border-width: 1px;border-color: ;" MadCap:targetName="example" />
+            </p>
+            <p class="note"><b>Note</b>:&#160;The Ellucian integration only allows limited changes to the default mapping. Elements that can be altered will have a dropdown for selecting alternate Ellucian fields to be mapped to <MadCap:variable name="DoNotTranslate.Laserfiche" /> fields.</p> </p>
+        <p>The <b>View Details</b> link displays a chart that shows how fields can be used by the application <b>Actions</b>. These details show which fields can be populated when creating or updating a record, or are read-only. <MadCap:toggler targets="objectfielddetails">Show me what this looks like.</MadCap:toggler></p>
+        <p>
+            <img src="images/object-field-details.PNG" style="border-style: solid;border-width: 1px;border-color: ;" MadCap:targetName="objectfielddetails" />
+        </p>
+        <h3>Object Caching</h3>
+        <p>Depending on the application, frequently requested object data may be cached to improve lookup and form load performance. Objects that support data caching will display the <b>Configure Cache Settings</b> link next to the object name, click to open the cache settings dialog. <MadCap:toggler targets="caching">Show me what this looks like.</MadCap:toggler><img src="images/config-cache-dialog.PNG" MadCap:targetName="caching" /></p>
+        <p>To configure a cached object:</p>
+        <ol>
+            <li>Select the Enable Cache switch.</li>
+            <li>Set the span of time that data should be cached. You can set for seconds, minutes, hours, or days, from 1 to 100 in whole numbers.</li>
+            <li>Click Done.</li>
+        </ol>
+        <p>The link will change to <b>Cache Enabled (Edit Settings)</b> indicating the object is being cached.</p>
+        <p class="note"><b>Note:</b>&#160;Not all applications support caching of their objects.</p>
+        <h2 class="topicheading">Object Actions</h2>
+        <p>The Actions area displays what actions can act upon the object, and which <MadCap:variable name="DoNotTranslate.LF Cloud" /> applications have access to the actions. If object caching has been enabled, a database icon will be displayed next to the action name that will use the cached data. </p>
+        <p>
+            <MadCap:toggler targets="actions">Show me what this looks like.</MadCap:toggler>
+            <img src="images/object-actions.PNG" MadCap:targetName="actions" />
+        </p>
+        <h2 class="topicheading">Non-Standard Objects in Microsoft Dynamics 365</h2>
+        <p>For connection profiles using Microsoft Dynamics 365, you can configure additional objects other than the default set which can be used to <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">create, update, or delete information in MS&#160;Dynamics 365 with a Workflow</a>.</p>
+        <p style="font-weight: bold;">To configure additional objects</p>
+        <ol>
+            <li><a href="#Creating" title="Click here to learn more." alt="Click here to learn more.">Create a new connection profile</a>, or edit an existing connection profile by double-clicking on an existing connection profile.</li>
+            <li>On the connection profile's page, click on the <b>Objects</b> tab.</li>
+            <li>Click <b>Add Objects</b> to display the list of available additional objects in the MS&#160;Dynamics 365 account. </li>
+            <li>Select the additional objects to be used within a workflow or process, and click <b>Add</b>.</li>
+            <li>The additional objects will now be listed in the <b>Objects</b> tab below the default objects.</li>
+            <li>
+                Add the fields that you want to make available for <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">creation, updates, and deletions in a workflow</a>.<ol style="list-style-type: lower-alpha;"><li>Expand the object, and click <b>Add Field</b>, name the field, and select the Dynamics-side field to use.</li><li>To delete a field, click the trash can icon to the right of the field listed.</li></ol></li>
+            <li>Click <b>Save</b> when you've finished configuring additional fields. The selected fields will now be available for creation, deletion, or modification in the <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">Run Application Action workflow activity</a>.</li>
+            <li>To remove an object from the list, click the three dots to the right of the object name and select <b>Remove Object</b>.</li>
+        </ol>
+        <h2 class="topicheading">Non-Standard Objects in Salesforce</h2>
+        <p>For connection profiles using Salesforce, you can configure additional objects that can be used to <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">create, update, or delete information in Saleforce by a workflow</a>.</p>
+        <p style="font-weight: bold;">To configure custom fields</p>
+        <ol>
+            <li><a href="#Creating" title="Click here to learn more." alt="Click here to learn more.">Create a new connection profile</a>, or edit an existing connection profile by double-clicking on an existing connection profile.</li>
+            <li>On the connection profile's page, click on the <b>Objects</b> tab.</li>
+            <li>Click <b>Add Objects</b> to display the list of available additional objects in the <MadCap:variable name="DoNotTranslate.Salesforce" /> account. </li>
+            <li>Select the additional objects to be used within a workflow or process, and click <b>Add</b>.</li>
+            <li>The additional objects will now be listed in the <b>Objects</b> tab below the default objects.</li>
+            <li>
+                Add the fields that you want to make available for <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">creation, updates, and deletions in a workflow</a>.<ol style="list-style-type: lower-alpha;"><li>Expand the object, and click <b>Add Field</b>, name the field, and select the Dynamics-side field to use.</li><li>To delete a field, click the trash can icon to the right of the field listed.</li></ol></li>
+            <li>Click <b>Save</b> when you've finished configuring additional fields. The selected fields will now be available for creation, deletion, or modification in the <a href="execute-application-action.htm" title="Click here to learn more." alt="Click here to learn more.">Run Application Action workflow activity</a>.</li>
+            <li>To remove an object from the list, click the three dots to the right of the object name and select <b>Remove Object</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">Updating connections and workflows when fields are changed in Salesforce</p>
+        <p>If a field's properties are changed in Salesforce, the changes will not automatically propagate to the relevant connection profiles. To make sure these changes take effect, you must do the following on the connection profile's page:</p>
+        <ol>
+            <li>Under <b>General Information</b>, click <b>Refresh</b> to retrieve the new field information.</li>
+            <li>Click <b>Save</b> to save the new connection information.</li>
+            <li>Republish any workflows using the connection.</li>
+        </ol>
+        <p style="font-weight: bold;">Updating workflows when you change your selection of custom fields</p>
+        <p>If you select or clear any custom fields, the changes will not automatically propagate to existing workflows. To update a workflow with the changes, republish the workflow.</p>
+        <p style="font-weight: bold;">Updating connections and workflows when custom objects are removed</p>
+        <p>If a custom object is removed in a 3rd party application, the changes will not automatically propagate to the relevant connection profiles. Refreshing the connection profile will display a warning message. To resolve the warning, remove the custom object from the connection, and save the profile.</p>
+        <p>For the workflow <b>Run Application Action</b> activity:</p>
+        <p>Once the changes are saved in the connection, refresh the workflow, and the changes should be applied automatically to the activity. Save and republish the workflow to activate the changes.</p>
+        <div class="note">
+            <p><b>Note:</b> When using "search" actions:</p>
+            <ul>
+                <li>In Salesforce, any non-encrypted field (email, text area, URL, phone, or string) will return partial-match results, otherwise only exact-match results will be returned.</li>
+                <li>In MS&#160;Dynamics, only string and memo fields will return partial-match results.</li>
+            </ul>
+        </div>
+        <p>&#160;</p>
+    </body>
+</html>

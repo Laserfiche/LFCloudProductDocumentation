@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="704" MadCap:lastWidth="967" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Create Shortcut Template</h1>
+        <p>When a document is moved to the Documents to Distribute folder, this workflow creates shortcuts to the document in each employee's folder. </p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <ol>
+            <li>A <a href="../Activities/Find-Entries.htm" title="Click to learn more." alt="Click to learn more.">Find Entries</a> activity finds all the folders inside the\Workflow Templates - Test Entries\Employee Folders folder.</li>
+            <li>A <a href="../Activities/For-Each-Entry.htm" title="Click to learn more." alt="Click to learn more.">For Each Entry</a> activity runs for each employee folder.</li>
+            <li>A <a href="../Activities/Move-Entry.htm" title="Click to learn more." alt="Click to learn more.">Move Entry</a> activity creates a shortcut in each employee folder.</li>
+        </ol>
+        <h2>To run this workflow template in the provided test environment</h2>
+        <ol>
+            <li>
+                        Ensure the WT- Rename and Move starting event is enabled.
+                        <ol style="list-style-type: lower-alpha;"><li>Navigate to the <b>Condition</b> page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li><li>Select the starting event, and click <b>Enable</b> in the top right. </li></ol></li>
+            <li>In your Laserfiche repository, add the Workflow Templates: Approved tag to a document and move it into the \Workflow Templates - Test Entries\Human Resources\Documents to Distribute folder.</li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> option in the Workflow Designer. You can test this workflow on the Company_Picnic or Organization_Chart document in the Workflow Templates - Test Entries\Human Resources folder.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p>Add another Move Entry activity to move the document out of the Documents to Distribute folder (after the shortcuts are distributed) and into a storage folder.</p>
+        <p>Let users "subscribe" to the Documents to Distribute folder by putting their names in a new Employees to Notify multi-value field. Retrieve the values from that field, and then use a For Each Value activity to distribute the documents to each employee's folder. </p>
+        <p>Remember to republish the workflow after making any changes.</p>
+    </body>
+</html>

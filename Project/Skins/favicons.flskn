@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="3"
+  SkinType="Component"
+  Comment="HTML5 Favicon skin"
+  ComponentType="Favicon">
+  <Stylesheet>
+    <Resources>
+      <Resource
+        Name="favicon.png">H4sIAAAAAAAEAOsM8HPn5ZLiYmBg4PX0cAkC0idAmIMJSCpZWZ4EUozFQe5ODOvOybwEcljSHX0dGRg29nP/SWQF8jkLPCKLGRj4DoMw4/H8FSkMDExpni6OIRVxb+9u9HUKZGi72C5otkGZj7Xaop/vIFOfcolIiNmRQ8/0Eh50VxX7Ff9n3Lfn9p0na/t2f2X6/s3Ab4d24kQBMU56EzM+u8+4fbh0ze0532Zv/KEYryN0SElxqBOrH+fZPnPZ1v46YvvOPXt7RH/X1Mtmix36Jez3+2zE5gLRSSQG0dnfjy9/jvh/5PrP5DWRZyTF9p8L9XCKUGlxpTfBMu2p9H0L8edLZVs6gcmQwdPVz2WdU0ITAG5UxrDRAgAA</Resource>
+      <Resource
+        Name="LF.png">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</Resource>
+    </Resources>
+  </Stylesheet>
+  <Master
+    Image="LF.png" />
+  <Browser>
+    <SmallFavicon
+      Image="(generated)"
+      SizePx="16 px" />
+    <MediumFavicon
+      Image="(generated)"
+      SizePx="32 px" />
+    <LargeFavicon
+      Image="(generated)"
+      SizePx="96 px" />
+  </Browser>
+  <ShortcutIcon
+    Image="(generated)" />
+  <Touch>
+    <TouchIcon
+      Image="(generated)"
+      SizePx="180 px" />
+  </Touch>
+  <Windows>
+    <MicrosoftSmallTile
+      Image="(generated)" />
+    <MicrosoftMediumTile
+      Image="(none)" />
+    <MicrosoftWideTile
+      Image="(none)" />
+    <MicrosoftLargeTile
+      Image="(none)" />
+  </Windows>
+  <Strings />
+</CatapultSkin>

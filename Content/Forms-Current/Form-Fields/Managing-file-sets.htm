@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Managing File Sets</title>
+        <meta name="description" content="View and manage file sets." />
+    </head>
+    <body>
+        <h1>Managing File Sets</h1>
+        <p>The <b>File Sets</b> page lets you view, edit, and create file sets. The available actions depend on your <a href="../../Resources/Managing-Account-Administration.htm#Process" title="Click here to learn more." alt="Click here to learn more.">security role</a>.</p>
+        <p>To access the page, click on the <b>File Sets</b> icon on the left menu bar in the process designer, or click the <b>Manage file sets</b> link when editing a file set field in the form designer canvas. If a file set is selected in the field, you can open it directly from the <b>Open selected file set</b> link.</p>
+        <p>The file sets menu icon: <img src="../Resources/Images/FileSetsButton.PNG" style="vertical-align: text-top;" /></p>
+        <p>The file set links in the field editor:<br /><img src="../Resources/Images/file-set-links.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /><br /></p>
+        <h2 class="topicheading"><a name="List"></a>List of file sets</h2>
+        <p>The list of file sets shows, for each file set, the file set name, the version number of the file set, when and who published it, when and who last modified it, and when and who created it. Click on a column name to sort sets by their values in that column, or search for file sets using the search bar at the top of the page.</p>
+        <p>For each file set, you can use the following buttons when the file set is selected. </p>
+        <ul>
+            <li><b>New</b>: Opens the <b>Create File Set</b> dialog.</li>
+            <li><b>Delete</b>: Delete the file set entirely. You can delete multiple file sets at once by selecting multiple file sets (by holding down the SHIFT button) before clicking <b>Delete</b>.</li>
+            <li><b>Edit</b>: Go to the file set <a href="#configure">configuration page</a> to edit the file set. Clicking on the file set name also takes you to the configuration page.</li>
+        </ul>
+        <h2 class="topicheading">Creating file sets</h2>
+        <ol>
+            <li>Click the <b>New</b> button.</li>
+            <li>Specify the name, and provide a description for the file set.</li>
+            <li>Verify that the correct <b>Repository</b> is specified.</li>
+            <li>If an end user will be able to get or download documents from the file set, select the <b>Source folder</b> where the files will be retrieved from.</li>
+            <li>If an end user will be able to upload documents using the file set, specify the <b>Destination folder</b> within the repository where the documents should be stored.</li>
+            <li>Click <b>Create</b> to create the file set and open the set in the configuration page.</li>
+            <li>Once configuration is complete, click the <b>Save</b> button to save the changes.</li>
+            <li>Click <b>Publish</b> to allow the file set to be used by the process.</li>
+        </ol>
+        <h2 class="topicheading"><a name="configure"></a>Configuring file sets</h2>
+        <p>The file set configuration page allows you to set up how the file set handles files and the appearance of the set table on a form, edit the file set details, and publish the file set to make it available to the process.</p>
+        <p><b>To change the source or destination default folders:</b>
+        </p>
+        <ol>
+            <li>Click the <b>Settings</b> icon to access the <b>File&#160;Set Settings</b> dialog.</li>
+            <li>Edit the <b>Source</b> and/or <b>Destination</b> folders.</li>
+            <li>Click <b>Save</b> to save your changes or <b>Cancel</b> to close the dialog without saving changes.</li>
+        </ol>
+        <p><b>To change the file set name or description:</b>
+        </p>
+        <p>The name and description fields in the right pane allow you to edit the file set name or its description. Be sure to <b>Save</b> and <b>Publish</b> the file set after any changes.</p>
+        <h3>File types</h3>
+        <p>The <b>Types</b> tab provides the ability to create and edit what types of files can be added to a form. By setting up types, you can quickly organize  a set of files as they relate to the process. Each type created has a name, how many files of this type are required for submission, and a maximum number of allowed files of this type.</p>
+        <p><b>To create a type:</b>
+        </p>
+        <ol>
+            <li>Click <b>Add type</b></li>
+            <li>Replace the placeholder text in the <b>Type</b> field with your desired type name.</li>
+            <li>Set the <b>Min count</b> for the required number of files for this type.</li>
+            <li>Set the <b>Max count</b> for the maximum number of files allowed for this type.</li>
+            <li>Click the <b>Save</b> button to save the changes to the file set.</li>
+        </ol>
+        <p class="note"><b>Note:</b> The maximum number of files allowed for any type is 100.</p>
+        <p class="ex"><b>Example:</b> For an HR process, a file set may require (<b>min count</b> 1) a single (<b>max count</b> 1) resume (<b>type</b> - Resume), several letters of reference as optional, and a required application form. </p>
+        <p>To delete a type, click the delete button (<b>X</b>) to the right of the type row in the table.</p>
+        <h3>File statuses</h3>
+        <p>The <b>Statuses</b> tab allows you to create statuses with custom labels. The statuses allow you to both label an item for a step in your process, and control when a form can be submitted.</p>
+        <p><b>To create a status:</b>
+        </p>
+        <ol>
+            <li>Click Add status to add a status.</li>
+            <li>Give the status a name.</li>
+        </ol>
+        <p><b>To control form submission using a status:</b>
+        </p>
+        <p>In the classic form designer:</p>
+        <ol>
+            <li>Place a file set field on a form.</li>
+            <li>Select a file set that has at least one status.</li>
+            <li>Check the <b>Set required status for submission</b> option.</li>
+            <li>Select the status that will be required.</li>
+            <p class="note"><b>Note:</b> Each file in the file set must be set to the specified status before submitting the form.</p>
+            <li>Save the form.</li>
+        </ol>
+        <h3>Columns</h3>
+        <p>The <b>Columns</b> tab allows you to control which columns are displayed on the form. The file set appears as a table that displays a list of the types and other information about the files in the file set.</p>
+        <p>To control what columns are visible to the user, select or deselect the column names in the <b>Select columns</b> table. To change the displayed order of columns, drag a column name up or down in the <b>Reorder selected columns</b> table.</p>
+        <p class="note"><b>Note:</b> Always remember to Save and Publish the file set whenever changes have been completed.</p>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Prepopulating fields with URL parameters | Laserfiche Forms | Customizations</title>
+        <meta name="description" content="Create custom URLs for your users that pre-fill specific fields on their forms with default values. Add your desired variables and values to the end of your form URL." />
+    </head>
+    <body>
+        <h1>Prepopulating Fields</h1>
+        <p>
+            <MadCap:concept term="Forms" />You can prepopulate fields on a form by passing in parameters in the form URL. For the URL with parameters to work, your form must already be published. When your form has been published, go to the <b>Manage</b> page and click on <b>Options</b> beside the process containing your form. The form URL will be displayed under <b>Link</b>. Click <b>Share</b> next to the form URL to copy the form URL to your clipboard. This URL will be what we refer to as <b style="font-style: italic;">baseURL</b> on this page.</p>
+        <h2>Structure of URL</h2>
+        <p>Suppose you want two fields to be prefilled through URL parameters. The format of the URL you will use to prefill the parameters will be as follows:</p><pre xml:space="preserve"><code><i>baseURL</i>?<i>variable1</i>=<i>value1</i>&amp;<i>variable2</i>=<i>value2</i></code></pre>
+        <p>This URL prepopulates only two fields, but you can prepopulate as many as you want. Each field is separated by an ampersand, <b>&amp;</b>, and <i>baseURL</i> is always followed by a <b>?</b>.</p>
+        <p><i>variable1</i> and <i>variable2</i> are the variable names of the fields. You can find out the variable name for a field by clicking <b>Edit</b> on the field in the&#160;<b>Layout</b> page, and noting the name listed under <b>Variable</b>. </p>
+        <p><b>Note</b>: A&#160;field's variable name is often not the same as the field label. Make sure to obtain use the variable name in the URL, not the field label.</p>
+        <p><i>value1</i> and <i>value2</i> are the values you want prefilled for the fields. For text boxes, this would be the strings that should prefill the respective fields. For radio buttons or checkboxes, the values are listed in the Values table when you click <b>Edit</b> on the field. The <b>Values</b> table is either beside or under the <b>Choices</b> table. In the following screenshot, we can see that to prefill the field with "Check 2" selected, we should specify the value <b>Check_2</b> for the variable <b>Checkbox_1</b>.</p>
+        <p>
+            <br />
+            <img src="../Resources/Images/forms_checkbox-variables-values.PNG" style="border-style: solid;border-width: 1px;" alt="The dialog box for editing a field, showing the variables that correspond to each choice." title="For prepopulating fields, you want the strings specified under &quot;Values&quot;, not those specified under &quot;Choices&quot;." />
+        </p>
+        <p>The strings listed in the <b>Values</b> table are not always the same as those listed in the <b>Choices</b> table, so be careful to take your values from the correct table.</p>
+        <h2>Prefilling Multiple Options in a Field</h2>
+        <p>For checkbox fields, it is possible for more than one option to be selected. We can also prefill more than one option in a single checkbox field by using commas to separate the options that we want pre-selected. Using the example of the checkbox field above, we can pre-select both "Check 1" and "Check 2" by using the following URL:</p><pre xml:space="preserve"><code><i>baseURL</i>?Checkbox_1=Check_1,Check_2</code></pre>
+        <p>Using a comma in the URL&#160;does not prevent you from prepopulating more fields. For example,&#160;I can prefill the two checkboxes above, in addition to other fields, as follows:</p><pre xml:space="preserve"><code><i>baseURL</i>?Checkbox_1=Check_1,Check_2&amp;AnotherFieldVariable=value3&amp;YetAnotherFieldVariable=value4</code></pre>
+        <h2>Lookup Rules on Prepopulated Fields</h2>
+        <p>If lookup rules are associated with fields that you prepopulate using URL parameters, the lookups will have to be activated upon the fields being prepopulated. You can do this by triggering a <code>change</code> event on the prepopulated fields with some custom JavaScript. The following JavaScript snippet triggers a change event on the input box with id <code>Field4</code>:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function() {
+  $('#Field4').trigger('change');
+})</code></pre>
+        <p>You should repeat this line, replacing the input box id as necessary, for each field that affects lookups that run when the page loads.</p>
+    </body>
+</html>

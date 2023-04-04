@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Wildcards and Operators</h1>
+        <p>Wildcards and operators are ways of making searches more powerful by expanding or restricting the search results that will be returned. Wildcards represent unknown characters in a search, and operators are used to combine search terms or specify a search range.</p>
+        <p>Wildcards can be used in any search type:&#160;<a href="Search.htm">search bar searches</a>, <a href="Advanced_Search.htm">search filter searches</a>, or <a href="Search_Syntax.htm">search syntax searches</a>. Operators are generally used with search syntax searches.</p>
+        <h2 class="topicheading">Wildcards</h2>
+        <p>Wildcards are used to represent one or more unknown characters in a search term. They are useful for searching for all documents containing variations of a word or when you are not sure of the exact characters contained in a word. </p>
+        <p class="note"><b>Note:</b>&#160;Some search filters restrict the type of characters you can type in a field, preventing you from using a wildcard. For instance, a date search can only contain numbers. If you want to use a wildcard with these types of searches, you can use search syntax.</p>
+        <table id="myTable" class="tablesorter" style="" summary="This table lists the wildcards that can be used in Laserfiche searches.">
+            <caption>Supported Wildcards</caption>
+            <col style="width: 78px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Wildcard </th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>*</td>
+                    <td>(Asterisk) Represents zero or more missing characters. For example, govern*s would find "governors," "governments," and "governs."</td>
+                </tr>
+                <tr>
+                    <td>?</td>
+                    <td>(Question mark) Represents any single character. For example, gr?y would find "gray" and "grey," but not "gravy."</td>
+                </tr>
+                <tr>
+                    <td>[]</td>
+                    <td>(Brackets) Brackets are also used as a wildcard for any single character. A limited set of replacement characters can be specified within the brackets. For example, gr[ae]y would find "gray" and "grey," but no others. </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>(Dash) Indicates a range of characters. For example, b[a-i]tter would find the words "batter," "better" and "bitter," but not "butter."</td>
+                </tr>
+                <tr>
+                    <td>[0-9]</td>
+                    <td>Represents any single digit number. For example, [0-9][0-9] would find any two-digit number (but not a one- or three-digit number), and [0-9][0-9][0-9]-[0-9][0-9]-[0-9][0-9][0-9][0-9] would find a social security number.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="ex"><b>Tip:</b> Wildcards may be combined. For example, br[a-o]ke* would find all of the following words: brake, braked, broke, broker, and broken.</p>
+        <h2 class="topicheading">Operators</h2>
+        <p>Operators allow you to combine searches, or to restrict searches in certain ways. Each type of operator has a different purpose. Operators are generally used with search syntax searches.</p>
+        <p class="note"><b>Note:</b> Certain operators can only be used when performing specific types of searches. Limitations on the uses of a particular operator are included as a part of the description. </p>
+        <h3><a name="Search"></a>Search Relationship Operators</h3>
+        <p>Search syntax allows you to specify multiple search criteria; operators specify the relationship between each search criteria. Search results will then be limited according to the specified relationship. A list of the operators that can separate one search criteria from another is listed below.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the relationship operators that can be used to combine multiple searches.">
+            <caption>Search Relationship Operators</caption>
+            <col />
+            <col style="width: %10" />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Operator</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                    <th><b>Sample</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&amp;</td>
+                    <td>(AND) Valid search results match the search criteria that appear before and after the ampersand. </td>
+                    <td><span class="Code">Criteria1 <b>&amp;</b> Criteria2</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>| </td>
+                    <td>(OR) Valid search results match either or all  search criteria that appear before or after the pipe (vertical bar). </td>
+                    <td><span class="Code">Criteria1 <b>|</b> Criteria2</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>-</td>
+                    <td>(NOT) Valid search results match the search criteria that appear before the dash, but must not satisfy the search criteria that appear after the dash. </td>
+                    <td><span class="Code">Criteria1 <b>-</b> Criteria2</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>^#
+                </td>
+                    <td>(WITHIN) Use the caret symbol to determine the maximum distance by which two phrases can be separated in a document and still be considered a valid search result. This operator can only be used between two phrases in a text search.                </td>
+                    <td><span class="Code">Phrase1 <b>^5</b> Phrase2</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>-^#</td>
+                    <td>(NOT&#160;WITHIN) Use the minus sign plus the caret symbol when you want to return documents in which two phrases exist but are not within a specified distance of one another. This operator can only be used between two phrases in a text search.</td>
+                    <td><span class="Code">Phrase1 -^5 Phrase2</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>,
+                </td>
+                    <td>(Comma) Use a comma instead of the AND operator to perform a search on multiple fields. The advantage of using a comma instead of an ampersand is that it will return search results more quickly.  
+ 
+                    <p>A comma can only be used when performing field searches. The sample syntax shown to the right indicates the proper usage of a comma.</p><p class="note"><b>Note:</b> You can combine additional fields by simply adding a comma, a space, and the field syntax after the last quotation mark. An additional field search was added to the bottom sample syntax. 
+ </p></td>
+                    <td colspan="1" rowspan="1"><span class="Code">{[<span style="font-style: italic;">TemplateName</span>]:[<span style="font-style: italic;">FieldName1</span>]="<span style="font-style: italic;">Value1</span>", [<span style="font-style: italic;">FieldName2</span>]="<span style="font-style: italic;">Value2</span>"}</span>
+                        <p><span class="Code">{[<span style="font-style: italic;">TemplateName</span>]:[<span style="font-style: italic;">FieldName1</span>]="<span style="font-style: italic;">Value1</span>", [<span style="font-style: italic;">FieldName2</span>]="<span style="font-style: italic;">Value2</span>", [<span style="font-style: italic;">FieldName3</span>]="<span style="font-style: italic;">Value3</span>"}</span>
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3><a name="Parenthe" style="font-size: 10pt;"></a>Parentheses</h3>
+        <p>Parentheses  can be used to group search criteria together. They are used to determine the order in which search criteria will be processed; they can be nested as deeply as you like. Laserfiche processes the innermost parentheses first and works outward. If there are no parentheses, NOT (-)&#160;searches will be evaluated first, then AND&#160;(&amp;)&#160;searches, and finally | (OR)&#160;searches. If adjacent operators are the same (for instance "A&#160;&amp;&#160;B&#160;&amp;&#160;C"), they will be evaluated left to right.</p>
+        <p class="note"><b>Note:</b><b>(</b> is a delimiter. You cannot search for a word or  phrase that includes this character unless you put the word or phrase inside quotation marks.</p>
+        <h3><a name="Advanced"></a>Search Syntax Operators</h3>
+        <p>
+            <p>Different types of search syntaxes, except for text searches, use operators as a part of their syntax. 
+					</p>
+            <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists operators used in search syntax searches.">
+                <caption>Search Syntax Operators</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Operator</b>
+                        </th>
+                        <th><b>Description</b>
+                        </th>
+                        <th><b>Sample</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>{}</td>
+                        <td>Used by all search syntaxes except for text search. Should enclose each search criteria, except  text searches. 
+							</td>
+                        <td><span class="Code">{LF:Name="Query", Type=FBD}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>= or ~=</td>
+                        <td>Indicates that valid search results must match the specified value. Some search types use the = operator, while others use the ~= operator; see the <a href="Search_Syntax.htm">search syntax</a> help for information on which operator to use.</td>
+                        <td><span class="Code">{[General]:[Author]="John Smith"}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&gt;</td>
+                        <td>Indicates valid search results must be greater than the specified value. Can only be used when searching for date or numeric information  </td>
+                        <td><span class="Code">{[General]:[Date]&gt;"5/27/2005"}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&gt;= </td>
+                        <td>Indicates valid search results must be greater than or equal to the specified value. Can only be used when searching for date or numeric information.</td>
+                        <td><span class="Code">{[General]:[Date]&gt;="5/27/2005"}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt; </td>
+                        <td>Indicates valid search results must be less than the specified value. Can only be used when searching for date or numeric information.  </td>
+                        <td><span class="Code">{[General]:[Date]&lt;"5/27/2005"}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;= </td>
+                        <td>Indicates valid search results must be less than or equal to the specified value. Can only be used when searching for date or numeric information.</td>
+                        <td><span class="Code">{[General]:[Date]&lt;="5/27/2005"}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>&lt;&gt; </td>
+                        <td>
+                            <p>Indicates valid search results must not be equal to the specified value.</p>
+                            <p class="note"><b>Note:</b> The operator does not match blank values. To include blank values as part of the results, use the | operator to include a search that will match for "".</p>
+                        </td>
+                        <td><span class="Code">{[General]:[Date]&lt;&gt;"5/27/2005"}</span><br />
+							<span class="Code">{[General]:[Date]&lt;&gt;"5/27/2005"} | {[General]:[Date]=""}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>''</td>
+                        <td>Used to indicate an exact phrase search for several search syntax searches; see the <a href="Search_Syntax.htm">search syntax</a> help for information on which search types require single quotes for exact phrase search. (Text search indicates a phrase search using double quotes.) Search types that do not require single quotes for exact phrase searches are always performed as exact phrase searches. The single quotes are enclosed within the double quotes that are standard to the search syntax.</td>
+                        <td><span class="Code">{[General]:[Status]~="'needs review'"}</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </p>
+    </body>
+</html>

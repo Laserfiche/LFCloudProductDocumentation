@@ -1,0 +1,333 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>DocuSign Tokens</h1>
+        <p>You can use tokens in the <a href="DocuSign_Config.htm#Configur">configuration page</a> for the integration with DocuSign to dynamically populate Laserfiche fields or construct a dynamic folder location. In addition to the <a href="Tokens.htm">standard Laserfiche tokens</a>, the integration also supports DocuSign tokens. See the following tables for a list of the supported DocuSign tokens.</p>
+        <p><b>DocuSign Envelope Status Tokens</b>
+        </p>
+        <table id="foo" class="tablesorter" style="" summary="This table lists the available envelope status tokens for use when configuring DocuSign with Laserfiche.">
+            <caption>DocuSign Envelope Status Tokens</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>%(ACHolder)</td>
+                    <td>String</td>
+                    <td>User name of the authoritative copy holder.</td>
+                </tr>
+                <tr>
+                    <td>%(ACHolderEmail)</td>
+                    <td>String</td>
+                    <td>Email address of the authoritative copy holder.</td>
+                </tr>
+                <tr>
+                    <td>%(ACHolderLocation)</td>
+                    <td>String</td>
+                    <td>Location of the authoritative copy holder.</td>
+                </tr>
+                <tr>
+                    <td>%(ACStatus)</td>
+                    <td>String</td>
+                    <td>Authoritative copy status: DepositPending, Deposited, DepositedEO, or DepositFailed</td>
+                </tr>
+                <tr>
+                    <td>%(ACStatusDate)</td>
+                    <td>DateTime</td>
+                    <td>Creation date of the authoritative copy.</td>
+                </tr>
+                <tr>
+                    <td>%(AuthoritativeCopy)</td>
+                    <td>Boolean</td>
+                    <td>Specifies whether the authoritative copy is created.</td>
+                </tr>
+                <tr>
+                    <td>%(Completed)</td>
+                    <td>DateTime</td>
+                    <td>When the envelope was competed.</td>
+                </tr>
+                <tr>
+                    <td>%(Declined)</td>
+                    <td>DateTime</td>
+                    <td>When the envelope was declined by a recipient.</td>
+                </tr>
+                <tr>
+                    <td>%(DeclinedbyUserName)</td>
+                    <td>String</td>
+                    <td>User name of the recipient that declined the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(DeclinedByEmail)</td>
+                    <td>String</td>
+                    <td>Email address of the recipient that declined the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(DeclinedByReason)</td>
+                    <td>String</td>
+                    <td>Reason why the recipient declined the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(Deleted)</td>
+                    <td>DateTime</td>
+                    <td>When the envelope was deleted.</td>
+                </tr>
+                <tr>
+                    <td>%(Delivered)</td>
+                    <td>String</td>
+                    <td>When an envelope was last viewed by a signer.</td>
+                </tr>
+                <tr>
+                    <td>%(Email)</td>
+                    <td>String</td>
+                    <td>Email address of the person who created the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(EnvelopeID)</td>
+                    <td>String</td>
+                    <td>Envelope ID.</td>
+                </tr>
+                <tr>
+                    <td>%(EnvelopeIdStamping)</td>
+                    <td>Boolean</td>
+                    <td>Specifies whether the envelope stamping feature is enabled.</td>
+                </tr>
+                <tr>
+                    <td>%(EnvelopePDFHash)</td>
+                    <td>String</td>
+                    <td>Hash value of the document.</td>
+                </tr>
+                <tr>
+                    <td>%(SenderIPAddress)</td>
+                    <td>String</td>
+                    <td>IP address of the user who sent the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(Sent)</td>
+                    <td>DateTime</td>
+                    <td>When the envelope was sent.</td>
+                </tr>
+                <tr>
+                    <td>%(Signed)</td>
+                    <td>DateTime</td>
+                    <td>When the document was last signed.</td>
+                </tr>
+                <tr>
+                    <td>%(SigningLocation)</td>
+                    <td>DocuSignAPI.SigningLocationCode</td>
+                    <td>Location of the signer .</td>
+                </tr>
+                <tr>
+                    <td>%(Status)</td>
+                    <td>DocuSignAPI.EnvelopeStatusCode</td>
+                    <td>Status of the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(Subject)</td>
+                    <td>String</td>
+                    <td>Envelope subject.</td>
+                </tr>
+                <tr>
+                    <td>%(TimedOut)</td>
+                    <td>DateTime</td>
+                    <td>When the envelope timed out.</td>
+                </tr>
+                <tr>
+                    <td>%(TimeGenerated)</td>
+                    <td>DateTime</td>
+                    <td>Creation time of the envelope.</td>
+                </tr>
+                <tr>
+                    <td>%(UserName)</td>
+                    <td>String</td>
+                    <td>User name of the envelope creator.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>DocuSign Recipient Status Tokens</b>
+        </p>
+        <p>The 0 in each recipient status token name represents the index of each recipient. 0 represents the first recipient in the envelope. You can replace the integer with <b>All</b> to get data for all recipients (e.g., RecipientStatuses.<b>All</b>.UserName). If the DocuSign token contains multiple values, prior values will be overwritten.</p>
+        <table style="width: 100%;" summary="This table lists the available recipient status tokens for use when configuring DocuSign with Laserfiche.">
+            <caption>DocuSign Recipient Status Tokens</caption>
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Token</b>
+                    </td>
+                    <td class="tableheading"><b>Type</b>
+                    </td>
+                    <td class="tableheading"><b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.AccountStatus)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Status of the recipient's account.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.ClientUserId)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Specifies if the recipient is a captive recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Declined)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">When the envelope was declined.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.DeclineReason)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Reason why the recipient declined the envelope.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Delivered)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">When the envelope was seen by the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.DeliveryMethod)</td>
+                    <td class="tabletext">DocuSignAPI.DeliveryMethod</td>
+                    <td class="tabletext">Specifies whether the envelope was delivered by email or fax.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Email)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Email address of the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.EsignAgreementInformation)</td>
+                    <td class="tabletext">DocuSignAPI.RecipientStatusEsignAgreementInformation</td>
+                    <td class="tabletext">Agreement information of the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.FaxNumber)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Fax number of the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.IDCheckInformation)</td>
+                    <td class="tabletext">DocuSignAPI.IDCheckInInformation</td>
+                    <td class="tabletext">Personal information about the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.RecipientId)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">DocuSign recipient ID for the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.RecipientIPAddress)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">IP address of the recipient's most recent access of the envelope.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.RoutingOrder)</td>
+                    <td class="tabletext">Unsigned Short</td>
+                    <td class="tabletext">Routing order of the recipient in the envelope.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Sent)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">When the envelope was sent.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Signed)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">When the envelope was signed.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Status)</td>
+                    <td class="tabletext">DocuSignAPI.RecipientStatusCode</td>
+                    <td class="tabletext">Status of the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.TabStatuses.<i>CustomTabLabel</i>.Value) </td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Value the recipient specified in the custom field. (Note that this custom field is distinct from an envelope custom field, below.)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.Type)</td>
+                    <td class="tabletext">DocuSignAPI.RecipientTypeCode</td>
+                    <td class="tabletext">Role of the recipient.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RecipientStatuses.0.UserName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">User name of the recipient.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Envelope Custom Field Tokens</b>
+        </p>
+        <p>The integration also supports retrieving the values of any envelope custom fields that you have configured for your DocuSign account. Note that this is distinct from a recipient status custom field, above.</p>
+        <table style="width: 100%;" summary="This table lists the available envelope custom field tokens for use when configuring DocuSign with Laserfiche.">
+            <caption>DocuSign Envelope Custom Field Tokens</caption>
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Token</b>
+                    </td>
+                    <td class="tableheading"><b>Type</b>
+                    </td>
+                    <td class="tableheading"><b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(CustomFields.<i>YourCustomFieldName</i>)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Corresponds to the name of an envelope custom field.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(CustomFields.<i>TemplateName</i>)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Corresponds to a DocuSign template name.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Document Status Tokens</b>
+        </p>
+        <p>If you chose to send a Laserfiche document to DocuSign, the following tokens contain information about the documents in the envelope.</p>
+        <table style="width: 100%;" summary="This table lists the available document status tokens for use when configuring DocuSign with Laserfiche.">
+            <caption>DocuSign Document Status Tokens</caption>
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Token</b>
+                    </td>
+                    <td class="tableheading"><b>Type</b>
+                    </td>
+                    <td class="tableheading"><b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(DocumentStatuses.0.ID)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">ID of the document.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(DocumentStatuses.0.Name)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Name of the document as specified in the DocuSign template.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(DocumentStatuses.0.Sequence)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Order of the document in the envelope.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

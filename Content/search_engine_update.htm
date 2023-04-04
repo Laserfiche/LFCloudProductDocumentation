@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Search Engine Update</h1>
+        <p>As part of continuous efforts to improve the performance and scalability of the platform,  Laserfiche Cloud is introducing an updated search engine for the Laserfiche Cloud document repository. This article aims to provide a high-level summary of search behaviors that may have changed.</p>
+        <h2>Major Changes</h2>
+        <ul>
+            <li>The hit count column is no longer supported in search results.</li>
+            <li>Fuzzy search:<ul><li>Fuzzy search no longer allows customization of fuzzy search percentage or number of characters.</li><li>Fuzzy search is no longer supported for proximity or phrase searches.</li><li>In new repositories, fuzzy search is disabled rather than enabled by default.</li></ul></li>
+            <li>Root word search, also known as search stemming, may return different results with the new search engine.</li>
+            <li>Wildcards and regular expressions:<ul><li>The [] and - wildcards are no longer supported. For example, you can no longer use searches such as "Anders[e-o]n" to return results such as "Andersen" and "Anderson."</li><li>Wildcards are no longer supported in proximity searches and phrase searches.</li><li>Regular expressions in searches can no longer match multiple words. For example, the regular expression [0-9]{3}-[0-9]{2}-[0-9]{4} can no longer be used to locate a social security number, as each segment will be considered its own separate search term.</li></ul></li>
+            <li>Proximity searches (also known as 'within' searches):<ul><li>When performing a proximity search, the context hits list will display all results for all search terms, not only those which are within the specified proximity to one another.</li><li>Proximity searches no longer support the use of wildcards.</li></ul></li>
+        </ul>
+        <h2>Minor Changes</h2>
+        <ul>
+            <li>When creating an advanced search using search syntax, you can no longer create complex proximity searches. For example, a search in the format "(document ^2 confidential) ^10 legal" will no longer return documents with the word "confidential" within two words of the word "document" and the whole phrase within ten words of the word "legal." It will instead return an error.</li>
+            <li>Multi-value field searches will now match across multiple subfields within the field. For example, if a multi-value field contains the fields "John Jones" and "Sally Smith," it will be returned for the search term "Sally Jones."</li>
+            <li>Hyphenated words separated across pages will no longer be concatenated for search result purposes.</li>
+            <li>The following special characters can no longer be located in searches, as they are used as delimiters: # $ % &amp;</li>
+            <li>The following characters are now considered search terms rather than delimiters: . ' : , ;_</li>
+        </ul>
+    </body>
+</html>

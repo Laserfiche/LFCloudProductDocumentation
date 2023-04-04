@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <p>To delete a branch:</p>
+        <ol>
+            <li>Select a branch in the <MadCap:snippetText src="Designer Pane.flsnp" /> to highlight it.</li>
+            <li>Click the <b>Delete Selected Activity</b> button <img src="../../Images/image14.png" /> in the toolbar.</li>
+        </ol>
+    </body>
+</html>

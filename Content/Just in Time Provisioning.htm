@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="962" MadCap:lastWidth="1176">
+    <head>
+    </head>
+    <body>
+        <h1>Just-in-Time (JIT)&#160;Provisioning</h1>
+        <p>You can now simplify user licensing by allowing new users to automatically be created and assigned licenses upon first sign in.</p>
+        <h2>Pre-requisites </h2>
+        <p>Before you can use Just-in-Time provisioning, you must have the following setup:&#160;</p>
+        <ol>
+            <li><a href="ConfiguringSSO.htm">Configure</a> and <a href="TurnOnSSO.htm">enable</a> single sign-on (SSO). </li>
+            <li><a href="AttributeMapping.htm">Map</a>  the following attributes:&#160;Email, Firstname, Lastname, and Groups. </li>
+            <li><a href="Federated Groups.htm">Create</a> a federated group. </li>
+        </ol>
+        <h2>Configure Just-in-Time Provisioning</h2>
+        <ol>
+            <li>Navigate to Laserfiche Cloud Account Administration. </li>
+            <li>Click the <b>Settings</b> tab. </li>
+            <li>Click the <b>Single Sign-On</b> tab. </li>
+            <li>Click the <b>Just-in-Time Provisioning</b> tab and turn the option to <b>Yes</b>. </li>
+            <li>Turning the <b>Verbose logging</b> option to <b>Yes</b> will display a detailed error to users whose SSO sign-in fails against ACS (i.e., the user is correctly signed in via SSO but the sign-in request sent to ACS is misinterpreted or misconfigured).  The error details why the initial SSO configuration with Laserfiche Cloud has failed (i.e., bad claim, certificate issues, etc.).<p class="nestedw"><b>Important:</b> It is not recommended to use this feature often as it will display details about a customer's identity provider configuration. This feature is for troubleshooting only and should not be left on indefinitely. </p></li>
+            <li>Click <b>Add a new rule</b> to select a federated group and the license type that will be assigned to any users in this group.<p class="note"><b>Note</b>: Federated group rules must be organized by priority. If a user is part of multiple groups, the user will be assigned the license that is part of the higher priority or first group rule. </p> <![CDATA[ ]]></li>
+            <li>To finish, click <b>Save changes</b>. </li>
+        </ol>
+    </body>
+</html>

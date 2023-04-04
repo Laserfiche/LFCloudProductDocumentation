@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>CSS Customizations for Fields, Titles, and Descriptions | Laserfiche Forms</title>
+        <meta name="description" content="Customize how fields, titles, and descriptions look like on your form. Change the width and font of fields, hide them, or place multiple fields side by side." />
+    </head>
+    <body>
+        <h1>Customizing Fields, Titles, and Descriptions</h1>
+        <p>This topic provides examples of CSS customizations for form titles, form descriptions, and fields that are not in tables or collections. The customizations may target the field's input box, text associated with the field, or the field's wrapper. These are static customizations that are independent of user behavior—for dynamic customizations, see the pages on JavaScript customizations. For customizations to buttons, see <a href="CSS Customizations for Buttons.htm">CSS Customizations for Buttons</a>.</p>
+        <h2 class="topicheading">Field Widths</h2>
+        <p>The <code>cf-field</code> attribute determines the width of the input box's <i>container</i> (not the box itself). If you have fields displayed side-by-side, this attribute can affect how much blank space there is between one field and the next. <code>cf-small</code>, <code>cf-medium</code>, <code>cf-large</code>, and <code>cf-xlarge</code> define the width of the input box itself, which should be smaller than the width of <code>cf-field</code>. Whether an input box has a width defined by <code>cf-small</code>, <code>cf-medium</code>, <code>cf-large</code>, or <code>cf-xlarge</code> depends on the field width specified by the user when creating a field.</p>
+        <p>If you are dissatisfied with the field width options offered by <code>cf-small</code>, <code>cf-medium</code>, <code>cf-large</code>, and <code>cf-xlarge</code>, you can change the style definitions of these classes. By default, these attributes are set to be certain percentages of the width of <code>cf-field</code>. <code>cf-field</code> has a default minimum width of 130 pixels. This means that you cannot make input boxes smaller than 130 pixels unless you <a href="#To" title="Click here to learn more." alt="Click here to learn more.">change this default</a>.</p>
+        <h4>Changing the width of a field label</h4>
+        <p>We start with the following single-line field, to which no custom styles have been applied. The ID of this field is <b>q1</b>.</p>
+        <p>
+            <img src="../Resources/Images/forms_fieldlabel_wide.PNG" style="border-style: solid;border-width: 1px;" alt="Default appearance of single line field." title="The default single line field has an input box of medium width." />
+        </p>
+        <p>We want the field label to be narrower. We apply the following CSS rule to change the width of the label to 50 pixels:</p><pre xml:space="preserve"><code class="language-css">#q1 label {width: 50px;}</code></pre>
+        <p>The resultant field looks as follows:</p>
+        <p>
+            <img src="../Resources/Images/forms_fieldlabel_narrow.PNG" style="border-style: solid;border-width: 1px;" alt="Single line field with custom label width." title="A field label can be targeted with a compound selector combining its ID and the label element." />
+        </p>
+        <h4><a name="Changing"></a>Changing the width of the input box</h4>
+        <p>We can also shrink the width of the input box by specifying a width smaller than the default. When this field was created, it was specified to have a medium-sized field width (class <code>cf-medium</code>), which by default gave it an input box size of 50% that of the input box's container. We can change that width to 25% of the input box's container:</p><pre xml:space="preserve"><code class="language-css">#q1 .cf-medium {width: 25%;}</code></pre>
+        <p>The result looks as follows:</p>
+        <p>
+            <img src="../Resources/Images/forms_inputbox_narrowed.PNG" style="border-style: solid;border-width: 1px;" alt="Single line field with narrower input box." title="In place of .cf-medium, use other selectors for fields that have other widths." />
+        </p>
+        <h4><a name="To"></a>To create input boxes smaller than the default minimum width</h4>
+        <p>In this example, two small fields should display close together. However, because the <code>cf-field</code> class has its <code>min-width</code> property set to 130 pixels, the fields appear too far apart.</p>
+        <p>
+            <img src="../Resources/Images/CSSEx3.png" alt="Fields that are too far apart" title="The min-width property spaces the fields too far apart" style="width: 568px;height: 166px;" />
+        </p>
+        <p>The following CSS&#160;changes the <code>min-width</code> property of the <code>cf-field</code> class to something more appropriate:</p><pre><code class="language-css">#q1 .cf-field {width: 80px; min-width: 80px;}</code></pre>
+        <p>
+            <img src="../Resources/Images/CSSEx3a.png" alt="Sample fields with the spacing adjusted" title="Use this syntax to adjust the spacing" style="width: 573px;height: 168px;" />
+        </p>
+        <h2 class="topicheading"><a name="Multiple"></a>Displaying Fields Side by Side</h2>
+        <p>
+            <MadCap:concept term="Forms" />By default, each form field appears on a separate line. To display more than one field in a line, <a href="CSS Selectors.htm#Adding">assign a custom class</a> to the fields of interest, then assign a style to that class in your CSS code.</p>
+        <p>In this sample form, we create two fields and assign each of them to the custom CSS class <code>TwoPerLine</code>:</p>
+        <p>
+            <img src="../Resources/Images/forms_assign-css-class.PNG" style="border-style: solid;border-width: 1px;width: 621px;height: 592px;" alt="Assigning a custom CSS class to a field" title="This can be done when editing a field on the Layout page in the form designer." />
+        </p>
+        <p>We then specify the style for the custom class <code>TwoPerLine</code>, as follows:</p><pre xml:space="preserve"><code class="language-css">.TwoPerLine { width: 47%;     
+    	       display: inline-block; }</code></pre>
+        <p>Setting the width of each field to slightly less than 50% means that the two fields together will take up most of the horizontal space available. Setting the <code>display</code> property to <code>inline-block</code> means that the browser will display the fields in a grid—which means there can be more than one field per line. As we expected, the two fields display side-by-side. In the following screenshot, a field that we did not apply the custom class to is included for comparison.</p>
+        <p style="font-weight: bold;">
+            <img src="../Resources/Images/forms_TwoPerLine.PNG" style="border-style: solid;border-width: 1px;" alt="Displaying two single line fields side-by-side." title="For more than two fields, adjust the width percentage as required." />
+        </p>
+        <p>You can follow a similar strategy to display three or more fields in a line: Specify  the <code>inline-block</code> display property and scale down the width percentages so that their sum adds to slightly less than 100%. For example, for three fields in a row, try a width of 31%; for four, 23%, and so on.</p>
+        <h2 class="topicheading">Changing the Background Color of Fields</h2>
+        <p>You can change the color of all read-only single-line text boxes using the selector <code>.cf-formwrap input[readonly]</code>. The following CSS rule changes the background color of all such boxes to white:</p><pre><code class="language-css">.cf-formwrap input[readonly] {background-color:white !important;}</code></pre>
+        <p>To target an individual read-only field rather than all read-only fields, you would use a different <a href="CSS Selectors.htm#Compound">compound selector</a>. For example, to target the read-only field associated with the field with id <code>q2</code>, you would use the <code>#q2 input[readonly]</code> selector.</p>
+        <p>Multi-line fields are <b>textarea</b> objects. To target multi-line fields, use the selector <code>.cf-formwrap textarea</code>.</p>
+        <h2 class="topicheading">Changing the Font of Field Labels</h2>
+        <p>You can change fonts across a form by selecting a theme and customizing its fonts. However, you may want to change the font of specific field labels, rather than all field labels at once. This can be done through CSS. Here, we apply the following rule-set to change the font of the field label associated with the element <code>q1</code>:</p><pre xml:space="preserve"><code class="language-css">#q1 label {font-size:10px !important;
+  		   color: red;
+  		   font-family: "Times New Roman";
+	    }</code></pre>
+        <p>The font for this label now appears in Times New Roman, the color red, and a smaller size than the default size. For comparison, the bottom field label uses the default font.</p>
+        <p>
+            <img src="../Resources/Images/forms_change-label-font.PNG" style="border-style: solid;border-width: 1px;" alt="Field label with custom font" title="Changing the font of a specific label can help it stand out from other fields." />
+        </p>
+        <p>The properties that we changed represent only a fraction of the properties you could change. For example, you could bold a font or make it lighter by assigning a value to the property font-weight. <code>font-weight: bold</code> bolds the font. To italicize a font, try <code>font-style:&#160;italic</code>.</p>
+        <h2 class="topicheading">Changing the Font of Text Inputs</h2>
+        <p>You can change the font that appears in a field's input box by targeting  <b>input</b> or <b>textarea</b> objects. Here, we make the font in one of the input fields small and red:</p><pre xml:space="preserve"><code class="language-css">#q1 input {font-size:8px !important;
+  		   color: red;
+ 	    }</code></pre>
+        <p>For comparison, an input in q1 is shown in comparison with the same input in another field:</p>
+        <p>
+            <img src="../Resources/Images/forms_change-input-font.PNG" style="border-style: solid;border-width: 1px;" alt="Single line field with non-default font for text input." title="Different selectors may be required for text fields in collections and tables." />
+        </p>
+        <p>To target multi-line fields, you should use <b>textarea</b> instead of <b>input</b>.</p>
+        <h2 class="topicheading">Changing the Font of Other Text</h2>
+        <p>These selectors target other elements of the form that may contain text:</p>
+        <ul>
+            <li><code>.cf-helptext</code> for the text above or below a field</li>
+            <li><code>.fileuploader</code> for the text on a file upload button</li>
+            <li><code>input[type=submit]</code> for the text on a submit button.</li>
+            <li><code>#form-title-wrap h1</code> for the form title.</li>
+            <li><code>.form-option-label</code> for the text next to radio buttons or checkboxes.</li>
+        </ul>
+        <p>For the button elements, the same selectors can also be used to change non-text properties like background color, border size, and border color.</p>
+        <h2 class="topicheading">Aligning Objects</h2>
+        <h4>Centering the form title</h4>
+        <p>The form title is left-aligned by default. To center the form title, use the following CSS&#160;rule:</p><pre xml:space="preserve"><code class="language-css">#form-title-wrap {text-align: center;}
+</code></pre>
+        <h4>Centering the Submit button</h4>
+        <p>The Submit button is left-aligned by default. To center it, set the <code>display</code> property of both the button and its wrapper to <code>block</code>. <code>block</code> elements take up the full width of the page, preventing other elements from being displayed beside them. Setting the button's <code>margin</code> property to <code>auto</code> centers it within its wrapper.</p><pre xml:space="preserve"><code class="language-css">div.btn-wrapper {display:block}
+.Submit {display:block;margin:auto}</code></pre>
+        <h4>Centering the form description</h4>
+        <p>The form description is left-aligned by default. To center the form description, change its <code>text-align</code> property. We use a compound selector to identify the form description, specifying the <b>label</b> element inside the wrapper that contains the form title and description.</p><pre xml:space="preserve"><code class="language-css">#form-title-wrap label {
+  text-align: center;
+}</code></pre>
+        <h4>Centering fields</h4>
+        <p>The following CSS rule-set centers both an input box and its field label.</p><pre xml:space="preserve"><code class="language-css">#q2 .cf-field, #q2 .cf-label {
+  width: 100% !important;
+  text-align:center;
+}
+</code></pre>
+        <p>To center only the label, omit <code>#q2 .cf-field</code>. To center only the field, omit <code>#q2 .cf-label</code>.</p>
+        <h4>Right-aligning a field's input box</h4>
+        <p>The following CSS rule will right-justify the input box of the field with id <code>q5</code>.</p><pre xml:space="preserve"><code class="language-css">#q5 input {text-align: right;}</code></pre>
+        <h4>Centering radio buttons</h4>
+        <p>By default, radio buttons are presented with the label on the left and the choices on the same line as the label. You can customize a radio button field to have the label centered above the choices and the radio buttons centered below the label, as follows:</p>
+        <p>
+            <img src="../Resources/Images/forms_centered-radio.PNG" style="border-style: solid;border-width: 1px;" alt="Radio button field with centered label and centered Submit button." title="For a different number of choices, adjust the width attribute as required." />
+        </p>
+        <p>The following CSS rules obtain this outcome by making the width of both the buttons' container and the label 100% and assigning their <code>text-align</code> property a value of <code>center</code>. At the same time, the width of each choice is restricted so that they will all fit on the same line. The code assumes that this field has the id <code>q6</code>.</p><pre><code class="language-css">#q6 .cf-field, #q6 .cf-label {width: 100% !important; text-align:center;}
+#q6 .choice {width: 25%;}</code></pre>
+        <h2 class="topicheading">Hiding Fields</h2>
+        <p>You may want your form to contain hidden fields that contain variables used for calculations (for example). These fields will be in the form's HTML, but will not be visible to users unless they inspect the page's HTML. Laserfiche Forms pre-defines the CSS&#160;classes <code>hide</code> and <code>hidden</code>. You can hide a field by simply assigning the field the custom class <code>hide</code> or <code>hidden</code>. If you do so, the field will still appear in the Layout page of the form designer, but will not appear on preview pages, including the preview pane in the <b>CSS and JavaScript</b> tab.</p>
+        <p>To hide a field using custom CSS, use a rule like the following.</p><pre xml:space="preserve"><code class="language-css">#Field5 {display: none;}</code></pre>
+    </body>
+</html>

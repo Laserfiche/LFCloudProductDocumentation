@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2449" MadCap:lastWidth="1351">
+    <head><title>Configuring SCIM in Laserfiche Cloud</title>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Configuring SCIM (System for Cross-domain Identity Management) in Laserfiche Cloud</h1>
+        <p>SCIM is an open standard designed to manage user identity information. The goal of SCIM is to help automate the exchange of user identity data between your company's various applications and  service providers. Once configured, users that are added, updated, or removed from  your identity provider will be automatically updated in Laserfiche. This will greatly minimize manual administration of users between identity providers and Laserfiche.</p>
+        <p class="note"><b>Note:</b> The SCIM&#160;asset must be requested and configured by <a href="http://support.laserfiche.com/" target="_blank">Laserfiche Support</a> before you can enable it in Laserfiche.</p>
+        <p><b>To enable SCIM:</b>
+        </p>
+        <ol>
+            <li>Navigate to Laserfiche Cloud Account Administration.</li>
+            <li>Click the <b>Settings</b> tab.</li>
+            <li>Click the <b>Single Sign-On</b> tab</li>
+            <li>Click the <b>SCIM&#160;Provisioning</b> tab.<p class="nestednote"><b>Note:</b> You must have SSO&#160;configured to see the <b>SCIM Provisioning</b> tab.</p></li>
+            <li>Next to <b>SCIM Provisioning Status</b>, click <b>Enable</b>.<p><img src="Images/Enable-SCIM.png" title="SCIM Provisioning Tab" alt="SCIM Provisioning Tab" /></p></li>
+            <li>In the <b>Cross Domain Identity Management Token</b> dialog box that appears, click <b>Copy the bearer token to clipboard</b>. This token will let the identity provider authenticate with the SCIM&#160;server. Save this token in a secured location for later use. Click <b>Finish</b>.</li>
+            <li>Once enabled, a <b>Management Endpoint</b> and <b>Rotate Bearer Token</b> section will appear. The <b>Management Endpoint</b> is a URL the identity provider will send the SCIM requests to. Click <b>Copy endpoint to clipboard</b>. The <b>Rotate Bearer Token</b> section lets you create a new bearer token if needed.<p><img src="Resources/Images/SCIM-Provisioning.png" title="SCIM Provisioning Tab" alt="SCIM Provisioning Tab" /></p><p><b>Service Provider Information</b></p><p>Clicking the <b>Service Provider Information</b> link displays additional information you may need to set up your identity service provider:</p><ul><li>Audience URL (SP Entity ID)</li><li>Assertion Consumer Service URL</li><li>Recipient and destination URL</li><li>Name ID&#160;format</li><li>Default relay state</li><li>Download a public certificate</li></ul><p>You can also download  a Laserfiche metadata file to import to your identity provider. </p><p>For more information on configuring SCIM&#160;for different identity providers, see the <a href="Configure-SCIM-Identity-Providers.htm">Configuring SCIM&#160;for Specific Identity Providers</a> help topic. </p></li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Cumulative Grade Point Averages by Person ID</title>
+    </head>
+    <body>
+        <h1>Search Cumulative Grade Point Averages by Person ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action returns a list of student academic programs. The search results will be sorted by Curriculum Objective first, then by Site - Title, next by Program - Title in alphabetical order.</p>
+        <ul>
+            <li><b>Category:</b> Student Grade Point Average</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Person ID*</p>
+                    </td>
+                    <td>
+                        <p>Is the Guid identifier of a person.</p>
+                        <p>Can be retrieved using any of the Search Student... actions.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Level ID</p>
+                    </td>
+                    <td>
+<p>The Guid identifier of an academic level.</p><p>Entering a valid academic level Id will filter the search results by the provided academic level Id.<ul><li>This input is optional.</li><li>If this input is not included then we will retrieve and display the student's cumulative GPAs with all academic levels.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return empty search result.</li></ul></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Source</p>
+                    </td>
+                    <td>
+<p>An indication of the academic sources that have been included in the grade point average.<ul><li>Options include "All Listings", "All", "Transfer" and "Institution".</li><li>Selecting "All Listings" will retrieve the student's cumulative GPAs with any academic sources.</li><li>Selecting one of these ["All", "transfer" and "institution"] will filter the results by the selected option.</li></ul></p><p>This input is optional.<ul><li>If this input is not included then we will retrieve and display the student's cumulative GPAs with all academic sources.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return empty search result.</li></ul></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Academic Level</p>
+                    </td>
+                    <td>
+                        <p>Requires additional API call</p>
+                        <p>Includes sub-fields.</p>
+			<p>
+                            <MadCap:toggler targets="AcademicLevelSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="AcademicLevelSubFields">
+				<li>Academic Level ID: The Guid identifier for the academic level under the cumulative grade point average
+.</li>
+				<li>Code: The code that identifies the academic level under the cumulative grade point average
+(for example, ‘UG’).</li>
+				<li>Title: The full name of the academic level under the cumulative grade point average
+(for example, ‘Undergraduate’).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Source</p>
+                    </td>
+                    <td>
+                        <p>An indication of the academic sources that have been included in the grade point average (e.g. institution, transfer or all).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Value</p>
+                    </td>
+                    <td>
+                        <p>The grade point average.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Attempted Credits</p>
+                    </td>
+                    <td>
+                        <p>The number of attempted credits used to compute the grade point average. (Please see the example in Notes for details.)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Earned Credits</p>
+                    </td>
+                    <td>
+                        <p>The number of earned credits used to compute the grade point average. (Please see the example in Notes for details.)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Quality Points</p>
+                    </td>
+                    <td>
+                        <p>The number of quality points used to compute the grade point average. (Please see the example in Notes for details.)</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+         <div class="note">
+            <p><b>Notes:</b> </p>
+		<p>Cumulative Grade Point Average (GPA) is based on academic level. There is no duplicate cumulative GPA for the same combination of academic level and academic source. If a student was pursuing multiple programs of the same academic level, the cumulative GPA for that academic level would include both programs.</p>
+		<p>For a given academic level, the cumulative GPA with academic source "overall" is calculated based on the cumulative GPA with academic source "institution" and "transfer".</p>
+		<p>For academic source of cumulative GPA with any academic level, "overall" is always published. However, "institution" or "transfer" are not guaranteed.</p>
+		<p>Example for "attempted credit", "earned credits", and "quality points": For each grade included in the calculation of grade point averages the ERP identifies if that grade will be included in student attempted credits and earned credits. For example, a passing grade of ‘B’ in a 3-credit section will most likely be included in the total attempted and earned credits for the student. However, a failing grade of ‘F’ in the same 3-credit section would count in overall attempted credits but not in earned credits. Each grade is also assigned a quality point value that is used to calculate the g.p.a. On a common 4.0 scale an A grade would have a value of 4 quality points, a B grade 3 quality point, etc. Example, a student who earns an ‘A’ grade in a 3-credit section would have attempted credits = 3, earned credits = 3, quality points = 12.00 (quality points x attempted credits), and a gpa of 4.00 (quality points/attempted credits).</p>
+        </div>
+    </body>
+</html>

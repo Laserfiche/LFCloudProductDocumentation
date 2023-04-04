@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Installing Import Agent</h1>
+        <p>This section contains the information you'll need to successfully install Laserfiche Import Agent and Laserfiche Email Archive.</p>
+        <h2 class="topicheading">System Requirements</h2>
+        <p>The system requirements for the computer hosting Import Agent are listed below.</p>
+        <ul>
+            <li><b>CPU:</b> <ul><li>Minimum: 1.8 GHz processor</li><li>Recommended: Quad-core 2.8 GHz processor or faster</li></ul></li>
+            <li><b>Memory:</b> <ul><li>Minimum: 1 GB RAM</li><li>Recommended: 2 GB RAM or more  </li></ul></li>
+            <li><b>Operating System:</b>
+                <ul>
+                    <li>Windows Server 2019</li>
+                    <li>Windows Server 2016</li>
+                    <li>Windows Server 2012 R2</li>
+                    <li>Windows Server 2012</li>
+                    <li>Windows 10</li>
+                    <li>Windows 8.1</li>
+                </ul>
+            </li>
+        </ul>
+        <h2 class="topicheading">Software Requirements</h2>
+        <ul>
+            <li>.NET Framework 4.7.2 or later
+			</li>
+            <li>Microsoft Visual C++ 2012 Redistributable (x64) - 11.0.61030</li>
+            <li>Microsoft Visual C++ 2012 Redistributable (x86) - 11.0.61030</li>
+            <li>Microsoft Visual C++ Redistributable for Visual Studio 2017 (x64) -14.11.25325</li>
+            <li>Microsoft Visual C++ Redistributable for Visual Studio 2017 (x86) -14.11.25325</li>
+        </ul>
+        <h2 class="topicheading">Installing Import Agent</h2>
+        <p>The Import Agent installation package can be obtained from your reseller, or, if you have a <a href="https://support.laserfiche.com/" target="_blank">Laserfiche support site</a> account with sufficient privileges, downloaded from the support site. Select the most recent version of the installation package. In addition to the Import Agent install files, it will contain a license for use when registering Import Agent.</p>
+        <p style="font-weight: bold;">To install Import Agent</p>
+        <ol>
+            <li>Open the Import Agent install package and launch <b>Autorun.exe</b>.</li>
+            <li>Select <b>Install Laserfiche Import Agent</b>.</li>
+            <li>Select which language you want to run the installation in.</li>
+            <li>The Laserfiche Import Agent setup will launch and the <b>Welcome</b> screen will appear. Click <b>Next</b>.</li>
+            <li>In the <b>End-User License Agreement</b> step, read the license agreement and select <b>I accept the terms in the License Agreement</b> if you agree to the terms of the license agreement. Click <b>Next</b>.</li>
+            <li>On the <b>Custom Setup</b> step, select whether you want to also install Laserfiche Email Archive and a local instance of the OCR engine. Modify the <b>Install directory</b> option if you want to change the default installation folder. By default, Import Agent is installed in "C:\Program Files\Laserfiche\Import Agent." Click <b>Next</b> to continue.</li>
+            <li>On the <b>Laserfiche Product Activation</b> step, select the <b>Activate using license file</b> option and browse to the path where the Import Agent license file can be found. By default, this is in the License subfolder of the folder where you extracted the installation files.</li>
+            <li>On the <b>Laserfiche Service Settings</b> step, specify authentication information for the Import Agent service and Laserfiche Email Archive service. By default, the services will run as the Local System account. You do not need to specify a password for the Local System account. Select the <b>Create Windows Firewall exception</b> option for the installation to create a Windows Firewall exception for the ports used by the Laserfiche Email Archive service (if you do not do this, you will need to configure the ports manually). </li>
+            <li>On the <b>Ready to Install</b> step, click <b>Install</b> to begin the installation process.</li>
+            <li>The <b>Prerequisites</b> step may appear if <b>Import Agent</b> needs to install additional components. A green check will appear next to installed items and a red X will appear next to items that have not been installed. If one or more of the items on the list has a red X next to it, install that item and then click <b>Retry</b>. Click <b>Next</b>.
+            <p class="w"><b>Important:</b> Bypassing prerequisites may cause Import Agent to function incorrectly and is not recommended.</p></li>
+            <li>On the <b>Installing Laserfiche Import Agent</b> step, click <b>Next</b> when the installation finishes.</li>
+            <li>Click <b>Finish</b> to exit the setup wizard.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Laserfic"></a>Laserfiche Import Agent Service</h2>
+        <p>Import Agent uses a Windows service named <b>Laserfiche Import Agent Service</b> to retrieve, import, move, and delete files in Windows folders. In some cases, you may need to modify the Windows account associated with this service. </p>
+        <p><b>To configure Windows rights for the  Laserfiche Import Agent service</b>
+        </p>
+        <ol>
+            <li>Open the Windows <b>Services</b>.</li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>Open Windows <b>Control Panel</b>. Depending on the version of Windows either switch to <b>Classic View</b> or select to view by <b>Large icons</b> or <b>Small icons</b>. </li>
+                <li>Open <b>Administrative Tools</b>.</li>
+                <li>Open <b>Services</b>.</li>
+            </ol>
+            <li>Double-click <b>Laserfiche Import Agent Service</b>.</li>
+            <li>Select the <b>Log On</b> tab.</li>
+            <li>Select one of the following options:</li>
+            <ul>
+                <li><b>Local System account.</b> Only select this option if Import Agent is installed on the same machine that hosts the files you want to import and Import Agent is not configured to use Windows authentication to sign into the repository.</li>
+                <li><b>This account.</b> Select this option if Import Agent will access files across a network and/or Import Agent is configured to use Windows authentication to sign into the repository. Specify a  Windows user account and password. Keep in mind the following considerations:</li>
+                <ul>
+                    <li>If the password associated with the account changes, you may have to manually update this dialog box.</li>
+                    <li>If Import Agent is configured to use Windows authentication to sign into the repository, the Windows account specified here will be used. Ensure this account has sufficient Laserfiche rights to perform all the tasks required by Import Agent. </li>
+                    <li>Ensure this Windows account has sufficient Windows rights to retrieve, import, move, and/or delete files in Windows directories used by Import Agent.</li>
+                </ul>
+            </ul>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p><b>To change the status of the Laserfiche Import Agent service</b>
+        </p>
+        <ol>
+            <li>Open the Import  Agent Configuration Utility.</li>
+            <li>Select <b>Service</b> from the menu.
+            </li>
+            <li>Select one of the  following options:</li>
+            <ul>
+                <li><b>Start</b>
+                </li>
+                <li><b>Stop</b>
+                </li>
+                <li><b>Pause</b>
+                </li>
+                <p class="ex"><b>Tip:</b> Choosing <b>Stop</b> or <b>Pause</b> disables all profiles.</p>
+            </ul>
+        </ol>
+    </body>
+</html>

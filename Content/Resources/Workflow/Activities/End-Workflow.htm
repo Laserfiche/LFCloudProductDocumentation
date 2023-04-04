@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>End Workflow</h1>
+        <p style="text-align: center;">
+            <img src="Images/endWorkflowCanvas.PNG" title="End Workflow activity" alt="End Workflow activity" />
+        </p>
+        <p>This activity terminates a running branch. The branch can terminate in a completed state or with an error.</p>
+        <p>For example, </p>
+        <p class="ex"><b>Example</b>: Your workflow handles documents for your human resources department, and you have an Employment Status field for each employee in the "HR" template. In your workflow, you use a <a href="Conditional-Parallel.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Parallel</a> activity to determine how HR documents should be handled, but if an employee's status is set to "No Longer Employed," you do not need to continue routing the documents. You could use the <b>End Workflow</b> activity to stop routing the documents.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Workflow to End</b> property box, leave <b>Current workflow</b> selected.</li>
+            <li>In the <b>Workflow Status</b> property box, select the type of cause for the workflow ending.</li>
+            <ul>
+                <li><b>Completed</b>: Ends the workflow normally.</li>
+                <li><b>Terminated</b>: Ends the workflow with an error logged. You can view that error in <a href="../Viewing-an-Instance-Report.htm" title="Click here to learn more." alt="Click here to learn more.">the instance report</a>.</li>
+            </ul>
+            <li>In the <b>Reason</b> property box, type the reason why the workflow ended. When viewing the message that appears in Messages in <a href="../Viewing-an-Instance-Report.htm" title="Click here to learn more." alt="Click here to learn more.">the instance report</a>, this description can help you determine why the instance ended. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

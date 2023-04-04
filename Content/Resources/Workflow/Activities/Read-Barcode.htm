@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Read Barcode</h1>
+        <p style="text-align: center;">
+            <img src="Images/readBarcodeCanvas.PNG" title="Read Barcode activity" alt="Read Barcode activity" />
+        </p>
+        <p>The Read Barcode activity captures barcode information from a single page of a repository entry, letting you use the captured information  in your process.  For example, you might need to capture barcodes on a page that are associated with a set of products at a store, and use the captured barcode data to populate a document's metadata. Note that this activity only reads barcodes from documents that have image pages, that is, it does not read from a PDF that does not have image pages. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Read-Barcode-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>Drag the activity from the toolbox pane and drop it in the designer pane.</li>
+            <li>In the properties pane, type a name and description for the activity.</li>
+            <li>In the <b>Connection Profile</b> property box, select the repository you want the activity to use.</li>
+            <li>In the <b>Read Barcodes From</b> section, select the document from which the activity reads barcodes.</li>
+            <li>In the <b>Page</b> section, add the page number you want to read barcodes from. You can only read barcodes from one page at a time. Click the Token button (right arrow)  to add a token.
+                <p class="ex"><b>Example:</b> You may want to capture barcodes that span more than one page of an entry and are in various locations on each page. You can read all the barcodes from the various pages using a <a href="Repeat.htm" title="Click here to learn more." alt="Click here to learn more.">Repeat</a> activity. You can add the activity with a condition on the iteration token that the token must be less than or equal to the page count. Within the activity, you can place the <b>Read Barcode</b> activity and set the page to be the %(Repeat_Iteration) token.</p></li>
+            <li>In the <b>Barcode Options</b> section, set up additional barcode options.<ul><li><![CDATA[	]]><b>Only include barcodes of type:</b> When you select this option, you can choose to read from one of the supported barcode types. You might want to select this option when a page of a document contains multiple barcodes, but you want to find a specific type of barcode on the page. The option also helps to reduce the change of interpreting random markings and characters on the page as barcodes.<p class="note"><b>Note:</b> You can select from the following types of barcodes: Code I25, Code 39, Code 128, Codabar, UPCA, EAN 8, Code 93, UPCE, EAN 13, EAN 2, EAN 5, PDF417, Databar, Patch Code, Datamatrix, and QR code.</p></li></ul><p class="note"><b>Note:</b> For barcodes that include checksum characters, the checksum characters will be returned as part of the barcode value. The checksum will not be run.</p></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

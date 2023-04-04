@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Update Section Registration</title>
+    </head>
+    <body>
+        <h1>Update Section Registration Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used for dropping a course section or updating academic level, credit, or grade scheme of a section.</p>
+        <ul>
+            <li><b>Category:</b> Section Registration</li>
+            <li><b>Supported in:</b> Workflow</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                <tr>
+                    <td>
+                        <p>Section Registration ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the section registration the student wants to update</p>
+                        <p>Retrieve this using one of the Search actions for "Section Registration"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Level ID</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the Academic level of the section registration the student is attempting to update</p>
+                        <p>Retrieve this using one of the Search actions for "Section" or from the Get Academic Level list action.</p>
+                        <p>The value must be from the list of valid Academic levels for the section.</p>
+                        <p>Optional, if not specified it will remain as is.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credit</p>
+                    </td>
+                    <td>
+                        <p>Consists of 1 sub-field: <b>registrationCredit</b>.</p>
+                        <p><b>registrationCredit</b> is an integer representing how much credit the student will receive.</p>
+                        <p>Valid values are based on the minimum, maximum and increment fields from the "CourseCredit" fields retrieved from the Search actions for "Section".</p>
+                        <p>Optional, the existing value will remain if not specified.</p>
+                        <p>Will be set to 0 if the registration is dropped.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Grade Scheme</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the Grade Scheme of the section registration the student is attempting to update.</p>
+                        <p>Retrieve this using one of the Search actions for "Section".</p>
+                        <p>Optional, the value will remain as is if not specified.</p>
+                        <p>The value must be from the list of valid Grade Schemes for the section.</p>
+                        <p>If not using the default value, it the academic level must be a part of the acceptable academic levels for that grade scheme.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Section Registration Status Reason</p>
+                    </td>
+                    <td>
+                        <p>An enumeration of the reason for the status of the section registration.</p>
+                        <p>Value must be one of the following: "registered", "dropped", "withdrawn" or "canceled"</p>
+                        <p>Optional, the current value will remain as is if not specified.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action does not have any output tokens.</p>
+    </body>
+</html>

@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Software Requirements for Laserfiche Cloud</h1>
+        <h2>Documents</h2>
+        <p><b>Laserfiche Documents</b> can be viewed using any of the following web browsers: Microsoft Edge (Chromium), Firefox, Chrome, and Safari for iOS.</p>
+        <ul>
+            <li>The <b>Microsoft Office Integration</b> requires the following specifications:
+				<ul><li><b>Microsoft Office</b>:&#160;Microsoft Office 2013, Microsoft Office 2016, and Microsoft Office 2019, Microsoft Office 2021, Microsoft 365 Apps</li></ul></li>
+            <li><b>Laserfiche Scanning</b> requires the following specifications:
+				<ul><li value="1"><b>CPU: </b>Intel or AMD x64 Processor (2.4 GHz processor)</li><li value="2"><b>Memory: </b>1 GB RAM or more</li><li value="3"><b>Operating system:   </b> Microsoft Windows 8.1 and Windows 10</li></ul></li>
+        </ul>
+        <h2>Process Automation</h2>
+        <p><b>Laserfiche Process Automation</b> can be viewed using any of the following web browsers: Microsoft Edge (Chromium), Firefox, and Chrome for Windows, macOS, and Linux. Process Automation administration and configuration pages may render slowly or not function properly when viewed on mobile devices.</p>
+        <h2>
+            <MadCap:keyword term="whitelist" />Laserfiche Cloud Server Endpoints </h2>
+        <p>Laserfiche Cloud requires connectivity to the Internet.  HTTPS traffic over TCP port 443 must be allowed for the following endpoints for Laserfiche Cloud to function fully.</p>
+        <table>
+            <col />
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Category</b>
+                    </td>
+                    <td class="tableheading"><b>Domains</b>
+                    </td>
+                    <td class="tableheading"><b>Notes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Required</td>
+                    <td class="tabletext">
+                        <p>*.laserfiche.com, *.lfxstatic.com, public-laserfichelocalhost-certificate.s3-us-west-1.amazonaws.com/lflocalhost.pfx</p>
+                    </td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Required</td>
+                    <td class="tabletext">
+                        <p>laserfiche-cloud-production-webaccessdatastore.s3.us-west-2.amazonaws.com</p>
+                    </td>
+                    <td class="tabletext">United States data center</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Required</td>
+                    <td class="tabletext">
+                        <p>*.laserfiche.ca, lf-cloud-production-ca-central-1-webaccess-datastore-4053.s3.ca-central-1.amazonaws.com</p>
+                    </td>
+                    <td class="tabletext">Canadian data center</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Required</td>
+                    <td class="tabletext">
+                        <p>*.eu.laserfiche.com, lf-cloud-production-eu-west-1-webaccess-datastore-0597.s3.eu-west-1.amazonaws.com</p>
+                    </td>
+                    <td class="tabletext">European data center</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Optional</td>
+                    <td class="tabletext">*.statuspage.io, *.walkme.com</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Laserfiche Cloud IP&#160;Addresses</h2>
+        <p>The following table lists potential originating IP addresses for requests that connect to endpoints outside of Laserfiche Cloud on behalf of the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Rules/web-request-rule.htm" target="_parent">Web Request Rule</a> and <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Integrations/integrationplatform.htm" target="_parent">Application Connections</a> features of Laserfiche Cloud.</p>
+        <table>
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Addresses</b>
+                    </td>
+                    <td class="tableheading"><b>Notes</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>54.214.83.16, 44.230.227.134, 34.208.90.118</p>
+                    </td>
+                    <td class="tabletext">United States data center</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>52.60.44.193, 3.97.48.213, 3.96.88.70</p>
+                    </td>
+                    <td class="tabletext">Canadian data center</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>63.34.184.215, 34.243.116.32, 54.75.226.203</p>
+                    </td>
+                    <td class="tabletext">European data center</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Please see Microsoft's documentation for additional Office 365 URLs and IP&#160;address ranges that may need to be accessible:</p>
+        <ul>
+            <li><a href="https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide" target="_parent">https://learn.microsoft.com/en-us/microsoft-365/enterprise/urls-and-ip-address-ranges?view=o365-worldwide</a>
+            </li>
+        </ul>
+    </body>
+</html>

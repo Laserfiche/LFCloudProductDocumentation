@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="Laserfiche Directory Server"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  MasterPage="/Content/MasterPages/WebHelp.flmsp"
+  ConditionTagExpression="include[Default.InstallationTOC] exclude[Default.Exclude or Default.MasterTOC or Default.TempTag] "
+  MasterStylesheet="/Content/Resources/Stylesheets/Stylesheets/LF.css"
+  TargetLanguage="en-us"
+  OutputFile="LFDS"
+  MasterToc="/Project/TOCs/Installation.fltoc">
+  <PrintedOutput
+    CollapseMargins="true" />
+</CatapultTarget>

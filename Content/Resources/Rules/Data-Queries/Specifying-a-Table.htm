@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Specifying a Table</h1>
+        <p>The FROM section of the  query editor allows you to specify the tables that you want to query.</p>
+        <p>The left part of the section has the tables you can query. This list is updated based on your lookup tables or external data sources. To add a table, either double-click the table on the left, or select the table and click <b>Add</b>.</p>
+        <p>For external data source queries, you can change the specific external data source in the right pane to use another verified data source.</p>
+        <p class="ex"><b>Example</b>: The following image shows a query on <i>Invoices</i>, but not on <i>Cities</i> and <i>Countries</i>:</p>
+        <p>
+            <img src="../../../Images/data-query-from.png" />
+        </p>
+        <h2>Restrictions</h2>
+        <p>The FROM statement has the following restrictions.</p>
+        <ul>
+            <li>For external data source and lookup table queries, you can select only one table.</li>
+            <li MadCap:conditions="Default.Do not include">For lookup table queries, queries that contain more than one table cannot be used in the Update Entity Instance activity. For these queries, the <b>Valid in Update Entity Instance activity</b> option in the right pane will be automatically cleared.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="2692" MadCap:lastWidth="854" MadCap:conditions="Primary.Migrated">
+    <head>
+    </head>
+    <body>
+        <h1>Laser App Anywhere Tokens</h1>
+        <p>You can use Laser App Anywhere tokens to dynamically populate Laserfiche fields or construct a dynamic document name or folder location for Laser App forms stored in Laserfiche. For instruction on configuring these properties, see <a href="Configure_LaserApp_A.htm">Configuring and Using the Laser App Anywhere Integration</a>.</p>
+        <p>The following tables list supported Laser App Anywhere tokens.</p>
+        <p><b>ContactRecord Tokens</b>
+        </p>
+        <p>ContactRecord tokens represent client information from Laser App Anywhere's <b>Contact Data</b> tab.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>ContactRecord Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.CLIENT_ID)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Unique identifier for the client's contact record.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.ContactName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Client name.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Forms Tokens</b>
+        </p>
+        <p>Forms tokens represent Laser App data about the form saved to Laserfiche. Details can be found in the Form Detail Information in Laser App. The 0 in each token name represents the index of each form when you save multiple forms to Laserfiche at once. In contrast to Laser App Enterprise, Laser App Anywhere sends multiple forms as separate documents, Replace the integer with <b>Index</b> to get data for the current form in the import process. The integration automatically replaces "Index" with the integer of the current form being processed.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the Forms tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Forms Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(Forms.0.company)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Company</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.date)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">Date the form was sent</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.file)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Internal id</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.formnumber)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Number</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.ftype)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Type</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.ladesc)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Laser App program type</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.laver)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Laser App version number</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.locked)</td>
+                    <td class="tabletext">Boolean</td>
+                    <td class="tabletext">Whether the form is locked</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.majv)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Internal Ver.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.minv)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Internal Ver.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.name)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.pgs)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Number of pages in the form</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.regtype)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Registration type</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.revdate)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Revised Data</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.signable)</td>
+                    <td class="tabletext">Boolean</td>
+                    <td class="tabletext">Whether the form is signable</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.subcat1)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form sub-category 1</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.subcat2)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form sub-category 2</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.time )</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Time</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>RepData Tokens</b>
+        </p>
+        <p>RepData tokens represent information from the <b>Current Rep/Agent Info</b> dialog box in Laser App Anywhere.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the RepData tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>RepData Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Address)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent address</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Apt )</td>
+                    <td class="tabletext">string</td>
+                    <td class="tabletext">Rep/Agent Apt</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_City)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent city</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Email)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent email</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Fax)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent fax</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_First)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent first name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Last)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent last name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Mi)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent middle initial</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Phext)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent phone extension</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Phone)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent phone number</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Rep)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent Rep/Agent#</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_State)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent State</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_Zip)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent Zip</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_OSJ)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent OSJ#</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(RepData.rep_RIA)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Rep/Agent RIA#</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>BrokerData Tokens</b>
+        </p>
+        <p>BrokerData tokens represent information from the <b>Current Broker/IMO</b> dialog box in Laser App Anywhere.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the BrokerData tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>BrokerData Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Address)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Address</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Branch)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Branch #</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Broker_No)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Broker #</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_City)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data City</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Code)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Code</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Email)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Email</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Fax)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Fax</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Firm_No)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Firm #</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Name)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data B/D Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_OSJ)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Broker OSJ Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Phext)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Phone Extention.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Phone)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Phone</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_RIA)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Broker RIA Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_State)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data State</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Suite)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Suite#</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Zip)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker Data Zip</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

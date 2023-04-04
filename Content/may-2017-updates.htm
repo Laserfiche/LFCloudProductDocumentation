@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>May 2017 Updates for Laserfiche Cloud</h1>
+        <p>The May 2017 update of Laserfiche Cloud includes a variety of updates to multiple apps in Laserfiche Cloud.</p>
+        <p>You can watch an overview of the new features here:</p><iframe width="100%" height="550" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Whats-New-in-Cloud-May-2017/Whats-New-in-Cloud-May-2017_player.html"></iframe>
+        <h2>Web Client Updates</h2>
+        <p><b>Multi-Value Field Groups</b>
+        </p>
+        <p>In some cases, values across multiple fields on a single document may be related to one another. For example, on an invoice, you might have multiple items, each with its own name, product code, price, and amount purchased. On a report, you may have multiple authors, each of whom has an email address associated with them. While multi-value fields allow you to store multiple values, it can be difficult to tell at a glance which price corresponds to which item, or which author has which email address.</p>
+        <p>Multi-value field groups solve this problem by allowing you to specify that multiple multi-value fields are related. You could associate the “Product Name,” “Product Code,” “Price,” and “Amount Purchased” multi-value fields as all belonging to the same group within the “Invoice” template. Then, when a user opens a document with that template, they will be able to see which name, code, price, and amount purchased values go together, and to add or modify more invoice items appropriately.</p>
+        <p><b>Repository Administration</b>
+        </p>
+        <p>The Repository Administration page has been updated with a  streamlined and responsive design. Use the updated page to work with repository settings, users and groups, repository activity, metadata definitions, and records management definitions.</p>
+        <h2>Forms Updates</h2>
+        <p><b>Updated Site Navigation</b>
+        </p>
+        <p>The Forms site header now links to all major pages in Forms. This includes moving the Start Process button out of the Tasks page into the header. There are now two views for starting a process: you can choose between viewing a list of processes and a grid view that displays thumbnails of the form. Choosing to view reports now guides you to select a process first. When working with the process designer and forms designer, you now have the option of always displaying a sidebar that allows you to quickly navigate between process options, the process designer, and forms designer.</p>
+        <p><b>Landing Page</b>
+        </p>
+        <p>New landing pages make finding and viewing processes easier. The new Landing Pages are configurable pages that  list processes relevant to different users. For example, you could create a landing page for all Human Resources processes or for all Public processes. Each landing page has a custom URL for users to access it directly.</p>
+        <p MadCap:conditions="Default.Exclude"><b>Braintree Payment Gateway Support</b>
+        </p>
+        <p MadCap:conditions="Default.Exclude">The Payment Collection option lets you collect payment via Braintree as part of a Message Start Event. Users will be prompted to enter payment information to pay the amount specified in the event. Administrators can see the transaction information on the instance’s history page. Non-payment related metadata about the transaction is available as tokens for use in later forms or process activities.</p>
+        <p MadCap:conditions="Default.Exclude">The integration requires an existing merchant account with Braintree.  All payment processing is handled by Braintree through the Braintree Drop-in UI. Laserfiche Forms does not store or have access to submitted payment information. For example, when saving a draft, no payment information can be saved. For more information on Braintree, please see Braintree resources on the Braintree Drop-in UI feature: https://www.braintreepayments.com/products-and-features/drop-in-ui.</p>
+        <p><b>Process Designer Updates</b>
+        </p>
+        <ul>
+            <li>Error Events: The Error Start Event, Error Catch Event, and Error End Events will start processes or interrupt processes based on a generated custom error.</li>
+            <li>Email Attachments: Email service tasks and email notifications in user tasks now support attachments. Choose to attach a file from a file upload field or attach a form from the process.</li>
+            <li>Assign Tasks to a Team Based on a Variable: User task assignment to a team can now be based on variable values.</li>
+            <li>Documentation View: a summary document is now automatically generated for each process that includes the process’s configuration details.  You can configure how this information is displayed, providing a clear outline of the process. This view is available by clicking the Documentation View option on the canvas toolbar. Canvas objects now include a Documentation properties tab where you can write additional comments that are shown in the Documentation View.</li>
+        </ul>
+        <p><b>Forms Designer Updates</b>
+        </p>
+        <ul>
+            <li>Form Pagination: Insert <b>page breaks</b> in a form to split it into multiple pages or tabs. Pagination options include displaying pages as tabs, displaying pages in a configuration wizard-like manner with a progress bar, or displaying a drop-down list of available pages.</li>
+            <li>Date and Time Fields: Date fields now support a time component and you can also choose to insert a Time-only field.</li>
+            <li>Persistent Hidden Fields: Field rules now include an option to always hide a field.</li>
+            <li>Custom Error Messages: The forms designer now has an Error Messaging tab for creating custom error messages in specific situations. In addition, administrators can configure process-level custom error message rules.</li>
+            <li>Form Input Validation: There are now additional input validation options for forms. The Form Settings dialog box includes a backend validation level option for form submission. Choose between validating user inputs or all inputs. In addition to user inputs, the All option will validate read-only fields and fields with formula.</li>
+        </ul>
+        <p><b>Reporting Updates</b>
+        </p>
+        <ul>
+            <li>Column Labels: You now have the option to configure the column header labels on reports.</li>
+            <li>Summary Report Type: Use the Summarize report type to display a summary on select data with additional options to visualize the summary data as a chart.</li>
+            <li>Search Reports Based on Variable Values: Configure a report's columns to show instance variables and search on those values in the report search box.</li>
+            <li>Data Filters Based on Variable Values: Configure filters using variable data when creating reports.</li>
+        </ul>
+        <p><b>Additional Updates</b>
+        </p>
+        <ul>
+            <li>Expanded Notification Options: In addition to task assignment notifications, the administration page now includes options for aggregated task notifications and terminated notifications. Aggregated notifications allow you to collect assigned tasks into a list and only send a notification email at a specified time. Terminated notifications allow you to receive an email when a process is terminated.</li>
+        </ul>
+        <h2>Laserfiche App Updates</h2>
+        <p>Single-line and number fields in Forms now include an option to allow Laserfiche app devices to insert values from a scanned barcode.</p>
+        <p><b>Annotations</b>
+        </p>
+        <p>The Laserfiche app has expanded annotation support. You can now add and edit stamps, freehand annotations, and  sticky notes, as well as view a list of the annotations applied to the document with links to their history and metadata.</p>
+        <p><b>Briefcases</b>
+        </p>
+        <p>You can now download documents and folders as a Laserfiche Briefcase using the app. You can also upload briefcases from an external application (like Google Drive) into Laserfiche. If you are using the Windows app on a computer, you can upload a briefcase from the machine or a network location.</p>
+        <p><b>Digital Signatures</b>
+        </p>
+        <p>In addition to adding electronic signatures to new documents, existing repository documents can now be signed securely with digital signatures. The signature can be manually drawn, typed, or an uploaded image.</p>
+        <h2>Public Portal</h2>
+        <p>With Laserfiche Public Portal, you can now share documents with people outside the organization, providing read-only access to specific documents without signing in. </p>
+        <p>Select between billing plan options with different monthly document view limits.</p>
+        <h2>Laserfiche Cloud Account Administration Updates</h2>
+        <p><b>Forms Portal</b>
+        </p>
+        <p>Laserfiche Cloud now offers additional billing plan options for Forms that allow for non-authenticated users to view and submit public starting forms. Select between different monthly submission limits for public forms. Forms Portal is not available for Demo or Trial accounts.</p>
+        <p><b>Cloud Account Administration Rights Updates</b>
+        </p>
+        <p>The rights assignment section on the user property page has been redesigned to more smoothly accommodate viewing and assigning rights. You can now expand and collapse different sections while navigating rights.</p>
+        <p>New <b>Account Control System</b> rights allow user accounts to access Laserfiche Cloud Account Administration.</p>
+        <p><b>Automatic configuration lookup for AD FS configuration</b>
+        </p>
+        <p>To ease administration burden, the single sign-on configuration page now includes a <b>Look up configuration</b> button that will automatically try to retrieve configuration information from the specified Active Directory host.</p>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.In Progress" style="mc-template-page: url('..\..\MasterPages\PAForms-Beta.flmsp'); mc-master-page: url('..\..\MasterPages\WebHelp.flmsp');">
+    <head><title>Capture Profiles</title>
+    </head>
+    <body>
+        <h1>Capture Profiles</h1>
+        <p>Capture profiles extract data from documents to be used in a business process. These profiles can extract both typed and handwritten data. There are two types of capture profiles, a capture profile and a smart invoice profile.</p>
+        <p><b>Capture Profile:</b>&#160;A capture profile is created, configured, and published in the Capture Profile Designer, then a <a href="../Workflow/Activities/Run-Capture-Profile.htm" title="Click here for more information about the Run Capture Profile activity." alt="Click here for more information about the Run Capture Profile activity.">Run Capture Profile</a> Workflow activity runs the profile and outputs tokens for the captured data that can be used later in the workflow to update metadata, name folders, and more.</p>
+        <p class="ex"><b>Example:</b> Joe creates a capture profile to capture data from his organization's utility bills. He creates a capture profile using a sample bill, draws boxes around the information he wants captured (text or barcodes), then tests the profile against additional sample bills to make sure the data is captured correctly. If the test results are correct, he can publish the capture profile, then use the Run Capture Profile activity in Workflow to run the profile, capture the information from the utility bills, and use that information later in the workflow to route the bills to different departments.</p>
+        <p><b><a href="Smart-Invoice-Capture-Profile.htm" title="Click here for more information about the Smart Invoice Capture Profile." alt="Click here for more information about the Smart Invoice Capture Profile.">Smart Invoice Profile</a>:</b>&#160; A smart invoice profile  uses machine learning to automatically capture the invoice date, invoice number, purchase order number, and total amount due and can also  determine the vendor of the invoice by comparing invoice data to a vendor lookup table. Similar to capture profiles, the Run Capture Profile Workflow activity runs this smart invoice profile and outputs tokens for the captured data to be used later in the workflow. This activity can also retrieve information from a vendor <a href="../Entities/lookup-tables.htm">lookup table</a> to automatically <a href="Smart-Invoice-Capture-Profile.htm#Vendor">gather vendor information</a> from invoices.</p>
+        <p class="ex"><b>Example:</b> Joe opens the pre-configured invoice capture profile, clicks <b>Test profile</b>, and selects the invoice he wants to test the profile against to ensure the data is captured correctly. Joe can then use the Run Capture Profile activity in Workflow to run the profile, capture the invoice data, and use that information to fill out metadata and route invoices to the appropriate people. </p>
+        <p>From the Process Automation page, click <b>Capture Profiles</b> to access the <MadCap:toggler targets="CaptureProfileDesigner">Capture Profiles</MadCap:toggler> page.  When selecting a profile, you can view that profile's details, such as its name,  who created and published it, when it was last modified and published, its type, and version under <b>Details</b> in the Details pane on the right. Under <b>Zones</b>, you can view the information being captured, and under <b>Preview</b> you can see a preview of the first page of the sample document.  This preview can help quickly distinguish between profiles before opening them. Both panes can be expanded and collapsed to customize the profile list view. If you have an extensive list of capture profiles, you can search for the one you need in the search bar at the top of the page. Click the <b>New</b> button at the top to create a new capture profile or double-click an existing capture profile to open and modify it.</p>
+        <p MadCap:targetName="CaptureProfileDesigner">
+            <img src="../../Images/Capture-Profiles/CaptureProfilesPage.PNG" title="Capture Profiles Page" alt="Capture Profiles Page" />
+        </p>
+        <ul>
+            <li><a href="Creating-and-Configuring-a-Capture-Profile.htm" title="Click here for more information about creating and configuring a capture profile." alt="Click here for more information about creating and configuring a capture profile.">Creating and Configuring a Capture Profile</a>
+            </li>
+            <li><a href="Testing-a-Capture-Profile.htm" title="Click here for more information about testing a capture profile." alt="Click here for more information about testing a capture profile.">Testing a Capture Profile</a>
+            </li>
+            <li><a href="Saving-and-Publishing-a-Capture-Profile.htm" title="Click here for more information about saving a publishing a capture profile." alt="Click here for more information about saving a publishing a capture profile.">Saving and Publishing a Capture Profile</a>
+            </li>
+            <li><a href="Smart-Invoice-Capture-Profile.htm" title="Click here for more information about the Smart Invoice Capture Profile." alt="Click here for more information about the Smart Invoice Capture Profile.">Smart Invoice Capture Profile</a>
+            </li>
+            <li><a href="Capture-Profile-Groups.htm">Capture Profile Groups</a>
+            </li>
+            <li><a href="Importing-and-Exporting-a-Capture-Profile.htm" title="Click here for more information about importing and exporting a capture profile." alt="Click here for more information about importing and exporting a capture profile.">Importing and Exporting a Capture Profile</a>
+            </li>
+        </ul>
+    </body>
+</html>

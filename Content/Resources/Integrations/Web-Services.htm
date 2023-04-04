@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Web Services</title>
+    </head>
+    <body>
+        <h1>Web Service Connections </h1>
+        <p>Define Web Service Connections and build workflows that make custom <a href="../Rules/web-request-rule.htm" title="Click here to learn more." alt="Click here to learn more.">HTTP web requests</a> to the defined web service.</p>
+        <p>Create web service connection definitions from within <a href="Integrations-Overview.htm" title="Click here to learn more." alt="Click here to learn more.">Integrations</a>. </p>
+        <h2>Creating a Web Service Connection</h2>
+        <ol>
+            <li>Within Process Automation, in <b>Integrations</b>, select <b>Web Service Connections</b> and click <b>New</b>.</li>
+            <li>Type a name for the connection. This name will be used to reference the connection when creating a <a href="../Rules/Rules.htm" title="Click here to learn more." alt="Click here to learn more.">rule</a>.</li>
+            <li>Optional: Type a description to help you remember details about the data source.</li>
+            <li>Choose how Laserfiche Cloud will communicate with the web service:<ul><li><b>Send requests directly:</b> Select this option if the web service is publicly available over the Internet.</li><li><b>Send requests through remote agent:</b> Specify the <a href="Remote-Agents/Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">remote agent</a> that will connect to the web service. The remote agent must contain a queue with the remote web service plugin.</li></ul></li>
+            <li>Click <b>Next</b>.</li>
+            <li>Specify the base URL to the web service.</li>
+            <li>Click <b>Test</b>. This option tests the connection between process automation and the web service. The HTTP response status of the test will be shown.</li>
+            <li>Click <b>Create</b>.</li>
+        </ol>
+    </body>
+</html>

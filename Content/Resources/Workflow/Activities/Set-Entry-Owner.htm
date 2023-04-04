@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Set Entry Owner</h1>
+        <p style="text-align: center;">
+            <img src="Images/setEntryOwnerCanvas.PNG" title="Set Entry Owner activity" alt="Set Entry Owner activity" />
+        </p>
+        <p>This activity makes a user an entry's owner or removes an owner from an entry. A user who owns an entry automatically has the security permissions to manage the entry, even if the user does not otherwise have the relevant rights or privileges. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Set-Entry-Owner-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p class="ex"><b>Example</b>: The supervisor at a company is the current entry owner for a document that contains the newest purchase order. The supervisor wants to transfer the operations of the document to one of the supervisor's employees. To transfer ownership, the supervisor can email the entry to the employee using an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity, and then, using the <b>Set Entry Owner</b> activity, change the entry owner to the employee.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Owner</b> property box, set or clear the entry owner associated with an entry.<p class="note"><b>Note</b>: You can only specify users, not groups, as entry owners with this activity.</p><ul><li><b>Set entry owner to</b>:&#160;Lets you select a user to associate with an entry.<ul><li><b>The workflow initiator</b>: Lets you set the user who satisfied the workflow's starting event or who was specified as the initiator.</li><li><b>The user from</b>: Lets you select an entry to specify the user with whom a previous activity in your workflow interacts. You can select the entry using the <b>Edit</b> button <img src="../../../Images/Icon_Pencil_Blue.png" />.<p class="note"><b>Note</b>:&#160;Currently, you cannot use this option to select a user.</p></li><li><b>The user with account name</b>: Lets you type the account name of the user or browse to the user with the ellipsis <img src="../../../Images/Icon_Ellipsis_White.png" />. Click the right arrow <img src="../../../Images/Icon_Arrow_Right_Grey.png" /> to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li></ul></li><li><b>Clear the entry owner</b>: Lets you remove a user associated with an entry.</li></ul></li>
+            <li>In the <b>Set Owner For</b> property box, select the entry. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

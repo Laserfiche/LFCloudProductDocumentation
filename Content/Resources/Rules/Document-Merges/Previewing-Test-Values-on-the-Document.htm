@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Previewing Test Values on the Document or PDF</h1>
+        <p>This document covers using both a Word document with merge fields and a fillable PDF file.</p>
+        <h2 id="previewing-word" class="topicheading">Previewing with a Word document</h2>
+        <p>After you <a href="Preparing-a-Document-with-Merge-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">prepare a Word document with merge fields</a>, go through the creation wizard to create a document merge rule. There, you are prompted to upload the document that you want to associate with the document merge rule.  The document you upload will be updated with the merged values when the rule runs in a process. Once uploaded, the document can be tested with sample values. The sample values allow you to preview how the document will look when values are entered into the document. Options in the toolbar allow you to navigate between test values and merge fields. This way, you can see how the document looks with and without the sample values.</p>
+        <p class="ex"><b>Example</b>: You want to upload the invoice template used in <a href="Preparing-a-Document-with-Merge-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">Preparing a Document with Merge Fields</a> with specific invoice details. You can click the test option in the toolbar and enter test values. Iterated over three times, the table is filled as followed:</p>
+        <p>
+            <img src="../../../Images/previewtestvalues.png" />
+        </p>
+        <h3 id="uploading_word" class="topicheading">Uploading the Document</h3>
+        <p>The creation wizard had you upload a document to the document merge rule. But you may want to change the document at some point. You can do this without creating a whole new rule; instead, you can go through the steps of uploading a document. The old document is replaced once you upload a new document and then save the rule.</p>
+        <p>To upload a new document:</p>
+        <ol>
+            <li>Select the document button in the toolbar.</li>
+            <li>Select <b>Upload Document</b> and choose a Word document.</li>
+            <li>Click <b>Open</b>.</li>
+        </ol>
+        <h3 id="sample_word" class="topicheading">Testing Sample Values</h3>
+        <p style="font-weight: normal;">As mentioned above, test-running your document merge rule is a great way to ensure that fields merge as expected. Once applied, the sample values can be displayed or hidden with the <b>Original Document</b> option in the toolbar. If the tested merge looks correct, go ahead and <a href="../Publishing-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">publish the rule</a>.</p>
+        <p>To test sample values:</p>
+        <ol>
+            <li>Click <b>Test</b> in the toolbar.</li>
+            <li>Enter sample values for each simple merge field.</li>
+            <li>If you have table merge fields, specify the number of rows you want to iterate over and then enter test values for each column. Because the test is used to see how the table will look with values in it, you do not need to specify a value for each cell of the table.</li>
+            <li>Click <b>Test</b>.</li>
+        </ol>
+        <h3 id="downloading_word" class="topicheading">Downloading the Document</h3>
+        <p>You may want a copy of the document used in the document merge rule. The document merge rule editor provides a download option in the toolbar to allow you to download the document associated with the rule. Note that this does not export the entire rule.</p>
+        <p>To download the document:</p>
+        <ol>
+            <li>Click <b>Download Document <img src="../../Images/download-document-icon.png" style="width: 42px;height: 30px;" /></b> in the toolbar.</li>
+            <li>Save the resulting file.</li>
+        </ol>
+        <h3 id="downloading_word" class="topicheading">Exporting the Rule with a Briefcase File</h3>
+        <p>You may want to save a copy of the rule used in the document merge. The document merge rule editor provides a download option in the toolbar to allow you to export the entire rule so that it may be uploaded again at a later date.</p>
+        <p>To download the rule as a .bri file, click the <b>Briefcase Export</b> button <img src="../../Images/download-export-down-arrow-save-file.png" style="width: 25px;height: 25px;" /> in the toolbar.</p>
+        <h2 id="previewing_pdf" class="topicheading">Previewing with a PDF&#160;file</h2>
+        <p>Document Merges can be used to insert information from your processes into Fillable PDF Forms. Go through the creation wizard to create a document merge rule.  There you are prompted to upload a file that you want to associate with the document merge rule, select the desired fillable PDF for this step. The Fillable PDF you upload will be displayed with the fields in the designer.</p>
+        <h3 id="adding_pdf" class="topicheading">Adding Fields</h3>
+        <p>There are 3 ways to add fields:</p>
+        <ol>
+            <li>Double click on fields in the preview in the editor adds them to the right panel.</li>
+            <li>Click <b>Start Grouping</b> in the toolbar and click on fields that you want to add to the group. Click <b>End Grouping</b> in the toolbar and it will open a dialog where you can provide a name for that group.</li>
+            <li>Click <b>Add All</b> on the right panel to add all fields on that page as input parameters to the document merge rule.</li>
+        </ol>
+        <h3 id="uploading_pdf" class="topicheading">Uploading the Document</h3>
+        <p>The creation wizard had you upload a document to the document merge rule. But you may want to change the document at some point. You can do this without creating a whole new rule; instead, you can go through the steps of uploading a document. The old document is replaced once you upload a new document and then save the rule.</p>
+        <p>To upload a new document:</p>
+        <ol>
+            <li>Select the document button in the toolbar.</li>
+            <li>Select <b>Upload Document</b> and choose a Fillable PDF document.</li>
+            <li>Click <b>Open</b>.</li>
+        </ol>
+        <p>
+            <img src="../../Images/rules_fillablePDF.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <h3 id="sample_pdf" class="topicheading">Testing Sample Values</h3>
+        <p>You can test-run your document merge rule to ensure that your fillable fields look as expected.  Once applied, the sample values can be displayed or hidden with the Original Document option in the toolbar. If the tested merge looks correct, go ahead and <a href="../Publishing-Rules.htm">publish the rule</a>.</p>
+        <p>To Test Sample Values:</p>
+        <ol>
+            <li>Click <b>Test</b> in the Toolbar.</li>
+            <li>Enter sample values for each single fillable field.</li>
+            <li>If you have grouped fields, the individual values need to be separated by commas. The test dialog will pop out the individual values to make it easier to input and get the results you want.</li>
+            <li>Click <b>Test</b>.</li>
+        </ol>
+        <h3 id="downloading_pdf" class="topicheading">Downloading the Document</h3>
+        <p>You may want a copy of the pdf used in the document merge rule. The document merge rule editor provides a <b>download</b> option in the toolbar to allow you to download the file associated with the rule. Note that this does not export the entire rule.</p>
+        <p>To download the document:</p>
+        <ol>
+            <li>Click <b>Download Document <img src="../../Images/download-document-icon.png" style="width: 42px;height: 30px;" /></b> in the toolbar.</li>
+            <li>Save the resulting file.</li>
+        </ol>
+        <h3 id="downloading_word" class="topicheading">Exporting the Rule with a Briefcase File</h3>
+        <p>You may want to save a copy of the rule used in the document merge. The document merge rule editor provides a download option in the toolbar to allow you to export the entire rule so that it may be uploaded again at a later date.</p>
+        <p>To download the rule as a .bri file, click the <b>Briefcase Export</b> button <img src="../../Images/download-export-down-arrow-save-file.png" style="width: 25px;height: 25px;" /> in the toolbar.</p>
+    </body>
+</html>

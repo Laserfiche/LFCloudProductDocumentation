@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Starting Events</h1>
+        <p>Starting events make it easy to define how you want your processes to start. You can define your starting events once and attach them to as many processes as you like. You can also leave the starting events open-ended, so that you can define the logic before you know the specific processes you want to run.</p>
+        <h2>Types</h2>
+        <p>You can select from the following types of events to start a process:</p>
+        <ul>
+            <li><a href="Creating-Condition-Starting-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">Condition starting events</a> run processes when specific events occur in a repository. This might be when a document is placed in a specific folder, for example. </li>
+            <li><a href="Creating-Schedule-Starting-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">Timer starting events</a> run processes based on a schedule that includes a start time and recurrence schedule. This might be on the first Friday of every month at 9 AM, for example.</li>
+        </ul>
+        <h2>Creating a Starting Event</h2>
+        <p>You can create a starting event in the following ways:
+
+</p>
+        <ul>
+            <li>Click <b>New</b> in <b>Starting Events</b>.</li>
+            <li>Click <b>New</b> in the <b>Starting Events</b> tab on the <b>Design</b> page of <b>Workflow</b>.</li>
+            <li>Select a workflow on the <b>Manage</b> page  and in the right pane, click <b>Starting Events</b> and then <b>Add</b>.</li>
+        </ul>
+        <h2>Building a Starting Event</h2>
+        <p>After you open a new starting event, you are ready to build the actual event.</p>
+        <ol>
+            <li>Type a unique name and description.</li>
+            <li>Select a event type.</li>
+            <li>Enable or disable the event. Enabling runs after the starting event is created. Then click <b>Next</b>.</li>
+            <li>Configure the <a href="Creating-Condition-Starting-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">condition</a> or <a href="Creating-Schedule-Starting-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">timer</a>. Then click <b>Next</b>.</li>
+            <li>Select the action you want the starting event to perform. Skip this step if you want to create an unassigned event. <p class="note"><b>Note:</b> In the following steps, the option to invoke a <a href="../RPA/Getting-Started-with-RPA.htm" title="Click here to learn more." alt="Click here to learn more.">bot</a> is only available for timer starting events.</p><ol style="list-style-type: lower-alpha;"><li>Click <b>Click here to set an action.</b> to specify the first action for the starting event.</li><li>Under <b>Action</b>, use the drop-down menu to specify if you want the starting event to run a <a href="../Workflow/Workflow.htm" title="Click here to learn more." alt="Click here to learn more.">workflow</a> or a <a href="../RPA/Getting-Started-with-RPA.htm" title="Click here to learn more." alt="Click here to learn more.">bot</a>. </li><li>In the second drop-down menu, select the workflow or bot you want to start.</li><li>If you have multiple bot <a href="../Integrations/Remote-Agents/Queues.htm" title="Click here to learn more." alt="Click here to learn more.">queues</a>, you can select a priority for the bot you are starting here. Unless you choose to use the bot's settings, the priority set here will override the priority set on the bot.<ul><li><b>High</b> priority bots will be run first.</li><li><b>Normal</b> priority bots run after high priority bots have been run. </li><li><b>Low</b> priority bots run after high and low priority bots have been run.</li><li><b>Use bot settings</b> follows the setting configured on the bot definition from the bot <a href="../RPA/Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page.  </li></ul></li><li><b>Optional</b>: Select <b>Add action</b> to start additional workflows or bots.</li></ol></li>
+            <li>Review your settings, and click <b>Create</b>.</li>
+        </ol>
+    </body>
+</html>

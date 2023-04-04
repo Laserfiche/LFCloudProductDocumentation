@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Priority Hit Policy</h1>
+        <p>A decision table with this hit policy can have more than one match, but only one match is returned based on the output priority. The output priority is determined by the order of the output fields and the order of the entries in the predefined list for each output field. <a href="../Output-Order.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about output priority.</a></p>
+        <p><b>Sample</b>
+        </p>
+        <p>The following decision table describes a credit card approval policy. According to the policy, an applicant is offered a basic account if she is 18 or older and has a credit score of 650 or above, and is not under debt review. If she meets all those conditions and her credit score is 750 or above, she is also offered a premium account.The decision table can represent this logic with a Priority hit policy using the output priority.</p>
+        <p>
+            <img src="../../../Images/decisionTable_priorityhit.PNG" alt="screenshot of priority hit policy decision table" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 808px;height: 219px;" />
+        </p>
+        <p style="font-weight: bold;">Output Priority</p>
+        <p>The output priority is determined by the order of the output fields and the order of the entries in the predefined list for each output field. You can view the output order by seeing how the output rows or columns are arranged in the decision table. Output rows/columns that are further to the left or closer to the top have higher priority. In our example, the Decision output has priority over the Offer output.</p>
+        <p>
+            <img src="../../../Images/decisionTable_outputorderdrag.PNG" alt="screenshot for drag handle on decision table output" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+        <p>In the Decision output's properties dialog, you can view the following predefined list. "REJECT"&#160;has the highest output priority. The rules with this value (rules 1 and 2) are ranked first.</p>
+        <p>
+            <img src="../../../Images/decisionTable_outputentryorder2.PNG" alt="screenshot of output entry order for REJECT/ACCEPT" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 186px;height: 301px;" />
+        </p>
+        <p>The predefined list for the Offer field is as follows. According to this order, if two rules have the same value for Decision, then rule 4 will have the highest priority, followed by rule 3.</p>
+        <p>
+            <img src="../../../Images/decisionTable_outputentryorder3.PNG" alt="screenshot for output entry order for Offer output" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 189px;height: 356px;" />
+        </p>
+        <p style="font-weight: bold;">Example</p>
+        <p>An applicant has a credit score of 763 and is 17 years old. Though the applicant matches rules 3 and 4, these rules tie on the value of Decision. To decide priority, we then look at the next most important output, which is Offer. Rule 4 has a higher priority value for Offer, so the decision table returns rule 4 as the output.</p>
+        <p>
+            <img src="../../../Images/decisionTable_priorityhit_results.PNG" alt="screenshot of results on priority hit policy decision table" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 775px;height: 235px;" />
+        </p>
+    </body>
+</html>

@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head>
+        <link href="../TableStyles/NewStyle.css" rel="stylesheet" MadCap:stylesheetType="table" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" /><title>Workflow Parameters</title>
+    </head>
+    <body>
+        <h1>Workflow Parameters</h1>
+        <p>Parameters allow a workflow to receive information from, and send information back to, an external process. For example, a business process can use a <a href="../../Forms-Current/Service-Tasks.htm" title="Business process service task information" alt="Business process service task information">Workflow Service Task</a> to start a workflow including values collected or computed from information in a form. These values can then be used by the workflow to perform tasks. When the workflow completes, information can be sent back to the business process through the output parameters, which can then perform additional tasks using that information. Within the workflow, parameters behave just like any other token.</p>
+        <h2>Supported workflow tag types</h2>
+        <table style="width: 100%;mc-table-style: url('../TableStyles/NewStyle.css');" class="TableStyle-NewStyle" cellspacing="0" summary="This table summarizes the tags that are available for parameter types, and what they represent.">
+            <caption>&#160;</caption>
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-NewStyle-Head-Header1">
+                    <th class="TableStyle-NewStyle-HeadE-Column1-Header1">Workflow tag type</th>
+                    <th class="TableStyle-NewStyle-HeadE-Column1-Header1">Parameter Type</th>
+                    <th class="TableStyle-NewStyle-HeadD-Column1-Header1">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">String</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Text</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">A string token is any string of characters.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Boolean</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Boolean</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">A boolean token is either true or false.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Date Time</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">DateTime</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">A date time token is a valid date and time.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">GUID</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">GUID</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">A guid token is a unique identifier.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Integer</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Integer</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">An integer token is any number from −2,147,483,648 to 2,147,483,647.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Long Integer</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Long Integer</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">A long integer is any number from − 9,223,372,036,854,775,808 to 9,223,372,036,854,775,807.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Number</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Float</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">A number token is any decimal number.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">No tag selected</td>
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Treated as a string.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyB-Column1-Body1">Multiple tags selected</td>
+                    <td class="TableStyle-NewStyle-BodyB-Column1-Body1">&#160;</td>
+                    <td class="TableStyle-NewStyle-BodyA-Column1-Body1">Treated as a string.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Mutlivalued parameters</h2>
+        <p>When the Multivalued checkbox is selected, parameters can contain a delimited list of values. Default values are set by adding values in the <a href="Workflow-Properties.htm" title="Click here to learn more." alt="Click here to learn more.">Parameters</a> dialog, although an input parameter is not limited by the number of default values that are set.</p>
+        <MadCap:snippetBlock src="../Snippets/migrating-form-tables-into-word-documents.flsnp" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </body>
+</html>

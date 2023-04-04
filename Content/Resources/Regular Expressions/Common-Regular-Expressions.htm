@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="1383" MadCap:lastWidth="930" MadCap:conditions="Default.All,Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h2>
+            <MadCap:concept term="Connector;Forms;Laserfiche;Quick Fields" />Common Regular Expression Patterns</h2>
+        <p>This section contains a list of commonly used <a href="Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expressions</a> that can be used to identify or format data. This list is provided as an introduction to regular expressions. These and other patterns can be modified to suit your  needs.</p>
+        <p class="note"><b>Note:</b> The regular expressions below will work in many situations. However, the pattern you are trying to match may have extra white spaces, variations, or similar patterns that need to be accounted for. Always test your regular expressions on a variety of data and edit them as needed so that they only return the results you want. </p>
+        <table class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Examples of common regular expressions">
+            <caption style="font-weight: bold;">Examples of Common Regular Expressions</caption>
+            <col style="width: 378px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Pattern</th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Phone number</p>
+                        <p>((xxx) xxx-xxxx format)</p>
+                    </td>
+                    <td>\(\d\d\d\) \d\d\d-?\d\d\d\d</td>
+                    <td>
+                        <p>(562) 988-1688</p>
+                        <p>(562) 9881688</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Short date </p>
+                        <p>(single or double-digit month-day format)</p>
+                    </td>
+                    <td>\d?\d/\d?\d/\d\d\d\d</td>
+                    <td>12/25/2009</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Social Security number</p>
+                        <p>(xxx-xx-xxxx)</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>\d\d\d-\d\d-\d\d\d\d</p>
+                    </td>
+                    <td>123-45-6789</td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Time</p>
+                        <p>(h:mm or hh:mm format)</p>
+                    </td>
+                    <td>[0-9]?[0-9]:[0-9][0-9]</td>
+                    <td>17:50</td>
+                </tr>
+                <tr>
+                    <td>ZIP code</td>
+                    <td>\d{5}-\d{4}|\d{5} </td>
+                    <td>90807 or 92064-3404</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>ID or tracking number</p>
+                        <p>("Tracking ID" followed by a colon, space, and any combination of letters or numbers)</p>
+                    </td>
+                    <td>Tracking ID\:\s*(\w*)\s*</td>
+                    <td>Tracking ID: 12KDF7Q89WFL</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>Legal Land Description </p>
+                        <p>(Two possible formats. Both have the format two letters-two numbers-three numbers-two numbers. Then, the first allows a single digit at the end. The second allows a letter and digit at the end.)</p>
+                    </td>
+                    <td>[A-Z]{2}-\d{2}-\d{3}-\d{2}-[A-Z]\d|[A-Z]{2}-\d{2}-\d{3}-\d{2}-\d</td>
+                    <td>NW-03-042-12-W4 </td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>Last Name, First Name</p>
+                        <p>(Allows for hyphens in the last name, and underscores in both names.)</p>
+                    </td>
+                    <td>([\w\-]+)\s*,\s*(\w+)\s*</td>
+                    <td>Smith, Paul</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>Fiscal Year</p>
+                        <p>(October through September of the next year)</p>
+                    </td>
+                    <td>1[0-2]/\d?\d/2015|0?[1-9]/\d?\d/2016</td>
+                    <td>Returns a date between 10/01/2015 and 9/31/2016</td>
+                </tr>
+                <tr MadCap:conditions="">
+                    <td>
+                        <p>Parent folder from a folder path</p>
+                        <p>(Finds everything after the last backslash in a string)</p>
+                    </td>
+                    <td>
+                        <p>([^/\\]*)$ </p>
+                    </td>
+                    <td>
+                        <p>From <i>\My Documents\Sales\Contracts</i></p>
+                        <p>returns <i>Contracts</i></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The following table demonstrates the regular expressions that should be used to retrieve a single line of text from data containing multiple lines of text.</p>
+        <p class="note"><b>Note:</b> The First Line pattern will not return the desired results when the data being processed only contains a single line of text.</p>
+        <table class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular expressions to retrieve a single line of text from data containing multiple lines of text">
+            <caption style="font-weight: bold;">Regular Expressions to Retrieve a Single Line of Text</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Type</th>
+                    <th>Pattern</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">First Line</td>
+                    <td class="tabletext">^[^\n]+</td>
+                </tr>
+                <tr>
+                    <td>Any specific line, where N is the line number. Line numbers are zero-based. E.g., the first line is numbered 0, the second line is numbered 1, etc. </td>
+                    <td class="tabletext">(?:[^\n]*\n){N}(.+)</td>
+                </tr>
+                <tr>
+                    <td>Last Line</td>
+                    <td>[^\n]+$</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

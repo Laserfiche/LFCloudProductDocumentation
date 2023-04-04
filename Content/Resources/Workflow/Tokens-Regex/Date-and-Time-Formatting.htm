@@ -1,0 +1,311 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Date/Time Formatting</h1>
+        <p>You can format tokens to automatically convert dates and times entered into them into specified formats. A standard format string is a single letter that represents a format that your data will automatically be converted to. A custom format string is a group of symbols that indicate the exact format for the information. Standard format strings are just shortcuts for frequently used formats that could also be achieved with custom format strings. You can type these specifiers directly in the tokens or use the token editor to insert the specifier and test the formatted token.</p>
+        <p style="font-weight: bold;">Standard Date and Time Format Strings</p>
+        <p>Standard date and format strings can be inserted into Workflow tokens to format the values to match patterns determined by the regional settings of the computer where the Workflow Server is installed. View the regional settings in the control panel of the Workflow Server computer to determine how these strings will format your tokens.</p>
+        <p class="ex"><b>Example</b>: To format regional settings, Sally uses "%(DateTime#"g"#)". When tested with "January 23, 2018, 0:00", she receives "1/23/2018 12:00 AM (English - United States)" or "23/01/2018 00:00 (French - France)".</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Standard Date and Time Strings</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Specifier</b>
+                    </th>
+                    <th><b>Type</b>
+                    </th>
+                    <th><b>Function</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">d</td>
+                    <td class="tabletext">Short date pattern</td>
+                    <td class="tabletext">
+                        Formats to short date pattern defined by user's regional settings (e.g.,  "1/2/2017".)
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">D</td>
+                    <td class="tabletext">Long date pattern</td>
+                    <td class="tabletext">Formats to long date pattern defined by user's regional settings (e.g. "Monday, January 02, 2017".)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">t</td>
+                    <td class="tabletext">Short time pattern</td>
+                    <td class="tabletext">Formats to hours and minutes defined by user's regional settings (e.g. "12:01 PM".)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">T</td>
+                    <td class="tabletext">Long time pattern</td>
+                    <td class="tabletext">Formats to hours, minutes, and seconds defined by user's regional settings (e.g. "12:01:02 PM").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">f</td>
+                    <td class="tabletext">Full date/time pattern (short time)</td>
+                    <td class="tabletext">Formats as long date (D) and short time (t) (e.g. "Monday, January 02, 2017 12:01 PM").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">F</td>
+                    <td class="tabletext">Full date/time pattern (long time)</td>
+                    <td class="tabletext">Formats as long date (D) and long time (T) (e.g. "Monday, January 02, 2017 12:01:02 PM").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">g</td>
+                    <td class="tabletext">General date/time pattern (short time)</td>
+                    <td class="tabletext">Formats as short date (d) and short time (t) (e.g. "1/2/2017 12:01 PM").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">G</td>
+                    <td class="tabletext">General date/time pattern (long time)</td>
+                    <td class="tabletext">Formats as short date (d)&#160;and long time (T) (e.g. "1/2/2017 12:01:02 PM").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">M</td>
+                    <td class="tabletext">Month day pattern</td>
+                    <td class="tabletext">Formats month and day defined by user's regional settings (e.g. "1/2/2017 12:01:02 PM").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Y or y</td>
+                    <td class="tabletext">Year month pattern</td>
+                    <td class="tabletext">Formats year and month defined by user's regional settings (e.g. "January, 2017").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">u</td>
+                    <td class="tabletext">Universal sortable pattern</td>
+                    <td class="tabletext">Formats pattern with a four-digit year, then 2-digit for the rest. (e.g. "2017-01-02 12:01:02Z").</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To learn more about standard date and time formatting, see the <a href="https://msdn.microsoft.com/en-us/library/az4se3k1.aspx" title="Click here to learn more." alt="Click here to learn more." target="_blank">Microsoft Developers' Network (MSDN) site</a>.</p>
+        <p style="font-weight: bold;">Custom Date and Time Format Strings</p>
+        <p>You can also create custom strings to format dates and times to any combination of date and time formats. A popular use for this is to use dates extracted from your documents to create document names or folder paths according to a standardized system.</p>
+        <p class="ex"><b>Example</b>: Sally wants to organize her documents into folders labeled with the last two digits of the year and the abbreviation for the month. She formats a token that contains the date accordingly and uses the <a href="../Activities/Rename-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Rename Entry</a> activity to name her folders. Sally uses "%(Date#"yy-MMM"#)". When tested with "January 23, 2018", she receives "18-Jan (English-United States)" or "18-jan (Portuguese-Brazil)".</p>
+        <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Custom Date and Time Strings</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Specifier</b>
+                    </th>
+                    <th><b>Type</b>
+                    </th>
+                    <th><b>Function</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">/</td>
+                    <td class="tabletext">Date separator</td>
+                    <td class="tabletext">Differentiates years, months, and days.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">:</td>
+                    <td class="tabletext">Time separator</td>
+                    <td class="tabletext">Differentiates hours, minutes, and seconds.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">" or '</td>
+                    <td class="tabletext">Quoted string indicator</td>
+                    <td class="tabletext">Represents the literal value between quotes.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%</td>
+                    <td class="tabletext">Single custom format specifier indicator</td>
+                    <td class="tabletext">Interprets the value between quotes literally.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\</td>
+                    <td class="tabletext">Escape character</td>
+                    <td class="tabletext">Represents the literal value after the backslash (<b>\</b>).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">d</td>
+                    <td class="tabletext">Day: 1-31</td>
+                    <td class="tabletext">Represents a day from 1 to 31 (e.g., "%d" returns "2").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">dd</td>
+                    <td class="tabletext">Day: 01-31</td>
+                    <td class="tabletext">
+                        Represents a day from 01 to 31 (e.g., "%dd" returns "02").                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">ddd</td>
+                    <td class="tabletext">Abbreviated day of the week</td>
+                    <td class="tabletext">Represents an abbreviated weekday (e.g., "%ddd" returns "Mon").</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">dddd (etc.)</td>
+                    <td class="tabletext">Full day of the week</td>
+                    <td class="tabletext">
+                        Represents a weekday (e.g., "%dddd" returns "Monday").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">M</td>
+                    <td class="tabletext">Month: 1-12</td>
+                    <td class="tabletext">
+                        Represents a month from 1 to 12 (e.g., "%M" returns "1").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MM</td>
+                    <td class="tabletext">Month: 01-12</td>
+                    <td class="tabletext">
+                        Represents a month from 01 to 12 (e.g., "%MM" returns "01").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MMM</td>
+                    <td class="tabletext">Abbreviated month</td>
+                    <td class="tabletext">
+                        Represents an abbreviated month (e.g., "%MMM" returns "Jan").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MMMM</td>
+                    <td class="tabletext">Full month</td>
+                    <td class="tabletext">
+                        Represents a month (e.g., "%MMMM" returns "January").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">y</td>
+                    <td class="tabletext">Year: 1-2 digits</td>
+                    <td class="tabletext">
+                        Represents the year to a one or two-digit number (e.g., "%y" returns "17").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">yy</td>
+                    <td class="tabletext">Year: 2 digits</td>
+                    <td class="tabletext">
+                        Represents the year to a two-digit number (e.g., "%yy" returns "17").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">yyy</td>
+                    <td class="tabletext">Year: 3 or more digits</td>
+                    <td class="tabletext">
+                        Represents the year to a three-or-more-digit number (e.g., "%yyy" returns "017").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">yyyy</td>
+                    <td class="tabletext">Year: 4 digits</td>
+                    <td class="tabletext">
+                        Represents the year to a four-digit number (e.g., "%yyyy"&#160;returns "2017").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">yyyyy (etc.)</td>
+                    <td class="tabletext">Year: 5 or more digits</td>
+                    <td class="tabletext">
+                        Represents the year to a five-digit number (e.g., "%yyyyy"&#160;returns "02017").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">g, gg, etc.</td>
+                    <td class="tabletext">Era</td>
+                    <td class="tabletext">
+                        Represents the era, which is ignored if the era is not specified (e.g., "g" returns "AD").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">h</td>
+                    <td class="tabletext">Hour: 1-12</td>
+                    <td class="tabletext">
+                        Represents an hour from 1 to 12 (e.g., "%h" returns "1").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">hh</td>
+                    <td class="tabletext">Hour: 01-12</td>
+                    <td class="tabletext">
+                        Represents an hour from 01 to 12 (e.g., "%hh" returns "01").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">H</td>
+                    <td class="tabletext">Hour: 0-23</td>
+                    <td class="tabletext">
+                        Represents an hour from 0 to 23 (e.g., "%H" returns "1").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">HH</td>
+                    <td class="tabletext">Hour: 00-23</td>
+                    <td class="tabletext">
+                        Represents an hour from 00 to 23 (e.g., "%HH" returns "01").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">m</td>
+                    <td class="tabletext">Minutes: 0-59</td>
+                    <td class="tabletext">
+                        Represents a minute from 0 to 59 (e.g., "%m" returns "1").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">mm</td>
+                    <td class="tabletext">Minutes: 00-59</td>
+                    <td class="tabletext">
+                        Represents a minute from 00 to 59 (e.g., "%mm" returns "01").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">s</td>
+                    <td class="tabletext">Seconds: 0-59</td>
+                    <td class="tabletext">
+                        Represents a second from 0 to 59 (e.g., "%s" returns "1").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">ss</td>
+                    <td class="tabletext">Seconds: 00-59</td>
+                    <td class="tabletext">
+                        Represents a second from 00 to 59 (e.g., "%ss" returns "01").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">f, ff, etc. or F, FF, etc.</td>
+                    <td class="tabletext">Fractions of a second</td>
+                    <td class="tabletext">
+                        Each "f" and "F" represent a digit in milliseconds (e.g., "%ff" returns "01").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">t</td>
+                    <td class="tabletext">First character of AM/PM designator</td>
+                    <td class="tabletext">
+                        Represents the time period in the day as a single letter (e.g., "t" returns "P").
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">tt</td>
+                    <td class="tabletext">AM/PM designator</td>
+                    <td class="tabletext">
+                        Represents the time period as two letters (e.g., "tt" returns "PM").
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>To learn more about custom date and time formatting, see the <a href="https://msdn.microsoft.com/en-us/library/8kb3ddd4.aspx" title="Click here to learn more." alt="Click here to learn more." target="_blank">Microsoft Developers' Network (MSDN) site</a>.</p>
+    </body>
+</html>

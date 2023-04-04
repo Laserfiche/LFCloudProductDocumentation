@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Comment=""
+    Name="CompanyName">MadCap Software</Variable>
+  <Variable
+    Comment=""
+    Name="PhoneNumber">858 123 4567</Variable>
+  <Variable
+    Name="ProductName"
+    Comment="">Directory Server</Variable>
+  <Variable
+    Name="LatestVersion"
+    Comment="">10</Variable>
+</CatapultVariableSet>

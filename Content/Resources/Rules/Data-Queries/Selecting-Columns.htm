@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Selecting Columns</h1>
+        <p>The SELECT section of the <a href="Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">query editor</a> lets you select the columns from the table that you want to query.</p>
+        <p style="font-weight: bold;">To specify columns:</p>
+        <ol>
+            <li>Click <b>Add</b>.</li>
+            <li>Select the name of the column  you want to query under <b>Column</b>.</li>
+            <li>Select the number of unique entries you want to return in <b>Quantifier</b>.</li>
+            <p class="ex"><b>Example</b>: If $1 is repeated twice, use <b>DISTINCT</b> to count $1 once and <b>ALL</b> to count each appearance of $1.</p>
+            <li><b>Optional</b>: Under <b>Function</b>, select an aggregate function to apply to the data.</li>
+            <p class="ex"><b>Example</b>: Using the Max operator, you can find the maximum salary for all employees in an Employee table.</p>
+            <li>Type a name for the output parameter containing the result of the query under <b>Output Parameter</b>. You can use the output parameter name to reference the configured statement <a href="../../Workflow/Activities/Setting-Up-a-Data-Query-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">in the Run Rule Workflow activity</a>.</li>
+        </ol>
+        <p class="ex"><b>Example</b>: The following image is a sample statement to return all the values in the <b>Item No.</b> column. In Workflow, you would be able to use the <b>Item Number</b> output parameter name to reference the statement.</p>
+        <p>
+            <img src="../../Images/data-query-select.png" alt="Selecting columns in data queries." />
+        </p>
+    </body>
+</html>

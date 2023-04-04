@@ -1,0 +1,218 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring and Using Import Agent</h1>
+        <h2 class="topicheading">Creating or Modifying a&#160;Profile</h2>
+        <p>Profiles define the Windows folder from which files will be retrieved, the import schedule, what will happen to source files after an import is attempted, the metadata that should be assigned to imported files, and other settings. You must create at least one profile to use <MadCap:variable name="DoNotTranslate.Import Agent"></MadCap:variable>.</p>
+        <p><b>To create or modify a profile</b>
+        </p>
+        <ol>
+            <li>Open the Import Agent Configuration Utility.</li>
+            <li>Either select an existing profile to modify, or select <b>Profile</b> from the menu and select <b>New</b>. If you've already create a profile, you can choose to either create a new profile or copy an existing profile. Copying a profile is helpful if you need a profile similar to an existing profile and do not want to configure the entire profile from scratch. </li>
+            <li>If you chose to create a new profile, the <b>Sign in</b> dialog box will prompt you to provide the credentials Import Agent will use to access Laserfiche.</li>
+            <li>Select the <b>Cloud</b> tab and provide a user&#160;account ID, user name, and password. You can find your account ID in the web client by selecting your user name in the upper right corner and then selecting <b>About</b>.
+ We recommend using a <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#ServicePrincipals.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Service Principal</a> user, which is a secure, unlicensed user that Laserfiche provides for connecting applications.             <p class="note"><b>Note:</b>&#160;The user you choose to log in as must have sufficient rights to perform certain tasks. If the Laserfiche folder where files will be imported does not exist, the user must have rights to create  it. If you have configured Import Agent to insert or replace content when a  duplicate document is found, the user must have rights to modify the contents of the target document. The user must have rights to create documents in the destination folder, and, if you have configured Import Agent to assign metadata (e.g., templates, fields, tags), the account must have rights to do so.</p></li>
+            <li>Click <b>OK</b>.</li>
+            <li>Configure each of the following tabs:</li>
+            <ul>
+                <li><a name="General"></a>
+                    <MadCap:toggler targets="General">General</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="General">
+                    <p>Use the <b>General</b> tab to define the profile's name, the Windows folder from which files will be retrieved, and a file retrieval filter.</p>
+                    <p><b>To configure the General tab</b>
+                    </p>
+                    <ol>
+                        <li>Under <b>Profile name</b>, enter a unique profile name that describes what the profile does.</li>
+                        <li>Under <b>Monitored folder</b>, specify  the full path to a folder on the current machine that you want to import documents from. Alternatively, use a UNC path to specify a folder on a network drive (e.g., <b>\\ComputerName\ShareName\Path</b>).</li>
+                        <p class="note"><b>Note:</b> Monitored folders should only have one profile associated with each folder. Running two profiles on the same folder may cause files to be processed twice or not at all.</p>
+                        <li><b>Optional:</b> Select <b>Retrieve files from subfolders</b> to import files from subfolders in the monitored folder.</li>
+                        <li>Under <b>Filter</b>, select one of the following options:</li>
+                        <ul>
+                            <li><b>All files:</b> With the exception of hidden and locked files, all items in the Windows folder will be retrieved.</li>
+                            <li><b>Only those files whose names match one of these filters:</b> You may limit the files that will be retrieved by specifying a filter  for the file name and/or extension. The filter syntax is <b>FileName.Extension</b>. Click <b>Add</b> to create a filter.</li>
+                        </ul>
+                        <p class="ex"><b>Example:</b> If you specify that files must match <b>*.tif</b> then only TIFF images will be retrieved. If you specify that files must match <b>AAA*.tif </b>then only TIFF image files whose names start with <b>AAA</b> will be retrieved. The asterisk (<b>*</b>) used in these examples is a wildcard character that represents one or more characters. Import Agent supports two wildcards:&#160;*, representing any one or more characters, and ?, representing any single character.</p>
+                        <p class="note"><b>Note:</b> If the profile's post-processing action is set to delete the source files, read-only files will be ignored. If the post-processing action is set to move the source files, read-only files will be imported. <a href="#PostProcessing" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</p>
+                    </ol>
+                </div>
+                <li><a name="Properties"></a>
+                    <MadCap:toggler targets="Properties">Properties</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="Properties">
+                    <p>Use the <b>Properties</b> tab to define the sign-in account, the document properties (e.g., name, destination folders, volume), and the value of the Profile Count token.</p>
+                    <p><b>To configure the Properties tab</b>
+                    </p>
+                    <ol>
+                        <li><b>Optional:</b> Under <b>Sign-in account</b>, click <b>Change</b> to modify the user name and password that Import Agent will use to access the repository.  We recommend using a <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#ServicePrincipals.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Service Principal</a> user, which is a secure, unlicensed user that Laserfiche provides for connecting applications. </li>
+                        <li>In the <b>Document properties</b> section, under <b>Name</b>, specify a naming convention for new documents. <p class="ex"><b>Tip:</b> Use <a href="Import-Agent-Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> to assign each document a unique name.</p></li>
+                        <li>Under <b>Folder</b>, specify the location inside the repository where new documents will be stored.</li>
+                        <li><b>Optional:</b> Select <b>Use the following folder if the above folder cannot be found</b>. This option enables you to define an alternate destination folder in the event the primary folder has been deleted or moved. <p class="note"><b>Note:</b> To define all of the above settings, enter regular text, click the token button (<b>&gt;</b>) to use tokens, or use a combination of the two.</p></li>
+                        <li>Under <b>Volume</b>, leave the default value set for Cloud accounts.</li>
+                        <li><b>Optional:</b> Set the value of the <a href="Import-Agent-Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Profile Count</a> token.</li>
+                    </ol>
+                </div>
+                <li><a name="Fields"></a>
+                    <MadCap:toggler targets="Fields">Fields</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="Fields">
+                    <p>Use the <b>Fields</b> tab to assign a template and/or fields  to imported documents. Configure the tab using any of the following methods:</p>
+                    <ul>
+                        <li>Assign fields using a template. Select a template and the fields associated with the  selected template will appear.</li>
+                        <li>Assign fields independent of a template. Click <b>Add/remove fields</b> and select fields.</li>
+                        <li>Use a combination of the above.</li>
+                    </ul>
+                    <p> After fields have been assigned, populate them by entering regular text, clicking the token button (<b>&gt;</b>) to use tokens, or using a combination of the two.</p>
+                </div>
+                <li><a name="Tags"></a>
+                    <MadCap:toggler targets="Tags">Tags</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="Tags">
+                    <p>Use the <b>Tags</b> tab to assign tags and tag comments to imported documents.</p>
+                    <p><b>To configure the Tags tab</b>
+                    </p>
+                    <ol>
+                        <li>Select one or more tags. You can add informational or security tags.</li>
+                        <li><b>Optional:</b> Add tag comments by double-clicking in the <b>Comments</b> column next to a tag.</li>
+                    </ol>
+                </div>
+                <li><a name="Schedule"></a>
+                    <MadCap:toggler targets="Schedule">Schedule</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="Schedule">
+                    <p>Use the <b>Schedule</b> tab to define when Import Agent will retrieve and import files. Scheduling a time interval lets you reduce network usage during peak hours.</p>
+                    <p><b>To configure the Schedule tab</b>
+                    </p>
+                    <ul>
+                        <li>Choose one the following options.</li>
+                        <ul>
+                            <li><b>Continuously:</b>Import Agent will  retrieve files continuously.</li>
+                            <p class="ex"><b>Tip:</b> You can configure how often Import Agent will check for new files. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/Configuring-File-Monitoring-Options.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</p>
+                            <li><b>Only at these times:</b>Import Agent will only  import files during a specified time interval. Click <b>Add</b> to define the interval. You can create multiple schedules.</li>
+                            <li><b>Disable this profile:</b> The profile will be inactive until this option is cleared.</li>
+                        </ul>
+                    </ul>
+                </div>
+                <li><a name="Processing"></a>
+                    <MadCap:toggler targets="Processing">Processing</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="Processing">
+                    <p>Use the <b>Processing</b> tab to specify if text will be retrieved from files, how long text pages will be, and how PDFwill be processed. When configuring this tab, keep in mind that:</p>
+                    <ul>
+                        <li>All settings are optional.</li>
+                        <li>You can configure OCR settings, such  as language preference and image rotation. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/OCR-settings.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                    </ul>
+                    <p><b>To configure the Processing tab</b>
+                    </p>
+                    <ol>
+                        <li>Under <b>Generate text</b>, choose to retrieve text and use and configure OCRif desired.</li>
+                        <ul>
+                            <li><b>Retrieve text:</b> Automatically retrieve any available text from PDF or electronic documents. </li>
+                            <li><b>Use OCR if no text is available:</b>OCR files that do not contain a text stream.</li>
+                            <li><b>Configure profile-specific OCR settings:</b>&#160;Set the OCR settings for the current profile. <ul><li><b>Language:</b></li><li><b>Decolumnize text:</b> Select to convert multiple columns of generated text into a single column. Clearing the checkbox will preserve column formatting in the OCRed text, even if that separates words and sentences.</li><li><b>Perform image enhancement:</b> Click <b>Configure</b> to clean up the image to aid the OCR process. After the OCR process is performed, the image will return to its original state. <ul><li><b>Deskew image:</b> Straighten crooked images.</li><li><b>Despeckle image:</b> Remove undesired noise from an image. Specify a maximum size of the noise to remove. Size is specified as both width and height. For example, setting this option to 2 will remove all noise that is equal to or smaller than a 2 pixel x 2 pixel square.</li><li><b>Rotate image:</b> Automatically or manually rotate an image.</li><li><b>Line removal:</b> Select to remove horizontal or vertical lines from the image. </li></ul></li><li><b>Optimization priority:</b> Specify an optimization style. There is generally a trade-off between speed and accuracy.<ul><li><b>Speed:</b> Reduces the amount of time it takes to OCR. Generated text may be less accurate. Choose this option if you are more concerned about the speed of your OCRing process than about having a few errors in the generated text.</li><li><b>Standard:</b> Neither optimum speed nor optimum accuracy, but a balanced between the two. Choose this option if you want the generated text to be fairly accurate, but you prefer the OCRing process not take the maximum amount of time to run.</li><li><b>Accuracy:</b> Increases OCR quality. Processing time will also be increased. Choose this option if you must have the most accurate text possible and are not concerned about how long it takes to run the OCRing process.</li></ul></li></ul></li>
+                        </ul>
+                        <li>Under <b>Text file processing</b>, specify if text files will be split into separate pages. If you select this option, specify the number of lines of text on each page. </li>
+                        <p class="note"><b>Note:</b> If the text file has over 8,388,608 characters, then you must split the file before that character limit is reached to avoid an error. </p>
+                        <li>Under <b>PDF file processing</b>, choose if you want to generate Laserfiche image pages when importing PDF files.</li>
+                        <ul>
+                            <li><b>Generate Laserfiche pages:</b> Enable Import Agent to generate LaserficheTIFF image pages when importing a PDF file.</li>
+                            <ul>
+                                <li><b>Keep original PDF files:</b> Retain the PDF file after generating TIFF image pages. The import process will import the original unaltered PDF along with the TIFF image pages.</li>
+                                <li><b>Preserve PDF annotations on Laserfiche pages:</b> Convert PDF annotations to the equivalent Laserfiche annotations when generating TIFF image pages.</li>
+                                <li><b>Import monochrome images:</b> By default, the import process attempts to verify color information in an imported PDF to determine whether to generate image or monochrome images. Select this option to speed PDF importing and always create monochrome images.</li>
+                                <li><b>Ignore PDF&#160;native text:</b> By default, Import Agent uses native text extraction for PDFs. Select this option to use OCRed text instead of native text.</li>
+                                <li><b>Create pages at DPI:</b> By default, Import Agent generates TIFF images that are 300x300 DPI. Select this checkbox to configure a different DPI value.</li>
+                            </ul>
+                        </ul>
+                    </ol>
+                </div>
+                <li><a name="PostProcessing"></a>
+                    <MadCap:toggler targets="PostProcessing">Post-processing</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="PostProcessing">
+                    <p>Use the <b>Post-processing</b> tab to specify what  should happen to source files after an import.</p>
+                    <table style="border-left-width: medium;border-left-color: #ffffff;border-right-width: medium;border-right-color: #ffffff;border-top-width: medium;border-top-color: #ffffff;border-bottom-width: medium;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;" summary="This table details your options for source files.">
+                        <caption><b>Source File Options</b>
+                        </caption>
+                        <col>
+                        </col>
+                        <col>
+                        </col>
+                        <thead>
+                            <tr>
+                                <th style="background-color: #c0c0c0;"><b>Was the file imported successfully into Laserfiche?</b>
+                                </th>
+                                <th style="background-color: #c0c0c0;"><b>Options</b>
+                                </th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="tabletext">Yes</td>
+                                <td class="tabletext">You can choose to either:
+                        <ul><li>Delete the source file.</li><li>Move the source file to a Windows  folder.</li></ul></td>
+                            </tr>
+                            <tr>
+                                <td class="tabletext">No</td>
+                                <td class="tabletext">You can specify the Windows folder where these files will be  stored.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><b>To configure the Post-processing tab</b>
+                    </p>
+                    <ol>
+                        <li>Under <b>Imported files</b>, choose one of the following options:</li>
+                        <ul>
+                            <li><b>Deleted</b> Source files will be deleted.</li>
+                            <li><b>Moved to</b> Source files will be moved to another Windows folder. Specify  the full path to a folder on the current machine or use a UNC to specify a folder on a network drive (e.g., <b>\\ComputerName\ShareName\Path</b>). You can enter regular text, click the Token button (<b>&gt;</b>) to use tokens, or use a combination of the two.</li>
+                        </ul>
+                        <li>Under <b>Files that failed to import</b>, specify  the full path to a folder on the current machine or use a UNC to specify a folder on a network drive. Files that Import Agent fails to import will be moved to this location.</li>
+                        <p class="ex"><b>Tip:</b> You should regularly check this folder. Once you determine why Import Agent failed to import a file, correct the issue then move the file back to the original Windows folder. The file will be imported the next time the profile runs.</p>
+                        <li>Under <b>Monitored subfolders</b>, specify if you want to delete subfolders that are empty after their contents have been imported. </li>
+                        <li>Under <b>List file import</b>, select <b>Post process the files referenced in list files (LST/LSTX) after import</b> to apply the settings in this tab to the files referenced in list files. If you clear this option, then files referenced in list files will not be deleted or moved. </li>
+                    </ol>
+                </div>
+                <li><a name="DocumentHandling"></a>
+                    <MadCap:toggler targets="Handling">Document Handling</MadCap:toggler>
+                </li>
+                <div MadCap:targetName="Handling">
+                    <p>Use the <b>Document Handling</b> tab to specify what  should happen if the name of the document being imported matches the name of document already in the destination folder.</p>
+                    <p><b>To configure the Document Handling tab</b>
+                    </p>
+                    <ol>
+                        <li>Under <b>Image and text files</b>, specify what will occur if an imported image or text file has the same name as an existing document in the destination folder:</li>
+                        <ul>
+                            <li><b>Create a new document:</b> A new Laserfiche image document will be created.</li>
+                            <li><b>Update the existing document by:</b> The new document will be merged with the existing document. Specify whether the new document will:</li>
+                            <ul>
+                                <li>Be appended to the existing document.</li>
+                                <li>Be prepended to the existing document.</li>
+                                <li>Replace the existing document. Only text and images will be replaced, not metadata or security.</li>
+                            </ul>
+                        </ul>
+                        <li>Under <b>Electronic files</b>, specify what will occur if an imported electronic file has the same name as an existing document in the destination folder:</li>
+                        <ul>
+                            <li><b>Create a new document:</b>  A new electronic document will be created.</li>
+                            <li><b>Replace the electronic file:</b> The imported document will replace the existing document.</li>
+                        </ul>
+                        <li>Under <b>Metadata</b>, select one of the following options:</li>
+                        <ul>
+                            <li><b>Keep the existing document's metadata:</b> Metadata associated with the existing document will not be modified.</li>
+                            <li><b>Replace the existing document's metadata:</b> Metadata associated with the imported document will replace the metadata associated with the existing document.</li>
+                            <li><b>Merge the metadata. If the metadata conflicts ...</b> Metadata  associated with the imported document will be merged with the metadata associated with the existing document. Select which metadata will take precedence in the event of a conflict (e.g., if the same field contains different values).</li>
+                        </ul>
+                        <li>Under <b>Version control</b>, specify if you want to put the document you are importing into under version control. Selecting this option retains the original document as the first version. The updated document (with the new, imported content) will be saved as the second version.</li>
+                    </ol>
+                </div>
+            </ul>
+        </ol>
+        <p class="note"><b>Note:</b> Profiles are stored as <MadCap:variable name="DoNotTranslate.XML"></MadCap:variable> files under Program Data. (E.g., <b>C:\ProgramData\Laserfiche\ImportAgent\Profiles</b>)</p>
+        <h2 class="topicheading">Disabling a Profile</h2>
+        <p>You can disable individual profiles to temporarily prevent them from running. To do so, open the profile and navigate to the <b>Schedule</b> tab. Select <b>Disable this profile</b>. The profile will remain, but will not run until you have returned to the Schedule tab and chosen an other schedule option.</p>
+        <p>To disable all profiles at once, stop or pause the Import Agent service. For more information, see <a href="Installing-Import-Agent.htm#Laserfic">Laserfiche Import Agent Service</a>.</p>
+        <h2 class="topicheading">Deleting a Profile</h2>
+        <p>To delete a profile, select the profile and press the Delete (<img src="Resources/Images/ia-delete.png" />)&#160;button, or open the <b>Profile</b> menu and select <b>Delete</b>.</p>
+    </body>
+</html>

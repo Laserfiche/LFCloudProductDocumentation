@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Importing a Process in .xml Format | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Downloaded processes are stored as .xml files. Import these files as new processes or new versions of an existing process." />
+    </head>
+    <body>
+        <h1>Importing a Process</h1>
+        <p>
+            <MadCap:concept term="Forms" />The import feature makes it easy to move individual processes from a test environment to a production environment. This allows you to ensure that a process runs as expected before deploying it to your users. On the <b>Manage</b> page, you can import a process by clicking  Import (<img src="../Resources/Forms Images/uploadonmanage.png" style="border: 1px solid;" alt="import process button" title="You can also upload a process by clicking on Design in the top menu." />).</p>
+        <h2>Importing a New Version of an Existing Process</h2>
+        <p>If you are importing processes from a test environment to a production environment, you can update an existing process in the latter by making the imported process a new version of the existing process. The update and all previous versions will be preserved in the process' <a href="Managing-Processes.htm#Process" title="Click here to learn more." alt="Click here to learn more.">version history</a>.</p>
+        <h4><a name="To"></a>To upload a new version of a process</h4>
+        <ol>
+            <li>On the <b>Manage</b> page, click Import.</li>
+            <li>The <b>Designer</b> dialog box will appear. Select <b>Browse</b> in the main section of the dialog box.</li>
+            <li>Find and select the .xml file containing the process you want to upload, then click <b>Open</b>.</li>
+            <li>If the process you want to upload already exists, the <b>Upload Options</b> dialog box will appear. Select <b>Overwrite</b> to upload a new version of the existing process.</li>
+            <li>Select <b>Open</b> to open the process designer, where you can edit the uploaded process. Edit the process as desired, then click <b>Publish</b> to publish it as the latest version of the process that you wanted to overwrite. 
+			<p class="note"><b>Note</b>:&#160;If you do not publish the process, but merely save and exit the process designer, you will be  able to edit the unpublished draft the next time you try to edit the process. However, the unpublished draft will not appear in the version history, as only published versions do so.</p></li>
+            <li>If the process has running instances, you will be prompted to select which versions of the running instances you want to update to the latest version of the process. Make your selection, then click <b>Publish</b>.</li>
+        </ol>
+        <h3>Workflows</h3>
+        <p>If you are importing a process that contains a <a href="Service-Tasks.htm" title="Click to learn more" alt="Click to learn more">Workflow service task</a>, the import process will try to match the information contained in the task with what exists in the environment. In order to use the process, click the validation button (<img src="../Images/Icon_Validate.png" />) and correct any issues within the task before being able to publish the process.</p>
+        <p>If the process was created with another version of Laserfiche software, the following message may be displayed during the import process:</p>
+        <p class="ex">This process includes one or more Workflow service tasks from an incompatible version of Workflow. Please reconfigure the Workflow service tasks in order to use this process.</p>
+        <p>In this case, the task will appear on the canvas as an empty workflow service task and needs to be completely reconfigured. </p>
+        <h3>Lookup Rules</h3>
+        <p>If you are importing a process that contains <a href="Filling-Fields-with-Lookup-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">lookup rules</a>, and the environment that you are importing the process into does not have the same data sources as those in the process' former environment, your lookup rules may not work properly. Lookup rules in imported processes will be automatically enabled if the two environments have identical values for the following:</p>
+        <ul>
+            <li>The server containing the data</li>
+            <li>The business rule type</li>
+            <li>The business rule</li>
+            <li>The variable(s) being looked up.</li>
+        </ul>
+        <p>If the values of any of these parameters differ between environments for the relevant lookup rules, the lookup rule will be automatically disabled when the process is imported into the new environment. To edit and use a disabled lookup rule, manually enable it and change the parameters in the rule to match the information in your new data sources.</p>
+        <h2>Importing a New Process</h2>
+        <p>If you don't want to update an existing process, but simply want to upload a new process from an .xml file, select <b>New</b> instead of <b>Overwrite</b> in step 3 of the <a href="#To" title="Click here to learn more." alt="Click here to learn more.">previous instructions</a>. You will be taken to the process designer, where you can edit and publish your process. If you leave the designer without publishing the process, your process will still appear on the <a href="Managing-Processes.htm" title="Click here to learn more." alt="Click here to learn more."><b>Manage</b> page</a> as an unpublished process.</p>
+        <p>&#160;</p>
+    </body>
+</html>

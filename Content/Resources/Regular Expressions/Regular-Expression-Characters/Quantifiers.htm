@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="564" MadCap:lastWidth="904" MadCap:conditions="Default.Complete" MadCap:changes="9" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Laserfiche;Quick Fields" />Quantifiers</h1>
+        <p>The following <a href="../Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expression</a> characters add optional quantity data to a regular expression. A quantifier expression applies to the character, group, or character class that immediately precedes it. </p>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular Expression quantifiers and their descriptions">
+            <caption style="font-weight: bold;">Regular Expression Quantifiers</caption>
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">*</td>
+                    <td class="tabletext">Zero or more matches. For example, <b>\d*</b> matches zero or more consecutive digits. Equivalent to <b>{0,}</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">+</td>
+                    <td class="tabletext">One or more matches. For example, <b>\d+</b>matches&#160;one or more consecutive digits (i.e., a positive whole number). Equivalent to <b>{1,}</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">?</td>
+                    <td class="tabletext">Zero or one matches. For example, <b>\d?</b> matches a single digit or a blank value. Equivalent to <b>{0,1}</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">{n}</td>
+                    <td class="tabletext">Exactly <b>n</b> matches. For example, <b>(pizza){2}</b> only matches "pizzapizza".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">{n,}</td>
+                    <td class="tabletext">At least <b>n</b> matches. For example, <b>(abc){2,}</b> matches "abcabc" and "abcabcabc", but not "abc".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">{n,m}</td>
+                    <td class="tabletext">At least <b>n</b>, but no more than <b>m</b>, matches. For example, \d{2,4} matches a two digit, three digit, or four digit number.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note:</b> By default, .NET regular expressions are "greedy." You can add a question mark "?" after these quantifiers to make them "lazy." For example, <b>Name:\s(.+)\s</b> matches "John Last Name:" in "First Name: John Last Name: Smith," and <b>Name:\s(.+?)\s</b> matches "John". </p>
+    </body>
+</html>

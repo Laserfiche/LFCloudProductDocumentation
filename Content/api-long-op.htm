@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.API">
+    <head><title>Long Operations</title>
+    </head>
+    <body>
+        <h1>Long Operations</h1>
+        <p>Certain actions in the repository may require a variable amount of time to complete, for example, when deleting a folder that contains a large number of subfolders and documents. Rather than the API call immediately returning the result of the action, the Laserfiche API uses a "long operation" pattern where the call will return a token representing the work of the request. Client applications can then use this token to retrieve the status of the operation and the completed result of the action.</p>
+        <p>The <a href="https://doc.laserfiche.com/api-reference/en-us/repository/index.html" target="_blank">Copy</a> and <a href="https://doc.laserfiche.com/api-reference/en-us/repository/index.html" target="_blank">Delete</a> APIs both follow this long operation pattern.</p>
+        <p>The flow of calls is summarized below:</p>
+        <ol>
+            <li>The client application issues a copy or delete API call</li>
+            <li>When Laserfiche Cloud receives the request, it will start performing the operation, but the API call will immediately return a token back to the client</li>
+            <li>While the copy or delete operation is being performed, the client can check the status of the operation using the token returned in step 2.</li>
+            <li>When the operation completes, the result of the operation can also be retrieved by using the same token returned in step 2.</li>
+        </ol>
+        <p>Let's look at a specific example with the copy entry API call.</p>
+        <p>First we’ll call the copy API to copy a folder and its content to another folder in the repository:</p>
+        <div class="Code"><pre>POST /v1-alpha/Repositories/{<i>repoId</i>}/Entries/{<i>destinationEntryId</i>}/Laserfiche.Repository.Folder/children
+{
+    "sourceId": 9,
+    "name": "MyCopiedFolder"
+}</pre>
+        </div>
+        <p>The API call will return a token in the response:</p>
+        <div class="Code"><pre xml:space="preserve">HTTP 202 Accepted
+{
+    "token": "12345678-abcd-efgh-ijkl-123456789012"
+}</pre>
+        </div>
+        <p>Long operation APIs can be found under the Tasks resource. Using the token that we just received, we can check the status of the task. This call does not have a request body:</p>
+        <div class="Code">GET /v1-alpha/Repositories/{<i>repoId</i>}/Tasks/{<i>operationToken</i>}</div>
+        <p>The API will return the status of the operation, for example:</p>
+        <div class="Code"><pre xml:space="preserve">HTTP 202 Accepted
+{
+    "operationToken": "12345678-abcd-efgh-ijkl-123456789012",
+    "operationType": "CopyEntry",
+    "percentComplete": 10,
+    "status": "InProgress",
+    "errors": []
+}</pre>
+        </div>
+        <p>In the above example response, the operation is still running. If we call the status API again and the operation has completed, we will receive a redirect to the following location:</p>
+        <div class="Code"><pre>HTTP 302 Found
+Location: /v1-alpha/Repositories/{repoId}/Entries/{<i>newlyCreatedEntryId</i>}</pre>
+        </div>
+        <p>If we make a GET request using the link</p>
+        <div class="Code">GET /v1-alpha/Repositories/{repoId}/Entries/{newlyCreatedEntryId}</div>
+        <p>We will get back the newly created entry details, see the following sample response:</p>
+        <div class="Code"><pre xml:space="preserve">HTTP 200 Ok
+{
+    "id": 1234,
+    "name": "<i>MyCopiedFolder</i>",
+    "parentId": 1,
+    "fullPath": "\\<i>MyCopiedFolder</i> ",
+    "folderPath": "\\",
+    "creator": "<i>apipreview@laserfiche.com</i>",
+    "creationTime": "<i>2020-12-12T12:00:00-00:00</i>",
+    "lastModifiedTime": "<i>2020-12-12T12:00:00-00:00</i>",
+    "entryType": "Folder",
+    "templateName": "",
+    "templateId": 0,
+    "templateFieldNames": [],
+    "volumeName": "DEFAULTVOLUME",
+    "rowNumber": 0,
+    "isRecordFolder": false,
+    "isUnderRecordSeries": false
+}</pre>
+        </div>
+        <p class="note"><b>Note:</b> Only 1 concurrent long operation  can be run per user session. If you start an operation and then decide to cancel the operation, use the DELETE /v1-alpha/Repositories/{<i>repoId</i>}/Tasks/{<i>operationToken</i>} API to stop the operation. Stopping an operation while it is in progress can yield partial results of the original operation. For example, when copying a folder, some entries may be created prior to the operation stopping.</p>
+        <p class="note"><b>Note:</b> Tokens will expire 15 minutes  after its corresponding operation has completed.</p>
+    </body>
+</html>

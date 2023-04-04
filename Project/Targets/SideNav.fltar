@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="MadCap HTML5 Target"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  Skin="/Project/Skins/SideNav.flskn"
+  MasterToc="/Project/TOCs/Master.fltoc"
+  ConditionTagExpression="exclude[Default.API or Default.BlogOnly or Default.Exclude or Default.Forms or &quot;Default.In Progress&quot; or Default.SolutionProviderOnly]"
+  CentralLinkIds=""
+  TargetLanguage="en-us,fr-ca_../fr-ca/Laserfiche Cloud.flprj,es-mx_../es-mx/Laserfiche Cloud.flprj"
+  MasterPage="/Content/MasterPages/SideNav.flmsp"
+  MasterStylesheet="/Content/Resources/Stylesheets/SideNav.css"
+  SearchEngine="GoogleSearch"
+  EnableSitemap="false"
+  GoogleSearchContextKey="30fdfbcda9d594193">
+  <PrintedOutput
+    CollapseMargins="true"
+    GenerateTOCProxy="true"
+    GenerateIndexProxy="true"
+    GenerateGlossaryProxy="true"
+    OutputFormat="doc" />
+</CatapultTarget>

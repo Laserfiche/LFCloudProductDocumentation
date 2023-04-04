@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Student by Banner ID and Email</title>
+    </head>
+    <body>
+        <h1>Search Student by Banner ID and Email Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used to search for all of the personal information of a student and returns one or no results.</p>
+        <ul>
+            <li><b>Category:</b> Student</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Banner ID*</p>
+                    </td>
+                    <td>
+                        <p>Is the Guid identifier for the searched student.</p>
+                        <p>User must input Banner Id exactly as is on Ellucian.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Email*</p>
+                    </td>
+                    <td>
+                        <p>Is one of the emails for the searched student.</p>
+                        <p>User must input Email exactly as is on Ellucian.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>Returns a single result set.</p>
+        <p>The output fields are the same as the <a href="Search-Student-by-Banner-ID.htm">Search Student by Banner ID</a> action.</p>
+        <div class="note">
+            <p><b>Notes:</b>
+            </p>
+            <p>The "Email/Email Address" type that is mapped in the connection will be used for the search. So "Email/Email Address" is mapped to "School(school) Email Address" then only Students with the inputted "School" email will return in the results. A person with the inputted Email but of a different type (e.g. "Family (family) Email Address") will not be included in the results.</p>
+            <p>The results will be sorted alphabetically by the student's last name, followed by the student's first name.</p>
+        </div>
+    </body>
+</html>

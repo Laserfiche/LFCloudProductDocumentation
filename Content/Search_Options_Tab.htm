@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="4" MadCap:lastHeight="1414" MadCap:lastWidth="1690" MadCap:conditions="Default.All,Default.Installation">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="WebLink" />
+            <MadCap:keyword term="WebLink Designer" />Search Options</h1>
+        <p>The <b>Search Options</b> tab lets you configure the Quick Search on the Welcome Page and in the Folder Browser to search text, entry names, fields, annotations, or a combination of these. In addition, you can enable fuzzy search options for text searches. By default, the Quick Search will search text and entry names and the fuzzy search will be disabled.</p>
+        <h4>Quick Search Options</h4>
+        <p><b>Enable Search Types</b>
+        </p>
+        <p> Select the check box(es) next to the types of searches you want the <a href="Search_Types.htm" title="Click here to learn more." alt="Click here to learn more.">Quick Search</a> to perform. </p>
+        <p><b>Fuzzy Search</b>
+        </p>
+        <p>The fuzzy search lets you find all words or phrases that are similar to the word or phrase you typed, even if they contain misspellings.</p>
+        <p>When using fuzzy search, the degree of accuracy is determined by the percentage of each word or by the number of letters in the phrase. If you select <b>Percentage of word</b>, type the percentage of each word in the phrase that can differ from the search criteria and still be considered a good result.
+If you select <b>Number of letters</b>, type the maximum number of letters that each word in the phrase can differ from the specified criteria and still be considered a good result. </p>
+        <p class="note"><b>Note:</b> Fuzzy searches take significantly more time and should only be used when you can't find the documents you want and are not sure of the exact content in the desired documents. Fuzzy search options are for text searches only.</p>
+        <p class="note"><b>Note:</b> Partial matches will be returned for entry names, fields, and annotations. This means the asterisk (*) wildcard (representing missing or no missing characters) is automatically implied. You do not have to know the exact name of the entry to search for it. For instance, performing a search for the document named "laser" will return documents named "laser," "laserfiche," "lasers," etc. Partial matches are not returned for text searches unless you add an asterisk (*).</p>
+        <h4>Resolve Shortcuts</h4>
+        <p><b>Resolve Shortcuts</b> controls whether shortcuts will inherit the traits of their parent documents for search purposes. For example, if you select this option and perform a search for documents containing the word "Agenda" that are in the "MyDocument" folder, the text search will also be performed on documents that have shortcuts in the "MyDocuments" folder. This option is most commonly used in conjunction with folder tunneling.</p>
+        <p class="note"><b>Note:</b> Resolve shortcuts can significantly slow search performance, because a larger section of the repository must be searched. Only select this option if it is necessary for the way you handle shortcuts in your repository.</p>
+        <h4>Search Fields</h4>
+        <p>You can specify the number of fields a user must input when performing a template search. This forces users to make searches more specific. For example, this would be useful for repositories containing documents that are all assigned the same template. In that case, performing a template search with no field values will not only make the search slow, but will also return every document in your repository. </p>
+        <p class="note"><b>Note:</b> The default value is zero.</p>
+        <h4>Sort Search Results By</h4>
+        <p>You can specify which column will be sorted on, and whether the search will be ascending or descending.</p>
+    </body>
+</html>

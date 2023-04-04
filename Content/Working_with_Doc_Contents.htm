@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Working with Document Contents</h1>
+        <p>You can make changes to the contents of your documents:&#160;rearrange or remove pages, make changes to Microsoft Office documents, and make changes to other types of electronic files.</p>
+        <h2 class="topicheading"><a name="Checking"></a>Checking Out a Document</h2>
+        <p>You can check out a document before you begin working on it. Checking out a document will lock it so that other users can't make changes to that document until you have checked it back in, although they can still view it. All electronic documents can be checked out; in addition, documents without an electronic file can be checked out if they're under version control. When the Office Integration is installed, Microsoft Office documents are checked out automatically when you open them for editing, and will be checked back in when you save and close them. </p>
+        <p>Documents that you have checked out can be found in the <b>Documents in Use</b> section of your repository. See <a href="Starred_Recent_In_Use.htm">Starred Documents, Recent Documents and Documents in Use</a> for more information.</p>
+        <p>Documents can be checked out manually by selecting the document in the folder browser, clicking the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />), and selecting <b>Check Out Document</b>, For electronic documents, you can also right-click them and select <b>Check Out Document</b>. If the document has image pages, you can also check it out by opening it in the document viewer, clicking the document name in the upper left corner, and selecting Check Out Document. (You can also check out Microsoft Word documents manually in this way if you do not want them to be checked back in as soon as you close Office.)</p>
+        <p>When you are done making changes to a checked out document, you can check it in by selecting the document and selecting <b>Check In Document</b> from either of the same menus. You can also discard your changes by selecting <b>Undo Check Out</b>.</p>
+        <p>If a document is under version control, all of the changes that you make during a single check out will be saved in a single version.</p>
+        <h2 class="topicheading">Working with Image Pages</h2>
+        <p>If you are working with a document that contains pages (including PDFs, but not including documents with an electronic file such as a Word document or Excel spreadsheet), you can rearrange those pages, move them from one document to another, use them to create a new document, or delete them.</p>
+        <p>Once you have made a change to a document, until you save it, it will be locked for editing and cannot be modified by other users. It will also appear in the <b>Documents in Use</b> section of your repository. See <a href="Starred_Recent_In_Use.htm">Starred Documents, Recent Documents and Documents in Use</a> for more information.</p>
+        <h3>Rearranging Pages</h3>
+        <p>You can rearrange pages within your documents, either in the folder browser or in the document viewer. In the folder browser, the page thumbnails will be on the right, in the <b>Preview</b> tab; select the <b>Thumbnails</b> button to view the pages as thumbnails. In the document viewer, thumbnails will be on the left. To rearrange them, select a page or pages and drag it, then drop it where you want to place it.</p>
+        <h3>Rotating Pages</h3>
+        <p>If a page is accidentally scanned sideways or upside-down, you can rotate it to its correct orientation. To rotate a page, select the page and click the <b>Rotate Clockwise</b> button, or right-click the page&#160;and select <b>Rotate Clockwise</b>. Continue to do this until the page is correctly rotated.</p>
+        <h3>Moving Pages Between Documents</h3>
+        <p>You can move pages between documents in the folder browser. Select a document and then click the <b>Thumbnails</b> tab on the right to display the page thumbnails. Select a page or pages, then drag it onto a document to move the pages into the document, or onto a folder to create a new document with those pages in the specified folder.</p>
+        <p>You can also move or copy pages by selecting the pages and then clicking the <b>Move Pages To</b> (<img src="Resources/Images/fb_move_button.png" />) or <b>Copy Pages To</b> (<img src="Resources/Images/fb_copy_to_button.png" />) button, or selecting and right-clicking the page thumbnails, and navigating to the location where you want to move the pages.</p>
+        <h3><a name="Generati"></a>Generating Pages from PDFs</h3>
+        <p>By default, pages will be generated from PDFs when they're imported into the repository, allowing you to use Laserfiche annotations on the contents, rearrange and rotate pages, and use other document viewer tools. If a PDF has been imported into the repository without pages generated, or if you need to update the pages, you can manually generate pages. </p>
+        <p>To do so, select the PDF document in the folder browser. Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />) and select <b>Generate Pages</b>. If the document already has pages, you will be prompted to confirm that you want to overwrite those existing pages. </p>
+        <h3>Deleting Pages</h3>
+        <p>To delete pages, open the document in the document viewer and select the thumbnail for the page or pages you want to delete. Press the DELETE key. Deleted pages will go to the recycle bin; see Deleting Documents and Folders for more information.</p>
+        <h2 class="topicheading"><a name="Working"></a>Working with Microsoft Office Documents</h2>
+        <p>Office Integration is a Laserfiche component that allows users to take advantage of Laserfiche features when working with Microsoft Word documents, Excel spreadsheets, PowerPoint presentations, and Outlook messages in their native Microsoft Office applications. Office Integration allows you to save Office files directly to your repository from the Office ribbon or toolbar, and to make changes to a document's metadata without leaving Office.</p>
+        <h3>Installing the Office Integration</h3>
+        <p>If you have never used Office Integration on your workstation before, you will need to install it. You can do so by opening any Microsoft Office document in your repository. You will automatically be prompted to download and install Office Integration. This will save a file to your computer, which you can run to install Office Integration. Once you have installed Office Integration, you may be prompted to close any Microsoft Office applications you have open, and/or to restart your computer. If you are not prompted to do so, you will need to close and re-open your Office applications after installing.</p>
+        <h3>Making Changes to a Microsoft Office Document</h3>
+        <p>Once the Office Integration has been installed, you can open Microsoft Office documents by selecting them in the folder browser, and they will open in the appropriate Microsoft Office application. You may make changes to the document and its metadata. Saving the document will result in the changes automatically being applied to the document in the repository. Your document will remain checked out until you close the document. You may also manually check in the document or undo the check out within the repository. Laserfiche stores a local copy of the document (at C:\Users\<i>&lt;CURRENT_USER&gt;</i>\AppData\Local\Laserfiche\LFOfficePlugin) in case of network interruptions and to keep the document checked out for longer periods of time.</p>
+        <p>The Office Integration has a number of features to help you work with your documents. To access them in your Office application, select the Laserfiche tab. You can choose to immediately save the document to Laserfiche, manually check it in, make version comments if the document is under version control, and modify field, tag, version, and link information directly from the Office integration. You can also add tokens to your Office document that will draw information directly from your repository, such as the document's name or creator, and field values.</p>
+        <h2 class="topicheading"><a name="Working2"></a>Working with Audio and Video Files</h2>
+        <p>In addition to viewing audio and videos directly in the browser (see Streaming Audio and Video Files for more information), Laserfiche can also transcribe audio and video files. This makes their content searchable, and can be viewed side-by-side with the video. For example, you could transcribe a recorded meeting in which the "Anderson project"&#160;was mentioned, and then later locate that video using full-text searches. </p>
+        <p>Video and audio files imported on or after June 9, 2022 will automatically be transcribed. Media files that were imported before that date need to be manually transcribed to become searchable or to be viewed alongside the video. To request a transcript of an un-transcribed media file, either select the document in the folder browser or open it in the document viewer, then select the <b>More Actions</b> button (<img src="Resources/Images/more-actions-button.png" />). Select <b>Request Transcript</b> to add the document to the transcription queue. Note that transcription requests, both manual and automatic, are not instantaneous; it may take some time for the transcription process to be completed, depending on both the number of documents in the queue and the size of the documents. </p>
+        <p>Once a document has been transcribed, you can view the transcript in the document viewer (see <a href="Viewing_Documents.htm#Streamin">Viewing Audio and Video Files</a> for more information), or perform searches for audio and video content and jump directly to the portion of the file containing your keyword (see <a href="Search.htm">Searching</a> for more information).</p>
+        <p class="note"><b>Note:</b>&#160;The availability of transcription, and the number of hours of transcription you have available, depend on your Laserfiche Cloud plan.</p>
+        <h3>Supported Languages and Formats</h3>
+        <p>Laserfiche transcription supports the following file formats and languages.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Formats</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>
+						AMR
+                    </li>
+                    <li>
+                        FLAC
+                    </li>
+                    <li>
+                        MP3
+                    </li>
+                    <li>
+                        MP4
+</li>
+                    <li>M4A                    </li>
+                    <li>
+                        Ogg
+                    </li>
+                    <li>
+                        WebM
+                    </li>
+                    <li>
+                        WAV
+                    </li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot>Languages</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <ul>
+                    <li>Afrikaans</li>
+                    <li>Arabic (Gulf and Modern Standard)</li>
+                    <li>Chinese (Simplified and Traditional)</li>
+                    <li>Danish</li>
+                    <li>Dutch</li>
+                    <li>English (Australian, British, Indian, Irish, New Zealander, Scottish, South African, United States, and Welsh)</li>
+                    <li>French (French and Canadian)</li>
+                    <li>Farsi</li>
+                    <li>German (German and Swiss)</li>
+                    <li>Hebrew</li>
+                    <li>Hindi (Indian)</li>
+                    <li>Indonesian</li>
+                    <li>Italian</li>
+                    <li>Japanese</li>
+                    <li>Korean</li>
+                    <li>Malay</li>
+                    <li>Portuguese (Portuguese and Brazilian)</li>
+                    <li>Russian</li>
+                    <li>Spanish</li>
+                    <li>Tamil</li>
+                    <li>Telugu</li>
+                    <li>Thai</li>
+                    <li>Turkish
+						</li>
+                </ul>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2 class="topicheading">Working with Other Electronic Files</h2>
+        <p>You can make changes to other types of electronic files by checking out the document and opening it for editing. The document will be saved locally on your computer. When you are done making changes, check the document back in. You will be prompted to upload the updated version of the document, which will replace the existing file.</p>
+        <h2 class="topicheading">Working with Document Metadata</h2>
+        <p>All documents and folders contain various metadata, including both user-created metadata such as fields, tags, links, and versions, and other information such as the document's name, location, creation and modification date, and so on. For more information on working with document metadata, see <a href="Metadata.htm">Metadata</a>.</p>
+        <p>Once you have made a change to a document, until you save it, it will be locked for editing and cannot be modified by other users. It will also appear in the <b>Documents in Use</b> section of your repository. See <a href="Starred_Recent_In_Use.htm">Starred Documents, Recent Documents and Documents in Use</a> for more information.</p>
+        <h2 class="topicheading"><a name="Generati2"></a>Generating Document Text</h2>
+        <p>By default, text will be generated from electronic files and PDFs when they are imported into the repository. (In addition, text will be generated for scanned documents, documents printed using Snapshot, and documents imported using Import Agent.) If an electronic file or PDF has been imported into the repository without text generated, or if you need to update the text, you can  manually generate text. </p>
+        <p>To do so, select the document in the folder browser. Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />) and select <b>Generate Text</b>. If the document already has pages, you will be prompted to confirm that you want to overwrite those existing pages. </p>
+        <p class="note"><b>Note:</b>&#160;Text cannot be generated for documents with pages but without an electronic file or PDF portion if they are already in the repository.</p>
+    </body>
+</html>

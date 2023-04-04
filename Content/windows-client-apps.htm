@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Connecting to Laserfiche Cloud From Laserfiche Windows Client and Laserfiche Quick Fields</h1>
+        <p>To sign in to Laserfiche Cloud, please have your Laserfiche Cloud 9-digit account ID ready as well as a valid user name and password.</p>
+        <h2>Laserfiche Windows Client</h2>
+        <ol>
+            <li>Open the Laserfiche Client. If you do not see a location to type in your Laserfiche Cloud Account ID, click <b>Sign in here</b> next to <b>Are you using Laserfiche Cloud?</b></li>
+            <li>On the <b>Sign-In</b> page, enter the following</li>
+            <ul>
+                <li><b>Account ID:</b> Enter your Laserfiche Cloud 9-digit account ID (provided by your administrator). </li>
+                <li><b>User name:</b> Enter your user name. </li>
+                <li><b>Password:</b> Enter your password. </li>
+            </ul>
+            <li>Click <b>Sign in</b>.</li>
+        </ol>
+        <h2>Laserfiche Quick Fields</h2>
+        <p>When prompted for server and repository information:</p>
+        <ol>
+            <li>Next to both <b>Server</b> and <b>Repository</b>, type <b>r-<i>repositoryid</i>.laserfiche.com</b>. The two values must match. You can find the <i>repositoryid</i> value in the Laserfiche Cloud Account Administration site under the <b>Plan</b> tab (if you are signed in as an administrator) or in <b>Repository Administration</b> under <b>Summary</b> (if signed in as a user with appropriate access).</li>
+            <li>Select <b>Password authentication</b> and enter your user name and password.<p class="note"><b>Note:</b> The Windows authentication option cannot be used to connect to Laserfiche Cloud.</p></li>
+            <li>Select <b>Use SSL connection</b>.</li>
+        </ol>
+        <h2>Laserfiche SDK (Repository Access) Integrations</h2>
+        <p>When creating the <b>Session</b> object:</p>
+        <ol>
+            <li>When using the <b>Session.Create</b> overload that takes a <b>CloudTicket</b> object, for the <b>repositoryHost</b> string parameter, pass in the repository ID host name: <b>r-</b><i style="font-weight: bold;">123456789</i><b>.laserfiche.com</b>. Replace 123456789 with your repository ID.</li>
+            <p class="note"><b>Note:</b> The repository ID can be seen on the <b>Plan</b> page of the Laserfiche Cloud Administration site, the <b>Overview</b> page of the Repository Administration site, and in your web browser address bar when viewing your Laserfiche documents.</p>
+        </ol>
+    </body>
+</html>

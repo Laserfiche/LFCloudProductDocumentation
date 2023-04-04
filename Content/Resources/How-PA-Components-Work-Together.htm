@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>How Business Processes, Workflows, and Bots Work Together</h1>
+        <p>This topic walks through how to collect information in a form, and then use a workflow to kick off a bot that will insert that information into a third-party line-of-business application.  For example, you could provide a client with a form to gather their data and then store that data in another application. </p>
+        <p>Here's an outline of the process:</p>
+        <p>
+            <img src="Images/FormtoBotFlow.png" style="width: 514px;height: 373px;border-left-style: solid;border-left-width: 0px;border-left-color: ;border-right-style: solid;border-right-width: 0px;border-right-color: ;border-top-style: solid;border-top-width: 0px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 0px;border-bottom-color: ;" />
+        </p>
+        <p style="font-weight: bold;">Form captures data</p>
+        <ol>
+            <li><a href="../Forms-Current/Building-a-Process.htm#Creating" title="Click here to learn more." alt="Click here to learn more.">Create a business process</a>.</li>
+            <li><a href="../Forms-Current/Creating-a-New-Form.htm#../Subsystems/ProcessAutomation/Content/Forms-Current/Creating-a-New-Form.htm" title="Click here to learn more." alt="Click here to learn more.">Configure the form</a> you'll use to collect information. This is the information that you will eventually pass to the third-party application.</li>
+        </ol>
+        <p style="font-weight: bold;">Workflow receives form data</p>
+        <ol>
+            <li><a href="Workflow/Creating-Deleting-Workflows.htm" title="Click here to learn more." alt="Click here to learn more.">Create a workflow</a>.</li>
+            <li>Click on the workflow canvas, and select <b>Allow this workflow to be started by other processes</b> in the properties pane. </li>
+            <li>Under <b>Input/Output Parameters</b>, click <b>View Parameters</b>.</li>
+            <p>
+                <img src="Images/WFConfig.png" style="width: 499px;height: 336px;border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+            </p>
+            <li>Under <b>Input Parameters</b>, click <b>Add Input</b>. Create an <a href="Workflow/Workflow-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">input</a> for each form field you want to send to the workflow (and then onto the bot and the third party application.) Provide a default value for fields that might be left blank when the form is filled out. </li>
+            <li>Publish the workflow.</li>
+        </ol>
+        <p style="font-weight: bold;">Forms sends data to workflow</p>
+        <ol>
+            <li> Navigate back to business processes, and add a <a href="../Forms-Current/Service-Tasks.htm#WorkflowServiceTasks" title="Click here to learn more." alt="Click here to learn more.">Workflow Service</a> task to the process. </li>
+            <li>Select the workflow you just created.</li>
+            <li>Under <b>Input values</b>, click <b>Add input values</b>. </li>
+            <p>
+                <img src="Images/BPConfig.png" style="width: 511px;height: 346px;border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+            </p>
+            <li>Select the parameters you configured in the workflow. Click <b>Update</b>. </li>
+            <li>Match the form field variables to the workflow parameters. Now when the process runs, the values from the form will be passed to workflow as input parameters.</li>
+            <li>Publish the process.</li>
+        </ol>
+        <p style="font-weight: bold;">Bot receives data from workflow</p>
+        <ol>
+            <li>Navigate to <b>Bots</b> in Process Automation.</li>
+            <li><a href="RPA/Recording-a-Process.htm" title="Click here to learn more." alt="Click here to learn more.">Create a new bot</a>, and record the bot inputting sample values in the third-party application. </li>
+            <li>Click the <b><a href="RPA/Editing-a-Bot.htm#Configur" title="Click here to learn more." alt="Click here to learn more."><b>Input/Output Parameters</b></a></b> button and create input parameters for the form field values that will be passed to the bot from workflow. </li>
+            <p>
+                <img src="Images/BotConfig.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 505px;height: 342px;" />
+            </p>
+            <li>Publish the bot.</li>
+        </ol>
+        <p style="font-weight: bold;">Workflow passes data to the bot</p>
+        <ol>
+            <li>Return to your workflow and add an <b><a href="Workflow/Activities/Invoke-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Invoke Bot</a></b> activity. </li>
+            <li>Select the bot you just created. </li>
+            <li>Under <b>Inputs</b>, select the workflow input parameters that match each input for the bot. </li>
+            <p>
+                <img src="Images/WFActivityConfig.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 512px;height: 346px;" />
+            </p>
+            <li>Publish the workflow.</li>
+        </ol>
+        <p style="font-weight: bold;">Bot passes data to the third-party application</p>
+        <ol>
+            <li>Return to your bot.</li>
+            <li>Update the bot's <b>Write</b> actions by replacing the sample values you wrote to the third-party application with the bot's input parameter tokens. </li>
+            <p>
+                <img src="Images/BotInput.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 519px;height: 236px;" />
+            </p>
+        </ol>
+    </body>
+</html>

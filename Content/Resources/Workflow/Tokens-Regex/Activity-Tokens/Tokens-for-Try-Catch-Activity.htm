@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="443" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Try-Catch Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Error Code</td>
+                    <td class="tabletext">The error code of the error encountered in the try branch.</td>
+                    <td class="tabletext">%(CatchBranch_Error Code)</td>
+                </tr>
+                <tr>
+                    <td>Message</td>
+                    <td class="tabletext">The error message of the error encountered in the try branch.</td>
+                    <td class="tabletext">%(CatchBranch_Message)</td>
+                </tr>
+                <tr>
+                    <td>Actual Type</td>
+                    <td class="tabletext">The name of the exception encountered in the try branch.</td>
+                    <td class="tabletext">%(CatchBranch_Actual Type)</td>
+                </tr>
+                <tr>
+                    <td>Actual Type Full</td>
+                    <td class="tabletext">The namespace-qualified name of the exception encountered in the try branch.</td>
+                    <td class="tabletext">%(CatchBranch_Actual Type Full)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "CatchBranch" portion of the syntax changes to match the catch branch's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the catch branch, "Exception--Handler", the syntax for the Error Code token will be "%(ExceptionHandler_Error Code)".</div>
+    </body>
+</html>

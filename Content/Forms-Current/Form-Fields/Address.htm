@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Address Fields |  Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Explains how to create a field that accepts address data in Laserfiche Forms." />
+    </head>
+    <body>
+        <h1>Address Fields</h1>
+        <p>Address fields are a collection of input boxes that are formatted to accept addresses. Address fields include input boxes for:</p>
+        <ul>
+            <li>Street Address</li>
+            <li>Address Line 2</li>
+            <li>City</li>
+            <li>State / Province / Region</li>
+            <li>Postal / Zip Code</li>
+            <li>Country</li>
+        </ul>
+        <h2 class="topicheading">Field settings</h2>
+        <p><b>To edit an address field</b>
+        </p>
+        <ol>
+            <li>Select the field on the canvas and click <b>Edit</b> in Classic mode. In Modern mode, select the field an all options appear in the right pane.</li>
+            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert variables</b> button to insert a variable into the label.</li>
+            <li>
+                <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field variable associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the variable a name based on the field label. <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about variables</a>. </li>
+            <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in the each part of the address field (except the Address Line 2 input box) before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field when filling out the form. </li>
+            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is required only when it appears on the form. </p>
+            <li>In the Classic mode, under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. In Modern mode, the <b>Field Description</b>, which appears below the field, is the only option. Click the <b>Insert Variable</b> button to include a variable with this text.</li>
+            <li>To configure advanced options, click the <b>Advanced</b> tab.<ul><li>In the <b>Advanced</b> tab under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.  Click the <b>Insert variables</b> button to insert a variable into the text.</li><li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign to this field.</li></ul></li>
+            <li>When you have finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+        </ol>
+        <h2 class="topicheading">Modifying an address field's input box labels (Classic mode only.)</h2>
+        <p>You may want to change the labels associated with an address field. For example, you might want to hide the "Country" input box or change "City" to "Pais." These changes go beyond what is possible from the field's settings on the <b>Edit</b> page but are easily accomplished with JavaScript on the <b>CSS&#160;and JavaScript</b> page.</p>
+        <p><b>Address field selectors</b>
+        </p>
+        <p>Each of the fields within an address field has a CSS&#160;class you can use to select it.</p>
+        <ul>
+            <li>To target <b>Street Address</b>, use <b>.Address1</b></li>
+            <li>To target <b>Address Line 2</b>, use <b>.Address2</b></li>
+            <li>To target <b>City</b>, use <b>.City</b></li>
+            <li>To target <b>State / Providence / Region</b>, use <b>.State</b></li>
+            <li>To target <b>Postal / Zip</b>, use <b>.Postal</b></li>
+            <li>To target <b>Country</b>, use <b>.Country</b></li>
+        </ul>
+        <h2 class="topicheading">Hiding one of the address field input boxes
+(Classic mode only.)      </h2>
+        <p>If you do not want to display the Country input box for an address field, you can hide it using JavaScript. Insert the following code into the <b>JavaScript</b> section of the <b>CSS&#160;and JavaScript</b> page.</p>
+        <p class="Code">
+        $(document).ready (function () {<br />        $(".Country").parent().children().css('display', 'none'); <br />        })<br /></p>
+        <p>Be sure to replace the selector (i.e., <span style="font-family: 'Courier New';">.Country</span>) in the code with one that matches your address field.</p>
+        <h2 class="topicheading"> Changing the label of an address field input box (Classic mode only.)</h2>
+        <p>You can change the labels for each input box within an address field. For example, to change <b>State / Province / Region</b> to <b>State</b>, you'd insert the following code into the <b>JavaScript</b> section of the <b>CSS&#160;and JavaScript</b> page.</p>
+        <p class="Code">
+		$(document).ready (function () {<br />        $(".State").siblings().text('State'); <br />        })<br /></p>
+    </body>
+</html>

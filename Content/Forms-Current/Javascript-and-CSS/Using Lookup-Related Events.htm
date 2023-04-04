@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Using JavaScript to Interact with Lookup Events | Laserfiche Forms</title>
+        <meta name="description" content="In Laserfiche Forms, lookups allow you to incorporate external data from a database into your form. Customize your form to react dynamically when a lookup starts or completes." />
+    </head>
+    <body>
+        <h1>Using Lookup-Related Events</h1>
+        <p>
+            <MadCap:concept term="Forms" />This topic describes custom events that indicate when lookups have started or finished loading. If you have custom processes that should begin only after lookups are complete, you can wait for the <b>lookupcomplete</b> or <b>onloadlookupfinished</b> event before starting those processes. This topic explains how these events work and provides <a href="#Hide" title="Jump ahead to the first JavaScript example." alt="Jump ahead to the first JavaScript example.">examples</a> of how you can use them in custom JavaScript.</p>
+        <p>The <b>lookupcomplete</b> event occurs when a lookup that was triggered by the user filling in certain rules or by the user clicking on an autofill button is complete. The <b>onloadlookupfinished</b> event occurs when lookups that started when the document was loaded have completed.</p>
+        <p>The <b>lookupstarted</b> event occurs when a lookup that was triggered by the user filling in certain fields or by the user clicking on an autofill button has started. You can use it to trigger a custom spinner or message to be displayed while the lookup is in progress. You can also use it to ensure that any custom JavaScript that changes the fields that trigger the lookup doesn't try to change those  fields between <b>lookupstarted</b> and <b>lookupcomplete</b>. This avoids triggering unnecessary lookups.</p>
+        <h2 class="topicheading"><a name="Identify"></a>Identifying Triggers and Rules for an Event</h2>
+        <p>For <b>lookupstarted</b> and <b>lookupcomplete</b>, you can identify what triggered the lookup by using the properties <b>triggerId</b> and <b>ruleId</b>. If the lookup was triggered by one other input, then <b>triggerId</b> gives the id of that input. If the lookup was triggered by an autofill button, then <b>triggerId</b> gives the id of that button. <b>ruleId</b> identifies the rule that governs the lookup. To identify the <b>ruleId</b> for a specific lookup rule, access the browser console (developer tools) for your form. In the console, type <i>jsonForm</i> to present a JSON-formatted response. Expand the <i>businessRules</i> node to find the <b>ruleId</b>s for each lookup rule, together with other information about the lookup rule. </p>
+        <p>The following code sample illustrates the structure of one rule on a form</p><pre xml:space="preserve"><code class="language-javascript">businessRules: Array(2)
+  0:
+    id: "533294f2-6cfa-4826-ad1e-2dd8ca00c012"
+    inputMap: [{…}]
+    isAutoFillHidden: true
+    outputMap: (3) [{…}, {…}, {…}]
+    pass: [2]
+    populate: (3) [7, 16, 17]
+    position: 1
+    ruleId: "533294f2-6cfa-4826-ad1e-2dd8ca00c012" &lt;-- example ruleId
+    ruleMajorVersion: 2
+    ruleName: "SampleRule"
+    ruleType: 3
+    serverName: "localhost"
+    trigger: [2] &lt;-- example triggerID
+    type: 1
+    __proto__: Object</code></pre>
+        <p class="note"><b>Note</b>: <b>ruleId</b>s are not fixed; editing a lookup rule or adding a new lookup rule can change the <b>ruleId</b>s of all existing lookup rules. If you have custom scripts based on specific <b>ruleId</b>s, check their validity whenever you edit or add lookup rules.</p>
+        <h2 class="topicheading"><a name="Hide"></a>Hide a Waiting Message or Spinner when Lookup is Complete</h2>
+        <p>While the form is doing a lookup, you may want to display a message or spinner, then hide it when the lookup is complete. Assuming that your waiting display has the class <b>spinner</b>, the following JavaScript will hide it when the lookup is complete:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+  $(document).on('lookupcomplete', function(event){
+    if (event.triggerId == 'Field1') {
+      $('.spinner').hide();
+     //other actions
+    }
+  })
+})</code></pre>
+        <p>The code assumes that you are interested in the lookup that is triggered by the input with id <b>Field1</b>. If instead your lookup was triggered by an autofill button, then the <b>triggerId</b> you should look for is the id of the autofill button.</p>
+        <p>If your lookups are the kind that start when the page loads, use <b>onloadlookupfinished</b> rather than <b>lookupcomplete</b>. In this case, you would not need to look for a specific <b>triggerId</b>.</p>
+        <p>While we have only demonstrated how you can use lookup events for hiding a spinner, you can easily include other actions, as indicated by the comment in the JavaScript snippet. For example, you may want to perform certain calculations only when certain fields have been properly populated by a lookup, or you may want to pre-populate, show, or hide other fields based on the results of the lookup.</p>
+        <h2 class="topicheading">Populate Other Fields Based on Lookup Results</h2>
+        <p>The following JavaScript sample shows you how you can populate a checkbox based on the results of a lookup. The lookup fills a numerical field. The JavaScript listens for the <b>onloadlookupfinished</b> event, then checks for the relevant <b>ruleId</b> (see <a href="#Identify" title="Click here to learn more." alt="Click here to learn more.">Identifying Triggers and Rules for an Event</a> for how to find <b>ruleId</b>s). If it finds that the correct rule has completed, it checks the value of the numerical field and fills the checkbox if that value is <b>1</b>. The code assumes that the numerical field has been <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>NumberField</code>, the <b>ruleId</b> of interest is <b>944</b>, and  the checkbox has been assigned the custom class <code>Checkbox</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).on("onloadlookupfinished", function(event) {
+  if (event.ruleId==944) {
+    if ($('.NumberField input').val() == 1) {
+      $(this).find('.Checkbox input').attr('checked',true);
+    }
+  }
+});</code></pre>
+        <p>To implement the same feature with a lookup that depends on user input, use <b>lookupcomplete</b> instead of <b>onloadlookupfinished</b>.</p>
+    </body>
+</html>

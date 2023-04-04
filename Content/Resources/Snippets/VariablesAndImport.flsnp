@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="2" MadCap:lastHeight="230" MadCap:lastWidth="1199">
+    <head>
+    </head>
+    <body>
+        <p>Variables imported from versions earlier than Forms 9.2 will have their variable name updated to match the new syntax in Forms 9.2: dash ("-") and period (".") characters will be automatically replaced with an underscore ("_"). However, references to the variables will not be automatically updated and must be manually changed. </p>
+        <p class="ex"><b>Example:</b> A variable for an email field in Forms 9.1 had the syntax: {/dataset/Email.1}. When imported into Forms 9.3, the variable is updated to {/dataset/Email_1} but the places the variable is used in the process, such as in the <b>To</b> field of a <a href="../../Forms-Current/User-Tasks.htm#NotificationsTab">User Task notification email</a> will still have the syntax: {/dataset/Email.1} and will not be replaced by the actual email when the process runs. You must manually update references to the variable with the new syntax format: {/dataset/Email_1}.</p>
+    </body>
+</html>

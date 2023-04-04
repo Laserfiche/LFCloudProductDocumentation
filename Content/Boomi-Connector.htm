@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Laserfiche Connector for Boomi</h1>
+        <p>For customers using Boomi, Laserfiche has provided a connector that makes the interaction between Laserfiche repository and other third-parties easier. The operations supported in the Laserfiche connector are based on Laserfiche repository APIs. </p>
+        <p>The Laserfiche Integration with Boomi is helpful for:</p>
+        <ul>
+            <li>Viewing a document or document metadata from Laserfiche and viewing or downloading it in another system, like a CRM, ERP, or any system with relevant documents stored within Laserfiche.<![CDATA[            ]]></li>
+            <li>Saving a document to Laserfiche or updating Laserfiche metadata from another system. This action can be monitored to start a Laserfiche business process. </li>
+            <li>Gathering healthcare data. You can convert a Laserfiche document's metadata into the HL7 data format before sending it to a healthcare system requiring that standard. </li>
+            <li>AP Processing. Laserfiche’s solutions for automating invoice processing can update necessary ERP and financial systems. </li>
+        </ul>
+        <p class="note"><b>Note:</b> The Laserfiche connector for Boomi is based on Laserfiche Repository API V1 build version 3a7a49ffc2db49aecc10091994a0292be398cd51_.20221214.3</p>
+        <h2><a name="How"></a>How to Configure the Laserfiche Connector for Boomi</h2>
+        <p>First, configure a connection to your Laserfiche repository. </p>
+        <ol>
+            <li>
+               From the Boomi Designer, select <b>Create New</b> and select <b>Connection</b>.
+            </li>
+            <li>Select Laserfiche Connector from the drop-down menu and click <b>Create</b>.</li>
+            <li>Provide a descriptive name for the Connection, and define the following<ul><li><b>Platform:</b> The Laserfiche Connector is available for both Laserfiche Cloud and self-hosted installations.</li></ul><p>For Laserfiche Cloud</p><ul><li><b>Service Principal Key:</b> Create the Service Principal Key by creating a Boomi-specific Service Principal user in your Laserfiche Account Administration. Grant this user the appropriate access rights in Laserfiche to act on behalf of the Laserfiche Connector. Then open the user you created and click <b>Create Service Principal Keys</b>.
+Ensure you save this key as you will not be able to view this key again in Laserfiche. </li><li><b>Base-64 Encoded Access Key:</b> To create the Base-64 Encoded Access Key, in the Laserfiche Developer Console, create a Boomi app by creating a service application and selecting the Service Principal user as the Service Account. In the Boomi app you created, navigate to the Authentication tab, and click <b>Create key</b> next to Access Keys. Then download the key as a base-64 string and copy the key from there.</li></ul><p>For self-hosted installations</p><ul><li><b>Base URL:</b> The base URL for your Laserfiche API. E.g., https://<i>ServerName</i>/LFRepositoryAPI</li><li><b>Repository ID:</b> The name of your Laserfiche repository.</li><li><b>Username:</b> The username of an account that has the appropriate access rights to the Laserfiche repository to make changes on behalf of Boomi. </li><li><b>Password: </b> The password for the above account. </li></ul></li>
+            <li>Click <b>Test Connection</b> and choose an Atom (runtime environment) to test the connection on. </li>
+        </ol>
+        <h2>How to Use the Laserfiche Connector for Boomi</h2>
+        <ol>
+            <li>
+              Open the Boomi process you want to add a Laserfiche Connector to.
+            </li>
+            <li>Search for the Laserfiche Connector and drag it to the canvas.</li>
+            <li>In the Connector Shape pane's <b>General</b> tab, define the following:</li>
+            <ul>
+                <li><b>Display Name:</b> Provide a descriptive name for your shape that describes the action the shape will take in Laserfiche</li>
+                <li><b>Connector:</b> The connector will default to the connector you selected on the canvas, but you can change that here if needed.</li>
+                <li><b>Action:</b> Select the action you want the connector to take in Laserfiche. <MadCap:toggler targets="Actions" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">See a list of available actions.</MadCap:toggler></li>
+                <ul MadCap:targetName="Actions" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/AssignEntryLinks" target="_blank" title="Click to learn more." alt="Click to learn more.">Assign Entry Links</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/AssignFieldValues" target="_blank" title="Click to learn more." alt="Click to learn more.">Assign Field Values</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/AssignTags" target="_blank" title="Click to learn more." alt="Click to learn more.">Assign Tags</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Tasks/CancelOperation" target="_blank" title="Click to learn more." alt="Click to learn more.">Cancel Operation</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/CancelOrCloseSearch" target="_blank" title="Click to learn more." alt="Click to learn more.">Cancel or Close a Search</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/CopyEntryAsync" target="_blank" title="Click to learn more." alt="Click to learn more.">Copy Entry Async</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/CreateSearchOperation" target="_blank" title="Click to learn more." alt="Click to learn more.">Create Search Operation</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/SimpleSearches/CreateSimpleSearchOperation" target="_blank" title="Click to learn more." alt="Click to learn more.">Create Simple Search Operation</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/CreateOrCopyEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Create or Copy Entry</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeleteAssignedTemplate" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Assigned Template</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeleteDocument" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Document</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeleteEntryInfo" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Entry Info</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeletePages" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Pages</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/ExportDocument" target="_blank" title="Click to learn more." alt="Click to learn more.">Export Document</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/ExportDocumentWithAuditReason" target="_blank" title="Click to learn more." alt="Click to learn more.">Export Document with Audit Reason</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/AuditReasons/GetAuditReasons" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Audit Reasons</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetDocumentContentType" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Document Content Type</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetDynamicFieldValues" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Dynamic Field Values</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Entry</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetEntryListing" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Entry Listing</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html#/Entries/GetEntryByPath" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Entry by Path</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/FieldDefinitions/GetFieldDefinitionById" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Field Definition by ID</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/FieldDefinitions/GetFieldDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Field Definitions</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetFieldValues" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Field Values</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/LinkDefinitions/GetLinkDefinitionById" target="_blank" title="Click to learn more" alt="Click to learn more">Get Link Definition by ID</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/LinkDefinitions/GetLinkDefinitions" target="_blank" title="Click to learn more" alt="Click to learn more">Get Link Definitions</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetLinkValuesFromEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Link Values from Entry</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Tasks/GetOperationStatusAndProgress" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Operation Status and Progress</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Repositories/GetRepositoryList" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Repository List</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/GetSearchContextHits" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Search Context Hits</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/GetSearchResults" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Search Results</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/GetSearchStatus" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Search Status</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TagDefinitions/GetTagDefinitionById" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Tag Definition by ID</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TagDefinitions/GetTagDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Tag Definitions</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetTagsAssignedToEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Tags Assigned to Entry</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateDefinitionById" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Definition by ID</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Definitions</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateFieldDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Field Definitions</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateFieldDefinitionsByTemplateName" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Field Definitions by Template Name</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Attributes/GetTrusteeAttributeKeyValuePairs" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Trustee Attribute Key Value Pairs</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Attributes/GetTrusteeAttributeValueByKey" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Trustee Attribute Value by Key</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/ImportDocument" target="_blank" title="Click to learn more." alt="Click to learn more.">Import Document</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/MoveOrRenameEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Move or Rename Entry</a>
+                    </li>
+                    <li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/WriteTemplateValueToEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Write Template Value to Entry</a>
+                    </li>
+                </ul>
+                <li><b>Connection:</b> Select the connection you configured in the <a href="#How" title="Click to learn more." alt="Click to learn more.">How to Configure the Laserfiche Connector for Boomi</a> section.</li>
+                <li><b>Operation:</b> Select the operation you want the action to perform. The operation specifies exactly how the action will run. For example, which repository the action will interact with and which data will be returned by the action. You can select a pre-configured operation or click the green plus button to create an operation. See<a href="#How2" title="Click to learn more." alt="Click to learn more."> How to Configure an Operation</a> below.</li>
+            </ul>
+            <li>In the <b>Parameters</b> tab, click the green plus button to add a parameter. The parameters available are from the request schema defined in the request profile. The Request profile corresponds with the JSON schema of the request body of the Laserfiche API call and defines the data expected by the action. To learn more about request profiles, see <a href="#How2" title="Click to learn more." alt="Click to learn more."> How to Configure an Operation</a> below.</li>
+            <li>In the <b>Dynamic Operation Properties</b> tab, you can add values that will overwrite the default values defined in the operation. These are separate from the parameters defined in the previous tab that come from the request profile. The input parameters available here correspond with the fields in the operation's configuration. See <a href="#How2" title="Click to learn more." alt="Click to learn more.">How to Configure an Operation</a> below. </li>
+        </ol>
+        <h2><a name="How2"></a>How to Configure a Boomi Operation</h2>
+        <p>An operation defines how the Laserfiche connector will interact with your Laserfiche repository. It represents a specific action (Search, Create, Update) to perform against a specific object in your Laserfiche repository. An object can be a document, folder, type of metadata, audit reason, task, or user attribute.</p>
+        <ol>
+            <li>In the Boomi Designer, select <b>Create New</b>, and select <b>Connector operation</b>. Alternatively, when configuring a shape on the canvas, click the green plus button next to <b>Operation</b> to define an operation for that shape. </li>
+            <li>The fields available for the operation will depend on the Connector Action and will correspond with the parameters available in the Laserfiche API. <a href="https://api.laserfiche.com/repository/swagger/index.html" target="_blank" title="Click to learn more" alt="Click to learn more">See the parameters for each action here</a>.</li>
+            <li>The <b>Object</b> field corresponds to the action's category in the Laserfiche API.</li>
+            <li>Click the <b>Import</b> button to retrieve Request and Response profiles for the operation. Select an Atom (runtime environment) and the Connection you configured above. The Request profile corresponds with the json schema of the request body of the API&#160;call. You can review the Request and Response profiles to see the type of data the action will get and return when the action runs.</li>
+            <li>You can also set <b>Tracking Direction</b> to record either input or output data  in your process reporting. </li>
+            <li>Select <b>Error Behavior</b> if you want to be able to act on failed operations in your process instead of just reporting them on the <b>Manage</b> page. </li>
+            <li>The rest of the options are operation parameter fields based on the Connector action and the Laserfiche API. The values entered here become default values for the all shapes in the process that use this operation. You can override the default values in the shape's Dynamic Operation Properties tab. Some common fields are:<ul><li><b>Repository ID:</b> For Laserfiche Cloud, you can find your repository ID from your repository's URL. For example, https://app.laserfiche.com/laserfiche/browse.aspx?repo=r-<i>123a45aa</i> . For self-hosted Laserfiche installations, your repository ID is the name of the repository.</li><li><b>Entry ID:</b> Enter the ID&#160;of the entry you want the operation to interact with by default. </li></ul></li>
+        </ol>
+        <h2>How to Set up an Atom</h2>
+        <p><a href="https://help.boomi.com/bundle/integration/page/int-Atom_Molecule_and_Atom_Cloud_setup.html" target="_blank" title="Click to learn more." alt="Click to learn more.">See Boomi's documentation for setting up an atom.</a>
+        </p>
+        <h2>How to Test a Laserfiche Connector Shape</h2>
+        <p><a href="https://help.boomi.com/bundle/integration/page/t-atm-Running_a_process_in_test_mode.html" target="_blank" title="Click to learn more." alt="Click to learn more.">See the Boomi documentation.</a>
+        </p>
+        <h2>How to Send a Request to Boomi through a Laserfiche Web Request Rule</h2>
+        <p>You can start Boomi processes from on a web service request from Laserfiche, allowing you to automatically invoke your integration from a Laserfiche workflow or business process. To start Boomi processes from Laserfiche, you must both configure  Boomi to listen for the web request from Laserfiche and configure a web request rule in Laserfiche to send information to Boomi.</p>
+        <h3>Configuring a Boomi Atom to Listen for a Web Request</h3>
+        <ol>
+            <li>
+                Navigate to the <b>Atom Management</b> page in Boomi.
+</li>
+            <li>Select the Atom that will be running the Boomi process.</li>
+            <li>Under <b>Settings &amp; Configurations</b>, select <b>Shared Web Server</b>.</li>
+            <li>In the <b>General</b> tab, under <b>Basic Settings</b>, make a note of the base URL. You'll use this value in the Laserfiche web service connection you'll create in the next section.</li>
+            <li>In the <b>User Management</b> tab, configure a user that Boomi can use to call to the web service. </li>
+        </ol>
+        <h3><a name="Configur"></a>Configuring the Laserfiche Web Service Connection to Connect to Boomi</h3>
+        <ol>
+            <li>In Laserfiche, navigate to the Process Automation landing page, and click <b>Integrations</b>. </li>
+            <li>Select <b>Web Service Connections</b>, and create a new connection. <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Integrations/Web-Services.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Learn more about web service connections</a>.</li>
+            <li>Provide a descriptive name for the connection, and select to send requests directly to Boomi.</li>
+            <li>Click <b>Create</b>.</li>
+            <li>Enter the Boomi base URL, which can be found on the <b>Shared Web Server</b> page of the Boomi Atom configured in the previous section.</li>
+            <li>Select <b>Basic authentication</b>.</li>
+            <li>Enter the username and password of the user you configured on the <b>Shared Web Server</b> page of the Boomi Atom configured in the previous section.</li>
+            <p>
+                <img src="Resources/Images/UsernameToken.png" title="Location of username and password" alt="Location of username and password" style="width: 638px;height: 330px;border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+            </p>
+            <ul>
+                <li><b>Username:</b> Use the full username found in italics under the <b>Username</b> field in Boomi</li>
+                <li><b>Password:</b> Use the token found under <b>Authentication Credentials</b> in Boomi.</li>
+            </ul>
+            <li>Click <b>Test</b>. </li>
+            <p class="note"><b>Note:</b> If you click <b>Test</b>, you might get a 404 response since the base URL itself is not hosted on cloud. This response can be ignored and will not be an issue moving forward. </p>
+            <li>Click <b>Create</b> to create the connection.</li>
+        </ol>
+        <h3>Configuring a Boomi Operation and Shape to Listen for a Web Request</h3>
+        <p><b>Operation</b>
+        </p>
+        <ol>
+            <li>In Boomi, create a <b>Connector Operation</b>, select <b>Web Services Server</b> as the connection, and click <b>Create</b>.</li>
+            <li>Set the <b>Connector Action</b> to <b>Listen</b>.</li>
+            <li>Select the <b>Operation Type</b> that corresponds with information you want to pass to Boomi.</li>
+            <li>Next to <b>Object</b>, provide an object name. The value you enter here will become part of the <b>Simple URL Path</b> for the connector operation. You'll use this URL&#160;in your Laserfiche Web Request Rule as described in the next section. </li>
+            <li>Configure the expected input type for the data Boomi is expecting to receive. </li>
+            <li>Configure the output type to specify how the Boomi shape using this operation will format the data it exports. Depending on the output type you select, you can choose a Laserfiche request profile to further format the data.</li>
+            <p>
+                <img src="Resources/Images/ConnectorOperation.png" title="Configure your Connector Operation" alt="Connector Operation Configuration" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 487px;height: 286px;" />
+            </p>
+        </ol>
+        <p><b>Shape</b>
+        </p>
+        <ol>
+            <li>Navigate to the Boomi canvas, and drag a <b>Start Shape</b> to the Boomi canvas.
+            </li>
+            <li>
+             Provide a descriptive display name for the shape, e.g., "Listen for Web Service Call from Laserfiche"</li>
+            <li>Next to <b>Connector</b>, select <b>Web Services Server</b>. </li>
+            <li>Next to <b>Action</b>, select <b>Listen</b>.</li>
+            <li>Next to <b>Operation</b>, select the operation you created in the previous section.</li>
+        </ol>
+        <h3>Configuring the Laserfiche Web Request Rule to Start the Boomi Process</h3>
+        <ol>
+            <li>Navigate to the Process Automation landing page, and click <b>Rules</b>. </li>
+            <li>Select <b>Web Request</b>, and create a new rule. <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Rules/web-request-rule.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Learn more about rules</a>. </li>
+            <li>Enter a rule name and description. </li>
+            <li>Select <b>Web Service Connection</b>, and select the connection you made in the<a href="#Configur" title="Click to learn more." alt="Click to learn more.">Configuring the Laserfiche Web Service Connection section</a> above. </li>
+            <li>Click <b>Create</b>.</li>
+            <li>In the <b>Web Request Rule</b> editor, in the <b>Request</b> tab, the base URI should match the base URL provided in the Laserfiche web service connection. See the <a href="#Configur" title="Click to learn more." alt="Click to learn more.">Configuring the Laserfiche Web Service Connection section</a> above. </li>
+            <li>Complete the request URI with the <b>Simple URL Path</b> provided in the Boomi operation. Append parameters in this section of the URL as needed. You can add Laserfiche tokens that can be filled in by a workflow when running the rule. E.g., /ws/simple/getExporter?entryid=%(Name:EntryID;Type:Text)</li>
+            <li>Under <b>Method</b>, select <b>Post</b>. </li>
+            <li>Under <b>Content Type</b>, select type of data you are sending to Boomi. E.g., application/json. The content type should match the input type specified in the Boomi operation. </li>
+            <li>Under <b>Content Body</b>, enter the data you want to send to Boomi.</li>
+            <p>
+                <img src="Resources/Images/WebRequestRule.png" title="Sample Web Request Rule" alt="Sample Web Request Rule" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 505px;height: 324px;" />
+            </p>
+            <li>Click <b>Test Web Request</b>. </li>
+            <li>In the <b>Test Web Request Rule</b> dialog, double check the Request and provide Input Parameters.</li>
+            <li> Click <b>Test</b> to proceed. </li>
+            <li>This test result will show when the request has been successfully sent to Boomi and has passed basic authentication. </li>
+            <li>You can now run this rule, which will kick off your Boomi process, from the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Workflow/Activities/Run-Business-Rules.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Run Rule activity</a> in Laserfiche workflow or a <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Forms-Current/Service-Tasks.htm#RulesServiceTask" target="_blank" title="Click to learn more." alt="Click to learn more.">Rules Service Task</a> in a Laserfiche business process. </li>
+        </ol>
+    </body>
+</html>

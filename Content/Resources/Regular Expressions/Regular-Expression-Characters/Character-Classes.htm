@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" MadCap:changes="14" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Quick Fields" />Character Classes</h1>
+        <p>The following <a href="../Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expression</a> characters find a match if any one of the characters included in the set matches the criteria you define.<br /></p>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular expression character classes and their descriptions.">
+            <caption style="font-weight: bold;">Regular Expression Character Classes</caption>
+            <col style="width: 149px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext"><b>.</b>
+                    </td>
+                    <td class="tabletext">
+                        <p valign="top">Any character except \n.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[aeiou]</td>
+                    <td class="tabletext">Any single character included in the specified set of characters. For example, the expression [abc123] only allows oneof the following characters: &#160;"a," "b," "c," "1," "2," or "3."</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[^<i>aeiou</i>]</td>
+                    <td class="tabletext">Any single character not in the specified set of characters. For example, the expression [^abc123] allows any character except for: &#160;&#160;"a," "b," "c," "1," "2," or "3."</td>
+                </tr>
+                <tr>
+                    <td class="tabletext"><i>[0-9a-fA-F</i>]</td>
+                    <td class="tabletext">Use of a hyphen (
+<b>–</b> ) allows specifying a  contiguous character range. For example, the expression [0-9] allows only any number that falls between 0 and 9 and [A-Z] allows any capital letter. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\p{<i>name</i>}</td>
+                    <td class="tabletext">Any character in the named character class specified by <b>{name}</b>. Supported names are Unicode groups and block ranges. For example, <b>Ll</b>, <b>Nd</b>, <b>Z</b>, <b>IsGreek</b>, and <b>IsBoxDrawing</b>. <a href="https://msdn.microsoft.com/en-us/library/20bw873z(v=vs.110).aspx#CategoryOrBlock" target="_blank" title="Click to learn more. " alt="Click to learn more. ">Learn more</a>. *</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\P{<i>name</i>}</td>
+                    <td class="tabletext">Text not included in groups and block ranges specified in <b>{name}</b>. <a href="https://msdn.microsoft.com/en-us/library/20bw873z(v=vs.110).aspx#CategoryOrBlock" target="_blank" title="Click to learn more. " alt="Click to learn more. ">Learn more</a>. *</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\w</td>
+                    <td class="tabletext">
+                        <MadCap:concept term="Laserfiche" />Any word character. Equivalent to the Unicode character categories
+<b>[\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}]</b>. If you are defining a regular expression in the Laserfiche Administration Console, <b>\w</b> is equivalent to <b>[a-zA-Z_0-9]</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\W</td>
+                    <td class="tabletext">Any nonword character. Equivalent to the Unicode categories <b>[^\p{Ll}\p{Lu}\p{Lt}\p{Lo}\p{Nd}\p{Pc}]</b>.  If you are defining a regular expression in the Laserfiche Administration Console, <b>\W</b> is equivalent to <b>[^a-zA-Z_0-9]</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\s</td>
+                    <td class="tabletext">Any white-space character. Equivalent to the Unicode character categories <b>[\f\n\r\t\v\x85\p{Z}]</b>.  If you are defining a regular expression in the Laserfiche Administration Console,  <b>\s</b> is equivalent to <b>[ \f\n\r\t\v]</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\S</td>
+                    <td class="tabletext">Any non-white-space character. Equivalent to the Unicode character categories <b>[^\f\n\r\t\v\x85\p{Z}]</b>.  If you are defining a regular expression in the Laserfiche Administration Console,  <b>\S</b> is equivalent to <b>[^ \f\n\r\t\v]</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\d</td>
+                    <td class="tabletext">Any decimal digit. Equivalent to <b>\p{Nd}</b> for Unicode.   If you are defining a regular expression in the Laserfiche Administration Console, <b>\d</b> is equivalent to <b>[0-9]</b>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">\D</td>
+                    <td class="tabletext">Any nondigit. Equivalent to <b>\P{Nd}</b> for Unicode. If you are defining a regular expression in the Laserfiche Administration Console, <b>\D</b> is equivalent to <b> [^0-9]</b>.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-weight: normal;">*These regular expressions are not available when configuring field constraints in the Laserfiche Administration Console. </p>
+        <table id="myTable2" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Alternative character class syntax available in the Laserfiche Administration Console">
+            <caption style="font-weight: bold;">Alternative Character Class Syntax Available in the Laserfiche Administration Console</caption>
+            <col style="width: 150px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">[[:alnum:]]</td>
+                    <td class="tabletext">Any alphanumeric character.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:alpha:]] </td>
+                    <td class="tabletext">Any alphabetical character in the following ranges:  a-z and A-Z.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:blank:]]</td>
+                    <td class="tabletext">A space or a tab.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:digit:]]</td>
+                    <td class="tabletext">Any  whole number from 0 to 9.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:lower:]] </td>
+                    <td class="tabletext">Any lower-case character (i.e., a-z).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:print:]]</td>
+                    <td class="tabletext">	Any printable character.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:punct:]]</td>
+                    <td class="tabletext">	Any punctuation character.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:space:]]</td>
+                    <td class="tabletext">Any whitespace character.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:upper:]]</td>
+                    <td class="tabletext">Any upper-case character (i.e., A-Z).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:xdigit:]]</td>
+                    <td class="tabletext">Any hexadecimal digit (i.e., 0-9, a-f and A-F).</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">[[:word:]]</td>
+                    <td class="tabletext">Any  alphanumeric character or an underscore.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

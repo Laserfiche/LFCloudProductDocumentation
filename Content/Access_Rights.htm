@@ -1,0 +1,276 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+        <meta name="description" content="Access rights determine what documents and folders a user can see and open, and what actions they can perform on those documents and folders. Because access rights apply to documents and folders, they are configured in your repository itself, not in Repository Administration or Account Administration." />
+    </head>
+    <body>
+        <h1>Entry Access Rights</h1>
+        <p>Access rights determine what documents and folders a user can see and open, and what actions they can perform on those documents and folders. Because access rights apply to documents and folders, they are configured in your repository itself, not in Repository Administration or Account Administration.</p>
+        <p>Access rights allow you to set granular security that may differ in different parts of your repository. For example, you might want to allow Sally to freely create, modify, and delete documents in her own folder, and to view and modify documents in her department's folder (but not to create or delete them), but you might not want to allow her to even see the folder for another department. You can do this using access rights.</p>
+        <p>When you configure an access right, you will specify three things:</p>
+        <ul>
+            <li><b>Who:</b>&#160;Which user or group you are granting or denying a particular right or set of rights.</li>
+            <li><b>What:</b>&#160;The right or set of rights that you are granting or denying.</li>
+            <li><b>Where:</b>&#160;The scope of the rights:&#160;what documents and folders will be affected.</li>
+        </ul>
+        <p>Access rights can be configured by any user with the Manage Entry Access privilege. See <a href="Privileges.htm">Privileges</a> for more information.</p>
+        <h2 class="topicheading">Planning Access Rights</h2>
+        <p>Before you begin setting access rights, it is a good idea to make a plan for them. Determine what you want users and groups to be able to do in your repository, and where. It is also a good idea to design your repository so that documents that should have similar security settings are grouped together. This allows you to quickly and easily set security on folders, rather than needing to set security document by document, which is both tedious and prone to errors.</p>
+        <p>In general, it is a good idea to work from more general to more specific. Begin by setting rights on folders high in the folder tree, allowing inheritance to propagate those rights down, and begin by granting rights to groups. You can then fine-tune with subfolders and individual users as necessary.</p>
+        <h2 class="topicheading">Setting Access Rights on a Document or Folder</h2>
+        <ol>
+            <li>Select the document or folder on which you want to configure access rights in the folder browser, or open it in the document viewer. (It is strongly recommended that you set rights on folders rather than documents wherever possible.)</li>
+            <li>Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />) and point to <b>Advanced</b>, then select <b>Show Security</b>. The <b>Access Rights</b> dialog box will open.</li>
+            <li>In the Access Rights tab, you can view security that has already been set for this document or folder. Rights that were inherited from higher in the folder tree will list what folder the right was set on, or will list <b>Not inherited</b> if the right was set at this level. (If you only want to view rights set at this level, clear the <b>Inherit rights from parent</b> option at the bottom of the dialog box.)</li>
+            <li>Either select an existing trustee that is listed as <b>Not inherited</b>, or type a trustee name in the <b>Select another trustee</b> option and click <b>Add</b>. (Inherited rights must be modified at the level at which they were set.)</li>
+            <li>In the <b>Scope Selection</b> option, select the scope for this right. Scopes range from <b>This folder, subfolders, and documents</b>, which will affect all the documents and folders under this one, to <b>This entry only</b>, which will only affect the specified entry. You can use scope to determine how much of the folder tree this right will apply to.</li>
+            <li>Select the rights you want to grant or deny to this trustee. <b>Allow</b> grants the right and <b>Deny</b> denies it. If neither Allow or Deny is selected, the trustee will not be granted the rights to perform the specified action, but can inherit the right from higher in the folder tree. An explicit Allow or Deny, on the other hand, takes precedence over rights inherited from higher in the folder tree.
+			<p class="note"><b>Note:</b> If more than one right applies to a user on the same level--for instance, if they belong to one group that has been set to Allow and another set to Deny--rights will be calculated in this way:&#160;Deny takes precedence over Allow, and Allow takes precedence over no rights configured.&#160;However, if the conflict is between rights set explicitly on an entry and rights inherited from higher in the folder tree, the explicitly-configured rights will take precedence.</p></li>
+            <li>Click <b>Save</b> to save your new access right configuration.</li>
+        </ol>
+        <h2 class="topicheading">Viewing Effective Rights</h2>
+        <p>The <b>Effective Rights</b> tab of the Access Rights dialog box provides a simple interface for determining what actions a particular user can perform on the selected entry. It takes into account all rights, both explicitly set and inherited. By default, the Effective Rights tab will display your effective rights, but you can type another user name in the <b>Select another trustee option</b> to view effective rights for another user or group.</p>
+        <h2 class="topicheading">List of Access Rights</h2>
+        <p>Each operation 
+ on a document or folder has a set of required entry access rights. If 
+ the user attempting the action does not have the necessary rights, the 
+ user is denied permission to perform the operation.</p>
+        <p>The following is a list of entry access rights:</p>
+        <ul type="disc">
+            <li><b>Browse:</b>&#160;The ability to see if a document, folder, or shortcut exists.</li>
+            <p class="note"><b>Note:</b> The Browse entry access right is not sufficient to open a folder or a document. The Read entry access right is also required.</p>
+            <li><b>Read:</b> The ability to see the contents of a folder or document.</li>
+            <li><b>Modify Contents:</b>&#160;The ability to modify the contents of a document, including adding, removing, or modifying pages, making changes to an electronic document, or generating text from a document. Implicitly grants the <b>Read </b>right.</li>
+            <li><b>Append Data:</b>&#160;The ability to add pages to a document or move existing pages into a document. If a document has not already been assigned text, this right grants the ability to generate the text of a document via OCR. It does not grant the ability to reorder or remove pages. Implicitly grants the <b>Read </b>right.</li>
+            <li><b>Delete Entry:</b> The ability to delete a document or folder. When deleting a folder, 
+ you must also have the necessary rights to delete all entries that reside 
+ in the folder. This right does not allow you to delete pages or text from 
+ a document.</li>
+            <li><b>Rename:</b> The ability to rename a document or folder.</li>
+            <li><b>Delete Document Pages:</b> The ability to delete pages from a document. Implicitly grants the <b>Read </b>right.</li>
+            <li><b>Annotate:</b> The ability to add, modify, and remove annotations (not including redactions) 
+ on a document. 
+ Adding and modifying redactions requires both this right and the <b>See Through 
+ Redactions</b> right. Implicitly grants the <b>Read</b> right.</li>
+            <li><b>See Through Redactions:</b> The ability to see through redactions and choose whether to export documents with redactions removed or intact. Implicitly grants the <b>Read </b>right. (By default, users connecting through Laserfiche WebLink will not be able to see through redactions even if they have been granted this right.)</li>
+            <li><b>Write Metadata:</b> The ability to manage the metadata assigned to an entry once it has been created, allowing a user to assign a template and field data to a document, as well as the ability to modify or delete document links and document versions and add or remove tags from documents and folders. (A user does not need this right to set metadata on an entry at the time it is created.) Implicitly grants the <b>Read </b>right.</li>
+            <li><b>Create Documents:</b> The ability to create documents or shortcuts.</li>
+            <li><b>Create Folders:</b> The ability to create folders.</li>
+            <li><b>Read Entry Security:</b> 
+ The ability to see the rights assigned to an entry. Note that users do not need this right to see their own effective rights.</li>
+            <li><b>Write Entry Security:</b> The ability to assign access rights on an entry. Implicitly grants the <b>Read entry security </b>right.</li>
+            <li><b>Set Last Review Date:</b> The ability to set, unset, or modify the review date on a vital record. </li>
+            <li><b>Close/Reopen Folder
+			:</b> The ability to close and reopen record folders, and file new records into closed record folders.</li>
+            <li><b>Add/Remove Hold:</b> The ability to add or remove holds on entries. </li>
+            <li><b>Set Event Time:</b> The ability to set, unset, or modify the event date on a record 
+				folder.  Set, unset, or modify the alternate retention event date. 
+			</li>
+        </ul>
+        <h2 class="topicheading">List of Scopes</h2>
+        <p>In addition to assigning entry access 
+ rights directly on a document or folder, you can also allow documents 
+ and folders to inherit the entry access rights assigned to a folder. To create a cohesive and consistent security policy, we recommend using inheritance wherever possible, rather than configuring security independently on individual documents.</p>
+        <p>Scope allows you to determine how far down the folder tree a particular right will be inherited. These range from the very broad (<b>This entry, subfolders, and documents</b>)&#160;to the very narrow (<b>This entry only</b>), with many options in between.</p>
+        <p>The following table lists the nine possible 
+ scopes and shows if the assigned entry access control rights will be applied 
+ to a particular entry when that scope is used. </p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the scopes that can be used to specify how far down the folder tree a particular entry access rights will be applied.">
+            <caption>Scopes for Entry Access Rights</caption>
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Scope</th>
+                    <th>Applies rights to selected 
+ entry</th>
+                    <th>Applies rights to subfolders 
+ in selected folder</th>
+                    <th>Applies rights to documents 
+ in selected folder</th>
+                    <th>Applies rights to all subsequent 
+ subfolders</th>
+                    <th>Applies rights to documents 
+ in all subsequent subfolders</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>This folder, subfolders, and documents
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>This folder and subfolders
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>This folder and its immediate children
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Subfolders and documents only</td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Subfolders only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Documents only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Immediate children only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Documents that are immediate children only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>This entry only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>&#160;</p>
+    </body>
+</html>

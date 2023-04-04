@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Work Schedules</h1>
+        <p>Work schedules define the business days and time zones in Workflow. When the <b>Exclude weekends and holidays</b> option is selected, workflow refers to the work schedule to determine what counts as a weekend or <a href="Holidays.htm" title="Click here to learn more." alt="Click here to learn more.">holiday</a>. When no work schedules are created, the date and time are defined by the business days  Monday through Friday, from 9 AM to 5 PM pacific time.</p>
+        <p>You can find the <b>Exclude weekends and holidays</b> option in the following activities:</p>
+        <ul>
+            <li><a href="../Workflow/Activities/Deadline.htm" title="Click here to learn more." alt="Click here to learn more.">Deadline</a>
+            </li>
+            <li><a href="../Workflow/Activities/Escalation.htm" title="Click here to learn more." alt="Click here to learn more.">Escalation</a>
+            </li>
+            <li><a href="../Workflow/Activities/Delay.htm" title="Click here to learn more." alt="Click here to learn more.">Delay</a>
+            </li>
+        </ul>
+        <h2 class="topicheading">Centralized List of Work Schedules
+</h2>
+        <p>The centralized list (in the image below) lets you browse and manage shared work schedules. When you select a schedule, you can view a brief summary in the right pane, which includes the schedule’s time zone, work hours, and selected holidays. You can use one work schedule from this list throughout process automation, by setting the schedule as the default.</p>
+        <p>
+            <img src="../../Images/work-schedule.png" />
+        </p>
+        <h2 class="topicheading">Setting the Default</h2>
+        <p>The first work schedule you create is automatically set as the default, meaning it is used when the <b>Exclude weekends and holidays</b> option is selected. It also means that all the dates and times you configure in your workflows are with respect to the time zone in this work schedule. When you create multiple work schedules, you can decide which work schedule you want to use by setting that schedule as the default. The default schedule has a flag placed to the left of its name and is included in the <b>Work Schedule Profile</b> section in the properties pane of the workflow designer.</p>
+        <p>To set the default:</p>
+        <ol>
+            <li>Select a work schedule.</li>
+            <li>Click <b>Set Default</b> on the top right.</li>
+            <li>Click <b>Yes</b>.</li>
+        </ol>
+        <h2 class="topicheading">Creating and Modifying a Work Schedule</h2>
+        <p>When you create a work schedule, you must specify the work hours and time zone of your organization. You can also include holidays. You can select the holidays you want to include from the centralized list of holidays. </p>
+        <p>To create a work schedule:</p>
+        <ol>
+            <li>Open the Settings page.</li>
+            <li>Click <b>New</b>.</li>
+            <li>Type a unique name for the work schedule.</li>
+            <li>Choose the time zone by which the schedule is observed.</li>
+            <li>Select the days you want to include as working hours. The days you exclude are counted as weekend days.</li>
+            <li>Specify the start and end times for each day in the workweek.</li>
+            <li><b>Optional</b>: Include the holidays that you want to observe.<p class="note"><b>Note:</b> Holidays must be added to the schedule in order for them to be recognized by workflows.</p></li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p class="note"><b>Note</b>: You can create up to <MadCap:snippetText src="../Snippets/object-limit.flsnp" /> work schedules. <a href="../Service-Limits.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about service limits</a></p>
+        <p>To modify a work schedule:</p>
+        <ol>
+            <li>Select a work schedule in the list.</li>
+            <li>Click <b>Edit</b> in the top right.</li>
+        </ol>
+    </body>
+</html>

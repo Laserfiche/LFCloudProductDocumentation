@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Assign Token Values</h1>
+        <p style="text-align: center;">
+            <img src="Images/assignTokenValuesCanvas.PNG" title="Assign Token Values activity" alt="Assign Token Values activity" />
+        </p>
+        <p>This activity creates new <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> and update the values of existing tokens.</p>
+        <p class="ex"><b>Example</b>: For an upcoming meeting, you want to know how many people added their signature to a multi-value Approver field on the agenda. You use the <b>Assign Token Values</b> activity to create a custom token, <b>Signature Count</b>, with a value of zero. You then add a <a href="For-Each-Value.htm" title="Click here to learn more." alt="Click here to learn more.">For Each Value</a> activity that goes over each signature in the Approver field. Inside the <b>For Each Value</b> activity, you place a <a href="Token-Calculator.htm" title="Click here to learn more." alt="Click here to learn more.">Token Calculator</a> activity configured to add 1 to the <b>Signature Count</b> token for each value found in the Approver field. Also inside the For Each Value activity is an <b>Assign Token Values</b> activity that updates the <b>Signature Count</b> token with the value of the <b>Token Calculator</b> token. The resulting <b>Signature Count</b> token tells you how many people signed the agenda.</p>
+        <p>To create a new token:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>In the <b>Tokens</b> property box, click <b>Create...</b>.</li>
+            <li>Next to <b>Token name</b>, type a unique name for the token.</li>
+            <li><b>Optional</b>: Select <b>Allow token to have multiple values</b> to make the token a <a href="../Tokens-Regex/Tokens.htm#Multi-va" title="Click here to learn more." alt="Click here to learn more.">multi-value token</a>.</li>
+            <li>Under <b>Value</b>, type a token value. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            <li>Expand the <b>Token Tags</b> section and select the categories relevant to your new token. <a href="../Tokens-Regex/Token-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about token tags</a></li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p>To update an existing token:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>In the <b>Tokens</b> property box, click <b>Modify...</b>.</li>
+            <li>Next to <b>Activity</b>, select from where you want to get the token.</li>
+            <li>Next to <b>Token</b>, select the existing token.</li>
+            <li>Under <b>New value</b>, type a new value for the token. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p>To modify a token after creating or modifying it, click the <b>Edit</b> button <img src="../../../Images/Icon_Pencil_Blue.png" />. To delete a created or modified token, click the <b>Delete</b> button <img src="../../../Images/image92.png" />.</p>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

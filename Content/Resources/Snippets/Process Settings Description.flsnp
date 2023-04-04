@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="1" MadCap:lastHeight="69" MadCap:lastWidth="1830">
+    <body>The Process Options page, accessible from the Process Designer menu sidebar, lets you provide a custom name for process instances and the time zone the process will use for its time-based events, as well as configure whether to send an email notification if the process terminates.</body>
+    <head>
+    </head>
+</html>

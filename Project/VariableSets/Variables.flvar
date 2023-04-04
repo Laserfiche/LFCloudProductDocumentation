@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultVariableSet>
+  <Variable
+    Name="LF Connector"
+    Comment="">Laserfiche Connector</Variable>
+  <Variable
+    Name="Version"
+    Comment=""
+    EvaluatedDefinition="11">11</Variable>
+  <Variable
+    Name="LF Workflow"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Workflow">Laserfiche Workflow</Variable>
+  <Variable
+    Name="IE"
+    Comment=""
+    EvaluatedDefinition="Internet Explorer">Internet Explorer</Variable>
+  <Variable
+    Name="Zuora"
+    Comment=""
+    EvaluatedDefinition="Zuora">Zuora</Variable>
+  <Variable
+    Name="LF Web Client"
+    Comment=""
+    EvaluatedDefinition="Laserfiche web client">Laserfiche web client</Variable>
+  <Variable
+    Name="LF Mobile"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Mobile">Laserfiche Mobile</Variable>
+  <Variable
+    Name="LFDS"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Directory Server">Laserfiche Directory Server</Variable>
+  <Variable
+    Name="LF Discussions"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Discussions">Laserfiche Discussions</Variable>
+  <Variable
+    Name="LF Forms"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Forms">Laserfiche Forms</Variable>
+  <Variable
+    Name="LF Quick Fields"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Quick Fields">Laserfiche Quick Fields</Variable>
+  <Variable
+    Name="LF WebLink"
+    Comment=""
+    EvaluatedDefinition="Laserfiche WebLink">Laserfiche WebLink</Variable>
+  <Variable
+    Name="LF Import Agent"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Import Agent">Laserfiche Import Agent</Variable>
+  <Variable
+    Name="LF Federated Search"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Federated Search">Laserfiche Federated Search</Variable>
+  <Variable
+    Name="LF Account Administration"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Account Administration">Laserfiche Account Administration</Variable>
+  <Variable
+    Name="LF Cloud"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Cloud">Laserfiche Cloud</Variable>
+  <Variable
+    Name="LF Web Admin Console"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Web Administration Console">Laserfiche Web Administration Console</Variable>
+  <Variable
+    Name="LF Administration"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Administration">Laserfiche Administration</Variable>
+  <Variable
+    Name="LF Client"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Client">Laserfiche Client</Variable>
+  <Variable
+    Name="LF Server"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Server">Laserfiche Server</Variable>
+  <Variable
+    Name="LF Windows client"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Windows client">Laserfiche Windows client</Variable>
+  <Variable
+    Name="LF RM"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Records Management">Laserfiche Records Management</Variable>
+  <Variable
+    Name="Laserfiche QF Scanning"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Quick Fields Scanning">Laserfiche Quick Fields Scanning</Variable>
+  <Variable
+    Name="Audit Trail"
+    Comment=""
+    EvaluatedDefinition="Audit Trail">Audit Trail</Variable>
+  <Variable
+    Name="Audit Trail Web Reporter"
+    Comment=""
+    EvaluatedDefinition="Audit Trail Web Reporter">Audit Trail Web Reporter</Variable>
+  <Variable
+    Name="LF Scanning"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Scanning">Laserfiche Scanning</Variable>
+  <Variable
+    Name="LF Snapshot"
+    Comment=""
+    EvaluatedDefinition="Laserfiche Snapshot">Laserfiche Snapshot</Variable>
+  <Variable
+    Name="OmniPage OCR"
+    Comment=""
+    EvaluatedDefinition="OmniPage OCR">OmniPage OCR</Variable>
+  <Variable
+    Name="Firefox"
+    Comment=""
+    EvaluatedDefinition="Firefox">Firefox</Variable>
+  <Variable
+    Name="Chrome"
+    Comment=""
+    EvaluatedDefinition="Chrome">Chrome</Variable>
+  <Variable
+    Name="Microsoft Edge"
+    Comment=""
+    EvaluatedDefinition="Microsoft Edge">Microsoft Edge</Variable>
+  <Variable
+    Name="JavaScript"
+    Comment=""
+    EvaluatedDefinition="JavaScript">JavaScript</Variable>
+  <Variable
+    Name="Adobe"
+    Comment=""
+    EvaluatedDefinition="Adobe">Adobe</Variable>
+  <Variable
+    Name="SharePoint"
+    Comment=""
+    EvaluatedDefinition="SharePoint">SharePoint</Variable>
+  <Variable
+    Name="Microsoft Exchange"
+    Comment=""
+    EvaluatedDefinition="Microsoft Exchange">Microsoft Exchange</Variable>
+  <Variable
+    Name="Microsoft OneDrive"
+    Comment=""
+    EvaluatedDefinition="Microsoft OneDrive">Microsoft OneDrive</Variable>
+  <Variable
+    Name="Microsoft SQL Server"
+    Comment=""
+    EvaluatedDefinition="Microsoft SQL Server">Microsoft SQL Server</Variable>
+  <Variable
+    Name="Visual Studio"
+    Comment=""
+    EvaluatedDefinition="Visual Studio">Visual Studio</Variable>
+  <Variable
+    Name="Windows Server"
+    Comment=""
+    EvaluatedDefinition="Windows Server">Windows Server</Variable>
+  <Variable
+    Name="NewVariable"
+    Comment="" />
+  <Variable
+    Name="Microsoft Office"
+    Comment=""
+    EvaluatedDefinition="Microsoft Office">Microsoft Office</Variable>
+  <Variable
+    Name="Microsoft Word"
+    Comment=""
+    EvaluatedDefinition="Microsoft Word">Microsoft Word</Variable>
+  <Variable
+    Name="Microsoft Excel"
+    Comment=""
+    EvaluatedDefinition="Microsoft Excel">Microsoft Excel</Variable>
+  <Variable
+    Name="Microsoft PowerPoint"
+    Comment=""
+    EvaluatedDefinition="Microsoft PowerPoint">Microsoft PowerPoint</Variable>
+  <Variable
+    Name="Docusign"
+    Comment=""
+    EvaluatedDefinition="Docusign">Docusign</Variable>
+  <Variable
+    Name="Laser App"
+    Comment=""
+    EvaluatedDefinition="Laser App">Laser App</Variable>
+  <Variable
+    Name="Laser App Enterprise"
+    Comment=""
+    EvaluatedDefinition="Laser App Enterprise">Laser App Enterprise</Variable>
+  <Variable
+    Name="Laser App Anywhere"
+    Comment=""
+    EvaluatedDefinition="Laser App Anywhere">Laser App Anywhere</Variable>
+  <Variable
+    Name="Ellucian"
+    Comment=""
+    EvaluatedDefinition="Ellucian">Ellucian</Variable>
+  <Variable
+    Name="Redtail"
+    Comment=""
+    EvaluatedDefinition="Redtail">Redtail</Variable>
+  <Variable
+    Name="Salesforce"
+    Comment=""
+    EvaluatedDefinition="Salesforce">Salesforce</Variable>
+  <Variable
+    Name="Oracle"
+    Comment=""
+    EvaluatedDefinition="Oracle">Oracle</Variable>
+  <Variable
+    Name=".NET"
+    Comment=""
+    EvaluatedDefinition=".NET">.NET</Variable>
+  <Variable
+    Name="PeopleSoft"
+    Comment=""
+    EvaluatedDefinition="PeopleSoft">PeopleSoft</Variable>
+  <Variable
+    Name="Microsoft Dynamics"
+    Comment=""
+    EvaluatedDefinition="Microsoft Dynamics">Microsoft Dynamics</Variable>
+  <Variable
+    Name="Gmail"
+    Comment=""
+    EvaluatedDefinition="Gmail">Gmail</Variable>
+  <Variable
+    Name="QuickBooks"
+    Comment=""
+    EvaluatedDefinition="QuickBooks">QuickBooks</Variable>
+  <Variable
+    Name="Banner"
+    Comment=""
+    EvaluatedDefinition="Banner">Banner</Variable>
+</CatapultVariableSet>

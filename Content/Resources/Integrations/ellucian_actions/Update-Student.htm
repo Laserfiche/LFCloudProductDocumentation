@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Update Student</title>
+    </head>
+    <body>
+        <h1>Update Student Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used to update the personal information of a student.</p>
+        <ul>
+            <li><b>Category:</b> Student</li>
+            <li><b>Supported in:</b> Workflow</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="UpdateStudentFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Person ID*</p>
+                    </td>
+                    <td>
+                        <p>A valid "Person ID" is not the "Banner ID", so do not confuse the two IDs. If unsure of the "Person ID" for a Student, it can be found via a <b>Search Student</b> action.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Name</p>
+                    </td>
+                    <td>
+                        <p>A Name may be mapped to the "empty" type. The user can update a Name that has the "empty" type mapping but cannot use the update action to create a new Name with the "empty" type (this can only be added during the creation of a student in the Banner system).</p>
+                        <p>A Student can have more than one name, so the Name type to update must be mapped in the connection object.</p>
+                        <p>Existing Name sub-fields not selected will remain the previous value, such as Name/Middle Name.
+							</p>
+                        <p>There is no particular format for the fields.</p>
+                        <p>
+                            <MadCap:toggler targets="UpdateStudentNameSubFields">See the Name sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="UpdateStudentNameSubFields">
+                            <li>First Name: May not be cleared.</li>
+                            <li>Last Name: May not be cleared.</li>
+                            <li>Middle Name: May be cleared.</li>
+                            <li>Pedigree: May be cleared.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Email/Email Address</p>
+                    </td>
+                    <td>
+                        <p>A Student can have more than one email type in Banner, so which email type the user wants to update must be mapped in the connection.</p>
+                        <p>A Student can have multiple emails of the same type.</p>
+                        <p>Acts as a put operation: if an email address of "type" already exists and an update with "type" is performed, then all the existing Email with that type will be overwritten.</p>
+                        <p>If the user sends an update request with an empty "Email/Email Address" field, then all emails of the mapped type will be removed.</p>
+                        <p>There is no particular format for the field.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Billing Address</p>
+                        <p>Mailing Address</p>
+                    </td>
+                    <td>
+                        <p>The fields for Billing Address and Mailing Address are identical.</p>
+                        <p>A Student can have more than one address type in Banner, so which address type the user wants to update must be mapped in the connection.</p>
+                        <p>A Student can only have one address for each type.</p>
+                        <p>Acts as a patch operation: if an Address of "type" already exists and an update is performed, then the old address and new address will be merged with preference for the new input (i.e. old Billing Address/State is "US-NC" and old Billing Address/City is "City1", and new Billing Address/City is "City2" but no Billing Address/State is provided then the updated address will have Billing Address/State as "US-NC" and Billing Address/City as "City2").</p>
+                        <p>Requires at least the "Address" field to create a new Address.</p>
+                        <p>
+                            <MadCap:toggler targets="UpdateStudentAddressSubFields">See the Address sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="UpdateStudentAddressSubFields">
+                            <li>Address: A list of strings. Any more than four will be cut off.</li>
+                            <li>City: Has no particular format.</li>
+                            <li>Country: A 3 letter ISO 3166-1 string (e.g. USA).</li>
+                            <li>Postal Code: Has a different format depending on the input for "country" and is validated so must follow the format of the Country selected.</li>
+                            <li>State: An ISO 3166-2 string (e.g. US-NC)</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Home Phone</p>
+                        <p>Mobile Phone</p>
+                    </td>
+                    <td>
+                        <p>A Student can have more than one Phone, so the Phone type  to update must be mapped in the connection object.</p>
+                        <p>A Student can have multiple Phones of the same type.</p>
+                        <p>Acts as a put operation: if a Phone/multiple Phones of "type" already exists and an update is performed, then all existing phones with that "type" will be overwritten.</p>
+                        <p>Requires the "Home/Mobile/Number" field to create a new Phone entry.</p>
+                        <p>
+                            <MadCap:toggler targets="UpdateStudentPhoneSubFields">See the Phone sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="UpdateStudentPhoneSubFields">
+                            <li>Country Code: A 4-character string the can have a preceding '+' (the 4 character limit includes the '+').</li>
+                            <li>Extension: A string that is at most 10 characters.</li>
+                            <li>Number: A string that is at least 1 character, can be any length but is cut off after 18 characters.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Ethnicity</p>
+                    </td>
+                    <td>
+                        <p>Updated by setting an "Ethnicity - ID (Value)" (Guid)</p>
+                        <p>Other associated fields will automatically be updated (Ethnicity - Description, Ethnicity - Title).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Marital Status</p>
+                    </td>
+                    <td>
+                        <p>Updated by selecting a "Marital Status - Marital Category(Value)"</p>
+                        <p>Other associated fields will automatically be updated (Marital Status - ID, Marital Status - Code, Marital Status - Title).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>SSN</p>
+                    </td>
+                    <td>
+                        <p>Updated by inputting a new value string.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Gender</p>
+                    </td>
+                    <td>
+                        <p>Updated by selecting a "Gender”.</p>
+                        <p>Available gender strings are:</p>
+                        <ul>
+                            <li>Male</li>
+                            <li>Female</li>
+                            <li>Unknown</li>
+                        </ul>
+                        <p>Genders are case sensitive.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Date of Birth</p>
+                    </td>
+                    <td>
+                        <p>Updated by selecting a new date</p>
+                        <p class="note"><b>Note:</b> you can use any valid date format (though through Lookup enter it via a date input box rather than single line input)</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Citizenship Country</p>
+                    </td>
+                    <td>
+                        <p>Updated by selecting a Country.</p>
+                        <p>Format: 3 letter ISO 3166-1 string.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output</h2>
+        <p>This action does not have any output tokens.</p>
+        <div class="note">
+            <p><b>Update Student Notes:</b> </p>
+            <p>For most Ellucian fields, adding the field to input and giving it no value will clear it.</p>
+            <p>For certain fields which type mapping (Billing/Mailing Address, Home/Mobile Phone, Email) to remove a full entry you must add each sub-field in the input and leave all of them empty. For example, if the user inputs an empty Home Phone/Number, Extension and Country Calling Code then all the existing home phones will be cleared.</p>
+        </div>
+    </body>
+</html>

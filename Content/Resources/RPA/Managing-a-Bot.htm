@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Managing Bots</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Managing Bots</h1>
+        <p>The Manage page lets you access and work with your bots, configure notification settings, and more. </p>
+        <h2>Getting to the Manage page</h2>
+        <ol>
+            <li>In Laserfiche Cloud, use the app picker to navigate to <b>Process Automation</b>, and then <b>Bots</b>. </li>
+            <li>Click the <b>Manage</b> at the top of the page. </li>
+        </ol>
+        <h2>Navigating to and searching for bots</h2>
+        <p style="font-weight: normal;">Bots are organized into four categories on the <b>Manage</b> page: All, Recent, Unpublished, and Deleted.</p>
+        <ul>
+            <li style="font-weight: normal;"><b>Navigate</b> to each category using the left menu. </li>
+            <li style="font-weight: normal;"><b>Search</b> for bots using  the search bar at the top of the page.</li>
+            <li style="font-weight: normal;"><b>Sort</b> bots by clicking on a column header.</li>
+        </ul>
+        <h2><a name="Viewing"></a>Viewing information about a bot</h2>
+        <ol>
+            <li>Select a bot, and select <b>Instances</b> in the right pane. </li>
+            <li>The <b>Instances</b> tab reports on the instances of the bot that ran in a specific timeframe. The card has the total number of instances started, completed, and terminated, as well as the average duration of all the instances within the specific timeframe.</li>
+            <li><b>Optional</b>:&#160;Click <b>Add Card</b> above the card to specify a new timeframe.</li>
+        </ol>
+        <h2>Working with bots on the Manage page</h2>
+        <ul>
+            <li><b><a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Edit a bot:</a></b> Double-click a bot to open it in the bot designer.</li>
+            <li><b><a href="Recording-a-Process.htm" title="Click here to learn more." alt="Click here to learn more.">Create a new bot:</a></b> Click the <b>New</b> button.</li>
+            <li><b>Run a bot:</b>  You can run published bots from the <b>Manage</b> page. <a href="Running-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about running a bot from a starting event or workflow</a>.</li>
+            <ol>
+                <li>Select the <a href="Editing-a-Bot.htm#Run," title="Click here to learn more." alt="Click here to learn more.">published</a> bot you want to run.</li>
+                <li>Click the play button <img src="../Images/playButton.png" title="Click to test the bot." alt="Play button. " /> . </li>
+                <li>Select to either run the bot locally or via a remote agent. <a href="Running-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                <li>Click <b><MadCap:concept term="RPA" />Open Laserfiche Bots WebLauncher.</b><ul><li>If you specified <a href="Editing-a-Bot.htm#Configur" title="Click here to learn more." alt="Click here to learn more.">input  parameters</a> for the bot, you'll be prompted to enter values for those parameters.</li></ul></li>
+            </ol>
+            <li><b>Configure Runtime Settings:</b> If you have multiple bot <a href="../Integrations/Remote-Agents/Queues.htm">queues</a>, you can configure the following<ul><li><b>Priority:</b> You can set the bot's priority so that it's run first (High), runs after high priority bots run (Normal), or runs after high and normal priority bots run (Low). To set bot priority, click the <b>Runtime Settings</b> tab and select a priority from the drop-down menu.</li><li><b>Assign to:</b> See the remote agent the bot is assigned to.</li><li><b>Capabilities required:</b> Capabilities ensure that the <a href="../Integrations/Remote-Agents/Queues.htm">queues</a> that run bots are allocated to the correct departments. Click <b>Add capability</b> to select the capabilities that pertain to your bot. </li><p class="ex"><b>Example</b>: If you created a bot for the Human Resources Department, you might select the "HR" capability to ensure the bot is run by machines dedicated to that department. The capabilities available will depend on how the dedicated bot <a href="../Integrations/Remote-Agents/Remote-Agents.htm">remote agent</a> is configured. </p></ul></li>
+            <li><b>Import a bot:</b> Bot import files (.lfrbi files) contain bots and their associated starting events. Bot draft files (.lfrbj files or .json files) only contain a draft of the bot. <ol><li>&#160;Click the <b>Import</b> button, then choose a .lfrbi, .lfrbj, or .json file to import. </li><li>After selecting a file, click <b>Next</b>.</li><li>If the bot you are importing has the same name as an existing bot or the timer starting event associated with your bot has the same name as an existing timer starting event, you can specify how to handle name conflicts. You can either replace the existing item with same name, rename the imported item, or discard the imported item. &#160;</li><li>Select the checkbox next to the bot to publish it. (Similarly, select the checkbox next to the timer starting event to enable it.)&#160;Only bots associated with .lfrbi files can be published. Click <b>Next</b>. </li><li>Review the import summary, and click <b>Finish</b>.</li></ol></li>
+            <li><b>Delete bots:</b> Select one or more bots from the list and click the trashcan button. Deleted bots are listed in the Deleted bots page accessed from the left menu. </li>
+            <li><b>Export bots:</b> Select one or more bots, and click the <b>Export</b> button. In the <b>Export Bots</b> dialog box, provide a name for the exported file, and click <b>Export</b>. Bot import files (.lfrbi files) contain bots and their associated starting events. Bot draft files (.lfrbj files or .json files) only contain a draft of the bot. </li>
+        </ul>
+        <h2>Getting notified about bots </h2>
+        <p> You can receive two types of notifications about a bot: </p>
+        <ul>
+            <li>Design notifications let you know when a bot definition is edited or published. </li>
+            <li>Instance notifications lets you know each time a bot starts, completes, or terminates. Instance notifications are only available for bots that run on remote agents. </li>
+        </ul>
+        <p>You can choose to receive in-app notifications and/or emails.</p>
+        <ol>
+            <li>On the <b>Manage</b> page, select the bot you want to receive notifications for.</li>
+            <li>In the details pane on the right, select the <b>Notifications</b> tab.</li>
+            <li>Select the notifications you want to receive. When you enable notifications, both email and in-application notifications are enabled automatically. </li>
+            <li>You can configure email options by clicking <b>Configure email settings...</b>. Use the <b>Email settings</b> column to turn set your email schedule:</li>
+            <ul>
+                <li><b>Never</b>: Turns off all email notifications.</li>
+                <li><b>Immediately</b>:&#160;Sends email notifications when a change occurs.</li>
+                <li><b>Digest</b>: Sends email notifications in a periodic report at 8 AM each day. If a bot has multiple events that occur in the same day, the digest will include only the latest information about the instance.</li>
+                <li><b>Both</b>: Sends email notifications when a change occurs and as a periodic report.</li>
+            </ul>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

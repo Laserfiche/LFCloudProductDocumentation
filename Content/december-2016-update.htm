@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>December 2016 Updates for <MadCap:variable name="DoNotTranslate.LF Cloud" /></h1>
+        <p>The December 2016 update of <MadCap:variable name="DoNotTranslate.LF Cloud" /> includes a variety of updates to multiple apps in <MadCap:variable name="DoNotTranslate.LF Cloud" />.</p>
+        <p>You can watch an overview of the new features here:</p><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/New-Features-in-Cloud-Dec-2016/New-Features-in-Cloud-Dec-2016.html"></iframe>
+        <h2><MadCap:variable name="DoNotTranslate.LF Forms" /> Updates</h2>
+        <p><MadCap:variable name="DoNotTranslate.LF Forms" /> introduces several exciting new features to make it easier to create and monitor processes.</p>
+        <ul>
+            <li><b>Business Process Library:</b> When creating new processes, you now have the option of selecting from an online library of common business processes that are pre-built for you. This provides a jump-start to automating processes and reduces the overhead of initial configuration and process creation. Processes in the business process library include process diagrams, forms, and briefcase files with template and field definitions that you can import into your <MadCap:variable name="DoNotTranslate.Laserfiche Repository" />. You can also configure these processes yourself to tailor them to your organization’s needs. As new processes are added to the business process library, you will continue to be able to import them and incorporate them into your <MadCap:variable name="DoNotTranslate.LF Forms" /> installation.</li>
+            <li><b>Performance Dashboard:</b> There is now a performance dashboard to supplement the operational dashboard. The performance dashboard allows you to view metrics on process instances started or finished over a specific time period. You can also break down instance duration by stages and view average duration of tasks within each stage, and drill down on task durations to see user completion times for specific tasks.</li>
+            <li><b>Operational Dashboard Updates:</b> The operational dashboard now includes more detailed information on user task distributions. View information like the top five users with the most assigned tasks for a process, and quickly view a list of all tasks assigned to one of the users. You can also now click on tasks in the list of all tasks in the process to view all instances of that task.</li>
+            <li><b>Process Diagram Updates</b>
+                <ul>
+                    <li>Signal Catch Event: Process designers can now insert <b>Signal Catch Event</b> objects anywhere in the process flow. Previously, the catch event could only be attached directly to user tasks or sub-processes.</li>
+                    <li>Repeat Timer: There is now a "repeat" option for timer events that are attached to user tasks and sub-processes.</li>
+                    <li>Split stage: Process diagram stage headers now include a <b>Split stage</b> option to facilitate creating new stages from existing stages.</li>
+                </ul>
+            </li>
+            <li><b>Forms Designer Updates</b>
+                <ul>
+                    <li>There is now a drop-down menu that lists out all available formulas when editing a field. On the <b>Advanced</b> tab, click <b>fx</b> to see the list of supported formulas.</li>
+                    <li>Forms now supports same row calculations in Tables and Collections. There are 3 new functions to support this feature. Use the INDEX, ROW, and <i>TableName.ColumnName</i> functions to retrieve values from specific cells in the table or collection. These new functions are also compatible with existing formulas like the SUM formula. For example, in a 3-column table, use the following formula in the third column to automatically sum the contents of first 2 columns:
+                    <p style="background-color: #dcdcdc;">=SUM(INDEX(Table_VariableName.Column_VarName1,ROW()),INDEX(Table_VariableName.Column_VarName2,ROW()))</p></li>
+                </ul>
+            </li>
+            <li><b>Editing Tasks </b>
+                <ul>
+                    <li>When working with your Forms tasks, there are now more options for updating and viewing tasks.</li>
+                    <li>You can reassign and modify the due dates of multiple tasks all at once on the Tasks page. You can also edit the priority of tasks from this page.</li>
+                    <li>Additionally, Forms now features improved responsive designs when viewing your task list on mobile devices. There are also new column options for the tasks list which let you display the information most important to your workflow.</li>
+                </ul>
+            </li>
+        </ul>
+        <h2><MadCap:variable name="DoNotTranslate.LF Web Client" /> Updates</h2>
+        <ul>
+            <li><b>Toolbar Configuration:</b> Users can now configure toolbars in the web client, displaying exactly the actions they need in both the folder browser and document viewer. In addition, administrators can configure the default toolbars for users and can lock down toolbars if they do not want individual users to modify their toolbar buttons.</li>
+            <li><b>Custom Actions and Tabs:</b> You can also now create custom tabs and custom actions within <MadCap:variable name="DoNotTranslate.Laserfiche" />. A custom tab allows an administrator to create a new tab in the details pane, dynamically displaying a <MadCap:variable name="DoNotTranslate.LF Forms" /> website or an external website in the folder browser or document viewer. A custom action is a customization or integration script added to the web client. These options allow you to extend <MadCap:variable name="DoNotTranslate.Laserfiche" /> for use with other line-of-business applications.</li>
+            <li><b>Web Client Reporting:</b> There are two new options for reporting. The <MadCap:variable name="DoNotTranslate.Laserfiche" /> security report options have been expanded to include a User Security Properties Report, which provides information about an individual user’s group membership, feature rights, privileges, security tags, and audit settings.  In addition, when generating a metadata report, you can now automatically have <MadCap:variable name="DoNotTranslate.Laserfiche" /> calculate the sum, average, minimum and maximum value for numerical properties.</li>
+            <li><b>General Enhancements:</b> <MadCap:variable name="DoNotTranslate.Laserfiche" /> has also added some quality-of-life features to this new release. You can also now email entire folders as ZIP files, and you can adjust the opacity of watermarks.</li>
+        </ul>
+        <h2><MadCap:variable name="DoNotTranslate.LF Cloud" /> <MadCap:variable name="DoNotTranslate.Account Administration (LF)" /> Updates</h2>
+        <p>Account Administrators can now provide single sign-on to <MadCap:variable name="DoNotTranslate.LF Cloud" /> through <MadCap:variable name="DoNotTranslate.Active Directory Federation Services" /> (<MadCap:variable name="DoNotTranslate.AD&#160;FS" />). Configure <MadCap:variable name="DoNotTranslate.LF Cloud" /> to connect to an <MadCap:variable name="DoNotTranslate.Active Directory Federation Services" /> identity provider and create <MadCap:variable name="DoNotTranslate.LF Cloud" /> federated user accounts that map to appropriate <MadCap:variable name="DoNotTranslate.Active Directory" /> user principal names. Properly mapped user accounts can click a <b>Sign in with AD FS</b> button on the sign-in page to sign in to <MadCap:variable name="DoNotTranslate.LF Cloud" /> without specifying an additional user name and password.</p>
+        <p MadCap:conditions="Default.Exclude"><MadCap:variable name="DoNotTranslate.LF Cloud" /> now includes single sign-on support with <MadCap:variable name="DoNotTranslate.Active Directory Federation Services" /> (<MadCap:variable name="DoNotTranslate.AD&#160;FS" />). On the <b>Settings</b> page in the <MadCap:variable name="DoNotTranslate.LF Cloud" /> <MadCap:variable name="DoNotTranslate.Account Administration (LF)" /> site, configure <MadCap:variable name="DoNotTranslate.LF Cloud" /> to access an <MadCap:variable name="DoNotTranslate.AD&#160;FS" /> identity provider. Then use the <b>Users</b> page to create and map <MadCap:variable name="DoNotTranslate.LF Cloud" /> federated user accounts with <MadCap:variable name="DoNotTranslate.Windows" /> <MadCap:variable name="DoNotTranslate.Active Directory" /> user principal names.</p>
+    </body>
+</html>

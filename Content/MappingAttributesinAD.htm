@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Mapping User Attributes &amp;&#160;Claims between Azure AD&#160;and Laserfiche Cloud </h1>
+        <p>When a user authenticates to the Laserfiche application, Azure AD issues the application a SAML token with information (or claims) about the user that uniquely identifies them. By default, this information includes the user's username, email address, first name, and last name. </p>
+        <p>The <b>Unique User Identifier (Name ID)</b> identifier value is a required claim and is important. The default value is <i>user.userprincipalname</i>. The user identifier uniquely identifies each user within the application. For example, if the email address is both the username and the unique identifier, set the value to <i>user.mail</i>.</p>
+        <p class="note"><b>Note</b>: To learn more about user attributes &amp;&#160;claims&#160;or how to customize claims in Azure AD, see <a href="https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-saml-claims-customization" target="_blank">How to: customize claims issued in the SAML token for enterprise applications</a>.</p>
+        <h2>Attribute Mappings in Laserfiche Cloud</h2>
+        <ol>
+            <li>Navigate to Laserfiche Cloud and sign in.</li>
+            <li>Click the <b>Settings</b> tab under <b>Account Administration</b>. </li>
+            <li>Click <b>Single Sign-On</b> tab. </li>
+            <li>Click the <b>Attribute Mappings</b> tab. </li>
+            <li>Enter the attribute <b>Name</b> that you specified in Azure AD. Do not use the attribute <b>Value</b>. </li>
+            <li>Once finished, click <b>Save changes</b>. </li>
+        </ol>
+    </body>
+</html>

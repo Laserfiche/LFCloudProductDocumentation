@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Advanced Testing Concepts</title>
+    </head>
+    <body>
+        <h1>Advanced Testing Concepts</h1>
+        <h2 class="topicheading">When and How?</h2>
+        <p>The right time to test a workflow is not at the very end. The right time to test it is throughout the creation process. The more processing added to the workflow before testing, the more variables there are to account for if and when something undesired happens. Depending on the complexity of the workflow, this may take a fair amount of time.</p>
+        <p>By getting into the habit of testing the workflow early and often,  time spent troubleshooting a workflow definition is minimized.</p>
+        <p>The habit  to cultivate while designing workflows is one of incremental testing. Incremental testing is accomplished by adding a small amount of manageable activities to the canvas and testing them. Test them by creating a document in the repository specifically designed to meet the criteria of the activities added and configured in the workflow. Using this method from the beginning provides assurance that what is built is working as intended.</p>
+        <h2 class="topicheading">Starting Events</h2>
+        <p>The earliest point when a workflow can engage with a document would be the <a href="../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting events</a>. Because we can begin building a workflow without being prompted to define our starting events, it can be very enticing to define starting events after completing a workflow definition. In this case, the starting events would be defined as part of the publishing process.</p>
+        <p>Instead, we recommend that starting events be one of the first items tested. That is not to say we recommend publishing a blank canvas just to test out the starting events. But it should be one of the elements that is working as intended during our first incremental test.</p>
+        <p>Starting events should also be configured to be as efficient as possible, from most specific rule to least specific rule.</p>
+        <h2 class="topicheading">Testing Activities</h2>
+        <p>As we begin testing, our goal is to test the starting events and all the activities on the canvas. To achieve this, we systematically create documents to travel down all branches and activities on our canvas.</p>
+        <h2 class="topicheading">Troubleshooting and additional techniques</h2>
+        <p>When necessary, the following techniques can be used to isolate areas of a workflow that are suspected of causing unintended behavior. These techniques can help to determine where an issue starts, or whether they are causing other steps to have errors.</p>
+        <h3 class="topicheading">Disabling Activities</h3>
+        <p>Disable an activity in your workflow to stop it from being performed. Disabled activities are skipped. You may want to disable activities if you only want to test specific sections of your workflow.</p>
+        <p>To disable an activity</p>
+        <ol>
+            <li>Click the activity on the canvas.</li>
+            <li>Uncheck <b>Enable</b> in the Properties pane.</li>
+            <li>Publish the workflow.</li>
+        </ol>
+        <h3 class="topicheading">Enabling and Disabling Branches</h3>
+        <p>For activities that contain branches, you can change the operational status for each branch. Disabled branches are not run when the workflow runs and will be grayed-out in the Designer Pane. All branches are enabled by default. You may want to disable branches if you only want to test specific sections of your workflow.</p>
+        <p>To disable branches</p>
+        <ol>
+            <li>Click an activity's branch on the canvas.</li>
+            <li>Uncheck <b>Enable</b> in the Properties pane.</li>
+        </ol>
+        <p>Once testing of the disabled items is complete, select and re-check Enable for each item, then republish the workflow.</p>
+    </body>
+</html>

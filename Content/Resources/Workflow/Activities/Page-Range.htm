@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="3" MadCap:lastHeight="1057" MadCap:lastWidth="1172" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Page Range</h1>
+        <p>When it is possible to determine a page range for activities in Workflow, you can specify certain pages or a range according to the following formatting guidelines.</p>
+        <h2>List of Pages</h2>
+        <p>You can specify a comma delimited list of pages.</p>
+        <blockquote class="ex">
+            <p><b>Example</b>: 1, 2, 5, 7</p>
+            <p><b>Result</b>: 1, 2, 5, 7</p>
+        </blockquote>
+        <h2>Range of Pages</h2>
+        <p>You can also specify a range of pages. The starting and ending numbers in the range determine the first and last pages to be processed.</p>
+        <blockquote class="ex">
+            <p><b>Example</b>: 1-7</p>
+            <p><b>Result</b>: 1, 2, 3, 4, 5, 6, 7</p>
+        </blockquote>
+        <h2>Steps</h2>
+        <p>You can specify a step for the pages the process will run on. This is particularly useful if you want a process to run on only even or odd pages.</p>
+        <blockquote class="ex">
+            <p><b>Example</b>: 1@</p>
+            <p><b>Result</b>: 1, 3, 5, 7...</p>
+        </blockquote>
+        <blockquote class="ex">
+            <p><b>Example</b>: 2@</p>
+            <p><b>Result</b>: 2, 4, 6, 8...</p>
+        </blockquote>
+        <p>The default step value is 2, as demonstrated above, but you can specify a different step value.</p>
+        <blockquote class="ex">
+            <p><b>Example</b>: 1@3</p>
+            <p><b>Result</b>: 1, 4, 7, 10...</p>
+        </blockquote>
+        <h2>Combination</h2>
+        <p>The above formats can be combined to create a custom page range.</p>
+        <blockquote class="ex">
+            <p><b>Example</b>: 2, 3-10@3</p>
+            <p><b>Result</b>: 2, 3, 6, 9</p>
+        </blockquote>
+        <h2>Tokens</h2>
+        <p>You can select a token to specify a page number or part of a page range.</p>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

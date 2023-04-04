@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <MadCap:breadcrumbsProxy />
+        <MadCap:snippetBlock src="../Resources/Snippets/Redirect-to-nonCloud.flsnp" />
+        <MadCap:bodyProxy />
+        <div class="footer" id="myfooter">
+            <div id="shoe">
+                <nav class="footernav"><a href="https://signin.laserfiche.com/" target="_parent">Laserfiche Cloud</a><a href="https://status.laserfiche.com/" target="_parent">Service Status</a><a href="https://www.laserfiche.com/contact-laserfiche" target="_parent">Contact Laserfiche</a> <a href="../Resources/Copyright.htm">© 20223 Laserfiche</a></nav>
+            </div>
+        </div>
+    </body>
+</html>

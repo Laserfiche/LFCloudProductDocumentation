@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="1716" MadCap:lastWidth="1050" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Preparing a Document with Merge Fields</h1>
+        <p>You can use two types of merge fields, both of which have the syntax <span style="font-size: 8pt;">&lt;&lt;</span><i>Field Name</i><span style="font-size: 8pt;">&gt;&gt;</span>. You can use simple merge fields to update a Word document with specific values in a data source. You can use table merge fields to fill out a table in a Word document for each row in a data source. This document describes how you can add merge fields to your document to take advantage of the document merge rule's functionality.</p>
+        <p class="ex"><b>Example</b>: You want to create an invoice template that includes a customer’s billing address, invoice number, and purchase details. You can add merge fields for the billing address and invoice number, and then, with a table, you can define a region called "MyItem" in the second row that is replaced with specific items that the user orders. This looks like: </p>
+        <p>
+            <img src="../../../Images/prepdoc.png" />
+        </p>
+        <h2 id="adding-simple-merge-fields" class="topicheading">Adding Simple Merge Fields</h2>
+        <ol>
+            <li>Open a Microsoft Word document.</li>
+            <li>Click where you want to place a merge field.</li>
+            <li>In the <b>Insert</b> tab, click <b>Quick Parts</b> and then <b>Field…</b>.</li>
+            <li>Under <b>Categories</b>, select <b>(All)</b>.</li>
+            <li>Under <b>Field names</b>, select <b>MergeField</b>.</li>
+            <li>Type the name of the merge field under <b>Field name</b>.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p class="note"><b>Note</b>: You cannot manually insert brackets to generate a merge field.</p>
+        <h2 class="topicheading">Editing Simple Merge Fields</h2>
+        <ol>
+            <li>Right-click the merge field.</li>
+            <li>Click <b>Edit Field…</b>.</li>
+            <li>Provide updated information in the dialog.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p class="ex"><b>Tip</b>: To insert a field quickly, press Ctrl + F9 and then edit the field.</p>
+        <h2 class="topicheading">Adding Table Merge Fields</h2>
+        <p>When you create a field merge table in Word, you need to define the region in a table row in which you are going to replace the data. You can do this using specially named starting and ending merge fields.</p>
+        <ol>
+            <li>Open a Microsoft Word document.</li>
+            <li>Add a table with two rows. In the first row, include headers for the table. In the second, define the updated region.</li>
+            <li>In the first column of the second row, add a field merge called “TableStart:<i>MyObject</i>” and replace “<i>MyObject</i>” with the name for the region.</li>
+            <li>In the last column of the second row, add a field merge called “TableEnd:<i>MyObject</i>” and replace “<i>MyObject</i>” with the name for the region.</li>
+            <li>After the first field merge and before the last field merge, add simple merge fields for each column header.</li>
+        </ol>
+    </body>
+</html>

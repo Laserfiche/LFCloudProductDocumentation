@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" MadCap:changes="2" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Token Formatting</h1>
+        <p>
+            <MadCap:concept term="Connector;Quick Fields" />You can apply formatting to tokens so that the information that  replaces them will automatically fit certain characteristics, such as a  certain date format, percentage, currency, decimal, number of digits, or  other formatting. </p>
+        <p>Most Laserfiche products (with the exception of Workflow and Quick Fields) use ICU formatting to format date, time, and number tokens:</p>
+        <ul>
+            <li><a href="https://unicode-org.github.io/icu/userguide/format_parse/numbers/" target="_blank" title="Click to learn more." alt="Click to learn more.">ICU&#160;Numeric Formatting</a>
+            </li>
+            <li><a href="https://unicode-org.github.io/icu/userguide/format_parse/datetime/" target="_blank" title="Click to learn more." alt="Click to learn more.">ICU Date/Time Formatting</a>
+            </li>
+        </ul>
+        <p>In Workflow and Quick Fields, the Token Dialog will help you insert and test token formatting. Use .NET formatting to format tokens in these products:</p>
+        <ul>
+            <li value="1"><a href="Token-Formatting-Numeric.htm" title="Click here to learn more." alt="Click here to learn more.">.NET Numeric Formatting</a>
+            </li>
+            <li value="2"><a href="Token-Formatting-Date-And-Time.htm" title="Click here to learn more." alt="Click here to learn more.">.NET Date/Time Formatting</a>
+            </li>
+        </ul>
+        <h2>Syntax</h2>
+        <p>
+            <MadCap:concept term="Laserfiche" />The standard for formatting a token is %(<i>token</i>#"<i>expression</i>"#), where <i>token</i> is the name of the token and <i>expression</i> is a formatting expression. Laserfiche Connector has a slightly different syntax that requires a semi-colon to separate the token name and the formatting option: %(<i>token</i><b>;</b><i>expression</i>),</p>
+        <p class="ex"><b>Example:</b> Sally wants to format the token for the field in "Code" in Workflow to always have four digits. She changes the Code token so it reads <b>%(Code#"D4"#)</b>. If <b>23</b> is inserted in a token with this format, the result will be <b>0023</b>.</p>
+        <p class="ex"><b>Example:</b> John wants to format the token for the field "Date" in Workflow to use the full month name and four-digit year. He changes the Date token so it reads <b>%(Date#"MMMM, yyyy"#)</b>. If 07/04/15 is inserted into a token with this format, the result will be July, 2015. </p>
+        <p class="note"><b>Note:</b> The regional settings such as date  and currency are Windows regional settings found in the Control Panel  for the computer.</p>
+    </body>
+</html>

@@ -1,0 +1,435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="3486" MadCap:lastWidth="867">
+    <head><title>Laser App Tokens</title>
+    </head>
+    <body>
+        <h1>Laser App Enterprise Tokens</h1>
+        <p>You can use Laser App Enterprise tokens to dynamically populate Laserfiche fields or construct a dynamic document name or folder location for Laser App forms stored in Laserfiche. For instruction on configuring these properties, see <a href="Configure_LaserApp_E.htm">Configuring and Using the Laser App Enterprise Integration</a>.</p>
+        <p>The following tables list supported Laser App Enterprise tokens.</p>
+        <p><b>ContactRecord Tokens</b>
+        </p>
+        <p>ContactRecord tokens represent client information from Laser App's <b>Contact Data</b> Data View.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>ContactRecord Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.CLIENT_ID)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Unique identifier for the client's contact record.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.ClientFirstName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Client first name.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.ClientLastName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Client last name.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.ClientMI)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Client middle initial.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.CompanyName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Company name.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.SpouseFirstName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Spouse first name.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.SpouseLastName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Spouse last name.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.SpouseMI)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Spouse middle initial.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ContactRecord.TrustPlanName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Trust plan name.</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>ControlData Tokens</b>
+        </p>
+        <p>ControlData tokens represent information about the <b>Save to Laserfiche</b> trusted application in Laser App.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ControlData tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>ControlData Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(ControlData.ConfirmCode)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">OK</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.DataPersistence)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.DPostFormat)</td>
+                    <td class="tabletext">Integer</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.DPostURL)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.HelpURLDesc)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ControlData.HostDesc)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Import Laser App forms to Laserfiche</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ControlData.HostName)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Save to Laserfiche</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ControlData.OnlineHelpUrl)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">http://www.laserfiche.com/support/webhelp/Laserfiche/9.2/en-US/UserGuide/Laserfiche_Client.htm#WebImportServices/LaserApp_Config.htm</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(ControlData.PostURL)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">http://<i>MyWebServer</i>/LaserAppReceiver/ReceivePDF</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.session)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.User1)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">User first name and last name.</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.User2)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.User3)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.User4)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.User5)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.XSLUrl)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.XTSAURL)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.XTSAURLPSS)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.XTSAURLUSR)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(ControlData.XTSAURLXRS)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>Forms Tokens</b>
+        </p>
+        <p>Forms tokens represent Laser App data about the form saved to Laserfiche. Details can be found in the Form Detail Information in Laser App. The 0 in each token name represents the index of each form when you save multiple forms to Laserfiche at once. Replace the integer with All to get data for all forms as a comma-separated list of the value for all forms in the bundle.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the Forms tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Forms Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(Forms.0.company)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Company</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.date)</td>
+                    <td class="tabletext">DateTime</td>
+                    <td class="tabletext">Date the form was sent</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.dsep)</td>
+                    <td class="tabletext">Integer</td>
+                    <td class="tabletext">Separator character</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.file)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Internal id</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.fnum)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Number</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.formnumber)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Number</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.ftype)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Type</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.ladesc)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Laser App program type</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.laver)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Laser App version number</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.locked)</td>
+                    <td class="tabletext">Boolean</td>
+                    <td class="tabletext">Whether the form is locked</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.majv)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Internal Ver.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.minv)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Internal Ver.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.name)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Form Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.pgs)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Number of pages in the form</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.regtype)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Registration type</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.revdate)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form detail information: Revised Data</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.sdformat)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">date format</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.signable)</td>
+                    <td class="tabletext">Boolean</td>
+                    <td class="tabletext">Whether the form is signable</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.subcat1)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form sub-category 1</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.subcat2)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Form sub-category 2</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(Forms.0.time )</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Time</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>BrokerData Tokens</b>
+        </p>
+        <p>BrokerData tokens represent information from Laser App's <b>Broker Data</b> Data View.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the BrokerData tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>BrokerData Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Address)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Address</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Branch)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Branch #</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Broker_No)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Broker #</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_City)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: City</td>
+                </tr>
+                <tr MadCap:conditions="Primary.Do Not Include">
+                    <td class="tabletext">%(BrokerData.brk_Code)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Email)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Email</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Fax)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Fax</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Firm_No)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Firm #</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Name)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: B/D Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_OSJ)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: OSJ Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Phext)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Phone Ext.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Phone)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Telephone</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_RIA)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: RIA Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_State)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: State</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Suite)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Ste./PO Box</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">%(BrokerData.brk_Zip)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Broker/Dealer Information: Zip code</td>
+                </tr>
+            </tbody>
+        </table>
+        <p><b>UserCustomData Tokens</b>
+        </p>
+        <p>The integration supports retrieving the values from any custom fields that you specified when downloading the Laser App configuration file (<b>TrustedApp.~ls</b>) from the Laser App configuration file download page. For instance, if you configured the Laser App integration to request a "Full Name"&#160;field to create a "FullName" token, the resulting token would be <span style="white-space: nowrap;" class="Code">%(UserCustomData.FullName)</span>.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the UserCustomData tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>UserCustomData Tokens in Laser App</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Token</th>
+                    <th>Type</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">%(UserCustomData.<i>YourCustomFieldName</i>)</td>
+                    <td class="tabletext">String</td>
+                    <td class="tabletext">Correspondes to the name of a custom field in the .~ls file.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="1153" MadCap:lastWidth="1011" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Pattern Matching</h1>
+        <p style="text-align: center;">
+            <img src="Images/patternMatchingCanvas.PNG" title="Pattern Matching activity" alt="Pattern Matching activity" />
+        </p>
+        <p>This activity creates custom <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> using <a href="../Tokens-Regex/Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expressions</a> that look for information that follows a specific pattern. A token is a placeholder for a value that is determined when a workflow runs.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Regular Expression Tokens</b> property box, click <b>New pattern...</b> to create a custom token.</li>
+            <li>Next to <b>Token Name</b>, type a name for your custom token.</li>
+            <li>Next to <b>Input</b>, type the value you want your pattern to apply to. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>. </li>
+            <li>Next to <b>Pattern</b>, type a regular expression or click the <b>Pattern Matching</b> button <img src="../../../Images/Icon_Pattern_Matching.png" /> to build a regular expression that will extract the desired information from the input. <a href="../Tokens-Regex/Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">Show me a list of regular expressions</a></li>
+            <li>Select <b>Allow tokens in the expression</b> to have tokens in your pattern be replaced by their value when the activity runs. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>. You may want to clear this checkbox if you have regular expression syntax that you don't want mistaken for a token. If this checkbox is cleared, tokens will not be replaced and token syntax will be interpreted as regular expression syntax.</li>
+            <li>Under <b>Options</b>, clear <b>Case sensitive</b> if you do not want the pattern matching process to differentiate between capital and lowercase letters. Otherwise, leave it.</li>
+            <li>In the drop-down under <b>If multiple matches are found</b>, specify the number of matches you want to return with the following options:<ul><li><b>First match only</b>: Returns only the first value that matches the pattern.<p class="ex"><b>Example</b>: The input <b>123 456 789</b> with the pattern <b>[0-9]+</b> returns <b>123</b>.</p></li><li><b>All matches (combined with no spaces)</b>: Returns all values as a single-valued token.<p class="ex"><b>Example</b>: The input <b>123 456 789</b> with the pattern <b>[0-9]+</b> returns <b>123456789</b>. It ignores the characters that do not match the pattern.</p></li><li><b>All matches (as multi-value token)</b>: Returns all values as a multi-value token.<p class="ex"><b>Example</b>: The input <b>123 456 789</b> with the pattern <b>[0-9]+</b> returns <b>123</b>, <b>456</b>, and <b>789</b> in a multi-value token.</p></li></ul></li>
+            <li><b>Optional</b>:&#160;Click <b>Click here to test the pattern</b> to validate your token. In the testing area, type a sample value in the <b>Test Input</b> text box. The information your regular expression extracted from the sample input value will appear under <b>Result</b>.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <p>In the <b>Regular Expression Tokens</b> property box, you can continue to edit the token by clicking the <b>Edit</b> button <img src="../../../Images/Icon_Pencil_Blue.png" /> or delete the token by clicking the <b>Delete</b> button <img src="../../../Images/Icon_Delete.png" />.</p>
+        <p class="note"><b>Note</b>: You can use tokens created with this activity to create more tokens within the same activity. To reference a token created in this activity, the referenced token must be listed before the token that refers to it in the <b>Regular Expressions Tokens</b> property box.</p>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

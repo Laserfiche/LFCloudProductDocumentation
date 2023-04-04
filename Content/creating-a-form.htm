@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Forms">
+    <head>
+    </head>
+    <body>
+        <h1>Creating a Form</h1>
+        <p>Forms capture information within a business process. To create a form, first create the business process that it is a part of. Forms only exist within a specific process. There are several places in <MadCap:variable name="DoNotTranslate.LF Forms" /> where you can create a form.</p>
+        <p><b>From the sidebar</b>
+        </p>
+        <ol>
+            <li>Under the <b>FORMS</b> section, click <b>Create New Form</b>.</li>
+            <li>Name the form and click <b>Create</b>.</li>
+        </ol>
+        <p><b>From the Process Designer</b>
+        </p>
+        <ol>
+            <li>In the configuration pane for a message event or user task, in the From drop-down list, click <b>Create New Form</b>.</li>
+            <li>Name the form and click <b>Create</b>.</li>
+        </ol>
+        <p class="note"><b>Note:</b> Form names cannot be longer than 50 characters.</p>
+        <p>The Edit page allows you to configure fields on a form. Your changes to the form will be automatically saved. To see a preview of your form, click <img src="../../../Trunk/English/Administration/Subprojects/Forms/Content/Resources/Images/FormPreview.png" title="form preview icon" alt="form preview icon"></img><b>Preview</b>.</p>
+        <p>
+            <img src="Resources/Images/FormEditor.png" MadCap:targetName="form designer" alt="Form Editor" title="To create a form, drag fields onto canvas" style="width: 856px;height: 715px;" />
+        </p>
+        <h2>Available Form Fields</h2>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Form Field Type</b>
+                    </td>
+                    <td class="tableheading"><b>Description</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Single Line</td>
+                    <td class="tabletext">Single line fields are the least specialized of all the field types in <MadCap:variable name="DoNotTranslate.LF Forms" />. They accept numbers and characters, making them well suited for accepting names, numbers, and many other values. If there's a chance that the user filling in this field will enter a combination of characters and numbers, you should use a single line field rather than a more specialized one.
+                        <p>Single line fields are also incredibly useful because you can use regular expressions with them to restrict what the field accepts. In addition, single line fields can accept <MadCap:variable name="DoNotTranslate.HTML" /> input.</p></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Multi-line Fields</td>
+                    <td class="tabletext">Multi-line fields are very similar to single line fields in that they accept numbers and characters. Multi-line fields cannot use regular expressions and are most useful for allowing users to enter a lot of text in a large field. When configuring multi-line fields, you can specify how many lines high the field should be. Like single line fields, multi-line fields can accept <MadCap:variable name="DoNotTranslate.HTML" /> input.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Radio Button, Checkbox, and Drop-Down Fields</td>
+                    <td class="tabletext">These fields allow the user to select from a predetermined list of options.
+                        <ul><li>Use a radio button field when the user must select one option from a small amount of options.</li><li>Use a checkbox field when the user can select more than one option.</li><li>Use a drop-down field when the user must select one option from a long list of options.</li></ul></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">File Upload Fields</td>
+                    <td class="tabletext">File upload fields allow users to upload files that will be saved along with the form. You can specify the maximum file size and the file extensions that file upload fields will accept.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Address</td>
+                    <td class="tabletext">
+                        <p>Address fields are a collection of input boxes that are formatted to accept addresses. Address fields include input boxes for:</p>
+                        <ul>
+                            <li>Street Address</li>
+                            <li>Address Line 2</li>
+                            <li>City</li>
+                            <li>State / Providence / Region</li>
+                            <li>Postal / Zip Code</li>
+                            <li>Country</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Number</td>
+                    <td class="tabletext">
+                        <MadCap:concept term="Forms" />Number fields are a specialized field type in <MadCap:variable name="DoNotTranslate.LF Forms" /> that only accepts numbers. Additionally, you can easily specify a default range of accepted values.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Email</td>
+                    <td class="tabletext">Email fields are a specialized field type that checks the value a user enters to ensure that it is an email address. The field looks for an @  symbol to determine if the value is an email address.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Date and Time</td>
+                    <td class="tabletext">Date and time fields are specialized field types that accept dates and times. Date fields allow the user to select a date using a calendar picker or by typing in the input box. You can specify the date and time format and accepted range.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Currency</td>
+                    <td class="tabletext">Currency fields are a specialized field type that accepts numbers and shows the appropriate currency symbol.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Signature</td>
+                    <td class="tabletext">Signature fields are specialized fields that allow users to sign a form with a stylus, finger, or by entering their name. <MadCap:variable name="DoNotTranslate.LF Forms" /> users can configure a default signature in their Account settings.
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Geolocation</td>
+                    <td class="tabletext">Geolocation fields are a specialized field types that accept longitude and latitude coordinates for a location. If you are filling out a form from a device with location services enabled, this field can automatically get and store your current location. Adding this field to forms makes it easy to track where forms are filled out. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Custom HTML</td>
+                    <td class="tabletext">Unlike many of the options on the Form Designer palette, Custom <MadCap:variable name="DoNotTranslate.HTML" /> is not a field. Custom <MadCap:variable name="DoNotTranslate.HTML" /> lets you:
+                        <ul><li>Add rich text to your form. With this field, you can style instructions for sections of your form.</li><li>Insert a block of your own custom <MadCap:variable name="DoNotTranslate.HTML" /> structure onto the form. You can use Custom <MadCap:variable name="DoNotTranslate.HTML" /> to create scrolling text boxes, insert images, and more. You can use any valid <MadCap:variable name="DoNotTranslate.HTML" /> markup inside of the Custom <MadCap:variable name="DoNotTranslate.HTML" /> container. </li></ul></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Section</td>
+                    <td class="tabletext">Sections are visually distinct, collapsible segments of a form. Each field placed under a section is part of that section.
+                        <p>Sections can be read-only. For example, if you want a form to be read only but you still need users to sign it, put all the fields, except the Signature field, in a section and set it to read-only.</p></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Page Break</td>
+                    <td class="tabletext">Page breaks split a form into multiple pages or tabs. Each field placed in a page is part of that page. Pagination style options include displaying pages as:
+                        <ul><li>Tabs</li><li>A progress bar</li><li>A drop-down list</li></ul><p>Additional options include whether to display a previous and next button at the bottom of the form to navigate between pages.</p><p>The message start event submit button and user task action buttons are shown on the final page.</p><p>When a form is read-only, all pages are shown as in a single page format.</p></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Collection</td>
+                    <td class="tabletext">Collections are a structural element you can use to group fields together so they can be repeated as a set. To use a collection, drag it onto the canvas and then drag fields into the collection.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Table</td>
+                    <td class="tabletext">Tables are a special field type that allows you to create a table with a variety of field types available as columns. Tables can have repeatable rows or have a fixed number of rows.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

@@ -1,0 +1,650 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Audit Events</h1>
+        <p>The tables below list the event classes, the events within each class, and a description of what each event tracks. </p>
+        <p style="font-weight: bold;">Repository&#160;Catalog Events</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available audit event classes, and the audit events within each class.">
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Event Class</th>
+                    <th>Event</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Account</b>
+                    </td>
+                    <td>Assign Tag</td>
+                    <td>Tracks when a security tag is assigned to a user or group.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Change Group Membership</td>
+                    <td>Tracks when a user's group membership changes. For example, the member could be removed from a group or added to a different group, and this action would be tracked.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Change Password</td>
+                    <td>Tracks when a user's password is changed.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Trustee</td>
+                    <td>Tracks when a Laserfiche trustee (user or group) is created.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Trustee</td>
+                    <td>Tracks when a Laserfiche trustee (user or group) is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Group Watermark</td>
+                    <td>Tracks when a group watermark is created or deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Trustee</td>
+                    <td>Tracks when a trustee (Windows or Laserfiche) is renamed, disabled, had its privileges or feature rights changed, and/or has become read-only.</td>
+                </tr>
+                <tr>
+                    <td><b>Annotation</b>
+                    </td>
+                    <td>Create Annotation</td>
+                    <td>Tracks when an annotation is added to an image.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Annotation</td>
+                    <td>Tracks when an annotation is deleted from an image.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Annotation</td>
+                    <td>Tracks when any action is performed on an annotation (i.e., it moves around the page, its color changes, its text changes, etc), except when it is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Move Annotation to New Page</td>
+                    <td>Tracks when an annotation is moved to another page.</td>
+                </tr>
+                <tr>
+                    <td><b>Auditing</b>
+                    </td>
+                    <td>Change Audit Configuration</td>
+                    <td>Tracks when an audit configuration is changed.</td>
+                </tr>
+                <tr>
+                    <td><b>Electronic Data</b>
+                    </td>
+                    <td>Delete Alternate E-File
+</td>
+                    <td>Tracks when an alternate electronic file is deleted from an entry.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete E-File
+                    </td>
+                    <td>Tracks when an electronic file associated with an entry is deleted and the recycle bin is disabled. </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Purge E-File
+                    </td>
+                    <td>Tracks when an electronic file is purged from the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Recycle E-File
+                    </td>
+                    <td>Tracks when an electronic file associated with an entry is sent to the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Restore E-File
+                    </td>
+                    <td>Tracks when an electronic file is restored from the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Write Alternate E-File
+                    </td>
+                    <td>Tracks when an alternate electronic file is altered.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Write E-File Contents</td>
+                    <td>Tracks when an electronic document is opened, edited outside of Laserfiche, and saved as the same document, a new version of a document, or a new document.</td>
+                </tr>
+                <tr>
+                    <td><b>Entry</b>
+                    </td>
+                    <td>Add Document to Link Group</td>
+                    <td>Tracks when a document is added to a link group.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Assign Template</td>
+                    <td>Tracks when a template is assigned to a document or folder.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Change Entry Permissions</td>
+                    <td>Tracks when entry access rights are modified.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Check In Entry</td>
+                    <td>
+                        <p>Tracks when a document has been unlocked due to it being checked in.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Check Out Entry</td>
+                    <td>
+                        <p>Tracks when a document has been locked due to it being checked out.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Copy Entry</td>
+                    <td>Tracks when a document, folder, or shortcut is copied.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Copy Version</td>
+                    <td>Tracks when a document is created from a copy of a specific version of another document.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Document</td>
+                    <td>Tracks when a document is created.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Folder</td>
+                    <td>Tracks when a folder is created.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Shortcut</td>
+                    <td>Tracks when a shortcut is created.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Version</td>
+                    <td>Tracks when a new version of a document is created.  </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Entry</td>
+                    <td>Tracks when a document, folder, or shortcut is deleted. This event is tracked whether or not the recycle bin is enabled or disabled.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Version </td>
+                    <td>Tracks when a version of a document is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Edit Version Controlled Document</td>
+                    <td>Tracks when a version of a document is modified.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Enable Version Tracking</td>
+                    <td>Tracks when a document is placed under version control.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Link Entry</td>
+                    <td>Tracks when a link is added to or removed from a document. It also tracks when a link relationship is changed.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Version Comment</td>
+                    <td>Tracks when version comment text is modified.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Version Label</td>
+                    <td>Tracks when version label text is modified.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Move Entry</td>
+                    <td>Tracks when a document, folder, or shortcut is moved. It also tracks when an entry is renamed.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Purge Entry</td>
+                    <td>Tracks when an entry is purged from the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Recycle Entry</td>
+                    <td>Tracks when an entry is sent to the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Remove Document from Link Group</td>
+                    <td>Tracks when a document is removed from a link group.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Restore Entry</td>
+                    <td>Tracks when an entry is restored from the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Revert To Version</td>
+                    <td>Tracks when a document has been reverted to one of its previous versions.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Tag Entry</td>
+                    <td>Tracks when a tag is added to or removed from a document or folder.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Write Field Value</td>
+                    <td>Tracks when a value is added to, modified, or removed from a field assigned to a document or folder.</td>
+                </tr>
+                <tr>
+                    <td><b>Export and Print</b>
+                    </td>
+                    <td>Export Briefcase</td>
+                    <td>Tracks when a briefcase is exported from Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Export Document</td>
+                    <td>Tracks when a document is exported from Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Print Document</td>
+                    <td>Tracks when a document is printed from Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Share Document</td>
+                    <td>Tracks when a document has been shared from a Laserfiche repository through direct share. </td>
+                </tr>
+                <tr>
+                    <td><b>Metadata Definitions</b>
+                    </td>
+                    <td>Add Template Field</td>
+                    <td>Tracks when a field is added to a template.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Change Field Rights</td>
+                    <td>Tracks when field security is modified.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Change Template Rights</td>
+                    <td>Tracks when template security is modified.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Field</td>
+                    <td>Tracks when a field is created.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Template</td>
+                    <td>Tracks when a template is created. </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Field</td>
+                    <td>Tracks when a field is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Template</td>
+                    <td>Tracks when a template is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Field</td>
+                    <td>Tracks when an existing field definition is modified. For example, changing the Author field to be a required field will be tracked.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Template</td>
+                    <td>Tracks when a template name is changed.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Move Template Field</td>
+                    <td>Tracks when a field is reordered within a template.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Remove Template Field</td>
+                    <td>Tracks when a field is removed from a template.</td>
+                </tr>
+                <tr>
+                    <td><b>Page</b>
+                    </td>
+                    <td>Copy Pages</td>
+                    <td>Tracks when a page of a document is copied and pasted into the same or a new document.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Page</td>
+                    <td>Tracks when a new page is created inside a document using Laserfiche Scanning or Laserfiche Snapshot.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Pages</td>
+                    <td>Tracks when a page is deleted and the recycle bin is disabled.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Page</td>
+                    <td>Tracks when a page (via a document) is imported into a repository and when the text of a page is edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Move Pages</td>
+                    <td>Tracks when pages are moved within a document or to another document.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Purge Pages
+					</td>
+                    <td>Tracks when a page is purged from the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Recycle Pages
+					</td>
+                    <td>Tracks when a page is sent to the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Restore Pages
+					</td>
+                    <td>Tracks when a page is restored from the recycle bin.</td>
+                </tr>
+                <tr>
+                    <td><b>Privileged Operations</b>
+                    </td>
+                    <td>Create Link Type</td>
+                    <td>Tracks when a document relationship is created in a repository.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Tag</td>
+                    <td>Tracks when an informational or security tag is created.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Link Type</td>
+                    <td>
+                        <p>Tracks when a document relationship is deleted.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Tag</td>
+                    <td>Tracks when an informational or security tag is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Link Type</td>
+                    <td>Tracks when a document relationship is modified. For example, fixing an incorrect spelling would be tracked.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Modify Tag</td>
+                    <td>Tracks when a tag is modified. For example, adding a tag description or changing a tag from informational to security would be tracked.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Set Repository Options</td>
+                    <td>Tracks when any setting is changed under the <b>Repository Options</b> node. Also tracks when the recycle bin is enabled or disabled.</td>
+                </tr>
+                <tr>
+                    <td><b>Records Management Actions*</b>
+                    </td>
+                    <td>Add Hold*</td>
+                    <td>Tracks when a hold is added to a record folder, a record series, a Laserfiche folder, an electronic document, and/or a Laserfiche imaged document.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Close Record Folder*</td>
+                    <td>Tracks when a record folder is closed. Close is a unique records management action and does not refer to the standard opening/closing of a regular Laserfiche folder.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Confirm Final Disposition*</td>
+                    <td>Tracks when a user confirms the accession or destruction of a record folder.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Confirm Transfer*</td>
+                    <td>Tracks when a user confirms the transfer of a record folder to an interim location.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Cutoff Record Folder*</td>
+                    <td>Tracks when a record folder is cutoff.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Remove Hold</td>
+                    <td>Tracks when a hold is removed from a record folder, a Laserfiche folder, an electronic document, and/or a Laserfiche imaged document.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Reopen Record Folder*</td>
+                    <td>Tracks when a record folder is reopened. Reopen is a unique records management action and does not refer to the standard opening/closing of a regular Laserfiche folder.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Review Vital Record*</td>
+                    <td>Tracks when a user marks a vital record as reviewed.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Set Alternate Disposition Trigger Event*</td>
+                    <td>Tracks when a record folder's alternate retention schedule event date is set.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Set Event Date*</td>
+                    <td>Tracks when a record folder's event date is set.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Uncutoff Record Folder*</td>
+                    <td>Tracks when a record folder is uncutoff.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Unset Alternate Disposition Trigger Event*</td>
+                    <td>Tracks when a record folder's alternate retention schedule event date is unset.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Unset Event Date*</td>
+                    <td>Tracks when a record folder's event date is unset.</td>
+                </tr>
+                <tr>
+                    <td><b>Records Management File Plan*</b>
+                    </td>
+                    <td>Add Cutoff Instruction Event*</td>
+                    <td>Tracks when an event is added to a cutoff instruction. </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Add/Edit Calendar Cycle*</td>
+                    <td>Tracks when a calendar cycle is created or edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Add/Edit Cutoff Instruction*</td>
+                    <td>Tracks when a cutoff instruction is created, edited, or deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Add/Edit Event*</td>
+                    <td>Tracks when an event is created or edited in repository administration. The event can be associated with a cutoff instruction or retention schedule.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Add/Edit Location*</td>
+                    <td>Tracks when a location is created or edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Add/Edit Retention Schedule*</td>
+                    <td>Tracks when a retention schedule is created or edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Add/Edit Transfer*</td>
+                    <td>Tracks when an interim transfer is created or edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Create Record Series*</td>
+                    <td>Tracks when a record series is created or edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Calendar Cycle*</td>
+                    <td>Tracks when a cycle is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Cutoff Instruction*</td>
+                    <td>Tracks when a cutoff instruction is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Event*</td>
+                    <td>Tracks when an event, associated with either a cutoff instruction or retention schedule, is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Location*</td>
+                    <td>Tracks when a location is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Retention Schedule*</td>
+                    <td>Tracks when a retention schedule is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Delete Transfer*</td>
+                    <td>Tracks when an interim transfer associated with a retention schedule is deleted.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Edit Record Series/Folder*</td>
+                    <td>Tracks when a record series or folder is created or edited.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Remove Cutoff Instruction Event*</td>
+                    <td>Tracks when an event is removed from a cutoff instruction.</td>
+                </tr>
+                <tr>
+                    <td><b>Search</b>
+                    </td>
+                    <td>Search</td>
+                    <td>Tracks when a search of any type is performed.</td>
+                </tr>
+                <tr>
+                    <td><b>Session</b>
+                    </td>
+                    <td>Log Off</td>
+                    <td>Tracks when a user logs out of a Laserfiche repository.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Log On</td>
+                    <td>Tracks when a user logs into a Laserfiche repository.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Terminate Session</td>
+                    <td>Tracks when a user's session is terminated (disconnected) by an administrator.</td>
+                </tr>
+                <tr>
+                    <td><b>View Content</b>
+                    </td>
+                    <td>Browse Entry</td>
+                    <td>
+                        <p>Tracks when an entry is displayed in the repository.</p>
+                        <p><b>Note:</b>&#160;This audit event will log every time a user browses to a document, even if they do not open it. For instance, if a user opens a folder, this event will log every document that they can see in that folder, and if they perform a search, it will log every event in that search, even if they do not open any of the documents. Since this will result in a huge volume of logged events and very large audit logs, we recommend only enabling this option if your compliance policy requires you to do so.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>View Document</td>
+                    <td>Tracks when a document is opened and viewed in a repository.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>View Folder Contents</td>
+                    <td>Tracks when the contents of a folder are displayed in the repository.</td>
+                </tr>
+            </tbody>
+            <thead />
+            <tbody />
+        </table>
+        <p style="font-weight: bold;">General&#160;Catalog Events</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the available audit event classes, and the audit events within each class.">
+            <caption>&#160;</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Event Class</th>
+                    <th>Event</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><b>Direct Share</b>
+                    </td>
+                    <td>Disable Link</td>
+                    <td>Tracks when a direct share URL link has been disabled.</td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Download File</td>
+                    <td>Tracks when a file has been downloaded from a direct share URL link. </td>
+                </tr>
+                <tr>
+                    <td>&#160;</td>
+                    <td>Share File</td>
+                    <td>Tracks when a document has been shared through direct share. </td>
+                </tr>
+            </tbody>
+            <thead />
+            <tbody />
+        </table>
+        <p><b>Note:</b> To run a report on Direct Share events, you must first select General rather than Repository when creating the report. See <a href="Audit_Reports.htm#Creating">Creating an Audit Report</a> for more information.</p>
+        <p><b>Note:</b>  The audit events indicated by an asterisk (*) are only available for Laserfiche installations on which Records Management Edition has been enabled.</p>
+        <p><b>Note:</b> Some additional events may appear in your reports. These are related to back-end features and may be ignored. These events are Modify Email, Profile, Register Email Profile, and Unregister E-mail Profile.</p>
+    </body>
+</html>

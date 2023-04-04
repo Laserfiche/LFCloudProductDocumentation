@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" MadCap:changes="7" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Laserfiche;Quick Fields" />Helpful Regular Expressions for Repository Administration</h1>
+        <p>The following reference is an abridged list of <a href="Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">regular expressions</a> that are particularly helpful in forming text field constraints that will be applied in the web client and Windows client. Additionally, it contains a table with character class syntax that is used for field constraints in the web client and Windows client, but not in other Laserfiche products. </p>
+        <h2>Field Constraints   </h2>
+        <p>When specifying constraints, you may want certain characters to be automatically assigned to a field, which can be done by typing the characters where you want them to appear in the field. The exceptions are characters that have been reserved for use by regular expressions. A list of these characters can be viewed from the Symbol column of the table below. Reserved characters can be automatically assigned to a field by placing a backslash prior to the reserved character. For example, if your organization decides that phone numbers should be specified as (310) 555-1212, you would specify the following expression: &#160;\(\d\d\d\) \d\d\d-\d\d\d\d. Notice that the parentheses have been escaped with a backslash, while the dash has not been. Both parentheses and dashes are reserved characters. However, dashes can never be used without brackets, therefore they are treated as a regular character and do not require a backslash. Assigning this constraint to a field will create visual indicators as to how field data should be formatted. In the example stated above, blank fields will look like "( &#160;&#160;) &#160;&#160;&#160;- &#160;&#160;&#160;." As you can tell, users will not need to type the parentheses or the dash when specifying a phone number. These symbols are automatically shown to indicate what the format of a phone number should look like. &#160;</p>
+        <p>The following table describes each regular expression that can be used to establish a pattern that field data must match.
+		</p>
+        <table class="tablesorter" style="margin-left: 0;margin-right: auto;" summary="Regular expressions that can be used to establish a pattern that field data must match.">
+            <caption style="font-weight: bold;">Regular Expressions for Field Constraints</caption>
+            <col style="width: 106px;" />
+            <col style="width: 79px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Symbol</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Any Character</td>
+                    <td>.</td>
+                    <td>Any single character. </td>
+                </tr>
+                <tr>
+                    <td>Character in Range</td>
+                    <td>[]</td>
+                    <td>Any character inside the brackets. For example, 
+						the expression [abc123] allows only any of the following characters: &#160;"a," 
+						"b," "c," 
+					"1," "2," or "3."</td>
+                </tr>
+                <tr>
+                    <td>Character Not in Range</td>
+                    <td>[^]</td>
+                    <td>Any single character except for those inside 
+						the brackets. For example, the expression [^abc123] allows any character 
+						except for: &#160;&#160;"a," 
+						"b," "c," 
+					"1," "2," or "3."</td>
+                </tr>
+                <tr>
+                    <td>Range Character</td>
+                    <td>[-]</td>
+                    <td>Any single character contained within the specified 
+						range. For example, the expression [0-9] allows only any number that falls 
+					between 0 and 9  (inclusive), and the expression [A-Z] allows any capital letter.</td>
+                </tr>
+                <tr>
+                    <td>Beginning of Input</td>
+                    <td>^</td>
+                    <td>Requires the beginning of a string of text to match the expression that follows this symbol. For example, the expression ^[abc123] allows only 
+						field data that starts with either "a," "b," "c," 
+					"1," "2," or "3."</td>
+                </tr>
+                <tr>
+                    <td>End of Input</td>
+                    <td>$</td>
+                    <td>Requires the end of a string of text to match the expression that follows this symbol.  For example, the expression [abc123]$ allows only field 
+						data that ends with either "a," "b," "c," 
+					"1," "2," or "3."</td>
+                </tr>
+                <tr>
+                    <td>Or</td>
+                    <td>|</td>
+                    <td>Requires one of two expressions. For example, the expression 
+						he|she allows only
+					field data that is set to either "he" or "she."</td>
+                </tr>
+                <tr>
+                    <td>0 or More</td>
+                    <td>*</td>
+                    <td>The preceding expression can occur zero or more 
+						times. For example, the expression [0-9]* allows any set of consecutive 
+					digits or no digits at all. </td>
+                </tr>
+                <tr>
+                    <td>1 or More</td>
+                    <td>+</td>
+                    <td>The preceding expression can occur one or more 
+						times. For example, the expression [0-9]+ allows any set of consecutive 
+					digits. </td>
+                </tr>
+                <tr>
+                    <td>Previous Statement is Optional</td>
+                    <td>?</td>
+                    <td>The preceding expression is optional. 
+						Data satisfying the expression may be specified as field data or a user 
+						can choose to not enter it. For example, the expression [0-9][0-9]? 
+					allows only a single or double digit number. </td>
+                </tr>
+                <tr>
+                    <td>Group</td>
+                    <td>()</td>
+                    <td>Groups an expression together. For example, the expression (t|T)he allows only field data that is set to either "the"&#160;or "The".</td>
+                </tr>
+                <tr>
+                    <td>Escape Character</td>
+                    <td>\</td>
+                    <td>Either an abbreviation (see table below) or 
+						that the next character be translated literally. This character 
+						should only be used for reserved characters, such as those listed under 
+						the Symbol column of this table. For example, \d+ 
+						allows one or more digits, while \d\+ 
+					allows a digit followed by a plus sign. </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+        <table class="tablesorter" style="margin-left: 0;margin-right: auto;" summary="Character classes can be used to restrict the chacracters for a particular field. ">
+            <caption style="font-weight: bold;">Regular Expression Character Classes to Restrict Characters in a Field</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Symbol</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Alphanumeric
+					</td>
+                    <td>[[:alnum:]]
+					</td>
+                    <td>Any alphanumeric character.
+					</td>
+                </tr>
+                <tr>
+                    <td>Alphabetic
+					</td>
+                    <td>[[:alpha:]]
+					</td>
+                    <td>Any alphabetical character in the following ranges: &#160;a-z 
+						and A-Z.
+					</td>
+                </tr>
+                <tr>
+                    <td>Space/Tab
+					</td>
+                    <td>[[:blank:]]
+					</td>
+                    <td>A space or a tab.
+					</td>
+                </tr>
+                <tr>
+                    <td>Digit
+					</td>
+                    <td>[[:digit:]]
+					</td>
+                    <td>Any digit. A valid character is a whole number from 0 to 
+						9.
+					</td>
+                </tr>
+                <tr>
+                    <td>Lower-case
+					</td>
+                    <td>[[:lower:]]
+					</td>
+                    <td>Any lower-case character (i.e., a-z).
+					</td>
+                </tr>
+                <tr>
+                    <td>Printable
+					</td>
+                    <td>[[:print:]]
+					</td>
+                    <td>Any printable character.
+					</td>
+                </tr>
+                <tr>
+                    <td>Punctuation
+					</td>
+                    <td>[[:punct:]]
+					</td>
+                    <td>Any punctuation character.
+					</td>
+                </tr>
+                <tr>
+                    <td>Space
+					</td>
+                    <td>[[:space:]]
+					</td>
+                    <td>Any whitespace character.
+					</td>
+                </tr>
+                <tr>
+                    <td>Upper-case
+					</td>
+                    <td>[[:upper:]]
+					</td>
+                    <td>Any upper-case character (i.e., A-Z).
+					</td>
+                </tr>
+                <tr>
+                    <td>Hexadecimal
+					</td>
+                    <td>[[:xdigit:]]
+					</td>
+                    <td>Any hexadecimal digit (i.e., 0-9, a-f, or  A-F).
+					</td>
+                </tr>
+                <tr>
+                    <td>Word
+					</td>
+                    <td>[[:word:]]
+					</td>
+                    <td>Any word character. Valid characters are all alphanumeric 
+						characters and underscore.
+					</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>
+        </p>
+        <table class="tablesorter" style="margin-left: 0;margin-right: auto;" summary="This table describes the various abbreviations for specying a regular expression.">
+            <caption style="font-weight: bold;">Abbreviations for Regular Expressions</caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Symbol</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Character
+					</td>
+                    <td>.
+					</td>
+                    <td>Any single character.
+					</td>
+                </tr>
+                <tr>
+                    <td>Decimal Digit
+					</td>
+                    <td>\d
+					</td>
+                    <td>Any single decimal digit. Corresponding syntax: [[:digit:]]                </td>
+                </tr>
+                <tr>
+                    <td>Non-Decimal Digit
+					</td>
+                    <td>\D
+					</td>
+                    <td>Any character except for a single decimal digit. 
+					Corresponding syntax: [^[:digit:]]                </td>
+                </tr>
+                <tr>
+                    <td>Space
+					</td>
+                    <td>\s
+					</td>
+                    <td>A single space character. Corresponding syntax: [[:space:]]                </td>
+                </tr>
+                <tr>
+                    <td>Non-Space
+					</td>
+                    <td>\S
+					</td>
+                    <td>Any character except for a single space character. Corresponding syntax: [^[:space:]]
+					</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

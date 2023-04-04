@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="4" MadCap:lastHeight="907" MadCap:lastWidth="1019" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Schedule Approval Template</h1>
+        <p>This workflow creates a new budget and routes it for approval. </p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <ol>
+            <li>A <a href="../Activities/Find-Entry.htm" title="Click to learn more." alt="Click to learn more.">Find Entry</a> activity locates the Master Budget form.</li>
+            <li>A <a href="../Activities/Move-Entry.htm" title="Click to learn more." alt="Click to learn more.">Move Entry</a> activity makes a copy of the form and moves the copy to the Proposed Budgets folder.</li>
+            <li>To name the budget appropriately, the workflow needs to determine the month after the workflow runs. The <a href="../Activities/Date-Token-Calculator.htm" title="Click to learn more." alt="Click to learn more.">Date Token Calculator</a> activity creates a token that will be replaced with the date for the following month.</li>
+            <li>In the <a href="../Activities/Rename-Entry.htm" title="Click to learn more." alt="Click to learn more.">Rename Entry</a> activity, the copied budget is renamed to reflect the budget’s date. To ensure the date is easy to read, the newly created date token is edited to return the month and year in the format: Month name full year, e.g., May 2018. Note that the Rename Entry activity is configured to rename the copy of the budget, not the starting entry.</li>
+            <li>A Find Entry activity finds the copied budget and generates a URL and shortcut for it.</li>
+            <li>An <a href="../Activities/Email.htm" title="Click to learn more." alt="Click to learn more.">Email</a> activity emails the accounting group a link and shortcut to the proposed budget for their review. </li>
+            <p class="note"><b>Note:</b> Replace "test email address" in the <b>To</b> field of the email with an actual email address when you run the workflow.</p>
+            <li>A <a href="../Activities/Wait-for-Entry-Change.htm" title="Click to learn more." alt="Click to learn more.">Wait for Entry Change</a> activity waits until the “Workflow Templates: Accounting Processed?” field equals “Yes.”</li>
+            <li>A Move Entry activity moves the budget to the Approved Budgets folder.</li>
+        </ol>
+        <h2>To run this workflow</h2>
+        <p>Ensure the WT- Schedule Approval with Reporting starting event is enabled.</p>
+        <ol>
+            <li>Navigate to the Timer page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li>
+            <li>Select the starting event, and click <b>Enable</b> in the top right. </li>
+            <li>Once the schedule rule is enabled, the workflow will run four times a year: the first day of February, May, August, and November.</li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> button in the Workflow Designer. You can run the workflow on the Master Budget document in the \Workflow Templates - Test Entries\Accounting\Templates folder.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p>Add an <a href="../Activities/Escalation.htm" title="Click to learn more." alt="Click to learn more.">Escalation</a> activity around the wait condition and send the accounting team reminder emails if they do not process the budget in a timely manner. </p>
+        <p>Republish the workflow once you made all desired changes.</p>
+    </body>
+</html>

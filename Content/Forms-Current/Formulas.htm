@@ -1,0 +1,1992 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Formulas in Fields | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Automatically fill fields in a form using formulas." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Formulas in Business Processes</h1>
+        <p>In a form, you can use formulas to automatically populate fields with values that are functions of other field values. You can apply formulas to the <a href="Form-Fields/Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">single line</a>, <a href="Form-Fields/Number.htm" title="Click here to learn more." alt="Click here to learn more.">number</a>, <a href="Form-Fields/Date-and-Time.htm" title="Click here to learn more." alt="Click here to learn more.">date</a>, <a href="Form-Fields/Currency.htm" title="Click here to learn more." alt="Click here to learn more.">currency</a>, <a href="Form-Fields/Table.htm" title="Click here to learn more." alt="Click here to learn more.">table</a>, and <a href="Form-Fields/Collection.htm" title="Click here to learn more." alt="Click here to learn more.">collection</a> fields.</p>
+        <p>You can apply a formula by editing a field and navigating to the <b>Advanced</b> tab in the editing dialogue. In the <b>Advanced</b> tab, you can:</p>
+        <ul>
+            <li>Type a formula in the text box within the <b>Calculation</b> section.</li>
+            <li>Click the <b>Insert formula</b> (<b>fx</b>) button in the top left and select a desired function.</li>
+        </ul>
+        <p>When you type in the text box, be sure to use the OpenFormula standard specified in the Formulas section below. The OpenFormula standard is the same standard used by Microsoft Excel and Google Sheets. </p>
+        <p class="note"><b>Note</b>:&#160;When typing a formula in the <b>Calculation</b> section, be sure to add an equal sign "=" to the beginning of the formula. For example, type "=ADD(3, 4)".</p>
+        <h2>Formulas</h2>
+        <p>You can use the following formulas in a form. Click on one of the categories below to find a specific kind of function.</p>
+        <ul>
+            <li><a href="#Mathemat" title="Click here to learn more." alt="Click here to learn more.">Mathematics</a>
+            </li>
+            <li><a href="#Text" title="Click here to learn more." alt="Click here to learn more.">Text/string processing</a>
+            </li>
+            <li><a href="#Date/Tim" title="Click here to learn more." alt="Click here to learn more.">Date/time</a>
+            </li>
+            <li><a href="#Logical" title="Click here to learn more." alt="Click here to learn more.">Logical</a>
+            </li>
+            <li><a href="#Function" title="Click here to learn more." alt="Click here to learn more.">Tables and lists</a>
+            </li>
+        </ul>
+        <h3 class="topicheading"><a name="Mathemat"></a>Mathematical Functions</h3>
+        <table style="margin-left: 0;margin-right: auto;">
+            <caption style="text-align: left">
+                <p>&#160;</p>
+            </caption>
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="tableheading">
+                    Name 
+                	</td>
+                    <td class="tableheading">
+                    Format and Description 
+                </td>
+                    <td class="tableheading">
+                    Examples 
+                </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">
+                    ABS 
+                </td>
+                    <td class="tabletext">
+                        <p>ABS(<i>value</i>) </p>
+                        <p>Returns the absolute value of the value. Text values are ignored.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =ABS(-35)</p>
+                        <p>returns "35"              </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">ADD</td>
+                    <td class="tabletext">
+                        <p>ADD(<i>value1</i>,<i>value2</i>) </p>
+                        <p>Calculates the sum of two values.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=ADD(3, 4)</p>
+                        <p>returns "7"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>
+                    AVERAGE 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                    Calculates the average of a list of values. This function is supported with table/collection field variables.</td>
+                    <td class="tabletext">
+                        <p>
+                    =AVERAGE(3, 4, 5, 6) </p>
+                        <p>returns "4.5"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    AVERAGEA 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    
+                    AVERAGEA(<i>value1</i>,<i>value2</i>,...)</p>
+                        <p>Returns the average value in a range of values, where "true" is treated as 1 and "false" as 0. Text values are treated as 0.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =AVERAGEA(TRUE, FALSE, "test", 4) </p>
+                        <p>returns "1.25"              </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">AVERAGEIF</td>
+                    <td class="tabletext">
+                        <p>AVERAGEIF([<i>value1, value2,</i> ...], <i>criterion</i>)</p>
+                        <p>Returns the average of a range of numbers depending on a criterion.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=AVERAGEIF([1, 2, 3], "&gt;2")</p>
+                        <p>returns "3"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">AVG</td>
+                    <td class="tabletext">
+                        <p>
+                    AVG(<i>value1</i>,<i>value2</i>,...)</p>
+                        <p>Calculates the average of a list of values. This function is supported with table/collection field variables.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =AVG(3, 4, 5, 6) </p>
+                        <p>returns "4.5"               </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    CEILING 
+                </td>
+                    <td class="tabletext">
+                        <p>CEILING(<i>value</i>,<i>factor</i>)</p>
+                        <p>
+                    Rounds <i>value</i> up to the nearest multiple of <i>factor</i>. </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =CEILING(10.1, 2) </p>
+                        <p>returns "12"            </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">CODE</td>
+                    <td class="tabletext">
+                        <p>CODE(<i>value</i>)</p>
+                        <p>Returns a number converted from a character based on the Unicode table.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=CODE("L")</p>
+                        <p>returns "76"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    COUNT 
+                </td>
+                    <td class="tabletext">
+                        <p>COUNT(<i>value1, value2</i>, ...) </p>
+                        <p>
+                    Counts the number of number <i>values</i> in the list. Non-numeric values are ignored.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=COUNT(3, 2, 7, 4, 6)</p>
+                        <p>returns "5"                    &#160;
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    COUNTIF 
+                </td>
+                    <td class="tabletext">
+                        <p>COUNTIF(<i>[value1</i>,<i>value2</i><i>,...]</i>,"<i>condition</i>") </p>
+                        <p>Returns the number of values in the list that satisfy the <i>condition</i>. </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =COUNTIF([1, 4, 6], "&gt;1")
+</p>
+                        <p>returns "2"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DIV</td>
+                    <td class="tabletext">
+                        <p>DIV(<i>value1, value2</i>)</p>
+                        <p>Returns the quotient of two numbers.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=DIV(2,4)</p>
+                        <p>returns "0.5"</p>
+                        <p>=DIV(SUB(4,2), 2)</p>
+                        <p>returns "1"</p>
+                        <p>=DIV(SUM(2, 4),COUNT(2, 4))</p>
+                        <p>returns the average of 2 and 4, which is 3</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">EQ</td>
+                    <td class="tabletext">
+                        <p>EQ(<i>value1, value2</i>)</p>
+                        <p>Returns true if the two values are equal, false otherwise.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=EQ(2,3)</p>
+                        <p>returns "FALSE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    EVEN 
+                </td>
+                    <td class="tabletext">
+                        <p>EVEN(<i>value</i>) </p>
+                        <p>
+                    Rounds the value up to the nearest even number (away from 0). 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =EVEN(1) </p>
+                        <p>returns "2"                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    EXP 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    EXP(<i>exponent</i>) </p>
+                        <p>Returns Euler's number, e (~2.718) raised to the provided exponent. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =EXP(5)</p>
+                        <p>returns "148.413159102577"               </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">FIXED</td>
+                    <td class="tabletext">
+                        <p>FIXED(<i>value, significance</i>)</p>
+                        <p>Returns a number with a specified number of significant digits.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=FIXED(3.141592,3)</p>
+                        <p>returns "3.142"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    FLOOR 
+                </td>
+                    <td class="tabletext">
+                        <p>FLOOR(<i>value</i>,<i>factor</i>) </p>
+                        <p>
+                    Rounds the value down to the nearest multiple of <i>factor</i>. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =FLOOR(11.9, 3) </p>
+                        <p>returns "9"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">GT</td>
+                    <td class="tabletext">
+                        <p>GT(<i>value1, value2</i>)</p>
+                        <p>Returns true if the first value is greater than the second, false otherwise.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=GT(2,2)</p>
+                        <p>returns "FALSE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">GTE</td>
+                    <td class="tabletext">
+                        <p>GTE(<i>value1, value2</i>)</p>
+                        <p>Returns true if the first value is greater than or equal to the second, false otherwise.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=GTE(2,2)</p>
+                        <p>returns "TRUE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">IDIV</td>
+                    <td class="tabletext">
+                        <p>DIV(<i>value1</i>, <i>value2</i>)</p>
+                        <p>Returns the quotient of two numbers without the remainder.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=IDIV(3,2)</p>
+                        <p>returns "1"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    ISEVEN 
+                </td>
+                    <td class="tabletext">
+                        <p>ISEVEN(<i>value</i>) 
+</p>
+                        <p>
+                    Returns true if the value is even. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=                   ISEVEN(2) </p>
+                        <p>returns "TRUE"                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    ISODD 
+                </td>
+                    <td class="tabletext">
+                        <p>ISODD(<i>value</i>) </p>
+                        <p>
+                    Returns true if the value is odd.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =ISODD(2)</p>
+                        <p>returns "FALSE"    </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    LARGE 
+                </td>
+                    <td class="tabletext">
+                        <p>LARGE(<i>NumbersList</i>, <i>n</i>) </p>
+                        <p>
+                    Returns the <i>n</i>th largest value in the <i>NumbersList</i>. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =LARGE([10, 5, 7, 2], 2)</p>
+                        <p>returns "7", because 7 is the second largest number</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LN</td>
+                    <td class="tabletext">
+                        <p>
+                    LN(<i>Number</i>) </p>
+                        <p>
+                    Returns the natural logarithm of the value. 
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =LN(3)</p>
+                        <p>returns "1.09861228866811"               </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    LOG 
+                </td>
+                    <td class="tabletext">
+                        <p>LOG(<i>Number</i>, <i>base</i>) </p>
+                        <p>
+                    Returns the logarithm of the value in the specified base.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =LOG(1000, 10)</p>
+                        <p>returns "3"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    LOG10 
+                </td>
+                    <td class="tabletext">
+                        <p>LOG10(<i>Number</i>) </p>
+                        <p>
+                    Returns the base 10 logarithm of the value.  
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =LOG10(1000)</p>
+                        <p>returns "3"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LT</td>
+                    <td class="tabletext">
+                        <p>LT(<i>value1, value2</i>)</p>
+                        <p>Returns true if the first value is less than the second, and false otherwise.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=LT(2,2)</p>
+                        <p>returns "FALSE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LTE</td>
+                    <td class="tabletext">
+                        <p>LTE(<i>value1, value2</i>)</p>
+                        <p>Returns true if the first value is less than or equal to the second, and false otherwise.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=LTE(2,2)</p>
+                        <p>returns "TRUE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    MAX 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    MAX(<i>value1</i>,<i>value2</i>,...</p>
+                        <p>
+                    Returns the maximum numerical value from the list of values, while ignoring values that are not numbers. This function supports table and collection field variables. 
+           </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MAX(1,2,4,1,2)</p>
+                        <p>returns "4"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    MAXA 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    MAXA(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the maximum value from the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MAXA(-1, 0, "abc", "TRUE") </p>
+                        <p>returns "0"</p>
+                        <p>
+                    =MAXA(-1, 0, "abc", TRUE) </p>
+                        <p>returns "1", because TRUE does not have quotation marks</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    MEDIAN 
+                </td>
+                    <td class="tabletext">
+                        <p>MEDIAN(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the median (middle) value from the list of values when the list contains an odd number of values.</p>
+                        <p>Returns the average of the two middle values when the list contains an even number of values.               </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MEDIAN(3, 2, 5, 1, 4, 6) </p>
+                        <p>returns "3.5" </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    MIN 
+                </td>
+                    <td class="tabletext">
+                        <p>MIN(<i>value1</i>,<i>value2</i>,...) </p>
+                        <p>
+                    Returns the minimum value from a list of values, while ignoring values that are not numbers. This function supports table and collection field variables.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MIN(10, 3, -5)</p>
+                        <p>returns "-5"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    MINA 
+                </td>
+                    <td class="tabletext">
+                        <p>MINA(<i>value1</i>, <i>value2</i>,...) 
+                    </p>
+                        <p>Returns the minimum of the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MINA(1, 3, "abc")</p>
+                        <p>returns "0"                   </p>
+                        <p><![CDATA[
+               ]]></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MINUS</td>
+                    <td class="tabletext">
+                        <p>MINUS(<i>value</i>)</p>
+                        <p>Returns the opposite of the current number sign.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MINUS(1)</p>
+                        <p>returns "-1"</p>
+                        <p>=MINUS(-1)</p>
+                        <p>returns "1"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MOD</td>
+                    <td class="tabletext">
+                        <p>MOD(<i>value1, value2</i>)</p>
+                        <p>Returns the remainder of dividing the dividend by the divisor.
+</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MOD(33,24)</p>
+                        <p>returns "9"</p>
+                        <p>=MOD(<i>variable1</i>, 2)</p>
+                        <p>returns "0" if <i>variable1</i> is even and "1"&#160;if <i>variable1</i> is odd. This formula is entered in the second of two fields, where the first field has <i>variable1</i>.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MODE</td>
+                    <td class="tabletext">
+                        <p>
+                    MODE(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the most common value in the list of values.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MODE(1, 3, 1, 4, 6) </p>
+                        <p>returns "1"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    MROUND 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    MROUND(<i>value</i>, <i>multiple</i>) </p>
+                        <p>
+                    Rounds the value to nearest multiple of <i>multiple</i>. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MROUND(10.9, 3) </p>
+                        <p>returns "12"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MULT</td>
+                    <td class="tabletext">
+                        <p>MULT(<i>value1, value2</i>)</p>
+                        <p>Returns the product of two numbers.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MULT(3, 4)</p>
+                        <p>returns "12"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">NEQ</td>
+                    <td class="tabletext">
+                        <p>NEQ(<i>value1, value2</i>)</p>
+                        <p>Returns true if the two values are not equal, false otherwise.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=NEQ(2,2)</p>
+                        <p>returns "FALSE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    ODD 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    ODD(<i>value</i>) </p>
+                        <p>
+                    Returns the value rounded to the nearest odd number (away from 0). 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =ODD(2)</p>
+                        <p>returns "3" 
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    PI 
+                </td>
+                    <td class="tabletext">
+                        <p>PI() </p>
+                        <p>
+                    Returns the approximate value of Pi. There are no parameters for this formula.
+            </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =PI()</p>
+                        <p>returns "3.14159265358979"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    POWER 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    POWER(<i>value</i>, <i>exponent</i>)</p>
+                        <p>Calculates raising <i>value</i> to the power of <i>exponent</i>.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =POWER(2,2)</p>
+                        <p>returns "4"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">PRODUCT</td>
+                    <td class="tabletext">
+                        <p>PRODUCT(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>Calculates the product of all numerical values in the list of values. Text values are ignored.
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =PRODUCT(1, 2, 3, "abc", 4)</p>
+                        <p>returns "24" 
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    QUOTIENT 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    QUOTIENT(<i>value1</i>, <i>value2</i>) </p>
+                        <p>Calculates the integer portion of dividing <i>value1</i> by <i>value2</i>.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =QUOTIENT(3, 2) </p>
+                        <p>returns "1" 
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    ROUND 
+                </td>
+                    <td class="tabletext">
+                        <p>ROUND(<i>value</i>, <i>places</i>) </p>
+                        <p>
+                    Rounds the value to the specified number of decimal places. If the next most significant digit is greater than or equal to 5, the value will be rounded up. Otherwise, it will be rounded down.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =ROUND(543.21, 0) </p>
+                        <p>returns "543"         </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    ROUNDDOWN 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    ROUNDDOWN(<i>value</i>, <i>places</i>) </p>
+                        <p>
+                    Rounds the value down to the specified number of decimal places.  
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =ROUNDDOWN(567.79, 0)</p>
+                        <p>returns "567"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    ROUNDUP 
+                </td>
+                    <td class="tabletext">
+                        <p>ROUNDUP(<i>value</i>, <i>places</i>) </p>
+                        <p>
+                    Rounds the value up to the specified number of decimal places.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =ROUNDUP(543.21, 0) </p>
+                        <p>returns "544"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    SIGN 
+                </td>
+                    <td class="tabletext">
+                        <p>SIGN(<i>value</i>)</p>
+                        <p>
+                    Returns 1 if the value is greater than zero. Returns -1 if value is less than zero. Returns 0 if value equals zero. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =SIGN(-5)</p>
+                        <p>returns "-1"
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    SQRT 
+                </td>
+                    <td class="tabletext">
+                        <p>SQRT(<i>value</i>)</p>
+                        <p>
+                    Calculates the square root of the value.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                   =SQRT(9) </p>
+                        <p>returns "3"</p>
+                        <p>=SQRT(ABS(-9))</p>
+                        <p>returns "3"               </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUB</td>
+                    <td class="tabletext">
+                        <p>SUB(<i>value1, value2</i>)</p>
+                        <p>Returns the difference of two numbers.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SUB(3,2)</p>
+                        <p>returns "1"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    SUM 
+                </td>
+                    <td class="tabletext">
+                        <p>SUM(<i>value1</i>,<i>value2</i>,...) </p>
+                        <p>Calculates the sum of all number values in the list. This function supports table and collection field variables.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SUM(1,2,3)</p>
+                        <p>returns "6"</p>
+                        <p>=SUM(VALUE(Single_Line_1), VALUE(Single_Line_2))</p>
+                        <p>returns the sum of two <a href="Form-Fields/Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">single line</a> fields.</p>
+                        <p>=SUM(INDEX(Table_VariableName.Column_VarName1,ROW()),INDEX(Table_VariableName.Column_VarName2,ROW()))</p>
+                        <p>after being placed in the third column of three columns, this formula returns the sum of the contents of the first two columns</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    SUMIF 
+                </td>
+                    <td class="tabletext">
+                        <p>
+                    SUMIF(<i><i>[value1</i>,<i>value2</i><i>,...]</i>,</i>"<i>condition</i>", [<i>sum_range</i>])</p>
+                        <p>Filters the list for values that satisfy the condition and then calculates the sum of those values.  If no <i>sum range</i> is specified, all values in the range will be summed.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=
+                    SUMIF([1, 2, 3, 4, 5], "&gt;3") </p>
+                        <p>returns "9"</p>
+                        <p>=SUMIF(table_variable_name.column_variable_name, "&gt;5", table_variable_name.column2_variable_name)</p>
+                        <p>returns the sum of the values in column2 that are in the same row as the values greater than 5 in column1</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUMIFS</td>
+                    <td class="tabletext">
+                        <p>SUMIFS(<i>reference, range1, criterion1, range2, criterion2, ...</i>)</p>
+                        <p>Returns the sum of a range of values that meet multiple criteria in multiple ranges.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SUMIFS([1,1,3], [3,2,3], "&gt;2", [4,5,6], "&lt;6")</p>
+                        <p>returns "1", because the first value in range 1 is "3" and the first value in range 2 is "4". "3" fits criterion 1 because 3 is greater than 2 and "4" fits criterion 2 because 4 is less than 6, so "1" (in the reference) is a hit. Similarly, the second "1" is a hit. However, "3" is not a hit because 6 is not less than 6 in the second range.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    TRUNC 
+                </td>
+                    <td class="tabletext">
+                        <p>TRUNC(<i>value1</i>, <i>value2</i>)
+</p>
+                        <p>Truncates the first value to the specified <i>value2</i> number of decimal places.</p>
+                        <p>If the second value is set to 0 or is absent, truncates to a decimal integer.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=TRUNC(33.333, 2)</p>
+                        <p>returns "33.33"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                    UPPER 
+                </td>
+                    <td class="tabletext">
+                        <p>UPPER(<i>text</i>)
+ </p>
+                        <p>Converts the text to all uppercase letters
+                    &#160;
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =UPPER("ucsd")</p>
+                        <p>returns "UCSD"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">VALUE	</td>
+                    <td class="tabletext">
+                        <p>VALUE(<i>input</i>)	</p>
+                        <p>Converts an input value to a number.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=VALUE("12:00:00")</p>
+                        <p>returns "0.5"</p>
+                        <p>=VALUE("1")</p>
+                        <p>returns "1"</p>
+                        <p>=VALUE("1/16/2017")</p>
+                        <p>returns "42751"</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="topicheading"><a name="Text"></a>Text Processing Functions</h3>
+        <table style="margin-left: 0;margin-right: auto;">
+            <caption style="text-align: left">
+                <p>&#160;</p>
+            </caption>
+            <col style="width: 119px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="tableheading">
+                    Name 
+                </td>
+                    <td class="tableheading">
+                    Format and Description 
+                </td>
+                    <td class="tableheading">
+                    Examples 
+                </td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">CHAR</td>
+                    <td class="tabletext">
+                        <p>CHAR(<i>value</i>)</p>
+                        <p>Returns a character converted from a number based on the Unicode table.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=CHAR(76)</p>
+                        <p>returns "L"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">CODE</td>
+                    <td class="tabletext">
+                        <p>CODE(<i>value</i>)</p>
+                        <p>Returns a number converted from a character based on the Unicode table.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=CODE("L")</p>
+                        <p>returns "76"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">CONCATENATE</td>
+                    <td class="tabletext">
+                        <p>CONCATENATE(<i>value1, value2</i>, ...)</p>
+                        <p>Returns multiple strings appended together into one string.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=CONCATENATE("a", "b", "c")</p>
+                        <p>returns "abc"</p>
+                        <p>=CONCATENATE(CHAR(76), "aserfiche")</p>
+                        <p>returns "Laserfiche"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">EXACT</td>
+                    <td class="tabletext">
+                        <p>EXACT(<i>string1</i>, <i>string2</i>)
+</p>
+                        <p>Determines if two strings are identical. If the strings match, the function will return "true". If the strings don't match, the function will return "false."
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                 
+                =EXACT("dog", "cat")</p>
+                        <p>returns "FALSE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">FIND</td>
+                    <td class="tabletext">
+                        <p>FIND(<i>target text</i>, <i>text to search</i>, <i>starting character</i>)</p>
+                        <p>
+                    &#160;
+               Finds the position of the target text in the text to search. The search will start at the starting character number within the text to search. </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =FIND("type", "prototype", 1)</p>
+                        <p>returns "6"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">JOIN</td>
+                    <td class="tabletext">
+                        <p>JOIN(<i>delimiter</i>, <i>array</i>) </p>
+                        <p>
+                    Concatenates the values in the given array into a string, separated by a delimiter.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=JOIN("", ["L", "a", "s", "e", "r"])</p>
+                        <p>returns "Laser"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LEFT</td>
+                    <td class="tabletext">
+                        <p>LEFT(string, [characters])</p>
+                        <p>Returns the left-most character in the string. Where you specify a number of characters, the function returns the characters from the left.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=LEFT("Laserfiche", 2)</p>
+                        <p>returns "La"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LEN</td>
+                    <td class="tabletext">
+                        <p>
+                    LEN(<i>text</i>) </p>
+                        <p>
+                    &#160;
+                Returns the length of the text</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=LEN("Laserfiche")</p>
+                        <p>returns "10"                    &#160;
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LOWER</td>
+                    <td class="tabletext">
+                        <p>LOWER(<i>text</i>)
+</p>
+                        <p>
+                    &#160;
+                Converts text to lowercase</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =LOWER("POLICY")</p>
+                        <p>returns "policy"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MAXA</td>
+                    <td class="tabletext">
+                        <p>
+                    MAXA(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the maximum value from the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MAXA(-1, 0, "abc", "TRUE") </p>
+                        <p>returns "0"</p>
+                        <p>
+                    =MAXA(-1, 0, "abc", TRUE) </p>
+                        <p>returns "1", because TRUE does not have quotation marks</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MID</td>
+                    <td class="tabletext">
+                        <p>MID(<i>text</i>, <i>starting character</i>, <i>length</i>)
+</p>
+                        <p>Extracts part of a string of text, starting at the starting character and ending after the specified length&#160;is reached. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =MID("PO 1234 EZ", 4, 4)</p>
+                        <p>returns "1234"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MINA</td>
+                    <td class="tabletext">
+                        <p>MINA(<i>value1</i>, <i>value2</i>,...) 
+                    </p>
+                        <p>Returns the minimum of the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MINA(1, 3, "abc")</p>
+                        <p>returns "0"                   </p>
+                        <p><![CDATA[
+               ]]></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">PROPER</td>
+                    <td class="tabletext">
+                        <p>PROPER(<i>text</i>)</p>
+                        <p>Returns the input string with the first character in each word capitalized.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=PROPER("laserfiche")</p>
+                        <p>returns "Laserfiche"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">REPLACE</td>
+                    <td class="tabletext">
+                        <p>REPLACE(<i>old_string, start_position, count, new_string</i>)
+</p>
+                        <p>Returns new string based on a modification to an old string.
+</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=REPLACE("Laserfiche", 6, 5, "fish")</p>
+                        <p>returns "Laserfish"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">REPT</td>
+                    <td class="tabletext">
+                        <p>REPT(<i>text</i>, <i>number</i>)
+</p>
+                        <p>
+                    &#160;
+                Returns the text repeated the specified number of times</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =REPT("Laserfiche", 2)</p>
+                        <p>returns "LaserficheLaserfiche"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">RIGHT</td>
+                    <td class="tabletext">
+                        <p>RIGHT(<i>value, n</i>)</p>
+                        <p>Returns a substring with n characters starting from the end of a string.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=RIGHT("Laserfiche", 5)</p>
+                        <p>returns "fiche"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SPLIT</td>
+                    <td class="tabletext">
+                        <p>
+                    SPLIT(<i>textValue, textSplit</i>) </p>
+                        <p>
+                    Returns an array with each piece of textValue after splitting it based on the given splitting text. 
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SPLIT("Text.Split.Up", ".")</p>
+                        <p>returns "Text,Split,Up"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUBSTITUTE</td>
+                    <td class="tabletext">
+                        <p>SUBSTITUTE(<i>text</i>, <i>target text</i>, <i>replacement text</i>, <i>number</i>)
+</p>
+                        <p>
+                    &#160;
+                Replaces existing text with new text. </p>
+                        <p>The number parameter is the number of replacements that you want to make. If you don't specify a number, all instances of the target text will be replaced. </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =SUBSTITUTE("Employees: Susan Marks, Paul Smith, Eric Chen", "Marks", "Johnson")</p>
+                        <p>returns "Employees: Susan Johnson, Paul Smith, Eric Chen"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">T</td>
+                    <td class="tabletext">
+                        <p>T(<i>value</i>)</p>
+                        <p>Returns a string as text.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=T("1")</p>
+                        <p>returns "1"</p>
+                        <p>=T(1)</p>
+                        <p>returns nothing</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">TEXT</td>
+                    <td class="tabletext">
+                        <p>TEXT(<i>number</i><MadCap:conditionalText MadCap:conditions="Default.Do not include"><i>, format</i></MadCap:conditionalText>)
+</p>
+                        <p>Converts the value to a string and returns it.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=TEXT(ABS(3-5))</p>
+                        <p>returns "2"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">TRIM</td>
+                    <td class="tabletext">
+                        <p>TRIM(<i>text</i>) </p>
+                        <p>
+                    &#160;
+                Removes spaces before and after the text.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =TRIM(" Paul ") </p>
+                        <p>returns "Paul"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">UPPER</td>
+                    <td class="tabletext">
+                        <p>UPPER(<i>text</i>)
+ </p>
+                        <p>Converts the text to all uppercase letters
+                    &#160;
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    &#160;
+                =UPPER("ucsd")</p>
+                        <p>returns "UCSD"</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="topicheading"><a name="Date/Tim"></a>Date/Time Functions
+</h3>
+        <table style="border-left-width: medium;border-left-color: #ffffff;border-right-width: medium;border-right-color: #ffffff;border-top-width: medium;border-top-color: #ffffff;border-bottom-width: medium;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
+            <caption style="text-align: left">
+                <p>&#160;</p>
+            </caption>
+            <col style="width: 121px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="tableheading">Name</td>
+                    <td class="tableheading">Format and Description</td>
+                    <td class="tableheading">Example</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">
+                    ADD_MONTHS 
+                </td>
+                    <td class="tabletext">
+                        <p>ADD_MONTHS(<i>date</i>, <i>months</i>) </p>
+                        <p>
+                    Adds months to a date object. Non-integer values for month will be added in days, hours, minutes, and seconds. A date object is returned 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=ADD_MONTHS(DATE(2015,8,11),4)</p>
+                        <p>returns "42349"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DATE</td>
+                    <td class="tabletext">
+                        <p>DATE(<i>year,month,day</i>)</p>
+                        <p>
+                    Returns a unique number representing a specified date. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =DATE(1985,12,2)</p>
+                        <p>returns "31383"                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DATEDIF</td>
+                    <td class="tabletext">
+                        <p>DATEDIF(<i>start_date, end_date, time_unit</i>)</p>
+                        <p>Calculates the difference between two dates based on a time unit.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=DATEDIF(DATE(2017, 1, 2), DATE(2017, 1, 14), "M")</p>
+                        <p>returns "0"</p>
+                        <p>=DATEDIF(DATE(2017, 1, 2), DATE(2017, 1, 14), "D")</p>
+                        <p>returns "12"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DATEVALUE</td>
+                    <td class="tabletext">
+                        <p>DATEVALUE(<i>dateString</i>)</p>
+                        <p>Converts a date stored as text to a serial number of the date.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=DATEVALUE("2017-1-14")</p>
+                        <p>returns "42749"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DAY</td>
+                    <td class="tabletext">
+                        <p>DAY(<i>dateValue</i>) </p>
+                        <p>
+                    Returns the day of a given date (1-31). 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=DAY(TODAY())</p>
+                        <p>returns "2" on January 2nd</p>
+                        <p>=DAY(DATE(1985,12,2))</p>
+                        <p>returns "2"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DAYS360</td>
+                    <td class="tabletext">
+                        <p>DAYS360(<i>start_date, end_date</i>) </p>
+                        <p>
+                    Returns the number of days between two given dates 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=DAYS360(DATE(2017, 1, 2),DATE(2018, 1, 3))</p>
+                        <p>returns "361", because this is 1 day after a full year</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">EDATE</td>
+                    <td class="tabletext">
+                        <p>
+                    EDATE(<i>startDate, months</i>) </p>
+                        <p>
+                    Adds an integer number of months to a date object and returns the date object. If months is a non-integer value then it will be rounded then added. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=EDATE(1/2/2017, 1)</p>
+                        <p>returns "31"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">EOMONTH</td>
+                    <td class="tabletext">
+                        <p>EOMONTH(<i>startDate, months</i>) </p>
+                        <p>Returns the number of days for a given number of months before or after the start date.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=EOMONTH(1/2/2017, 1)</p>
+                        <p>returns "32"</p>
+                        <p>=EOMONTH(1/2/2017, -1)</p>
+                        <p>returns "-30"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">HOUR</td>
+                    <td class="tabletext">
+                        <p>HOUR(<i>dateValue</i>)</p>
+                        <p>
+                    Returns the hour of a given date (0-23). 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=HOUR(TIME(11,40,59))</p>
+                        <p>returns "11"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MINUTE</td>
+                    <td class="tabletext">
+                        <p>MINUTE(<i>timeValue</i>) </p>
+                        <p>
+                    Returns the minute of a given time value. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MINUTE(TIME(12,30,01))</p>
+                        <p>returns "30"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MONTH</td>
+                    <td class="tabletext">
+                        <p>MONTH(<i>dateValue</i>)</p>
+                        <p>
+                    Returns the month of a given date (1-12). 
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MONTH(DATE(2017, 1, 20))</p>
+                        <p>returns "1"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">NETWORKDAYS</td>
+                    <td class="tabletext">
+                        <p>NETWORKDAYS(<i>startDate</i>, <i>endDate</i>, [<i>holidays</i>], [<i>weekDays</i>])</p>
+                        <p>
+                    Returns the whole number of work days between two dates.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =NETWORKDAYS(DATE(2017,1,6),DATE(2017,1,14))</p>
+                        <p>returns "6"                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">NOW</td>
+                    <td class="tabletext">
+                        <p>
+                    NOW() </p>
+                        <p>
+                    Returns the current date and time. Useful for functions/operators that work with dates. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =SECOND(NOW())</p>
+                        <p>returns "42"                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SECOND</td>
+                    <td class="tabletext">
+                        <p>
+                    SECOND(<i>timeValue</i>) </p>
+                        <p>
+                    Returns the second of a given time. Takes on values from 0 to 59.
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SECOND(TIME(12,01,09))</p>
+                        <p>returns "9"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">TIME</td>
+                    <td class="tabletext">
+                        <p>
+                    TIME(<i>hours, minutes, seconds</i>) </p>
+                        <p>
+                    Returns the time as a fraction of the day. Values are not limited to {0,24},{0,60}, {0,60} and carry over (e.g., "25:00:00" is equivalent to "1:00:00"). 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=TIME(21, 20, 03)</p>
+                        <p>returns "0.888923611111111"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">TIMEVALUE</td>
+                    <td class="tabletext">
+                        <p>TIMEVALUE(time) </p>
+                        <p>
+                    Returns the time as a fraction of the day. Inputs can be in the form HH:MM, HH:MM:SS, YYYY-MM-DD HH:MM:SS, or YYYY-MM-DD HH:MM. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=TIMEVALUE("12:15 PM")</p>
+                        <p>returns "0.510416666666667"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">TODAY</td>
+                    <td class="tabletext">
+                        <p MadCap:conditions="">
+                    TODAY()</p>
+                        <p MadCap:conditions="">
+                    Returns the current date (ignores current time).
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=TODAY()</p>
+                        <p>returns the current date as a serial number.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">WEEKDAY</td>
+                    <td class="tabletext">
+                        <p>WEEKDAY(<i>date, </i>[<i>type</i>])</p>
+                        <p>Returns the day of the week of the specified date as a number. Type can be set to 1, 2, or 3 and determines whether the first day of the week is Sunday or Monday.</p>
+                        <p><b>Type=1:</b> Sunday to Saturday =&gt; 1 to 7</p>
+                        <p><b>Type=2:</b> Monday to Sunday =&gt; 1 to 7</p>
+                        <p><b>Type=3:</b> Monday to Sunday =&gt; 0 to 6	</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=WEEKDAY("4/15/2016", 3)</p>
+                        <p>returns "4"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">WEEKNUM</td>
+                    <td class="tabletext">
+                        <p>WEEKNUM(<i>date, mode</i>) </p>
+                        <p>
+                    Determines the week number of the year for a given date.</p>
+                        <p>The <i>mode</i> parameter is optional and, if omitted, is "1".</p>
+                        <p>1 = Sunday, system 1</p>
+                        <p>2 = Monday, system 1</p>
+                        <p>11 = Monday, system 1</p>
+                        <p>12 = Tuesday, system 1</p>
+                        <p>13 = Wednesday, system 1</p>
+                        <p>14 = Thursday, system 1</p>
+                        <p>15 = Friday, system 1</p>
+                        <p>16 = Saturday, system 1</p>
+                        <p>17 = Sunday, system 1</p>
+                        <p><![CDATA[
+                ]]></p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=WEEKNUM(DATE(2017,1,8))</p>
+                        <p>returns "2" because the date is in the first week of the year</p>
+                        <p>=WEEKNUM(DATE(2017,1,8), 2)</p>
+                        <p>returns "1"&#160;because the "2" indicates the counting starts on a Monday.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">WORKDAY</td>
+                    <td class="tabletext">
+                        <p>WORKDAY(<i>startDay</i>, <i>numDays</i>) </p>
+                        <p>Returns the end date after a specified number of working days as a serial number.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=WORKDAY(DATE(2017,2,16), 1)</p>
+                        <p>returns "42783", while </p>
+                        <p>=DATE(2017,2,16)</p>
+                        <p>returns "42782"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">YEAR</td>
+                    <td class="tabletext">
+                        <p>
+                    YEAR(<i>dateValue</i>) </p>
+                        <p>
+                    Returns the year of a given date.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=YEAR(DATE(2017,1,16))</p>
+                        <p>returns "2017"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">YEARFRAC</td>
+                    <td class="tabletext">
+                        <p>
+                    YEARFRAC(<i>startDate</i>, <i>endDate</i>, [basis])</p>
+                        <p>Computes the fraction of the number of years between a startDate and endDate. Basis{0,1} uses US (NASD) 30/360 and Actual/360 to compute days. 
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=YEARFRAC(DATE(2017,1,17),DATE(2017,1,18))</p>
+                        <p>returns  "0.00277777777777778"                 &#160;
+                </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>                	&#160;</p>
+        <h3 class="topicheading"><a name="Logical"></a>Logical Functions and Operators</h3>
+        <table style="margin-left: 0;margin-right: auto;">
+            <caption style="text-align: left">
+                <p>&#160;</p>
+            </caption>
+            <col style="width: 97px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="tableheading">Name</td>
+                    <td class="tableheading">Format and Description</td>
+                    <td class="tableheading">Example</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">AND</td>
+                    <td class="tabletext">
+                        <p>AND(<i>value1</i>,<i>value2</i>,...)</p>
+                        <p>Returns true if all the provided arguments are true. Otherwise, returns false.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=AND(TRUE, FALSE)</p>
+                        <p>returns "FALSE"</p>
+                        <p MadCap:conditions="Default.Do not include">=AND(GT(Variable1,2), LTE(Variable2,7))</p>
+                        <p MadCap:conditions="Default.Do not include">returns "TRUE" if variable1 is greater than two and variable2 is less than or equal to 7. Otherwise, returns "FALSE". This formula is entered in the third of three fields, where the first two fields have variable1 and variabe2.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">AVERAGEA</td>
+                    <td class="tabletext">
+                        <p>
+                    
+                    AVERAGEA(<i>value1</i>,<i>value2</i>,...)</p>
+                        <p>Returns the average value in a range of values, where "true" is treated as 1 and "false" as 0. Text values are treated as 0.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =AVERAGEA(TRUE, FALSE, "test", 4) </p>
+                        <p>returns "1.25"              </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">COUNTIF</td>
+                    <td class="tabletext">
+                        <p>COUNTIF(<i>[value1</i>,<i>value2</i><i>,...]</i>,"<i>condition</i>") </p>
+                        <p>Returns the number of values in the list that satisfy the <i>condition</i>. </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =COUNTIF([1, 4, 6], "&gt;1")
+</p>
+                        <p>returns "2"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">IF</td>
+                    <td class="tabletext">
+                        <p>
+                    IF(<i>booleanValue,value1,value2</i>) </p>
+                        <p>
+                    If <i>booleanValue</i> is true, returns <i>value1</i>. Otherwise, returns <i>value2</i>. 
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=IF(11&gt;10,"Accepted","Denied")</p>
+                        <p>returns                 "Accepted"</p>
+                        <p>=IF(Variable1&lt;1,0,IF(Variable1&lt;20,Number,IF(Variable1&lt;60,PRODUCT(Variable1,2),PRODUCT(Variable1,3))))</p>
+                        <p>returns variable1 multiplied by 1 IF the number is between 1 and 19, by 2 IF the number is between 20 and 59, and by 3 IF the number is greater than 60. This formula is entered in the second of two fields, where the first field has variable1.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MAXA</td>
+                    <td class="tabletext">
+                        <p>
+                    MAXA(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the maximum value from the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MAXA(-1, 0, "abc", "TRUE") </p>
+                        <p>returns "0"</p>
+                        <p>
+                    =MAXA(-1, 0, "abc", TRUE) </p>
+                        <p>returns "1", because TRUE does not have quotation marks</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MINA</td>
+                    <td class="tabletext">
+                        <p>MINA(<i>value1</i>, <i>value2</i>,...) 
+                    </p>
+                        <p>Returns the minimum of the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MINA(1, 3, "abc")</p>
+                        <p>returns "0"                   </p>
+                        <p><![CDATA[
+               ]]></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">NOT</td>
+                    <td class="tabletext">
+                        <p>NOT(<i>value</i>)</p>
+                        <p>Returns the opposite of the value.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=NOT(FALSE)</p>
+                        <p>returns "TRUE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">OR</td>
+                    <td class="tabletext">
+                        <p>OR(<i>value1, value2, ...</i>)</p>
+                        <p>Returns true if any of the arguments are true, false if all of them are false.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=OR(TRUE, FALSE, TRUE)</p>
+                        <p>returns "TRUE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUMIF</td>
+                    <td class="tabletext">
+                        <p>
+                    SUMIF(<i><i>[value1</i>,<i>value2</i><i>,...]</i>,</i>"<i>condition</i>", [<i>sum_range</i>])</p>
+                        <p>Filters the list for values that satisfy the condition and then calculates the sum of those values.  If no <i>sum range</i> is specified, all values in the range will be summed.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=
+                    SUMIF([1, 2, 3, 4, 5], "&gt;3") </p>
+                        <p>returns "9"</p>
+                        <p>=SUMIF(                    table_variable_name.column_variable_name, "&gt;5", 
+                    [table_variable_name.column2_variable_name])</p>
+                        <p>returns the sum of the values in column2 that are in the same row as the values greater than 5 in column1</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUMIFS</td>
+                    <td class="tabletext">
+                        <p>SUMIFS(<i>reference, range1, criterion1, range2, criterion2, ...</i>)</p>
+                        <p>Returns the sum of a range of values that meet multiple criteria in multiple ranges.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SUMIFS([1,1,3], [3,2,3], "&gt;2", [4,5,6], "&lt;6")</p>
+                        <p>returns "1", because the first value in range 1 is "3" and the first value in range 2 is "4". "3" fits criterion 1 because 3 is greater than 2 and "4" fits criterion 2 because 4 is less than 6, so "1" (in the reference) is a hit. Similarly, the second "1" is a hit. However, "3" is not a hit because 6 is not less than 6 in the second range.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3 class="topicheading"><a name="Function"></a>Functions for Tables and Lists</h3>
+        <table style="margin-left: 0;margin-right: auto;">
+            <caption style="text-align: left">
+                <p>&#160;</p>
+            </caption>
+            <col style="width: 96px;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <td class="tableheading">Name</td>
+                    <td class="tableheading">Format and Description</td>
+                    <td class="tableheading">Example</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">AND</td>
+                    <td class="tabletext">
+                        <p>AND(<i>value1</i>,<i>value2</i>,...)</p>
+                        <p>Returns true if all the provided arguments are true. Otherwise, returns false.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=AND(TRUE, FALSE)</p>
+                        <p>returns "FALSE"</p>
+                        <p MadCap:conditions="Default.Do not include">=AND(GT(Variable1,2), LTE(Variable2,7))</p>
+                        <p MadCap:conditions="Default.Do not include">returns "TRUE" if variable1 is greater than two and variable2 is less than or equal to 7. Otherwise, returns "FALSE". This formula is entered in the third of three fields, where the first two fields have variable1 and variabe2.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">AVG</td>
+                    <td class="tabletext">
+                        <p>
+                    AVG(<i>value1</i>,<i>value2</i>,...)</p>
+                        <p>Calculates the average of a list of values. This function is supported with table/collection field variables.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =AVG(3, 4, 5, 6) </p>
+                        <p>returns "4.5"               </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">CHOOSE</td>
+                    <td class="tabletext">
+                        <p>CHOOSE(<i>index, val1, val2,</i> ...) </p>
+                        <p>
+                    Returns the corresponding value at the given index, if it exists. Input values may be any type (array, number, text, etc.) 
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =CHOOSE(3, 10, 11, 12)</p>
+                        <p>returns "12", because the index "3" has the value "12"                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">CHOOSEA</td>
+                    <td class="tabletext">
+                        <p>CHOOSEA(<i>index, val1, val2</i>, ...) </p>
+                        <p>Returns the corresponding value at the given index, if it exists. If more than one input exists in one value, the function flattens the input.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=CHOOSEA(2, 1, [2,3], 4)</p>
+                        <p>returns "2" because the list "1, [2, 3], 4" is flattened to be "1, 2, 3, 4".</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">COLUMN</td>
+                    <td class="tabletext">
+                        <p>COLUMN()</p>
+                        <p>Returns the column index of a cell in a table, where a cell in the first column has a value of 1.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=COLUMN()</p>
+                        <p>returns "1" for a cell in column 1</p>
+                        <p>=COLUMN()=0</p>
+                        <p>returns "TRUE"&#160;if the column is empty</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">COUNT</td>
+                    <td class="tabletext">
+                        <p>COUNT(<i>value1, value2</i>, ...) </p>
+                        <p>
+                    Counts the number of number <i>values</i> in the list. Non-numeric values are ignored.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=COUNT(3, 2, 7, 4, 6)</p>
+                        <p>returns "5"                    &#160;
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">COUNTIF</td>
+                    <td class="tabletext">
+                        <p>COUNTIF(<i>[value1</i>,<i>value2</i><i>,...]</i>,"<i>condition</i>") </p>
+                        <p>Returns the number of values in the list that satisfy the <i>condition</i>. </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =COUNTIF([1, 4, 6], "&gt;1")
+</p>
+                        <p>returns "2"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">INDEX</td>
+                    <td class="tabletext">
+                        <p>INDEX(<i>column, row</i>)</p>
+                        <p>Returns an item in an array.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=INDEX(Table.Column_1, 3)</p>
+                        <p>returns the third item in column 1 of a table.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">JOIN</td>
+                    <td class="tabletext">
+                        <p>JOIN(<i>delimiter</i>, <i>array</i>) </p>
+                        <p>
+                    Concatenates the values in the given array into a string, separated by a delimiter.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=JOIN("", ["L", "a", "s", "e", "r"])</p>
+                        <p>returns "Laser"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MAX</td>
+                    <td class="tabletext">
+                        <p>
+                    MAX(<i>value1</i>,<i>value2</i>,...</p>
+                        <p>
+                    Returns the maximum numerical value from the list of values, while ignoring values that are not numbers. This function supports table and collection field variables. 
+           </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MAX(1,2,4,1,2)</p>
+                        <p>returns "4"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MAXA</td>
+                    <td class="tabletext">
+                        <p>
+                    MAXA(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the maximum value from the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MAXA(-1, 0, "abc", "TRUE") </p>
+                        <p>returns "0"</p>
+                        <p>
+                    =MAXA(-1, 0, "abc", TRUE) </p>
+                        <p>returns "1", because TRUE does not have quotation marks</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MIN</td>
+                    <td class="tabletext">
+                        <p>MIN(<i>value1</i>,<i>value2</i>,...) </p>
+                        <p>
+                    Returns the minimum value from a list of values, while ignoring values that are not numbers. This function supports table and collection field variables.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MIN(10, 3, -5)</p>
+                        <p>returns "-5"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MINA</td>
+                    <td class="tabletext">
+                        <p>MINA(<i>value1</i>, <i>value2</i>,...) 
+                    </p>
+                        <p>Returns the minimum of the list of values, including text values and boolean values.</p>
+                        <p>Text values are treated as 0.</p>
+                        <p>Boolean value TRUE is treated as 1 and FALSE is treated as 0.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=MINA(1, 3, "abc")</p>
+                        <p>returns "0"                   </p>
+                        <p><![CDATA[
+               ]]></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">MODE</td>
+                    <td class="tabletext">
+                        <p>
+                    MODE(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>
+                    Returns the most common value in the list of values.
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =MODE(1, 3, 1, 4, 6) </p>
+                        <p>returns "1"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">OR</td>
+                    <td class="tabletext">
+                        <p>OR(<i>value1, value2, ...</i>)</p>
+                        <p>Returns true if any of the arguments are true, false if all of them are false.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=OR(TRUE, FALSE, TRUE)</p>
+                        <p>returns "TRUE"</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">PRODUCT</td>
+                    <td class="tabletext">
+                        <p>PRODUCT(<i>value1</i>, <i>value2</i>,...) </p>
+                        <p>Calculates the product of all numerical values in the list of values. Text values are ignored.
+                    
+                </p>
+                    </td>
+                    <td class="tabletext">
+                        <p>
+                    =PRODUCT(1, 2, 3, "abc", 4)</p>
+                        <p>returns "24" 
+                </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">ROW</td>
+                    <td class="tabletext">
+                        <p>ROW()</p>
+                        <p>Returns the row number of a cell in a table, where a cell in the first row has a value of 1.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=ROW()</p>
+                        <p>returns "1" for a cell in row 1</p>
+                        <p>=ROW()=0</p>
+                        <p>returns "TRUE"&#160;if the row is empty</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUM</td>
+                    <td class="tabletext">
+                        <p>SUM(<i>value1</i>,<i>value2</i>,...) </p>
+                        <p>Calculates the sum of all number values in the list. This function supports table and collection field variables.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SUM(1,2,3)</p>
+                        <p>returns "6"</p>
+                        <p>=SUM(VALUE(Single_Line_1), VALUE(Single_Line_2))</p>
+                        <p>returns the sum of two <a href="Form-Fields/Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">single line</a> fields.</p>
+                        <p>=SUM(INDEX(Table_VariableName.Column_VarName1,ROW()),INDEX(Table_VariableName.Column_VarName2,ROW()))</p>
+                        <p>after being placed in the third column of three columns, this formula returns the sum of the contents of the first two columns</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUMIF</td>
+                    <td class="tabletext">
+                        <p>
+                    SUMIF(<i><i>[value1</i>,<i>value2</i><i>,...]</i>,</i>"<i>condition</i>", [<i>sum_range</i>])</p>
+                        <p>Filters the list for values that satisfy the condition and then calculates the sum of those values.  If no <i>sum range</i> is specified, all values in the range will be summed.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=
+                    SUMIF([1, 2, 3, 4, 5], "&gt;3") </p>
+                        <p>returns "9"</p>
+                        <p>=SUMIF(                    table_variable_name.column_variable_name, "&gt;5", 
+                    [table_variable_name.column2_variable_name])</p>
+                        <p>returns the sum of the values in column2 that are in the same row as the values greater than 5 in column1</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">SUMIFS</td>
+                    <td class="tabletext">
+                        <p>SUMIFS(<i>reference, range1, criterion1, range2, criterion2, ...</i>)</p>
+                        <p>Returns the sum of a range of values that meet multiple criteria in multiple ranges.</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>=SUMIFS([1,1,3], [3,2,3], "&gt;2", [4,5,6], "&lt;6")</p>
+                        <p>returns "1", because the first value in range 1 is "3" and the first value in range 2 is "4". "3" fits criterion 1 because 3 is greater than 2 and "4" fits criterion 2 because 4 is less than 6, so "1" (in the reference) is a hit. Similarly, the second "1" is a hit. However, "3" is not a hit because 6 is not less than 6 in the second range.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p> &#160;</p>
+        <p> &#160;</p>
+    </body>
+</html>

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Repeat Routing for Approval Template</h1>
+        <p>This workflow sends a document back and forth between an employee and manager, until the document is approved.</p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <ol>
+            <li>When an entry is put in the Proposed Plans folder, a <a href="../Activities/Retrieve-Field-Values.htm" title="Click to learn more." alt="Click to learn more.">Retrieve Field Values</a> activity gets the name of the employee listed in the Workflow Templates: Employee Name field. The retrieved name will be used to route the document to the appropriate employee's folder. </li>
+            <li>A <a href="../Activities/Repeat.htm" title="Click to learn more." alt="Click to learn more.">Repeat</a> activity checks to see if the entry has the “Workflow Templates: Approved” tag. If it does not, then the following activities run.</li>
+            <li> A <a href="../Activities/Rename-Entry.htm" title="Click to learn more." alt="Click to learn more.">Rename Entry</a> activity appends a version number to the entry’s name.</li>
+            <li>A <a href="../Activities/Move-Entry.htm" title="Click to learn more." alt="Click to learn more.">Move Entry</a> activity sends a shortcut to the entry to the folder of the employee whose name was listed in the Workflow Templates: Employee Name field. </li>
+            <li>A <a href="../Activities/Wait-for-Entry-Change.htm" title="Click to learn more." alt="Click to learn more.">Wait for Entry Change</a> activity waits until the “Workflow Templates: Needs Review” tag is set on the entry.</li>
+            <li>An <a href="../Activities/Assign-Tags.htm" title="Click to learn more." alt="Click to learn more.">Assign Tags</a> activity removes the "Workflow Templates: Additional Edits Required" tag. The tag is not present the first time the Repeat activity runs, but if a manager applies the tag later in the workflow, this step ensures it gets cleaned up after the employee reviews the document. </li>
+            <li>A Move Entry activity moves the entry to the Department Manager folder and waits until the manager adds a “Workflow Templates: Additional Edits Required” tag or a “Workflow Templates: Approved” tag.<ul><li>If the manager adds the “Workflow Templates: Additional Edits Required” tag, the Repeat activity will repeat, running the contained activities again. As long as the “Workflow Templates: Approved” tag is not set, the Repeat activity will continue to run.</li><li>If the manager adds the “Workflow Templates: Approved” tag, a Move Entry activity will file the entry in the Approved Plans folder.</li></ul></li>
+        </ol>
+        <p class="ex"><b>Tip:</b> Always include a wait condition inside your Repeat activity, or set the repeat condition to a specific number of iterations. Without these safeguards, the activity will repeat 100 times in quick succession and then fail. </p>
+        <h2>To run this workflow template in the provided test environment</h2>
+        <p class="w"><b>Important:</b> Ensure the <b>Exclude Process Automation User</b> checkbox is selected in the starting event when you run this workflow. Otherwise, the workflow will interfere with the WT- Notify Project Team workflow.</p>
+        <ol>
+            <li>
+               Ensure the WT- Repeat Routing for Approval starting event is enabled.
+          
+          
+                <ol style="list-style-type: lower-alpha;"><li>Navigate to the <b>Condition</b> page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li><li>Select the starting event, and click <b>Enable</b> in the top right. </li></ol></li>
+            <li>In your Laserfiche repository, move an entry into the \Workflow Templates - Test Entries\Research and Development\Proposed Plans folder. For example, the Plan_B and Plan_C documents work well with this workflow. Make a note of the name in the document's Workflow Templates:Employee Name field.</li>
+            <li>Check the employee's folder in \Workflow Templates - Test Entries\Employee Folders for the document.</li>
+            <li>Add the “Workflow Templates: Needs Review” tag to the entry to move it to the Manager folder.</li>
+            <li>Add the “Workflow Templates: Additional Edits Required” tag to route the document back to the employee. Or, add the “Workflow Templates: Approved” tag to file the entry in the \Workflow Templates - Test Entries\Research and Development\Archive\Approved Plans folder.</li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event ) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> button in the Workflow Designer. You can test this workflow on the Plan_B document in the \Workflow Templates - Test Entries\Research and Development folder.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p>If you want to send an email notification to the Department Manager when the document is ready for them to review, add an <a href="../Activities/Email.htm" title="Click to learn more." alt="Click to learn more.">Email</a> activity below the Move to Manager's Folder activity. </p>
+        <p>Use the <a href="../Activities/Escalation.htm" title="Click to learn more." alt="Click to learn more.">Escalation</a> activity to send reminder emails if the Department manager does not review the document in a timely manner. </p>
+        <p>Republish the workflow once you made all desired changes.</p>
+    </body>
+</html>

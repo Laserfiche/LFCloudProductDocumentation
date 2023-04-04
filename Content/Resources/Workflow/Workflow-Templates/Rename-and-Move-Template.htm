@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="6" MadCap:lastHeight="887" MadCap:lastWidth="993" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Rename and Move Template</h1>
+        <p>This workflow renames and files new entries, enforcing a consistent naming and folder structure in your repository.</p>
+        <p>First the workflow gets the invoice number and vendor name from the fields on a new invoice. Then it renames the invoice using the invoice number and moves the invoice into the vendor’s folder. (It creates the vendor’s folder if one does not already exist.)</p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <ol>
+            <li>This workflow uses a <a href="../Activities/Retrieve-Field-Values.htm" title="Click to learn more." alt="Click to learn more.">Retrieve Field Values</a> activity to get the values in the “Workflow Templates: Invoice Number” and “Workflow Templates: Vendor” fields from the new entry.</li>
+            <li>The resulting “Workflow Templates: Invoice Number” token is used in a <a href="../Activities/Rename-Entry.htm" title="Click to learn more." alt="Click to learn more.">Rename Entry</a> activity to rename the entry.</li>
+            <li>The “Workflow Templates: Vendor” token is used in a <a href="../Activities/Move-Entry.htm" title="Click to learn more." alt="Click to learn more.">Move Entry</a> activity to move the new entry to the appropriate vendor folder. Note that the vendor folder will be created if it does not already exist.</li>
+        </ol>
+        <h2>To run this workflow template in the provided test environment</h2>
+        <p>This workflow runs when its condition starting event is met: When an entry is created with values in the “Workflow Templates: Invoice Number” and “Workflow Templates: Vendor” fields.</p>
+        <ol>
+            <li>
+                <p>Ensure the WT- Rename and Move starting event is enabled.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Navigate to the <b>Condition</b> page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li>
+                    <li>Select the starting event, and click <b>Enable</b> in the top right. </li>
+                </ol>
+            </li>
+            <li>In your Laserfiche repository, create a document in the Workflow Templates - Test Entries folder.</li>
+            <li>During the document creation process, assign the document the Workflow Templates template.</li>
+            <li>Provide values for the “Workflow Templates: Invoice Number” and “Workflow Templates: Vendor” fields.</li>
+            <li>The document will be renamed using the “Workflow Templates: Invoice Number” value and moved to a newly created vendor folder under \Workflow Templates - Test Entries\Sales\Invoices\Vendors.</li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> button in the Workflow Designer. You can test this workflow on the New Invoice document in the \Workflow Templates - Test Entries\Sales\Invoices folder.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p>You can edit this workflow to rename other types of documents (such as employee records, contracts, and applications) by changing the field values retrieved and the tokens used in the Rename Entry and Move Entry activities.</p>
+        <p>Remember to republish the workflow after making any changes.</p>
+    </body>
+</html>

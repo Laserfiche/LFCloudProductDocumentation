@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Customizing Buttons | Laserfiche Forms | Customizations</title>
+        <meta name="description" content="Customize the appearance and locations of buttons in Laserfiche Forms." />
+    </head>
+    <body>
+        <h1>CSS Customizations for Buttons</h1>
+        <p>This topic introduces examples of common CSS customizations for buttons in a form. CSS customizations change only static properties like appearance and position. If you want to show or hide buttons based on other events that occur in the form, see <a href="Javascript Buttons.htm">JavaScript Customizations for Buttons</a>.</p>
+        <p>
+            <MadCap:concept term="Forms" />In Forms, buttons generally consist of a button wrapper and an <b>input</b> element. The following is what the HTML for a Submit button may look like:</p><pre xml:space="preserve"><code class="language-markup">&lt;div class="btn-wrapper"&gt;
+  &lt;input type="submit" class="action-btn checkRequired Submit" name="action" 
+  aria-labelledby="action" value="Submit"&gt;
+&lt;/div&gt;</code></pre>
+        <p>The Submit button typically has the type <code>submit</code>. Other buttons, such as the Previous and Next buttons for paginated forms, typically have the type <code>button</code>.</p>
+        <p>To alter a button's appearance and position, it is often necessary to target the button wrapper (in our snippet above, this would be the <b>div</b> element with class <code>btn-wrapper</code>). The following examples demonstrate some common customizations for buttons.</p>
+        <h2>Changing Button Positions</h2>
+        <p>The following CSS rule-sets center the Submit button, which is left-aligned by default.</p><pre xml:space="preserve"><code class="language-css">div.btn-wrapper {display:block}
+.Submit {display:block; margin:auto}</code></pre>
+        <p>As we saw in the HTML snippet above, the Submit button has the class <code>Submit</code>. The second line of the CSS snippet targets the button using this class. The first line targets the button wrapper, using the fact that it is a <b>div</b> element with class <code>btn-wrapper</code>.</p>
+        <p>Setting the <code>display</code> property to <code>block</code> means that the targeted element  will take up the whole width of the page and cannot be displayed side-by-side with other elements. Setting the <code>margin</code> property to <code>auto</code> means that the targeted element is centered within its container.</p>
+        <p>To right-align a button instead, use the property <code>float:right</code> rather than <code>margin:auto</code>:</p><pre xml:space="preserve"><code class="language-css">div.btn-wrapper {display:block}
+.Submit {display:block; float:right}</code></pre>
+        <p>The Previous and Next buttons are both contained within a <b>div</b> with the class <code>cf-pagination-btn</code>. They are separated from each other by a spacer. You would use <code>div.cf-pagination-btn</code> to target their container, <code>div.cf-pagination-btn-spacer</code> to target the spacer, <code>.cf-prev-btn</code> to target the Previous button, and <code>.cf-next-btn</code> to target the Next button.</p>
+        <h2>Changing Button Appearance</h2>
+        <p>You can change the colors of a button using CSS. Here we show you how to do this for the file upload button, which has the class <code>fileuploader</code>. The property <code>background-color</code> sets the background color of the button. <code>border-color</code> sets the color of the button's border. <code>color</code> sets the color of the button's text. We change all three of these colors in this snippet:</p><pre xml:space="preserve"><code class="language-css">.fileuploader {background-color:#2ab; 
+		border-color:#2bc!important; 
+		color:white;}</code></pre>
+        <p>The above snippet changes the colors of <i>all</i> file upload buttons on your form, as it targets the class <code>fileuploader</code>, to which all file upload buttons belong. To change the file upload button for a particular field only, use your browser to determine the id of the file upload button. In the following snippet, we assume that the id is <code>Field60</code>:</p><pre xml:space="preserve"><code class="language-css">input#Field60.fileuploader {
+ 	background-color:#2ab; 	
+	border-color:#2bc!important; 
+	color:white;}</code></pre>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head />
+    <body>
+        <h1>Configuring Conditions</h1>
+        <p>The condition editor has nested sets of conditions that let you specify the conditions that must be met for a workflow, activity, or branch of an activity to run. The editor has one root group that dictates the number of conditions that must be true or false. Within the group are the conditions. You can use the condition editor in several workflow activities--<a href="Activities/Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a>, <a href="Activities/Repeat.htm" title="Click here to learn more." alt="Click here to learn more.">Repeat</a>, <a href="Activities/Conditional-Decision.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Decision</a>, <a href="Activities/Conditional-Parallel.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Parallel</a>, <a href="Activities/Conditional-Sequence.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Sequence</a>--and <a href="../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting events</a>.</p>
+        <p style="font-weight: bold;">To configure a set of conditions</p>
+        <ol>
+            <li>Click <b>No condition set. Click here to create one.</b></li>
+            <li>Click the group to specify if any or all conditions in the group must be true or false.<p><img src="../../Images/groupoptions.png" /></p></li>
+            <li><b>Optional</b>:&#160;Add groups by clicking the <b>Add group</b> button. Remove groups by clicking the down arrow, then <b>Delete</b>.</li>
+            <li>Click the condition type for an activity (first image) or starting event (second image)&#160;to specify to what type of entry, user, or token the condition pertains. Point to items in the menu to see more options for specifying the entries or tokens. Note that only the condition types appropriate for the current activity or event will be available. For example, you cannot specify token conditions in starting event conditions, since tokens only exist after a workflow has started. <a href="Condition-Type-Options.htm" title="Click here to learn more." alt="Click here to learn more.">Show me a list of the options</a></li>
+            <p>
+                <img MadCap:targetName="ac" src="../../Images/image38.png" />
+                <img MadCap:targetName="sr" src="../../Images/image97.png" />
+            </p>
+            <li>Click the starting entry to  specify the entry on which you want to have the condition evaluated. You can only configure this option for the following activities:&#160;<a href="Activities/Conditional-Decision.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Decision</a>, <a href="Activities/Conditional-Parallel.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Parallel</a>, <a href="Activities/Conditional-Sequence.htm" title="Click here to learn more." alt="Click here to learn more.">Conditional Sequence</a>, and <a href="Activities/Repeat.htm" title="Click here to learn more." alt="Click here to learn more.">Repeat</a>.</li>
+            <p>
+                <img src="../../Images/image39.png" MadCap:targetName="Red Text" />
+            </p>
+            <li>Click the operator to define the relationship between the left and right items. The operators available in this list depend on the condition type text.</li>
+            <p>
+                <img src="../../Images/image36.png" MadCap:targetName="the operator" />
+            </p>
+            <li>Click the condition value to specify a value for the condition. To&#160;add a <a href="Tokens-Regex/Tokens.htm" style="color: #0069cf; text-decoration: none;"><a href="Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a></a>, click the right arrow <img src="../../Images/Icon_Arrow_Right_White.png" />.</li>
+            <p>
+                <img src="../../Images/image37.png" MadCap:targetName="the condition value" />
+            </p>
+        </ol>
+    </body>
+</html>

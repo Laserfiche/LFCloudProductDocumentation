@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Add Academic Discipline</title>
+    </head>
+    <body>
+        <h1>Add Academic Discipline Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used to add a discipline to a students academic program.</p>
+        <ul>
+            <li><b>Category:</b> Student Academic Program</li>
+            <li><b>Supported in:</b> Workflow</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Student Academic Program ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the Student Academic Program.</p>
+			<p>This field can be retrieved from the Search Student Academic Programs by Person ID action.</p>
+		    </td>
+		</tr>
+                <tr>
+                    <td>
+                        <p>Academic Discipline ID*</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the Academic Discipline to be added.</p>
+			<p>This field can be retrieved from the Get Discipline List action.</p>
+                    </td>
+		</tr>
+             </tbody>
+        </table>
+        <h2>Output</h2>
+        <p>This action does not have any output tokens.</p>
+	<div class="note">
+		<p><b>Notes:</b></p>
+		<p>If an Academic Discipline ID that already exist in the current student academic program is entered, the duplicate ID will be filtered out by our application. Duplicate Academic Disciplines will not be added in Ellucian.</p>
+		<p>If the enrollment status of the current student academic program is not active, Academic Disciplines can not be added.</p>
+		<p>If the error "the transaction timeout expired; nested exception is org.hibernate.TransactionException: transaction timeout expired" occurs, try again or contact Ellucian support for help.</p>
+	</div>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="2"
+  SkinType="WebHelp2"
+  ComponentType="MasterPage"
+  TemplateName="Fluid"
+  Comment="HTML5 Top Navigation skin"
+  EnableResponsiveOutput="True">
+  <WebHelpOptions
+    NavigationPanePosition="Right" />
+  <Stylesheet>
+    <Styles>
+      <Style
+        Name="Header">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#177D93</Property>
+          <Property
+            Name="PaddingTop">0px</Property>
+          <Property
+            Name="PaddingBottom">0px</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Logo">
+        <Properties>
+          <Property
+            Name="BackgroundImage">url('Laserfiche-Web-Access-TM-Logo.png')</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Submit Button">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#3c6899</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Search Bar">
+        <Properties>
+          <Property
+            Name="Display">none</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Menu Item">
+        <Properties>
+          <Property
+            Name="FontFamily">Arial</Property>
+          <Property
+            Name="LineHeight">40px</Property>
+        </Properties>
+      </Style>
+    </Styles>
+    <Resources>
+      <Resource
+        Name="Laserfiche-Web-Access-TM-Logo.png">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</Resource>
+    </Resources>
+  </Stylesheet>
+  <Strings>
+    <Stylesheet
+      lang="en-us">
+      <Stylesheet>
+        <Styles>
+          <Style
+            Name="Header">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#177D93</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Logo">
+            <Properties>
+              <Property
+                Name="BackgroundImage">none</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Search Submit Button">
+            <Properties>
+              <Property
+                Name="BackgroundColor">#3c6899</Property>
+            </Properties>
+          </Style>
+          <Style
+            Name="Search Bar">
+            <Properties>
+              <Property
+                Name="Display">none</Property>
+            </Properties>
+          </Style>
+        </Styles>
+      </Stylesheet>
+    </Stylesheet>
+  </Strings>
+</CatapultSkin>

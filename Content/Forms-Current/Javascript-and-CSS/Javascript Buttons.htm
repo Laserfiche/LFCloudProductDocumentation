@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Customizing Buttons with JavaScript | Laserfiche Forms</title>
+        <meta name="description" content="Use custom JavaScript to show or hide buttons on a form based on field values on the form." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />JavaScript Customizations for Buttons</h1>
+        <p>This section provides examples of custom JavaScript for showing and hiding buttons. For examples of static customizations that change a button's appearance or position, see <a href="CSS Customizations for Buttons.htm">CSS Customizations for Buttons</a>.</p>
+        <h2>Showing and Hiding Buttons</h2>
+        <p>You may want certain buttons, such as a Next or Submit button, to appear only when a certain condition is met. For example, I may want to prevent the user from submitting a form until certain fields are filled in with an input of the correct format. This conditional showing or hiding of buttons can be done through JavaScript.</p>
+        <h4>Hiding the Submit button unless there is a signature</h4>
+        <p>The following JavaScript snippet hides the submit button unless there is a signature in a signature box.</p><pre><code class="language-javascript">$(document).ready(function () {
+  $('.Submit').hide(); //hide the submit button by default
+  $('.signSignatureBtn').click(function () 
+    $('.Submit').show(); //show the submit button after signing
+  });
+  $(document).on('click','.form-sig-remove',function(){
+    $('.Submit').hide(); //hide the submit button if the signature is removed
+  });
+});
+</code></pre>
+        <p><code>$(document).ready</code> waits for the page to load. Once it is loaded, the Submit button is hidden immediately. We then wait for further events to happen. If someone clicks on <b>Sign</b> in the Sign Document dialog, the Submit button is shown. The Sign button in this dialog is distinguished from other buttons by having the class <code>signSignatureBtn</code>.</p>
+        <p>
+            <img src="../Resources/Images/forms_sign-doc-dialog.PNG" style="border-style: solid;border-width: 1px;width: 511px;height: 304px;" alt="The Sign button in the Sign Document dialog box." title="You can discover the classes of other buttons in this dialog by using your browser's inspection tool." />
+        </p>
+        <p>We want the Submit button to be hidden again if the user deletes the signature. So we add another function that hides the submit button when <b>x</b> in the signature box for an existing signature is clicked. We find that this <b>x</b> has the class <code>form-sig-remove</code>, so we trigger the function when an element with class <code>form-sig-remove</code> is clicked.</p>
+        <p>
+            <img src="../Resources/Images/forms_existing-signature.PNG" style="border-style: solid;border-width: 1px;width: 513px;height: 74px;" />
+        </p>
+        <h4>Hiding the Submit button based on field value</h4>
+        <p>We can also show or hide buttons based on the values of fields. Suppose you want to hide the Submit button if the radio button "Yes" is picked in the following form:</p>
+        <p>
+            <img src="../Resources/Images/forms_radio-button.PNG" style="border-style: solid;border-width: 1px;width: 229px;height: 55px;" alt="A field with two radio buttons, &quot;Yes&quot; and &quot;No&quot;." title="This customization can help you prevent users who satisfy certain criteria from submitting a form." />
+        </p>
+        <p>First, add a custom CSS class called <code>hideSubmit</code> to the field:</p>
+        <p>
+            <img src="../Resources/Images/forms_radio-button-hide-submit.PNG" style="border-style: solid;border-width: 1px;width: 522px;height: 237px;" alt="Assigning the custom CSS class hideSubmit to the radio button field." title="Assigning meaningful class names will help future forms administrators understand old instances of custom JavaScript." />
+        </p>
+        <p>Then, add the following JavaScript to your form:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(){
+  // apply event handler to radio inputs
+  $('.hideSubmit input').change(function(){
+    // if 1 or more YES selections are found
+    if($('.hideSubmit input[value="YES"]:checked').length &gt; 0){
+      // hide submit button
+      $('.Submit').hide();
+    }
+    // otherwise
+    else{
+      // show submit button
+      $('.Submit').show();
+    }
+  });
+});</code></pre>
+        <p>The code first waits for the document to load. Once it is loaded, it waits for an event in which the input to an element of the class <code>hideSubmit</code> is changed. When a change occurs, it checks if the "Yes" option was selected.&#160;If it was, the Submit button is hidden. Otherwise, the Submit button is shown.</p>
+    </body>
+</html>

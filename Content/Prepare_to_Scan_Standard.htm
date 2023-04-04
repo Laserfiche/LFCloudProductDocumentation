@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="6375" MadCap:lastWidth="561">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Preparing to Scan in Standard Mode</h1>
+        <p>Before you begin scanning in basic mode, you can configure options for image enhancements and text generation. </p>
+        <h2 class="topicheading">Launching Scanning</h2>
+        <p>Unlike basic mode, standard mode allows you to store in any folder, not just the one from which you launched Laserfiche Scanning.&#160;This allows you to begin scanning from any folder you want.</p>
+        <h2 class="topicheading">Scanning or Importing a Sample Image</h2>
+        <p>A custom sample image allows you to test image enhancements before scanning. For best results, sample images should be as similar as possible to the pages you want to scan.</p>
+        <p>To add a sample image for testing, select <b>Image Processing</b> under <b>Configuration</b> in the upper left corner. At the bottom of the Image Processing pane on the right, select either <b>Import Sample Image</b> or <b>Scan Sample Image</b>.</p>
+        <h2 class="topicheading">Image Enhancements</h2>
+        <p>Image enhancements help make your images clearer and more readable. This is useful both for users who will be viewing the documents in Laserfiche, and for improving the results of OCR text generation.</p>
+        <p style="font-weight: bold;">To configure image enhancements</p>
+        <ol>
+            <li>Select <b>Image Processing</b> under <b>Configuration</b> in the upper left corner. </li>
+            <li>Available enhancements and processes will be listed under <b>Image Processing</b> on the right side of the screen. Click a process to add it to the process list. </li>
+            <li>The process will open automatically and allow you to configure options for that process. Use the <b>Previous</b> and <b>Next</b> links at the bottom of the process configuration window to walk through the configuration options for each enhancement. Details about the options available are listed under each process, below.</li>
+            <li>When you are done, click the <b>Finish</b> link. Your configuration for the process will be displayed.</li>
+            <li><b>Optional</b>:&#160;To test the process on your sample image, click the <b>Test process</b> link at the bottom of the process configuration.</li>
+            <li>Repeat for as many processes as you want to add.</li>
+        </ol>
+        <p class="note"><b>Note:</b> Enhancements and/or processes are performed in the vertical order 
+ in which they appear in the list. This order can dramatically affect 
+ the results of a scanning session, as an enhancement or process will always affect the following enhancement or process. OCR should be performed <i>after</i> image enhancements in most situations.</p>
+        <p>If you decide that you do not want to use an enhancement, select it under Configuration in the upper left and press DELETE.</p>
+        <h3>Border Padding</h3>
+        <p>This image enhancement adds a white border around an image. </p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Select region</b>:&#160;Specify the amount of padding you want to add in pixels.</li>
+        </ul>
+        <h3>Border Removal</h3>
+        <p>This image enhancement removes one or more borders from an image. It does not scale or change the resolution of an 
+ image.</p>
+        <p style="font-weight: bold;">Configuration options</p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Border selection</b>:&#160;Specify how borders will be removed. You can crop white borders, crop black borders, or convert black borders to white.</li>
+            <li><b>Sensitivity:</b>&#160;Specify how sensitive the border removal process should be. Low sensitivity is best for use with large borders, and high sensitivity is best for use with small borders.</li>
+        </ul>
+        <h3>Color Removal</h3>
+        <p>This image enhancement converts color or grayscale images to black and white, reducing the image's file size.</p>
+        <p style="font-weight: bold;">Configuration options</p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages. </li>
+            <li><b>Select region:</b>&#160;Apply this enhancement to the entire page or only to part of a page. You might want to select a specific region if you want to preserve color on an illustration or photograph but not on the surrounding text.</li>
+            <li><b>Shaded backgrounds:</b>&#160;Determines whether to compensate for shaded or non-uniform backgrounds when removing color. The lower the sensitivity level, the less effect the background will have.</li>
+            <li><b>Image contrast:</b>&#160;Define how dramatically the image's contrast will be modified.</li>
+        </ul>
+        <h3>Color Smoothing</h3>
+        <p>This image enhancement averages the background color 
+ of an image, reducing the number of colors used and the image's overall file size. Color smoothing also optimizes an image for Color Removal. </p>
+        <p style="font-weight: bold;">Configuration options</p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages. </li>
+            <li><b>Select region</b>:&#160;Specify a region of the image (in pixels) that will establish the average background color. 
+ The image's overall background will average to this color. The foreground (i.e., the image's actual content, such as text) should not be in 
+ the region specified. </li>
+            <li><b>Background color variation:</b>&#160;Specify the amount (as a percentage) that a pixel's color can vary from the average background color and still be converted</li>
+        </ul>
+        <h3>Crop</h3>
+        <p>This image enhancement removes an outer portion of an image,  reducing the image's overall dimensions and file size. The unremoved portion remains at the same scale and resolution.</p>
+        <p style="font-weight: bold;">Configuration options</p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages. </li>
+            <li><b>Crop options:</b> Define the region to be removed (in pixels). If 
+ zero is entered, the side in question will not be cropped.</li>
+        </ul>
+        <h3>Deskew</h3>
+        <p>This image enhancement straightens images that have been scanned at an angle.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages. </li>
+            <li><b>Skew detection</b>:&#160;Specify a method to determine how skewed an image is. Lines estimates using the 
+ degree by which lines run parallel to the corresponding image border. Text estimates using text running left to right. Angle estimates using the foreground, and can be optimized for accuracy or speed.</li>
+        </ul>
+        <h3>Despeckle</h3>
+        <p>This image enhancement removes unwanted marks (e.g., dots or stray pixels) from scanned documents.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages. </li>
+            <li><b>Noise level</b>:&#160;Specify the smallest character size (in pixels) that should not be removed.&#160;</li>
+            <li><b>Character protection:</b>&#160;Prevents valid characters (e.g., commas and colons) from 
+ being removed. (Note that this may result in speckles that are adjacent to valid characters remaining as well.)</li>
+        </ul>
+        <h3>Invert</h3>
+        <p>This image enhancement reverses the colors present on an image. This process can be useful for converting white text to black, which is more conducive for OCR.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+        </ul>
+        <h3>Line Removal</h3>
+        <p>This image enhancement removes horizontal or 
+ vertical lines from scanned images.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Line orientation:</b>&#160;Specify whether horizontal or vertical lines will be removed. (To remove both, add this process to your scanning session twice.)</li>
+            <li><b>Minimum line size:</b>&#160;Define the smallest line that should be removed by specifying the minimum number of pixels printed in a row. Lines equal to or larger than 
+ the specified size will be removed.</li>
+            <li><b>Maximum line thickness:</b>&#160;Define the maximum thickness (in pixels) a line can reach and still be removed.</li>
+            <li><b>Maximum line gap:</b>&#160;Specify the maximum amount of space (in pixels) that can exist between two line 
+ segments. Segments separated by more space than the size specified will not be removed. This option compensates for lines that have been fragmented due to a poor quality image.</li>
+            <li><b>Excess line cleanup:</b>&#160;The area surrounding a poor quality line often contains stray marks. This option defines a region (in pixels) around the line from which stray marks will be removed.</li>
+            <li><b>Character reconstruction:</b>&#160;Characters that intersect lines may be damaged during line removal. This option repairs any damaged characters. Specify 
+ the maximum  reconstruction width (in pixels).</li>
+        </ul>
+        <h3>Page Removal</h3>
+        <p>This image process removes pages from documents based on file size or page 
+ number. This feature is often used to remove slip-sheets, cover sheets, and blank pages.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Remove pages:</b> Choose to remove pages by page number, or by removing all pages beneath a certain size in bytes. (A typical blank page is three kilobytes.)</li>
+        </ul>
+        <h3>Resize</h3>
+        <p>This image enhancement scales an image to be smaller or larger than its original size.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Image size:</b>&#160;Specify whether to resize manually (resizing to an exact width and height in pixels), percentage (resizing proportionally), or by DPI&#160;(resizing to a specific resolution in dots per inch).</li>
+            <li><b>Quality:</b>&#160;Define a quality level. The higher the quality, the longer this enhancement will take to process.</li>
+        </ul>
+        <h3>Rotate</h3>
+        <p>This image enhancement rotates an 
+ image to a specified orientation or by a fixed 
+ amount.</p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Image rotation:</b>&#160;Specify whether to rotate automatically (ensuring that text runs left to right)&#160;or manually by a specified number of degrees clockwise.</li>
+        </ul>
+        <h3>Smoothing</h3>
+        <p>This image enhancement grows, shrinks, and/or smooths pixels. </p>
+        <p><b>Configuration options</b>
+        </p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Grow:</b>&#160;Specify the amount (in pixels) that will be added to each black pixel on 
+ the image.</li>
+            <li><b>Erode:</b>&#160;Specify the amount (in pixels) that will be removed from each black pixel 
+ on the image. Characters may break up if you specify 
+ too large of a value.</li>
+            <li><b>Sand and fill:</b>&#160;Specify the amount (in pixels) by which pits and bumps on a character 
+ should be smoothed. This feature performs best with values between one and 
+ five (with the exception of large type sizes).</li>
+            <li><b>Process order:</b> Specify the order in which <span style="font-weight: bold;">Grow</span> 
+ and <span style="font-weight: bold;">Erode</span> should occur. Processing <span style="font-weight: bold;">Grow</span> before <span style="font-weight: bold;">Erode</span> 
+ will transform dot-matrix characters into laser printer quality characters. 
+ Processing     <span style="font-weight: bold;">Erode</span> 
+ before <span style="font-weight: bold;">Grow</span> allows the removal 
+ of thin lines that intersect one another.</li>
+        </ul>
+        <h2 class="topicheading">Text Generation with OCR&#160;(Optical Character Recognition)</h2>
+        <p>OCR text generation "reads" the text on your scanned images and converts them to computer-readable text that can be edited or used for searching. </p>
+        <p>When scanning images that contain text, we strongly recommend using OCR to generate text from them, as this will ensure that your documents are full-text searchable. Even if you are not performing any other image enhancements, it is a good idea to add an OCR process.</p>
+        <p>To enable and configure OCR, you can add it like any other process above, or you can open the <b>Action</b> menu and select <b>Add OCR</b>. In general, OCR should be the lass process on the process list.</p>
+        <p>Once you have enabled OCR, you can configure the following options:</p>
+        <ul>
+            <li><b>Page range:</b>&#160;Apply this enhancement to all pages in the session, or only to a particular set of pages.</li>
+            <li><b>Language selection:</b>&#160;Select a language to determine which type of characters will be preferred.</li>
+            <li><b>Decolumnize:</b>&#160;Select this option to decolumnize text during OCR.</li>
+            <li><b>Optimization style:</b>&#160;Choose whether to prioritize <b>Speed</b>, <b>Standard</b>, or <b>Accuracy</b>. (Standard is a balance between speed and accuracy.)</li>
+            <li><b>Auto rotate:</b>&#160;Select this option to temporarily rotate images 
+ into an orientation suitable for OCR. After OCR, the image will return to its original orientation.</li>
+        </ul>
+        <h2 class="topicheading">Default Properties</h2>
+        <p>You can choose to configure default properties for scanned documents before you begin scanning. This allows you to set a standardized name for new documents, to specify the location where they will be stored, and to configure standard metadata such as fields or tags. Even if you configure default properties, you can still customize them on a document-by-document basis before you store the documents in Laserfiche.</p>
+        <p>See <a href="Metadata.htm">Metadata</a> for more information about document metadata and properties. </p>
+        <p>You can also use tokens, which will be dynamically replaced with relevant information, in your default properties. You can select a token by pressing the token dropdown button (<b>&gt;</b>) and selecting from the list. See <a href="Tokens.htm">Tokens</a> for more information.</p>
+        <p>To begin customizing default properties, select <b>Default properties</b> under <b>Configuration</b> in the upper left corner. Available properties will be listed on the right. You can configure the following default properties:</p>
+        <ul>
+            <li>To set a default document name, type the name in the <b>Default document name</b> option.</li>
+            <li>To set a default template and field values, select the <b>Fields</b> tab. Choose a template and then fill in any field values.</li>
+            <li>To add default tags, select the <b>Tags</b> tab. Select the tag you want to apply by default.</li>
+            <li>To split documents once a certain number of pages have been reached, select the <b>Settings</b> tab and choose <b>Limit pages per document to</b>. For example, if you are scanning multiple forms that are all three pages long, you can scan them in a single batch and automatically split them every three pages.</li>
+            <li>To specify a default folder path, select the <b>Settings</b> tab. Specify the desired path under <b>Folder path</b> or click <b>Browse...</b> to browse to a folder. You can use tokens to dynamically change the folder path. </li>
+        </ul>
+    </body>
+</html>

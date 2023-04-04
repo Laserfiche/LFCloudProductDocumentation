@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html>
+    <head><title>Using Bots with Google Chrome</title>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />Using the Laserfiche Bot Recorder with Google Chrome </h1>
+        <p>If you are working with the latest version of Laserfiche Bots, you will be prompted to launch a new browser window when recording actions in Google Chrome. Allowing the bot to interact with newly launched browser windows avoids a variety of potential complications. </p>
+        <p class="note"><b>Note:</b> After you've finished recording your bot, add a <b><a href="Editing-a-Bot.htm#Toolbox" title="Click here to learn more." alt="Click here to learn more.">Launch application</a></b> activity (in the bot designer) to have the bot open a new Chrome browser window when it runs. Bots cannot interact with already open Chrome browser windows; only windows the bot has opened itself. </p>
+        <p>If you want to record in a Chrome browser window that's already open, you can configure Chrome's remote debugger port through the bot local tool. </p>
+        <ol>
+            <li>Open the bot local tool from the Windows Start menu. </li>
+            <li>Right-click the bot icon in the system tray menu, and select <b>Configure Google Chrome</b>. </li>
+            <li>Ensure Chrome's remote debugger is using port 0. <a href="#To" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+        </ol>
+        <p>If you configured Chrome to work with a previous version of Laserfiche Bots, you must update the remote bugger to use port 0. You must update the port even if you used the automatic configuration tool in the latest version. </p>
+        <p style="font-weight: bold;"><a name="To"></a>To update the remote debugger port</p>
+        <ol>
+            <li style="font-weight: normal;">If they are open, close the bot recorder and Action History by right-clicking the bot icon in the system tray area of the taskbar, and selecting <b>Exit</b>.</li>
+            <li>Open Google Chrome's properties wherever users open Chrome from (e.g., desktop shortcut, start menu, tool menu, etc.). Generally, properties can be accessed by right-clicking the Chrome icon and selecting <b>Properties</b>. </li>
+            <li>In the <b>Google Chrome Properties</b> dialog box, navigate to the <b>Shortcut</b> tab.</li>
+            <li>In the <b>Target</b> text box, add a space after the last quotation mark and paste: </li>
+            <p class="ex"><b>--remote-debugging-port=0</b>
+            </p>
+            <p> <MadCap:toggler targets="Target" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">Show me what this looks like.</MadCap:toggler></p>
+            <p>
+                <img src="../Images/ChromeDebuggingPort.png" title="Enter the remote debugging port after the target here. " alt="Location and contents of the Google Chrome target." MadCap:targetName="Target" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            </p>
+            <div class="note">
+                <p><b>Note:</b> If you've changed the port number Laserfiche Bots uses, then replace 0 with the updated port number. Note that if multiple users on the same machine have the same port configured, the bot may not run correctly. </p>
+            </div> <li>Click <b>OK</b>. </li><li>Restart the bot recorder, by adding a recording in the bot designer.</li><li>Ensure all instances of Chrome are closed, and then restart Chrome. </li></ol>
+    </body>
+</html>

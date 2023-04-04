@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Filtering Columns by Value</h1>
+        <p>The WHERE section of the <a href="Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">query editor</a> allows you to filter the columns for specific values in a table. For example, instead of returning all the values in columns Student Name and Student GPA, you can use the WHERE section to specify only those values where the student has a GPA&#160;of 4.0. You can also apply operators and use wildcards for pattern searching.</p>
+        <p style="font-weight: bold;">To specify a value:</p>
+        <ol>
+            <li>Click <b>Add</b>. </li>
+            <li>Select the name of the column  in which the value is stored under <b>Column</b>.</li>
+            <li>Specify the filtering condition by <a href="#Selectin" title="Click here to learn more." alt="Click here to learn more.">choosing an <b>Operator</b> and entering a <b>Value</b></a>. You can use an <a href="#input-parameters" title="Click here to learn more." alt="Click here to learn more.">input parameter</a> for the value.</li>
+            <li>When you have more than WHERE condition, <a href="#Using" title="Click here to learn more." alt="Click here to learn more.">specify</a> whether the conditions are related by AND&#160;or OR operators.</li>
+        </ol>
+        <h2 class="topicheading" id="input-parameters">Input Parameters</h2>
+        <p>You can specify the input value by entering a value directly. However, you may not know the specific value, or you may want to keep the query broad enough for multiple types of queries. Input parameters allow you to hold off on specifying a value until the query is actually being used. For example, you may want to specify the input value when you run the query within the editor or <a href="../../Workflow/Activities/Setting-Up-a-Data-Query-Rule.htm" title="Click here to learn more." alt="Click here to learn more.">use it in the workflow activity</a>.</p>
+        <p style="font-weight: bold;">To use an input parameter:</p>
+        <ol>
+            <li>Click the text under <b>Input Value</b>.</li>
+            <p>
+                <img src="../../../Images/data-query-ip1.png" />
+            </p>
+            <li>Click <b>Set as input parameter</b>.</li>
+            <p>
+                <img src="../../../Images/data-query-ip2.png" />
+            </p>
+            <li>Set the parameter name.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Selectin"></a>Selecting Operators</h2>
+        <p>The operator in a statement defines the relationship between a column and one or more values. Use the following operators to define the values you want to query. Use the <b>NOT</b>&#160;checkbox at the top of the drop-down to use the opposite of the selected option.</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Operators</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">IN</td>
+                    <td class="tabletext">A set of values. For example, "a" is in the set of values "a", "b", and "c".</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">BETWEEN</td>
+                    <td class="tabletext">A range of number or date values from the first value to the last.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">LIKE</td>
+                    <td class="tabletext">Any value that fits a pattern in a column. Use wildcards to search for a pattern. (More information below)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">COMPARISON</td>
+                    <td class="tabletext">A value based on a comparison between the column name and input value.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">NULL</td>
+                    <td class="tabletext">Any columns that do not have a value.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading"><a name="Using"></a>Using AND or OR Operators between Different Rows</h2>
+        <p>By default, if you have multiple rows in the WHERE&#160;section of the query editor, they will be connected by an AND operator. The query editor lets you change this to an OR operator, or to nest multiple levels of clauses linked by AND and OR operators.</p>
+        <ul>
+            <li>To change an operator from an AND to an OR or vice versa, click on the operator and select your desired operator.</li>
+            <li>To join two rows with an AND or OR operator, drag one row onto the other row and select your desired operator.</li>
+            <li>To add a row into an AND&#160;or OR clause at the same level as another AND&#160;or OR clause, drag the row onto the latter AND or OR.</li>
+        </ul>
+        <p class="ex"><b>Example:</b> I add three rows to a WHERE clause. Initially, the three rows are joined by AND operators by default. I want to move the row for the <b>Name</b> condition to an OR condition at the same level as the current AND condition. In the animated image below, I accomplish this by dragging the <b>Name</b> row to the AND operator and selecting <b>OR</b>.<img src="../../Images/rules_query-operator.gif" /></p>
+        <h2 class="topicheading">Using Wildcards</h2>
+        <p>Wildcards let you query values according to a pattern. You can use the following wildcard rules with a LIKE operator:</p>
+        <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Operators</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th><b>Name</b>
+                    </th>
+                    <th><b>Description</b>
+                    </th>
+                    <th>Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Percent ("%")</td>
+                    <td class="tabletext">Represent zero or more characters.</td>
+                    <td>
+                        <p>"a%" queries values that start with "a"</p>
+                        <p>"%a" queries values that end with "a".</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Underscore ("_")</td>
+                    <td class="tabletext">Represent one character.</td>
+                    <td>
+                        <p>"_a" queries any two-letter values with "a" as the second letter</p>
+                        <p>"_a%" queries any values with "a"&#160;as the second letter.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

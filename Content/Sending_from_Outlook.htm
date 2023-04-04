@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Saving Email to Laserfiche from Microsoft Outlook</h1>
+        <p>Office Integration is a Laserfiche component that allows users to take advantage of Laserfiche features when working with Office files in their native Microsoft Office applications. Office Integration allows you to save Office files directly to your repository from the Office ribbon or toolbar.</p>
+        <p>In addition to its integrations with Microsoft Word, Excel, and PowerPoint, Office Integration offers special features for importing emails from Microsoft Outlook to Laserfiche. You can save emails and attachments to Laserfiche manually, perform an import to a default folder with a single click, automatically extract information about your emails from their headers and save them to the new document's fields, and specify how to handle attachments. </p>
+        <p class="note"><b>Note:</b>&#160;In addition to saving directly from within an Office application, you can also import Microsoft Office documents as you would any other file type. See <a href="Importing_Files.htm">Importing Files from Your Computer</a> for more information.</p>
+        <h2 class="topicheading">Installing the Office Integration</h2>
+        <p>If you have never used Office Integration on your workstation before, you will need to do so before you can save documents to Laserfiche from Office. This can be done by opening any Microsoft Office document in your repository. You will automatically be prompted to download and install Office Integration.This will save a file to your computer, which you can run to install Office Integration. Once you have installed Office Integration, you may be prompted to close any Microsoft Office applications you have open, and/or to restart your computer. If you are not prompted to do so, you will need to close and re-open your Office applications after installing.</p>
+        <p class="note"><b>Note</b>:&#160;Sending Microsoft Outlook email messages to Laserfiche uses different options than sending other types of Office documents. See <a href="Saving_from_Office.htm">Saving to Laserfiche from Microsoft Office</a>. However, the same Office Integration installation is used for both, so you do not need to reinstall Office Integration before using it with other Office applications.</p>
+        <p>Once you have installed Office Integration, you will see the Laserfiche ribbon or toolbar in your Microsoft Office applications. You can access the features of Office Integration from this ribbon or toolbar, including the Save to Laserfiche feature. </p>
+        <p>While saving an Office document to Laserfiche, you can configure metadata about that document to categorize it or make it easier to search for in the future. See <a href="Metadata.htm">Metadata</a> for more information.</p>
+        <h2 class="topicheading">Configuring Outlook Import Options</h2>
+        <p>You can configure default settings that will be used when importing emails from Microsoft Outlook. These will be used for all  imports to a default folder (see <a href="#Automati">Automatically Importing Selected Emails to a Default Folder</a>), and will also be the default values when manually storing email in Laserfiche, although in that case you will have a chance to edit the properties before storing the emails&#160;(see <a href="#Importin">Importing Emails to Laserfiche</a>). </p>
+        <p>You can configure a default location for the imported emails, as well as template and field information and settings for attachment handling. The name, location, and field information can also draw from properties of the email itself. For instance, you can store the time the email was received in a field value, or you could dynamically store the emails in a folder named after the email's sender.</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, open the app picker (<img src="Resources/Images/app-picker.png" />)&#160;in the upper left corner and select <b>Repository Administration</b>.</li>
+            <li>On the left, select <b>Integrations</b> and then <b>Outlook Import</b>.</li>
+            <li>In the <b>Default behavior</b> option, determine how attachments will be handled. You can leave them in the email, remove them and file them as a separate document, or store them both within the original email and as a separate document.</li>
+            <li>If you have chosen to store attachments separately, select <b>Apply email fields to attachments</b> to give the attachments the same template and fields as the parent email.</li>
+            <li>In the <b>Field associations</b> option, select a template that will be applied to imported emails by default. The Email template has already been added and configured for you, but you can select another template, or modify which properties are stored in which fields.</li>
+            <li>In the <b>Default email import folder</b> option, specify the repository location where emails will be stored by default. A path has been configured for you, but you can modify this path to store emails elsewhere. You can use the <a href="Tokens.htm">token</a> dropdown to dynamically file emails. (For instance, in the pre-configured path, the sender name token is used to automatically store emails in a folder corresponding to their sender.)</li>
+            <li>If you would like to return to the default options, click the <b>Clear</b> button under <b>Reset</b>.</li>
+            <li>When you are finished configuring import options, click the <b>Save</b> button at the bottom of the screen.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Automati"></a>Automatically&#160;Importing Selected Emails to a Default Folder</h2>
+        <p>Automatic email import will send your emails to the default folder specified in Repository Administration, using the document name and template and field settings configured there. Because these settings determine how the emails will be imported, you can import them with a single click. If you want to configure each email separately, see <a href="#Importin">Importing Emails to Laserfiche</a>, below.</p>
+        <div><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Saving-Email-to-Default-LF-Folder/Save-Email-to-Default-LF-Folder.html"></iframe>
+        </div>
+        <ol>
+            <li>In Microsoft Outlook, open the Laserfiche ribbon or toolbar. (You do not need to be logged in to Laserfiche in your browser.)</li>
+            <li>Select one or more emails to import.</li>
+            <li>Click <b>Save to Default Folder</b>.</li>
+        </ol>
+        <h2 class="topicheading"><a name="Importin"></a>Importing Emails to Laserfiche </h2>
+        <p>When manually importing email, you can configure the properties for each new document separately. By default, the settings you configured for Outlook Import options will be used, but you can check each one and make changes before you store the email. If you want to use the default options for all emails in the batch, you can do so more quickly by saving to a default folder; see <a href="#Automati">Automatically Importing Selected Emails to a Default Folder</a>, above.</p>
+        <ol>
+            <li>In Microsoft Outlook, open the Laserfiche ribbon or toolbar. (You do not need to be logged in to Laserfiche in your browser.)</li>
+            <li>Select one or more emails to import.</li>
+            <li>Click <b>Save to Laserfiche</b>.</li>
+            <li>If you have not yet worked with an Office document using Office Integration, you will be prompted to provide your Laserfiche URL. Type or paste the URL&#160;of your repository in the box, and click <b>OK</b>.</li>
+            <li>You will be prompted to log in. Provide your user name and password, and click <b>OK</b>.</li>
+            <li>In the <b>General</b> tab, you can specify a new name for the document, type a name in the <b>Document Name</b> option. (By default, the email subject will be used.)</li>
+            <li>Navigate to the folder in the repository where you want to save the emails.</li>
+            <li>In the <b>Fields</b> tab, you can modify the template and field information for your new document. See <a href="Fields_and_Templates.htm">Fields</a> for more information.</li>
+            <li>If the email has attachments, the <b>Attachments</b> tab will be displayed. Configure the following:</li>
+            <ul>
+                <li>To leave an attachment in the message, select Leave in Message. To import it as a separate document, select Separate Document.</li>
+                <li>If you have chosen to import the attachment as a separate document, select <b>Apply settings to attachments that are stored as separate documents</b> if you want to use the same metadata settings for your attachments as you do for the message.</li>
+                <li>If you have chosen to import the attachment as a separate document, select <b>Message should be linked to attachments</b> to connect the email and its attachment with a document relationship in Laserfiche. Select the relationship you want to use.</li>
+            </ul>
+            <li>In the <b>Tags</b> tab, you can add tags to the document. See <a href="Tags.htm">Tags</a> for more information.</li>
+            <li><b>Optional</b>:&#160;If you are importing multiple emails at once, you can select <b>Apply these properties to all entries imported in this batch</b>. This allows you to import multiple emails without having to configure each one individually.</li>
+            <li>Click <b>OK</b>&#160;to save your emails to Laserfiche. </li>
+        </ol>
+        <h2 class="topicheading">Importing Attachments to Laserfiche</h2>
+        <ol>
+            <li>In Microsoft Outlook, open the Laserfiche ribbon or toolbar. (You do not need to be logged in to Laserfiche in your browser.)</li>
+            <li>Select one or more emails with attachments that you want to import. </li>
+            <li>Click <b>Save Attachments to Laserfiche</b>.</li>
+            <li>You will be provided with a list of all the attachments in the selected email or emails. Deselect any attachments you do not want to import and click <b>OK</b>.</li>
+            <li>If you have not yet worked with an Office document using Office Integration, you will be prompted to provide your Laserfiche URL. Type or paste the URL&#160;of your repository in the box, and click <b>OK</b>.</li>
+            <li>You will be prompted to log in. Provide your user name and password, and click <b>OK</b>.</li>
+            <li>In the <b>General</b> tab, you can specify a new name for the document, type a name in the <b>Document Name</b> option. (By default, the attachment's file name will be used.)</li>
+            <li>Navigate to the folder in the repository where you want to save the emails.</li>
+            <li>In the <b>Fields</b> tab, you can modify the template and field information for your new document. See <a href="Fields_and_Templates.htm">Fields</a> for more information.</li>
+            <li>In the <b>Tags</b> tab, you can add tags to the document. See <a href="Tags.htm">Tags</a> for more information.</li>
+            <li><b>Optional</b>:&#160;If you are importing multiple emails at once, you can select <b>Apply these properties to all entries imported in this batch</b>. This allows you to import multiple emails without having to configure each one individually.</li>
+            <li>Click <b>OK</b>&#160;to save your attachments to Laserfiche. </li>
+        </ol>
+    </body>
+</html>

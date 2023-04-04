@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Deadline</h1>
+        <p style="text-align: center;">
+            <img src="Images/deadlineCanvas.PNG" title="Deadline activity" alt="Deadline activity" />
+        </p>
+        <p>This activity defines one route for an entry before a timeout period or date (in a <b>Primary Branch</b>) and one or more for after (in a <b>Deadline Branch</b>). When the deadline is met, the <b>Primary Branch</b> is canceled and the <b>Deadline Branch</b> is processed instead. You can only add deadline branches, not primary branches.</p>
+        <p style="font-weight: bold;">Enforcing Deadlines in Workflow</p>
+        <div><iframe width="100%" height="500" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Enforcing-Deadlines-with-Workflow-202205/Enforcing-Deadlines-with-Workflow-202205.html"></iframe>
+        </div>
+        <p class="ex"><b>Example</b>:&#160;A company receives a purchase order from a client. To respond to the purchase order promptly, the workflow designer uses a <b>Deadline</b> activity that times out in three days. In the <b>Primary Branch</b>, the designer uses an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity to send the purchase order to the Receiving Department. After the <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity, the designer uses a <a href="Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a> activity to wait for the department's approval. If the department approves in three days or fewer, the customer receives an email that the purchase is being sent. However, if more than three days pass and the tasks are incomplete, the <b>Deadline Branch</b> starts and the <b>Primary Branch</b> ends. In the <b>Deadline Branch</b>, the supervisor of the Receiving Department is notified.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>Select <b>Deadline Branch</b> in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" />.</li>
+            <li>In the <b>Deadline</b> property box in the <MadCap:snippetText src="../../Snippets/Properties Pane.flsnp" />, specify the time out period.
+				<p><MadCap:toggler targets="deadlineBranch">Show me what this looks like.</MadCap:toggler></p><div MadCap:targetName="deadlineBranch"><img src="Images/deadlineBranchProperties.PNG" title="The deadline branch properties" alt="The deadline branch properties" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" /></div><ul><li>Select <b>Due in</b> to provide the length of time before the timeout.<ul><li>With the <b>Exclude weekends and holidays</b> option, you can exclude weekends and holidays from the specified length of time. The excluded weekends and holidays are based on those set up in your <a href="../../Settings/Settings.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule profile</a>.</li><li>With the <b>Test Duration Date</b> option, you can test the length of time before the timeout based on a provided value. When you select this option, a dialog appears, in which you can type a start date and (if you have tokens in the <b>Due in</b> section) sample values. When you click <b>OK</b>, the resulting deadline is returned.</li></ul></li><li> Select <b>Due by</b> to provide a specific date of the timeout.            </li></ul></li>
+            <li>Drag and drop activities into <b>Primary Branch</b>. The <b>Primary Branch</b> defines the routing criteria for an entry before a specified timeout period is met.</li>
+            <li>Drag and drop activities into <b>Deadline Branch</b>. The <b>Deadline Branch</b> defines the routing criteria for an entry after a timeout period is met. </li>
+            <li><b>Optional:</b> <MadCap:snippetBlock src="../../Snippets/Plus-Branch.flsnp" /></li>
+        </ol>
+        <p>To delete a deadline branch:</p>
+        <ol>
+            <li>Select a deadline branch in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" /> to highlight it.</li>
+            <li>Click the <b>Delete Selected Activity</b> button <img src="../../../Images/image14.png" /> in the toolbar.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-branch.flsnp" />
+    </body>
+</html>

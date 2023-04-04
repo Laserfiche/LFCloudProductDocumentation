@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="1518" MadCap:lastWidth="1188">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Configure Advanced SSO&#160;options in <MadCap:variable name="DoNotTranslate.LF Cloud" /></h1>
+        <ol>
+            <li>Click <b>Show advanced options</b> to see advanced options. <p><img src="Images/AdvancedOptions.png" border="1" /></p></li>
+            <li>These are the default advanced settings. <p><img src="Images/AdvancedOptionsFields.png" border="1" /></p><ul><li><b>Enable IDP-initiated login flow</b>:&#160;Specify <b>Yes</b> for this feature to allow a user to sign in to <MadCap:variable name="DoNotTranslate.Laserfiche" /> from the identity provider's portal. </li><li><b>Minimum signing algorithm strength</b>: Specify the minimum signing algorithm strength for the SAML&#160;response sent to <MadCap:variable name="DoNotTranslate.Laserfiche" /> from your identity provider. It is recommended to use RSA-SHA256. SAML&#160;response signed by a weaker algorithm will be rejected. </li><li><b>Sign outbound requests</b>: Specify whether the AuthnRequest sent by <MadCap:variable name="DoNotTranslate.Laserfiche" /> to your identity provider should or should not be signed. </li><li><b>Force Authentication</b>: Specify whether <MadCap:variable name="DoNotTranslate.Laserfiche" /> SAMLRequest will require new authentication if the user has an active session in the identity provider. Some identity providers may not allow this as an option. </li><li><b>Validate IDP&#160;certificate</b>: Specify whether <MadCap:variable name="DoNotTranslate.Laserfiche" /> should validate identity provider's signing certificate as publicly trusted. This may not be necessary in most cases since SAML&#160;deployments typically exchange certificates directly instead of relying on the public certificate infrastructure. </li><li><b>User identifying attribute</b>: By default, <MadCap:variable name="DoNotTranslate.Laserfiche" /> uses NameID attribute from SAML&#160;response to identify user. You can customize which attribute will be used to identify <MadCap:variable name="DoNotTranslate.Laserfiche" /> user. </li></ul></li>
+            <li>Click <b>Register</b> to finish. </li>
+        </ol>
+        <p>The default setup for Active Directory Federation Services (ADFS) requires you to configure a customized attribute. To do this:</p>
+        <ol>
+            <li>Next to <b>User identifying attribute</b>, select <b>Use customized attribute</b>.</li>
+            <li>Next to <b>Customized user identifying attribute</b>, enter <i>http://schemas.xmlsoap.org/ws/2005/05/identity/claims/upn</i> to use the typical user principal name (upn) claim, or enter a different claim your organization uses. </li>
+            <li> Click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,65 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="554" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Rename Entry Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>OutputEntry_Name</td>
+                    <td class="tabletext">The new name of the renamed entry.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_Name)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Id</td>
+                    <td class="tabletext">The Laserfiche ID number of the renamed entry.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Path</td>
+                    <td class="tabletext">The folder path of the renamed entry.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_Path)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_FullPath</td>
+                    <td class="tabletext">The folder path of the renamed entry, including the entry's new name.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_FullPath)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Repository</td>
+                    <td class="tabletext">The repository the renamed entry is in.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_Repository)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Server</td>
+                    <td class="tabletext">The Laserfiche Server that contains the renamed entry.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_Server)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_Guid</td>
+                    <td class="tabletext">The GUID (Globally Unique Identifier) of the renamed entry.</td>
+                    <td class="tabletext">%(RenameEntry_OutputEntry_Guid)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "RenameEntry" portion of the syntax changes to match the activity's name.</p>
+        <p class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Standardize/Names", the syntax for the OutputEntry_Id token will be "%(StandardizeNames_OutputEntry_Id)".</p>
+    </body>
+</html>

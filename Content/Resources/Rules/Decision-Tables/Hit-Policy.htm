@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Selecting a Hit Policy</h1>
+        <p>The hit policy helps recognize the decision table type and unambiguously interpret the decision table logic. In other words, this helps decide how many and which of the matched rules to include in the result of the decision table.</p>
+        <p style="font-weight: bold;">To select a hit policy:</p>
+        <ol>
+            <li>Select the hit policy name in the general properties pane on the right.</li>
+            <li>In the dialog, select a hit policy. (More information below)</li>
+            <li>Click <b>Submit</b>.</li>
+        </ol>
+        <h2>Hit Policies</h2>
+        <p>The decision table can use either a single or multiple hit policy. The single hit policy says that the decision table should return the output of only one rule. The multiple hit policy says that the decision table should return either one output of multiple rules or the result from some function on the outputs (like the average of the values). In the dialog to select a hit policy, you can choose from the following policies.</p>
+        <p style="font-weight: bold;">Single Hit Policies</p>
+        <ul>
+            <li><a href="hit-policy/unique-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Unique</a>:&#160;Indicates that the rules must be mutually exclusive. (e.g., one input captures values over 50, another under or equal to 50). </li>
+            <li><a href="hit-policy/any-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Any</a>:&#160;Indicates that the rules can overlap only if the overlapped rules have the same output entries.</li>
+            <li><a href="hit-policy/first-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">First</a>:&#160;Indicates that more than one rule can match, but only the first match is returned, based on the order of the rules.</li>
+            <li><a href="hit-policy/priority-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Priority</a>: Indicates that more than one rule can match, but only one match is returned, based on the order of the outputs.</li>
+        </ul>
+        <p style="font-weight: bold;">Multiple Hit Policies</p>
+        <ul>
+            <li><a href="hit-policy/no-order-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">No Order</a>:&#160;Indicates that all matches are returned with no particular order.</li>
+            <li><a href="hit-policy/rule-order-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Rule Order</a>:&#160;Indicates that all matches are returned, based on the order of the rules.</li>
+            <li><a href="hit-policy/output-order-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Output Order</a>: Indicates that all matches are returned, based on the order of the outputs.</li>
+            <li><a href="hit-policy/single-result-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Single Result</a>:&#160;Indicates that only one value is returned, based on one or more matched rules.</li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Operators and Expressions</h1>
+        <p>You can use  operators in an input cell to modify a value. For example, the value in the first cell of the following image represents any value less than 75. This document details each operator you can use in your decision table.</p>
+        <p>
+            <img src="../../Images/decisionTable_sample.PNG" alt="Screenshot of decision table with an input cell containing &quot;&lt;75&quot;" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 612px;height: 146px;" />
+        </p>
+        <h2 class="topicheading">Expression Builder</h2>
+        <p>The expression builder helps you select operators to form logical expressions, instead of typing out the logical operators. Double-click on a cell to open the expression builder. Inside the expression builder, you can select an operator to view its description and syntax, or double-click on an operator to include it in your expression. Use the right and left arrows next to the Expression field to navigate between cells.</p>
+        <p>
+            <img src="../../Images/decisionTable_expressionBuilder.PNG" alt="Screenshot of expression builder" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 363px;height: 376px;" />
+        </p>
+        <h2>List of Operators</h2>
+        <p>This section summarizes the different types of operators available in decision tables.</p>
+        <p class="note"><b>Note</b>: Typically, in order to use operators with text values, you must select the <a href="Data-Types.htm" title="Click here to learn more." alt="Click here to learn more.">input type</a> to be Advanced String. The only operator you can use with a Text input type is the <a href="#Boolean" title="Click here to learn more." alt="Click here to learn more.">Not operator</a>.</p>
+        <h3 class="topicheading"><a name="Boolean"></a>Boolean Operators</h3>
+        <p>The <code>Not</code> operator returns the opposite of the original value.</p>
+        <p class="ex"><b>Example</b>: In the following table, <code>Not("Decision")</code> represents values that are not the text <code>Decision</code>. <code>Not(2018-02-01)</code> represents date values that are not February 1, 2018. Note that the value that is negated must be enclosed in quote marks for advanced strings, but not for other input types.</p>
+        <p>
+            <img src="../../Images/decisionTable_NOToperator.PNG" alt="Screenshot of decision table showing NOT operator" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+        <h3 class="topicheading">Numerical Comparison Operators</h3>
+        <p>These operators represent a type of inequality for numerical values. You can express the following:</p>
+        <ul>
+            <li>Less than  ("&lt;")</li>
+            <li>Greater than ("&gt;")</li>
+            <li>Less than or equal to ("&lt;=")</li>
+            <li>Greater than or equal to ("&gt;=").</li>
+        </ul>
+        <p class="ex"><b>Example</b>: The value in the first cell of the following image represents any value less than 5, the second any value less than or equal to 5, and the third any value greater than or equal to 5.</p>
+        <p>
+            <img src="../../Images/decisionTable_compareNumbers.PNG" alt="Screenshot of decision table using numerical comparisons" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 555px;height: 203px;" />
+        </p>
+        <h3 class="topicheading"><a name="Range"></a>Range Operators</h3>
+        <p>These operators represent a bounded range of number values. A "[" or "]" indicates that the end value is included, and a "(" or ")" indicates that the end value is excluded.</p>
+        <p>For example, in the following table:</p>
+        <ul>
+            <li>[3, 10) represents any numbers that are both less than 10 and greater than or equal to 3.</li>
+            <li>(11, 15] represents any numbers that are both more than 11 and smaller than or equal to 15.</li>
+            <li>(0, 3) represents any numbers that are both more than 0 and less than 3.</li>
+            <li>[10,11] represents any numbers between 10 and 11, including 10 and 11 themselves.</li>
+        </ul>
+        <p>
+            <img src="../../Images/decisionTable_numberRanges.PNG" alt="Screenshot of decision table using range operators." style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 529px;height: 305px;" />
+        </p>
+        <h3 class="topicheading">Step Operators</h3>
+        <p>These operators combine with <a href="#Range" title="Click here to learn more." alt="Click here to learn more.">range operators</a> to count up or down from the first specified value by a factor of a number.</p>
+        <p>In the following example:</p>
+        <ul>
+            <li>[3, 10) @ 2 represents the integers 3, 5, 7, and 9.</li>
+            <li>&gt;=10 @ 2 represents the integers 10, 12, 14, and so on until infinity.</li>
+            <li>&lt;1 @ -2 represents the integers -1, -3, -5 and so on.</li>
+        </ul>
+        <p>
+            <img src="../../Images/decisionTable_step.PNG" alt="shows sample decision table using step operators." style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 545px;height: 202px;" />
+        </p>
+        <h3 class="topicheading"><a name="List"></a>List Operators</h3>
+        <p>Within a list, a comma is separates multiple sub-expressions. A list expression is matched when the value matches any of the sub-expressions in the list. The example below shows how to use numerical inputs in lists, but you use the list operator in all <a href="Data-Types.htm" title="Click here to learn more." alt="Click here to learn more.">data types</a> except Text. To use list operators to represent multiple possible text values, use the Advanced String input type.</p>
+        <p class="ex"><b>Example</b>: The list value "1, 2, 3" in the first input cell of the following image represents numbers 1, 2, and 3, while "100, [2, 10]@3, [-3, -2]" in the second input cell represents 100, 2, 5, 8, and any number from -3 to -2, including -3 and -2.</p>
+        <p>
+            <img src="../../Images/decisionTable_list.PNG" alt="screenshot of decision table containing list operators" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+    </body>
+</html>

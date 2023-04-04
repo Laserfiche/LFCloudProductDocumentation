@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="824" MadCap:lastWidth="1186">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Records Management Architecture</h1>
+        <p>Everything contained within a record series in a Laserfiche repository is considered to be part of Laserfiche Records Management. </p>
+        <ul>
+            <li>A <b>record series</b> is a collection of records, represented as a folder, that generally have the same retention requirements. </li>
+            <li>A <b>record folder</b> is a collection of records, represented as a folder and contained within a record series, that generally are at the same stage of their lifecycle.</li>
+            <li>A <b>record</b> is an individual document stored in a 
+ record folder. A record can contain both data and metadata. </li>
+        </ul>
+        <p>Records management also includes definitions for retention schedules, cutoff instructions, events, cycle definitions, and locations that can be applied to records. See <a href="Records-Management-Administration.htm">Records Management Administration</a> for more information.</p>
+        <p>See also <a href="Creating-Record-Series-Folders-Records.htm">Creating Record Series, Record Folders, and Records</a>, <a href="Locating-Viewing-Records-Management-Information.htm">Locating and Viewing Records Management Information</a>, and <a href="Performing-Records-Management-Actions.htm">Performing Records Management Actions</a>.</p>
+        <h2 class="topicheading">Record Series</h2>
+        <p>A record series is the highest level of organization in records 
+management. It is a type of folder that can be created either within 
+ the root folder of the repository or within another record series. (Record series can only be created within other record series if there are no record folders already created within the series.) You must be assigned the Records Management privilege to create record series.</p>
+        <h2 class="topicheading">Record Folder</h2>
+        <p>Record folders contain groups of records that are usually governed by the same set of life cycle instructions and are at the same stage of their life cycle. This means records in a record folder typically follow the same set of records management instructions, allowing records managers to perform records management actions, such as cutoff or final disposition, at the record folder level  rather than on each, individual record. Record folders can be created within record series, or within other record folders. </p>
+        <p>Performing records management actions on the record folder level is recommended; however, it is important to note that if individual records have holds they will not continue through the life cycle with the rest of the records in their record folder. Also, if record properties are set at the record level, and if record management actions are performed on individual records, those records will move through their life cycle separately from the rest of the records in their record folder.</p>
+        <h2 class="topicheading">Record</h2>
+        <p>A record is an individual document stored in a 
+ record folder. A record can contain data, metadata, or&#160;both. In Laserfiche, records are grouped into two lifecycle categories: active and inactive. </p>
+        <p>Records are created with the same life cycle properties (such as cutoff instructions and retention schedules) as their parent record series, and so will usually have the same properties as their parent record folder and parent record series. (If the properties on the parent record folder or series are changed, however, the changes will not propagate to the child records.) In addition, usually the records within a record folder will be at the same stage of their life cycle. Record management actions, such as cutoff, are generally performed on the entire record folder. </p>
+        <p>There are two exceptions: first, individual records that have holds on them will not continue through the life cycle with the rest of the records in their folders, and second, it is possible (although uncommon)&#160;to set record properties on individual records, or to perform record management actions on individual records, in which case those records will move through their life cycle separately from the rest of the record folder.</p>
+        <p>A record's metadata may be maintained in the Laserfiche repository even after the record has been destroyed. This option is configured in the record's retention schedule.</p>
+    </body>
+</html>

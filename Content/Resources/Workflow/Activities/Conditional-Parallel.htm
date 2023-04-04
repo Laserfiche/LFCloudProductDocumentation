@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Conditional Parallel</h1>
+        <p style="text-align: center;">
+            <img src="Images/conditionalParallelCanvas.PNG" title="Conditional Parallel activity" alt="Conditional Parallel activity" />
+        </p>
+        <p>This activity runs all branches that have satisfied conditions.</p>
+        <p class="ex"><b>Example</b>: A recruiting team receives a resume and wants to send the resume to any department that fits his credentials. To do this, the workflow designer uses a <b>Conditional Parallel</b> activity. In the first branch, the resume is emailed to the marketing department if the applicant has marketing skills using an <a href="Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a> activity. In the second branch, the resume is emailed to the human resources department if the applicant has human resources experience, and so on. If the application has marketing and human resources experience, both departments will receive an email about the applicant.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>Select a branch of the activity in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" />.</li>
+            <li>In the <b>Condition</b> property box, click <b>Edit conditions...</b>.</li>
+            <li><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more."><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">Configure the conditions for the branch</a>.</a> If the conditions are not met, the workflow skips this branch.</li>
+            <li>Click <b>OK</b>.</li>
+            <li>Drag and drop activities into the branch.</li>
+            <li>Repeat the steps above for each branch.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/Plus-Branch.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/delete-branch.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/disable-branch.flsnp" />
+    </body>
+</html>

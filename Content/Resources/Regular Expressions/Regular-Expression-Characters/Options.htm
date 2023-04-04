@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="5" MadCap:lastHeight="632" MadCap:lastWidth="1138" MadCap:conditions="Default.Complete" MadCap:changes="5" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Connector;Forms;Quick Fields" />Options</h1>
+        <p><a href="../Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">Regular expression</a> options that let you specify how a regular expression pattern will be interpreted. </p>
+        <p class="note">
+            <MadCap:concept term="Laserfiche" /><b>Note:</b> These regular expressions are not available when configuring field constraints in the Laserfiche Administration Console. </p>
+        <table id="myTable" class="tablesorter" border="0" style="margin-left: 0;margin-right: auto;" summary="Regular expression options and their descriptions">
+            <caption style="font-weight: bold;">Regular Expression Options</caption>
+            <col style="width: 153px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">Regular Expression</th>
+                    <th style="font-weight: bold;">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">(?i)                    </td>
+                    <td class="tabletext">Enables case-insensitive matching. For example, (?i)[A-Z] would match any upper-case or lower-case letter.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?m)</td>
+                    <td class="tabletext">Enables multi-line mode. ^ and $ will match the beginning and end of a line, instead of the beginning and end of the text. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?n)</td>
+                    <td class="tabletext">Enables capturing named groups only. (I.e., groups using this format: (?&lt;name&gt; subexpression).)</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?s)</td>
+                    <td class="tabletext">Enables single-line mode. ^ and $ will match the beginning and end of the text, instead of the beginning and end of a line.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?x)</td>
+                    <td class="tabletext">Enables ignoring white space in the regular expression.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?-i)</td>
+                    <td class="tabletext">Disables case-insensitive matching. For example, (?!)[A-Z](?-i)[A-Z] would match any upper-case or lower-case letter that was followed by an upper-case letter.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?-m)</td>
+                    <td class="tabletext">Disables multi-line mode. ^ and $ will match at the beginning and end of the text,</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?-n)</td>
+                    <td class="tabletext">Disables capturing named groups only.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?-s)</td>
+                    <td class="tabletext">Disables single-line mode.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">(?-x)</td>
+                    <td class="tabletext">Disables ignoring white space in the regular expression.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

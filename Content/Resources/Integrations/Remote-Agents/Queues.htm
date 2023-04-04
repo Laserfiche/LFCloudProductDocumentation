@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Worker Queues | Process Automation | Laserfiche Cloud</title>
+        <meta name="description" content="In Laserfiche Process Automation, remote agents connect work done on your local machine to cloud0based processes. Learn to use queues to manage workers according to your local machine's capabilities." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Queues</h1>
+        <p>Queues manage the work that you want the <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">worker</a> to perform. Each work item is added to the queue in a list-like collection. When the worker  is ready to perform a work item, the worker requests work from the remote agent. The remote agent sends queued work items to the worker. Once completed, the worker returns the finished work and asks the remote agent for more work. </p>
+        <p>The amount and type of work performed by the worker is set by the concurrency and plugins for the queue. The number of queues that can be added to the dedicated bot remote agent is determined by your license. </p>
+        <h2 class="topicheading">Concurrency</h2>
+        <p>Concurrency defines the amount of work that a worker can process for the selected queue at one time. You should set the concurrency based on how much work your machine can process simultaneously.</p>
+        <p>You can set the concurrency by CPU or absolutely. By CPU scales the amount of work that the queue can perform by the number of processors on the machine on which the agent is installed. If the machine has two processors, and the concurrency is set to two by CPU, then the worker  processes no more than four work items in total for that queue at one time. Absolute means you want to perform a specified amount of work no matter the number of processors on the machine on which the agent is installed. If the concurrency is set to two work items, then the worker processes no more than two work items in total for that queue at one time.</p>
+        <h2 class="topicheading"><a name="Plugins"></a>Plugins</h2>
+        <p>Plugins allow workers to perform work of the type specified by the plugin. A data query plugin, for example, can perform <a href="../../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">data query</a> work items. The queues in the remote agent can only perform the types of work specified by the selected plugins. </p>
+        <h2 class="topicheading">Setting up a Queue</h2>
+        <ol>
+            <li>Navigate to <b>Integrations</b> from the <b>Process Automation</b> overview page.</li>
+            <li>Select <b>Remote Agents</b> from the left menu. </li>
+            <li>Select the remote agent you want to add a queue to or <a href="Remote-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">create a new remote agent</a>. </li>
+            <li>On the <b>Queues</b> tab, click <b>Add queue</b>.</li>
+            <li>Type a name for the queue.</li>
+            <li>Select one of the concurrency options, and enter a concurrency level.</li>
+            <li>Select one or more plugins.</li>
+            <p class="note"><b>Note</b>: To remove a plugin from a queue, select the checkbox to the left of the plugin name and click <b>Remove Plugin</b> at the bottom.</p>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <h2>Setting up the Dedicated Remote Agent Bot</h2>
+        <ol>
+            <li>Navigate to <b>Integrations</b> from the <b>Process Automation</b> overview page.</li>
+            <li>Select <b>Remote Agents</b> from the left menu. </li>
+            <li>Open the <b>Dedicated Remote Agent Bot</b>. </li>
+            <li>Use the Workers tab to <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">configure workers</a> for the agent. </li>
+            <li>If there are no queues, click <b>Add queue</b> to create a queue.</li>
+            <li>Type a name for the queue.</li>
+            <li>Define capabilities for your queues. Capabilities let you tag queues for specific departments or according to specific attributes. On the bot <a href="../../RPA/Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">manage</a> page, you can then configure bots to run only on queues that have specific capabilities. Click <b>Add capabilities</b>.</li>
+            <li>Select one of the concurrency options, and enter a concurrency level.</li>
+            <li> Assign <a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">workers</a> to a queue. By assigning workers to a queue, you ensure that the queue has the resources it needs to run. If you select <b>Use all workers</b>, the queue will distribute work to any available workers. If you select, <b>Use specified workers</b>, you can add specific workers to dedicate them to this queue.</li>
+            <li>If you are licensed to have multiple queues, you can add more queues by clicking <b>Add queue</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">Next Steps</p>
+        <ul>
+            <li><a href="Worker-Agents.htm" title="Click here to learn more." alt="Click here to learn more.">Configuring workers</a>
+            </li>
+            <li><a href="Troubleshooting.htm" title="Click here to learn more." alt="Click here to learn more.">Troubleshooting</a>
+            </li>
+        </ul>
+    </body>
+</html>

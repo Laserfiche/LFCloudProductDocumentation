@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Running and Tracking a Laserfiche Bot</title>
+        <meta name="description" content="Run and track your bot with an informative Action History that updates in real time. " />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="RPA" />Monitoring a Bot</h1>
+        <p>The Monitor page, Action History, and <a href="Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page all provide details about individual instances of a bot. </p>
+        <h2>Instance details</h2>
+        <p>On the <b>Monitor</b> page, you can search for and view instance information such as start time, duration, and initiator. </p>
+        <p class="note"><b>Note:</b> Full details are only available on the <b>Monitor</b> page for bots run via a <a href="Running-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">remote agent</a>.  Bots run on your local machine or from the <b>Test</b> option in the bot designer will not be listed on this page. </p>
+        <ol>
+            <li>
+               Navigate to the <b>Monitor</b> page in Laserfiche Cloud by using the app picker to select <b>Process Automation</b>, and then <b>Bots</b>. Then, click <b>Monitor</b> at the top of the page.
+            </li>
+            <li>Use the options in the left column to search for an instance. <ul><li>Use the <b>Quick Search</b> drop-down menu to find bots that ran recently.</li><li>Use the other search criteria to search based on bot name, keywords in the instance, current status, and more. Expand the <b>Start Information</b> section to search based on when the bot started. </li></ul></li>
+            <li>After defining your criteria, click <b>Search</b>. Click <b>Reset</b> to clear your search criteria.</li>
+            <li>Click a column title to sort instances based on the values in that column.</li>
+            <li>Click an instance name to see the instance's history. The history details each action the bot took and the status of the action. </li>
+            <li>Click the <b>Input and Output</b> tab, to see the <a href="Editing-a-Bot.htm#Configur" title="Click here to learn more." alt="Click here to learn more.">input and output parameters</a> for the instance. </li>
+        </ol>
+        <h2><a name="Step-by-"></a>Step-by-step action history</h2>
+        <p style="font-weight: normal;">In the <b>Action History</b>, you can see a step-by-step log of each action the bot took.</p>
+        <p>When you run a bot locally (by testing the bot from the designer), the <b>Action History</b> will open in the bottom-right of your desktop, providing information on how the bot is running and its current status. </p>
+        <p class="ex"><b>Tip:</b> Click the arrows in the top right of the Action History to see an expanded view. </p>
+        <ul>
+            <li>If your bot includes a wait activity, the Action History will prompt you to click <b>Mark as complete</b> to advance the bot. </li>
+            <li>You can end running bots from the Action History by clicking the <b>Stop bot</b> button.</li>
+            <li>Click the <b>Token</b> and <b>Input/Output Parameter</b> tabs to view the tokens and parameters used in the bot instance. If a token or parameter has multiple values, click the <b>View values</b> link to see a list of all values. </li>
+            <li>Use the <b>View previous</b> link in the top left to view previously run bot instances. You can return to the current instance by clicking the <b>View next</b> link in the top right.</li>
+            <li>If you accidentally close the Action History, you can re-open it by clicking the Laserfiche Bots icon in the system tray section of the taskbar. </li>
+        </ul>
+        <h2>Statistics</h2>
+        <p>For bots that run via remote agent, you can see statistics for average bot duration, number of running instances, and more in the <b>Instances</b> tab on the <a href="Managing-a-Bot.htm#Viewing" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page. </p>
+        <h2>Ending a running bot</h2>
+        <p>You can end running bots from the Action History by clicking the <b>Stop bot</b> button.</p>
+    </body>
+</html>

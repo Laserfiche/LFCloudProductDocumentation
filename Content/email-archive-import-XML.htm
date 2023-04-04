@@ -1,0 +1,777 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
+    <head><title></title>
+        <link href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/Resources/Stylesheets/Laserfiche Email Archiving1.css" rel="stylesheet" />
+    </head>
+    <body>
+        <h2 class="Heading2">
+            <MadCap:concept term="Import Agent" />Configuring the Profile’s <MadCap:variable name="DoNotTranslate.XML" /></h2>
+        <p>You can configure advanced archiving options directly in a profile's <MadCap:variable name="DoNotTranslate.XML" /> file. Profile files are located here:&#160;<b>C:\ProgramData\Laserfiche\EmailArchiveService\Profiles</b></p>
+        <p>
+            <MadCap:toggler targets="exampleXML">See an example <MadCap:variable name="DoNotTranslate.XML" /> profile </MadCap:toggler>
+        </p><pre class="Code" MadCap:targetName="exampleXML">
+	&lt;xml version="1.0" /&gt;
+	&lt;Profile Address="address@LaserficheEmailArchiveServer" ID="New profile" SchemaVersion="1.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+		&lt;RuleDef IsConjunction="true" IsNegated="false"&gt;
+			&lt;Rule Operator="Equal" Key="EmailSenderAddr"&gt;
+				&lt;Value&gt;sender@domain.com&lt;/Value&gt;
+			&lt;/Rule&gt;
+			&lt;Rule Operator="Equal" Key="EmailSubject"&gt;
+				&lt;Value&gt;Subject&lt;/Value&gt;
+			&lt;/Rule&gt;
+			&lt;Rule Operator="AnyIn" Key="EmailSentToAddrs"&gt;
+				&lt;Value&gt;email@domain.com&lt;/Value&gt;
+			&lt;/Rule&gt;
+		&lt;/RuleDef&gt;
+		&lt;EmailServerSettings Protocol="0" /&gt;
+		&lt;RepositorySettings CloudPassword="" IsCloud="false" Password="" Username="" UseSSL="false" Repository="MyRepo" Server="myserver.com" /&gt;
+		&lt;DocSettings SuppressMetadataErrors="false" CollisionHandling="0" RetainExtension="false" DocTemplate="General" DocVolume="default" DocFolder="\ImportedMails\%(EmailReceivedTime;yyyy-MM-dd)" DocName="%(EmailSubject)" /&gt;
+		&lt;AttachmentSettings CollisionHandling="0" RetainExtension="false" LinkMessageWithDistributionList="false" LinkMessageWithAttachments="true" ApplyMailFieldsToAttachments="true" IgnoreInlineAttachment="true" FileDistributionList="false" AttachmentHandling="0" /&gt;
+		&lt;ImportSettings ImportConversionList=" " TextLinesPerPage="2147483647" KeepPDFFile="true" PDFImportResolution="0" GeneratePagesOnPDFImport="false" PDFImportMonochrome="false" PreservePDFAnnotations="true" BurnPDFAnnotationsOnImage="false" ExtractEdocText="true" /&gt;
+		&lt;Fields&gt;
+			&lt;LFField Name="Email Recipients"&gt;
+				&lt;Value&gt;%(EmailRecipients)&lt;/Value&gt;
+			&lt;/LFField&gt;
+			&lt;LFField Name="Notes"&gt;
+				&lt;Value&gt;%(EmailSentTime)&lt;Value /&gt;
+			&lt;/LFField&gt;
+		&lt;/Fields&gt;
+		&lt;Tags&gt;
+			&lt;LFTag Name="Archived" Comment="" /&gt;
+		&lt;/Tags&gt;
+	&lt;/Profile&gt;
+		</pre>
+        <h3>Retain file extension for messages and attachments</h3>
+        <p style="font-weight: normal;">By default, file extensions are not retained when messages and attachments are saved to Laserfiche. To retain file extensions, change the RetainExtension attribute to "true." </p>
+        <p class="Code">&lt;AttachmentSettings CollisionHandling="0" <b>RetainExtension="true"</b> LinkMessageWithDistributionList="false" LinkMessageWithAttachments="false" ApplyMailFieldsToAttachments="false" IgnoreInlineAttachment="true" FileDistributionList="false" AttachmentHandling="0"/&gt;</p>
+        <h3>File conversion list</h3>
+        <p>This attribute specifies the extensions of the types of files that will be converted to <MadCap:variable name="DoNotTranslate.Laserfiche" /> pages on import. By default, the <b>ImportConversionList</b> attribute is not set and will default to this list: "tif,tiff,bmp,pcx,jpg,jpeg,txt,gif,png".</p>
+        <p class="note"><b>Note:</b> The file types specified in this attribute will override the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm%3FTocPath%3DTrustee%2520Attributes|Lists%2520of%2520Trustee%2520Attributes|Exporting%2520and%2520Importing|_____2" target="_blank" title="Click to learn more." alt="Click to learn more.">ImportConversionList trustee attribute</a> in Laserfiche. </p>
+        <p class="Code">&lt;ImportSettings <b>ImportConversionList=" "</b> TextLinesPerPage="2147483647" KeepPDFFile="true" PDFImportResolution="0" GeneratePagesOnPDFImport="false" PDFImportMonochrome="false" PreservePDFAnnotations="true" BurnPDFAnnotationsOnImage="false" ExtractEdocText="true"/&gt;</p>
+        <h2><a name="Import"></a>Import rules </h2>
+        <p>If you have configured your profile to use <MadCap:variable name="DoNotTranslate.SMTP" />, then the Import Rule tab of the <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-profile.htm#For" title="Click here to learn more." alt="Click here to learn more."><MadCap:concept term="Email Archive" /><MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" />Create Profile</a> dialog has an advanced option that lets you configure more precise import rules using <MadCap:variable name="DoNotTranslate.XML" />. Import rules are optional. If no import rule is configured, then the profile will be applied to all emails. </p>
+        <p class="note"><b>Note:</b> The option to configure profiles to use <MadCap:variable name="DoNotTranslate.SMTP" /> is being deprecated. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-convert-SMTP-to-IMAP.htm" title="Click here to learn more." alt="Click here to learn more.">Learn how to convert profiles from <MadCap:variable name="DoNotTranslate.SMTP" /> to IMAP</a>.</p>
+        <p>The RuleDef element contains import rules that control the type of emails the profile will process. </p>
+        <table class="tablesorter" style="">
+            <col style="width: 92pt;" />
+            <col style="width: 59pt;" />
+            <col style="width: 55pt;" />
+            <col style="width: 262pt;" />
+            <thead>
+                <tr>
+                    <th class="th_1">
+                        <p class="p_3">Name</p>
+                    </th>
+                    <th class="th_2">
+                        <p class="p_3">Type</p>
+                    </th>
+                    <th class="th_2">
+                        <p class="p_3">Default Value</p>
+                    </th>
+                    <th class="th_2">
+                        <p class="p_3">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_1">
+                        <p class="p_5">IsNegated</p>
+                    </td>
+                    <td class="td_2">
+                        <p>Boolean</p>
+                    </td>
+                    <td class="td_2">
+                        <p class="p_5">false</p>
+                    </td>
+                    <td class="td_2">
+                        <p class="p_5">If this option is set to true, the logic of the RuleDef element will be negated. If this option is set to false, the logic of the RuleDef element will not be negated.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1">
+                        <p class="p_5">IsConjunction</p>
+                    </td>
+                    <td class="td_2">
+                        <p>Boolean</p>
+                    </td>
+                    <td class="td_2">
+                        <p class="p_5">true</p>
+                    </td>
+                    <td class="td_2">
+                        <p>If set to true, all the rules must be true (AND logic). If set to false, only one of the rules must be true (OR logic). 
+                        </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h3>Import rule settings</h3>
+        <p>Within the RuleDef block, create one or more Rule elements defining each rule.</p>
+        <table class="tablesorter" style="border-left-width: medium;border-left-color: #ffffff;border-right-width: medium;border-right-color: #ffffff;border-top-width: medium;border-top-color: #ffffff;border-bottom-width: medium;border-bottom-color: #ffffff;">
+            <col style="width: 63pt;" />
+            <col style="width: 48pt;" />
+            <col style="width: 302pt;" />
+            <thead>
+                <tr>
+                    <th class="th_1">
+                        <p class="p_3">Name</p>
+                    </th>
+                    <th class="th_2">
+                        <p class="p_6">Type</p>
+                    </th>
+                    <th class="th_2">
+                        <p class="p_3">Notes</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_1">
+                        <p class="p_5">Key</p>
+                    </td>
+                    <td class="td_2">
+                        <p>String</p>
+                    </td>
+                    <td class="td_2">
+                        <p class="p_5">The email property used in the rule</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1">
+                        <p class="p_5">Operator</p>
+                    </td>
+                    <td class="td_2">
+                        <p>String</p>
+                    </td>
+                    <td class="td_2">
+                        <p>How the value returned by the key will be evaluated against the value configured in the profile</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_1">
+                        <p class="p_5">Value</p>
+                    </td>
+                    <td class="td_2">
+                        <p>String</p>
+                    </td>
+                    <td class="td_2">
+                        <p>The value that the values returned by the key will be evaluated against</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Use these keys to specify the emails the profile will apply to. </p>
+        <div class="ex">
+            <p><b>Example: </b>
+            </p>
+            <p>&lt;Rule="Subject" Operator="Equal"&gt; &lt;Value&gt;Test&lt;/Value&gt; &lt;/Rule&gt; 
+            </p>
+            <p>In this example, the profile will apply to all emails whose Subject equals “Test.”</p>
+        </div>
+        <table class="tablesorter" style="border-left-width: medium;border-left-color: #ffffff;border-right-width: medium;border-right-color: #ffffff;border-top-width: medium;border-top-color: #ffffff;border-bottom-width: medium;border-bottom-color: #ffffff;">
+            <col style="width: 92pt;" />
+            <col style="width: 87pt;" />
+            <col style="width: 288pt;" />
+            <thead>
+                <tr>
+                    <th style="font-weight: bold;">
+                        <p>Key</p>
+                    </th>
+                    <th style="font-weight: bold;">
+                        <p>Value Type</p>
+                    </th>
+                    <th style="font-weight: bold;">
+                        <p>Possible Values</p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">
+                        <p>From</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>Sender</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>To</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>CC</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>Importance</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>String</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>High, Normal, or Low</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>Subject</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>String</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>ImportanceInt</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>Integer</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>1, 3, or 5</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">
+                        <p>Date</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="tabletext">
+                        <p>Format: Mon, 23 Jan 2017 07:47:24 +0000</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="Note"><b>Note</b>: If the key’s value type is “List&lt;String&gt;”, then if any value matches, the rule will be satisfied. For example, if an email is sent to two addresses: aa@domain.com and bb@domain.com, and the rule is: &lt;Rule Key="To" &gt;Operator="Equal"&gt; &lt;Value&gt;aa@domain.com&gt;&lt;/Value&gt; &lt;/Rule&gt; &#160; then the rule will be satisfied. </p>
+        <h3>Operators for import rule settings</h3>
+        <p>Use the operator to specify the relationship between the values returned by the key and the values configured in the XML.</p>
+        <div class="ex">
+            <p><b>Example</b>: </p>
+            <p>&lt;Rule Key="Subject" Operator="Equal"&gt; &lt;Value&gt;Test&lt;/Value&gt; &lt;/Rule&gt; 
+            </p>
+            <p>In this example, the profile will apply to all emails whose key value (the subject of the email) equals the value configured (“Test”).</p>
+        </div>
+        <table class="tablesorter" style="">
+            <col style="width: 65pt;" />
+            <col style="width: 81pt;" />
+            <col style="width: 122pt;" />
+            <col style="width: 198pt;" />
+            <thead>
+                <tr>
+                    <th class="th_3">
+                        <p class="p_6">Operator</p>
+                    </th>
+                    <th class="th_4">
+                        <p>Key value type
+                        </p>
+                    </th>
+                    <th class="th_5">
+                        <p>Number of values configured in the profile
+                        </p>
+                    </th>
+                    <th class="th_6">
+                        <p>How the value returned by the Key is evaluated against the configured value
+                        </p>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="td_3">
+                        <p>Equal</p>
+                    </td>
+                    <td class="td_4">
+                        <p>String</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Equals</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Equals any value in the list</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>The DateTime equals</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>The DateTime equals any value in the list</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>The integer equals</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>The integer equals any value in the list</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>&gt;= 1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>The whole specified list equals the list returned by the key</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="th_3">
+                        <p>Greater</p>
+                    </td>
+                    <td class="th_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="th_5">
+                        <p>1</p>
+                    </td>
+                    <td class="th_6">
+                        <p>After </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Greater</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>GreaterOrEqual</p>
+                    </td>
+                    <td class="td_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>After or equal to</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Greater than or equal to</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>Less</p>
+                    </td>
+                    <td class="td_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Earlier than</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Less than</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>LessOrEqual</p>
+                    </td>
+                    <td class="td_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Earlier than or equal to</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Less than or equal to</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>Contain</p>
+                    </td>
+                    <td class="td_4">
+                        <p>String</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Contains</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Any string contains</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>StartWith/EndWith</p>
+                    </td>
+                    <td class="td_4">
+                        <p>String</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Starts/ends with</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Any string starts/ends with </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>IsEmpty</p>
+                    </td>
+                    <td class="td_4">
+                        <p>String</p>
+                    </td>
+                    <td class="td_5">
+                        <p>0</p>
+                    </td>
+                    <td class="td_6">
+                        <p>String is empty</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>0</p>
+                    </td>
+                    <td class="td_6">
+                        <p>List is empty or contains empty strings only</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>MatchRegex</p>
+                    </td>
+                    <td class="td_4">
+                        <p>String</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Matches the regular expression</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Any string matches the regular expression</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>Between</p>
+                    </td>
+                    <td class="td_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Between the first two values</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Between first two values</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>IsIn</p>
+                    </td>
+                    <td class="td_4">
+                        <p>String</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Equals</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Included in the list</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>DateTime</p>
+                    </td>
+                    <td class="td_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>DateTime equals</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>DateTime included in the list</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>Integer</p>
+                    </td>
+                    <td class="dh_5">
+                        <p>1</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Integer equals</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_3">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_4">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_5">
+                        <p>More than one value elements</p>
+                    </td>
+                    <td class="td_6">
+                        <p>Integer included in the list</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="td_7">
+                        <p>&#160;</p>
+                    </td>
+                    <td class="td_8">
+                        <p>List&lt;string&gt;</p>
+                    </td>
+                    <td class="td_9">
+                        <p>&gt;= 1</p>
+                    </td>
+                    <td class="td_10">
+                        <p>List includes all values</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p>            &lt;EARuleDef IsNegated="false" IsConjunction="true"&gt; </p>
+            <blockquote>
+                <p>&lt;Rule Key="Subject" Operator="Contain"&gt; </p>
+                <blockquote>
+                    <p>&lt;Value&gt;test&lt;/Value&gt; </p>
+                </blockquote>
+                <p>&lt;/Rule&gt; </p>
+            </blockquote>
+            <p>&lt;/EARuleDef&gt; </p>
+        </div>
+    </body>
+</html>

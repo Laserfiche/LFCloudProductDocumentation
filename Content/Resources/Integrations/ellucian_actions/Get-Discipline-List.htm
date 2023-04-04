@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Get Discipline List</title>
+    </head>
+    <body>
+        <h1>Get Discipline List Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action returns a list of objects of which each is an Discipline.</p>
+	<p>This action can be used as input for actions that require this type of information.</p>
+         <ul>
+            <li><b>Category:</b> Other</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Type</p>
+                    </td>
+                    <td>
+                        <p>The type of the Academic Discipline.</p>
+                        <p>Options include "all", "minor", "major" and "concentration".<ul><li>Selecting one of "minor", "major", or "concentration" will filter the results by the selected option.</li><li>Selecting "all" will return all the disciplines.</li></ul></p>
+                        <p>This input is optional.<ul><li>If this input is not included then we will retrieve and display all the student academic program's academic disciplines regardless of type.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return third-party error.</li></ul></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Academic Discipline ID (Value)</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier of the academic discipline.</p>
+                        <p>The value used by update actions (ideally used as the value for a drop down).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Title</p>
+                    </td>
+                    <td>
+                        <p>The full name of a academic discipline (for example, ''Mathematics'', and ideally used as the label for a drop down).</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Abbreviation</p>
+                    </td>
+                    <td>
+                        <p>The abbreviated name of an academic level (for example, 'MATH').</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Type</p>
+                    </td>
+                    <td>
+                        <p>The registration status for the academic period. The value can be “open” or “closed”.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note:</b> The results will be sorted alphabetically by the "Title" field (ascending order).</p>
+    </body>
+</html>

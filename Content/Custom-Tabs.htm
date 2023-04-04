@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Custom Tabs</h1>
+        <p>A custom tab allows you to display information from another website (whether another <MadCap:variable name="DoNotTranslate.Laserfiche" /> web application, a web application used at your site, or an external website) directly within the details pane. You can use tokens to customize what is displayed in this tab. For example, if you store tracking numbers for shipments in a “Tracking ID” field on your “Orders” template, you could create a custom tab for the carrier’s website using that field value as a token. When users selected the custom tab in the Details pane for a particular document, the tab would automatically open the carrier’s website and use the token to jump directly to tracking information for that order.</p>
+        <p>Custom tabs are created and modified in the web client's <a href="Web-Client-Options.htm">Options page</a>. Unlike most configurable elements in the Options page, custom tabs can be shared across users or groups, and require the <b>Manage Repository Options</b> privilege.</p>
+        <h2>Creating a Custom Tab</h2>
+        <ol>
+            <li>To create a custom tab, click your user name in the upper right corner of the folder browser or document viewer, and select <b>Options</b>, and then <b>Display</b>. </li>
+            <li>In the <b>Tabs</b> section, select <b>Add</b>. The <b>Custom Tab</b> dialog box will open.</li>
+            <li>In the Tab Name option, provide a name for the tab.</li>
+            <li>In the <b>Website URL</b>&#160;option, specify the&#160;URL&#160;of the tab. When a user opens the specified custom tab in the Details pane, this page will load in that pane. You can use this to provide a link to a page in a <MadCap:variable name="DoNotTranslate.Laserfiche" /> product, such as a form, or to open an external website. </li>
+            <li><b>Optional:</b>&#160;You can use the token picker to customize this URL&#160;further. For example, you could use a "Customer ID" field to jump directly to a customer in your <MadCap:variable name="DoNotTranslate.CRM" /> software, or a Tracking Number field to open the tracking information for a specific package. Any field can be used in a custom tab, and the token will automatically be replaced by the information for that tab.</li>
+            <li>In the <b>Location</b> option, select which Details pane or panes to use with this custom tab. You can select <b>Folder Browser</b>, <b>Document Viewer</b>, or both.</li>
+            <li>By default, the new custom tab will be displayed in all folders, for all templates, and for all users. However, you can choose to display them only in specific contexts. For example, you might choose to only display your <MadCap:variable name="DoNotTranslate.CRM" /> tab for the "Customer Information"&#160;template and the "Sales"&#160;group.</li>
+            <ul>
+                <li>Select <b>Only display in specific folders</b> to select one or more folders and, optionally, their subfolders.</li>
+                <li>Select <b>Only display on specific templates</b> to select one or more templates.</li>
+                <li>Select <b>Only display for specific groups or users</b> to select one or more trustees.</li>
+            </ul>
+            <li>Click <b>OK</b> to save your custom tab.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

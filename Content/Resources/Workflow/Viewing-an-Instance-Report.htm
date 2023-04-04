@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Viewing an Instance Report</h1>
+        <p>You can interpret the progress and performance of your workflow instances using the instance reporting feature in the Instances tab. This report is available on the Monitor and Design  pages. From the navigation bar on the Monitor page, you can easily find any instance report using the nearby search feature, while from the navigation bar on the Design page, you can easily navigate between the associated workflow definition and the instance report.</p>
+        <h2>Interpreting for an Instance Report</h2>
+        <p>The various tabs in the instance reporting feature let you interpret the progress and performance of a workflow instance. The following table describes when you would use each tab.</p>
+        <ul>
+            <li>
+                <p>
+                    <MadCap:toggler targets="workflow-report"><b>Workflow:</b>
+                    </MadCap:toggler>&#160;View the workflow design, activity statuses, activity properties, and description for each activity. Allows users to easily see which activities in the workflow succeeded or failed, and which paths within conditional branches were processed.</p>
+                <p MadCap:targetName="workflow-report">
+                    <img src="../Images/wf-instance-report-wf.PNG" style="width: 100%;" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:toggler targets="details-report"><b>Details:</b>
+                    </MadCap:toggler> View general statistics about the instance's performance. Provides insight into how long the workflow took to complete, showing possible bottlenecks in the process or areas where revision for optimization might be necessary or desired.</p>
+                <p MadCap:targetName="details-report">
+                    <img src="../Images/wf-instance-report-details.PNG" style="width: 100%;" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:toggler targets="entries-report"><b>Entries:</b>
+                    </MadCap:toggler>&#160;View the entries used, along with each entry's folder path and repository. Provides for verification that processes are acting on the right entries, or verification that desired entries are not missed in processing.</p>
+                <p MadCap:targetName="entries-report">
+                    <img src="../Images/wf-instance-report-entries.PNG" style="width: 100%;" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:toggler targets="activities-report"><b>Activities:</b> </MadCap:toggler> View a list of each activity, activity duration, workflow duration, status, and more. Provides a more detailed view of each activity's performance than the Details section allowing for a more granular view.</p>
+                <p MadCap:targetName="activities-report">
+                    <img src="../Images/wf-instance-report-activities.PNG" style="width: 100%;" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:toggler targets="messages-report"><b>Messages:</b>
+                    </MadCap:toggler> View a list of the errors, warnings, and informational messages for an instance.</p>
+                <p MadCap:targetName="messages-report">
+                    <img src="../Images/wf-instance-report-messages.PNG" style="width: 100%;" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:toggler targets="parameters-report"><b>Parameters:</b>
+                    </MadCap:toggler> View a list of the input and output parameters and their values within an instance.</p>
+                <p MadCap:targetName="parameters-report">
+                    <img src="../Images/wf-instance-report-parameters.PNG" style="width: 100%;" />
+                </p>
+            </li>
+            <li>
+                <p>
+                    <MadCap:toggler targets="tokens-report"><b>Tokens:</b>
+                    </MadCap:toggler> View a list of the instance <a href="Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> along with the current value of the token. Allows users to review the tokens as they flow through the workflow.</p>
+                <p MadCap:targetName="tokens-report">
+                    <img src="../Images/wf-instance-report-tokens.PNG" style="width: 100%;" />
+                </p>
+            </li>
+        </ul>
+        <p>Click the <b>Open Instance</b> button <img src="../Images/open-external-link-icon.png" style="width: 19px;height: 19px;" title="Open Instance icon." alt="Open Instance icon." /> next to the instance in the left pane to open the report from the Design to the Monitor page.</p>
+        <p>Click <b>Recent Activity</b> on the Design page to view the latest workflow activity on the Monitor page..</p>
+        <p>The tab in the navigation bar looks like the following:</p>
+        <p>
+            <img src="../../Images/InstancetabonDesignpage.png" />
+        </p>
+        <p class="note"><b>Note</b>:&#160;Instance reports are retained for up to 30 days before being purged.</p>
+        <h1 MadCap:conditions="Default.Do not include">Viewing an Instance Report</h1>
+        <p MadCap:conditions="Default.Do not include">The instance report provides a detailed summary of a workflow instance.</p>
+        <h2 MadCap:conditions="Default.Do not include">Workflow</h2>
+        <p MadCap:conditions="Default.Do not include">This tab displays the workflow design, with each activity's current status. Colored borders surround each activity, indicating the status of the activity. Use the key on the top right to learn the meaning of each color. The two buttons on the top left, <b>Show Summaries</b> and <b>Show Descriptions</b>, let you include details and the description for each activity in the workflow. When you select an activity, the pane on the right displays the activity properties. </p>
+        <h2 MadCap:conditions="Default.Do not include">Details</h2>
+        <p MadCap:conditions="Default.Do not include">This tab provides general statistics and information about the instance. The first section, Summary Charts, provides various graphs that let you compare the performance of the instance to other instances of the same workflow. The second section, Workflow Details, lets you view the workflow name, the starting event that started the workflow, the version number, the start time, and more. Click View to open the workflow in the workflow designer; click the Search button to search for other workflow instances by the same initiator. </p>
+        <h2 MadCap:conditions="Default.Do not include">Entries</h2>
+        <p MadCap:conditions="Default.Do not include">This tab lists entries the workflow interacted with, and the folder path and repository associated with each entry. </p>
+        <h2 MadCap:conditions="Default.Do not include">Activities</h2>
+        <p MadCap:conditions="Default.Do not include">This tab contains a list of the activities the workflow performed, along with the activity duration, workflow duration (the time the activity actively completed a task, as opposed to waiting), status, and more.</p>
+        <h2 MadCap:conditions="Default.Do not include">Messages</h2>
+        <p MadCap:conditions="Default.Do not include">This tab contains a list of the errors, warning, and informational messages for the instance. Errors are unexpected events that prevent the instance from continuing. Warnings are unexpected events that do not prevent the instance from continuing. Informational messages are events that produce additional information when an instance runs. </p>
+        <p MadCap:conditions="Default.Do not include">The <b>Messages</b> tab lists errors, warnings, and informational messages about the workflow instance.</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include"><b>Error</b>: An unexpected event that permanently prevents the workflow from continuing.<p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: A <a href="Activities/Move-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Move Entry</a> activity is configured to move an expense report into the Accounting folder. If the expense report is deleted before the Move Entry activity runs, the workflow will end with an error.            </p></li>
+            <li MadCap:conditions="Default.Do not include"><b>Warning</b>: An unexpected event that does not prevent a workflow from continuing.<p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: A workflow contains an <a href="Activities/Add-Sticky-Note.htm" title="Click here to learn more." alt="Click here to learn more.">Add Sticky Note</a> activity. When a folder goes through the workflow instead of a document, the following warning appears in the Messages tab of the workflow instance details: <b>Annotations can only be added to documents. The entry is a folder.</b> The workflow will continue even though a sticky note was not added to the entry.</p></li>
+            <li MadCap:conditions="Default.Do not include"><b>Informational Message</b>: An event that produces additional information when a workflow instance runs.<p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: The <a href="Activities/Find-Entries.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entries</a> activity returns all the entries in a specified folder. The informational message for this activity will list how many entries the activity found.</p></li>
+        </ul>
+        <h2 MadCap:conditions="Default.Do not include">Parameters</h2>
+        <p MadCap:conditions="Default.Do not include">This tab displays the unique identifier of the instance as type <b>Input</b>.</p>
+        <h2 MadCap:conditions="Default.Do not include">Tokens</h2>
+        <p MadCap:conditions="Default.Do not include">This tab lists the <a href="Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> in the instance, with the current values of the tokens. Tokens appear in this tab when you include a <a href="Activities/Track-Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Track Tokens</a> activity or run a workflow from the designer. </p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <h1 MadCap:conditions="Default.Do not include">Viewing an Instance Report</h1>
+        <p MadCap:conditions="Default.Do not include">The workflow instance opens in a pane in the <b>Monitor</b> section that may contain the following tabs:</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include"><b>Workflow</b>: Displays the workflow design with each activity's current status.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Details</b>: Provides general statistics and information.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Entries</b>: Lists which entries the workflow has interacted with.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Activities</b>: Lists the activities that have run and their associated statistics.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Messages</b>: Lists errors, warnings, or informational messages.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Parameters</b>: Displays the unique identifier of the workflow instance.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Tokens</b>: Lists the current values of tokens in the workflow.</li>
+        </ul>
+        <p class="note" MadCap:conditions="Default.Do not include"><b>Note</b>:&#160;You can go back to the original workflow or rerun the original workflow by clicking the <b>More Actions</b> button <img src="../../Images/image118.png" /> on the report tab.</p>
+        <h2 MadCap:conditions="Default.Do not include">Workflow</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Workflow</b> tab displays the workflow design. Different colored borders appear around the activities indicating the activities' statuses or if they encountered errors or warnings. The colors correspond to the colors in the key on the top right.</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include">Select an activity to view its properties in the pane on the right.</li>
+            <li MadCap:conditions="Default.Do not include">Select <b>Show Summaries</b> to include details about the performance of the activity within each activity box in the instance overview. </li>
+            <li MadCap:conditions="Default.Do not include">Select <b>Show Descriptions</b> to include the description from the <b>Description </b>text box in the properties pane. </li>
+        </ul>
+        <h2 MadCap:conditions="Default.Do not include">Details</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Details</b> tab provides general statistics and information about your workflow instance.</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include"><b>Summary Charts</b>:&#160;Use the <b>Instance Duration</b> graph to see how long the instance took to run compared to the workflow's average runtime.</li>
+            <li MadCap:conditions="Default.Do not include"><b>Workflow Details</b>: View the workflow's name, the starting rule that kicked off the workflow, the workflow's version number, the times it started, the time it ended or was last modified (if the workflow has not completed yet), its overall duration, and the instance ID. <ul><li MadCap:conditions="Default.Do not include">Click <b>View</b> next to <b>Workflow</b> to open the workflow in the <b>Design</b> page.</li><li MadCap:conditions="Default.Do not include">Select the <b>Search</b> button <img src="../../Images/image60.png" /> to search for other workflow instances started by the same user.</li></ul></li>
+            <li MadCap:conditions="Default.Do not include"><b>Starting Entry</b>: View the starting entry's name, folder path, server, repository, and ID.</li>
+        </ul>
+        <h2 MadCap:conditions="Default.Do not include">Entries</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Entries</b> tab lists entries the workflow interacted with and the folder path and repository associated with each entry. The information shown in this tab varies depending on the rights you have.</p>
+        <h2 MadCap:conditions="Default.Do not include">Activities</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Activities</b> tab lists <a href="Activities/Activities.htm" title="Click here to learn more." alt="Click here to learn more.">activities</a> the workflow has performed with their duration, work duration (the time they have been actively completing a task as opposed to waiting), status, start time, and end time.</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include">Use the <b>Previous</b> button <img src="../../Images/Icon_Back.png" /> and <b>Next</b> button <img src="../../Images/Icon_Previous.png" /> to view the activities when you have more than 25 results.</li>
+            <li MadCap:conditions="Default.Do not include">Use the <b>Columns</b> button <img src="../../Images/Icon_Column.png" /> to remove headers from the table.</li>
+        </ul>
+        <h2 MadCap:conditions="Default.Do not include">Messages</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Messages</b> tab lists errors, warnings, and informational messages about the workflow instance.</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include"><b>Error</b>: An unexpected event that permanently prevents the workflow from continuing.<p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: A <a href="Activities/Move-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Move Entry</a> activity is configured to move an expense report into the Accounting folder. If the expense report is deleted before the Move Entry activity runs, the workflow will end with an error.            </p></li>
+            <li MadCap:conditions="Default.Do not include"><b>Warning</b>: An unexpected event that does not prevent a workflow from continuing.<p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: A workflow contains an <a href="Activities/Add-Sticky-Note.htm" title="Click here to learn more." alt="Click here to learn more.">Add Sticky Note</a> activity. When a folder goes through the workflow instead of a document, the following warning appears in the Messages tab of the workflow instance details: <b>Annotations can only be added to documents. The entry is a folder.</b> The workflow will continue even though a sticky note was not added to the entry.</p></li>
+            <li MadCap:conditions="Default.Do not include"><b>Informational Message</b>: An event that produces additional information when a workflow instance runs.<p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: The <a href="Activities/Find-Entries.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entries</a> activity returns all the entries in a specified folder. The informational message for this activity will list how many entries the activity found.</p></li>
+        </ul>
+        <h2 MadCap:conditions="Default.Do not include">Parameters</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Parameters</b> tab displays the unique identifier of the workflow instance as type <b>Input</b>. </p>
+        <h2 MadCap:conditions="Default.Do not include">Tokens</h2>
+        <p MadCap:conditions="Default.Do not include">The <b>Tokens</b> tab lists the <a href="Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> in the workflow instance with the current values of the tokens. Tokens appear in this tab when you include a <a href="Activities/Track-Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Track Tokens</a> activity or run a workflow from the designer. </p>
+    </body>
+</html>

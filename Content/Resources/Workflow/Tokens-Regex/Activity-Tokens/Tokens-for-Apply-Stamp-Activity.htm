@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="443" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Apply Stamp Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp" />
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Annotation_Id</td>
+                    <td class="tabletext">The stamp's annotation ID number.</td>
+                    <td class="tabletext">%(ApplyStamp_Annotation_Id)</td>
+                </tr>
+                <tr>
+                    <td>Annotation_Page Number</td>
+                    <td class="tabletext">The page number of the page to which the stamp is added.</td>
+                    <td class="tabletext">%(ApplyStamp_Annotation_Page  Number)</td>
+                </tr>
+                <tr>
+                    <td>Annotation_X</td>
+                    <td class="tabletext">The X coordinate of the location where the stamp is added.</td>
+                    <td class="tabletext">%(ApplyStamp_Annotation_X)</td>
+                </tr>
+                <tr>
+                    <td>Annotation_Y</td>
+                    <td class="tabletext">The Y coordinate of the location where the stamp is added.</td>
+                    <td class="tabletext">%(ApplyStamp_Annotation_Y)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "ApplyStamp" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "(Stamp) Progress!," the syntax for the Annotation_Id token is "%(StampProgress_Annotation_Id)."</div>
+    </body>
+</html>

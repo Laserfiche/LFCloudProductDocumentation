@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Populating Form Fields with URL Parameters | Laserfiche Formss | Process Automation</title>
+        <meta name="description" content="Use a special URL format to prefill users' forms with certain values." />
+    </head>
+    <body>
+        <h1>Populating a Form with URL Parameters</h1>
+        <p>Some of your forms may contain generic <a href="Adding-Fields-to-a-Form.htm" title="Click here to learn more." alt="Click here to learn more.">fields</a> that users often fill in the same ways. Instead of having users fill in these fields manually, you can automatically them with default values when the form is loaded in users' browsers.</p>
+        <p>To pre-populate a field, add parameters to the end of the form URL in the following format:</p>
+        <blockquote>
+            <p><i>baseURL</i>?<i>variable1</i>=<i>value1</i>&amp;<i>variable2</i>=<i>value2</i></p>
+        </blockquote>
+        <p>To customize the URL, replace <i>baseURL</i> with the form URL, <i>variable1</i> and <i>variable2</i> with the variables associated with the field, and <i>value1</i> and <i>value2</i> with the field value. To pre-populate two or more fields, insert “&amp;” between each parameter.</p>
+        <p class="note"><b>Note</b>: You cannot pre-populate address, file upload, or signature fields with URL parameters.</p>
+        <h2>Example</h2>
+        <p>A form has a <a href="Form-Fields/Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">single-line</a> and a <a href="Form-Fields/Radio-Button.htm" title="Click here to learn more." alt="Click here to learn more.">checkbox</a> field. To pre-populate the single-line field, start by finding the variable name. In this case, it is <i>Single_Line_1</i>. Then, enter the value you want to populate the field with when the user views the form. For example, to populate the form with the value “Hello World”, add the following statement:</p>
+        <blockquote>
+            <p>Single_Line_1=”Hello World”</p>
+        </blockquote>
+        <p>
+            <img src="../Resources/Forms Images/singlelinevariable.png" alt="Where to find the variable corresponding to a single line field" title="You can also see  a list of all variables in a form by selecting Variables in the left pane of the Layout tab." />
+        </p>
+        <p>To pre-populate the Checkbox field, find the variable name. In this case, it is <i>Checkbox_1</i>. Then, enter one or more fields that you want to pre-select for the user. For example, to pre-select the first and third fields, add the following statement:</p>
+        <blockquote>
+            <p>Checkbox_1=choice_1,choice_3</p>
+        </blockquote>
+        <p>
+            <img src="../Resources/Forms Images/checkboxvariable.png" alt="Where to find the variable name and the values corresponding to choices in a checkbox field" />
+        </p>
+        <p>The final statement appended to the URL looks like:</p>
+        <blockquote>
+            <p>?Single_Line_1=”Hello World”&amp; Checkbox_1=choice_1,choice_3</p>
+        </blockquote>
+        <h2>Other Autofill Methods</h2>
+        <p>You can prefill form fields automatically using these other methods:</p>
+        <ul>
+            <li>Specifying a <b>Default value</b> when you add or edit a form field.</li>
+            <li>Configuring <a href="Filling-Fields-with-Lookup-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">lookup rules</a> to fill fields based on external data sources.</li>
+        </ul>
+    </body>
+</html>

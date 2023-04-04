@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Token Tags</h1>
+        <p>Token tags help place tokens on appropriate token menus, as well as ensure your tokens are evaluated correctly in conditions. To assign token tags, select the categories relevant to your token.</p>
+        <p class="ex"><b>Example</b>: A datetime output token is generated as a string. When you attempt to create a conditional event that compares the token value with another datetime token value, you may receive an error, because one of the values is in the string format. By selecting the datetime token tag, the token is interpreted as a datetime and not a string.</p>
+        <p>If you assign more than one tag to your token, the following order is used to determine how to evaluate the token: string, character, date time, time, date, integer, long integer, short integer, number, and Boolean. Only the tag that appears closest to the start of this list will be respected when evaluating conditions. For example, if you assign the number tag to a token but do not clear the string tag (checked by default), only the string tag is respected when evaluating conditions.</p>
+        <p>
+            <img src="../../../Images/tokentags.png" />
+        </p>
+    </body>
+</html>

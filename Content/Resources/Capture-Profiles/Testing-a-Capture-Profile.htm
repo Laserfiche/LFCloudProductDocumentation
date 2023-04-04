@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html style="mc-master-page: url('../../MasterPages/WebHelp.flmsp');" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Saving, Testing, and, Publishing a Capture Profile</title>
+    </head>
+    <body>
+        <h1>Testing a Capture Profile</h1>
+        <p>You can configure additional sample documents to test the configuration of a capture profile to make sure it captures information accurately.</p>
+        <ol>
+            <li>Open the profile from the Capture Profiles page.  Once open, as long as one or more zones have been configured, the <b>Test Profile</b> button will be available in the toolbar. Click the <b><MadCap:toggler targets="TestButton">Test Profile</MadCap:toggler></b> button.<p MadCap:targetName="TestButton"><img src="../Images/testButton.png" /></p></li>
+            <li>In the <b>Run Test</b> dialog box, you'll see the sample documents you uploaded when configuring the profile. Click <b>Add sample documents</b> if you want to test the profile against more documents. It's best to add documents that are similar to the documents you want the profile to run on so your results will be more accurate and meaningful.</li>
+            <li>Select the checkbox next to the documents you want to include in the test, and click <b>Run test</b>. You will be prompted to save the profile if you have not already saved it.</li>
+            <li>
+               The test results will be listed in table format. Each test document will be listed in the left most column and the values captured from each test document will be in the remaining columns, organized by zone location. If the values span more than the allotted column size, a <b>More</b> link will be displayed so you can view the entire value. Click <b>Less</b> to collapse the value. </li>
+            <li>Clicking on a sample document will display a preview of the document on the right. You  so you can see the document’s pages, the OCR text generated for each page, and where the zone information was captured from on the document<ul><li>Hovering over a green box on the image or text will display the name of the zone.</li><li> Hovering over a pink box on the image or text will display the zone's anchor text and/ or pattern used to find the zone and the text that matched the pattern. </li><li>The <b>Fit width</b> drop-down menu lets you zoom the image to different zoom levels.  </li><li>Click <b>Text</b> above the image preview to display the OCRed text of the test document. If incorrect information was captured, viewing the document text can help diagnose errors in the captured value or anchor text. </li><li>Click the <b>Prev</b> or <b>Next</b> links to move to the previous or next test document.<p MadCap:targetName="TestResults"><img src="../../Images/Capture-Profiles/CaptureProfilesTestResults.PNG" alt="Test Results" title="View the data that was captured when running the test." MadCap:mediastyle="@media print { max-width: 100%; }" /></p></li></ul></li>
+            <li>If the zone values were captured correctly, you can go ahead and <a href="Saving-and-Publishing-a-Capture-Profile.htm" title="Click here for more information about publishing a capture profile." alt="Click here for more information about publishing a capture profile.">publish</a> the profile. If the zone values were captured incorrectly, click the back arrow at the top left to make changes to the profile. You can also click the <b>Test</b> button, add or remove sample documents, and run the test again.</li>
+        </ol>
+    </body>
+</html>

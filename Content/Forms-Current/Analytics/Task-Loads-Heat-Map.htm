@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Visualizing Task Loads</h1>
+        <p>On the <b>Reports</b> page, the <b>Task Loads</b> section lets you view which user tasks in a process are accumulating too many tasks and potentially creating bottlenecks. By selecting the process of interest and adding other criteria, you can generate a heat map that color-codes user tasks according to how many pending tasks they have or how many tasks they've accumulated per day.</p>
+        <h2>Generating the Heat Map</h2>
+        <p>In the left pane, select the criteria you'll use to generate the heat map.</p>
+        <ul>
+            <li><b>Process</b>:&#160;Select the process whose task loads you want to view. The heat map is useful only for processes that contain user tasks—it does not color-code other types of tasks.</li>
+            <li><b>Version</b>: Select the process version whose task loads you want to view.</li>
+            <li><b>View</b>: Select whether you want the colors and numbers shown to be number of currently pending tasks, or the average number of tasks accumulated per day.<ul><li>If you select <b>Tasks accumulated per day</b>, you'll also get to select the date range that the average will be taken over.</li></ul></li>
+            <li><b>Threshold</b>:&#160;Specify the upper and lower ends of the scale, in units of number of pending tasks or tasks accumulated per day. The user tasks with a heavy task load will be colored red, those with a moderate task load will be colored yellow-green, and those with a low task load will be colored green.</li>
+        </ul>
+        <p class="ex"><b>Example</b>: A user task has 0.1 tasks accumulated per day over the selected date range. If <b>Threshold</b> is set to 0.1, this task will appear red on the heat map, as it is at the high end of the range. If <b>Threshold</b> is set to 0.2, the task will appear yellow-green. If <b>Threshold</b> is set to 1, the task will appear green.</p>
+    </body>
+</html>

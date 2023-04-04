@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" MadCap:changes="1" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="Metacharacters" MadCap:lastBlockDepth="4" MadCap:lastHeight="1263" MadCap:lastWidth="1366">
+    <head>
+    </head>
+    <body>
+        <h1>Regular Expressions</h1>
+        <p>Regular expressions are a way of defining patterns in information by using special
+symbols. These expressions can be used to identify, constrain, display, or extract information. </p>
+        <h2>
+            <MadCap:concept term="Laserfiche" />Using regular expressions with Laserfiche applications</h2>
+        <p>Laserfiche applications make use of regular expressions in various ways, depending on the aims of the application. <a href="Common-Regular-Expressions.htm" title="Click here to learn more." alt="Click here to learn more.">See some common regular expressions examples</a>.</p>
+        <h3>
+            <MadCap:concept term="Forms" />Forms </h3>
+        <p>Regular expressions can restrict the format of values entered in a field. For example, a regular expression can require that a user adds dashes to a phone number or Social Security number, but it cannot automatically add those dashes. To automatically change the appearance of entered values, you'll want to use field masks. <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration#../Subsystems/Forms/Content/Forms/Field-Masks.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Field masks</a> change how values are displayed on a form, and are accomplished using very simple JavaScript code. </p>
+        <h3>Workflow </h3>
+        <p>Regular expressions can be used to extract specific information from tokens  used in your workflow. You can apply regular expressions to tokens with the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration#../Subsystems/LFWorkflow/Content/Resources/Tokens and Regex/Tokens.htm?TocPath=Workflow|Workflow%2520Designer|Building%2520Workflows%2520and%2520Business%2520Processes|Tokens|_____0" target="_blank" title="Click to learn more." alt="Click to learn more.">Token Editor or Token Dialog,</a> and the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration#../Subsystems/LFWorkflow/Content/Resources/Activities/Pattern Matching.htm?TocPath=Workflow|Workflow%2520Designer|Building%2520Workflows%2520and%2520Business%2520Processes|Activities|H-R|Pattern%2520Matching|_____0" target="_blank" title="Click to learn more." alt="Click to learn more.">Pattern Matching</a> activity. </p>
+        <h3>Quick Fields</h3>
+        <p>Regular expressions can be applied to document text and token values using the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/LFWorkflow/Content/Resources/Activities/Pattern Matching.htm" target="_blank">Pattern Matching</a> and <a href="https://www.laserfiche.com/support/webhelp/quickfields/9.0/en-US/quickfields.htm#Processes/Substitution.htm" target="_blank">Substitution</a> processes. When the text or token values match a pattern, Quick Fields can perform some action, such as identifying the document as belonging to a document class, automatically annotating the text that meets the pattern, or substituting different text. Pattern Matching expressions can also be used as constraints on particular fields to ensure data used in them meets specified criteria.</p>
+        <h3>Documents</h3>
+        <p>In Repository Administration, constraints for text fields can be created using regular expressions. Constraints for numeric fields (number, integer, and long integer) do not use regular expressions and instead use relational operators. For more information about relational operators, see <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/LFAdmin/Content/Relational_Operator_Reference.htm" target="_blank">Relational Operator Reference</a>.</p>
+        <p><a href="Regular-Expressions-For-Repository-Documents.htm" title="Click here to learn more." alt="Click here to learn more.">Helpful regular expressions to use when configuring field constraints in Repository Administration</a>.</p>
+        <h3>Connector</h3>
+        <p>If you only want to use part of the value stored in a token, you can use regular expressions to extract just the information you need.</p>
+        <h3>Capture Profiles</h3>
+        <p>Regular expressions can be used to account for variations in a zone's anchor text and help locate the data you want to capture. When text matches the regular expression pattern, the capture profile can accurately find the correct information on the document. </p>
+        <h2>Types of regular expressions</h2>
+        <ul style="list-style-type: disc;">
+            <li><a href="Regular-Expression-Characters/Character-Classes.htm" title="Click here to learn more." alt="Click here to learn more.">Character Classes</a>
+            </li>
+            <li><a href="Regular-Expression-Characters/Quantifiers.htm" title="Click here to learn more." alt="Click here to learn more.">Quantifiers</a>
+            </li>
+            <li><a href="Regular-Expression-Characters/Character-Escapes.htm" title="Click here to learn more." alt="Click here to learn more.">Character Escapes</a>
+            </li>
+            <li><a href="Regular-Expression-Characters/Grouping-Constructs.htm" title="Click here to learn more." alt="Click here to learn more.">Grouping Constructs</a>
+            </li>
+            <li><a href="Regular-Expression-Characters/Metacharacters.htm" title="Click here to learn more." alt="Click here to learn more.">Metacharacters</a>
+            </li>
+            <li><a href="Regular-Expression-Characters/Alternations.htm" title="Click here to learn more." alt="Click here to learn more.">Alternations</a>
+            </li>
+            <li><a href="Regular-Expression-Characters/Options.htm" title="Click here to learn more." alt="Click here to learn more.">Options</a>
+            </li>
+        </ul>
+        <h2>More resources</h2>
+        <ul style="list-style-type: disc;">
+            <li>Laserfiche Workflow, Quick Fields, and Connector use .NET regular expressions. The Microsoft Developer Network (MSDN) website has additional information about this type of regular expression, including all  supported <a href="http://msdn.microsoft.com/en-us/library/az24scfc.aspx" target="_blank" title="Click to learn more." alt="Click to learn more.">language elements</a>, <a href="http://msdn.microsoft.com/en-us/library/gg578045.aspx" target="_blank" title="Click to learn more." alt="Click to learn more.">best practices</a>, and <a href="http://msdn.microsoft.com/en-us/library/kweb790z.aspx" target="_blank" title="Click to learn more." alt="Click to learn more.">examples</a>.</li>
+            <li>Repository Administration uses ECMAScript regular expressions. The Microsoft Developer Network (MSDN) website lists all of the supported <a href="https://msdn.microsoft.com/en-us/library/bb982727(v=vs.110).aspx" target="_blank" title="Click to learn more." alt="Click to learn more.">language elements</a>.</li>
+        </ul>
+    </body>
+</html>

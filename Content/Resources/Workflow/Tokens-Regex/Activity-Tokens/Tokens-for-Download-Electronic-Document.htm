@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="500" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Tokens for Download Electronic Document</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Result File</td>
+                    <td class="tabletext">The electronic file associated with the Laserfiche document.	</td>
+                    <td class="tabletext">%(DownloadElectronicDocument_Result File)</td>
+                </tr>
+                <tr>
+                    <td>File Name</td>
+                    <td class="tabletext">The file name of the electronic file.</td>
+                    <td class="tabletext">%(DownloadElectronicDocument_FileName)</td>
+                </tr>
+                <tr>
+                    <td>Extension	</td>
+                    <td class="tabletext">The file extension of the electronic file.</td>
+                    <td class="tabletext">%(DownloadElectronicDocument_Extension)</td>
+                </tr>
+                <tr>
+                    <td>Mimetype	</td>
+                    <td class="tabletext">The mime type of the electronic file.</td>
+                    <td class="tabletext">%(DownloadElectronicDocument_Mimetype)</td>
+                </tr>
+                <tr>
+                    <td>Has Electronic Document</td>
+                    <td class="tabletext">Whether there is an electronic file associated with the Laserfiche document.</td>
+                    <td class="tabletext">%(DownloadElectronicDocument_HasElectronicDocument)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "DownloadElectronicDocument" portion of the syntax changes to match the activity's name.</p>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, If you rename the activity "DownloadElectronicDocument", the syntax for the Result File token is "%(DownloadElectronicDocument_Result File)".</div>
+    </body>
+</html>

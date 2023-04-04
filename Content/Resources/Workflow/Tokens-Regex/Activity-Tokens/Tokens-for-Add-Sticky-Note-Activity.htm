@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="443" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+        <link href="../../../Stylesheets/LF.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Tokens for Add Sticky Note Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp" />
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Annotation_Id</td>
+                    <td class="tabletext">The sticky note's annotation ID number.</td>
+                    <td class="tabletext">%(AddStickyNote_Annotation_Id)</td>
+                </tr>
+                <tr>
+                    <td>Annotation_Page Number</td>
+                    <td class="tabletext">The page number of the page to which the sticky note is added.</td>
+                    <td class="tabletext">%(AddStickyNote_Annotation_Page Number)</td>
+                </tr>
+                <tr>
+                    <td>Annotation_X</td>
+                    <td class="tabletext">The X coordinate of the location where the sticky note is added.</td>
+                    <td class="tabletext">%(AddStickyNote_Annotation_X)</td>
+                </tr>
+                <tr>
+                    <td>Annotation_Y	</td>
+                    <td class="tabletext">The Y coordinate of the location where the sticky note is added.</td>
+                    <td class="tabletext">%(AddStickyNote_Annotation_Y)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "AddStickyNote" portion of the syntax changes to match the activity's name.</p>
+        <p class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "(Note) Progress!", the syntax for the Annotation_Id token is "%(NoteProgress_Annotation_Id)".</p>
+    </body>
+</html>

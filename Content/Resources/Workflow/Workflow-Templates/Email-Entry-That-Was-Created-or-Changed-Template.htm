@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="883" MadCap:lastWidth="967" MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Email Entry That Was Created or Changed Template</h1>
+        <p>This workflow sends an email with a link to any document that is created or changed in the Policies and Procedures folder. This workflow is useful for monitoring important but rarely updated folders, like a corporate policy folder or team goals folder. Because people rarely think to check these folders on their own, this workflow automatically notifies them of any updates.</p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <ol>
+            <li>A <a href="../Activities/Find-Entry.htm" title="Click to learn more." alt="Click to learn more.">Find Entry</a> activity generates a URL to the document that was created or changed. This URL is stored in a token.</li>
+            <li>The URL token is inserted into the <a href="../Activities/Email.htm" title="Click to learn more." alt="Click to learn more.">Email</a> activity. The email uses HTML to hyperlink the word “here.” </li>
+        </ol>
+        <h2>To run this workflow template in the provided test environment</h2>
+        <ol>
+            <li>
+                <p>Ensure the WT- Email When a Document is Changed and WT - Email When a Document is Created starting events are enabled.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Navigate to the <b>Condition</b> page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li>
+                    <li>Select the starting event, and click <b>Enable</b> in the top right. </li>
+                </ol>
+            </li>
+            <li>	Configure the Email activity  in the Workflow Designer..<ol style="list-style-type: lower-alpha;"><li>Type one or more email addresses in the To field.</li><li>Edit the email message as desired.</li></ol></li>
+            <li>	Republish the workflow once you made all desired changes.</li>
+            <li>In your Laserfiche repository, create or change a document in the Workflow Templates - Test Entries\Human Resources\Policies and Procedures folder. Changes can include (but are not limited to) changes to templates, tags, annotations, the electronic document, and the pages of the document.</li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> button in the Workflow Designer. You can run the workflow on any entry in the Workflow Templates - Test Entries\Human Resources\Policies and Procedures folder.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p class="w"><b>Important:</b> You do not want to use a workflow like this one to monitor frequently updated folders as that will result in an excessive number of emails.</p>
+        <p>Have people add their email addresses to a multi-value field if they want to receive updates about changes to a folder or document. Use a <a href="../Activities/Retrieve-Field-Values.htm" title="Click to learn more." alt="Click to learn more.">Retrieve Field Values</a> activity at the top of this workflow to retrieve those names, and put the resulting token in the Email activity’s To field.</p>
+        <p>Remember to republish the workflow after making any changes.</p>
+    </body>
+</html>

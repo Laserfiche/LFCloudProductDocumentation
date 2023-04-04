@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Tokens in Laserfiche Bots</title>
+    </head>
+    <body>
+        <h1>Tokens</h1>
+        <p>A token is a bit of text that is automatically replaced with actual values when a bot runs. Tokens allow bots to dynamically work with the content of different elements, even if the content differs from the content that was present when the bot was initially recorded. </p>
+        <p>
+            <MadCap:concept term="RPA" />Tokens are created when:</p>
+        <ul>
+            <li>The recorder reads or copies information.</li>
+            <li>The <b>Read CSV file</b> activity reads a CSV file.</li>
+            <li>Input parameters are configured.</li>
+            <li>The <a href="Editing-a-Bot.htm#Toolbox" title="Click here to learn more." alt="Click here to learn more."><b>Create token</b></a> activity is used to create new tokens.</li>
+        </ul>
+        <p>Additionally, the Windows Account token is created for you and is replaced by the account name of the Windows user who runs the bot </p>
+        <p>You can use and edit these tokens in the bot designer as needed. </p>
+        <p class="ex"><b>Example:</b> When recording the Company Name field in a legacy CRM&#160;application, the recorder copies the value "Company ABC" and then creates a %(CompanyName) token for that value. Placing the %(CompanyName) token into a field in the new application ensures the bot will populate the field with whatever company name appears in the legacy application and will not just repeat "Company ABC" over and over. </p>
+        <h2>Using Tokens</h2>
+        <p>In the <a href="Recording-a-Process.htm" title="Click here to learn more." alt="Click here to learn more.">recorder</a>, tokens can be used any place where the token button appears next to a text box. Click the button, and select a token from the list.</p>
+        <p style="font-weight: normal;">In the bot designer, click the &lt;value&gt; link wherever it appears. Then, click the token button <img src="../Images/tokenButton.png" title="Click this button to add tokens." alt="Token button." style="width: 28px;height: 28px;" /> that appears next to the text box, and select a token from the list. Tokens appear as text inside a gray box. </p>
+        <h2>Using the Token Editor</h2>
+        <p>If you only want to use part of the value returned in a single-value token, you can use the Token Editor to apply <a href="../Regular Expressions/Regular-Expressions.htm">regular expressions</a>. These expressions can extract just the information you need. </p>
+        <p class="ex"><b>Example:</b> The bot copies data from a file path field (e.g., \My Documents\Sales\Contacts), but when you paste the token into a Folder Name field, you only want the immediate folder returned (e.g., Contacts). You can apply the regular expression: ([^\\]*)$ to the token so that when the bot runs, the folder name, but not the path, is copied to the Folder Name Field. </p>
+        <p class="ex"><b>Tip:</b> If you want to replace token values or append values to multi-value tokens use the <a href="Editing-a-Bot.htm#Toolbox" title="Click here to learn more." alt="Click here to learn more.">Edit Token</a> activity. </p>
+        <p style="font-weight: bold;">To edit tokens in the bot designer</p>
+        <ol>
+            <li>In the bot designer, when writing or pasting a value, click the token button <img src="../Images/tokenButton.png" title="Click this button to add tokens." alt="Token button." style="width: 28px;height: 28px;" /> and select a token.</li>
+            <li>Click the token to open the <b>Token Editor</b>. <ul><li><b>Regular expression:</b> Regular expressions are a way of defining patterns in information by using special symbols. These expressions can be used to extract specific information from a token. Under <b>Regular expression</b>, insert the regular expression to edit the token. The regular expression button has common character classes, character escapes, grouping constructs, and more that you can use to a build an expression. Place parentheses around the data you want to use from the token. <a href="../Regular Expressions/Regular-Expressions.htm">Learn more about regular expressions</a>.</li></ul></li>
+            <li>In the <b>Test value</b> section, enter a sample token value. Click <b>Test</b> to see how the regular expression will be applied to the token.</li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">To edit tokens in the bot recorder</p>
+        <ol>
+            <li>
+                <p>When writing values with the bot recorder, click the token button <img src="../Images/tokenButton.png" title="Click this button to add tokens." alt="Token button." /> to add <a href="Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a> to your text. This will be a placeholder for information that will be known when the bot runs.</p>
+                <ul>
+                    <p class="ex"><b>Example:</b> Insert a token for data you've copied earlier in the recording, <a href="Editing-a-Bot.htm#Configur" title="Click here to learn more." alt="Click here to learn more.">input parameters</a>, or the Windows Account running the bot. When the bot runs, those tokens will be replaced with&#160;the copied data,&#160;parameters, or account name.</p>
+                </ul>
+            </li>
+            <li>Click <b>Show token editor</b> to edit the token.<ul><li><b>Regular expression:</b> Regular expressions are a way of defining patterns in information by using special symbols. These expressions can be used to extract specific information from a token. Under <b>Regular expression</b>, insert the regular expression to edit the token. The regular expression button has common character classes, character escapes, grouping constructs, and more that you can use to a build an expression. Place parentheses around the data you want to use from the token. <a href="../Regular Expressions/Regular-Expressions.htm">Learn more about regular expressions</a>.</li></ul></li>
+            <li>When you enter a regular expression, you can see how the expression will be applied in the <b>Result value</b> section. </li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

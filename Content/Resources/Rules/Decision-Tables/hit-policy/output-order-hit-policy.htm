@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Output Order Hit Policy</h1>
+        <p>A decision table with this hit policy can have overlapping rules that have different output values. When more than one rule matches, the decision table returns each matching rule starting with the entry with the highest output priority. The output priority is determined by the order of the output fields and the order of the entries in the predefined list for each output field. This hit policy for multiple hits is equivalent to the Priority hit policy for single hits. <a href="../Output-Order.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about output priority</a>.</p>
+        <p><b>Sample</b>
+        </p>
+        <p>The following decision table ranks credit offers that an applicant qualifies for.</p>
+        <p>
+            <img src="../../../Images/decisionTable_outputorderhit.PNG" alt="screenshot of decision table with output order hit policy" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 777px;height: 202px;" />
+        </p>
+        <p style="font-weight: normal;">If an applicant is accepted, they can choose from the following list of offers, as detailed in the properties pane of the Offer output:</p>
+        <p style="font-weight: normal;">
+            <img src="../../../Images/decisionTable_outputentryorder.PNG" alt="screenshot of how output entries are ordered in output properties dialog" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 188px;height: 343px;" />
+        </p>
+        <p style="font-weight: normal;">The order of the entries under <b>Predefined Output Entries</b> ensures that if multiple results are returned for an accepted applicant, the results with a value of "Basic" for the Offer output are returned before the results with a value of "Advanced".</p>
+        <p style="font-weight: normal;" class="ex"><b>Example</b>: An applicant has a credit score of 763 and is 21 years old. The decision returns rows 3 and 2 (in that order) for this applicant. In the table, Decision has higher priority than Offer (because it's to the left of Offer). Since the values of Decision for both returned results are ACCEPT, the results cannot be sorted based on the values of Decision. Instead, the results are sorted based on the values of Offer. When we configured the output entries of Offer above, we ranked Basic above Advanced. Therefore, row 3 is returned before row 2.</p>
+        <p style="font-weight: normal;">
+            <img src="../../../Images/decisionTable_outputorderhit_results.PNG" alt="screenshot of results for output order hit policy" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 771px;height: 234px;" />
+            <br />
+        </p>
+        <p style="font-weight: bold;">Output Priority</p>
+        <p>The output priority is determined by the order of the output fields and the order of the entries in the predefined list for each output field. You can view the output order by the position of the output's row/column in the decision table. Click the handle (represented by six dots) to drag and drop an output row/column. Output priorities decrease as you proceed to the right and to the bottom of the decision table, i.e. the leftmost or topmost outputs have the highest priorities.</p>
+        <p>
+            <img src="../../../Images/decisionTable_outputorderdrag.PNG" alt="screenshot of dragging handle for output order in decision table" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" />
+        </p>
+        <p>In the Decision field, you can view the predefined list (below). In the screenshot, REJECT has the highest output priority. In our example, this did not matter because both results had a value of ACCEPT for Decision.</p>
+        <p>
+            <img src="../../../Images/decisionTable_outputentryorder2.PNG" alt="screenshot of output entry order for Decision column" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 188px;height: 305px;" />
+        </p>
+        <p>However, we saw earlier that for the Offer output, the value Basic has highest priority, followed by Advanced, then N.A.. For that reason, row 3 in our table has higher priority than row 2.</p>
+    </body>
+</html>

@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultTarget
+  Version="2"
+  Comment="ProcessAutomation"
+  Type="WebHelp2"
+  Destinations=""
+  GlossaryTermConversion="marked"
+  DefaultUrl="/Content/Resources/Get-Started.htm"
+  MasterPage="/Content/MasterPages/WebHelp.flmsp"
+  ConditionTagExpression="include[Default.Complete or Default.InstallationTOC or Default.MasterTOC] exclude[&quot;Default.DO NOT COMMIT&quot; or &quot;Default.Do not include&quot; or &quot;Default.For Next Version&quot; or &quot;Default.In Progress&quot; or &quot;Default.Needs Review&quot; or &quot;Default.Needs Screenshot&quot; or Default.Exclude or Default.TempTag] "
+  TargetLanguage="en-us"
+  OutputFile="ProcessAutomation"
+  MasterToc="/Project/TOCs/Master.fltoc"
+  ExcludeUnreferencedContent="true"
+  MasterStylesheet="/Content/Resources/Stylesheets/LF.css">
+  <PrintedOutput
+    CollapseMargins="true" />
+</CatapultTarget>

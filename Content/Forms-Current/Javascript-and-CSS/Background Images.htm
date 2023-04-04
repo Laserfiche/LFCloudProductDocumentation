@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Background and Body Images | Laserfiche Forms | Customizations</title>
+        <meta name="description" content="Edit your form's theme to use images or patterns in your background or parts of the form body." />
+    </head>
+    <body>
+        <h1>Background and Body Images</h1>
+        <p>You can display a background image in your form to users. The following parts of the form can have background images:</p>
+        <ul>
+            <li>The wallpaper, which is the part of the page that surrounds the form title section and the fields section.</li>
+        </ul>
+        <p>
+            <img src="../Resources/Images/forms_wallpaper.PNG" style="border-style: solid;border-width: 1px;width: 757px;height: 265px;" alt="Sample form with colored wallpaper" title="You can customize the wallpaper to suit your organization's branding." />
+        </p>
+        <ul>
+            <li>The form body, which is the part below the title, immediately surrounding the field input boxes.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/forms_body-background-img.PNG" style="border-style: solid;border-width: 1px;width: 713px;height: 250px;" alt="The pattern formerly applied to the wallpaper is now applied to the form body." title="The form body excludes the form title region." />
+        </p>
+        <ul>
+            <li>The form title. A background image applied to the form title will fill up the area immediately surrounding the text of the form title and description.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/forms_title-background-img.PNG" style="border-style: solid;border-width: 1px;width: 765px;height: 365px;" alt="The pattern formerly applied to the form body is now applied to the form title region." title="The background image for the form title does not affect the properties of text appearing in that region." />
+        </p>
+        <ul>
+            <li>Section labels.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/forms_section-background-img.PNG" style="border-style: solid;border-width: 1px;width: 773px;height: 449px;" alt="The pattern previously applied to the form title is now applied to the region around a section label." title="Sections help you to organize long forms and can be collapsed to more easily view other parts of the page." />
+        </p>
+        <ul>
+            <li>The highlighted portion of fields when a user selects them.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/forms_highlight-field-background-img.PNG" style="border-style: solid;border-width: 1px;width: 756px;height: 414px;" alt="The pattern previously applied to the section label region is now applied to the background of a highlighted field." title="Highlights around a field help to distinguish the field that the user is filling from other parts of the page." />
+        </p>
+        <p> In this page, we explain how to specify a background image and the different settings for how that image will be displayed.</p>
+        <h2>Specifying a Custom Background Image</h2>
+        <ol>
+            <li>In the form designer, select the form you want to edit, and navigate to the <b>Themes</b> tab, then the <b>Customize</b> tab under that. Expand the section of the form that you want to add a background image to. In the screenshot, we have the <b>Form title</b> section expanded.
+        <p><img src="../Resources/Images/forms_customize-form-title.PNG" style="border-style: solid;border-width: 1px;" alt="The part of the form designer that allows a user to select a background image or pattern." title="This screenshot shows the background picker for the form title. The same picker is used to select a background for other parts of a form." /></p></li>
+            <li>Specify a URL for the image that will be used for your background.</li>
+            <li>When you click away from the image URL box, the right pane will show a preview of what your form will look like with the new background image.</li>
+            <li>Choose an option for how the image will be tiled (if at all). <b>Vertical</b> tiling means that the image will repeat itself vertically when the browser dimensions exceed the image's vertical dimensions, but there will be only one of the image in the horizontal dimension. <b>Horizontal</b> tiling means that the image will repeat itself horizontally but not vertically. Selecting <b>Both</b> will cause the image to repeat itself both horizontally and vertically. If you do not want the image to repeat itself at all, select <b>None</b>. The last option also means that the background image will scroll with the form. If you want the background image to remain fixed as the form body scrolls, see <a href="#Keeping" title="Click here to learn more." alt="Click here to learn more.">Keeping the Wallpaper Image Fixed</a>.</li>
+        </ol>
+        <h2><a name="Keeping"></a>Keeping the Wallpaper Image Fixed</h2>
+        <p>By default, wallpaper images scroll with the form. To keep the wallpaper image fixed when you have chosen for it to not be tiled, insert the following CSS rule-set in the form designer CSS section:</p><pre><code class="language-css">body { 
+  background-repeat : no-repeat; 
+  background-position : center; 
+  background-attachment : fixed; 
+  background-size : cover; 
+}</code></pre>
+    </body>
+</html>

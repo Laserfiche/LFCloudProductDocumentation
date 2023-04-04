@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Installing the Laserfiche Outlook Add-in for Microsoft 365</h1>
+        <p>The Laserfiche Outlook Add-in enables saving emails and attachments directly to Laserfiche Cloud repositories. Available for use with Office 365 accounts, the Laserfiche Outlook Add-in can archive correspondence along with their metadata to start Laserfiche workflows or processes.</p>
+        <p class="note"><b>Note:</b> The Laserfiche Outlook Add-in for Microsoft 365 is  a separate offering from the <a href="Saving_from_Office.htm">Laserfiche Office Integration</a>. The Laserfiche Outlook Add-in for Microsoft 365 and the Laserfiche Office Integration can both be installed at the same time and can coexist side-by-side.</p>
+        <h2>Requirements</h2>
+        <ul>
+            <li>Outlook 365 desktop client (Version 2101 or later) or Outlook on the web using modern browsers (Chrome, Firefox, Edge, and Safari)</li>
+            <li>User mailbox in Exchange Online. <ul><li><a href="how-to-check-for-exchange-online-mailbox.htm">How to check if you have a mailbox in Exchange Online</a></li></ul></li>
+        </ul>
+        <h2>Installation</h2>
+        <p>Microsoft 365 add-ins are deployed through the use of an XML manifest file:</p>
+        <ul>
+            <li>Administrators can deploy the manifest through the Microsoft 365 admin center.</li>
+            <li>Users can deploy the manifest individually.</li>
+        </ul>
+        <h3>Centralized Deployment through the Admin Center</h3>
+        <p>See Microsoft's documentation for how to deploy an add-in:</p>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/microsoft-365/admin/manage/manage-deployment-of-add-ins?view=o365-worldwide" target="_blank">Deploy add-ins in the admin center</a>
+            </li>
+            <li><a href="https://docs.microsoft.com/en-us/office/dev/add-ins/publish/centralized-deployment" target="_blank">Publish Office Add-ins using Centralized Deployment via the Microsoft 365 admin center</a>
+            </li>
+        </ul>
+        <p>Search for the add-in from within Outlook or visit Microsoft AppSource directly to acquire the add-in:</p>
+        <ul>
+            <li><a href="https://appsource.microsoft.com/en-us/product/office/WA200003482" target="_blank">Laserfiche for Outlook on Microsoft AppSource</a>
+            </li>
+        </ul>
+        <h3 MadCap:conditions="Default.Exclude">Updating the Add-in</h3>
+        <p MadCap:conditions="Default.Exclude">The manifest file hosted in the above locations will be updated as needed when there is a new version of the add-in. </p>
+        <h3>Configuring Repository-wide Default Options</h3>
+        <p>Administrators can configure a default location for the imported emails, as well as template and field information and settings for attachment handling. The name, location, and field information can also draw from properties of the email itself. For instance, you can store the time the email was received in a field value, or you could dynamically store the emails in a folder named after the email's sender.</p>
+        <ol>
+            <li>If you are not already in the repository administration section of Laserfiche, click your user name in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>On the left, select Integrations. </li>
+            <li>Select <b>Outlook Import</b>.</li>
+            <li>In the <b>Default behavior</b> option, determine how attachments will be handled. You can leave them in the email, remove them and file them as a separate document, or store them both within the original email and as a separate document.</li>
+            <li>If you have chosen to store attachments separately, select <b>Apply email fields to attachments</b> to give the attachments the same template and fields as the parent email.</li>
+            <li>In the <b>Field associations</b> option, select a template that will be applied to imported emails by default. The Email template has already been added and configured for you, but you can select another template, or modify which properties are stored in which fields.</li>
+            <li>In the <b>Default email import folder</b> option, specify the repository location where emails will be stored by default. A path has been configured for you, but you can modify this path to store emails elsewhere. You can use the <a href="Tokens.htm">token</a> dropdown to dynamically file emails. (For instance, in the pre-configured path, the sender name token is used to automatically store emails in a folder corresponding to their sender.)</li>
+            <li>If you would like to return to the default options, click the <b>Clear</b> button under <b>Reset</b>.</li>
+            <li>When you are finished configuring import options, click the <b>Save</b> button at the top.</li>
+        </ol>
+        <h3>Troubleshooting</h3>
+        <p>If the user does not see their add-in in their Outlook ribbon</p>
+        <ul>
+            <li>Verify that the user is using the Outlook 365 desktop client or Outlook on the Web</li>
+            <li>Verify that the user's mailbox is in Exchange Online</li>
+            <li>Verify that the add-in has been deployed to the correct user or user group</li>
+        </ul>
+        <h2>Manual Installation </h2>
+        <p>Deploying the add-in through the Microsoft 365 admin center is the recommended installation method. In rare situations, your organization may allow users to manually install add-ins themselves by side-loading the add-in. Please see Microsoft's documentation on how to side-load an add-in through the Outlook client:</p>
+        <ul>
+            <li><a href="https://docs.microsoft.com/en-us/office/dev/add-ins/outlook/sideload-outlook-add-ins-for-testing#sideload-manually" target="_blank">Sideload Outlook add-ins for testing</a>
+            </li>
+        </ul>
+        <p>Use the following manifest file:</p>
+        <ul>
+            <li> <b>https://app.laserfiche.com/officeapps/outlook/v1/manifest.xml</b></li>
+        </ul>
+    </body>
+</html>

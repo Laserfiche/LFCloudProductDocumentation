@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="9" MadCap:lastHeight="1060" MadCap:lastWidth="1011" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Repeat</h1>
+        <p style="text-align: center;">
+            <img src="Images/repeatCanvas.PNG" title="Repeat activity" alt="Repeat activity" />
+        </p>
+        <p>This activity repeats a set of activities, as long as conditions are satisfied. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Repeat-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p class="note"><b>Note</b>: The <b>Repeat</b> activity is very resource intensive if it is left to repeat continuously. You should configure the  activity's conditions so that they will be met by the workflow itself (e.g., the activity's condition is that it will repeat five times), or you should place a <a href="Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a> inside this  activity so that it pauses between repeating. You should never use the <b>Repeat</b> activity if you can use a <a href="Deadline.htm" title="Click here to learn more." alt="Click here to learn more.">Deadline</a> activity, <a href="Escalation.htm" title="Click here to learn more." alt="Click here to learn more.">Escalation</a> activity, or <a href="../../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting event</a> instead.</p>
+        <p class="ex"><b>Example</b>: All project proposals need to include the project's type (as set in the field Type) in their names. The project type can change, depending on current business needs, even while the project is waiting for approval. To make sure that the project proposal always has the correct name, George configures a workflow that has a <a href="Retrieve-Field-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Retrieve Field Values</a>, <a href="Rename-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Rename Entry</a>, and <a href="Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a> activity inside a <b>Repeat</b> activity. The first time the <b>Repeat</b> activity runs, it renames the proposal using the value in the Type field. The workflow then waits for either the proposal to be approved or for the Type field to change. If the Type field changes, the <b>Repeat</b> activity runs again and renames the proposal to reflect the new project type. The <b>Repeat</b> activity will run every time the project type changes until the proposal is approved.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Repeat Condition</b> property box, click <b>Edit Conditions...</b> to create conditions.</li>
+            <li><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">Configure the conditions</a>.</li>
+            <li><b>Optional</b>: You can create as many conditions as you want by clicking <b>Add condition</b>.</li>
+            <li>Click <b>OK</b>.</li>
+            <li>In the <b>Options</b> property box, you can limit the number of times the <b>Repeat</b> activity can repeat.</li>
+            <ul>
+                <li>To limit the number of times the activity will repeat, select <b>Limit number of repetitions to</b>. If you do not select this option, the default limit is 500 iterations. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+                <li>Select whether you want the activity to check its condition <b>Before running contained activities</b> or <b>After running contained activities</b>.<ul><li>If the condition is checked before the contained activities run, and the condition is initially satisfied, the activities inside the Repeat activity will be skipped.</li><li>If the condition is checked after the contained activities run, the activities inside the Repeat activity will always run at least once, regardless of the condition.</li></ul></li>
+                <li>Under <b>Start the Iteration token at</b>, select what number the Iteration token will start at when it begins to count the number of times the <b>Repeat</b> activity has repeated. If you select <b>0</b>, the first time the <b>Repeat</b> activity runs the Iteration token’s value will be zero. If you select <b>1</b>, the first time the <b>Repeat</b> activity runs the Iteration token's value will be <b>1</b>.<p class="ex"><b>Tip</b>: If you are using the Iteration token to index a multi-value token, you may want to select <b>1</b> because indexes start at <b>1</b> instead of <b>0</b>.</p></li>
+            </ul>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

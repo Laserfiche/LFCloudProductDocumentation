@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Run Capture Profile</h1>
+        <p style="text-align: center;">
+            <img src="Images/runCaptureProfileCanvas.PNG" title="Run Capture Profile activity" alt="Run Capture Profile activity" />
+        </p>
+        <p>The Run Capture Profile activity allows you to extract text or read barcode data from an image document  using a capture profile. The capture profile contains zones that mark the regions of a document from which the capture profile extracts text. When the activity runs on a document, the activity extracts string values from the zoned regions and stores the values in output tokens. </p>
+        <p class="ex"><b>Example: </b> You want to use a capture profile to extract an employee’s name from a document. Then, you want to set an Employee’s Name field associated with the document using the employee’s name. To create this process, you add a Run Capture Profile activity to extract the employee’s name from the starting entry, and an <a href="Assign-Field-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Assign Field Values</a> activity to change the document’s Employee Name field using the Run Capture Profile activity’s output token.</p>
+        <p style="font-weight: bold;">To set up this activity</p>
+        <ol>
+            <li>Drag the activity from the toolbox pane and drop it in the designer pane.</li>
+            <li>In the properties pane, type a name and description of the activity.</li>
+            <li>In the <b>Document</b> property box, select the image document from which you want to extract text.</li>
+            <li>In the <b>Capture Profile</b> property box:<ul><li>Select  <b>Single profile</b> if you want to run a specific profile. Then, select the specific profile in the next drop-down menu, along with its version.</li><li>Select <b>Capture Profile Group</b> if you want the activity to choose the best matched profile from a collection of selected profiles configured in the <a href="../../Capture-Profiles/Capture-Profiles.htm">Capture Profile designer</a>. Click <b>Select capture profiles</b> to select  the capture profiles you want to use. </li><p class="note"><b>Note:</b> The Smart Invoice profile, <b>Invoices</b>, is not supported when using Capture Profile groups.</p><p class="note"><b>Note:</b> The more anchored zones configured per capture profile, the more accurate Capture Profile groups will be. At least one anchored zone must be configured per capture profile in order for it to work properly.</p><p class="note"><b>Note:</b> If you make a major version change to a capture profile, the Run Capture Profile activity will need to be updated to the newest major version. Otherwise, it will use the previous major version's most recent minor version.</p></ul></li>
+            <li><b>Optional:</b> Click <b>Manage capture profiles</b> to view all the capture profiles that you can see on process automation. Click <b>Open selected capture profile</b> to view and modify the capture profile you selected in this property box.</li>
+            <li><b>Optional:</b> In the <b>Parameters</b> section, define the token name and <a href="../Tokens-Regex/Token-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">tag</a> for each output token. </li>
+            <p class="ex"><b>Tip:</b> When a zone captures text, the resulting token will be multi-valued with a value for each line of text. When using this token, you can click <a href="../Tokens-Regex/Using-Token-Editor.htm" title="Click to learn more" alt="Click to learn more">to apply an index</a> that selects a specific value or combines the lines of text. </p>
+        </ol>
+        <p class="nestedw"><b>Warning:</b> Each time you run the Run Capture Profile activity (regardless of whether you’re using it for development, testing, or production), it may count against any plan limits you may have on Capture Profiles or Smart Invoice Capture. On the Account Administration page, click <b>Plan</b> to see your limits and current usage. If you want to test without counting against your limits, use the <a href="../../Capture-Profiles/Testing-a-Capture-Profile.htm">test UI in the capture profile designer</a>.</p>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Laserfiche Connector for MuleSoft</h1>
+        <p>For customers implementing MuleSoft’s Anypoint Platform, Laserfiche has provided a connector that makes the interaction between Laserfiche repository and other third-parties easier. The operations supported in the Laserfiche connector are based on Laserfiche repository APIs. </p>
+        <p>The Laserfiche Integration with MuleSoft is helpful for:</p>
+        <ul>
+            <li>
+               Viewing a document or document metadata from Laserfiche and viewing or downloading it in another system, like a CRM, ERP, or any system with relevant documents stored within Laserfiche.<![CDATA[            ]]></li>
+            <li>Saving a document to Laserfiche or updating Laserfiche metadata from another system. This action can be monitored to start a Laserfiche business process. </li>
+            <li>Gathering healthcare data. You can convert a Laserfiche document's metadata into the HL7 data format before sending it to a healthcare system requiring that standard. </li>
+            <li>AP Processing. Laserfiche’s solutions for automating invoice processing can update necessary ERP and financial systems. </li>
+        </ul>
+        <p>See the Laserfiche documentation in MuleSoft for more information about these use cases.
+        </p>
+        <h2><a name="How"></a>How to configure the Laserfiche Connector for MuleSoft</h2>
+        <h3>Installation</h3>
+        <p>You can install the Laserfiche Connector just like you'd install any other connector in MuleSoft. For more details, see <a href="https://docs.mulesoft.com/exchange/#installing-a-connector-from-anypoint-exchange" target="_blank" title="Click to learn more" alt="Click to learn more">Installing a Connector from Anypoint Exchange</a>.</p>
+        <h3>Configuration</h3>
+        <p>After installing the Laserfiche Connector:</p>
+        <ol>
+            <li>Click the <b>Global Elements</b> tab at the base of the Mule canvas. </li>
+            <li>In the Global Mule Configuration Elements screen, click <b>Create</b>.
+</li>
+            <li>				From the <b>Choose Global Type</b> wizard, expand <b>Connector Configuration</b>.</li>
+            <li>Select <b>Laserfiche Config</b>,and click <b>OK</b>.
+</li>
+            <li>From the <b>General</b> tab of the Laserfiche Connector, select Laserfiche Cloud or Self-hosted connection, and enter the following properties:</li>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="The values expected for the region, client ID, client secret, and service key fields. ">
+                <caption>Configuring the Laserfiche Connector for Laserfiche Cloud</caption>
+                <col style="width: 191px;" />
+                <col style="width: 95px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td class="tableheading">Field </td>
+                        <td class="tableheading">Type</td>
+                        <td class="tableheading">Value</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">Service Principal Key</td>
+                        <td class="tabletext">String</td>
+                        <td class="tabletext">Create the Service Principal Key by creating a MuleSoft-specific Service Principal user in your Laserfiche Account Administration. Grant this user the appropriate access rights in Laserfiche to act on behalf of the Laserfiche Connector. Then open the user you created and click <b>Create Service Principal Keys</b>.
+Ensure you save this key as you will not be able to view this key again in Laserfiche. </td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">Base-64 Encoded Access Key</td>
+                        <td class="tabletext">String</td>
+                        <td class="tabletext">To create the Base-64 Encoded Access Key, in the Laserfiche Developer Console, create a MuleSoft app by creating a service application and selecting the Service Principal user as the Service Account. In the MuleSoft app you created, navigate to the Authentication tab, and click <b>Create key</b> next to Access Keys.  Then download the key as a base-64 string and copy the key from there.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <table style="width: 100%;margin-left: 0;margin-right: auto;" summary="The values expected for the region, client ID, client secret, and service key fields. ">
+                <caption>
+                    <p>&#160;</p>
+                    <p>Configuring the Laserfiche Connector for Self-Hosted Connections</p>
+                </caption>
+                <col style="width: 170px;" />
+                <col style="width: 116px;" />
+                <col />
+                <tbody>
+                    <tr>
+                        <td class="tableheading">Field </td>
+                        <td class="tableheading">Type</td>
+                        <td class="tableheading">Value</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">Base URL</td>
+                        <td class="tabletext">String</td>
+                        <td class="tabletext">The base URL for your Laserfiche API. E.g., https://ServerName/LFRepositoryAPI </td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">Repository ID</td>
+                        <td class="tabletext">String</td>
+                        <td class="tabletext">The name of your Laserfiche repository.</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">Username</td>
+                        <td class="tabletext">String</td>
+                        <td class="tabletext">The username of an account that has the appropriate access rights to the Laserfiche repository to make changes on behalf of MuleSoft.</td>
+                    </tr>
+                    <tr>
+                        <td class="tabletext">Password</td>
+                        <td class="tabletext">String</td>
+                        <td class="tabletext">The password for the above account. </td>
+                    </tr>
+                </tbody>
+            </table>
+            <li>Click <b>Test Connection</b>, and then click <b>OK</b>.</li>
+        </ol>
+        <h2>How to use the Laserfiche Connector for MuleSoft</h2>
+        <p>The Laserfiche Connector has 40+ pre-built actions that allow interaction with the Laserfiche repository. </p>
+        <p class="note"><b>Note:</b> The Laserfiche connector for MuleSoft is based on Laserfiche Repository API V1 build version 3a7a49ffc2db49aecc10091994a0292be398cd51_.20221214.3</p>
+        <ol>
+            <li>Select Laserfiche in the Mule palette.</li>
+            <li>Drag an action from the palette to a message flow in the project's canvas.
+ </li>
+            <li>Select the Laserfiche action in the flow. </li>
+            <li>In the properties pane below the flow, configure the following:<ul><li><b>Display Name</b>: Provide a description name for the action.</li><li><b>Basic Settings</b>: Select a connection profile that connects the action to your Laserfiche repository. If no connection exists, click the <b>Add</b> button. <a href="#How" target="_parent" title="Click to learn more." alt="Click to learn more.">Learn more about configuring a connection.</a></li><li><b>General</b>: Configure the properties related to the action. Some common properties are:<ul><li><b>Repository ID:</b> The ID&#160;of the repository you want to perform the action in. For Laserfiche Cloud, you can find your repository ID from your repository's URL. For example, https://app.laserfiche.com/laserfiche/browse.aspx?repo=<b>r-123a45aa</b>. For self-hosted installations, your repository ID is the name of your repository. </li><li><b>Entry ID:</b> The ID&#160;of the entry you want to interact with. You can find an entry's ID&#160;in the Details tab for the entry, under the Advanced section. <MadCap:toggler targets="EntryIDLocation">Show me where this is.</MadCap:toggler><ul MadCap:targetName="EntryIDLocation"><p><img src="Resources/Images/EntryIDLocation.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Entry ID in the Details pane" alt="Entry ID location" /></p></ul></li></ul></li><p>Other properties are specific to different actions. Click an action to see the corresponding API&#160;documentation that details the properties for each one. The parameters for each request correspond to fields in the properties pane. </p><ul MadCap:targetName="LinkedActions"><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/AssignEntryLinks" target="_blank" title="Click to learn more." alt="Click to learn more.">Assign Entry Links</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/AssignFieldValues" target="_blank" title="Click to learn more." alt="Click to learn more.">Assign Field Values</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/AssignTags" target="_blank" title="Click to learn more." alt="Click to learn more.">Assign Tags</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Tasks/CancelOperation" target="_blank" title="Click to learn more." alt="Click to learn more.">Cancel Operation</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/CancelOrCloseSearch" target="_blank" title="Click to learn more." alt="Click to learn more.">Cancel or Close a Search</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/CopyEntryAsync" target="_blank" title="Click to learn more." alt="Click to learn more.">Copy Entry Async</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/CreateSearchOperation" target="_blank" title="Click to learn more." alt="Click to learn more.">Create Search Operation</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/SimpleSearches/CreateSimpleSearchOperation" target="_blank" title="Click to learn more." alt="Click to learn more.">Create Simple Search Operation</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/CreateOrCopyEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Create or Copy Entry</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeleteAssignedTemplate" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Assigned Template</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeleteDocument" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Document</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeleteEntryInfo" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Entry Info</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/DeletePages" target="_blank" title="Click to learn more." alt="Click to learn more.">Delete Pages</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/ExportDocument" target="_blank" title="Click to learn more." alt="Click to learn more.">Export Document</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/ExportDocumentWithAuditReason" target="_blank" title="Click to learn more." alt="Click to learn more.">Export Document with Audit Reason</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/AuditReasons/GetAuditReasons" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Audit Reasons</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetDocumentContentType" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Document Content Type</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetDynamicFieldValues" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Dynamic Field Values</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Entry</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetEntryListing" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Entry Listing</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html#/Entries/GetEntryByPath" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Entry by Path</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/FieldDefinitions/GetFieldDefinitionById" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Field Definition by ID</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/FieldDefinitions/GetFieldDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Field Definitions</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetFieldValues" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Field Values</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/LinkDefinitions/GetLinkDefinitionById" target="_blank" title="Click to learn more" alt="Click to learn more">Get Link Definition by ID</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/LinkDefinitions/GetLinkDefinitions" target="_blank" title="Click to learn more" alt="Click to learn more">Get Link Definitions</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetLinkValuesFromEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Link Values from Entry</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Tasks/GetOperationStatusAndProgress" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Operation Status and Progress</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Repositories/GetRepositoryList" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Repository List</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/GetSearchContextHits" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Search Context Hits</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/GetSearchResults" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Search Results</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Searches/GetSearchStatus" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Search Status</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TagDefinitions/GetTagDefinitionById" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Tag Definition by ID</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TagDefinitions/GetTagDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Tag Definitions</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/GetTagsAssignedToEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Tags Assigned to Entry</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateDefinitionById" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Definition by ID</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Definitions</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateFieldDefinitions" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Field Definitions</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/TemplateDefinitions/GetTemplateFieldDefinitionsByTemplateName" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Template Field Definitions by Template Name</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Attributes/GetTrusteeAttributeKeyValuePairs" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Trustee Attribute Key Value Pairs</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Attributes/GetTrusteeAttributeValueByKey" target="_blank" title="Click to learn more." alt="Click to learn more.">Get Trustee Attribute Value by Key</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/ImportDocument" target="_blank" title="Click to learn more." alt="Click to learn more.">Import Document</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/MoveOrRenameEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Move or Rename Entry</a></li><li><a href="https://api.laserfiche.com/repository/swagger/index.html?urls.primaryName=v1#/Entries/WriteTemplateValueToEntry" target="_blank" title="Click to learn more." alt="Click to learn more.">Write Template Value to Entry</a></li></ul><p class="ex"><b>Tip:</b> You can get help generating the JSON data structure for these actions by using Anypoint Studio's drag and drop editor. </p></ul></li>
+            <li>Next to the properties, you can view the data structure of the input to the action (from the previous flow step's output)&#160;and the data structure of the output produced by the action. <MadCap:toggler targets="OutputPane">Show me what this looks like.</MadCap:toggler></li>
+            <p>
+                <img src="Resources/Images/OutputPane.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" MadCap:targetName="OutputPane" title="The output pane in Anypoint shows the data structure of the output produced by the action." alt="Output pane in Anypoint" />
+            </p>
+        </ol>
+        <h2>How to send data from Laserfiche to the MuleSoft platform using HTTPS with basic authentication</h2>
+        <h3>Configuration in MuleSoft</h3>
+        <p>The Mule configuration involves three main steps: </p>
+        <ol>
+            <li><b>Create and import certificates</b>: Use Keytool to generate Keystores and certificates. The Keystore generated contains a private key and a public certificate. This certificate is self-signed. For more details, see <a href="https://docs.mulesoft.com/mule-runtime/4.4/tls-configuration#keystore-generation" class="Hyperlink" target="_blank" title="Click to learn more." alt="Click to learn more.">MuleSoft TLS configuration</a> . 
+            </li>
+            <li> <b>Create and run a Mule project in Anypoint Studio:</b> Create a new Mule project with a HTTP Listener. Configure the HTTP Listener to use HTTPS protocol. Then, add the HTTP Basic Security Filter and Spring Authorization Filter to validate the HTTPS request based on the Spring module with basic authentication. For more details about the HTTP Listener, see <a href="https://docs.mulesoft.com/http-connector/1.6/http-listener-ref" class="Hyperlink" target="_blank" title="Click to learn more." alt="Click to learn more.">MuleSoft Configure HTTP Listener Source – Mule 4</a>. For more details about Spring Security, see <a href="https://docs.mulesoft.com/mule-runtime/4.4/component-authorization-using-spring-security" class="Hyperlink" target="_blank" title="Click to learn more." alt="Click to learn more.">MuleSoft Component Authorization Using Spring Security</a>. 
+            </li>
+            <li> <b>Deploy Mule application to cloud:</b> For more details, see <a href="https://docs.mulesoft.com/runtime-manager/deploying-to-cloudhub" class="Hyperlink" target="_blank" title="Click to learn more." alt="Click to learn more.">MuleSoft Deploy to CloudHub</a>. 
+            </li>
+        </ol>
+        <p>The following example shows the whole configuration process in detail.</p>
+        <p class="note"><b>Note:</b> This sample configuration is for reference only. Steps may vary depending on MuleSoft changes. If you have any questions, please contact MuleSoft support for help. </p>
+        <h3>Create and import certificates</h3>
+        <ol>
+            <li> Open a command prompt, and navigate to the folder that will temporarily hold the certificate. 
+            </li>
+            <li> Execute the following command to populate and provide necessary details to generate the certificate:</li>
+            <p class="Code">keytool -genkey -alias mule -keyalg RSA -keystore keystore.jks</p> <div class="ex"><p><b>Example:</b> </p><p><img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche.png" alt="Example command to generate certificate" class="img_1" title="Example command to generate certificate" /></p></div><li> When the command is successfully executed, the Keystore.jks file will be generated. Move this file into the Mule application location (src/main/resources).<p><img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_1.png" alt="Location of Keystore.jks file" class="img_2" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Keystore.jks file to move to the Mule application" /></p></li></ol>
+        <h3>Create and run a Mule project in Anypoint Studio</h3>
+        <ol>
+            <li> Open Anypoint Studio 7 and create a new Mule project. In the Mule palette, search for <b>HTTP</b> and drag the <b>Listener</b> operation to the Studio canvas.  
+            </li>
+            <li> In the HTTP Listener's general configuration, set the protocol to <b>HTTPS</b>.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_2.png" alt="Global Ement Properties dialog box" class="img_3" title="Set the protocol option to HTTPS" />
+            </p>
+            <li> Under  <b>Key Store Configuration</b>, pass the Keystore type, the location of the Keystore authenticated file, and other parameters.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_3.png" alt="Key Store Configuration section" class="img_4" title="Set Key Store Configuration parameters" />
+            </p>
+            <li> In the Mule palette, search for <b>HTTP</b> and drag the <b>Basic security filter</b> operation to the canvas. Pass realm, enable expression mode, and set Attributes to attributes.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_4.png" alt="Basic security filter options" class="img_5" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Configure the Basic security filter operation" />
+            </p>
+            <li> In the Mule palette, search for <b>Spring</b> and drag the <b>Authorization filter</b> operation to the canvas.  
+            </li>
+            <li> Add the following configuration to project XML.</li>
+            <div class="Code">
+                <p>&lt;spring:config name="springConfig" files="beans.xml" /&gt;</p>
+                <p>&lt;spring:security-manager&gt;</p>
+                <blockquote>
+                    <p>&lt;spring:delegate-security-provider</p>
+                    <p>name="memory-provider"</p>
+                    <p>delegate-ref="authenticationManager" /&gt;</p>
+                </blockquote>
+                <p>&lt;/spring:security-manager&gt;</p>
+            </div>
+            <li> Create a beans.xml file and put it in src/main/resources. The beans file should contain user credentials and roles. Please note that “{noop}” is only a prefix for every password. It is not part of the password.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_6.png" alt="Example beans.xml file" class="img_7" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Example beans.xml file" />
+            </p>
+            <li> If you're using Anypoint Studio 7.2 or later, you don’t need to manually update the mule-artifact.json file. Otherwise, use the following to declare beans.xml file in mule-artifact.json.</li>
+            <div class="Code">
+                <p>{</p>
+                <blockquote>
+                    <p>"miniMuleVersion": "4.3.0",</p>
+                    <p>"secureProperties":</p>
+                </blockquote>
+                <p>["db.password","sf.password","sf.token","sf.consumer_secret","email.password","cloudhub.password"],</p>
+                <blockquote>
+                    <p>"classLoaderModelLoaderDescriptor":</p>
+                </blockquote>
+                <blockquote>
+                    <p>{</p>
+                    <blockquote>
+                        <p>"id": "mule",</p>
+                        <p>"attributes":</p>
+                        <p>{</p>
+                        <blockquote>
+                            <p>"exportedPackages":[ "com.java.muleinuse" ],</p>
+                            <p>"exportedResources": [ "beans.xml" ]</p>
+                        </blockquote>
+                        <p>}</p>
+                    </blockquote>
+                    <p>}</p>
+                </blockquote>
+                <p>}</p>
+            </div>
+            <li> Configure the Spring Authorization filter.  In the <b>Required</b> authorities field, enter a valid role as defined in the beans.xml file.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_8.png" alt="Spring Authorization filter" class="img_9" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Configure the Spring Authorization filter" />
+            </p>
+            <li> The example Mule flow looks like this:</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_9.png" alt="The example Mule flow" class="img_10" title="The example Mule flow" />
+            </p>
+            <li>Please note that the <b>Set Payload</b> operation is here only for demonstration purposes. It is not relevant to the basic authentication configuration. 
+            </li>
+            <li><b>Optional:</b> Test the Mule flow locally.<ol style="list-style-type: lower-alpha;"><li>Right click the canvas and run the project. </li><li>Open postman or other tools that can send API requests.</li><li> Enter the valid request URL that was configured in the HTTP Listener. </li><li>Select <b>Basic Auth</b> for the authorization type. </li><li>Enter the username and password (as defined in the beans.xml file) associated with the role entered in the Sprint Authorization operation.</li><li>Then, send the request.</li><p><img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_10.png" alt="Configuration for testing the Mule flow locally" class="img_11" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Test the Mule flow locally" /></p><li>In the above example, the returned “Hello World!” is set using the <b>Set payload</b> operation. This result shows that the request has been successfully sent to Mule and passed basic authentication.<br /></li></ol></li>
+        </ol>
+        <h3>Deploy the Mule application to cloud</h3>
+        <ol>
+            <li> Sign into the Anypoint Platform. </li>
+            <li>Go to the Management Center – Runtime Manager. </li>
+            <li>Click <b>Deploy Application</b>, and enter a valid name.</li>
+            <li> Under <b>Application File</b>, upload the mule project jar file. </li>
+            <li>Click the <b>Deploy Application</b> button to confirm deployment.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_11.png" alt="Deploy Application page in the Runtime Manager" class="img_12" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Deploy the Mule application" />
+            </p>
+            <li> Wait for deployment. Once the application has started, it is ready to use. 
+            </li>
+            <li><b>Optional:</b> Test the Mule flow on cloud.</li>
+            <ol style="list-style-type: lower-alpha;">
+                <li>Open the started application from the Runtime Manager to retrieve the domain.</li>
+                <p>
+                    <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_12.png" alt="Location of the domain in the Runtime Manager " class="img_13" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Test the Mule flow on cloud" />
+                </p>
+                <li>Open postman or other tools that can send API requests. Enter the valid request URL that was configured in the HTTP Listener.</li>
+                <li>Select <b>Basic Auth</b> for authorization type. Enter the username and password (as defined in the beans.xml file)associated with the role entered in the Sprint Authorization operation. </li>
+                <li>Then, send the request.</li>
+                <p>
+                    <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_13.png" alt="Sending the request" class="img_14" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Send the request" />
+                </p>
+                <li>In the above example, the returned “Hello World!” is set using the <b>Set payload</b> operation. This result shows that the request has been successfully sent to Mule and passed basic authentication.  &#160; 
+            </li>
+            </ol>
+        </ol>
+        <h2>Send a request to Mule through a Laserfiche Web Request Rule</h2>
+        <ol>
+            <li> Sign into Laserfiche. </li>
+            <li>Navigate to the Process Automation landing page, and click <b>Integrations</b>. </li>
+            <li>Select <b>Web Service Connections</b>, and create a new connection.</li>
+            <li>Provide a descriptive name for the connection, and select whether to send requests directly to Mule.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_14.png" alt="The Create Web Service Connection dialog box" class="img_15" title="Configure a web service connection" />
+            </p>
+            <li>Enter the Base URL in the following format: https://<i>domain from the deployed Mule application page</i>. </li>
+            <li>Select Basic authentication and enter theusername and password (as defined in the beans.xml file) associated with the role entered in the Sprint Authorization operation.</li>
+            <li>Click <b>Test</b>. </li>
+            <p class="note"><b>Note:</b> If you click <b>Test</b>, you might get a 404 response since the base URL itself is not hosted on cloud. This is not an issue. </p>
+            <li>Click <b>Create</b> to create the connection.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_15.png" alt="The Create Web Service Connection dialog box" class="img_16" title="Click Create." />
+            </p>
+            <li> Go back to the Process Automation landing page, and click <b>Rules</b>. </li>
+            <li>Select <b>Web Request</b>, and create a new rule.</li>
+            <li>Enter a rule name and description. Choose the web service connection created in step 3. </li>
+            <li>Click <b>Create</b>.</li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_16.png" alt="The Create Web Request dialog box. " class="img_17" title="Create a web request" />
+            </p>
+            <li>In the <b>Request</b> tab, in the Web Request Rule editor, the base URL should match the base URL provided in the web service connection. </li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_17.png" alt="Request tab in the Web Request Rule editor" class="img_18" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Check the base URL" />
+            </p>
+            <li>Complete the request URI, and click <b>Test Web Request</b>. In the <b>Test Web Request Rule</b> dialog, double check the Request and Input Parameters (empty in this example).</li>
+            <li> Click <b>Test</b> to proceed. </li>
+            <p>
+                <img src="Resources/Images/Mulesoft Connector User Doc/How to send data from Laserfiche_18.png" alt="Response from tested rule" class="img_19" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" title="Test results" />
+            </p>
+            <li>This test result shows that the request has been successfully sent to Mule and passed basic authentication. 
+            </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="474" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Token for Repeat Activity</h1>
+        <MadCap:snippetBlock src="../../../Snippets/Tokensforactivity.flsnp">
+        </MadCap:snippetBlock>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Tokens</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Sample Syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Iteration</td>
+                    <td class="tabletext">The number of times the Repeat activity has repeated.</td>
+                    <td class="tabletext">%(Repeat_Iteration)</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>The "Repeat" portion of the syntax changes to match the activity's name.</p>
+        <p class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Process &amp; Fill", the syntax for the Iteration token will be "%(ProcessFill_Iteration)".</p>
+        <p class="note"><b>Note</b>: You can use this activity’s Iteration token (in conjunction with token indexing) to access a specific value in a multi-value token. However, if this  activity is configured to be zero-based, and if you try to map the iteration count directly to a multi-value token, the values will always be off by one (because multi-value tokens are indexed starting with the number one). To solve this issue, either change this  activity to start at one under <b>Options</b> or use the <a href="../../Activities/Token-Calculator.htm" title="Click here to learn more." alt="Click here to learn more.">Token Calculator</a> activity to add one to the Iteration token before using it to retrieve a specific value from a multi-value token.</p>
+    </body>
+</html>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Apply Stamp</h1>
+		<p style="text-align: center;">
+			<img src="Images/applyStampCanvas.PNG" title="Apply Stamp activity" alt="Apply Stamp activity" />
+		</p>
+		<p>This activity adds a stamp to a page of a Laserfiche document. A stamp is an image that is overlaid on an imaged document. Unlike a text box or sticky note, a stamp cannot be changed after it is applied. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Apply-Stamp-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Stamp Options</b> property box, configure settings for the stamp.</li>
+            <ul>
+                <li><b>Stamp</b>: Type the name of the public stamp you want to apply, or click the Browse button <img src="../../Images/MoreActionsBots.png" /> to browse for a stamp in the repository. Alternatively, click  the Token button (right arrow) <img src="../../Images/tokenButton.png" />  to use <a href="../Tokens-Regex/Tokens.htm">tokens</a> to specify the stamp's name.</li>
+                <p class="note"><b>Note:</b> This activity can only use public stamps that do not include Laserfiche tokens (e.g., %(Parent)). You cannot use custom stamps that include one or more tokens nor create a custom stamp with this activity.</p>
+                <li><b>Color</b>:&#160;Select the color of the stamp.</li>
+                <li><b>Opacity (%)</b>: Select the amount of visibility of the stamp. At <b>100%</b> opacity, the stamp is completely visible. At <b>0%</b>, it is transparent.</li>
+                <li><b>Rotation</b>:&#160;Select how many degrees you want to rotate the stamp when it is added to the page:  <b>0</b>, <b>90</b>, <b>180</b>, or <b>270</b> degrees.</li>
+                <li><b>Page</b>:&#160;Select the page on which you want to place the stamp. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</li>
+                <li><b>Location</b>:&#160;Select where the stamp will appear on the Laserfiche document. Select <b>Custom</b> to place it on X and Y coordinates (in pixels)&#160;starting from Top/Left.</li>
+                <li>If you have more than one stamp in the same location, use <b>Merging</b> to select how you want to display the stamp.</li>
+                <p class="note"><b>Note</b>: Stamps are considered to have the same location if they have the same upper-left coordinate, if their centers are close to each other, or if one stamp's borders are completely inside another stamp. Stamps will only be merged if they have the same protection level.</p>
+                <ul>
+                    <li><b>None</b>:&#160;Places the new one on top of the existing one.</li>
+                    <li><b>Replace</b>:&#160;Replaces the old one with the new one.</li>
+                    <li><b>Cascade</b>:&#160;Places the new one offset from the existing one. <MadCap:toggler targets="cascade2">Show me what this looks like</MadCap:toggler></li>
+                    <p>
+                        <img src="../../../Images/Image_Cascading_Stamp_2.png" MadCap:targetName="cascade2" />
+                    </p>
+                </ul>
+            </ul>
+            <li>In the <b>Stamp Protection</b> property box, specify the rights for who can view and modify the stamp.<ul><li><b>Public</b>: Anyone who has access to the document can view and modify public annotations.</li><li><b>Protected</b>:&#160;Anyone who has access to the document can view protected annotations, but only the user who created the annotations can modify them.</li><li><b>Private</b>: <b>Do not use</b>, as all stamps applied by a workflow are created by a service account.</li></ul></li>
+            <li>In the <b>Add Stamp To</b> property box, select the Laserfiche document you want to place the stamp on. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

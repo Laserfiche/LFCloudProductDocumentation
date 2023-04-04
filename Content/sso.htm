@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:lastBlockDepth="8" MadCap:lastHeight="10036" MadCap:lastWidth="1595" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Exclude">
+    <head>
+        <link href="Resources/Stylesheets/LF.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <h1>Configuring Single Sign-On with Active Directory Federation Services (AD FS)</h1>
+        <p>Account Administrators can now provide single sign-on to Laserfiche Cloud through Active Directory Federation Services (AD FS). Configure Laserfiche Cloud to connect to an Active Directory Federation Services identity provider and create Laserfiche Cloud federated user accounts that map to appropriate Active Directory user principal names. Properly mapped user accounts can click a <b>Sign in with AD FS</b> button on the sign-in page to sign in to Laserfiche Cloud without specifying an additional user name and password.</p>
+        <h2 class="topicheading">Configuring AD FS on Window Server 2016</h2>
+        <ol>
+            <li>Load the AD FS Management Console.</li>
+            <li>In the <b>Actions</b> pane, click <b>Add Relying Party Trust</b>.</li>
+            <li>Select the <MadCap:toggler targets="addrelyingpartytrust00">Claims aware</MadCap:toggler> option.<p MadCap:targetName="addrelyingpartytrust00"><img src="Resources/Images/RelyingPartyTrust00.png" border="1" /></p></li>
+            <li>On the <b>Select Data Source</b> step, choose the <MadCap:toggler targets="addrelyingpartytrust01">Enter data about the relying party manually</MadCap:toggler> option and then specify a display name for the new party trust.<p MadCap:targetName="addrelyingpartytrust01"><img src="Resources/Images/RelyingPartyTrust01.png" border="1" /></p></li>
+            <li>The <b>Configure Certificate</b> step is optional and can be skipped.</li>
+            <li>On the <b>Configure URL</b> step, select the <MadCap:toggler targets="addrelyingpartytrust02">Enable support for the SAML 2.0 Web SSO protocol</MadCap:toggler> option, and add the following Laserfiche Cloud service URL:<p class="ex">https://acs.laserfiche.com/acs/SAML2/SSO</p> <p MadCap:targetName="addrelyingpartytrust02"><img src="Resources/Images/RelyingPartyTrust02.png" title="Win Server 2016 " border="1" /></p></li>
+            <li>Add the <MadCap:toggler targets="addrelyingpartytrust03">Laserfiche Cloud relying trust identifier</MadCap:toggler>:<p class="ex">https://laserfiche.com</p> <p MadCap:targetName="addrelyingpartytrust03"><img src="Resources/Images/RelyingPartyTrust03.png" border="1" /></p></li>
+            <li>Configure who can <MadCap:toggler targets="addrelyingpartytrust04">access Laserfiche Cloud through this trust</MadCap:toggler>. You also have the option of enabling multi-factor authentication (MFA) support for the trust. Complete the wizard.<p MadCap:targetName="addrelyingpartytrust04"><img src="Resources/Images/RelyingPartyTrust04.png" border="1" /></p></li>
+            <li>On the <MadCap:toggler targets="addrelyingpartytrust05">Finish step</MadCap:toggler>, select the <b>Configure claims issuance policy for this application</b> option and click <b>Close</b> to complete creating the relying party trust and automatically open the <b>Edit Claim Issuance Policy</b> dialog box.<p MadCap:targetName="addrelyingpartytrust05"><img src="Resources/Images/RelyingPartyTrust05.png" border="1" /></p></li>
+            <li>In the <MadCap:toggler targets="ClaimIssuance01">Edit Claim Issuance Policy</MadCap:toggler> dialog box, click
+<b>Add Rule</b> to define mapping information in order for Laserfiche Cloud to automatically display the following Active Directory account information in the Laserfiche Cloud Account Administration site:<ul><li>Username</li><li>User principal name</li><li>First Name</li><li>Last Name</li><li>Email</li><li>Display Name</li><li>Title</li><li>Company</li></ul><p MadCap:targetName="ClaimIssuance01"><img src="Resources/Images/EditClaimIssuancePolicy.png" border="1" /></p></li>
+            <li>On the <MadCap:toggler targets="TransformClaimRule01">Choose Rule Type</MadCap:toggler> step, choose the <b>Send LDAP&#160;Attributes as Claims</b> rule template. <p MadCap:targetName="TransformClaimRule01"><img src="Resources/Images/Add-Transform-Claim-Rule-01.png" border="1" /></p></li>
+            <li>On <MadCap:toggler targets="TransformClaimRule02">Configure Claim Rule</MadCap:toggler> step, specify a name for the rule and map LDAP&#160;attributes to the outgoing claim type. In order to sign in to Laserfiche Cloud, the <b>User-Principal-Name</b> to <b>UPN</b> mapping is required. The other supported outgoing claim types in the following table are optional.
+            <table style="width: 100%;"><col /><col /><tbody><tr><td class="tableheading"><b>LDAP Attribute</b></td><td class="tableheading"><b>Outgoing Claim Type</b></td></tr><tr><td class="tabletext">User-Principal-Name</td><td class="tabletext">UPN</td></tr><tr><td class="tabletext">SAM-Account-Name</td><td class="tabletext">Windows account name</td></tr><tr><td class="tabletext">Given-Name</td><td class="tabletext">Given Name</td></tr><tr><td class="tabletext">Surname</td><td class="tabletext">Surname</td></tr><tr><td class="tabletext">E-Mail-Addresses</td><td class="tabletext">E-Mail Address</td></tr><tr><td class="tabletext">Display-Name</td><td class="tabletext">http://laserfiche.com/identity/claims/catalyst/displayname</td></tr><tr><td class="tabletext">Company</td><td class="tabletext">http://laserfiche.com/identity/claims/catalyst/company</td></tr><tr><td class="tabletext">Title</td><td class="tabletext">http://laserfiche.com/identity/claims/catalyst/title</td></tr></tbody></table><p MadCap:targetName="TransformClaimRule02"><img src="Resources/Images/Add-Transform-Claim-Rule-02.png" border="1" /></p><p MadCap:targetName="TransformClaimRule02"><img src="Resources/Images/Add-Transform-Claim-Rule-03.png" border="1" /></p></li>
+            <li>Click <b>Finish</b> when done.</li>
+            <li>In the AD FS Management Console, expand <b>Service</b> and select the <b>Authentication Methods</b> node.</li>
+            <li>In the <b>Actions</b> pane, click <b>Edit Primary Authentication Methods</b>.</li>
+            <li>In the <MadCap:toggler targets="authenticationmethods">Intranet section</MadCap:toggler>, make sure that Forms Authentication is enabled.<p MadCap:targetName="authenticationmethods"><img src="Resources/Images/AuthenticationMethods.png" border="1" /></p></li>
+            <li>Return to the AD FS&#160;Management console and expand the <b>Service</b>-&gt;<b>Certificates</b> node.</li>
+            <li>Under the <b>Token-signing</b> section, select the appropriate signing certificate.</li>
+            <li>In the Actions pane, click <b>View Certificate</b>.</li>
+            <li>In the Certificate property dialog box, view the <b>Details</b> tab and click <b>Copy to File</b> to open the Certificate Export Wizard. </li>
+            <li>In the wizard, choose the <b>Base-64 encoded X.509 (.CER)</b> file format and save the certificate. This certificate will be necessary when configuring Laserfiche Cloud Account Administration for AD FS.</li>
+        </ol>
+        <h2 class="topicheading">Configuring Laserfiche Cloud for AD FS Single Sign-On</h2>
+        <p>Sign in to Laserfiche Cloud with an administrator account.</p>
+        <ol>
+            <li>On the <b>Settings</b> page, click the <b>Single Sign-On</b> tab.</li>
+            <li>Select <b>AD FS</b> from the <b>Type</b> drop-down list.</li>
+            <li>Next to <b>Issuer</b>, specify your AD FS issuer value. By default, it should look similar to the following:
+            <p class="Code">http://adfs.sampledomain.com/adfs/services/trust</p></li>
+            <li>Next to <b>Endpoint</b>, specify your AD FS endpoint. By default, it should look similar to the following:
+            <p class="Code">https://adfs.laserfiche.com/adfs/ls/</p></li>
+            <li>Under Certificates, click <b>Choose File</b> and specify the signing certificate from step 21 in the previous section.</li>
+        </ol>
+        <h3>Batch Importing Of Laserfiche User Accounts With a Comma Separated Values (CSV) File</h3>
+        <p>Administrators can predefine a list of federated accounts in a comma separated values (CSV) file for import into Laserfiche Cloud.</p>
+        <p>On the Users page, view the <b>Federated User</b>s tab. Click <b>Add</b> and select <b>Import from CSV&#160;file</b>.  The import process supports these Active Directory user attributes:</p>
+        <table style="width: 100%;">
+            <col />
+            <col />
+            <tbody>
+                <tr>
+                    <td class="tableheading"><b>Active Directory User Attribute</b>
+                    </td>
+                    <td class="tableheading"><b>Corresponding Laserfiche Cloud User Account Attribute</b>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">sAMAccountname</td>
+                    <td class="tabletext">User name*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">userPrincipalName</td>
+                    <td class="tabletext">User Principal Name*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">GivenName</td>
+                    <td class="tabletext">First Name*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Surname</td>
+                    <td class="tabletext">Last Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">EmailAddress</td>
+                    <td class="tabletext">Email*</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">DisplayName</td>
+                    <td class="tabletext">Display Name</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Company</td>
+                    <td class="tabletext">Company</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Title</td>
+                    <td class="tabletext">Title</td>
+                </tr>
+            </tbody>
+        </table>
+        <p>Attributes with a * are required.</p>
+        <p><b>Sample CSV file:</b>
+        </p>
+        <p class="ex">"SAMAccountname","userPrincipalName","GivenName","Surname","EmailAddress","DisplayName","Company","Title"<br />"johnsmith","johnsmith@Company.com","John","Smith","johnsmith@Company.com","John Smith","Company","Engineer II"<br />"janesmith","janesmith@Company.com","Jane","Smith","janesmith@Company.com","Jane Smith","Company","Engineer III"<br /></p>
+    </body>
+</html>

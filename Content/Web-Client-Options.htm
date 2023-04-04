@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>User Options</h1>
+        <p>User options allow you to configure the way you view, create, and export documents and folders. To view and modify your options, click your user name in the upper right corner of the folder browser or document viewer, and select <b>Options</b>. These options are user-specific and do not affect other users.</p>
+        <h2 class="topicheading">General</h2>
+        <p>General options cover a variety of elements of the repository.</p>
+        <p><b>Language:</b>&#160;The language in which the web client will be displayed. By default, this will match your browser's language settings. Supported languages are Arabic, Chinese (Simplified), Chinese&#160;(Traditional), English, French, Italian, Portuguese&#160;(Brazilian), and Spanish.</p>
+        <p><b>Entry Copy:</b>&#160;Select <b>Copy access rights along with the entries</b> to include security information when copying a document. Clear this option if you do not want to copy security information. (In either case, security will still be inherited from the folder into which the entry is copied.) See <a href="Organizing_Documents.htm#Copying">Copying Documents and Folders</a> for more information on copying entries.</p>
+        <p><b>For PDF files:</b>
+        </p>
+        <ul>
+            <li>Select <b>Generate pages when importing PDFs</b> if you want to automatically generate image pages during PDF import.</li>
+            <li>Select <b>Keep original PDF files when generating pages during import</b> if you want to keep both the image pages and the PDF.</li>
+            <li>Select <b>Preserve PDF annotations on Laserfiche pages</b> if you want to convert PDF annotations to Laserfiche annotations when generating pages from a PDF. Clear this option if you want PDF annotations to be ignored when pages are generated. </li>
+            <li>Under <b>Original document type</b>, specify the default original document type to be used if none is selected during import. Matching this value to the type of document being uploaded will optimize page generation for quality and file size.</li>
+        </ul>
+        <p>For more information, see <a href="Working_with_Doc_Contents.htm#Generati">Generating Pages from PDFs</a>, and <a href="Working_with_Doc_Contents.htm#Generati2">Generating Document Text</a>.</p>
+        <h2 class="topicheading">Display</h2>
+        <p>Display options allow you to customize the way documents and document information can be viewed.</p>
+        <p><b>Viewing:</b>&#160;Determines the default behavior when opening an electronic document. You can choose to open the electronic file in the document viewer for supported file types, open the image pages (if any) for the electronic file, or always download the file. See <a href="Viewing_Documents.htm#Viewing3">Viewing the Contents of a Document with an Electronic File</a> for more information.</p>
+        <p><b>Audio and Video:</b> Select <b>Stream media files</b> to stream audio and video files to your browser without needing to download and open them first. (You can still manually export the file to download it locally.)&#160;Clear this option if you want to download audio and video files by default. For more information on viewing media files, see <a href="Viewing_Documents.htm#Streamin">Streaming Audio and Video Files</a>.</p>
+        <p><b>Field Display:</b>&#160;Select <b>Compress field display</b> to reduce the spaces between fields in the Details pane, allowing you to view more fields without scrolling.</p>
+        <p><b>Folder Browser Display:</b>&#160;Select <b>Compress folder browser display</b> to reduce the spaces between fields in the folder browser, allowing you to view more documents without scrolling.</p>
+        <p><b>Browser Columns:</b>&#160;When <b>The same for all folders</b> is selected, columns will remain consistent across the repository, and changes to the folder browser columns will immediately be applied to all folders. When <b>Remembered for each folder</b> is selected, columns will be saved individually for each folder and changes to one folder will not affect other folders. See <a href="Viewing_Documents.htm#Viewing2">Viewing Document or Folder Information in the Folder Browser Columns</a> for more information.</p>
+        <p><b>Folder Tree:</b>&#160;When <b>Expand to current folder</b> is selected, the folder tree on the left side of the folder browser will automatically expand to the folder you currently have open in the center pane. Note that this option may be slow when expanding folders with many subfolders.</p>
+        <p><b>Tabs:</b> You can rearrange the tabs in the Details pane by dragging and dropping the tab name. You can also create custom tabs; see <a href="Custom-Tabs.htm">Custom&#160;Tabs</a> for more information.</p>
+        <h2 class="topicheading"><a name="Export"></a>Download</h2>
+        <p>Download options allow you to fine-tune the way that documents and other information will be exported from your repository. For more information on downloading documents, see <a href="Printing_and_Exporting.htm">Sharing, Downloading, and Printing Documents</a>. </p>
+        <p><b>Redactions:</b> Select <b>Include redactions on exported images</b> to retain redactions on pages when they are downloaded. This will make the redaction a permanent part of the downloaded image. If you do not want to include redactions, clear this option. Note that, if you don't have the rights to see through redactions, they will always be included regardless of this setting.</p>
+        <p><b>Download Image:</b> Determines how documents with image pages will be exported. Note that the PDF options below refer to PDFs generated from image pages during export, not documents already in PDF format in the repository. See <a href="Printing_and_Exporting.htm#Download">Downloading Documents</a> for more information.</p>
+        <ul>
+            <li>Select <b>Include all other annotations on exported images</b> to retain annotations on pages when they are downloaded. (This setting does not have any effect on redactions.)&#160;If you do not want to include annotations, clear this option.</li>
+            <li>Select <b>When downloading images as PDFs, optimize compression for text on color images</b> if you want to compress your PDF to a smaller file size when the images contain text on a colored background. This option may slow the download process and result in a lower quality PDF.</li>
+            <li>Select <b>Convert annotations into PDF annotations</b> if you want to convert Laserfiche annotations on pages into PDF&#160;annotations when you export a document as a PDF. If you want to export the PDF without annotations, clear this option. </li>
+            <li>Select <b>When generating PDFs from pages, create as PDF/A</b> to generate PDFs in PDF/A format rather than standard PDF&#160;format. PDF/A files are intended for long-term archiving of documents, but may be larger than standard PDF documents. The PDF/A file type does not support some annotation types, which will not be included in the exported file. To export PDFs in standard PDF format, clear this option.</li>
+            <li>In the <b>Quality level</b> option, specify the quality of the exported document as a percentage. Higher quality will result in a larger file size.</li>
+        </ul>
+        <p><b>Send Email:</b> Determines the default settings for documents sent from Laserfiche via email. See <a href="Printing_and_Exporting.htm#Sending">Sending an Email from Laserfiche</a> for more information.</p>
+        <ul>
+            <li>Select <b>Combine documents into one zip file</b> to collect multiple documents into a zip file when emailing. Clear this option to email the documents as individual documents.</li>
+            <li>In the <b>By default, send attached documents as</b> option, select <b>Links</b> to include URL&#160;links to the documents in the email, <b>Files</b> to send the actual files, or <b>Entry paths</b> to send the path to the file in the repository. Folders will always be sent as links.</li>
+            <li>In the <b>Email format</b> option, choose whether you want to send emails using the <b>Msg (Outlook)</b>&#160;format or the <b>Eml</b> format.</li>
+        </ul>
+        <p><b>Download Briefcase:</b> Determines which elements of selected documents and folders will be included in briefcases. See <a href="Printing_and_Exporting.htm#Exportin">Exporting a Collection of Documents and Folders as a Briefcase</a> for more information on briefcases. A briefcase includes not only the documents themselves, but also their folder structure, and Laserfiche-specific information such as annotations and metadata. The following elements can be included or removed:</p>
+        <ul>
+            <li>Images and text</li>
+            <li>Shortcuts</li>
+            <li>Electronic files</li>
+            <li>Records management data</li>
+            <li>Version histories</li>
+        </ul>
+        <p>In addition, you can select <b>Make image redactions permanent in the briefcase</b>. This will replace the removable redaction annotation in the source repository with a permanent, unremovable one in the target repository in both the image and text pages. Note that if you do not have the <b>See Through Redactions</b> entry access right for a given document in the briefcase, the redactions for that document will always be permanent.</p>
+        <p><b>Optional Watermarks:</b>&#160;Allow users to apply watermark text to the document, unless the document already has one or more tag or group watermarks on it. Only downloaded image pages can have watermarks applied to them. To make watermarks available in the download dialog box, you will first need to select Apply when downloading (and no other watermarks are present); you will then be able to select an optional watermark, or no watermark, when downloading the document. </p>
+        <p>By default, Laserfiche includes a Confidential optional watermark and a Do Not Copy optional watermark. These watermarks can be modified or removed, and new watermarks can be added using the <b>Add</b> link. Optional watermarks have the following properties:</p>
+        <ul>
+            <li><b>Watermark text:</b>&#160;The text that will be displayed on the image</li>
+            <li><b>Position:</b>&#160;Which of six positions (top left, top middle, top right, left center, center, right center, left bottom, center bottom, or right bottom)&#160;the watermark will occupy on the page.</li>
+            <li><b>Text angle:</b>&#160;Angle of the watermark on the page.</li>
+            <li><b>Percent of page spanned:</b>&#160;How large the watermark will be relative to the page.</li>
+        </ul>
+        <h2 class="topicheading"><a name="New"></a>New Document</h2>
+        <p>New Document options allow you to configure the way that files imported into Laserfiche will be handled.</p>
+        <p><b>Import Documents:</b>
+        </p>
+        <ul>
+            <li>
+                <MadCap:concept term="Laserfiche" /><b>Always show import dialog: </b>The Import to Laserfiche dialog box will appear when a new document is created. This dialog box allows you to configure the name, location, field data, and tags to be assigned to the document. If you clear this option, the import dialog box will only be displayed if the document cannot be saved without additional input (for instance, if the document has a required field).</li>
+            <li><b>Generate searchable text when importing documents:</b>&#160; This option determines whether text will be generated by default for new documents. It is strongly recommended that this option remain enabled to ensure that documents can be found via text search.</li>
+            <li><b>Retain file extensions in electronic document names: </b>By default,  Laserfiche removes the file extension from electronic documents when they are imported into Laserfiche. Enabling this option will preserve the file extension. </li>
+            <li><b>Automatically extract text when saving documents from Microsoft Office:</b> This option determines whether text will be generated when saving documents to the repository from Microsoft Office. It is strongly recommended that this option remain enabled to ensure that documents can be found via text search. </li>
+        </ul>
+        <p><b>File Conversion:</b>In this option, you can determine which types of files will be converted to the image file formats used by Laserfiche. The files will be converted depending on the color depth of each image. Black and white images are converted to TIFF Group IV. Color and grayscale images are converted to TIFF-LZW. If an image file is not on the list, it will be imported in its original format as an electronic document. If you choose this option, the images can still be viewed in the web client's document viewer, but some features (such as annotations)&#160;will not be available.</p>
+        <p><b>Import Email:</b> In this option, you can select a default template for imported emails and map the fields in that template to email properties. For instance, you could specify that a "Sender"&#160;field should be populated with the sender information in the email, or that a "Subject"&#160;field should be populated with the email's subject line.</p>
+        <p><b>Import Default:</b>&#160;</p>
+        <ul>
+            <li><b>Default template:</b> This option allows you to specify a default template for all newly-imported documents. You can specify a specific template, no template, or &lt;Use parent folder's template&gt;, which will automatically use the template set on the folder into which the document is being imported. If the parent folder has no template, documents with this option set will also have no template assigned. Note that you can still modify the template during import.</li>
+            <li><b>Count token value:</b>&#160;The count token is a token that increments with each new document you import or scan. By default this begins at 0, increases to 1 with the first document you import or scan, and so on. You can manually modify the count token value. This value is specific to you.</li>
+        </ul>
+        <p><b>Import Profiles:</b>&#160;An import profile allows you to configure a default name, folder path, and template for imported documents of a particular type. You can also configure your import profile to set certain information dynamically. See <a href="Import-Profiles.htm">Import Profiles</a> for more information.</p>
+        <h2 class="topicheading">Search</h2>
+        <p>Search options allow you to customize the way in which searches are performed and how search results are displayed.</p>
+        <p><b>Case/Accent Sensitive Search</b>: Controls whether searches will be case sensitive or accent sensitive. Select the combination of case and accent sensitivity you want to use. By default, this will match the case and accent sensitivity setting in repository administration. This only applies to nonindexed searches.</p>
+        <p><b>Find partial matches when performing a quick search</b>: Returns partial matches for a search term when searching by entry name, field, or annotation text using the Basic or Quick Search. If you search for "February," the search engine will return results matching *February* (meaning that text may come before or after the searched term, i.e. "10 February" or "February 22, 2016").</p>
+        <p><b>Include variants of root words in text searches</b>: Returns words that are variants of your search term. (This option is also sometimes called "search stemming.") For instance, if you select this option and then search for the word "swim," the search results will also include the words "swam" and "swimming." This only applies to indexed searches.</p>
+        <p><b>Use fuzzy search</b>: Returns all words or phrases similar to the word or phrase typed. This setting only applies to indexed searches.</p>
+        <p><b>Search hit highlight:</b> Individual occurrences of search criteria will be highlighted on the image and text pages of documents opened from the search results window. You can customize the color of the search hits in this option.</p>
+        <p><b>Show context lines:</b> Whether the context for each search hit is displayed in the bottom pane of the Search Results window. In the <b>Characters per line</b> option, specify the number of characters that should be displayed in the context line.</p>
+        <p><b>Resolve shortcuts (may slow search performance):</b> Whether shortcuts will inherit the traits of their parent documents for search purposes. For example, if you select this option and perform a search for documents containing the word "Agenda" that are in the "MyDocument" folder, the text search will also be performed on documents that have shortcuts in the "MyDocuments" folder. This option is most commonly used in conjunction with folder tunneling.</p>
+        <p class="note"><b>Note:</b> Resolve shortcuts can significantly slow search performance, because a larger section of the repository must be searched. Only select this option if it is necessary for the way you handle shortcuts in your repository.</p>
+        <p><b>Limit text searches to</b>: Whether to display only a certain number of indexed search results. The most relevant results will be returned. This option cannot be used with <b>Resolve shortcuts</b>.</p>
+        <h2 class="topicheading">Tools</h2>
+        <p>The Tools section allows you to modify your toolbar. At the top, you can specify whether you want to customize the folder browser, document viewer, or annotation toolbar. (The annotation toolbar appears in the document viewer when a document with image pages has been opened.)&#160;</p>
+        <p><b>The On toolbar</b> section shows the buttons that will be displayed on the toolbar; the buttons in the <b>Under More Actions button</b> section will still be available for use, but collected under the More Actions (<img src="Resources/Images/more-actions-button.png" />)&#160;button. You can drag and drop to rearrange buttons on the toolbar, or to move buttons from the more actions section to the toolbar and vice versa.</p>
+        <p>Users with the <b>Manage Repository Configuration</b> privilege can also set default toolbars for all users under <b>Defaults for All Users</b>. This will provide a new default, although users can still modify their own toolbars. </p>
+        <h2 class="topicheading">Reset</h2>
+        <p>In the Reset section, you can clear your saved settings and go back to the default, or restore confirmation and warning dialog boxes that you had previously hidden.</p>
+        <p><b>Restore default settings:</b>&#160;To clear your personal settings and return to the repository default, click the <b>Restore</b> button. This will not affect saved searches, starred items, or saved column profiles. </p>
+        <p><b>Confirmation:</b>&#160;If you have selected "Don't show this dialog again"&#160;to prevent confirmation and warning dialog boxes from being displayed, you can click the <b>Reset</b> button to restore those dialogs boxes.</p>
+        <h2>Advanced</h2>
+        <p><b>Laser App Integration:</b>&#160;If you have not yet downloaded the configuration file for the Laser App integration, you can do so by clicking <b>Download configuration for Laser App Enterprise</b>. (This is not necessary if you are using Laser App Anywhere.) For more information on Laser App, see <a href="LaserApp.htm">Saving Laser App Forms to Laserfiche</a>.</p>
+        <p>In the Advanced section, you can enable or disable tracing. In general, you should only enable tracing when working with your administrator to resolve an issue that you are encountering in the repository. For more information, see <a href="Tracing.htm">Tracing</a>.</p>
+    </body>
+</html>

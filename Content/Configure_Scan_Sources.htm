@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring Scan Sources</h1>
+        <p><MadCap:variable name="DoNotTranslate.Laserfiche" /> users scan sources to capture images. There are two basic types of scan sources that you can use. If you are scanning paper documents directly into <MadCap:variable name="DoNotTranslate.Laserfiche" />, you can use <MadCap:variable name="DoNotTranslate.TWAIN" /> with a scanner that uses <MadCap:variable name="DoNotTranslate.TWAIN" /> drivers, <MadCap:variable name="DoNotTranslate.WIA Scan Engine" /> with a scanner that uses <MadCap:variable name="DoNotTranslate.WIA" /> drivers, or <MadCap:variable name="DoNotTranslate.ScanConnect" /> with a scanner that uses ISIS drivers. Alternately, if you want to scan already-existing images (such as images previously scanned), you can use Universal Capture.</p>
+        <h2 class="topicheading">Configuring <MadCap:variable name="DoNotTranslate.TWAIN" />, <MadCap:variable name="DoNotTranslate.WIA Scan Engine" />, or <MadCap:variable name="DoNotTranslate.ScanConnect" /></h2>
+        <p>When you use <MadCap:variable name="DoNotTranslate.LF Scanning" /> with <MadCap:variable name="DoNotTranslate.TWAIN" />, <MadCap:variable name="DoNotTranslate.WIA Scan Engine" />, or <MadCap:variable name="DoNotTranslate.ScanConnect" /> as your scan source, you can select a scanner to use with <MadCap:variable name="DoNotTranslate.LF Scanning" /> and configure settings for that scanner. Since individual scanners have different options available, refer to your scanner's documentation for information about your specific options.</p>
+        <p><b>To selecting and configure <MadCap:variable name="DoNotTranslate.TWAIN" />, <MadCap:variable name="DoNotTranslate.WIA Scan Engine" />, or <MadCap:variable name="DoNotTranslate.ScanConnect" /> as a scan source</b>
+        </p>
+        <ol>
+            <li>Launch <MadCap:variable name="DoNotTranslate.LF Scanning" />, or, if it is already open, open the <b>File</b> menu and select <b>Choose Scan Source</b>.</li>
+            <li>Select <b><MadCap:variable name="DoNotTranslate.TWAIN" /></b>, <MadCap:variable name="DoNotTranslate.WIA" /> <b>Scan Engine</b>, or <b><MadCap:variable name="DoNotTranslate.ScanConnect" /></b> from the drop-down menu. </li>
+            <li>Check <b>Show Scan Source Setup</b> and click <b>OK</b>.</li>
+            <li>Choose your scanner from the drop-down box. If your scanner is not listed, make sure that your scanner and its drivers are installed and up to date. Click <b>OK</b>.</li>
+            <li>Open the <b>File</b> menu and select <b>Scanner Options</b>.</li>
+            <li>Configure scanner settings. (Refer to your scanner documentation for the specific settings available for your scanner.)</li>
+        </ol>
+        <h2 class="topicheading">Configuring Universal Capture</h2>
+        <p>Universal Capture works as a virtual scanner by capturing images already stored on your computer. This allows you to use any scanner or scanning software you want and still take advantage of the features of <MadCap:variable name="DoNotTranslate.LF Scanning" />, or to use <MadCap:variable name="DoNotTranslate.LF Scanning" /> to capture images scanned in the past.</p>
+        <p>Universal Capture can only retrieve <MadCap:variable name="DoNotTranslate.TIFF" />, <MadCap:variable name="DoNotTranslate.JPEG" />, or&#160;<MadCap:variable name="DoNotTranslate.BMP" /> files from your computer. To add other types of files to <MadCap:variable name="DoNotTranslate.Laserfiche" />, you can either <a href="Importing.htm">import</a> them, or you can use <a href="http://www.laserfiche.com/support/webhelp/Cloud/en-US/UserGuide/Laserfiche_Client.htm#Snapshot/Snapshot_Overview.htm"><MadCap:variable name="DoNotTranslate.LF Snapshot" /></a> to "print"&#160;them as image files.</p>
+        <p><b>To selecting and configure <MadCap:variable name="DoNotTranslate.TWAIN" />, <MadCap:variable name="DoNotTranslate.WIA Scan Engine" />, or <MadCap:variable name="DoNotTranslate.ScanConnect" /> as a scan source</b>
+        </p>
+        <ol>
+            <li>Launch <MadCap:variable name="DoNotTranslate.LF Scanning" />, or, if it is already open, open the <b>File</b> menu and select <b>Choose Scan Source</b>.</li>
+            <li>Select <b>Universal Capture</b> from the drop-down menu. </li>
+            <li>Check <b>Show Scan Source Setup</b> and click <b>OK</b>. The <b>Universal Capture Properties</b> dialog box will open.</li>
+            <li>Specify the location on your computer that you want to capture images from. You can use a local path (e.g., <b>C:\Documents and Settings\jdoe\My Documents</b>) or a network path (e.g., <b>\\network drive\personal\jdoe</b>). You can use the browse button (<b>...</b>)&#160;to browse to the source location.</li>
+            <li>Under <b>File Type</b>, select which type of files to scan. </li>
+            <li>Determine how to handle processed images:&#160;Select <b>Delete original images</b> to delete the images from your computer after they're scanned, or <b>Move processed images to</b> to move them to another folder. If you choose to move the images, click the browse button (<b>...</b>)&#160;to browse to the destination folder.</li>
+            <li>Determine when to stop scanning:&#160;Select <b>No images of the selected type are found</b> to stop scanning when there are no more images in the source folder, or <b>Scanning inactivity has exceeded</b> to set a time limit after which scanning will stop.</li>
+            <li>Click <b>OK</b>&#160;to save your settings.</li>
+        </ol>
+    </body>
+</html>

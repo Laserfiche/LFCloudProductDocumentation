@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Disciplines by Student Academic Program ID</title>
+    </head>
+    <body>
+        <h1>Search Disciplines by Student Academic Program ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action returns a list of "Disciplines" (Academic Discipline, Discipline Status and start/end dates).</p>
+        <ul>
+            <li><b>Category:</b> Student Grade Point Average</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Student Academic Program ID*</p>
+                    </td>
+                    <td>
+                        <p>Is the Guid identifier of a student accademic program.</p>
+                        <p>Can be retrieved using the Search Student Academic Programs by Person ID action.</p>
+                        <p class="note"><b>Note:</b> This is not Academic Program ID. For how to use this action, please refer to the “Add/Drop Major or Minor" example.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Status</p>
+                    </td>
+                    <td>
+                        <p>The current state of a student's enrollment for a specific Academic Discipline (i.e. this refers to the Disciplines/Discipline Status/Status field).</p>
+                        <p>Options include "all", "active", "inactive", and "complete".<ul><li>Selecting one of "active", "inactive", or "complete" will filter the results by the selected option.</li><li>Selecting "All" will return all the disciplines.</li></ul></p>
+                        <p>This input is optional.<ul><li>If this input is not included then we will retrieve and display all the student academic program's academic disciplines regardless of status.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return third-party error.</li></ul></p>
+                        <p>If a user wishes to use the research results for add/drop academic discipline, he/she should set the enrollment status to "active" programs since only active student academic programs are updateable.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Type</p>
+                    </td>
+                    <td>
+                        <p>The type of the Academic Discipline.</p>
+                        <p>Options include "all", "minor", "major" and "concentration".<ul><li>Selecting one of "minor", "major", or "concentration" will filter the results by the selected option.</li><li>Selecting "all" will return all the disciplines.</li></ul></p>
+                        <p>This input is optional.<ul><li>If this input is not included then we will retrieve and display all the student academic program's academic disciplines regardless of type.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return third-party error.</li></ul></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Disciplines</p>
+                    </td>
+                    <td>
+                        <p>The Academic Discipline is a collection. Each collection includes following fields.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="DisciplinesSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="DisciplinesSubFields">
+                            <li>Start On: The date on which the Academic Discipline begins for the student academic program. A Derived date based on the effective beginning terms of the SORLOS record and is not updatable.</li>
+                            <li>End On: The date on which the Academic Discipline ends for the student academic program. A derived date based on the effective ending terms of the SORLOS record and is not updatable.</li>
+                            <li>Override Start On: The date on which the Academic Discipline begins for the student academic program.  May be used to provide a more refined detail of the dates the student was pursuing the discipline.</li>
+                            <li>Override End On: The ending date of the Academic Discipline to be used for reporting.  May be used to provide a more refined detail of the dates the student was pursuing the discipline.</li>
+                            <li>Academic Discipline: Requires additional API call and includes sub-fields. (<MadCap:toggler targets="AcedemicDisciplineSubFields">See the Academic Discipline sub-fields</MadCap:toggler>).
+                        <ul MadCap:targetName="AcedemicDisciplineSubFields"><li>Academic Discipline/Academic Discipline ID: The Guid identifier for the Academic Discipline under the student academic program.</li><li>Academic Discipline/Title: The full name of the Academic Discipline under the student academic program (for example, ‘Mathematics’).</li><li>Academic Discipline/Description: The full description of the Academic Discipline under the student academic program.</li><li>Academic Discipline/Type: The type of the Academic Discipline under the student academic program (for example, 'major').</li><li>Academic Discipline/Abbreviation: The abbreviation that identifies the Academic Discipline under the student academic program (for example, "MATH")</li></ul></li>
+                            <li>Discipline Status: Requires additional API call and includes sub-fields. (<MadCap:toggler targets="DisciplineStatusSubFields">See the Discipline Status sub-fields</MadCap:toggler>).
+                        <ul MadCap:targetName="DisciplineStatusSubFields"><li>Discipline Status/Discipline Status ID: The Guid identifier for the Discipline Status.</li><li>Discipline Status/Title: The full name of the Discipline Status (for example, ‘Active Curriculum’).</li><li>Discipline Status/Description: The full description of the Discipline Status.</li><li>Discipline Status/Status: The type of the Academic Discipline (for example, 'active').</li><li>Discipline Status/Code: The code that identifies the Discipline Status (for example, "ACTIVE").</li></ul></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

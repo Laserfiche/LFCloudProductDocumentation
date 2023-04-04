@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="670" MadCap:lastWidth="1024" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Move Entry</h1>
+        <p style="text-align: center;">
+            <img src="Images/moveEntryCanvas.PNG" title="Move Entry activity" alt="Move Entry activity" />
+        </p>
+        <p>This activity moves, copies, or creates a shortcut to an entry. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Move-Entry-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Action</b> property box, select the type of action on the entry.</li>
+            <ul>
+                <li><b>Move</b>: Relocates the entry to the destination specified.</li>
+                <li><b>Copy</b>: Duplicates the entry.</li>
+                <li><b>Create</b> Shortcut: Places a shortcut to the entry in the destination specified.</li>
+            </ul>
+            <li>In the <b>Destination</b> property box, type the path to an entry or, using the <b>Browse</b> button (ellipsis) <img src="../../../Images/Icon_Ellipsis_White.png" />, browse to the entry. Click the <b>Token</b> button (right arrow) <img src="../../../Images/Icon_Arrow_Right_White.png" />  to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.<p class="note"><b>Note</b>: You can only type a destination within the Laserfiche repository defined in the <b>Connection Profile</b> property box.</p></li>
+            <li>Select an action if the path does not exist.</li>
+            <ul>
+                <li><b>Create it</b>: Creates a new folder path.</li>
+                <li><b>Create it and report a warning</b>: Creates a new folder path and displays a warning in the search results and the instance report.</li>
+                <li><b>Terminate the workflow</b>: Ends the workflow and displays an error in the search results and the instance report.</li>
+            </ul>
+            <li>In the <b>Entry to Move</b> property box, select the entry you want to move. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

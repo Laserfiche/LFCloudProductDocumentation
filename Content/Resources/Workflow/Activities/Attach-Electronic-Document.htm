@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Attach Electronic Document</h1>
+        <p style="text-align: center;">
+            <img src="Images/attachElectronicDocumentCanvas.PNG" title="Attach Electronic Document activity" alt="Attach Electronic Document activity" />
+        </p>
+        <p>This activity attaches an electronic document to a Laserfiche document. </p>
+        <div class="ex"><b>Tip</b>: You can use this activity to import an electronic document into the Laserfiche repository. First, create a document with the <a href="Create-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Create Entry</a> activity. Second, use this activity to attach the electronic document to the newly created document.</div>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>File to Attach</b> property box, select the file you want to attach using the following options next to Source:<ul><li><b>Server Attachment</b>: Select an electronic document attached in <a href="../../Assets/Files.htm" title="Click here to learn more." alt="Click here to learn more.">Files</a>.</li><li><b>Activity</b>: Select a document from an activity earlier in your workflow. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li></ul></li>
+            <li>In the <b>Additional Options</b> property box, select what you want to do if the target document has an electronic document attached to it.<ul><li><![CDATA[
+                ]]><b>Override electronic document and do not report a warning</b>: Replace the electronic document and do not report a warning when the electronic document already exists.           </li><li><![CDATA[
+                ]]><b>Override electronic document and report a warning</b>: Replace the electronic document and report a warning in the instance report when the electronic document already exists.            </li><li><![CDATA[
+                ]]><b>Do not override existing electronic document</b>: Do not replace the existing electronic document with the new electronic document.            </li></ul></li>
+            <li>In the <b>Attach File To</b> property box, select the document to which you want the electronic document attached. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/migrating-form-tables-into-word-documents.flsnp" />
+    </body>
+</html>

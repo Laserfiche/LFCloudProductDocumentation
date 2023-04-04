@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Import Agent Options</h1>
+        <p>You can configure options that will apply to all profiles, including settings for OCR, configuration for import of various types of documents, and file monitoring options.</p>
+        <p>To configure options in Import Agent, open the Import Agent Configuration Manager. Select the <b>Profile</b> menu, and then select <b>Options</b>.</p>
+        <h2 class="topicheading">General</h2>
+        <p><b>Count</b>
+        </p>
+        <p>Sets the starting point for the Session Count token. See <a href="Import-Agent-Tokens.htm">Import Agent Tokens</a> for more information.</p>
+        <p style="font-weight: bold;">Distributed Computing Cluster</p>
+        <p>Laserfiche Cloud users should leave the Distributed Computing Cluster section blank.</p>
+        <p><b>OCR</b>
+        </p>
+        <p>OCR settings allow you to customize the way in which OCR is performed on imported documents.</p>
+        <ul>
+            <li><b>Language:</b> Select a language to help optimize the character recognition.</li>
+            <li><b>Decolumnize text:</b> Select this option to convert multiple columns of generated text into a single column. Clearing the checkbox will preserve column formatting in the OCRed text, even if that separates words and sentences.</li>
+            <li><b>Perform image enhancement:</b> Images will be temporarily enhanced prior to OCR processing to optimize the processing.
+Click <b>Configure</b> open the <b>Image Clean-up Options</b> dialog box and configure the desired temporary image enhancements.</li>
+            <ul>
+                <li><b>Deskew image:</b> Straighten crooked images.</li>
+                <li><b>Despeckle image:</b> Remove undesired noise from an image.</li>
+                <ul>
+                    <li><b>Specify the maximum size of noise to be removed (in pixels):</b> Size is specified as both width and height. For example, setting this option to 2 will remove all noise that is equal to or smaller than a 2 pixel x 2 pixel square.</li>
+                </ul>
+                <li><b>Rotate image:</b> Rotates images to an orientation that  is appropriate for OCR processing. After the OCR process is performed, the image will return to its original orientation.</li>
+                <ul>
+                    <li><b>Automatically:</b> The direction in which text flows on the page will be detected. The image will be rotated so the text flows horizontally (left to right).</li>
+                    <li><b>By this amount:</b> The amount by which the image will be rotated. An image can be rotated by 90, 180, or 270 degrees.</li>
+                </ul>
+                <li><b>Line removal:</b> Remove lines from an image.</li>
+                <ul>
+                    <li><b>Horizontal:</b> Removes horizontal lines from the image. Characters that are damaged due to the line removal will be repaired.</li>
+                    <li><b>Vertical:</b> Removes vertical lines from the image. Characters that are damaged due to the line removal will be repaired.</li>
+                </ul>
+            </ul>
+            <li><b>Optimization priority:</b> Choose one of the following:</li>
+            <ul>
+                <li><b>Speed:</b> Reduces the amount of time it takes to OCR. Generated text may be less accurate. Best for documents with clear text.</li>
+                <li><b>Balance:</b> Strikes a balance between speed and accuracy. Best for documents with average text.</li>
+                <li><b>Accuracy:</b> Increases OCR quality. Processing time will also be increased. Best for documents with less clear text.</li>
+            </ul>
+        </ul>
+        <h2 class="topicheading">File Types</h2>
+        <p><b>Images</b> </p>
+        <p>By default, Import Agent will convert images in BMP, GIF, JPG, JPEG, PCX, PNG, TIF, and TIFF formats to Laserfiche imaged documents. You can manually select which of these file formats to convert in this option. If you choose not to convert a particular image file type, the image file will open in its original format in its native application.</p>
+        <p>To modify the import conversion list, add or remove extensions from the list.</p>
+        <p><b>Text</b>
+        </p>
+        <p>Import Agent lets you choose whether certain types of text files will  be imported as Laserfiche documents or electronic documents. To modify the import conversion list, add or remove extensions from the list.</p>
+        <p><b>Laserfiche files</b>
+        </p>
+        <p>Laserfiche supports import via two Laserfiche-specific formats that allow you to import multiple documents at once:&#160;list files and briefcase files.</p>
+        <p>The <b>Recognize files with LST extensions as list files</b> and <b>Recognize files with XML&#160;and LSTX extensions as list files</b> options allow you to import list files, which allow for more precise handling of import in certain cases. For information on the structure of XML import list files, see the schema definition file and sample XML files included in the installation directory (e.g., C:\Program Files\Laserfiche\Import Agent\List File Examples).</p>
+        <p>The Recognize files with LFB extensions as Laserfiche briefcases option allows you to import Laserfiche briefcases using Import Agent. See <a href="Printing_and_Exporting.htm#Exportin">Exporting a Collection of Documents and Folders as a Briefcase</a> for more information on briefcases.</p>
+        <h2 class="topicheading">Advanced</h2>
+        <p>Import Agentreceives notifications from your operating system that help it determine when files are available for import. In some situations, Import Agent is unable to import a file after receiving a notification (e.g., the file was in use when the notification was sent). To prevent files from being overlooked, Import Agent periodically checks monitored directories. You can specify how often a check should be performed, as well as how long Import Agent should wait before importing files  that have been recently modified. These options are useful in situations where content is being added toa file as it is being created.</p>
+        <p class="ex"><b>Example:</b> Your scanner has been configured to create multi-page TIFF images. In this scenario, you should  increase the time interval that Import Agent waits so your scanner has enough time to create all of the document's pages.</p>
+        <p class="ex"><b>To configure monitoring options</b>
+        </p>
+        <ol>
+            <li>In the Options menu, open the Advanced tab.</li>
+            <li>            Under <b>File monitoring interval</b>,  specify the number of seconds that must elapse between each time that Import Agent will check for new files.
+            </li>
+            <li>Under <b>New files</b>, specify the number of seconds that must elapse  after a file's been modified before it can be imported into Laserfiche.
+            </li>
+            <li>Under <b>Import Thread Count</b>, specify the number of threads Import Agent will run on. This allows you to run Import Agent on machines with lower processing speeds.</li>
+            <li>Click <b>OK</b>.
+                <p class="note"><b>Note:</b> These settings apply to all profiles.</p></li>
+        </ol>
+    </body>
+</html>

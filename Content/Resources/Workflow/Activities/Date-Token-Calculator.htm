@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Date Token Calculator</h1>
+        <p style="text-align: center;">
+            <img src="Images/dateTokenCalculatorCanvas.PNG" title="Date Token Calculator activity" alt="Date Token Calculator activity" />
+        </p>
+        <p>This activity creates custom date and time <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">tokens</a>.</p>
+        <p class="ex"><b>Example</b>:&#160;You want to create a token for sending out coupons when you want to send out a coupon to new customers in July. To do this, you first add the <b>Date Token Calculator</b> activity to the workflow canvas. Next to <b>Token</b> in the <b>New Token</b> dialog box, you type <b>Coupon</b> as the name of the token. Next to <b>Date</b>, you select <b>Next Month</b> and, next to <b>The first</b>, select <b>July</b>.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>In the <b>Date/Time Tokens</b> property box, click <b>New token...</b> to create a token.</li>
+            <li>In the <b>Token</b> tab, type a new name for the custom token next to <b>Token</b>. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></li>
+            <li>Specify the date of the new token next to <b>Date</b>. (More information below)</li>
+            <li>Specify the time of the new token next to <b>Time</b>. (More information below)</li>
+            <li>
+                Add or subtract dates or times from the date/time you specified by selecting the <b>Modify the date and time</b> option.
+                <p class="note"><b>Note</b>:&#160;The <b>business days</b> and <b>business hours</b> options let you add and subtract business hours and days according to the default <a href="../../Settings/Work-Schedules.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule</a>.</p></li>
+            <li MadCap:conditions="Default.Do not include">You can move the custom datetime to the beginning or end of a business day according to the <a href="../../Settings/Work-Schedules.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule</a>. The <b>Business Day</b> drop-down lets you select if you want to move the time to the beginning or end of the business day. The <b>Non-Business Day</b> drop-down lets you select if you want to move the date to the next business day and the time to the beginning or end of that business day.<p class="ex"><b>Example</b>: An assignment is due at the end of the third business day. In the <b>Business Settings</b> tab, set the first drop-down to <b>End of business day</b>, and set the second drop-down to <b>End of next business day</b> to automatically make the assignment due the next available business day.</p></li>
+            <li>
+               Click<b> OK</b>.           </li>
+        </ol>
+        <p style="font-weight: bold;">Date Options</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Date Options</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th style="font-weight: normal;"><b>Name</b>
+                    </th>
+                    <th style="font-weight: normal;"><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">None</td>
+                    <td class="tabletext">No date specified.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Custom Date</td>
+                    <td class="tabletext">Specify a specific date by typing a date, selecting from the calendar picker, or clicking the token (&gt;) to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Next Day of Week</td>
+                    <td class="tabletext">Create a date token for the first weekday after a specified date. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Next Month</td>
+                    <td class="tabletext">Create a date token for the first month after a specified date. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Specific Date</td>
+                    <td class="tabletext">Customize the month, day, and year for the token. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Next Business Day</td>
+                    <td class="tabletext">Return the next business day after the date entered in the input box based on the workflow's <a href="../../Settings/Work-Schedules.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule profile</a>. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-weight: bold;">Time Options</p>
+        <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
+            <caption>Time Options</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th style="font-weight: normal;"><b>Name</b>
+                    </th>
+                    <th style="font-weight: normal;"><b>Description</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">None</td>
+                    <td class="tabletext">No time specified.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Custom Time </td>
+                    <td class="tabletext">Specify a specific time by typing a time, selecting from the calendar picker, or clicking the token (&gt;) to add a <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a>.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Specific Time</td>
+                    <td class="tabletext">Customize the hours, minutes, and seconds for the token. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Start of Business Day</td>
+                    <td class="tabletext">Return the start time of the work day for the time value of the token based on the workflow's <a href="../../Settings/Work-Schedules.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule profile</a>. When the date value of the token is a business day, the time value is the start time of the work day. When the date value is not a business day, the time defaults to 8 AM.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">End of Business Day</td>
+                    <td class="tabletext">Return the end time of the business day for the time value of the token based on the workflow's <a href="../../Settings/Work-Schedules.htm" title="Click here to learn more." alt="Click here to learn more.">work schedule profile</a>. When the date value of the token is a business day, the time value is the end time of the business day. When the date value is not a business day, the time defaults to 5 PM.</td>
+                </tr>
+            </tbody>
+        </table>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

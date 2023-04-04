@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="6" MadCap:lastHeight="983" MadCap:lastWidth="1656">
+    <head><title>Configuring SCIM Integration with Azure Active Directory</title>
+    </head>
+    <body>
+        <h1>Configuring SCIM Integration with Azure Active Directory</h1>
+        <p><b>To configure SCIM in Azure Active Directory:</b>
+        </p>
+        <ol>
+            <li>Open and sign into Microsoft Azure.</li>
+            <li>Click <b>Azure Active Directory</b> and click <b>Add</b> to create active directory users. Once created, edit each user to ensure each contains a valid email. <p class="note"><b>Note:</b> Emails cannot be added on creation. You must create the user, then modify it to add an email.</p></li>
+            <li>Once the users are created, click <b>Enterprise applications</b> and create a new or select an existing application.</li>
+            <li><a href="AzureAD.htm">Configure Single sign-on with Azure Active Directory</a>. </li>
+            <li>In Azure, click <b>Provisioning</b> and click <b>Get Started</b> if available. If not, click <b>Edit provisioning</b>. Ensure that <b>Provisioning Mode</b> is set to <b>Automatic</b>. Expand the <b>Admin Credentials</b> section and update the <b>Tenant URL</b> to the <b>Management Endpoint</b> from the Account Control Services <b><a href="Configure-SCIM-in-Laserfiche.htm">SCIM Provisioning</a></b> tab. Set the <b>Secret Token</b> to the value of the <b>Bearer Token</b> generated in Account Control Services under the <b><a href="Configure-SCIM-in-Laserfiche.htm">SCIM Provisioning</a></b> tab.</li>
+            <li>Under <b>Enterprise application</b>, confirm that Azure can communicate with Laserfiche Cloud.</li>
+            <li>Wait a few minutes for the SCIM provisioning to take effect. Or you can click <b>Provision on demand</b> and search for the user in order to expedite the provision.</li>
+            <li>In ACS, view the user list to see the provisioned user. <p class="note"><b>Note:</b> If users are not displayed, go back to Azure, click the <b>Provisioning</b> tab, and click <b>View provisioning logs</b> to check for errors.</p></li>
+        </ol>
+        <p>Once Azure Active Directory is configured, adding, updating, or removing a user in Azure, will automatically add, update, or disable the user in Laserfiche. </p>
+        <p class="note"><b>Note:</b> Users updated in Laserfiche will not be synced to Azure. This is a one-way communication from Azure to Laserfiche. </p>
+        <p>For more information on configuring SCIM with Azure Active Directory, see the <a href="https://docs.microsoft.com/en-us/azure/active-directory/app-provisioning/configure-automatic-user-provisioning-portal" target="_blank">Microsoft Help Center</a>.</p>
+    </body>
+</html>

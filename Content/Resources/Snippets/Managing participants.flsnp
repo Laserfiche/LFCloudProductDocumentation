@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>
+        <h3 class="topicheading">Managing authenticated participants</h3>
+        <p>In the Participants tab of the System Security page, you can grant authenticated participant licenses to users based on their email address.
+Participant users only use an authenticated participant license if they are enabled. </p>
+        <p class="ex"><b>Tip:</b> The number of enabled participant users cannot exceed the number of available authenticated participant licenses.</p>
+        <p><b>To create an authenticated participant user </b>
+        </p>
+        <ol>
+            <li>In the <b>Participants</b> tab of the <b>System Security</b> page, click <b>Add</b>.</li>
+            <li>In the <b>Add Participant</b> window, select a username, email address, name, and password for the user. When you are finished, click <b>OK</b>.
+            <p class="note"><b>Note:</b> By default, the newly added user will be enabled. To disable this participant user, select <b>Disabled</b> from the <b>License Status</b> drop-down list.</p></li>
+        </ol>
+        <p style="font-weight: bold;">To upload a list authenticated participant users</p>
+        <ol>
+            <li>In the <b>Participants</b> tab of the <b>System Security</b> page, click <img src="../Forms Images/UploadButton.png" title="click to upload" alt="upload button" /> <b>Upload</b>.</li>
+            <li>In the <b>Upload Participant User List</b> window, click <b>Upload CSV file</b>.</li>
+            <li>Browse to the location of the .csv file that contains the list of participant users you want to add. Click <b>Open</b>.</li>
+            <p class="Note"><b>Note:</b> The participant list in the uploaded .csv file must follow a specific format. </p>
+            <li>To upload another list, select <b>Upload Another File</b>. Or, if you are finished uploading files, click <b>Cancel</b>.</li>
+        </ol>
+        <p><b>To add LDAP participant users</b>
+        </p>
+        <ol>
+            <li>In the <b>Participants</b> tab of the <b>System security</b> page, click <b>Configure LDAP</b>.</li>
+            <li>In the <b>Connection type</b> drop-down, select either <b>Standard LDAP</b> or <b>LDAP&#160;with SSL</b>, depending on whether Forms will connect to the LDAP&#160;server using an SSL&#160;connection.</li>
+            <li>Next to <b>LDAP&#160;server</b>, specify the domain name for the LDAP&#160;server. You can specify a port for the server using the <i>servername:port</i> format in this field.</li>
+            <li>In the <b>Authentication type</b> drop-down, specify whether Forms will use <b>simple</b> or <b>anonymous authentication</b> when connecting to the LDAP server.</li>
+            <li>In the <b>LDAP account</b> and <b>password</b> fields, specify the credentials that Forms will use to authenticate to the LDAP server.</li>
+            <li>Next to <b>Base distinguished name</b>, specify the base distinguished name for the LDAP server. You can add more base distinguished names for the LDAP server by clicking <b>Add base distinguished name</b>.</li>
+            <li>Click <b>Verify and save</b>.</li>
+        </ol>
+        <p class="note"><b>Note:</b> You can edit these LDAP&#160;settings at any time by repeating these steps.</p>
+        <p class="note"><b>Note:</b> The display name for LDAP participant users is taken from the user's Common Name (CN) in the LDAP server and cannot be changed within Forms.</p>
+    </body>
+    <head>
+    </head>
+</html>

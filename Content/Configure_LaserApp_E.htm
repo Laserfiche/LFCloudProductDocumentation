@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Configuring and Using the <MadCap:variable name="DoNotTranslate.Laser App Enterprise" /> Integration</h1>
+        <p>The <MadCap:variable name="DoNotTranslate.Laser App Enterprise" /> integration  can be configured in Repository Administration, which to configure properties for the forms that will be stored in <MadCap:variable name="DoNotTranslate.Laserfiche" />. Once the integration has been configured, users can use <MadCap:variable name="DoNotTranslate.Laser App" /> by downloading the integration. They can then use the integration to store <MadCap:variable name="DoNotTranslate.Laser App" /> forms to <MadCap:variable name="DoNotTranslate.Laserfiche" />.</p>
+        <h2 style="topicheading">Configuring <MadCap:variable name="DoNotTranslate.Laser App Enterprise" /> Integration Settings</h2>
+        <p>The Integrations section of Repository Administration allows administrators to configure the way your <MadCap:variable name="DoNotTranslate.Laser App" /> forms will be stored in <MadCap:variable name="DoNotTranslate.Laserfiche" />. These settings should be configured before users store forms in <MadCap:variable name="DoNotTranslate.Laserfiche" />. You can set field mapping, the target folder and document name, and the fields that will be displayed to users when they download the integration. Administrators can also use <MadCap:variable name="DoNotTranslate.Laser App" /> tokens to set these properties dynamically. </p>
+        <ol>
+            <li>If you are not already in the repository administration section of <MadCap:variable name="DoNotTranslate.Laserfiche" />, click your user name in the upper right corner and select <b>Repository Administration</b>.</li>
+            <li>Under <b>Additional Items</b>, select <b>Integrations</b>.</li>
+            <li>Select the <b>Laser App</b> tab.<p class="note"><b>Note:</b> The following properties can be configured dynamically using tokens that correspond to information in <MadCap:variable name="DoNotTranslate.Laser App" />. For a list of available tokens, see <a href="LaserAppETokens.htm"><MadCap:variable name="DoNotTranslate.Laser App Enterprise" /> Tokens</a>.</p></li>
+            <li>In the <b>Field mapping</b> option, configure the way that <MadCap:variable name="DoNotTranslate.Laserfiche" /> will store information about the form in the document's fields:</li>
+            <ol style="list-style:lower-roman">
+                <li>Click <b>Add/remove fields</b> and select the <MadCap:variable name="DoNotTranslate.Laserfiche" /> field in which you want to store information from your <MadCap:variable name="DoNotTranslate.Laser App" /> form. Click <b>OK</b>.</li>
+                <li>Click the token button (<b>&gt;</b>)&#160;to select a token that corresponds to the <MadCap:variable name="DoNotTranslate.Laser App" /> information you want to store, or type the token name. </li>
+            </ol>
+            <li>In the <b>Target folder</b> option, type the path where you want to store <MadCap:variable name="DoNotTranslate.Laser App" /> forms. To set the path dynamically, click the token button and select a token that corresponds to the <MadCap:variable name="DoNotTranslate.Laser App" /> information you want to store, or type the token name.</li>
+            <li>In the <b>Document Name</b> option, type the name of the saved <MadCap:variable name="DoNotTranslate.Laser App" /> forms. To set the name dynamically, click the token button and select a token that corresponds to the <MadCap:variable name="DoNotTranslate.Laser App" /> information you want to store, or type the token name.</li>
+            <li>In the <b>Download page form fields</b> option, configure the information that you want to collect from users when they download the integration:</li>
+            <ol style="list-style:lower-roman">
+                <li>Click <b>Add form fields</b> to add a new field to the download page.</li>
+                <li>Click <b>Required field</b> to make this field required. </li>
+                <li>In the <b>Display name</b> option, type the name of the field. This name will be presented to users to prompt them to provide the desired information.</li>
+                <li>In the <b>Token name</b> option, type the name of the token you want to be created using this information. The final token will be of the format <span style="white-space: nowrap;" class="Code">%(UserCustomData.TokenName)</span>.</li>
+                <li>Repeat steps i through iv until you have added all the fields you want to capture.<p class="ex"><b>Example:</b> If you want to collect the name and ID number of the user submitting forms, you could create two fields. The first could have the display name "Full Name"&#160;and the token name "FullName". The second could have the display name "Employee ID" and the token name "IDNumber". When users downloaded the <MadCap:variable name="DoNotTranslate.Laser App" /> integration file, they would be prompted to provide their full name and employee ID. You could then use the tokens <span style="white-space: nowrap;" class="Code">%(UserCustomData.FullName)</span>&#160;and <span style="white-space: nowrap;" class="Code">%(UserCustomData.IDNumber)</span> to dynamically create folders or populate fields, allowing you to track which users were storing which documents.</p></li>
+            </ol>
+            <li>If you want to restrict which types of <MadCap:variable name="DoNotTranslate.Laser App" /> forms can be stored in <MadCap:variable name="DoNotTranslate.Laserfiche" />, select <b>Restrict the forms that can be saved to <MadCap:variable name="DoNotTranslate.Laserfiche" /></b>. Click <b>Add form ID</b> and type or paste the <MadCap:variable name="DoNotTranslate.Laser App" /> form ID for the forms that you want to allow users to store in <MadCap:variable name="DoNotTranslate.Laserfiche" />. You can repeat this process to add as many <MadCap:variable name="DoNotTranslate.Laser App" /> form IDs as you want. Users will not be able to add any forms corresponding to form IDs that you have not added.</li>
+            <li>Click <b>Save</b> at the top of the page to save your configuration changes.</li>
+        </ol>
+        <h2 style="topicheading">Downloading and Using the <MadCap:variable name="DoNotTranslate.Laser App Enterprise" /> Integration to Store Forms in <MadCap:variable name="DoNotTranslate.Laserfiche" /></h2>
+        <p>Once an administrator has configured the <MadCap:variable name="DoNotTranslate.Laser App" /> integration settings, users can download the integration to store forms in <MadCap:variable name="DoNotTranslate.Laserfiche" />. The integration must be downloaded by ever user who will use the <MadCap:variable name="DoNotTranslate.Laser App" /> integration, and is downloaded in the <MadCap:variable name="DoNotTranslate.Laserfiche" /> repository.</p>
+        <ol>
+            <li>In the <MadCap:variable name="DoNotTranslate.Laserfiche" /> repository (either the Folder Browser or Document Viewer), click your user name in the upper right corner and select <b>Options</b>.</li>
+            <li>In the <b>General</b> section, select <b>Download configuration for <MadCap:variable name="DoNotTranslate.Laser App Enterprise" /></b>.</li>
+            <li>In the <b>Generate <MadCap:variable name="DoNotTranslate.Laser App" /> Configuration File</b>, fill in any information your administrator has prompted you to provide, and click&#160;<b>Download File</b>. An ~LS file (by default, LFTrustedApp.~ls)&#160;will download.</li>
+            <li>Double-click the ~LS file. </li>
+            <li>To store a form from <MadCap:variable name="DoNotTranslate.Laser App" /> to <MadCap:variable name="DoNotTranslate.Laserfiche" />, select the <b>Post All Forms</b> button in <MadCap:variable name="DoNotTranslate.Laser App" /> and then select <b>Save to <MadCap:variable name="DoNotTranslate.Laserfiche" /></b>.</li>
+        </ol>
+    </body>
+</html>

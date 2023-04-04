@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Displaying a Form in the Laserfiche Web Client | Laserfiche Forms | Customizations and Integrations</title>
+        <meta name="description" content="Configure the Laserfiche web client to have a custom tab that displays a form." />
+    </head>
+    <body>
+        <h1>Embedding a Form in the Web Client</h1>
+        <p>A form can be embedded in a web client custom tab. This allows the user to look up multiple documents while filling in the form, or to do lookups or calculations on the form while browsing the repository.</p>
+        <h2>Adding a Custom Tab</h2>
+        <p>To add a custom tab in the web client in version 10.3.1 or later, you must use an account that is a member of at least one of the following groups on the web client server computer: The Administrators group or the Web Configuration Managers group.</p>
+        <p>The conditions for adding a custom tab in the web client in versions 10.3 and earlier are the same as above, except that the account has to be a Windows account, not a Laserfiche user. You do not have to sign in from the web client server computer to add custom tabs—you can configure custom tabs remotely as long as you meet the above conditions. The <a href="../../../LFAdmin/Content/Users.htm" title="Click here to learn more." alt="Click here to learn more.">Admin user account</a> is not able to add custom tabs in these earlier versions of the web client.</p>
+        <h4>To add a form as a custom tab</h4>
+        <ol>
+            <li>Sign in to the web client as a user who meets the conditions described above.</li>
+            <li>Click on your username in the top right corner, then click <b>Options</b>.</li>
+            <li>Click <b>Display</b>. Navigate to the <b>Tabs</b> section of the Display page.</li>
+            <li>Click <b>Add</b> next to Tabs. This brings up the Custom Tab dialog.</li>
+            <li>Enter the <b>Tab name</b> and the <b>URL</b> of the form you want to display in the tab. You can use the token picker (<img src="../Resources/Images/webclient_token-picker.PNG" />) to include variables in the URL, in case your form URL is related to any of the available variables.</li>
+            <li>Under <b>Location</b>, select the locations that you want the custom tab to be visible in.</li>
+            <li>Under <b>Display</b>, select the tab's display locations and audience.</li>
+            <li>Click <b>OK</b>.</li>
+        </ol>
+        <h2>
+            <MadCap:concept term="Forms" />Passing Credentials to Forms</h2>
+        <p>When you access a form through a custom tab, you are first signed in to Laserfiche through the web client. If the form is not publicly accessible, the Forms server will need to authenticate your identity before allowing you to view the form in the custom tab. Unless you have Laserfiche Directory Server single sign-on configured, you will need to re-enter your credentials to view a non-public form.</p>
+        <h4>To configure single sign-on for viewing embedded forms</h4>
+        <ol>
+            <li>Ensure that the web client server and the Forms server are licensed by the same Directory Server.</li>
+            <li>Open the web client configuration page and navigate to the <b>Services</b> page. Make sure that the toggle next to Directory Server is turned to <b>ON</b>. If it is turned to ON, there will be a input box for entering the <b>Directory Server STS URL</b>. Make sure that this URL uses the fully qualified domain name of your STS instance.<br /> <img src="../Resources/Images/webclient_config-lfds.png" style="border-style: solid;border-width: 1px;width: 745px;height: 434px;" alt="Configuring Directory Server authentication on the web client configuration page." title="You do not have to use Directory Server authentication, but users will have to authenticate twice if you don't." /><br /></li>
+            <li>On your Forms server configuration page, navigate to the <b>User Authentication</b> page and make sure that you are using Laserfiche Directory Server for authentication. In the <b>Server</b> field for this authentication method, use the fully qualified domain name of your Directory Server.<br /><img src="../Resources/Images/forms_config-lfds.png" style="border-style: solid;border-width: 1px;width: 731px;height: 461px;" alt="Configuring Directory Server authentication in the Forms configuration page." title="Note that switching from Laserfiche Server to Laserfiche Directory Server authentication in Forms is an irreversible step." /></li>
+        </ol>
+    </body>
+</html>

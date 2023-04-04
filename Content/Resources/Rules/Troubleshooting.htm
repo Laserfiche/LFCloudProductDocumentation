@@ -1,0 +1,269 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Troubleshooting</h1>
+        <p>This reference provides an overview of error messages in Rules and how to resolve each conflict.</p>
+        <h2>General</h2>
+        <p>This section provides reference information about general error messages found across Rules. Each section includes a description, possible cause, and/or solution.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b><span style="font-weight: normal;">: A resource with this name already exists.</span>
+                </MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when the name of the rule is not unique to the rule type. For example, two decision table rules cannot be named "Student Grades". You can resolve this issue by changing the name of the repeated decision table rule to something unique, either by appending a character or number or by renaming the rule altogether.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Name cannot be empty.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when you attempt to create or save a rule without a name. Although you can create a rule without a description, you cannot create one without a name. You can resolve this issue by adding a name that starts with a letter or number and contains only letters, numbers, spaces, and/or the following characters: "-", "_", "(", ")", "[", and "]".</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;The resource name must start with a letter or number. It can only contain letters, numbers, spaces, and the following characters: "-", "_", "(", ")", "[", and "]".</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when you attempt to create or save a rule with a name that starts with a character other than a letter or number. For example, you cannot name a rule "&lt;Business Process Decision&gt;". You can resolve this issue by removing the leading bracket.</p>
+                <MadCap:dropDown>
+                    <MadCap:dropDownHead>
+                        <MadCap:dropDownHotspot><b>Message</b>:&#160;The resource name cannot contain the character '!'</MadCap:dropDownHotspot>
+                    </MadCap:dropDownHead>
+                    <MadCap:dropDownBody>
+                        <p>This error occurs when you attempt to create or save a rule with a name that contains unsupported characters such as "!". For example, you cannot name a rule "Business Process Decision!". You can resolve this issue by removing the leading character that is not supported. The following characters are supported: hyphen "-", underscore "_", open parenthesis "(", close parenthesis ")", open bracket "[", and close bracket "]".</p>
+                    </MadCap:dropDownBody>
+                </MadCap:dropDown>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b><br />Message</b>: Requested to upload file 'x' whose type 'x' is not acceptable.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when you attempt to import a file into Rules that is not a .bri file. You can resolve this issue by checking the file type of the rule that you want to import.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Data Queries</h2>
+        <p>This section provides reference information about error messages found in the data query editor. Each section includes a description, possible cause, and/or solution.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;The query contains a syntax error: "x"</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>Data queries in process automation run by converting the SQL-like expressions in the builder into SQL statements. This error appears when the resulting SQL statement contains a syntax error. You can resolve this issue by ensuring each section of the editor is defined.</p>
+                <p> For example, you might receive the error message, "The query contains a syntax error: "SELECT ALL Name FROM Country WHERE Surface_Area &gt;"" when you do not specify the value that the surface area is greater than. You might receive the error message, "The query contains a syntax error: "SELECT ALL"" when you do not select a table in the FROM&#160;section.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Must select at least one table.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when no tables are selected in the FROM&#160;area's available tables.</p>
+                <p>To resolve, click an available table in the FROM area and click the Add &gt;&#160;button to move it to the Selected Tables field.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Invalid column name:&#160;"x"</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when a Column chosen in the SELECT or WHERE areas doesn't match the lookup table column data within the selected tables in the FROM area.</p>
+                <p>To resolve, click within a column field and choose a Column from the available options. You can adjust these options using the <a href="../Entities/lookup-tables.htm">Lookup Table Editor</a>.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Parameter name cannot be blank.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when the SELECT area's Output parameter field is set to blank, or when the WHERE area's Input value is set to blank.</p>
+                <p>To resolve, type a name in these fields that uses alphanumeric characters and underscores only. Additionally, the WHERE area's Input value must start with a letter.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Use alphanumeric characters and underscores only.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when an Output parameter or Input value field is named with a character that is not alphabetic, numerical, or an underscore.</p>
+                <p> For example, names that contain spaces, question marks, hyphens, or exclamation points would return this error.</p>
+                <p>To resolve, type a name in these fields that uses alphanumeric characters and underscores only.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Verify Asset "x" first</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when the data source connection has not yet been verified in a Data Query.</p>
+                <p>To resolve, click the Test hyperlink under the Data Source Connection field in the right pane.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Use alphanumeric characters and underscores only. Start with a letter.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when using a name that starts with a non-letter character in the Input field of the WHERE&#160;area.</p>
+                <p> For example, using the name "20"&#160;in the field does not start with a letter and will return this error.</p>
+                <p>To resolve, begin the name of the WHERE&#160;input field with a letter.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Decision Tables</h2>
+        <p>This section provides reference information about error messages found in the decision table editor. Each section includes a description, possible cause, and/or solution.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: Parameter name must be unique.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears upon hovering over the red exclamation point when two input or output fields have identical names. The following sample decision table returns this error:</p>
+                <p>
+                    <img src="../Images/error-duplicate-name.png" alt="Example of a duplicate input name error in a Rules Decision Table." />
+                </p>
+                <p>You can resolve this issue by changing one of the two overlapping names.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: Please enter a non-empty interval.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when an interval of numbers does not contain a value. The following sample decision table includes a few empty intervals:</p>
+                <p>
+                    <img src="../Images/error-interval.png" alt="Example of a non-empty interval error in a Rules Decision Table." />
+                </p>
+                <p>You can resolve this issue by ensuring that the interval is not empty. The value on the top must be less than the value on the bottom, so these can be improved by changing the interval to (3, 4) for example.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: The 'x' in 'y' does not fit any of the following data type: z</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when a character in a cell does not match the field type. The following sample table has a text value in a cell, where the field uses the Number data type.</p>
+                <p>
+                    <img src="../Images/error-fit-data-type.png" alt="Example of an data mismatch field error in a Rules Decision Table." />
+                </p>
+                <p>You can resolve this issue by changing the cell value to “15” for example or the field data type to Text.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: There must be at least one output for any combination of inputs. Try modifying the inputs in path x.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when someone can enter a combination of inputs that do not match any of the inputs on the decision table. The following decision table produces an error, because the inputs "false" and "true", as well as "true" and "true", do not match any of the input values.</p>
+                <p>
+                    <img src="../Images/image141.png" alt="Example of needing to modify the inputs of a path." />
+                </p>
+                <p>You can resolve this issue by adding more combination of input values. </p>
+                <p>
+                    <img src="../Images/image140.png" style="width: 100%;" />
+                </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: The Unique hit policy does not accept overlapping rules. Try changing the following overlaps: y.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when a decision table is set to use a Unique hit policy and two or more input values in a field overlap. The following sample decision table receives an error upon validation, because the two cells in the Pass input field overlap.</p>
+                <p>
+                    <img src="../Images/error-unique.png" alt="Example of a unique hit policy not accepting overlapping rules." />
+                </p>
+                <p>You can resolve this issue by changing one of the values to “false”. You may also receive this error when one cell in the input field is &gt;50 and another is &lt;60. For values 51 to 59, there is an overlap. <a href="Decision-Tables/hit-policy/unique-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about the unique hit policy</a></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: The Any hit policy only accepts overlapping rules when the outputs are the same. Try changing the outputs: undefined</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears in a decision table with an Any hit policy when two or more input values in one field match and the outputs are different.</p>
+                <p>
+                    <img src="../Images/error-any-policy.png" alt="Example of any hit policy only accepting overlapping rules when outputs are the same." />
+                </p>
+                <p>You can resolve this issue by changing one of the values to match the other value. For example, the second output value can be changed to “Move on” or the second input value can be changed to “false”. <a href="Decision-Tables/hit-policy/any-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about the any hit policy</a></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: The x hit policy only accepts numerical outputs.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>The error appears when the decision table uses a no order hit policy with a numerical operation applied to the output values. The output values must all be numerical output values for the operation to work. For example, the decision table applies a sum operator to the outputs of the decision table, the outputs must be numerical for the operation to work.</p>
+                <p>
+                    <img src="../Images/error-single-result.png" />
+                </p>
+                <p>You can resolve this issue by ensuring that the output values are numerical. <a href="Decision-Tables/hit-policy/single-result-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about the single result hit policy</a></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: The x hit policy does not accept outputs with multiple components.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when your decision table contains multiple output components, but the selected rule type can only contain one component. The following sample table returns this error, because the decision table has multiple output components while the hit policy is set to Sum.</p>
+                <p>
+                    <img src="../Images/error-multiple-components.png" />
+                </p>
+                <p>You can resolve this issue by changing the hit policy from a single result hit policy or removing the additional output components. <a href="Decision-Tables/hit-policy/single-result-hit-policy.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about the single result hit policy</a></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: There must be at least one output for any combination of inputs. Try modifying the inputs in path x.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when the inputs do not cover all the possible inputs that may be entered into the decision table. The following sample table returns this error, because the decision table does not account for values over 10.</p>
+                <p>
+                    <img src="../Images/error-any-2.png" />
+                </p>
+                <p>You can resolve this issue by accounting for all possible user inputs. For example, you can add another input value for values greater than 10.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Document Merge</h2>
+        <p>This section provides reference information about error messages found in the document merge editor. Each section includes a description, possible cause, and/or solution.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;Unknown file format</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error occurs when you attempt to upload a file that is not in the .doc format. You can resolve this issue by ensuring that the file you want to upload is a Word document.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <h2>Formulas</h2>
+        <p>This section provides reference information about error messages found in the formula editor. Each section includes a description, possible cause, and/or solution.</p>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;The function 'x' produced the error 'y'.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This general error appears when a function produces some type of error. </p>
+                <p>You can resolve these types of issues by referencing the helper text in the Functions section for a detailed explanation of how to use the function. Also, ensure that you are using the correct data type for the function. <a href="Formulas/Defining-Data-Types.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about data types</a></p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>: The function 'x' cannot be found. Try using another function.</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when a function is not recognized by the formula editor. The formula "NW()" for example misspells the "NOW", so the formula cannot be properly performed. You can resolve this issue by ensuring that you have spelled the formula correctly and are using one of the formulas in the Functions box.</p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+        <MadCap:dropDown>
+            <MadCap:dropDownHead>
+                <MadCap:dropDownHotspot><b>Message</b>:&#160;The formula contains a syntax error on line x in position y. More information: token recognition error at: 'z'</MadCap:dropDownHotspot>
+            </MadCap:dropDownHead>
+            <MadCap:dropDownBody>
+                <p>This error appears when a part of a formula cannot be understood by the formula editor. The part that cannot be understood is identified in the error message. The formula "SECOND(2017-01-13 4:30:01 PM)" for example returns this error because the proper syntax for the SECOND function is to have quotes around the datetime object. You can resolve these issues by referencing the helper text in the Functions section for a detailed explanation of how to use the function. </p>
+            </MadCap:dropDownBody>
+        </MadCap:dropDown>
+    </body>
+</html>

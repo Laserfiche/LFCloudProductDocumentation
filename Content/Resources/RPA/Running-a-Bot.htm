@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Running and Tracking a Laserfiche Bot</title>
+        <meta name="description" content="Run and track your bot with an informative Action History that updates in real time. " />
+    </head>
+    <body>
+        <h1>Running a Bot </h1>
+        <p>Before running your bot, take note of the following:</p>
+        <ul>
+            <li> If you are running bots from the bot designer or locally from the <a href="Managing-a-Bot.htm">Manage</a> page, only one bot can run at a time. If a bot is suspended at a wait activity, you must wait for the bot to continue before starting the next bot. If you run multiple bots at the same time via remote agent, the bots will be queued and will run in turn. </li>
+            <li> If you need to run your bot in administrator mode (e.g., if your bot is installing software, updating drivers, or changing system settings), in the <a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">bot designer</a>, select the <b>Settings</b> button in the toolbar and select <b>Run as administrator</b>. </li>
+            <li>
+                Do not touch the keyboard or mouse when a bot is running, otherwise, the bot may lose focus and stop running.
+            </li>
+        </ul>
+        <h2>Running a bot via remote agent</h2>
+        <p>Bots configured to run on a <a href="../Integrations/Remote-Agents/Remote-Agents.htm">remote agent</a> can be started in the following ways:</p>
+        <ul>
+            <li>From <a href="../Starting-Rules/Starting-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">starting event</a> that runs the bot based on a timer</li>
+            <li>From a workflow</li>
+            <li>From the <a href="Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page. </li>
+        </ul>
+        <p>Before running a bot via remote agent ensure the following:</p>
+        <ul>
+            <li>The Dedicated Bot Remote Agent has <a href="../Integrations/Remote-Agents/Worker-Agents.htm">workers</a> installed. </li>
+            <li>If the bot was created with a previous version of Laserfiche Bots, you have migrated your bot to the Dedicated Bot Remote Agent. <a href="Migrate-to-Dedicated-Remote-Agent.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+            <li>The latest version of bot local tool is installed and running on the machine the bot will run in.  You can launch the tool from the Windows start menu. </li>
+            <li>If the bot needs to run in administrator mode, ensure the local tool is running in administrator mode as well. </li>
+            <li> A user is signed into the machine the bot will run on.</li>
+        </ul>
+        <h2>Running a bot locally</h2>
+        <p>All published bots can be run from the <a href="Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> page. </p>
+        <ol>
+            <li>Select the bot you want to run.</li>
+            <li>Click the play button <img src="../Images/playButton.png" title="Click to test the bot." alt="Play button. " /> . </li>
+            <li>Select <b>Locally</b> from the drop-down menu. </li>
+            <li>Click <b><MadCap:concept term="RPA" />Open Laserfiche Bots WebLauncher.</b><ul><li>If you specified <a href="Editing-a-Bot.htm#Configur" title="Click here to learn more." alt="Click here to learn more.">input  parameters</a> for the bot, you'll be prompted to enter values for those parameters.</li></ul></li>
+        </ol>
+        <h2>Tracking bots</h2>
+        <p>The Monitor page, Action History, and Manage page all provide details about individual instances of a bot. <a href="Monitoring-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about monitoring a bot</a>.</p>
+    </body>
+</html>

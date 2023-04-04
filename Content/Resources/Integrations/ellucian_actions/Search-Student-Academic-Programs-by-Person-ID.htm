@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Student Academic Programs by Person ID</title>
+    </head>
+    <body>
+        <h1>Search Student Academic Programs by Person ID Action</h1>
+        <p>A field marked with an asterisk "*" indicates the field is a required input for this action.</p>
+        <p>This action can be used to update the personal information of a student.</p>
+        <ul>
+            <li><b>Category:</b> Student Academic Program</li>
+            <li><b>Supported in:</b> Workflow and Lookup</li>
+        </ul>
+        <h2>Input Fields</h2>
+        <table id="InputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Person ID*</p>
+                    </td>
+                    <td>
+                        <p>Is the Guid identifier of a person.</p>
+                        <p>Can be retrieved using any of the Search Student... actions.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Curriculum Objective</p>
+                    </td>
+                    <td>
+                        <p>The curriculum objective associated with the student's academic program.</p>
+                        <p>Options include "all", "recruited", "applied", "matriculated", "outcome": 
+			<ul><li>Selecting "all" will retrieve the student's Student Academic Programs with any curriculum objectives.</li><li>Selecting one of these ["recruited", "applied", "matriculated", "outcome"] will filter the results by the selected option.</li></ul></p>
+                        <p>This input is optional.
+			<ul><li>If this input is not included then we will retrieve and display the student's Student Academic Programs with any curriculum objectives.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return third party error since Ellucian does not allow curriculum objective to be empty.</li></ul></p>
+                        <p>The curriculum objective identifies the source of the student-academic-program being published. In Banner each recruit, application, general student, and outcome (degree record) has an associated student academic program. Banner has separate UI pages to update each. Recruited - SRARECR, Applied - SAAADMS, Matriculated - SGASTDN (or SFAREGS if student is registered in the effective term), Outcome - SHADEGR. Note that the student academic programs that students can see should have curriculum objective equals to "matriculated".</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Enrollment Status</p>
+                    </td>
+                    <td>
+                        <p>The current state of a student's academic program enrollment.</p>
+                        <p>Options include "all", "active", "inactive", "complete":
+			<ul><li>Selecting "all" will retrieve the student's Student Academic Programs with any enrollment statuses.</li><li>Selecting one of these ["active", "inactive", "complete"] will filter the results by the selected option.</li></ul></p>
+                        <p>This input is optional.
+			<ul><li>If this input is not included then we will retrieve and display the student's Student Academic Programs with any enrollment statuses.</li><li>If this input is added and left blank, we will treat the input value as empty string. In this case, workflow will not pass input validation since empty string is not a valid option.</li><li>If this input is added and passed with an empty token, we will return third party error since Ellucian does not allow enrollment status to be empty.</li></ul></p>
+                        <p>If a user wishes to use the research results for add/drop academic discipline, he/she should set the input enrollment status to "active" for this search action since only active student academic programs are updateable.</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2>Output Fields</h2>
+        <p>This action may return multiple results.</p>
+        <table id="OutputFields" class="tablesorter">
+            <col style="width: 25%;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Field</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <p>Student Academic Program ID</p>
+                    </td>
+                    <td>
+                        <p>The Guid identifier for the student academic program</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Enrollment Status</p>
+                    </td>
+                    <td>
+                        <p>The current state of a student's academic program enrollment
+(for example, "active")</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Curriculum Objective</p>
+                    </td>
+                    <td>
+                        <p>The curriculum objective associated with the student's academic program (for example, "matriculated")</p>
+                        <p class="note"><b>Note:</b> The curriculum objective identifies the source of the student-academic-program being published. In Banner each recruit, application, general student, and outcome (degree record) has an associated student academic program. Banner has separate UI pages to update each. Recruited/SRARECR, Applied/SAAADMS, Matriculated/SGASTDN (or SFAREGS if student is registered in the effective term), Outcome/SHADEGR. If SGASTDN is being used as the UI to update an academic program are for a matriculated curriculum objective.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Site</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="SiteSubFields">See the sub-fields.</MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="SiteSubFields">
+                            <li>Site/Site ID: The Guid identifier for the site (campus) at which the student is enrolled in the program.</li>
+                            <li>Site/Code: The code that identifies the site (campus) at which the student is enrolled in the program.</li>
+                            <li>Site/Title: The full name of the site (campus) at which the student is enrolled in the program.</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Credentials</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="CredentialsSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="CredentialsSubFields">
+                            <li>Credentials/Academic Credential ID: The Guid identifier for the academic credential under the student academic credential.</li>
+                            <li>Credentials/Title: The full name of the academic credential under the student academic credential(for example, ‘Master of Fine Arts’).</li>
+                            <li>Credentials/Description: The full description of the academic credential under the student academic credential.</li>
+                            <li>Credentials/Type: The type of the academic credential under the student academic credential (for example, 'degree').</li>
+                            <li>Credentials/Abbreviation: The abbreviation that identifies the academic credential under the student academic credential (for example, "MFA").</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Start On</p>
+                    </td>
+                    <td>
+                        <p>The date on which an academic program begins.</p>
+                        <p>Represents the dates defined on STVTERM for the effective starting terms of the student program record and may not be updated.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>End On</p>
+                    </td>
+                    <td>
+                        <p>The date on which an academic program ends.</p>
+                        <p>Represents the dates defined on STVTERM for the effective ending terms of the student program record and may not be updated.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Override Start On</p>
+                    </td>
+                    <td>
+                        <p>The starting date of the program to be used for reporting.</p>
+                        <p>Represents optional dates an admin user can enter on a student program record for more refined reporting. </p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Override End On</p>
+                    </td>
+                    <td>
+                        <p>The ending date of the program to be used for reporting.</p>
+                        <p>Represents optional dates an admin user can enter on a student program record for more refined reporting.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Expected Graduation Date</p>
+                    </td>
+                    <td>
+                        <p>The date on which the student is expected to graduate from the academic program.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Program</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="ProgramSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="ProgramSubFields">
+                            <li>Academic Program ID: The Guid identifier for the academic program under the student academic program.</li>
+                            <li>Code: The code that identifies the academic program under the student academic program (for example, "MATH-UG").</li>
+                            <li>Title: The full name of the academic program under the student academic program (for example, "Mathematics, Advanced/Bachelor of Science")</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Admission Category</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="AdminCatSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="AdminCatSubFields">
+                            <li>Admission Population ID: The Guid identifier for the Admission Population under the student academic program.</li>
+                            <li>Code: The code of the Admission Population under the student academic program (for example, "TRNS").</li>
+                            <li>Title: The full name of the Admission Population under the student academic program (for example, "Transfer Student").</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Academic Level</p>
+                    </td>
+                    <td>
+                        <p>Requires an additional API call.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="AcademicSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="AcademicSubFields">
+                            <li>Academic Level ID: The Guid identifier for the academic level under the student academic credential.</li>
+                            <li>Code: The code that identifies the academic level under the student academic credential (for example, ‘UG’).</li>
+                            <li>Title: The full name of the academic level under the student academic credential (for example, ‘Undergraduate’).</li>
+                        </ul>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <p>Disciplines</p>
+                    </td>
+                    <td>
+                        <p>The Academic Discipline is a collection. Each collection includes following fields.</p>
+                        <p>Requires an additional API call.</p>
+                        <p>Contains sub-fields.</p>
+                        <p>
+                            <MadCap:toggler targets="DisciplinesSubFields">See the sub-fields. </MadCap:toggler>
+                        </p>
+                        <ul MadCap:targetName="DisciplinesSubFields">
+                            <li>Start On: The date on which the Academic Discipline begins for the student academic program. A Derived date based on the effective beginning terms of the SORLOS record and is not updatable.</li>
+                            <li>End On: The date on which the Academic Discipline ends for the student academic program. A derived date based on the effective ending terms of the SORLOS record and is not updatable.</li>
+                            <li>Override Start On: The date on which the Academic Discipline begins for the student academic program.  May be used to provide a more refined detail of the dates the student was pursuing the discipline.</li>
+                            <li>Override End On: The ending date of the Academic Discipline to be used for reporting.  May be used to provide a more refined detail of the dates the student was pursuing the discipline.</li>
+                            <li>Academic Discipline: Requires additional API call and includes sub-fields. (<MadCap:toggler targets="AcedemicDisciplineSubFields">See the Academic Discipline sub-fields</MadCap:toggler>).
+                        <ul MadCap:targetName="AcedemicDisciplineSubFields"><li>Academic Discipline/Academic Discipline ID: The Guid identifier for the Academic Discipline under the student academic program.</li><li>Academic Discipline/Title: The full name of the Academic Discipline under the student academic program (for example, ‘Mathematics’).</li><li>Academic Discipline/Description: The full description of the Academic Discipline under the student academic program.</li><li>Academic Discipline/Type: The type of the Academic Discipline under the student academic program (for example, 'major').</li><li>Academic Discipline/Abbreviation: The abbreviation that identifies the Academic Discipline under the student academic program (for example, "MATH")</li></ul></li>
+                            <li>Discipline Status: Requires additional API call and includes sub-fields. (<MadCap:toggler targets="DisciplineStatusSubFields">See the Discipline Status sub-fields</MadCap:toggler>).
+                        <ul MadCap:targetName="DisciplineStatusSubFields"><li>Discipline Status/Discipline Status ID: The Guid identifier for the Discipline Status.</li><li>Discipline Status/Title: The full name of the Discipline Status (for example, ‘Active Curriculum’).</li><li>Discipline Status/Description: The full description of the Discipline Status.</li><li>Discipline Status/Status: The type of the Academic Discipline (for example, 'active').</li><li>Discipline Status/Code: The code that identifies the Discipline Status (for example, "ACTIVE").</li></ul></li>
+                        </ul>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

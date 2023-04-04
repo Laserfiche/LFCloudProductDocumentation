@@ -1,0 +1,205 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring Entry Access Rights</h1>
+        <p>Process automation uses a system account “ProcessAutomationUser” to connect to your Laserfiche Cloud repository.  The system account manages process automation access to entries in the repository. If the "Everyone" security group is denied access to an entry, for example, this system account can still be granted access to that entry and process automation can still make changes in the repository. See <a target="_parent" href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Access_Rights.htm">Security</a> to learn more about how to configure the entry access rights for the system account that manages process automation access to entries in the repository.</p>
+        <p class="nestedw"><b>Important</b>: You must set the entry access rights for the system account in your Laserfiche Cloud repository.</p>
+        <h2 MadCap:conditions="Default.Do not include">Workflow Activities</h2>
+        <p MadCap:conditions="Default.Do not include">Workflow is able to make changes in your Laserfiche Cloud repository using the ProcessAutomationUser system account. This system account must have specific access rights enabled in order for activities to make changes to the entry or entries within a folder within the repository. This section details the minimum entry access rights that you must grant the system account in order to use each activity. If you do not want to allow a specific type of action to be performed, be sure to disable the respective access right.</p>
+        <p class="note" MadCap:conditions="Default.Do not include"><b>Note</b>: See <a href="https://doc.laserfiche.com/laserfiche.documentation/english/docs/Default.htm#Access_Rights.htm#ListofAccessRights" title="Click here to learn more." alt="Click here to learn more.">List of Access Rights</a> to learn more about each entry access right described below. </p>
+        <p class="note" MadCap:conditions="Default.Do not include"><b>Note</b>:&#160;Activities not included in the list below do not require any entry access rights to the repository.</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <table id="myTable" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration." MadCap:conditions="Default.Do not include">
+            <caption MadCap:conditions="Default.Do not include">Workflow Activities</caption>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th style="font-weight: normal;" MadCap:conditions="Default.Do not include"><b>Name</b>
+                    </th>
+                    <th style="font-weight: normal;" MadCap:conditions="Default.Do not include"><b>Entry Access Rights</b>
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Add-Sticky-Note.htm" title="Click here to learn more." alt="Click here to learn more.">Add Sticky Note</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">
+                        Adding a sticky note to a document requires the <b>Annotate</b> entry access right.
+The <b>Read</b> and <b>See Annotations</b> rights are automatically granted.             </td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Add-Text-Box.htm" title="Click here to learn more." alt="Click here to learn more.">Add Text Box</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">
+                        Adding a sticky note to a document requires the <b>Annotate</b> entry access right.
+The <b>Read</b> and <b>See Annotations</b> rights are automatically granted.             </td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Apply-Stamp.htm" title="Click here to learn more." alt="Click here to learn more.">Apply Stamp</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">
+                        Adding a sticky note to a document requires the <b>Annotate</b> entry access right.
+The <b>Read</b> and <b>See Annotations</b> rights are automatically granted.             </td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Assign-Field-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Assign Field Values</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">Assigning field values to a document requires the <b>Write Metadata</b> entry access right. The <b>See Annotations</b> rights are automatically granted.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Assign-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">Assign Tags</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Attach-Electronic-Document.htm" title="Click here to learn more." alt="Click here to learn more.">Attach Electronic Document</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">Attaching electronic documents requires the <b>Modify Contents</b> entry access right. The <b>Read</b> right is automatically granted.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Change-Starting-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Change Starting Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Copy-Metadata.htm" title="Click here to learn more." alt="Click here to learn more.">Copy Metadata</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Create-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Create Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">Creating a document requires <b>Browse</b> and <b>Create Documents</b> entry access rights. Creating a folder requires the <b>Browse</b> and <b>Create Folders</b> entry access rights. </td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Delete-Annotation.htm" title="Click here to learn more." alt="Click here to learn more.">Delete Annotation</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Delete-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Delete Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">Deleting an entry requires the <b>Delete Entry</b> entry access right.</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Delete-Shortcuts.htm" title="Click here to learn more." alt="Click here to learn more.">Delete Shortcuts</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Download-Electronic-Document.htm" title="Click here to learn more." alt="Click here to learn more.">Download Electronic Document</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Email.htm" title="Click here to learn more." alt="Click here to learn more.">Email</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Find-Entries.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entries</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Find-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/For-Each-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">For Each Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/For-Each-Row.htm" title="Click here to learn more." alt="Click here to learn more.">For Each Row</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Move-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Move Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Move-Pages.htm" title="Click here to learn more." alt="Click here to learn more.">Move Pages</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Pattern-Matching.htm" title="Click here to learn more." alt="Click here to learn more.">Pattern Matching</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Default.Do not include">
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">Read Barcode*</td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Rename-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Rename Entry</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Repeat.htm" title="Click here to learn more." alt="Click here to learn more.">Repeat</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Retrieve-Document-Text.htm" title="Click here to learn more." alt="Click here to learn more.">Retrieve Document Text</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Retrieve-Field-Values.htm" title="Click here to learn more." alt="Click here to learn more.">Retrieve Field Values</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Retrieve-Shortcuts.htm" title="Click here to learn more." alt="Click here to learn more.">Retrieve Shortcuts</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Set-Entry-Owner.htm" title="Click here to learn more." alt="Click here to learn more.">Set Entry Owner</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Default.Do not include">
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Set-Records-Management-Properties.htm" title="Click here to learn more." alt="Click here to learn more.">Set Records Management Properties</a>*</td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr MadCap:conditions="Default.Do not include">
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Apply-Text-Annotation.htm" title="Click here to learn more." alt="Click here to learn more.">Text Annotation</a>*</td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Track-Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">Track Tokens</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Try-Catch.htm" title="Click here to learn more." alt="Click here to learn more.">Try-Catch</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Update-Word-Document.htm" title="Click here to learn more." alt="Click here to learn more.">Update Word Document</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include"><a href="Workflow/Activities/Wait-for-Entry-Change.htm" title="Click here to learn more." alt="Click here to learn more.">Wait for Entry Change</a>
+                    </td>
+                    <td class="tabletext" MadCap:conditions="Default.Do not include">&#160;</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

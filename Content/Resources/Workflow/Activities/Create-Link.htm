@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Create Link</h1>
+        <p style="text-align: center;">
+            <img src="Images/createLinkCanvas.PNG" title="Create Link activity" alt="Create Link activity" />
+        </p>
+        <p>This activity creates a document relationship link between two or more Laserfiche entries.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Link Settings</b> property box under <b>Source Entry</b>, select the entry you want this activity to operate on by selecting the <b>Edit</b> button <img src="../../../Images/Icon_Pencil_Blue.png" />.<p class="note"><b>Note:</b> Select <b>Starting entry</b> to use the starting entry.</p></li>
+            <li>
+                Under <b>Relationship</b> use the drop-down menu to define the type of document relationship for the entries.
+            </li>
+            <li>
+                Under <b>Target Entry</b> click Add <img src="../../Images/wf-add-icon.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /> to choose the entries you want to link to the Source Entry. Choose an entry from the Select Entry dialog box.<p class="note"><b>Note:</b> You can only create links to eight items with this activity. Those items can be single entries or a group of entries returned by an activity. For example, if the folder Meeting Minutes has one hundred entries and you use a <a href="Find-Entries.htm" title="Click here to learn more." alt="Click here to learn more.">Find Entries</a> activity to find all entries in that folder, the Output Entries for that Find Entries activity would be one item even though it contains 100 entries.</p></li>
+            <li><b>Optional:</b> Click Add <img src="../../Images/wf-add-icon.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /> again to link more than one Target Entry to the Source Entry.
+            </li>
+            <li><b>Optional:</b> Click Remove <img src="../../Images/wf-remove-icon.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /> to remove a Target Entry from the document relationship.
+            </li>
+            <li><b>Optional:</b> Select <i>Warn if link already exists</i> to report a warning in the Messages Tab of the instance details if the activity tries to link two entries that already have the specified relationship.
+            </li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

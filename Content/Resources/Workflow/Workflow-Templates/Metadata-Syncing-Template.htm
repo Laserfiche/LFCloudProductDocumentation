@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html MadCap:conditions="Default.Complete" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Metadata Syncing Template</h1>
+        <p>This workflow runs when fields  change on an entry. If the fields change on a folder, the fields on all the documents in that folder will be updated to match. If the fields change on a document, the fields for that document’s folder and all the other documents in that folder will be updated to match. This workflow automatically ensures fields remain consistent so users can be confident the fields on whatever entry they are looking at are up to date.</p>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        </p>
+        <h2>How it works</h2>
+        <p>A <a href="../Activities/Conditional-Decision.htm" title="Click to learn more." alt="Click to learn more.">Conditional Decision</a> activity defines two possible courses of action depending on if the entry is a document or folder.</p>
+        <ul>
+            <li>If the entry is a document,</li>
+            <ul>
+                <li>A <a href="../Activities/Find-Entry.htm" title="Click to learn more." alt="Click to learn more.">Find Entry</a> activity finds the document’s folder, and a <a href="../Activities/Copy-Metadata.htm" title="Click to learn more." alt="Click to learn more.">Copy Metadata</a> activity copies fields from the document to the folder.</li>
+                <li>A <a href="../Activities/Find-Entries.htm" title="Click to learn more." alt="Click to learn more.">Find Entries</a> activity finds all the documents in that document’s folder.</li>
+                <li>For each document found, a <a href="../Activities/For-Each-Entry.htm" title="Click to learn more." alt="Click to learn more.">For Each Entry</a> activity copies fields from the starting entry (the document whose fields changed initially) to the document currently being processed.</li>
+            </ul>
+            <li>If the entry is a folder,</li>
+            <ul>
+                <li>A Find Entries activity finds all the documents in the folder.</li>
+                <li>For each entry found, a Copy Metadata activity within a For Each Entry activity copies fields  from the starting entry (the folder whose fields changed initially) to the document  currently being processed.</li>
+            </ul>
+        </ul>
+        <p class="note"><b>Note:</b> Because no condition is specified on the “Entry is a folder” branch of the Conditional Decision activity, that branch will act as an exception branch and will run if the entry is not a document. Since the starting event specifies the entry must be a folder or document, the “Entry is a folder” branch should only process folders. If you edit this workflow to run on other types of entries, you will need to update these conditions, and potentially add an exception branch to the activity.</p>
+        <h2>Important note</h2>
+        <p>Ensure the <b>Exclude Process Automation User</b> checkbox is selected in the starting event when you run this workflow. Otherwise, the workflow will start itself continuously, quickly slowing your Workflow Server.</p>
+        <p>Why? The workflow will start itself because the workflow starts when fields are changed. When the workflow synchs the fields, it makes additional changes to the fields, which in turn satisfy the starting event, starting the workflow again. If you exclude the Workflow user, any changes that the workflows makes to fields will be ignored, and the workflow will only run when a user changes fields.</p>
+        <h2>To run this workflow template in the provided test environment</h2>
+        <ol>
+            <li>
+                <p>Ensure the WT- Metadata Syncing starting event is enabled.</p>
+                <ol style="list-style-type: lower-alpha;">
+                    <li>Navigate to the <b>Condition</b> page in <a href="../../Starting-Rules/Starting-Rules.htm" title="Click to learn more." alt="Click to learn more.">Starting Events</a>.</li>
+                    <li>Select the starting event, and click <b>Enable</b> in the top right. </li>
+                </ol>
+            </li>
+            <li>In your Laserfiche repository, set or delete a field value on a document or folder in the \Workflow Templates - Test Entries\Sales\ Contracts folder.</li>
+        </ol>
+        <p>Alternatively, you can test the workflow (bypassing the starting event) with the <a href="../Testing-Workflows.htm" title="Click to learn more." alt="Click to learn more.">Run Workflow</a> button in the Workflow Designer. Test this workflow on the Statement_of_Work document in the Workflow Templates - Test Entries\Sales\Contracts\Company EFG folder and watch its metadata be copied to the other documents in the folder and to the folder itself.</p>
+        <h2>Ideas to expand this workflow</h2>
+        <p>If you do not want field changes on a document to update the fields on the folder or on other documents, delete the first branch in the Conditional Decision activity.</p>
+        <p>The template is only configured to interact with documents and folders. If you want to sync record series, shortcuts, and subfolders, change the starting event conditions for the workflow and/or the options in the Find Entries activities’ Filter Entries property boxes to account for those entry types. Additionally, edit the conditions in the Conditional Decision activity to account for these other entry types.</p>
+        <p>Remember to republish the workflow after making any changes.</p>
+    </body>
+</html>

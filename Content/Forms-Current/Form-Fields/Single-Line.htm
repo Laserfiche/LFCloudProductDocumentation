@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Single Line Fields | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Use single-line fields if the data should be entered as a short line of text." />
+    </head>
+    <body>
+        <h1>Single Line Fields</h1>
+        <p>
+            <MadCap:concept term="Forms" />Single line fields are the least specialized of all the field types. They accept numbers and characters, making them well-suited for accepting names, numbers, and many other values. If there is a chance that the user filling in this field will enter a combination of characters and numbers, you should use a single line field rather than a more specialized one.</p>
+        <p>Single line fields are also incredibly useful because you can use <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">regular expressions</a> with them to restrict what the fields accept. In addition, single line fields can accept HTML&#160;input.</p>
+        <p class="ex"><b>Example:</b> You can use regular expressions with single line fields to ensure that phone numbers or Social Security numbers are entered with the proper formatting. <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Common-Regular-Expressions.htm">Learn more</a></p>
+        <p class="note"><b>Note</b>: The characters "&amp;", "#", or "&lt;" cannot be entered in a field if they are also followed by another character. However, you can enter one of those characters if it is followed by a space.</p>
+        <h2 class="topicheading">Field settings</h2>
+        <p><b>To edit a single line field</b>
+        </p>
+        <ol>
+            <li>Select the field on the canvas and click <b>Edit</b>.</li>
+            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable in the label.</li>
+            <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+            <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. Select <b>Accept barcode scan</b> if you want to allow Laserfiche app users to fill the field by scanning a barcode.</li>
+            <p class="ex"><b>Example:</b> Sue has a "Case ID" field that is auto-populated from the company database using a <a href="../../Forms-Deprecated/Using Lookup Rules.htm" title="Click here to learn more." alt="Click here to learn more.">lookup rule</a>. To ensure nobody can change the case ID on the form, Sue makes this field read-only. </p>
+            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+            <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+            <li id="field-width">Under <b>Field width</b>, select whether the field should be <b>Small</b>, <b>Medium</b>, <b>Large</b>, or <b>X-Large</b> in width. </li>
+            <li>Under <b>Character limit</b>, enter the maximum number of characters the field will accept. By default, this number is 20,000.</li>
+            <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Click the <b>Insert Variables</b> button to use a variable as a default value.</li>
+            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+            <ul>
+                <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                <li>Under <b>Auto suggestions</b>, enter any suggestions that should appear as users fill in this field.</li>
+                <li>Under <b>Regular expression for validation</b>, specify a regular expression to limit the values that this field will accept. <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">Learn more about regular expressions</a></li>
+                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+            </ul>
+            <li>When you have finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+        </ol>
+    </body>
+</html>

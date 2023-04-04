@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Troubleshooting Bots</h1>
+        <p>Below is a list of some common errors and how to fix them. </p>
+        <p style="font-weight: bold;">The bot has been configured to run in administrator mode, but the Laserfiche bot local tool is running as a standard user. </p>
+        <p style="font-weight: normal;">Elevate the Laserfiche bot local tool to run as an administrator.</p>
+        <ol>
+            <li>Navigate to the bot designer in Process Automation. </li>
+            <li>Click <b>Settings</b>.</li>
+            <li> Under <b>Privileges</b>, ensure <b>Run bot as administrator</b> is selected. </li>
+            <li> Clear <b>Run bot as administrator</b>. Then, run the bot again. <ul><li>If there is no error, leave the option cleared. </li><li>If there is an "Access denied" related error, continue to the next step. </li></ul></li>
+            <li>Close the Laserfiche Bots local tool on the workstation. </li>
+            <li style="font-weight: normal;">Restart the local tool from the Windows Start menu by right-clicking the application and selecting <b>Run as Administrator</b>.</li>
+        </ol>
+        <p style="font-weight: bold;">Bot instance terminated with the reason: the work item was canceled because there is no agent queue that has the required capability</p>
+        <ol>
+            <li>Navigate to the <b><a href="Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a></b> tab in Laserfiche Bots. </li>
+            <li>Select the bot that produced the error. </li>
+            <li>Select the <b>Run Settings</b> tab in the right pane, and check the required capabilities for the bot.</li>
+            <li>Navigate to <b>Integrations</b> in Process Automation, and then to <b>Remote Agents</b>.</li>
+            <li>Open the <b>Dedicated Bot Remote Agent</b>.</li>
+            <li>Select the <b><a href="../Integrations/Remote-Agents/Queues.htm">Queues</a></b> tab in the right pane, and check the capabilities in all queues.</li>
+            <li>Ensure the required capabilities of the bot is subset of the capabilities of at least one queue of the Dedicated Bot Remote Agent.</li>
+        </ol>
+        <p style="font-weight: bold;">Bot instances stuck in a queue but not running</p>
+        <ol>
+            <li>Navigate to <b>Integrations</b>, and then <b>Remote Agents in Process Automation</b>.</li>
+            <li>Select <b>Dedicated Bot Remote Agent</b>.</li>
+            <li>In the <b><a href="../Integrations/Remote-Agents/Queues.htm" title="Click here to learn more." alt="Click here to learn more.">Queues</a></b> tab to the right, check that there are workers assigned to the queue. If not, open the <b>Dedicated Bot Remote Agent</b>, and install workers based on instructions on the <b><a href="../Integrations/Remote-Agents/Worker-Agents.htm">Workers</a></b> tab. Then, on the <b>Queues</b> tab, select those workers under <b>Worker assigned to queue</b>. Click <b>Save</b>. </li>
+            <li>On the machine where the worker is installed, ensure the <b>LFPAAgent</b> service for the worker is running.</li>
+            <li>Ensure the Laserfiche Bots local tool (i.e., the Action History) is running on the same machine. <a href="Monitoring-a-Bot.htm#Step-by-" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>. </li>
+            <li>If all the bot instances are still in the queue, go to the machine where the worker is installed. Uninstall the worker, and then reinstall it.</li>
+            <li>Ensure the worker is assigned to the queue, following the instructions in step 3. </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,536 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="4592" MadCap:lastWidth="828" MadCap:conditions="Default.Start_Adding_Variables">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Field Constraints</h1>
+        <p>Text and number fields can be constrained to a certain format or range of values to ensure consistency 
+ in how a value is specified across your organization. For example, you might want to ensure that all phone numbers are input in the format 123-456-7890. Similarly, you might have a number field to store four-digit invoice numbers, and want to ensure that all values in that field fall between 1000 and 9999.  Field data that has been input and formatted in a consistent 
+ manner makes searching for that data much easier. </p>
+        <p>Field data can only be restricted for certain field types:&#160;text fields and number fields. The restrictions that a particular text field will have are determined by 
+ regular expressions, a notation used to 
+ define a pattern of text. For more information, see <a href="#Using">Using Regular Expressions to Constrain Text Fields</a>. The restrictions that a particular number field will have are determined by numeric relational operators. For more information, see <a href="#Using2">Using Relational Operators to Constrain Number Fields</a>. You can also view sample field constraints in <a href="#Common">Common Constraint Patterns</a>. These constraints demonstrate the sample notation 
+ that can be used to constrain field data. </p>
+        <p>
+            <h2 class="topicheading"><a name="Using"></a>Using Regular Expressions to Constrain Text Fields</h2>
+            <p>The following reference describes the parts of a regular expression that can be combined to form a text field constraint.       </p>
+            <p>When specifying constraints, you may want certain characters to be automatically assigned to a field, which can be done by typing the characters where you want them to appear in the field. The exceptions are characters that have been reserved for use by regular expressions. A list of these characters can be viewed from the Symbol column of the table below. Reserved characters can be automatically assigned to a field by placing a backslash prior to the reserved character. </p>
+            <p>For example, if your organization decides that phone numbers should be specified as (310) 555-1212, you would specify the following expression: &#160;\(\d\d\d\) \d\d\d-\d\d\d\d. Notice that the parentheses have been escaped with a backslash because parentheses are reserved for, while the dash has not been. Both parentheses and dashes are reserved characters. However, dashes can never be used without brackets, therefore they are treated as a regular character and do not require a backslash.</p>
+            <p> Assigning this constraint to a field will create visual indicators as to how field data should be formatted. In the example stated above, blank fields will look like "( &#160;&#160;) &#160;&#160;&#160;- &#160;&#160;&#160;." As you can tell, users will not need to type the parentheses or the dash when specifying a phone number. These symbols are automatically shown to indicate what the format of a phone number should look like. &#160;</p>
+            <p>The following table describes each regular expression that can be used to establish a pattern that field data must match.
+ </p>
+            <table class="tablesorter" style="" summary="This table lists the regular expression elements that can be used to create a text field constraint.">
+                <caption>Regular Expression Syntax Elements</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Name</b>
+                        </th>
+                        <th><b>Symbol</b>
+                        </th>
+                        <th><b>Description</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Any Character</td>
+                        <td>.</td>
+                        <td>Any single character. </td>
+                    </tr>
+                    <tr>
+                        <td>Character in Range</td>
+                        <td>[]</td>
+                        <td>Any character inside the brackets. For example, 
+ the expression [abc123] allows only any of the following characters: &#160;"a," 
+ "b," "c," 
+ "1," "2," or "3."</td>
+                    </tr>
+                    <tr>
+                        <td>Character Not in Range</td>
+                        <td>[^]</td>
+                        <td>Any single character except for those inside 
+ the brackets. For example, the expression [^abc123] allows only any character 
+ except for: &#160;&#160;"a," 
+ "b," "c," 
+ "1," "2," or "3."</td>
+                    </tr>
+                    <tr>
+                        <td>Range Character</td>
+                        <td>[-]</td>
+                        <td>Any single character contained within the specified 
+ range. For example, the expression [0-9] allows only any number that falls 
+ between 0 and 9. </td>
+                    </tr>
+                    <tr>
+                        <td>Beginning of Input</td>
+                        <td>^</td>
+                        <td>Requires the expression that follows it at the beginning 
+ of the user-defined value. For example, the expression ^[abc123] allows only 
+ field data that starts with either "a," "b," "c," 
+ "1," "2," or "3."</td>
+                    </tr>
+                    <tr>
+                        <td>End of Input</td>
+                        <td>$</td>
+                        <td>Requires the expression that precedes it at the end of 
+ the user-defined value. For example, the expression [abc123]$ allows only field 
+ data that ends with either "a," "b," "c," 
+ "1," "2," or "3."</td>
+                    </tr>
+                    <tr>
+                        <td>Not</td>
+                        <td>!</td>
+                        <td>Requires that the expression following the symbol (!) 
+ not be found in the field data. For example, the expression a!b allows only
+ field data containing an "a" when it is not immediately followed 
+ by "b."</td>
+                    </tr>
+                    <tr>
+                        <td>Or</td>
+                        <td>|</td>
+                        <td>Requires one of two expressions. For example, the expression 
+ he|she allows only
+ field data that is set to either "he" or "she."</td>
+                    </tr>
+                    <tr>
+                        <td>0 or More</td>
+                        <td>*</td>
+                        <td>The preceding expression can occur zero or more 
+ times. For example, the expression [0-9]* allows any set of consecutive 
+ digits or no digits at all. </td>
+                    </tr>
+                    <tr>
+                        <td>1 or More</td>
+                        <td>+</td>
+                        <td>The preceding expression can occur one or more 
+ times. For example, the expression [0-9]+ allows any set of consecutive 
+ digits. </td>
+                    </tr>
+                    <tr>
+                        <td>Previous Statement is Optional</td>
+                        <td>?</td>
+                        <td>The preceding expression is optional. 
+ Data satisfying the expression may be specified as field data or a user 
+ can choose to not enter it. For example, the expression [0-9][0-9]? 
+ allows only a single or double digit. </td>
+                    </tr>
+                    <tr>
+                        <td>Group</td>
+                        <td>()</td>
+                        <td>Groups an expression together. For example, the expression (t|T)he allows only field data that is set to either "the"&#160;or "The".</td>
+                    </tr>
+                    <tr>
+                        <td>Escape Character</td>
+                        <td>\</td>
+                        <td>Either an abbreviation (see table below) or 
+ that the next character be translated literally. This character 
+ should only be used for reserved characters, such as those listed under 
+ the Symbol column of this table. For example, \d+ 
+ allows only one or more digits, while \d\+ 
+ allows a digit followed by a plus sign. </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Character Classes</b>
+            </p>
+            <p>A character class can be used to restrict the character for a 
+ particular field.</p>
+            <table class="tablesorter" style="" summary="This table lists the character classes that can be used in regular expressions to create a text field constraint.">
+                <caption>Character Class Syntax Elements</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Name</b>
+                        </th>
+                        <th><b>Symbol</b>
+                        </th>
+                        <th><b>Description</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Alphanumeric
+                </td>
+                        <td>[[:alnum:]]
+                </td>
+                        <td>Any alphanumeric character.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Alphabetic
+                </td>
+                        <td>[[:alpha:]]
+                </td>
+                        <td>Any alphabetical character in the following ranges: &#160;a-z 
+ and A-Z.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Space/Tab
+                </td>
+                        <td>[[:blank:]]
+                </td>
+                        <td>A space or a tab.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Digit
+                </td>
+                        <td>[[:digit:]]
+                </td>
+                        <td>Any digit. A valid character is a whole number from 0 to 
+ 9.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Lower-case
+                </td>
+                        <td>[[:lower:]]
+                </td>
+                        <td>Any lower-case character (i.e., a-z).
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Printable
+                </td>
+                        <td>[[:print:]]
+                </td>
+                        <td>Any printable character.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Punctuation
+                </td>
+                        <td>[[:punct:]]
+                </td>
+                        <td>Any punctuation character.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Space
+                </td>
+                        <td>[[:space:]]
+                </td>
+                        <td>Any whitespace character.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Upper-case
+                </td>
+                        <td>[[:upper:]]
+                </td>
+                        <td>Any upper-case character (i.e., A-Z).
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Hexadecimal
+                </td>
+                        <td>[[:xdigit:]]
+                </td>
+                        <td>Any hexadecimal digit (i.e., 0-9, a-f and A-F).
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Word
+                </td>
+                        <td>[[:word:]]
+                </td>
+                        <td>Any word character. Valid characters are all alphanumeric 
+ characters and underscore.
+                </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Abbreviations</b>
+            </p>
+            <p>The following table describes the various abbreviations for specifying a regular expression.         </p>
+            <table class="tablesorter" style="" summary="This table lists the abbreviations that can be used in regular expressions to create a text field constraint.">
+                <caption>Regular Expression Abbreviation Syntax Elements</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Name</b>
+                        </th>
+                        <th><b>Symbol</b>
+                        </th>
+                        <th><b>Description</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Character
+                </td>
+                        <td>.
+                </td>
+                        <td>Any single character.
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Decimal Digit
+                </td>
+                        <td>\d
+                </td>
+                        <td>Any single decimal digit. Corresponding syntax: [[:digit:]]                </td>
+                    </tr>
+                    <tr>
+                        <td>Non-Decimal Digit
+                </td>
+                        <td>\D
+                </td>
+                        <td>Any character except for a single decimal digit. 
+ Corresponding syntax: [^[:digit:]]                </td>
+                    </tr>
+                    <tr>
+                        <td>Space
+                </td>
+                        <td>\s
+                </td>
+                        <td>A single space character. Corresponding syntax: [[:space:]]                </td>
+                    </tr>
+                    <tr>
+                        <td>Non-Space
+                </td>
+                        <td>\S
+                </td>
+                        <td>Any character except for a single space character. Corresponding syntax: [^[:space:]]
+                </td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="topicheading"><a name="Using2"></a>Using Relational Operators to Constrain Number Fields</h2>
+            <p>The following reference describes the relational operators that can be combined to form a numeric field constraint.          </p>
+            <p>The following table describes each operator that will be used to compare a value in a field with the range of valid values for that field. These must be used in conjunction with number values:&#160;for instance, to specify that the value must be greater than 1000, the constraint would be written as "&gt;1000".</p>
+            <table class="tablesorter" style="" summary="This table lists the relational operator elements that can be used to create a number field constraint.">
+                <caption>Relational Operator Syntax Elements</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Name</b>
+                        </th>
+                        <th><b>Symbol</b>
+                        </th>
+                        <th><b>Description</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Less Than</td>
+                        <td>&lt;</td>
+                        <td>A valid value is less than the specified number.</td>
+                    </tr>
+                    <tr>
+                        <td>Greater Than</td>
+                        <td>&gt;</td>
+                        <td>A valid value is greater than the specified number.</td>
+                    </tr>
+                    <tr>
+                        <td>Less Than or Equal To</td>
+                        <td>&lt;=</td>
+                        <td>A valid value is less than or equal to the specified number.</td>
+                    </tr>
+                    <tr>
+                        <td>Greater Than or Equal To</td>
+                        <td>&gt;=</td>
+                        <td>A valid value is greater than or equal to the specified number.</td>
+                    </tr>
+                    <tr>
+                        <td>Equal To</td>
+                        <td>=</td>
+                        <td>A valid value is equal to the specified number.</td>
+                    </tr>
+                    <tr>
+                        <td>Not Equal To</td>
+                        <td>&lt;&gt;</td>
+                        <td>A valid value does not equal the specified number.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Boolean Logic Operators</b>
+            </p>
+            <p>The following table describes the Boolean operators that can be used to combine relational operators. Either the name or the symbol can be used; names are not case sensitive. &#160;For example, to specify that a value must be between 1000 and 9999, the constraint could be written either as "&gt;=1000 AND&#160;&lt;=9999" or as "&gt;=1000 &amp; &lt;=9999".</p>
+            <table class="tablesorter" style="" summary="This table lists the Boolean logic elements that can be used with relational operators to create a number field constraint.">
+                <caption>Boolean Logic Syntax Elements</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Name</b>
+                        </th>
+                        <th><b>Symbol</b>
+                        </th>
+                        <th><b>Description</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>AND                </td>
+                        <td>&amp;</td>
+                        <td>Both constraints must be met for the value to be valid.</td>
+                    </tr>
+                    <tr>
+                        <td>OR</td>
+                        <td>|</td>
+                        <td>At least one constraint must be met for the value to be valid.</td>
+                    </tr>
+                    <tr>
+                        <td>NOT</td>
+                        <td>!</td>
+                        <td>The constraint must not be met for the value to be valid.</td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Order of Precedence</b>
+            </p>
+            <p>A numeric constraint can be created with more than one Boolean operator. In that case, the string will be analyzed in the following order:&#160;NOT will be applied first, followed by AND, followed by OR. Parentheses will be used for grouping.</p>
+            <p><b>Examples</b>
+            </p>
+            <p>The following examples demonstrate the use of the various relational and Boolean operators.</p>
+            <table class="tablesorter" style="" summary="This table lists the order of operation elements that can be used with relational operators to create a number field constraint.">
+                <caption>Order of Operation Syntax Elements</caption>
+                <col />
+                <col style="width: 199px;" />
+                <thead>
+                    <tr>
+                        <th><b>Desired Constraint</b>
+                        </th>
+                        <th><b>Numeric Constraint String</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>A valid value must be greater than four.       </td>
+                        <td>&gt;4</td>
+                    </tr>
+                    <tr>
+                        <td>A valid value must not be greater than 999.</td>
+                        <td>!&gt;999</td>
+                    </tr>
+                    <tr>
+                        <td>A valid value must be between 1 and 10, not including 1 and 10.</td>
+                        <td>1 &lt;&#160;&amp;&#160;&lt; 10</td>
+                    </tr>
+                    <tr>
+                        <td>A valid value must be either between 100 and 200 or between 500 and 900, including 100, 200, 500 and 900.</td>
+                        <td>(&gt;=100 &amp;&#160;&lt;=200) |&#160;(&gt;=500 &amp;&#160;&lt;=900)</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="topicheading"><a name="Common"></a>Common Constraint Patterns</h2>
+            <p>This is a short list of common patterns that can be used 
+ to restrict field data, provided only as an introduction 
+ to the many uses of regular expressions to ensure proper data formatting. 
+ These, like any other patterns, can be modified to best suit the 
+ needs of your organization. </p>
+            <p class="note"><b>Note:</b> &#160;These 
+ common patterns primarily use abbreviations for simplicity. However, you 
+ may also use any supported symbols when setting up a constraint. </p>
+            <p><b>Common Text Constraint Patterns</b>
+            </p>
+            <table class="tablesorter" style="" summary="This table lists examples of text field constraints.">
+                <caption>Text Constraint Examples</caption>
+                <col />
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Type</b>
+                        </th>
+                        <th><b>Pattern</b>
+                        </th>
+                        <th><b>Example</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Phone Number 
+<p>((xxx) xxx-xxxx format)</p></td>
+                        <td>\(\d\d\d\) 
+ \d\d\d-\d\d\d\d
+                </td>
+                        <td>(562) 988-1688
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Phone Number
+                    <p>(xxx-xxx-xxxx format)</p></td>
+                        <td>\d\d\d-\d\d\d-\d\d\d\d
+                </td>
+                        <td>562-988-1688
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Social Security Number 
+<p>(xxx-xx-xxxx format)</p></td>
+                        <td>\d\d\d-\d\d-\d\d\d\d
+                </td>
+                        <td>123-45-6789
+                </td>
+                    </tr>
+                    <tr>
+                        <td>Zip Code 
+<p>(xxxxx or xxxxx-xxxx format)</p></td>
+                        <td>\d\d\d\d\d(-\d\d\d\d)?
+                </td>
+                        <td>90807
+                    <p>Or:</p><p>90807-1234</p></td>
+                    </tr>
+                </tbody>
+            </table>
+            <p><b>Common Numeric Constraint Patterns</b>
+            </p>
+            <table class="tablesorter" style="" summary="This table lists examples of number field constraints.">
+                <caption>Number Constraint Examples</caption>
+                <col />
+                <col />
+                <thead>
+                    <tr>
+                        <th><b>Type</b>
+                        </th>
+                        <th><b>Pattern</b>
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Four-digit number</td>
+                        <td>&gt;=1000 &amp;&#160;               &lt;=9999</td>
+                    </tr>
+                    <tr>
+                        <td>
+                    Positive numbers only
+                </td>
+                        <td>&gt;=0</td>
+                    </tr>
+                </tbody>
+            </table>
+            <h2 class="topicheading">Constraint Violation Messages</h2>
+            <p>A message will appear when a user attempts to assign a field value 
+ that does not satisfy the constraint configured for a field. This message 
+ can be customized, so that your organization may provide specific instructions 
+ on how a field value should be formatted. </p>
+            <p>In addition to informing users of the proper format, you may want to 
+ consider providing examples of how field data should be formatted. For 
+ example, if your regular expression looked like: &#160;\(\d\d\d\) 
+ \d\d\d-\d\d\d\d, 
+ you may want to use the following message:</p>
+            <p class="Code">The value assigned to the field 
+ has not been properly formatted. The proper format for this field is the following: (xxx) xxx-xxxx. An example of a properly formatted phone number is: (562) 988-1688.</p>
+        </p>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Invoke Workflow</title>
+    </head>
+    <body>
+        <h1>Invoke Business Process</h1>
+        <p style="text-align: center;">
+            <img src="Images/invokeBusinessProcessCanvas.PNG" title="Invoke Business Process activity" alt="Invoke Business Process activity" />
+        </p>
+        <p>This activity starts a process automation business process with a set of initial process variables.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Business Process</b> property box, click <b>Select a business process</b> to choose which process to execute.
+			<ul><li>Search through the available processes by typing part of the process name to shorten the list.</li><li>If the desired process does not appear in the list, click <b>Manage business processes</b> to open the Manage page, find the process, and verify that it has been published with the <b>Allow this business process to be started by other processes</b> option selected in <a href="../../../Forms-Current/Managing-Processes.htm#Viewing" title="Click here to learn more." alt="Click here to learn more.">Process Details</a>.</li><li>Once completed, click the refresh button  <img src="../../Images/wf-refresh-list-icon.png" title="Refresh button icon" alt="Refresh button icon" style="width: auto;height: auto;vertical-align: text-top;" /> to refresh the list of available processes.</li></ul></li>
+            <li>Once selected, the <b>Input values</b> of the process are listed.
+			<ul><li>Mark the check box for values that should be passed to the business process.</li><li>Click the Value of a parameter to assign a static value or token to send to the invoked process. </li><li>To view or edit the selected process, click <b>Open selected business process</b> to open it in another Design window.<p class="note"><b>Note</b>: Only values that are checked in the list will be passed to the process.</p></li></ul></li>
+            <li>Mark the check box for <b>Wait for the invoked process to finish running before continuing to run the current workflow</b> if additional processing and/or return values are expected. <p class="note"><b>Note</b>: Only values that are checked in the list will be stored as tokens and available to the current workflow.</p></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

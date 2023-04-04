@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Customizing Collections with JavaScript | Laserfiche Forms</title>
+        <meta name="description" content="Learn which HTML elements to target when customizing collections in Laserfiche Forms. You can target the same field in each repeating set, reuse inputs in repeating fields, or reuse inputs based on the value of another field." />
+    </head>
+    <body>
+        <h1>JavaScript Customizations for Collections</h1>
+        <p>Collections group together related sets of fields on a form, making it easy to repeat those sets. Addresses are a very common kind of collection, as they normally consist of several fields that always go together. In this section, we explain how you can determine the selectors you need for customizations on collections, and provide <a href="#Reusing" title="Jump ahead to the first example in this topic." alt="Jump ahead to the first example in this topic.">examples</a> of some common customizations.</p>
+        <h2 class="topicheading">Selectors</h2>
+        <p>The region taken up by the entire collection is a <b>li</b> element with a name and id in the format <code>q<i>N</i></code> (<code>q67</code> in the example below). The class of this element is <code>cf-collection-block</code>, which distinguishes the collection from other field types. The following screenshot shows the area occupied by a collection with two fields that are repeated. The <b>li</b> element representing the element is highlighted in blue in the right pane.</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-entire.PNG" style="border-style: solid;border-width: 1px;width: 770px;height: 246px;" alt="The HTML element corresponding to a collection." title="All collections have the class cf-collection-block." />
+        </p>
+        <p>Within the <b>li</b> element that comprises the entire collection, we have the following elements:</p>
+        <ul>
+            <li>The collection title: A <b>div</b> element with the class <code>cf-section-header</code>.</li>
+            <li>Another <b>div</b> element with the classes <code>cf-collection</code> and <code>kx-repeatable</code>. This is the element that contains the sets of fields.</li>
+        </ul>
+        <p>We will focus on how to select elements within the latter element. Within this element, we have <b>div</b> elements of class <code>form-q</code>. Each of these represents a set of fields—in our example, a pair of fields "Apples and Oranges" and "Just Apples". Our example has two sets in the collection, so there are two <b>div</b> elements with class <code>form-q</code>.</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-fieldset.PNG" style="border-style: solid;border-width: 1px;width: 807px;height: 243px;" alt="The HTML element corresponding to a set of fields in a collection." title="This is helpful for selecting a set of fields, rather than individual fields." />
+        </p>
+        <p>Now we expand these class <code>form-q</code> elements to examine their inner structure. Both fields are contained in an unordered list element (<b>ul</b>) with the class <code>rpx</code>. Each field is represented by a <b>li</b> element with one part corresponding to the field label container and another to the input box container. The structure of each field is the same as that of conventional fields. Each field is wrapped in a field container with an ID of the format <code>q<i>N</i></code>. In a collection with repeating sets of fields, this ID will not be unique—for example, all "Just Apples" field containers in our collection will have the same id, <code>q72</code>.</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-formq.PNG" style="border-style: solid;border-width: 1px;width: 814px;height: 252px;" alt="The HTML element corresponding to an individual field in a set of fields, within a collection." title="Usually, IDs are unique to HTML elements. Field containers in a collection are an exception to this." />
+        </p>
+        <p>For fields in collections, input boxes also have  different ID assignment rules compared to conventional fields. To aid users in determining the patterns of these IDs, we have labeled each input box in our sample collection with its corresponding id:</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-inputbox-ids.png" style="border-style: solid;border-width: 1px;width: 647px;height: 218px;" alt="Sample collection with each field labelled with its ID." title="Even though the field containers may share IDs, each field has a distinct ID." />
+        </p>
+        <p>The format for fields in collections with repeating sets is <code>Field<i>N</i>(<i>setNumber</i>)</code>. With each additional set, the <code>Field<i>N</i></code> prefixes stay the same, but the <code style="font-style: italic;">setNumber</code>s increment by one.</p>
+        <h2 class="topicheading"><a name="Reusing"></a>Reusing Inputs for Repeating Sets</h2>
+        <p>When you have repeating sets of fields in a collection, you may want certain fields in later sets to be automatically filled with the values of their counterparts in previous sets. The following animation shows the desired behavior, as applied to the "Just Apples" field in the collection:</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-copy-field-dynamic2.gif" />
+        </p>
+        <p>The following JavaScript snippet implements this customization.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function() {
+  $('a[ref-id="q20"]').click(function() { //after "Add" button is clicked
+    var setCount = $(".cf-collection-block .rpx").length; //count number of repeating sets
+    var newfieldid = "Field72(" + setCount + ")"; //id of "Just Apples" field that was just added
+    var oldfieldid = "Field72(" + (setCount-1) + ")"; //id of previous "just Apples" field
+    //set value of new field to value of previous field
+    $('input[id="' + newfieldid + '"]').val($('input[id="' + oldfieldid + '"]').val());
+  });
+});</code></pre>
+        <p>When the document is loaded, the browser waits for a click on the "Add" button, which has the attribute <b>ref-id</b> equal to <b>q20</b>.</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-add-button.PNG" style="border-style: solid;border-width: 1px;width: 804px;height: 169px;" title="Knowing the selector for the &quot;Add&quot; button is important for customizing dynamic behavior in collections." alt="The HTML element corresponding to the &quot;Add&quot; button in a collection with a dynamic number of sets." />
+        </p>
+        <p>After the click occurs, the following operations take place:</p>
+        <ul>
+            <li>The number of sets in the collection is counted. If you had started with one collection and clicked "Add", this number will now be 2. The count works by looking in the collection block, which is identified by its class <code>cf-collection-block</code>, and counting the number of elements with class <code>rpx</code> in this block. This works because each set is contained within a <b>ul</b> element with class <code>rpx</code>, and there are no other elements in the collection block that have that class. If you have multiple collections on the same page, you should alter this code to use a hierarchical selector with the collection's id rather than its class. Otherwise, <code>setCount</code> will be the total number of sets on the page, counted across all collections on the page.</li>
+            <li>The variable <code>newfieldid</code> is constructed to represent the id of the newly added field that we want to copy a value over to. In this example, we want to copy the old value of "Just Apples" over to the newly added instance of "Just Apples". The format of all "Just Apples" fields in this collection is <code>Field72(<i>setNumber</i>)</code>. The value of <code style="font-style: italic;">setNumber</code> for the newly added field will just be the number of sets, i.e. <code>setCount</code>.</li>
+        </ul>
+        <p style="text-align: center;">
+            <img src="../Resources/Images/forms_collection-justapples.PNG" style="border-style: solid;border-width: 1px;width: 811px;height: 95px;" alt="The HTML element corresponding to the field in a collection whose value should be copied to the same field in later sets." title="Use the pattern of field IDs explained above to infer the format of field IDs for fields that haven't been added." />
+        </p>
+        <ul>
+            <li>The variable <code>oldfieldid</code> is constructed to represent the id of the instance of "Just Apples" preceding the most recently added instance. This will have the format <code>Field72(<i>setCount</i>-1)</code>.</li>
+            <li>Using <code>newfieldid</code> and <code>oldfieldid</code>, we set the latest instance of "Just Apples" to have the same value as its preceding instance.</li>
+        </ul>
+        <h2 class="topicheading">Reusing Inputs Conditional on a Checkbox</h2>
+        <p>Sometimes, you may want the automatic filling in the previous example to occur only when a box is checked. This is common, for instance, in online transactions where one has to specify a billing address and a shipping address. To save users time, you can have them check a box to indicate that the second address is the same as the first address. The collection corresponding to the second address will then be automatically filled with the values from the first collection.</p>
+        <p>The desired behavior is something like the following:</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-duplicate-dynamic.gif" alt="" />
+        </p>
+        <p>The JavaScript we used to implement this is as follows. It assumes that the Billing Address collection has been <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>billing</code>, the Shipping Address has been assigned the custom class <code>shipping</code>, and the checkbox has been assigned the class <code>sameAddress</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () { 
+  $('.sameAddress').change(function() { //checks for changes in the checkbox
+    if ($(this).find('input[value="Yes"]').is(':checked')) {
+      //make list of all inputs in Shipping Address collection
+      var shippingAddress = $('.shipping').find('input');
+      //make list of all inputs in Billing Address collection 
+      var billingAddress = $('.billing').find('input');
+      //make list of all dropdown choices in Shipping Address collection
+      var shippingDropdowns = $('.shipping').find('select');
+      //make list of all dropdown choices in Billing Address collection
+      var billingDropdowns = $('.billing').find('select');
+      for (i=0; i&lt;3; i++) { //iterate over the max. number of fields for each field type
+        $(shippingAddress[i]).val($(billingAddress[i]).val()); //copy text inputs
+        $(shippingDropdowns[i]).val($(billingDropdowns[i]).val()); //copy dropdown choices
+      }
+    }
+  });
+});</code></pre>
+        <p>The code works as follows. When the document is loaded, the browser waits for changes made to the checkbox that indicates whether the shipping address is the same as the billing address. When a change occurs, the browser does the following if the checkbox is selected:</p>
+        <ul>
+            <li>Make a list of all inputs in the Shipping Address collection</li>
+            <li>Make a list of all inputs in the Billing Address collection</li>
+            <li>Do the same two actions, but for drop-down menus instead</li>
+            <li>Copy the values from the Billing Address collection over to the Shipping address collection.</li>
+        </ul>
+        <p>
+            <MadCap:concept term="Forms" />In this particular example, the duplication operation is slightly more complicated because we have both text inputs and drop-down menus in the address collections. Text input elements are of the type <b>input</b>, while drop-down menus are of the type <b>select</b>, so we made separate lists for each type. If you use the default address collection provided in the form designer's Layout page, you can eliminate the additional lines that handle the drop-down fields.</p>
+        <h2 class="topicheading">Targeting the Same Fields in Every Set</h2>
+        <p>In some situations, two fields in a set may be systematically related, such that every set added to that collection should obey that relationship. To enforce this, you may want to carry out the same JavaScript operation in every set within a repeating collection. In the following example, we have repeating sets where we want "Not Applicable" to be filled in whenever "No" is selected in the previous field.</p>
+        <p>Our desired behavior is shown in the following animation:</p>
+        <p>
+            <img src="../Resources/Images/forms_collection-dynamic-fill.gif" alt="" />
+        </p>
+        <p>We implement this using the following JavaScript snippet. The code assumes that you have <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>reportInfo</code> to the collection and that the id of the "Reviewer" field is <code>q58</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+  $('.reportInfo').on('change', '[type="radio"]', reqChange);
+
+
+  function reqChange() {
+    $('.reportInfo .rpx .radio-checkbox-fieldset').each(function () {
+      $(this).find('input:checked').each(function() {
+        if ($(this).val() == "No") {
+          var reviewerField = $(this).closest('.rpx').find('[name="q58"]');
+          $(reviewerField).find('input').val('Not Applicable');
+        }
+      })
+    })
+  }
+})</code></pre>
+        <p>When the document has loaded, the browser waits for a change in the radio buttons in the collection. When a change happens, the function <code>reqChange</code> is called. This function loops through every set of Yes/No radio buttons (<code>$('.reportInfo .rpx .radio-checkbox.fieldset')</code> selects for these sets) and does the following:</p>
+        <ul>
+            <li>It finds all radio buttons that are selected, using <code>.find('input:checked')</code>.</li>
+            <li>Within these buttons, it searches for those that have the value "No".</li>
+            <li>For the selected buttons with the value "No", it searches its ancestors for the closest element with class <code>rpx</code>. This element is the container for a set of fields. Within the container, it then searches for the Reviewer field, which is identified in our example by having a <code>name</code> attribute of <code>q58</code>.</li>
+            <li>Within the Reviewer field, the function looks for the <b>input</b> element and sets its value to "Not Applicable."</li>
+        </ul>
+    </body>
+</html>

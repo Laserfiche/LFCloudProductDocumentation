@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" /><title>New Features in Laserfiche Cloud 2020.4</title>
+    </head>
+    <body>
+        <h1>New Features in Laserfiche Cloud 2020.3</h1>
+        <p>The Laserfiche Cloud 2020.3 update, released on July 10, 2020, features additional integration options for Process Automation.</p>
+        <p>Watch an overview of the new features here:</p><iframe width="100%" height="550" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/New-Features-in-Cloud-20203/New-Features-in-Cloud-20203_player.html"></iframe>
+        <h2>Process Automation</h2>
+        <h3>Workflow</h3>
+        <p>The Invoke Business Process activity in Workflow allows a workflow to both start a business process and pass values to the process. For a workflow to be able to start a business process, the process must have the “Allow this business process to be started by other processes” option selected in the process details. The type of start event in the process does not matter. Ensure the process has been published. In Workflow, the process can be started using the Invoke Business Process activity. Place the activity on the workflow canvas and select the process from the Business Process dropdown. Assign values or tokens to the input values workflow will send to the process.</p>
+        <h3>Laserfiche Bots</h3>
+        <p>Laserfiche Bots now allows you to set bots’ runtime priority if your bot remote agent has the ability to add multiple queues. Higher priority bots will be run first, then normal priority bots, and finally low priority bots. Priority can be set from the manage page, the Invoke Bot activity in workflow, and starting events that run bots. Additionally, the monitor page has been updated with an improved search results pane and the ability to sort by column.</p>
+        <p>If your license allows for multiple queues and workers (i.e., "Workflow bots"), you can now optimize the Dedicated Bot Remote Agent workers and queues by labeling them with specific capabilities. Capabilities allow you to pair specific bots to specific workers and queues. For example, you could allocate specific workers and queues to each department in your organization. Capabilities are configured on the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Integrations/Remote-Agents/Queues.htm" target="_blank" MadCap:conditions="Default.BlogOnly">queues</a><a href="../Subsystems/ProcessAutomation/Content/Resources/Integrations/Remote-Agents/Queues.htm" MadCap:conditions="Default.FullDocsOnly">queues</a> in the remote agent. Then, from the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/RPA/Managing-a-Bot.htm" target="_blank" MadCap:conditions="Default.BlogOnly">bot manage page</a><a href="../Subsystems/ProcessAutomation/Content/Resources/RPA/Managing-a-Bot.htm" MadCap:conditions="Default.FullDocsOnly">bot manage page</a>, you can select matching capabilities to ensure that your bot is placed in an appropriate queue and run by an appropriate worker.</p>
+        <h3>Integrations</h3>
+        <ul>
+            <li>Integration with the Ellucian Banner Integration through Ethos: The integration supports pre-populating registrar forms created in Business Process, and updating records in Banner with course or student personal information through Workflow. To retrieve records in a form, use a lookup rule to access Ellucian. Then, based on a known value, such as student ID, you can pre-fill the rest of the form with the student’s data. To update a record, in Workflow, use a Execute Application Action activity to push new information, such as course or student changes, from a Business Process into Ellucian. Integration through Ethos.</li>
+            <li>Custom Scripting: Design custom integrated solutions by incorporating C#, Python, and NodeJS scripts as part of Process Automation workflows. Create a Process Automation Rule to define where the custom script is hosted as well was any necessary input and output parameters. Make sure that there is a Process Automation Remote Agent on the host and that the agent is configured with the remote script source plugin. Add a Run Script Rule activity as part of a Process Automation workflow to run the custom script.</li>
+        </ul>
+        <h2>Accounts</h2>
+        <h3>SAML SSO Support</h3>
+        <p>Laserfiche Cloud now has expanded single sign-on support for SAML 2.0 identity providers. The most common third-party identity providers are:</p>
+        <ul>
+            <li>Active Directory Federation Services (ADFS) 2.0 &amp; 3.0</li>
+            <li>Azure Active Directory (AD)</li>
+            <li>Okta</li>
+            <li>OneLogin</li>
+        </ul>
+        <h2>Documents</h2>
+        <p>Dynamic Fields are fields where one field value determines what values are available in other fields in the same template. Use process automation lookup tables as a data source and associate columns in the lookup table with fields in a template. You can then specify which fields depend on values in other fields.</p>
+        <h2>Additional information
+        </h2>
+        <p><a href="https://support.laserfiche.com/kb/1014182" target="_blank">Release Notes for Laserfiche Cloud 2020.3</a>
+        </p>
+    </body>
+</html>

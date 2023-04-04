@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Track Tokens</h1>
+        <p style="text-align: center;">
+            <img src="Images/trackTokensCanvas.PNG" title="Track Tokens activity" alt="Track Tokens activity" />
+        </p>
+        <p>This activity records the values of specified tokens when this activity runs. You can view these values in the <b>Tokens</b> tab of the instance report. Add this activity to multiple points in the workflow to record how the tokens change throughout the workflow. After you <a href="../Testing-Workflows.htm" title="Click here to learn more." alt="Click here to learn more.">test the workflow</a>, remove the <b>Track Tokens</b> activities from the workflow.</p>
+        <p class="note"><b>Note</b>: This activity tracks the first 3700 characters of a token's value.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>In the <b>Tokens to Track</b> property box, specify the tokens.</li>
+            <ul>
+                <li><b>All tokens</b>: Records the values of all the tokens in the workflow at the point when the <b>Track Token</b> activity is run.</li>
+                <li><b>Specific tokens</b>: Select specific tokens to track. <MadCap:snippetText src="../../Snippets/tokens.flsnp" /> To select specific tokens:<ol><li>Click <b>Specific tokens</b>.</li><li>Click <b>Select...</b>.</li><li>In the <b>Choose Activity Token Values</b> dialog box, select the tokens.</li><li>Click <b>Save</b>. The tokens appear in the property box.</li></ol></li>
+            </ul>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+        <MadCap:snippetBlock src="../../Snippets/migrating-form-tables-into-word-documents.flsnp" />
+    </body>
+</html>

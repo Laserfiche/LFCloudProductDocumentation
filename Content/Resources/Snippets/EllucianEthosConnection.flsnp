@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h3>Create or Edit a Connection to the Ellucian Service</h3>
+        <ol>
+            <li>Obtain an <b>API Key</b> for the Ellucian installation in use. Documentation is available through <a href="https://resources.elluciancloud.com/bundle/ethos_integration_lrn_getstarted/page/c_define_fundamentals.html" target="_blank" title="Click to open the Ellucian documentation" alt="Click to open the Ellucian documentation">the Ellucian portal at this page</a>. Refer to those instructions on how to obtain an API&#160;Key and configure access for Laserfiche.</li>
+            <li>Create a new Application Connection on the Integrations panel, following the instructions <a href="../Integrations/Integrations-Overview.htm">here</a>, and selecting <b>Ellucian</b> as the application type. <p><img src="../Integrations/images/application-connection-menu.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /></p></li>
+            <li>On the <b>Setup</b> tab, select the <b>Region</b>, enter the Ellucian <b>API Key</b>, and click <b>Verify</b>.</li>
+            <li>Click <b>Save</b> to save the connection.</li>
+        </ol>
+        <p>To edit a connection, click on the name in the list of application connections to open the <b>Setup</b> tab for the connection.</p>
+    </body>
+</html>

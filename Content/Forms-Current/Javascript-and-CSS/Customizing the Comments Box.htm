@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Customizing the User Task Comments Box | Laserfiche Forms</title>
+        <meta name="description" content="In Laserfiche Forms, you can comment on tasks assigned to you. Use custom JavaScript to hide the comments box, make comments required, or change the name of the comments box." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Customizing the User Task Comments Box</h1>
+        <p>When assigning user tasks to others, there is a box that allows you to add an optional comment explaining why you are assigning the task. This box can be customized using JavaScript or CSS, as demonstrated in the following examples.</p>
+        <h2 class="topicheading">Hiding the Comments Box</h2>
+        <p>The following CSS rules will hide the comments box.</p><pre xml:space="preserve"><code class="language-css">.approval-wrap #comments{display:none;}
+.approval-wrap p{display:none;}</code></pre>
+        <h2 class="topicheading">Making Comments Required</h2>
+        <p>By default, comments on user tasks are optional. However, you can make comments required using some custom JavaScript. The following snippet displays a custom error message when the user attempts to reject, approve, or submit a form without having entered comments. For the following JavaScript snippet to work, the custom error message should be added as a <a href="../Form-Fields/Custom-HTML.htm" title="Click here to learn more." alt="Click here to learn more.">custom HTML element</a> from the <b>Layout</b> page of the form designer and <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>error_comments</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function() {
+  //hide error message when document first loads
+  $('.error_comments').hide();
+
+  //wait for user to reject/approve/submit form
+  $(document).on('click', '.Reject, .Approve, .Submit', checkComments);
+
+  //Display error if no comments provided
+  function checkComments(){
+  
+    //if there are no comments
+    if($('#comments').val() == '')
+    {
+
+      //show red border around comments box and show error message
+      $('#comments').css('border-color', '#ba0000');
+      $('.error_comments').show();
+      return false;
+    }
+  
+  }
+
+  //checks for user focusing on comment box
+  $(document).on('focus', '#comments', remove_checkComments);
+
+  //remove border style and comments when user focuses on comment box
+  function remove_checkComments(){
+  
+    $('#comments').removeAttr('style');
+    $('.error_comments').hide();
+  
+  }
+
+});</code></pre>
+        <p>The snippet works by waiting for the page to load, then hiding the error message immediately, as it should be displayed only when the user tries to approve, submit, or reject the form. It then waits for one of the latter three actions, and calls the <code>checkComments</code> function when any of them happen. If there are no comments when the relevant event happens, it puts a red border around the comments box and shows the custom error message.</p>
+        <p>To avoid distracting the user when they are entering comments, the snippet also removes the error message and red border when the user focuses on the comments box to type in their comments.</p>
+        <p>The code snippet as it stands requires comments for any action the user chooses for the task, but you can easily customize it to require comments only for form rejections, for example, by replacing <code>$(document).on('click', '.Reject, .Approve, .Submit', checkComments);</code> with <code>$(document).on('click', '.Reject', checkComments);</code>.</p>
+        <h2 class="topicheading">Changing the Name of the Comments Box</h2>
+        <p>By default, the comments box is labeled "Comments." To change this, use the following JavaScript snippet:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function() {
+  
+  $(".approval-wrap &gt; p").text("<i>New Label</i>");
+  
+});</code></pre>
+        <p>Replace <i>New Label</i> with your label of choice.</p>
+    </body>
+</html>

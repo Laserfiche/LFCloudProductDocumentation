@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Import Profiles</h1>
+        <p>An import profile allows you to configure a default name, folder path, template, and volume for imported documents of a particular type. When importing a document, you can select the import profile from the list, rather than manually selecting the appropriate path, template, and so forth.  This allows you to quickly configure default settings for document types that you frequently need to import.</p>
+        <p>You can also extract information from the file name and use it to dynamically create the document name or path. For instance, if application file names always contain the applicant’s name, you could extract that section of the file name and use it to automatically store the document in a folder named for the applicant.</p>
+        <p>Import profiles are configured on a per-user basis; you can create as many import profiles as you like without affecting other users. Administrators with the <b>Manage Repository Configuration</b> privilege can also apply import profiles to groups, including the Everyone group, to easily make the profiles available to multiple users.</p>
+        <div id="tabs-1">
+            <p MadCap:conditions="Primary.ThickAdmin"><b>&#160;To create or modify an import profile</b>
+            </p>
+            <ol MadCap:conditions="Primary.ThickAdmin">
+                <li>Select your user name in the upper right corner and then select <b>Options</b>.</li>
+                <li>Select <b>New Document</b>.</li>
+                <li>In the <b>Import Profiles</b> section, select <b>Add</b> to create a new import profile, or select the edit button (<img src="../../User Guide/Content/Resources/Images/import-profile-edit-button.png"></img>) next to an existing import profile to modify it. </li>
+                <li>In the <b>Profile name</b> option, type a name for your import profile.</li>
+                <li>To extract information from the file name of imported files, select <b>Import based on file name</b> and then complete the following steps:<ul style="list-style:lower-roman"><li>In the <b>File name format</b> option, specify a custom token name that will represent the first component of the file name. (File name components are separated by the delimiter specified in step iii). To extract the entire file name, do not specify a delimiter.)&#160;This token can then be used to dynamically populate the document's name and path.</li><li>To specify more than one component of the file name, select the plus button (<img src="../../User Guide/Content/Resources/Images/import-profile-plus-button.png"></img>) and specify a custom token name that will represent the second component of the file name. Repeat for all the components of the file name. </li><li>In the <b>Delimiter</b> option, specify the delimiter that separates the components of the file name.</li><p class="ex"><b>Example:</b>&#160;Resumes are stored with the standard file name <i>ApplicantCode</i>-<i>ApplicantName</i>-<i>Date</i>-Resume. An example file name would be "AB1234-JSmith-20140714-Resume.pdf". To extract the applicant code and the applicant name, you could specify a delimiter of "-" and specify two components, ApplicantCode and ApplicantName. You could then use the %(ApplicantCode)&#160;and %(ApplicantName)&#160;custom tokens, along with standard Laserfiche tokens, to dynamically create an appropriate folder path and file name.</p></ul></li>
+                <li>In the <b>Document name</b> option, specify the name for documents created using this import profile. If you do not specify a value, the file name of the imported file will be used. You can use tokens, including custom tokens created in step 5, to dynamically name the document.</li>
+                <li>In the <b>Document location</b> option, specify the path for documents created using this import profile. If you do not specify a path, the folder you have open at the time of import will be used. You can use tokens, including custom tokens created in step 5, to dynamically specify a path. If the folders you specify do not already exist, they will be created at the time of import.</li>
+                <li>In the <b>Template</b> option, specify the template for documents created using this import profile, or select <b>&lt;Use parent folder's template&gt;</b>&#160;to automatically use the template assigned to the folder in which the document will be created. If you do not want to specify a default template, select <b>No template assigned</b>.</li>
+                <li>Select either <b>Apply to myself</b> to save the import profile only for yourself, or <b>Apply to the following group</b> to share the import profile with a particular group. You can select the Everyone group to share the import profile with all users.        <p class="note"><b>Note:</b>&#160;You must have the <b>Manage Repository Configuration</b> privilege to share import profiles with a group.</p></li>
+                <li>Select <b>OK</b>&#160;to save your import profile.</li>
+                <li><b>Optional:</b>&#160;To set the import profile as the default import profile for new documents, select it in the <b>Default profile</b> option. You can still choose another profile manually at the time of import. (To always select a profile manually, select <b>(None)</b>.)</li>
+            </ol>
+        </div>
+        <h2 class="topicheading">Using an Import Profile</h2>
+        <p>Once you have created an import profile, you can select it when importing a file to apply the settings to that file. Select <b>Use import profiles</b> and then select the import profile you want to use. The import profile's settings will automatically be applied, but you can still customize settings for this specific document. For more information, see <a href="Importing_Files.htm">Importing Files</a>.</p>
+        <p class="note"><b>Note:</b>&#160;The import profiles list may contain import profiles that were created for your entire repository by an administrator. You can use these profiles to import documents, but you cannot edit the import profile definition or remove the import profile from the list.</p>
+        <h2 class="topicheading">Removing an Import Profile</h2>
+        <p>If you no longer need an import profile, you can remove it from the list. Open the <b>Options</b> page and select <b>New Document</b>. In the <b>Import Profiles</b> section, select the delete button (<img src="../../User Guide/Content/Resources/Images/import-profile-delete-button.png" />) next to the profile that you want to delete. </p>
+    </body>
+</html>

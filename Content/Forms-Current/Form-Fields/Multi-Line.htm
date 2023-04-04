@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:ignoredWords="multi">
+    <head><title>Multi-line fields | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Multi-line fields allow you to insert text data that takes up more than one line." />
+    </head>
+    <body>
+        <h1>Multi-line Fields</h1>
+        <p>Multi-line fields are very similar to single line fields in that they accept numbers and characters. Multi-line fields cannot use <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm">regular expressions</a> and are most useful for allowing users to enter a lot of text in a large field. When configuring multi-line fields, you can specify the height (in lines) of the field. Like single line fields, multi-line fields can accept HTML&#160;input.</p>
+        <p class="note"><b>Note</b>: The characters "&amp;", "#", or "&lt;" cannot be entered in a field if they are also followed by another character. However, you can enter one of those characters if it is followed by a space.</p>
+        <h2 class="topicheading">Field settings</h2>
+        <p><b>To edit a multi-line field</b>
+        </p>
+        <ol>
+            <li>Select the field on the canvas and click <b>Edit</b>.</li>
+            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert Variables</b> button to include a variable in the label.</li>
+            <li>
+                <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+            <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field.</li>
+            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+            <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+            <li>Under <b>Field width</b>, select whether the field should be<b>Small</b>, <b>Medium</b>, <b>Large</b>, or <b>X-Large</b>in width. </li>
+            <li>Under <b>Field height</b>, specify the height (in lines) of the field. A scroll bar will appear if the person filling out the form enters more lines than is specified here. </li>
+            <li>Under <b>Character limit</b>, enter the maximum number of characters the field will accept. By default, this number is 20,000.</li>
+            <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Click the <b>Insert Variables</b> button to use a variable as a default value.</li>
+            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+            <ul>
+                <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+            </ul>
+            <li>When you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+        </ol>
+    </body>
+</html>

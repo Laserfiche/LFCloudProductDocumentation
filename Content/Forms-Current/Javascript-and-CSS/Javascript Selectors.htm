@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.CSSJSCustomization">
+    <head><title>Introduction to JavaScript selectors | Laserfiche Forms</title>
+        <meta name="description" content="Custom JavaScript is key to implementing complex dynamic behavior in a form. Learn how to select useful HTML elements in forms. Use attributes of these elements in functions and write code to dynamically act on events related to those elements." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Getting Started with Custom JavaScript in Forms</h1>
+        <p>This section introduces you to the basic syntax of JavaScript. To get the most out of it, you should already know what an <a href="Customizing a Form with CSS and Javascript.htm#HTML">HTML&#160;element</a> is.</p>
+        <p>Unlike CSS selectors, JavaScript selectors can target not just an element, but also the values of elements like input boxes, checkboxes, and radio buttons. Using JavaScript selectors on the values of elements, you can add, modify, or delete elements of the form depending on the values that users enter in other elements. JavaScript selectors can also detect events such as fields being changed or buttons being clicked. By writing functions that trigger upon these events, you can make your form dynamically respond to users' actions.</p>
+        <h2 class="topicheading">Syntax</h2>
+        <p>Like CSS selectors, JavaScript selectors target  HTML elements. As such, you should use the same methods as those described in <a href="Customizing a Form with CSS and Javascript.htm">Customizing a Form with CSS and Javascript </a>and <a href="CSS Selectors.htm#top">CSS Selectors</a> to find the elements and attributes of interest.</p>
+        <h2>Javascript in the Classic Designer</h2>
+        <p>The Classic Designer uses the popular JavaScript library jQuery. In jQuery, a selector starts with a <code>$</code> sign, followed by parentheses and quotes (single or double) that contain the id selected. For example, to target the first field in a form, use the selector <code>$('#q1')</code>. You can also target ids that meet certain criteria, such as being selected (for checkboxes) or starting with a certain string. As with CSS selectors, ids are preceded by a <code>#</code>, while classes are preceded by a period.</p>
+        <p>To target elements based on attributes other than ids and classes, use the format <code>[attribute="value"]</code>. For example, to select all elements that have the type text, use <code>$('[type="text"]')</code>.</p>
+        <h2 class="topicheading">Compound Selectors</h2>
+        <p>Sometimes you may need to combine multiple selectors to target the element(s) you desire. Compound selectors let you do so in a variety of different ways.</p>
+        <p><b>To select elements that satisfy <i>any</i> of a list of conditions</b>: Use a comma to separate each component selector. Your intended targets only have to satisfy at least one of the selectors in the comma-separated list. E.g.<code> $("div, span").css("border", "3px solid red")</code> gives all <b>div</b> elements and all <b>span</b> elements a border that is 3 pixels wide and red.</p>
+        <p><b>To select elements that satisfy <i>all</i> conditions in a list of conditions</b>: Chain together the component selectors without a space. Sometimes this may necessitate using square brackets in your component selectors. For example, <code>$('[type="text"][name="Field3"]')</code> selects all elements that have their type attribute set to <code>text</code> and their name attribute set to <code>Field3</code>. <code>$('input.TwoPerLine')</code> selects all <b>input</b> elements that have the custom class <code>TwoPerLine</code>.<code> $('input[type="text"]')</code> selects all <b>input</b> elements that have the type <code>text</code>.</p>
+        <p><b>To select descendants of an element</b>: Separate the ancestor and the descendant with a space. For example, <code>$('#q1 input')</code> selects all <b>input</b> elements within the element with id <code>q1</code>.</p>
+        <p style="font-weight: bold;">To select the immediate children of an element: <span style="font-weight: normal;">Separate the parent and child with a <code>&gt;</code>. For example, <code>$('.cf-collection &gt; div')</code> selects all <b>div</b> elements that are immediate children of an element with class <code>cf-collection</code>.</span> <span style="font-weight: normal;">This syntax does not select any ancestors of the parent that are not its immediate children. For example, in a HTML snippet that has the structure <code>&lt;ul&gt;&lt;li&gt;&lt;input ... &gt;&lt;/li&gt;&lt;/ul&gt;</code>, a selector like <code>ul &gt; input</code> would not select the embedded <b>input</b> element, because the <b>input</b> element is not an immediate child of <b>ul</b>. <code>li &gt; input</code>, however, would select that <b>input</b> element.</span></p>
+        <h2 class="topicheading">Commonly used jQuery selectors in Forms</h2>
+        <table id="myTable" summary="Commonly used jQuery selectors in Forms and their uses" cellspacing="0" style="margin-left: 0;margin-right: auto;">
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <col class="TableStyle-PatternedRows-Column-Regular" style="width: 568px;" />
+            <col class="TableStyle-PatternedRows-Column-Regular" />
+            <thead>
+                <tr>
+                    <th width="20%" class="tableheading">Syntax </th>
+                    <th class="tableheading">Use</th>
+                    <th width="30%" class="tableheading">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="tabletext"><span class="Code">$('#q1')</span>
+                    </td>
+                    <td class="tabletext">Targets the field with id <b>q1</b>. Useful as a selector for events.</td>
+                    <td class="tabletext"><span class="Code">$('#q1').change(function () {</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="tabletext"><span class="Code">$('#q1 input')</span>
+                    </td>
+                    <td class="tabletext">Targets the  input box of the field with id <b>q1</b>. To obtain the value in the input box, append <b>.val()</b>.</td>
+                    <td class="tabletext"><span class="Code">$('#q1 input').val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="tabletext"><span class="Code">$('#Field4(2) input')</span>
+                    </td>
+                    <td class="tabletext">Targets an input box in a table. The ID&#160;attribute for input boxes in table rows has the format <b>Field</b><i style="font-weight: bold;">FieldNumber</i><b>(</b><i style="font-weight: bold;">RowNumber</i><b>)</b>. To find out what <i>FieldNumber</i> a column is identified by, <a href="Customizing a Form with CSS and Javascript.htm#Viewing">use your browser's HTML inspection tools</a>. The row numbers start at <b>1</b> for the first row. This particular selector targets the input box that is in the second row of a column with id <b>Field4</b>.</td>
+                    <td class="tabletext"><span class="Code">$('#Field4(2) input').val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="tabletext"><span class="Code">$('[id^="Field4"]')</span>
+                    </td>
+                    <td class="tabletext">Targets field input boxes that start with <b>Field4</b>. Useful for targeting all input boxes in a table column. The id&#160;attribute for input boxes in table rows has the format <b>Field</b><i style="font-weight: bold;">FieldNumber</i><b>(</b><i style="font-weight: bold;">RowNumber</i><b>)</b>. Using this selector syntax is a way to target all input boxes in a particular column.</td>
+                    <td class="tabletext"><span class="Code">$('[id^=Field4]').val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="tabletext"><span class="Code">$("[id$='(2)']")</span>
+                    </td>
+                    <td class="tabletext">Targets the input boxes in the second rows of tables, by selecting all elements with ids that <i>end</i> with <b>(2)</b>.</td>
+                    <td class="tabletext"><span class="Code">$("[id$='(2)']").val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="tabletext"><span class="Code">$("input[id^='Field14']:checked")</span>
+                    </td>
+                    <td class="tabletext">Targets selected radio buttons or checkboxes that have an id starting with <b>Field14</b>.</td>
+                    <td class="tabletext"><span class="Code">$('input[id^="Field14"]:checked').val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="tabletext"><span class="Code">$('#Field6_other_value')</span>
+                    </td>
+                    <td class="tabletext">Targets the text in the input box for an "Other" choice in the radio button or checkbox field with id <b>q6</b>.</td>
+                    <td class="tabletext"><span class="Code">$('#Field6_other_value').val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="tabletext"><span class="Code">$('select[id^="Field14"]')</span>
+                    </td>
+                    <td class="tabletext">Targets the input box of drop-down fields whose id starts with <b>Field14</b>. Useful if you want the selected value of a drop-down field.</td>
+                    <td class="tabletext"><span class="Code">$('select[id^="Field14"]').val()</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-LightRows">
+                    <td class="tabletext"><span class="Code">$('.cf-collection &gt; div')</span>
+                    </td>
+                    <td class="tabletext">For collections with repeating sets of fields, targets the <b>div</b> container that wraps each set of fields. This works because the <b>div</b>s are immediate children of the element with class <b>.cf-collection</b>.</td>
+                    <td class="tabletext"><span class="Code">$('.cf-collection &gt; div').each(function () { //function definition<br style="font-weight: normal;" />}</span>
+                    </td>
+                </tr>
+                <tr class="TableStyle-PatternedRows-Body-DarkerRows">
+                    <td class="tabletext"><span class="Code">.cf-table-block tbody tr</span>
+                    </td>
+                    <td class="tabletext">Targets the rows of a table.</td>
+                    <td class="tabletext">See <a href="Customizing Tables.htm#Iteratin">Iterating over Table Rows</a></td>
+                </tr>
+            </tbody>
+        </table>
+        <p class="note"><b>Note</b>: For more information on jQuery selectors, see <a href="https://api.jquery.com/category/selectors/" target="_blank">jQuery's online documentation</a>.</p>
+        <h2 class="topicheading"><a name="jQuery"></a>jQuery Methods</h2>
+        <p>Selectors pick out elements on a page; methods process features of those elements. A selector like <code>$('#q1 input')</code>, taken by itself, does not pick out the value of the selected input—you need to append a method to the selector in order to obtain values. For example, <code>$('#q4 input').val()</code> indicates that one is extracting the value of the input for the field with id <code>q4</code>.</p>
+        <table id="myTable2" style="margin-left: 0;margin-right: auto;" summary="Commonly used jQuery methods in Forms and their uses">
+            <caption style="font-weight: bold;">jQuery Methods</caption>
+            <col>
+            </col>
+            <col style="width: 127px;">
+            </col>
+            <col>
+            </col>
+            <col>
+            </col>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Syntax </th>
+                    <th>Use</th>
+                    <th width="30%">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Value</td>
+                    <td>.val() to get value; <span class="Code">.val(<i style="font-weight: normal;">newValue</i>)</span> to set value.</td>
+                    <td>Used to get the value of an element. By passing a value into this method (by including it in the parentheses), this method can also set the value of an element. When using this method, be sure the selector is targeting elements that have values (e.g., input boxes).</td>
+                    <td>
+                        <p>Get existing value of element:<br /><span class="Code">$('#q4 input').val();</span></p>
+                        <p>Set the selected element to have the value <i>New Value</i>:<br /><span class="Code">$('#q4 input').val('<i>New Value</i>');</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Each</td>
+                    <td><span class="Code">.each(<i>selector</i>)</span>
+                    </td>
+                    <td>Used to iterate over elements within a jQuery object. Most useful when you want to carry out an operation over multiple elements that all satisfy a certain condition. For example, you can iterate over all rows in a table, or all <b>div</b>s in a collection.</td>
+                    <td>See <a href="Customizing Tables.htm">Customizing Tables</a> for some examples.</td>
+                </tr>
+                <tr>
+                    <td>Find</td>
+                    <td><span class="Code">.find(<i>selector</i>)</span>
+                    </td>
+                    <td>Searches through the descendants of the elements that match the selector and returns a new jQuery object consisting of the matching elements.</td>
+                    <td>
+                        <p>To find all <b>li</b> elements that are descendants of <b>ul</b> elements , where the latter are themselves within the element with id <b>q5</b>:</p><span class="Code">$('#q5').find('ul li')</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Closest</td>
+                    <td><span class="Code">.closest(<i>selector</i>)</span>
+                    </td>
+                    <td>Finds the closest ancestors of the elements that match the selector. This can be useful when you want to target the container of an input box using selectors on the input box's attributes.</td>
+                    <td>To find the closest <b>div</b> elements containing input text boxes: <span class="Code">$('input[type="text"]').closest('div')</span></td>
+                </tr>
+                <tr>
+                    <td>Length</td>
+                    <td><span class="Code">.length()</span>
+                    </td>
+                    <td>Returns the number of elements in the jQuery object it is applied to. Useful for counting the number of rows in a table of variable length, or the number of sets in a repeatable collection.</td>
+                    <td><span class="Code">$('#q20 .rpx').length()</span> returns the number of descendant elements with class <b>rpx</b> in the element with id <b>q20</b>. This effectively <a href="Javascript Customizations for Collections.htm#Reusing">counts the number of repeating sets of fields</a> in a collection.</td>
+                </tr>
+                <tr>
+                    <td>Replace</td>
+                    <td><span class="Code">.replace()</span>
+                    </td>
+                    <td>Used to replace parts of a value. This method uses <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm">regular expression</a> syntax.</td>
+                    <td>
+                        <p>To remove all commas in the value (by replacing them with nothing):</p><span class="Code"> $('#Field4').val().replace(/,/,g,'');</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Functions</h2>
+        <p>Functions take in an input and produce an output. For example, you may want to output a yes/no decision about whether to show a certain part of a form, based on the values that the user has entered in some fields. You can write a function to do this. The following functions are built into JavaScript and are particularly useful for converting one form of data into another.</p>
+        <table id="myTable3" summary="Commonly used JavaScript functions in forms and their uses" style="margin-left: 0;margin-right: auto;">
+            <caption style="font-weight: bold;">JavaScript Functions</caption>
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th class="tableheading">Name</th>
+                    <th class="tableheading" width="20%">Syntax </th>
+                    <th class="tableheading">Use</th>
+                    <th class="tableheading" width="30%">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Number</td>
+                    <td class="tabletext"><span class="Code">Number()</span>
+                    </td>
+                    <td class="tabletext">Converts a value (usually a string) to a number. This is useful if you are working with numbers that have been entered in fields that also accept characters (e.g., single line fields).</td>
+                    <td class="tabletext">
+                        <p>Converts the value of the field to a number, removing commas.<br /><span class="Code">Number($('input[id^="Field14"]:checked').val().replace(/,/g,''))</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">ParseFloat</td>
+                    <td class="tabletext"><span class="Code">parseFloat()</span>
+                    </td>
+                    <td class="tabletext">Converts a value (usually a string) to a floating point number (a number with a decimal point). This is useful if you are working with monetary values that have been entered in fields that also accept characters (e.g., Single line).</td>
+                    <td class="tabletext">
+                        <p>Converts the value of the field to a floating point number.<br /><span class="Code">parseFloat($('#Field14').val());</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Events</h2>
+        <p>Unlike CSS, JavaScript allows the web page to respond to events on the page. You can specify changes to happen based on what is clicked, focused on, changed, loaded, and so on. For example, changes that should happen once the page loads are typically encapsulated in a <code>$(document).ready</code> function. Most of the examples we provide in these pages are enclosed in such a function, as we typically do not need customizations that take place before a page fully loads.</p>
+        <p>Events must be attached to an element using a selector. This specifies which part of the page has to be loaded, clicked on, and so on to trigger the processes specified in the function. If you find that your JavaScript is not running, it may be that the event it is attached to has not happened, or that it is not attached to an event.</p>
+        <table id="myTable4" summary="Commonly used events in Forms and their uses" style="margin-left: 0;margin-right: auto;">
+            <caption style="font-weight: bold;">Commonly Used Events</caption>
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th class="tableheading">Name</th>
+                    <th class="tableheading" width="20%">Syntax </th>
+                    <th class="tableheading">Use</th>
+                    <th class="tableheading" width="30%">Example</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tabletext">Ready</td>
+                    <td class="tabletext"><span class="Code">$('<i>selector</i>').ready( function () {</span>
+                    </td>
+                    <td class="tabletext">Tells the browser to run the code inside the function when the element specified in the selector has loaded.</td>
+                    <td class="tabletext">
+                        Run the enclosed code when the page has loaded: <span class="Code">$(document).ready(function () {<br></br>        //code goes here <br></br>        })</span></td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Click</td>
+                    <td class="tabletext"><span class="Code">$('<i>selector</i>').click( function () {</span>
+                    </td>
+                    <td class="tabletext">Tells the browser to run the code inside the function when the element is clicked. For example, you may want to display certain text when the user clicks a button.</td>
+                    <td class="tabletext">
+                        <p>Run the enclosed code when an <b>input</b> element within the  element with id <b>q4</b> is clicked: <span class="Code">$('#q4 input').click(function () {<br />        //code goes here <br />        })</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Blur</td>
+                    <td class="tabletext"><span class="Code">$('<i>selector</i>').blur( function () {</span>
+                    </td>
+                    <td class="tabletext">Tells the browser to run the code inside the function when the element loses focus (i.e., when the user clicks out of the element). For example, you may want to display a warning message if the user enters an invalid value and tries to move on to another field.</td>
+                    <td class="tabletext">
+                        <p>Run the enclosed code when the user clicks out of an <b>input</b> element within the  element with id <b>q4</b>: <span class="Code">$('#q4 input').blur(function () {<br />        //code goes here <br />        })</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Focus</td>
+                    <td class="tabletext"><span class="Code">$('<i>selector</i>').focus( function () {</span>
+                    </td>
+                    <td class="tabletext">Tells the browser to run the code inside the function when the element gains focus (i.e., when the user mouses over the element). For example, you may want to display certain hints when the user hovers over an input box.</td>
+                    <td class="tabletext">
+                        <p>Run the enclosed code when an <b>input</b> element within the  element with id <b>q4</b> is focused on: <span class="Code">$('#q4 input').focus(function () {<br />        //code goes here <br />        })</span></p>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Change</td>
+                    <td class="tabletext"><span class="Code">$('<i>selector</i>').change( function () {</span>
+                    </td>
+                    <td class="tabletext">Tells the browser to run the code inside the function when the element changes. This event is useful if you want to run a function when the value of a field changes. For example, you may want the value of another field to be recalculated when the user changes the value of one of the inputs that is used in the calculation.</td>
+                    <td class="tabletext">
+                        <p>Run the enclosed code when the value of an <b>input</b> element within the  element with id <b>q4</b> is changed: <span class="Code">$('#q4 input').val().change(function () {<br />        //code goes here <br />        })</span></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

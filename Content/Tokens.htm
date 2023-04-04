@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="3556" MadCap:lastWidth="888">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Tokens</h1>
+        <p>A token is a placeholder for a value to be inserted. Laserfiche  can take advantage of tokens in a variety of ways, such as adding values to <a href="Fields_and_Templates.htm">fields</a> and certain <a href="Annotations.htm">annotations</a>, naming new documents, and creating dynamic paths.</p>
+        <p> All tokens are in the format: %(<i>Token</i>). Depending on the Laserfiche client application being used, available tokens may vary.
+</p>
+        <p>Tokens are particularly useful as default values or when creating documents in batches, as they allow you to dynamically store information relevant to each document without having to specify each value manually.</p>
+        <p>In most cases, you can insert a token into a field, name, or other property by clicking the token button (<b>&gt;</b>) and selecting the token you want to insert. You can also type a token manually.</p>
+        <h2 class="topicheading"><a name="Laserfic"></a>Laserfiche Repository</h2>
+        <p>The following tokens can be used in your repository and in Repository Administration. For instance, they can be used to populate fields or set default field values, or when naming documents or configuring Outlook import.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the tokens that can be used while working in your repository, or when configuring default values in Repository Administration.">
+            <caption>Laserfiche Repository Tokens</caption>
+            <col />
+            <col style="width: 104px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Syntax</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Date</td>
+                    <td>%(Date)</td>
+                    <td>The current date.</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>%(Time)</td>
+                    <td>The system time on the current workstation.</td>
+                </tr>
+                <tr>
+                    <td>Date/Time</td>
+                    <td>%(DateTime)</td>
+                    <td>The current date and time.</td>
+                </tr>
+                <tr>
+                    <td>Session Count</td>
+                    <td>%(Count)</td>
+                    <td>
+                        A token that will be replaced by a sequential number every time an entry is created or imported into a Laserfiche Client. This token starts at 1 and is specific to a particular user.</td>
+                </tr>
+                <tr>
+                    <td>Repository Count</td>
+                    <td>%(GCount)</td>
+                    <td>
+                       A  sequential number added every time an entry is created or imported into Laserfiche. This token starts at 1 and applies to the entire repository.                  </td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td>%(UserName)</td>
+                    <td>The name of the current user.</td>
+                </tr>
+                <tr>
+                    <td>Entry Name</td>
+                    <td>%(Name)</td>
+                    <td>The name of the entry.</td>
+                </tr>
+                <tr>
+                    <td>Parent Name</td>
+                    <td>%(ParentName)</td>
+                    <td>The name of the entry's parent folder.</td>
+                </tr>
+                <tr>
+                    <td>Entry ID</td>
+                    <td>%(ID)</td>
+                    <td>The identification number assigned to the Laserfiche document where data will be stored. This number will be generated when the Laserfiche document is created. </td>
+                </tr>
+                <tr>
+                    <td>Parent ID</td>
+                    <td>%(ParentID)</td>
+                    <td>The ID of the entry's parent folder.</td>
+                </tr>
+                <tr>
+                    <td>Parent Field</td>
+                    <td>%(Parent)
+<br /><br />%(Parent: <i>Field</i>)</td>
+                    <td>The value assigned to the field with the same name in the parent folder. If this token is used when a document or folder is being created, field data will be inherited from the folder in which the document or folder will be created. Once a document or folder inherits a field value, the parent token will be replaced with the value assigned to a field in the parent folder.
+                        <p class="note"><b>Note:</b> A token will only be replaced once. If the parent's field data is updated, it does not update the children's field data. The parent token is not meant as a means of synchronizing field data between a folder and its children. </p><p class="ex"><b>Example:</b> If you insert the %(Parent) token in the "Name" field, it will be replaced by the value assigned to the "Name" field in the parent folder. If the parent folder has not been associated with a "Name" field, the token will not be replaced. If the parent folder has been associated with a "Name" field, and the value of that field changes, the token value will not be updated.</p><p> 
+ 
+To inherit the value assigned to a field with a different name, use the %(Parent:<i>Field</i>) token. The term <i>Field</i> should be replaced with the name of the desired field associated with the parent folder.</p></td>
+                </tr>
+                <tr>
+                    <td>Global Count</td>
+                    <td>%(GCount)</td>
+                    <td>
+A  sequential number added every time an entry is created or imported into a Laserfiche Server. By default, this token starts at 1.
+                        <p class="ex"><b>Example:</b> Jon and Ben each create a document and use %(GCount). The server count is 3 because the server starts with 1 and each user has created a document.</p></td>
+                </tr>
+                <tr>
+                    <td>Page Count</td>
+                    <td>%(PageCount)</td>
+                    <td>The number of pages in a document.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Scanning</h2>
+        <p>The following tokens can be used when scanning documents into Laserfiche. For instance, they can be used to dynamically create a folder structure, name documents, or populate template information.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the tokens that can be used while scanning.">
+            <caption>Laserfiche Scanning Tokens</caption>
+            <col style="width: 117px;" />
+            <col style="width: 150px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Syntax</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Creation Date</td>
+                    <td>%(Creation Date)</td>
+                    <td>
+                        <p>The original creation date for a file scanned by Universal Capture.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Date </td>
+                    <td>%(Date)</td>
+                    <td>The date a document is scanned.</td>
+                </tr>
+                <tr>
+                    <td>Date/Time</td>
+                    <td>%(Date/Time)</td>
+                    <td>The date and time a document is scanned (e.g., 3/19/2008 8:01:34 PM)</td>
+                </tr>
+                <tr>
+                    <td>Entry ID</td>
+                    <td>%(ID)</td>
+                    <td>The Entry ID associated with the scanned document. </td>
+                </tr>
+                <tr>
+                    <td>Field Data</td>
+                    <td>%(Field)</td>
+                    <td>The value assigned to a field in the current document. The specified field must belong to the template that will be assigned to the document.</td>
+                </tr>
+                <tr>
+                    <td>Parent Field</td>
+                    <td>%(Parent)
+<br /><br />%(Parent: <i>Field</i>)</td>
+                    <td>
+                    The value assigned to the field with the same name in the parent folder. Field data will be inherited from the folder in which the document or folder will be created. Once a document inherits a field value, the parent token will be replaced with the value assigned to a field in the parent folder.
+                        <p class="note"><b>Note:</b> A token will only be replaced once. If the parent's field data is updated, it does not update the children's field data. The parent token is not meant as a means of synchronizing field data between a folder and its children. </p><p class="ex"><b>Example:</b> If you insert the %(Parent) token in the "Name" field, it will be replaced by the value assigned to the "Name" field in the parent folder. If the parent folder has not been associated with a "Name" field, the token will not be replaced. If the parent folder has been associated with a "Name" field, and the value of that field changes, the token value will not be updated.</p><p> 
+ 
+To inherit the value assigned to a field with a different name, use the %(Parent:<i>Field</i>) token. The term <i>Field</i> should be replaced with the name of the desired field associated with the parent folder.</p></td>
+                </tr>
+                <tr>
+                    <td>Modification Date</td>
+                    <td>%(Modification Date)</td>
+                    <td>
+                        <p>The original modification date for a file scanned by Universal Capture.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>%(Name)</td>
+                    <td>The original name of a document scanned by Universal Capture.</td>
+                </tr>
+                <tr>
+                    <td>Page Count</td>
+                    <td>%(PageCount)</td>
+                    <td>The number of pages in a document.</td>
+                </tr>
+                <tr>
+                    <td>Parent ID</td>
+                    <td>%(ParentID)</td>
+                    <td>The ID of the entry's parent folder.</td>
+                </tr>
+                <tr>
+                    <td>Parent Name</td>
+                    <td>%(ParentName)</td>
+                    <td>The name of the entry's parent folder.</td>
+                </tr>
+                <tr>
+                    <td>Repository Count</td>
+                    <td>%(GCount)</td>
+                    <td>
+                       A  sequential number added every time an entry is created or imported into Laserfiche. This token starts at 1 and applies to the entire repository.                  </td>
+                </tr>
+                <tr>
+                    <td>Session Count</td>
+                    <td>%(Count)</td>
+                    <td>
+                        A token that will be replaced by a sequential number every time an entry is created or imported into a Laserfiche Client. This token starts at 1 and is specific to a particular user.</td>
+                </tr>
+                <tr>
+                    <td>Time</td>
+                    <td>%(Time)</td>
+                    <td>The time a document is scanned.</td>
+                </tr>
+                <tr>
+                    <td>User Name</td>
+                    <td>%(UserName)</td>
+                    <td>The name of the user that scanned the document.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Office Integration</h2>
+        <p>For document naming and field population, Office Integration supports all the same tokens as the <a href="#Laserfic">Laserfiche repository</a>, as listed above. The following tokens are intended to be used within the body of the document, spreadsheet, or powerpoint itself. For instance, you might want to insert the document's creator in Laserfiche into the document header or footer, or to use a field value to fill a cell in a spreadsheet.</p>
+        <p>You can add a token to an Office document by opening the <b>Laserfiche</b> tab on the ribbon, clicking <b>Tokens</b>, and selecting the token you want to insert. </p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the tokens that can be used to store Laserfiche information in an Office document.">
+            <caption>Laserfiche Tokens in Microsoft Office</caption>
+            <col style="width: 117px;" />
+            <col style="width: 150px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Syntax</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Repository Path</td>
+                    <td>%(Creation Date)</td>
+                    <td>
+                        <p>The path to the document in the repository.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Parent Path</td>
+                    <td>%(Date)</td>
+                    <td>The path to the document's parent folder in the repository.</td>
+                </tr>
+                <tr>
+                    <td>Web Access Address</td>
+                    <td>%(Date/Time)</td>
+                    <td>The&#160;URL address of the document in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Last Modified Time</td>
+                    <td>%(ID)</td>
+                    <td>The time the document was last modified in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Creator</td>
+                    <td>%(Field)</td>
+                    <td>The user name of the user who created the document in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Entry ID</td>
+                    <td>%(Parent)
+<br /><br />%(Parent: <i>Field</i>)</td>
+                    <td>The document's entry ID in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Version Number</td>
+                    <td>%(Modification Date)</td>
+                    <td>
+                        <p>The current version number of the document in Laserfiche.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Document Name</td>
+                    <td>%(Name)</td>
+                    <td>The document's name in Laserfiche</td>
+                </tr>
+                <tr>
+                    <td>Template Name</td>
+                    <td>%(PageCount)</td>
+                    <td>The name of the template applied to the document in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Field</td>
+                    <td>%(ParentID)</td>
+                    <td>The value of the selected field assigned to the document.</td>
+                </tr>
+            </tbody>
+        </table>
+        <h2 class="topicheading">Outlook Import</h2>
+        <p>The following tokens can be used to dynamically set the default folder path for imported emails. For instance, you could automatically file all emails in the folder corresponding to the user who imported it, or in a folder corresponding to the email sender.</p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the tokens that can be used to dynamically create the default email import folder.">
+            <caption>Laserfiche Tokens for Outlook Import</caption>
+            <col style="width: 117px;" />
+            <col style="width: 150px;" />
+            <col />
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Syntax</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Importer User</td>
+                    <td>%(ImporterUser)</td>
+                    <td>
+                        <p>The path to the document in the repository.</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Sender</td>
+                    <td>%(Sender)</td>
+                    <td>The path to the document's parent folder in the repository.</td>
+                </tr>
+                <tr>
+                    <td>Time Sent</td>
+                    <td>%(TimeSent)</td>
+                    <td>The&#160;URL address of the document in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Time Received</td>
+                    <td>%(TimeReceived)</td>
+                    <td>The time the document was last modified in Laserfiche.</td>
+                </tr>
+                <tr>
+                    <td>Date</td>
+                    <td>%(Date)</td>
+                    <td>The user name of the user who created the document in Laserfiche.</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

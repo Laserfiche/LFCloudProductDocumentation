@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Ellucian Colleague Integration</title>
+    </head>
+    <body>
+        <h1>Ellucian Colleague Integration</h1>
+        <p>Ellucian Colleague Integration through Ethos is available as an add-on in Laserfiche Process Automation for all accounts. The integration enables the following features:</p>
+        <ul>
+            <li>Lookup Ellucian Colleague data on a form. See <a href="../../Forms-Current/Filling-Fields-with-Lookup-Rules.htm" target="_blank" title="Click here to read more." alt="Click here to read more.">Automatically Filling Fields with Lookup Rules</a>.</li>
+            <li>Send data into Ellucian Colleague from a business process. See <a href="../../Forms-Current/Service-Tasks.htm#Rules" target="_blank" title="Click here to read more." alt="Click here to read more.">Service Tasks:&#160;Rules Service Task</a>.</li>
+            <li>Interact with Ellucian Colleague data in a workflow process. See <a href="../Workflow/Activities/Run-Web-Request-Rule.htm" target="_blank" title="Click here to read more." alt="Click here to read more.">Run Web Request Rule activity</a>.</li>
+        </ul>
+        <h2>Connecting Laserfiche to Ellucian Ethos</h2>
+        <p class="note"><b>Note:</b> Laserfiche connects directly to Ellucian Ethos instead of individual Ellucian applications. Ethos provides a layer of abstraction for the underlying business applications including Banner, Colleague, and many others. The integration pattern discussed in this chapter is not specific to the Colleague application and can be applied to any Ellucian applications as long as they have the capability of connecting through Ethos.</p>
+        <MadCap:snippetBlock src="../Snippets/EllucianEthosConnection.flsnp" />
+        <h3>Create a Web Request Rule using a Ellucian Ethos connection</h3>
+        <p>Follow <a href="../Rules/web-request-rule.htm" target="_blank" title="Click to view Web Request Rule instructions." alt="Click to view Web Request Rule instructions.">these instructions</a> to create a web request rule. During the rule creation step, use the application connection created in the previous step.</p>
+        <p>
+            <img src="images/CreateWebRequestApplicationDialog.PNG" style="margin-left: 1px;margin-right: 1px;margin-top: 1px;margin-bottom: 1px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <p>Ellucian Ethos supports the GraphQL query language. To create a web request rule using a GraphQL query, please refer to <a href="../Rules/web-request-rule.htm" target="_blank" title="Click here to read more." alt="Click here to read more.">[hyperlink to example using Ellucian GraphQL API in Web Request Rule]</a></p>
+        <p class="w">You must have GraphQL support to run a GraphQL query. Please contact Ellucian to setup GraphQL and add the resource in DataLoader for you.</p>
+        <h2>Example of using the Ellucian restful API in a Web Request Rule</h2>
+        <p>
+            <img src="images/createrule.PNG" style="margin-left: 1px;margin-right: 1px;margin-top: 1px;margin-bottom: 1px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <p>The above example API request takes a <i>personID</i> as the input parameter and returns a person information response from Ellucian Ethos, assuming an existing Ellucian Ethos application connection has been configured and tested.</p>
+        <p>
+            <img src="images/testRule.PNG" style="margin-left: 1px;margin-right: 1px;margin-top: 1px;margin-bottom: 1px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <p>The response contains information about that person.</p>
+        <h2>Example using Ellucian GraphQL API in Web Request Rule</h2>
+        <p>
+            <img src="images/WR-GraphQLRule.PNG" style="margin-left: 1px;margin-right: 1px;margin-top: 1px;margin-bottom: 1px;border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <p>Example content body:</p>
+        <p class="Code">{<br />		"query": "query{ sectionRegistrations16(filter: { registranst12: { id: { EQ: \"<span style="text-decoration: line-through;">abc422j6-f05d-48bf-9226-38ecdefa8dc4</span>\" } } } ) { edges { node { id section16 { id code number credits { measure minimum } titles { value } course16 { id number titles { value } credits { measure minimum maximum increment } } status { category } } } } } }",<br />		"variables": { },<br />        "operationName": { }<br />		}</p>
+        <p>In the example above, the Ellucian Ethos GraphQL <b>URI</b> <i>path</i> must end with “/graphql”, the <b>Method</b> must be “POST”, and the <b>Content Type</b> must be “application/json”.</p>
+        <p>The <b>Content Body</b> contains the actual GraghQL query, embedded in the <i>“query”</i> property. The <i>“variables”</i> and <i>“operationName”</i> properties may be empty.</p>
+        <p class="note"><b>Note:</b> The query string must be properly escaped as shown in the above screen shot and sample, where a backslash “\” is added before any double quotes. The ID passed in the EQ parameter is for representation only.</p>
+    </body>
+</html>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Search Repository</title>
+    </head>
+    <body>
+        <h1>Search Repository</h1>
+        <p style="text-align: center;">
+            <img src="Images/searchRepositoryCanvas.PNG" title="Search Repository activity" alt="Search Repository activity" />
+        </p>
+        <p>This activity searches through the repository for entries matching the specified criteria. The entries the search finds can be accessed with the <a href="For-Each-Entry.htm">For Each Entry</a> activity.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp" />
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Condition</b> property box, click <b>Edit conditions...</b>.</li>
+            <li><a href="../Configuring-Conditions.htm" title="Click here to learn more." alt="Click here to learn more.">Configure the conditions for the search</a>. If the conditions are not met, the Result Count token will be equal to 0, and will return no entries. <p class="note"><b>Note:</b>&#160;This activity only has the "all are true" option, does not support nested conditions, and only a subset of the Entry properties are available.</p></li>
+            <li>Click <b>OK</b>.</li>
+            <li>In the <b>Number of Results</b> property box, specify the maximum number of entries to return, up to a maximum of 100.</li>
+            <li>In the <b>Additional Properties to Retrieve</b> property box, specify any additional properties to retrieve.</li>
+            <li>In the <b>Fields to Retrieve</b> property box, specify which fields to include in the results.</li>
+            <li>In the <b>Sort Found Entries By</b> property box, specify how the entries should be sorted.</li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Getting Started with Laserfiche Bots</title>
+        <meta name="description" content="Robotic Process Automation lets you easily configure software robots to automate repetitive, routine work between multiple systems. These bots work directly across application user interfaces, mimicking the actions a person would perform, including signing in and out of applications, copying and pasting data, opening emails and attachments, and filling out forms. By automating these time-consuming, uninteresting tasks, users have more time to focus on more important matters. " />
+    </head>
+    <body>
+        <h1>Getting Started with Laserfiche Bots</h1>
+        <p>Laserfiche Bots, also known as Laserfiche Workflow Bots, use robotic process automation technology to let you easily configure software bots to automate repetitive, routine work between multiple systems. These bots work directly across application user interfaces, mimicking the actions a person would perform, including signing in and out of applications, copying and pasting data, and filling out forms. By automating these time-consuming, uninteresting tasks, users have more time to focus on more important matters.            </p>
+        <h2>Identify a process to automate</h2>
+        <p>
+            <MadCap:concept term="RPA" />Robotic Process Automation technology is particularly applicable to processes that are:</p>
+        <ul>
+            <li>Consistent and routine</li>
+            <li>High volume</li>
+            <li>Prone to human error</li>
+            <li>Discrete and limited</li>
+            <li>Limited in requiring a person to make a decision</li>
+            <li>Manual data entry or “swivel chair” work</li>
+        </ul>
+        <p>These can be related to core business processes like accounts payable, onboarding, or payroll. Or they may be individual tasks like updating your calendar with company events or copying information from one application to another. </p>
+        <h3>Overview video</h3>
+        <div><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Overview-of-Bots-20193/Overview-of-Bots-20193.html"></iframe>
+        </div>
+        <h3>Which automation tool is right for the job?</h3>
+        <p>Laserfiche has a variety of automation tools to choose from. </p>
+        <ul>
+            <li><b><a href="../Workflow/Workflow.htm" title="Click here to learn more." alt="Click here to learn more.">Workflow</a></b> excels at working with documents within a Laserfiche repository. It uses information from a variety of sources to route and update documents. It can also automate repository organization and maintenance, create folders, delete outdated documents, and more. </li>
+            <li><b><a href="../../Forms-Current/Business-Processes.htm" title="Click here to learn more." alt="Click here to learn more.">Business Processes</a></b> focus on gathering information, via online forms, and automating how the information in those forms is distributed and acted on. Forms processes often involve a variety of forms that need to be filled out and approved by multiple people. </li>
+            <li><b>Bots</b> let you record a series of actions in, or across, applications. Those recorded actions can then be run on a schedule without user intervention. </li>
+            <li><b><a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/Connector/Content/About.htm" target="_blank" title="Click here to learn about Connector." alt="Click here to learn about Connector.">Connector</a></b> allows you to integrate with line of business applications. It embeds a button into these applications that pulls information from the application and uses that to perform a variety of tasks such as searching the repository, writing data to another application, or updating metadata. </li>
+        </ul>
+        <h2>Building and running a bot</h2>
+        <p>Laserfiche has four components that work together to let you create, edit, and run your bots.</p>
+        <ul>
+            <li><a href="Recording-a-Process.htm" title="Click here to learn more." alt="Click here to learn more.">Create</a>: The <b>recorder</b> captures the series of actions the bot will perform. </li>
+            <li><a href="Editing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Edit</a>: The <b>bot designer</b> lets you edit and expand on recorded actions.</li>
+            <li><a href="Running-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Run</a>: The <b>local tool</b> tracks the bot’s progress, in real-time, when it runs.</li>
+            <li><a href="Managing-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Manage</a> and <a href="Monitoring-a-Bot.htm" title="Click here to learn more." alt="Click here to learn more.">Monitor</a>: The <b>manage</b> and <b>monitor</b> pages where you can  view information about your bots.</li>
+        </ul>
+        <h2>Best practices for designing a bot</h2>
+        <p>Before building your bot, ensure you have a solid of understanding of the following:</p>
+        <ul>
+            <li>Which applications the bot will interact with</li>
+            <li>What work the bot will do in each application</li>
+        </ul>
+        <p>Follow these steps when creating a bot:</p>
+        <ol>
+            <li><b>Setup</b>: Open all the applications and web pages you want the bot to interact with and think through the actions the bot will take.
+            </li>
+            <li><b>Record</b>: Open the bot recorder and record the actions you want the bot to take.
+            </li>
+            <li><b>Identify</b>: Add activities to the top of the designer that set up the environment the bot will work in. Use the <b>Launch application</b> activity to open applications and web pages the bot will interact with. Use the <b>Find application</b> activity to locate applications that will already be running on the machine.
+                <ol style="list-style-type: lower-alpha;"><p class="note"><b>Note:</b> When interacting with Google Chrome, launch web pages instead of finding them as bots run best in newly opened Chrome browser windows. </p><li>
+                        If a signin is required to access a web page, ensure you record the bot completing the signin process. You can secure signin information with the lock option in the bot designer. 
+                    </li><li>After launching or finding all the applications the bot will interact with, ensure the bot can identify the web page or window it will run on. Use the window title, web page, and program fields in the <b>Launch application</b> and <b>Find application</b> activities to identify pages and windows. </li></ol></li>
+            <li><b>Organize</b>: Make use of the <b>Group</b> activity to organize your bot into logical sections and the <b>Description</b> option to leave yourselves notes about each portion of the bot. This will streamline your working environment and make the bot easier to maintain. </li>
+            <li><b>Test</b>: Test your bot from the bot design page to ensure it's working as expected. <a href="Troubleshooting-Bots.htm">Troubleshoot</a> any problems. </li>
+            <li><b>Cleanup</b>: If necessary, have the bot clean up after itself by closing the applications and windows it opened while running. The <b>Keyboard Shortcut</b> activity lets you close applications with hot keys. </li>
+            <li><b>Adapt</b>: Adapt your bot to account for different scenarios. For example, you may need to add a <b>Wait</b> activity to pause the bot while an application is opening  or turn the <b>Continue on Error</b> option on for actions that can be skipped. </li>
+            <li><b>Enrich</b>: Use tokens, if conditions, and for each actions to expand your bot and make it more flexible. </li>
+        </ol>
+    </body>
+</html>

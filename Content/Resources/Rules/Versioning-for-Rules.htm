@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Versioning for Rules</h1>
+        <p>The versioning feature in business rules helps you keep track of a rule when the same rule is published more than once. With versioning, you can identify the rule you want to use in a process and track changes to a rule.</p>
+        <p>Each version has a set of numbers: <i>major</i>.<i>minor</i>.<i>patch</i>. When you save changes to the rule, <i>patch</i> increases by one. When you publish the rule, <i>minor</i> increases by one, and <i>patch</i> is set to "0". When you change the number of input or output fields in the rule, <i>major</i> increases by one, and <i>minor</i> and <i>patch</i> are set to "0". Note that after each major version update, you must update the processes in which the rule is used, to ensure that the new input or output fields do not break the process.</p>
+        <p><b>Example</b>
+        </p>
+        <p>Let’s say you start with a blank decision table rule. The blank decision table has a version number 1.0.0.</p>
+        <p>
+            <img src="../Images/version1.png" alt="Example of Rules versioning at Version 1." />
+        </p>
+        <p>You start working on the decision table rule for a few minutes. Before you continue, you decide to save and close the application. At this point, the version number is 2.0.0, because the rule was saved with new input or output fields.</p>
+        <p>
+            <img src="../Images/version2.png" alt="Example of Rules Versioning at version 2." />
+        </p>
+        <p>You work some more and then save and close the application. Again, the major version number increases by 1 to 3.0.0. If you saved twice, the increase is only recorded once.</p>
+        <p>
+            <img src="../Images/version3.png" alt="Example of Rules Versioning at version 3." />
+        </p>
+        <p>Finally, you add the last output value and save. This time, the version number increases to 3.0.1, because the number of fields have not changed. When you publish this rule, the version number becomes 3.1.0.</p>
+        <p>
+            <img src="../Images/version4.png" alt="Example of Rules Versioning at version 4." />
+        </p>
+        <p><b>Managing Versions</b>
+        </p>
+        <p>Versioning is not only useful as a reference to when a rule was published. Each version is also saved so that you can view and revert to a previous version of a rule. The Version History and Usage dialog, which opens when you select a version number in the right pane, allows you to easily interact with the latest major version of a rule. That includes viewing, exporting, and reverting previous versions.</p>
+        <p>You can perform the following actions in the dialog:</p>
+        <ul>
+            <li>To view a read-only version of a rule, click the blue text with the name of the version.</li>
+            <li>To export a major version, select <b>Export</b> and enter a name for the exported version.</li>
+            <li>To revert to a previous major version, click <b>Current Version</b> and confirm that you understand that this breaks compatibility with existing resources.</li>
+        </ul>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">&#160;</p>
+        <p MadCap:conditions="Default.Do not include">The version number of a rule is placed in the general settings properties pane in a rule editor next to <b>Version</b>. The version number is composed of three numbers:&#160;<i>major</i>.<i>minor</i>.<i>patch</i>.</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include">When you save changes to the  rule, <i>patch</i> increases by one.</li>
+            <li MadCap:conditions="Default.Do not include">When you publish the  rule, <i>minor</i> increases by one, and <i>patch</i> is set to "0".</li>
+            <li MadCap:conditions="Default.Do not include">When you change the inputs and outputs to the  rule, <i>major</i> increases by one, and <i>minor</i>&#160;and <i>patch</i> are set to "0".</li>
+        </ul>
+        <p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>:&#160;A user makes the following changes to a  rule called "Rule1":</p>
+        <ol>
+            <li MadCap:conditions="Default.Do not include">Saves <i>Rule1</i> – Version number:&#160;1.0.1</li>
+            <li MadCap:conditions="Default.Do not include">Publishes <i>Rule1</i> – Version number: 1.1.0</li>
+            <li MadCap:conditions="Default.Do not include">Adds a new input field and then saves <i>Rule1</i> – Version number:&#160;2.0.0</li>
+            <li MadCap:conditions="Default.Do not include">Changes the data type for the output field and saves <i>Rule1</i> – Version number 3.0.0</li>
+            <li MadCap:conditions="Default.Do not include">Saves <i>Rule1</i> – Version number:&#160;3.0.1</li>
+        </ol>
+        <h2 MadCap:conditions="Default.Do not include">Manage Versions</h2>
+        <p MadCap:conditions="Default.Do not include">In the Version History and Usage dialog, you can easily view and export a major version, as well as revert to a previous major version of a  rule. Simply click the version number in the properties pane to open the dialog.</p>
+        <p MadCap:conditions="Default.Do not include">
+            <img src="../../Images/business-rule-versioning.png" />
+        </p>
+        <p MadCap:conditions="Default.Do not include">You can perform the following actions in the dialog:</p>
+        <ul>
+            <li MadCap:conditions="Default.Do not include">To view the major version in read-only mode, click the blue text with the name of the version.</li>
+            <li MadCap:conditions="Default.Do not include">To export the major version, select <b>Export</b> on the right to download the rule.</li>
+            <li MadCap:conditions="Default.Do not include">To revert to a previous major version, click <b>Current Version</b> and click <b>Yes</b> to confirm that this breaks compatibility with existing resources.</li>
+        </ul>
+    </body>
+</html>

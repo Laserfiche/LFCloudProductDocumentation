@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="12" MadCap:lastHeight="915" MadCap:lastWidth="972" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Copy Metadata</h1>
+        <p style="text-align: center;">
+            <img src="Images/copyMetadataCanvas.PNG" title="Copy Metadata activity" alt="Copy Metadata activity" />
+        </p>
+        <p>This activity copies metadata (template, field values, and tags) from one entry to another. A field value is the information contained in a field about a document or folder. A template is a collection of fields. A tag is a way to categorize documents and folders. Informational tags provide more information about a particular document and its type of content. Security tags prevent Laserfiche users and groups from accessing documents with security tags that users don't have permission for.</p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
+            </li>
+            <li>In the <b>Copy Options</b> property box, select the type of metadata you want to copy.<ul><li><b>Assign Template</b>: Assigns the template from the <b>Copy Metadata From</b> entry to the <b>Copy Metadata To</b> entry. Only templates are copied, not field values.</li></ul><ul><li><b>Copy Field Values</b>: Copies the field values from the <b>Copy Metadata From</b> entry to the <b>Copy Metadata To</b> entry.<p class="ex"><b>Example</b>: The "Old Project" document has an "Author" field with the value Bob and a "Due Date" field with the value September 1st. The "New Project" document has a "Subject" field with the value Green Initiative and a "Due Date" with the value December 15th. If you copy the field values from the "Old Project" document to the "New Project" document, the "New Project" document will have the following fields: "Author" with the value Bob, "Subject" with the value Green Initiative, and "Due Date" with the value September 1st.</p><ul><li><b>For multi-value fields, append the copied values</b>: Appends copied field values instead of replacing them in the new entry.</li><li><b>Do not copy blank fields</b>: Excludes blank fields.</li></ul></li></ul><ul><li><b>Copy Tags</b>: Copies the tags from the <b>Copy Metadata From</b> entry to the <b>Copy Metadata To</b> entry.<ul><li>Select <b>Exclude security tags</b> to only copy informational tags, not security tags.<p class="ex"><b>Example</b>: You are copying the metadata from a sensitive client record to a client summary page that can be viewed by anyone. In this situation, you would want to copy the informational tags, but not the security tags that would restrict access to the document.</p></li></ul></li></ul></li>
+            <li>In the <b>Copy Metadata From</b> property box, select which entry you want to get metadata from. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+            <li>In the <b>Copy Metadata To</b> property box, select which entry you want the metadata to be assigned to. <a href="../Selecting-an-Entry.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about selecting an entry</a></li>
+        </ol>
+        <MadCap:snippetBlock src="../../Snippets/disable-activity.flsnp" />
+    </body>
+</html>

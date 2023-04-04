@@ -1,0 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <body>Timer start events start a process on a particular date or schedule. Timer start events are useful if you have a process that should automatically start at a certain time or on a certain schedule.</body>
+</html>

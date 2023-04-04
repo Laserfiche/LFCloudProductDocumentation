@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head>
+    </head>
+    <body>
+        <h1>Try-Catch</h1>
+        <p style="text-align: center;">
+            <img src="Images/tryCatchCanvas.PNG" title="Try-Catch activity" alt="Try-Catch activity" />
+        </p>
+        <p>This activity specifies a sequence of activities to perform (in a try branch) and additional activities to perform (in a catch branch) if an activity in the try branch encounters an error. This prevents the workflow from terminating due to the error. The <a href="Rethrow.htm#section7" title="Click here to learn more." alt="Click here to learn more.">Rethrow</a> activity recreates the error that started a <b>Try-Catch</b> activity's catch branch. <a href="../Tokens-Regex/Activity-Tokens/Tokens-for-Try-Catch-Activity.htm" title="Click here to learn more." alt="Click here to learn more.">Learn about tokens this activity produces</a></p>
+        <p>To set up this activity:</p>
+        <ol>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Drag Activities.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>
+                <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp">
+                </MadCap:snippetText>
+            </li>
+            <li>Drag the activities you want to attempt and drop them into the <b>Try Branch</b>.</li>
+            <li>Drag the activities you want to catch and drop them into the <b>Catch Branch</b>.</li>
+            <li>Select the <b>Catch Branch</b>.</li>
+            <li>In the <b>Error Type</b> property box, select the error type to cause the <b>Catch Branch</b> to run.</li>
+            <ul>
+                <li><b>All Errors</b>: The <b>Catch Branch</b> will run if the try branch encounters any error.</li>
+                <li><b>Only Laserfiche Server errors</b>: The <b>Catch Branch</b> will run only if the try branch encounters a Laserfiche Server error.</li>
+                <li><b>Only errors of type</b>: The <b>Catch Branch</b> will run only if the try branch encounters a specified type of error. To specify the type of error:<ol><li>Click the <b>Browse</b> button (ellipsis) <img src="../../../Images/Icon_Ellipsis_White.png" /> to browse to an exception type.</li><li>Select an error type by expanding a node. If you cannot find the error type, type the assembly qualified name of the exception type in the text box.</li><li>Click <b>OK</b>.</li></ol></li>
+            </ul>
+        </ol>
+        <p>To add a catch branch, click the following <b>Plus</b> in the center of the activity:</p>
+        <p>
+            <img src="../../../Images/Plusbutton.png" />
+        </p>
+        <p>Then, add the activities you want to run if the <b>Try Branch</b> encounters an error.</p>
+        <p>To delete a catch branch:</p>
+        <ol>
+            <li>Select a branch in the <MadCap:snippetText src="../../Snippets/Designer Pane.flsnp" /> to highlight it.</li>
+            <li>Click the <b>Delete Selected Activity</b> button <img src="../../../Images/image14.png" /> in the toolbar.</li>
+        </ol>
+        <MadCap:snippetText src="../../Snippets/disable-branch.flsnp" />
+    </body>
+</html>

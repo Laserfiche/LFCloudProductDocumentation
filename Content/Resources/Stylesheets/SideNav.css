@@ -33,13 +33,14 @@ p.example
 
 p.note
 {
-	color: #616E14;
-	border: solid 1px #BFD62F;
-	background-color: #DAE691;
+	color: #265823;
+	border: solid 1px #cff8dc;
+	background-color: #ebfef8;
 	-moz-border-radius: 6px;
 	-webkit-border-radius: 6px;
 	border-radius: 6px;
-	padding: 14px 20px;
+	padding: 12px 18px 15 px;
+	font-family: Arial;
 }
 
 a
@@ -546,4 +547,83 @@ td.tabletext
 	border-right: none;
 	border-top: none;
 	border-width: thin;
+}
+
+table
+{
+	border: medium #ffffff;
+	width: 100%;
+}
+
+.note
+{
+	padding: 12px 18px 15px;
+	background-color: #ebfef8;
+	color: #265823;
+	font-family: Arial;
+	border: 1px solid #cff8dc;
+}
+
+.w
+{
+	padding: 12px 18px 15px;
+	background-color: #ffe6e6;
+	color: #762626;
+	border: 1px solid #ffd5d5;
+}
+
+.ex
+{
+	padding: 12px 18px 15px;
+	background-color: #f0f0f0;
+	color: #555555;
+	font-family: Arial;
+	border: 1px solid #e2e2e2;
+}
+
+.nestednote
+{
+	padding: 7px 13px;
+	margin: 10px 0;
+	background-color: #ebfef8;
+	color: #265823;
+	font-family: Arial;
+	border: 1px solid #c8f3d6;
+}
+
+.nestedw
+{
+	padding: 7px 13px;
+	margin: 10px 0;
+	background-color: #ffe6e6;
+	color: #762626;
+	border: 1px solid #fccfcf;
+}
+
+.nestedex
+{
+	padding: 7px 13px;
+	margin: 10px 0;
+	background-color: #f0f0f0;
+	border: 1px solid #e0e0e0;
+	color: #555555;
+	font-family: Arial;
+}
+
+div.Code,
+p.Code,
+pre.Code
+{
+	padding: 12px 18px 15px;
+	font-family: fixed-width, 'Courier New';
+	background-color: #f0f0f0;
+	color: #555555;
+	border: 1px solid #e2e2e2;
+}
+
+span.Code
+{
+	font-family: fixed-width, 'Courier New';
+	background-color: #f0f0f0;
+	color: #555555;
 }

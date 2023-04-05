@@ -156,9 +156,6 @@
     Comment=""
     EvaluatedDefinition="Windows Server">Windows Server</Variable>
   <Variable
-    Name="NewVariable"
-    Comment="" />
-  <Variable
     Name="Microsoft Office"
     Comment=""
     EvaluatedDefinition="Microsoft Office">Microsoft Office</Variable>
@@ -230,4 +227,10 @@
     Name="Banner"
     Comment=""
     EvaluatedDefinition="Banner">Banner</Variable>
+  <Variable
+    Name="Yr"
+    Comment=""
+    Type="DateTime"
+    LastUpdated="2023-04-05T15:01:25.2647075-07:00"
+    EvaluatedDefinition="yyyy">yyyy</Variable>
 </CatapultVariableSet>

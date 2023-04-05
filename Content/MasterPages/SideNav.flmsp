@@ -8,7 +8,7 @@
         <MadCap:bodyProxy />
         <div class="footer" id="myfooter">
             <div id="shoe">
-                <nav class="footernav"><a href="https://signin.laserfiche.com/" target="_parent">Laserfiche Cloud</a><a href="https://status.laserfiche.com/" target="_parent">Service Status</a><a href="https://www.laserfiche.com/contact-laserfiche" target="_parent">Contact Laserfiche</a> <a href="../Resources/Copyright.htm">© 20223 Laserfiche</a></nav>
+                <nav class="footernav"><a href="https://signin.laserfiche.com/" target="_parent">Laserfiche Cloud</a><a href="https://status.laserfiche.com/" target="_parent">Service Status</a><a href="https://www.laserfiche.com/contact-laserfiche" target="_parent">Contact Laserfiche</a> <a href="../Copyright.htm">© <MadCap:variable name="Variables.Yr" /> Laserfiche</a></nav>
             </div>
         </div>
     </body>

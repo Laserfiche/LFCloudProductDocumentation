@@ -7,7 +7,7 @@
   GlossaryTermConversion="marked"
   Skin="/Project/Skins/SideNav.flskn"
   MasterToc="/Project/TOCs/Master.fltoc"
-  ConditionTagExpression="exclude[Default.API or Default.BlogOnly or Default.Exclude or Default.Forms or &quot;Default.In Progress&quot; or Default.SolutionProviderOnly]"
+  ConditionTagExpression="exclude[Default.API or Default.BlogOnly or &quot;Default.Do not include&quot; or Default.Exclude or Default.Forms or &quot;Default.In Progress&quot; or Default.SolutionProviderOnly]"
   CentralLinkIds=""
   TargetLanguage="en-us,fr-ca_../fr-ca/Laserfiche Cloud.flprj,es-mx_../es-mx/Laserfiche Cloud.flprj"
   MasterPage="/Content/MasterPages/SideNav.flmsp"

@@ -712,7 +712,7 @@
         conditions="Default.Exclude" />
       <TocEntry
         Title="Service Limits"
-        Link="/Content/Service-Limits.htm" />
+        Link="/Content/Resources/Service-Limits.htm" />
       <TocEntry
         Title="Setting a Default Application"
         Link="/Content/default-application.htm" />

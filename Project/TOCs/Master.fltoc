@@ -41,6 +41,12 @@
       <TocEntry
         Title="2023">
         <TocEntry
+          Title="May 2023"
+          Link="/Content/2023.05.htm" />
+        <TocEntry
+          Title="April 2023"
+          Link="/Content/2023.04.htm" />
+        <TocEntry
           Title="March 2023"
           Link="/Content/2023.03.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
@@ -209,6 +215,9 @@
     <TocEntry
       Title="Keyboard Shortcuts"
       Link="/Content/Keyboard_Shortcuts.htm" />
+    <TocEntry
+      Title="Repository Design Principles and Best Practices"
+      conditions="Default.Do not include" />
     <TocEntry
       Title="Adding Documents and Folders"
       Link="/Content/Adding_Content.htm">
@@ -391,6 +400,9 @@
         Title="Metadata"
         Link="/Content/Metadata.htm">
         <TocEntry
+          Title="Metadata Design Principles and Best Practices"
+          conditions="Default.Do not include" />
+        <TocEntry
           Title="Fields and Templates"
           Link="/Content/Fields_and_Templates.htm">
           <TocEntry
@@ -449,23 +461,36 @@
       Title="Sharing, Downloading, and Printing Documents"
       Link="/Content/Printing_and_Exporting.htm" />
     <TocEntry
-      Title="Security"
+      Title="Repository Security"
       Link="/Content/Security.htm">
+      <TocEntry
+        Title="Security Principles and Best Practices"
+        Link="/Content/Security-Principles-and-Best-Practices.htm" />
       <TocEntry
         Title="Users and Groups"
         Link="/Content/Users_and_Groups.htm" />
       <TocEntry
-        Title="Access Rights"
-        Link="/Content/Access_Rights.htm" />
+        Title="Core Security: Entry Access Rights, Feature Rights, and Privileges"
+        Link="/Content/Core-Security.htm">
+        <TocEntry
+          Title="Entry Access Rights"
+          Link="/Content/Access_Rights.htm" />
+        <TocEntry
+          Title="Scope and Inheritance"
+          Link="/Content/Scope-and-Inheritance.htm" />
+        <TocEntry
+          Title="Feature Rights and Privileges"
+          Link="/Content/Privileges.htm" />
+      </TocEntry>
       <TocEntry
-        Title="Feature Rights and Privileges"
-        Link="/Content/Privileges.htm" />
-      <TocEntry
-        Title="Field and Template Rights"
-        Link="/Content/Field_Rights.htm" />
-      <TocEntry
-        Title="Security Tags"
-        Link="/Content/Security_Tags.htm" />
+        Title="Supplemental Security Features">
+        <TocEntry
+          Title="Field and Template Rights"
+          Link="/Content/Field_Rights.htm" />
+        <TocEntry
+          Title="Security Tags"
+          Link="/Content/Security_Tags.htm" />
+      </TocEntry>
     </TocEntry>
     <TocEntry
       Title="Auditing"
@@ -703,8 +728,16 @@
         Link="/Content/repositoryimport.htm"
         StartSection="false" />
       <TocEntry
+        Title="Signing In with an Email vs User Name"
+        Link="/Content/RootAccountVSUserAccount.htm"
+        conditions="Default.Exclude" />
+      <TocEntry
+        Title="Subscribing to Email Notifications"
+        Link="/Content/email-subscription.htm"
+        conditions="Default.Exclude" />
+      <TocEntry
         Title="Service Limits"
-        Link="/Content/Resources/Service-Limits.htm" />
+        Link="/Content/Service-Limits.htm" />
       <TocEntry
         Title="Setting a Default Application"
         Link="/Content/default-application.htm" />

@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Security Principles and Best Practices</h1>
+        <p>Laserfiche repository security consists of a set of powerful and flexible tools that allow you granular control of how documents can be accessed and worked with. Because of this granularity, there may be multiple ways to configure security to the same ends; however, some configurations will be easier to set up, maintain, and troubleshoot than others. The following principles will help you create and maintain a robust, easy-to-manage security configuration for your repository.</p>
+        <ol>
+            <li>
+                <p><b>Set security on the folder and group level as much as possible.</b> All security features can be set on either individual <a href="Users_and_Groups.htm">users or on groups</a>, and <a href="Access_Rights.htm">entry access rights</a> can be set on individual documents or on folders. However, setting these rights on groups or folders and allowing the users and documents within those folders to inherit those rights will result in needing fewer manual configurations to accomplish the same purpose, and therefore will be easier to troubleshoot and less prone to error in the future. In general, the more manual configurations you need to accomplish something, the greater overhead for administration in the future. There are exceptions to this general rule (for instance, a specific user may have a personal folder for which they have special access needs, which would require setting rights for that user on the folder; alternately, a member of a group might need to be denied access to certain documents that the rest of their group has access to, requiring a specific deny setting for the user), but as much as possible, set rights at the folder and group level.</p>
+            </li>
+            <li>
+                <p><b>Organize your groups and folder structure to match your security.</b> As you should ideally be configuring security on the folder level, in general it is a good idea to group documents with the same security needs together. This allows you to take advantage of <a href="Scope-and-Inheritance.htm">scope and inheritance</a> to quickly and easily apply security to your documents. By contrast, folders containing documents with very different security needs (such as "Miscellaneous"&#160;folders with no common theme) are very difficult to secure efficiently</p>
+            </li>
+            <li>
+                <p><b>Work from largest to smallest.</b> In general, it is a good idea to apply the broad strokes of your repository's security first, test those broad strokes, and then refine as necessary. It is usually easier to configure security by putting documents with broader access needs (an entire department, for example)&#160;higher in the folder tree, with documents with more specific security needs (such as an individual team within that department)&#160;as a subfolder deeper in the tree. This allows you to use fewer explicit rights configurations, which in turn means fewer places to adjust or troubleshoot as your security needs change.</p>
+            </li>
+            <li>
+                <p><b>Use the minimum configurations you can to accomplish what you want to do.</b> While Laserfiche offers many security features and options, most sites will not need to use all of them. The more specific configurations you need to make, and the more features you use the more difficult your configuration will be to troubleshoot. Every security feature has a purpose, but not every organization needs to use every one.</p>
+            </li>
+        </ol>
+        <p>&#160;</p>
+        <p>&#160;</p>
+    </body>
+</html>

@@ -1,0 +1,232 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Scope and Inheritance</h1>
+        <p>Scope and inheritance determine what part of the folder tree is affected by a specific entry access right. On the folder on which the right was directly configured, the right is considered an <i>explicit right</i>. Any documents or folders who fall within the scope configured when setting that explicit right has <i>inherited</i> the right.</p>
+        <h2 class="topicheading">Entry Access Rights Settings</h2>
+        <p>Entry access rights have three possible settings:</p>
+        <ul>
+            <li>
+                <p>Deny:&#160;The right is denied for the user.</p>
+            </li>
+            <li>
+                <p>Allow:&#160;The right has been allowed for the user.</p>
+            </li>
+            <li>
+                <p>Blank:&#160;This right does not imply any access.&#160;If a user has inherited an allow from somewhere else, and has no relevant deny settings for the right, they will be allowed to perform the action; if they have only blanks, they will be implicitly denied.</p>
+            </li>
+        </ul>
+        <h2 class="topicheading">Rights Calculations</h2>
+        <h3>In the Folder Structure</h3>
+        <p>In the folder structure, any right that has been explicitly set takes precedence over rights that have been inherited. This is true regardless of whether the right is an allow or a deny. If a deny has been inherited from a folder higher in the folder tree, but an allow is set on a folder or document lower in the folder tree, the explicit allow will take precedence over the inherited deny. The user may not be able to browse to the document in question as they were denied access higher in the tree, but they can still locate it via searches, shortcuts, or links.</p>
+        <h3>In Users and Groups</h3>
+        <p>In users and groups, there is no concept of an explicit or inherited right. All users and groups are considered to be on the same level, without the hierarchy implicit in the folder tree. Therefore, when it comes to configuring security for users and groups, a deny will always take precedence over an allow, and an allow will always take precedence over a blank. </p>
+        <h2 class="topicheading">List of Scopes</h2>
+        <p>In addition to assigning entry access 
+ rights directly on a document or folder, you can also allow documents 
+ and folders to inherit the entry access rights assigned to a folder. To create a cohesive and consistent security policy, we recommend using inheritance wherever possible, rather than configuring security independently on individual documents.</p>
+        <p>Scope allows you to determine how far down the folder tree a particular right will be inherited. These range from the very broad (<b>This entry, subfolders, and documents</b>)&#160;to the very narrow (<b>This entry only</b>), with many options in between.</p>
+        <p>Note that scopes can be combined on the same entry. If you want a user to be able to open but not modify folders, but to be able to modify the documents within the folder, you could configure the folder with the <b>Browse</b> and <b>Read</b> rights set with a scope of <b>This folder and subfolders</b>, and then also configure the <b>Browse</b>, <b>Read</b> and <b>Modify Contents</b> with a scope of <b>Documents only</b> on the same folder. This allows you to affect all subfolders and documents with just two configurations.</p>
+        <p>The following table lists the nine possible 
+ scopes and shows if the assigned entry access control rights will be applied 
+ to a particular entry when that scope is used. </p>
+        <table id="myTable" class="tablesorter" border="0" style="" summary="This table lists the scopes that can be used to specify how far down the folder tree a particular entry access rights will be applied.">
+            <caption>Scopes for Entry Access Rights</caption>
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <col />
+            <thead>
+                <tr>
+                    <th>Scope</th>
+                    <th>Applies rights to selected 
+ entry</th>
+                    <th>Applies rights to subfolders 
+ in selected folder</th>
+                    <th>Applies rights to documents 
+ in selected folder</th>
+                    <th>Applies rights to all subsequent 
+ subfolders</th>
+                    <th>Applies rights to documents 
+ in all subsequent subfolders</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>This folder, subfolders, and documents
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>This folder and subfolders
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>This folder and its immediate children
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Subfolders and documents only</td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Subfolders only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Documents only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Immediate children only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Documents that are immediate children only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+                <tr>
+                    <td>This entry only
+                </td>
+                    <td>
+                        <p style="text-align: center;" align="center">x</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                    <td>
+                        <p style="text-align: center;" align="center">&#160;</p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>

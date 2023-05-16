@@ -6,6 +6,115 @@
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p style="font-weight: bold;">May 15, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>
+                <p>Save to repository tasks can no longer be marked suspended after completed. (424511)</p>
+            </li>
+            <li>
+                <p>Users denied access to process automation are now able to reassign tasks to process automation teams. (424940)</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;">May 9, 2023</p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Resolved a potential issue that could result in select pages displaying labels in a test language when viewed on web browsers configured for certain languages. (426029, 426047)</li>
+        </ul>
+        <p>Rules</p>
+        <ul>
+            <li>Corrected an issue introduced with our regular May release that disabled remote agent workers version 11.3 and earlier. (426045)</li>
+        </ul>
+        <p style="font-weight: bold;"><a href="2023.05.htm">May 8, 2023</a>
+        </p>
+        <p>Account Administration</p>
+        <ul>
+            <li>When creating a demo account, the supported country list now matches the Laserfiche Order Management System's country list.</li>
+        </ul>
+        <p>Rules:</p>
+        <ul>
+            <li>Increased the table limit per data source from 3500 to 10000. (422954)</li>
+        </ul>
+        <p style="font-weight: bold;">May 4, 2023</p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Fixed an issue that sometimes caused a connection error when inserting data into a lookup table from a workflow run rule activity. (421914)</li>
+        </ul>
+        <p>Workflow</p>
+        <ul>
+            <li>The email activity no longer marks addresses as invalid when a token contains multiple valid addresses. (422505)</li>
+        </ul>
+        <p>Repository</p>
+        <ul>
+            <li>Users can now access My&#160;Account settings by clicking their user name in the upper right corner of the web client. (418144)</li>
+            <li>When copying a link to a document in the web client, the user's account ID&#160;will be included in the URL, so that the user who receives the URL&#160;does not need to manually input the account ID. (418154)</li>
+            <li>Resolved an issue that could result in an incorrect "There are no matching multi-value field groups for the selected entries" error when selecting multiple documents with the same template and multiple multi-value field groups. (423174)</li>
+            <li>The email format option and custom field format options now correctly display the currently-selected value. (346612, 390060)</li>
+            <li>Resolved an issue that could cause rearranging toolbar buttons to order the buttons incorrectly. (420117)</li>
+            <li>In some cases, the document viewer could become unresponsive when a multi-value field exceeds 1000 values. This issue has been resolved. (420716)</li>
+            <li>Resolved an issue that could prevent field values for fields present in two templates from being retained when switching between the templates. (417790)</li>
+            <li>In some cases, currency fields would display incorrectly when the browser language is set to Spanish. This issue has been resolved. (421401)</li>
+            <li>Resolved an issue that could cause users to be unexpectedly signed out. (421444)</li>
+            <li>Field searches where a specified field does not equal (&lt;&gt;) a specific string will now exclude documents where the field is empty. (421019)</li>
+            <li>In some cases, if a field is applied to a document independently from a template, and then a template is applied to that document that contains the same field as part of a set of dynamic fields, the field values would not load correctly. This issue has been resolved. (380921)</li>
+            <li>In some cases, documents with dynamic fields would become inappropriately locked when being viewed by a user who does not have modify rights to the field. (419593)</li>
+        </ul>
+        <p>Public Portal</p>
+        <ul>
+            <li>The total document size and electronic file columns in the folder browser now display sizes as KB, MB, or GB,&#160;depending on size, instead of as bytes. (418143)</li>
+            <li>Resolved an issue that could prevent searches involving double quotes from being processed properly as phrase searches when performed from the Welcome page. (419173)</li>
+            <li>Resolved an issue that could prevent some PDFs from displaying correctly. (408064)</li>
+        </ul>
+        <p style="font-weight: bold;">April 24, 2023</p>
+        <p>Rules</p>
+        <ul>
+            <li>A temporary limit of 3500 tables per data source has been added to control performance. No existing data sources should be affected. (422532)</li>
+        </ul>
+        <p>Workflow</p>
+        <ul>
+            <li>Tokens containing multiple email addresses are now handled correctly when using the send email activity. (422505)</li>
+        </ul>
+        <p>Business Processes:</p>
+        <ul>
+            <li>Updated the PDF generator to prevent save to repository task failures. (421439)</li>
+            <li>Limits have been added to prevent extremely large data extractions when exporting reports from the monitor page. See the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Service-Limits.htm#bp-limits" title="Click here to read more." alt="Click here to read more.">Service Limits</a> page for additional information. (422982)</li>
+        </ul>
+        <p style="font-weight: bold;">April 13, 2023</p>
+        <p style="font-weight: normal;">Bots</p>
+        <ul>
+            <li>
+               Laserfiche bots now support Chrome 111.9.5563.65. (421690)
+            </li>
+        </ul>
+        <p style="font-weight: bold;"><a href="2023.04.htm">April 10, 2023</a>
+        </p>
+        <p>Business Processes:</p>
+        <ul>
+            <li>On importing a process, form tables and collections now receive different IDs. (418093, 418076)</li>
+            <li>Fixed an issue when importing a process that contains an email display name. (419039)</li>
+        </ul>
+        <p>Repository</p>
+        <ul>
+            <li>Resolved an issue that could cause searches to be performed as fuzzy searches even when the fuzzy search option was disabled. (418049)</li>
+            <li>In some cases, importing a briefcase with multivalue fields could result in conflicting field values being lost. This issue has been resolved. (418132)</li>
+            <li>The ZIP&#160;file created when a folder is shared via direct share is now correctly named. (415810)</li>
+            <li>In some cases, when renaming an entry multiple times, the entry will display a previous name. This issue has been resolved. (404126)</li>
+        </ul>
+        <p>Public Portal</p>
+        <ul>
+            <li>Improved responsiveness when using a screenreader. (173179)</li>
+            <li>Resolved an issue that could prevent the currency field format from displaying properly when the field is part of a multi-value field group. (190821)</li>
+            <li>In some cases, users were unable to download media files when using mobile devices with the Chrome browser. This issue has been resolved. (244535)</li>
+            <li>Resolved an issue that could prevent custom column widths in the search results from being retained. (417606)</li>
+            <li>In some cases, folders with very large numbers of subfolders would not load or would load slowly. This issue has been resolved. (414632)</li>
+            <li>When opening the last page of search results, if only one document was on the page that document would sometimes automatically be opened. This issue has been resolved. (415568)</li>
+            <li>Resolved an issue that could prevent searches created in the public portal designer from being saved. (409975)</li>
+            <li>Tokens in watermark headers and footers now display correctly in public portal. (410638)</li>
+            <li>Resolved an issue that could caused within searches to display "undefined"&#160;instead of the correct context hits. (410837)</li>
+            <li>Files that do not have a file extension can now be downloaded. (405148)</li>
+            <li>Resolved an issue that could prevent public portal pages ending in ElectronicFile.aspx from loading correctly on the first attempt. (408694)</li>
+            <li>When an external column in a dynamic field is assocciated with a list field in Laserfiche, the search dropdown would not always populate correctly. This issue has been resolved. (410723)</li>
+        </ul>
         <p style="font-weight: bold;">April 3, 2023</p>
         <p style="font-weight: normal;">Capture Profiles</p>
         <ul>

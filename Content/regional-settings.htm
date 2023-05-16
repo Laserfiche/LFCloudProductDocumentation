@@ -6,12 +6,11 @@
         <h1>Regional Settings</h1>
         <p>Laserfiche Cloud allows administrators to set an account-wide default for regional settings. Individual users can choose to set different options that take precedence over the system default. </p>
         <p>Regional settings apply to the sign-in page, the app picker, the repository, and tasks inbox, forms submissions, and process reports. Support will be expanded to administrative portions of Laserfiche Cloud in the future. Language support for the Laserfiche Cloud service includes English (United States), French (Canada), and Spanish (Latin America).</p>
-        <h2 class="topicheading">Configuring Account-Wide Regional Settings</h2>
+        <h2 class="topicheading">Configuring Default Account-Wide Regional Settings</h2>
         <ol>
             <li>Sign in to Laserfiche Cloud and navigate to Account Administration. This requires the Account Administration role. </li>
-            <li>Under 
-                <img src="Images/regional-settings.png" title="screenshot of Laserfiche Cloud regional settings tab" alt="screenshot of Laserfiche Cloud regional settings tab" style="border-style:solid; border-width:1px" /></li>
-            <li>sample</li>
+            <li>Select <b>Settings</b> and view the <b>Regional Settings</b> tab.  <img src="Images/regional-settings.png" title="screenshot of Laserfiche Cloud regional settings tab" alt="screenshot of Laserfiche Cloud regional settings tab" style="border-style:solid; border-width:1px" /></li>
+            <li>Configure a default time zone, language, and regional format for the account. Regional format includes number and date formats. </li>
         </ol>
         <h2 class="topicheading">Configuring Individual Regional Settings</h2>
         <ol>
@@ -20,35 +19,11 @@
             <li>On the <b>My Account</b> page, select the desired time zone, language, and regional format.</li>
             <li>Click <b>Save</b> to save your selections.</li>
         </ol>
-        <p>&#160;</p>
-        <p>Region us-west-2</p>
+        <p>Regional settings currently have no impact on:</p>
         <ul>
-            <li>
-                <p>i. Time zone: Pacific Time</p>
-                <p>ii. Regional Format: EnglishUS</p>
-                <p>iii. Language: English</p>
-            </li>
+            <li>Time zones used in workflows and business processes. Workflow and business processes use their work schedule settings to determine the time zone. Work schedules will not be affected by account-level time zone settings at this time.</li>
+            <li>Date and number formats in workflows and business processes. Workflow and Forms engines will not use the account-level locale settings at this time.</li>
+            <li>Public portal connections. As connections to the public portal are anonymous, browser locale will be used to determine the language, time zone and number and date formats.</li>
         </ul>
-        <p>b. Region ca-central-1</p>
-        <ul>
-            <li>
-                <p>i. Time zone: Eastern Time</p>
-                <p>ii. Regional Format: EnglishCA</p>
-                <p>iii. Language: English</p>
-            </li>
-        </ul>
-        <p>c. Region eu-west-1</p>
-        <ul>
-            <li>
-                <p>i. Time zone: GMT</p>
-                <p>ii. Regional Format: EnglishGB</p>
-                <p>iii. Language: English</p>
-            </li>
-        </ul>
-        <p>&#160;</p>
-        <p>These settings will have no impact on:</p>
-        <p>Time zones used in workflows and business processes. Workflow and business processes use their work schedule settings to determine the time zone. Work schedules will not be affected by account-level time zone settings at this time.</p>
-        <p>Date and number formats in workflows and business processes. Workflow and Forms engines will not use the account-level locale settings at this time.</p>
-        <p>Public portal connections. As connections to the public portal are anonymous, browser locale will be used to determine the language, time zone and number and date formats.</p>
     </body>
 </html>

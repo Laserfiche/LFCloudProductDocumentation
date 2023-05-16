@@ -7,14 +7,20 @@
         <h1>
             <MadCap:concept term="Forms" />Creating Rules to Show or Hide Fields</h1>
         <p>Field rules determine how fields will interact  in the form and allow you to show or hide fields based on conditions. In classic forms, the number to the left of the rule represents the order of evaluation of multiple rules. In the forms designer, each rule has a numbered title instead. A larger number overrides a smaller number. </p>
+        <p class="ex"><b>Example:</b> You have a form with a question "Need a car rental?" where a user selects "yes" or "no." If the user selects "yes," another field is displayed asking "Are you under 25?" If the user doesn't need a car rental, there is no need to display the other field. 
+		</p>
         <p class="ex"><b>Example:</b> Showing and Hiding Form Fields</p>
         <div><iframe width="100%" height="500" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Showing-and-Hiding-Form-Fields-20213/Showing-and-Hiding-Form-Fields-20213.html"></iframe>
         </div>
-        <p>Forms designer field rule:<br /><img src="Resources/Images/modernrules.PNG" alt="Sample field rule" title="For more complicated field rules, consider using custom JavaScript." /></p>
-        <p>Classic forms designer field rule:<br /><img src="../Resources/Forms Images/image12.png" alt="Sample field rule" title="For more complicated field rules, consider using custom JavaScript." /></p>
-        <p class="ex"><b>Example:</b> You have a form with a question "Need a car rental?" where a user selects "yes" or "no." If the user selects "yes," another field is displayed asking "Are you under 25?" If the user doesn't need a car rental, there is no need to display the other field. 
-		</p>
         <h2>Field rules in the forms designer</h2>
+        <p>Forms designer field rule:<br /><img src="Resources/Images/modernrules.PNG" alt="Sample field rule" /></p>
+        <div class="note">
+            <p><b>Note:</b>&#160;In the form designer, you can use field rules to add or remove classes to your fields and other form elements. In order to add or remove CSS classes, you will need to create those classes in the <a href="Javascript-and-CSS/Styles-in-the-Form-Designer.htm#Using" title="Click here to learn more." alt="Click here to learn more.">CSS editor</a>. For example:</p>
+            <p><code>.green { background-color: green; }</code>
+            </p>
+            <p><code>.red { background-color: red; }</code>
+            </p>
+        </div>
         <p><b>To create a field rule</b>
         </p>
         <ol>
@@ -22,15 +28,17 @@
             <li>In the right pane, select the <b>Rules</b> tab or click the <b>Field Rules</b> button in the left navigation bar to open a full-screen rule editor similar to the classic forms editor.</li>
             <li>Click <b>Field Rules</b> to expand the field rules area.</li>
             <li><b>Click Add Rule</b>.</li>
-            <li>In the first section, select <b>Show</b>, <b>Hide</b>, <b>Enable</b>, <b>Disable</b>, or <b>Validate</b> from the first drop-down menu and select the field you want displayed or hidden from the second drop-down.<ul><li><b>Show</b> - Show the selected field(s).</li><li><b>Hide</b> - Hide the selected field(s).</li><li><b>Enable</b> - If disabled, enabled the selected field(s).</li><li><b>Disable</b> - If enabled, disables the selected field(s).</li><li><b>Validate</b> - Use to set a field as <b>optional</b> or <b>required</b>, and validate the content using the conditions specified.</li></ul></li>
+            <li>In the first section, select <b>Show</b>, <b>Hide</b>, <b>Enable</b>, <b>Disable</b>, <b>Validate</b>, <b>Add CSS&#160;Classes</b>, or <b>Remove CSS Classes</b> from the first drop-down menu and select the field you want to control from the second drop-down.<ul><li><b>Show</b> - Show the selected field(s).</li><li><b>Hide</b> - Hide the selected field(s).</li><li><b>Enable</b> - If disabled, enabled the selected field(s).</li><li><b>Disable</b> - If enabled, disables the selected field(s).</li><li><b>Validate</b> - Use to set a field as <b>optional</b> or <b>required</b>, and validate the content using the conditions specified.</li><li><b>Add CSS Classes</b> - Use to add predefined CSS classes to a field.</li><li><b>Remove CSS&#160;Classes</b> - Use to remove predefined classes from a field.</li></ul></li>
             <li>Save or ignore the data in the field when it is hidden using the following options (only applies to Show and Hide selections above):<ul><li><b>Ignore the data when the field is hidden:</b> Select this option to not retain the data in the field. For example, a form has an Age field and a Parent Signature field. The form designer can ignore the parent signature data if the user is 18 or older, because the data is valuable only when the user is underage. In this case, the form designer would select this option to ignore the data, making the field value blank when submitted. Because the field is ignored, when the form is being <a href="Adding-Fields-to-a-Form.htm#Changing" title="Click here to learn more." alt="Click here to learn more.">validated</a> for configuration errors, the software does not check that the field is configured correctly.</li><li><b>Save the data when the field is hidden:</b> Select this option to retain the data in the field. For example, a form has two shown Number fields and one hidden Number field. The form designer wants to retain the sum of the two shown Number fields in a hidden Number field and then save the result in the hidden Number field.  In this case, the form designer would select this option to save the data. Because the field data is saved, the software still checks that the field is configured correctly when the form is being <a href="Adding-Fields-to-a-Form.htm#Changing" title="Click here to learn more." alt="Click here to learn more.">validated</a> for configuration errors.</li></ul></li>
             <li>Select the type of condition to use. <ul><li><b>When any of the following is true</b> will match when any of the conditions are met, similar to an OR statement.</li><li><b>When all of the following is true</b> will match only if ALL of the conditions are met, similar to an AND statement.</li><li><b>Always</b> requires no conditions, and will always be run.</li></ul></li>
-            <li>In the third section, define the criteria to hide or display the specified field. Click the <b>plus sign</b>   to add multiple criteria definitions or <b>x</b>   to remove a criteria. Click the folder icon to create a criteria group. Criteria groups can be nested up to four levels deep, allowing for extremely complex rule creation if required. <p class="note"><b>Note:</b>&#160;You may compare a field to another field on the form using tokens.</p></li>
+            <li>In the third section, define the criteria to determine if the specified field will be affected. Click the <b>plus sign</b>   to add multiple criteria definitions or <b>x</b>   to remove a criteria. Click the folder icon to create a criteria group. Criteria groups can be nested up to four levels deep, allowing for extremely complex rule creation if required. <p class="note"><b>Note:</b>&#160;You may compare a field to another field on the form using tokens.</p></li>
             <li>When needed, check the <b>Disable field rule</b> box to disable the rule, often used when testing a complex series of rules.</li>
             <li>When you are finished, click <b>Done</b>.
 </li>
         </ol>
+        <p class="note"><b>Note:</b>&#160;The comment box on forms displayed for tasks can also be controlled using field rules. </p>
         <h2>Field rules in the classic forms designer</h2>
+        <p>Classic forms designer field rule:<br /><img src="../Resources/Forms Images/image12.png" alt="Sample field rule" title="For more complicated field rules, consider using custom JavaScript." /></p>
         <p><b>To create a field rule</b>
         </p>
         <ol>
@@ -46,6 +54,8 @@
         <p><b>Related Topics</b>
         </p>
         <ul>
+            <li><a href="Javascript-and-CSS/Styles-in-the-Form-Designer.htm">Styles in the Form Designer</a>
+            </li>
             <li><a href="Filling-Fields-with-Lookup-Rules.htm" title="Learn more about lookup rules" alt="Learn more about lookup rules">Creating Lookup Rules to Populate Fields with Database Entries</a>
             </li>
             <li><a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/Forms/Content/Javascript-and-CSS/Customizing a Form with CSS and Javascript.htm%3FTocPath%3DForms|Creating%2520a%2520Form|Customizing%2520a%2520Form%2520with%2520CSS%2520and%2520JavaScript|_____0">Customizing a Form with CSS and JavaScript</a>

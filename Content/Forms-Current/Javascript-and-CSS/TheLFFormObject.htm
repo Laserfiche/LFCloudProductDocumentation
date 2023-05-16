@@ -3,20 +3,36 @@
     <head><title>The LFForm Object</title>
     </head>
     <body>
-        <h1>The LFForm Object</h1>
+        <h1 class="topicheading">The LFForm Object</h1>
         <p>The LFForm object provides a global interface for accessing Laserfiche form elements and events using JavaScript. Through simple functions, you can find a specific field, retrieve the field values, and update field contents. You also have access to events both at the individual field level as well as the form submission event.</p>
-        <h2>LFForm Interfaces</h2>
-        <h3 class="topicheading">findFields(predicate)</h3>
-        <p>Finds fields that satisfy an arbitrary set of conditions. Any field attribute may be used to perform the search.</p>
+        <h3 class="topicheading">Identification Objects</h3>
+        <p>Identification objects are objects containing information identifying which fields the interface should act on. Identification objects can have the following properties:</p>
         <ul>
+            <li><i>trackId</i>: A unique identifier for a field. Note that the <i>trackId</i> is generated on field creation, so it won't be the same between different submission events. <br /><p class="ex"><b>Example:</b> <code>{trackId: "59783b47-db11-4709-ba5a-1fb4833a1f73"}</code></p></li>
+            <li><i>fieldId</i>: The field ID of a field. <p class="ex"><b>Example:</b> <code>{fieldId: 1}</code></p></li>
+            <li><i>variableName</i>: The name of the variable associated with the field. <p class="ex"><b>Example:</b> <code>{variableName: "First_Name"}</code></p></li>
+            <li><i>variableId</i>: The id of the variable associated with the field. <p class="ex"><b>Example:</b> <code>{variableId: "e7c9e10c-eeb0-4ce2-b3c6-26264c7fe655"}</code></p></li>
+            <li><i>index</i>: If the field is in a collection or table, you can specify the <i>index</i> to get the exact field. 
+            	<p class="note"><b>Note:</b> The index starts from 0.</p><p class="ex"><b>Example:</b> <code>{fieldId: 2, index: 2}</code></p></li>
+        </ul>
+        <p class="note"><b>Note:</b> In all LFForm interfaces, you can specify an array of identification objects instead of just one object to target multiple fields. <br /><br /><span class="nestedex"><b>Example</b>: <code>LFForm.getFieldValues([{fieldId: 2}, {fieldId: 3}])</code>.</span></p>
+        <h3 class="topicheading"><a name="Table/Co"></a>Table/Collection Row/Set Templates</h3>
+        <p>For tables and collections, a form stores the definition for each row or set as a template. These templates are used to generate the row or set whenever they are added. Some of the interfaces in the LFForm object have the ability to affect the template of the field, with the ability to apply changes to future rows or sets.</p>
+        <p>For these interfaces, when your ID object specifies an index (for example <code>{fieldId: 3, index: 1}</code>), the change will only be applied to the field at the specified index. If your ID object does not specify an index (for example <code>{fieldId: 3}</code>), the change will be applied to the template, and  will be applied to all existing and future rows or sets.</p>
+        <h2 class="topicheading">The LFForm Interfaces</h2>
+        <h3 class="topicheading">getFieldValues</h3>
+        <p>Gets the value of the specified fields.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.getFieldValues(id)</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>predicate</i>: a function that takes in a field state and returns true for the fields you want to find, or false for fields to be excluded.</li>
+                    <li>id: An identification object or array of identification objects that have the desired fields.</li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>An array of fields that satisfy the <i>predicate</i>.</li>
+                    <li>If there is only one field matching an identification object, returns the data of that field.</li>
+                    <li>If there are multiple fields that match an identification object (fields in a collection or table, for instance), returns an array of data for all matching fields.</li>
                 </ul>
             </li>
         </ul>
@@ -24,551 +40,587 @@
             <p><b>Examples:</b>
             </p>
             <ul>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.readonly === true; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.settings.required === true; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.settings.collectionId === null; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.settings.collectionId !== null; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.componentType === "SingleLine"; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.settings.label?.startsWith('A') === true; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.settings.label?.includes('test') === true; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.componentType === "Radio"; })</li>
-                <li style="font-style: italic;">LFForm.findFields(function(field) { return field.settings.collectionId !== null &amp;&amp; field.settings.required === true; })</li>
+                <li>For a single line field with a field ID of 10 and the current value of "Hello":<ul><li><code>LFForm.getFieldValues({fieldId: 10}); // returns "Hello".</code></li></ul></li>
+                <li>For a repeatable field (table or collection) with 3 rows, where each row has a single line field with a field ID of 10; in row 1, the single line field has the value "a"; in row 2, the single line field has the value "b"; and in row 3, the single line field has the value "c":<ul><li><code>LFForm.getFieldValues({fieldId: 10}); // will return a string array of ["a", "b", "c"].</code></li><li><code>LFForm.getFieldValues({fieldId: 10, index: 0); // will return "a".</code></li></ul></li>
             </ul>
         </div>
-        <h3 class="topicheading">getFieldValues(id)</h3>
-        <p>Retrieves the value or values of the specified field.</p>
+        <h3 class="topicheading">setFieldValues</h3>
+        <p>Sets the value of the specified fields.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.setFieldValues(id, value)</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>id</i>: An identification object. <ul><li class="ex"><b>Examples</b>: <br />{fieldId: 10, index: 1},<br />{variableId: "33d73380-c2de-4daa-8c63-7b4dc6491b20"}, <br />{variableName: "Single_Line"}...</li></ul></li>
+                    <li>id: An identification object or array of identification objects.</li>
+                    <li>value: The value to set the field value to. 
+						<div class="note"><p><b>Note:</b> Different field types expect different values:
+						<ul><li>SingleLine, MultiLine, Dropdown, RichText, and Signature fields expect a string.</li><li>Number fields expect a number.</li><li>Checkbox fields expect an object with a "value" property. For example: <code>{value: ["Choice_1", "Choice_3]}, {value: ["Choice_1", "_other"], otherChoiceValue: "Hello"}</code></li><li>Radio button fields expect an object with a "value" property. For example: <code>{value: "Choice 2"}, {value: "_other", otherChoiceValue: "Hi"}</code></li><li>Geolocation fields expect an object with "latitude" and/or "longitude" properties. For example: <code>{latidude: 12, longitude: 34}</code></li><li>Address fields expect an object with "address1", "address2", "city", "country", "province" and/or "zipcode" properties. Example: <code>{address1: "3545 Long Beach Blvd", city: "Long Beach", province: "California"}</code></li><li>DateTime fields expect an object with a "dateStr" property. A "timeStr" property is optional and only applied when Show Time is enabled for the field. For example: <code>{dateStr: "2021-11-19", timeStr: "10:30:00 AM"}</code></li><li>Time fields expect an object with a "timeStr" property. For example: <code>{timeStr: "11:30:25 PM"}</code></li><li>Collection, Table, FileUpload and Fileset fields are currently not supported.</li></ul></p></div><p class="note"><b>Note:</b> If a field is set as read only, its value can not be changed.</p></li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>If only one field matches the identification object, the data of that field is returned.</li>
-                    <li>If more than one field matches the identification object (field is repeatable or contains a collection), an array of data for all matching fields is returned.</li>
+                    <li>A promise that resolves when the values are set or errors are returned.</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
             <p><b>Examples:</b>
             </p>
-            <ol>
-                <li>For a single line field with <i>field ID: 10</i>, and with a current value of "Hello", <i>LFForm.getFieldValues({fieldId: 10})</i> returns "Hello".</li>
-                <li>For a repeatable field with 3 rows, where each row has a single line with <i>fieldID: 10</i> and row values are: row 1, value "a"; row 2, value "b"; and row 3, value "c":<ul><li><i>LFForm.getFieldValues({fieldId: 10})</i> will return ["a", "b", "c"].</li><li><i>LFForm.getFieldValues({fieldId: 10, index: 0)</i> will return "a".</li></ul></li>
-                <li>To print out the value of a field on the console:<ul><li>console.log(LFForm.getFieldValues({fieldId: 4}))</li></ul></li>
-            </ol>
+            <ul>
+                <li>For a single line with field ID 10, <code>LFForm.setFieldValues({fieldId: 10}, "hello"); // will set the field to "hello".</code></li>
+                <li>For a table or collection with 3 rows, where each row has a single line with field ID 10:
+				<ul><li><code>LFForm.setFieldValues({fieldId: 10}, "a"); // will set single line in every row to "a".</code></li><li><code>LFForm.setFieldValues({fieldId: 10, index: 0}, "hello"); // will set single line in first row to "hello".</code></li><li><code>LFForm.setFieldValues({fieldId: 10}, ["1", "2", "3"]); // will set single line in first row to "1", second row to "2" and third row to "3".</code></li></ul></li>
+            </ul>
         </div>
-        <h3 class="topicheading">setFieldValues(id,value)</h3>
-        <p>Sets a field value for a specified field element.</p>
+        <h3 class="topicheading">showFields</h3>
+        <p>Shows the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.showFields(id (, id2, id3...))</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>id</i>: An identification object.</li>
-                    <li><i>value</i>: The value to set the field to.<p class="note"><b>Note:</b> Each field type will expect different value types. Refer to the table below.</p><p class="note"><b>Note:</b> If a field is read only, it will not allow the setting of it's value</p></li>
+                    <li>id: An identification object or array of identification objects. You can specify multiple objects for this function.</li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>A <i>promise</i> that resolves when the values are set or errors are returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <table style="border-left-width: medium;border-left-color: #ffffff;border-right-width: medium;border-right-color: #ffffff;border-top-width: medium;border-top-color: #ffffff;border-bottom-width: medium;border-bottom-color: #ffffff;margin-left: 0;margin-right: auto;">
-            <col width="30%" />
-            <col width="70%" />
-            <thead>
-                <tr>
-                    <th>Field Type</th>
-                    <th>Value Type</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>SingleLine, MultiLine, Dropdown, RichText, Signature</td>
-                    <td>String</td>
-                </tr>
-                <tr>
-                    <td>Number</td>
-                    <td>Number</td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td>Checkbox</td>
-                    <td>
-                        <p> An object with a "value" property. </p>
-                        <p class="ex"><i>{value: ["Choice_1", "Choice_3]}, {value: ["Choice_1", "_other"], otherChoiceValue: "Hello"}</i>
-                        </p>
-                    </td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td>Radio</td>
-                    <td>
-                        <p>An object with a "value" property. </p>
-                        <p class="ex"><i>{value: "Choice 2"}, {value: "_other", otherChoiceValue: "Hi"}</i>
-                        </p>
-                    </td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td>Geolocation</td>
-                    <td>
-                        <p>An object with a "latitude" and/or "longitude" property.  </p>
-                        <p class="ex"><i>{latidude: 12, longitude: 34}</i>
-                        </p>
-                    </td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td>Address</td>
-                    <td>
-                        <p> An object with  "address1", "address2", "city", "country", "province" and/or "zipcode" properties. </p>
-                        <p class="ex"><i>{address1: "3545 Long Beach Blvd", city: "Long Beach", province: "California"}</i>
-                        </p>
-                    </td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td>DateTime</td>
-                    <td>
-                        <p>An object with a "dateStr" property. A "timeStr" property is optional and only applied when Show Time is enabled. </p>
-                        <p class="ex"><i>{dateStr: "2021-11-19", timeStr: "10:30:00 AM"}</i>
-                        </p>
-                    </td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td>Time</td>
-                    <td>
-                        <p>An object with a "timeStr" property. </p>
-                        <p class="ex"><i>{timeStr: "11:30:25 PM"}</i>
-                        </p>
-                    </td>
-                </tr>
-                <tr style="vertical-align: top;">
-                    <td colspan="2">Collection, Table, and FileUpload fields are not currently able to have field values set by JavaScript.</td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="ex">
-            <h4>setFieldValue Examples</h4>
-            <p>The following examples illustrate setting field values :</p>
-            <ol>
-                <li>For a single line with field ID 10, using <i>LFForm.setFieldValues({fieldId: 10}, "hello")</i> will set the field to "hello".</li>
-                <li>For a repeatable field with 3 rows, where each row has a single line with field ID 10:<ul><li><i>LFForm.setFieldValues({fieldId: 10}, "a")</i> will set the single line in every row to "a".</li><li><i>LFForm.setFieldValues({fieldId: 10, index: 0}, "hello")</i> will set the single line in first row to "hello".</li><li><i>LFForm.setFieldValues({fieldId: 10}, ["1", "2", "3"])</i> will set the single line in the first row to "1", the second row to "2", and the third row to "3".</li></ul></li>
-            </ol>
-            <p><b>Additional examples:</b>
-            </p>
-            <ol>
-                <li>Single Line:<ul><li><i>LFForm.setFieldValues({fieldId: 45}, "Lisa")</i></li></ul></li>
-                <li>Radio Button:<ul><li><i>LFForm.setFieldValues({fieldId: 8}, {value: "No"})</i></li></ul></li>
-                <li>Checkbox:<ul><li><i>LFForm.setFieldValues({fieldId: 15}, {value: ["Choice_1", "_other"], otherChoiceValue: "Hello"})</i></li></ul></li>
-                <li>Date:<ul><li><i>LFForm.setFieldValues({fieldId: 5}, {dateStr: "28-Nov-21"})</i></li></ul></li>
-                <li>Time:<ul><li><i>LFForm.setFieldValues({fieldId: 31}, {timeStr: "11:30:25 PM"})</i></li></ul></li>
-                <li>Geolocation:<ul><li><i>LFForm.setFieldValues({fieldId: 35}, {latitude: 3, longitude: 7})</i></li></ul></li>
-                <li>Address:<ul><li><i>LFForm.setFieldValues({fieldId: 49}, {address1: "3545 Long Beach Blvd", city: "Long Beach", province: "California", zipcode: "12345"})</i></li></ul></li>
-                <li>Currency<ul><li><i>LFForm.setFieldValues({fieldId: 21}, 1235.78)</i></li></ul></li>
-                <li>Set one field by retrieving the value from another field:<ul><li><i>LFForm.setFieldValues({fieldId: 47}, LFForm.getFieldValues({fieldId: 4}))</i></li></ul></li>
-                <li>Set a radio button to "Yes" and output the value to the console:<ul><li><i>LFForm.setFieldValues({fieldId: 8}, {value: "Yes"}).then(e =&gt; console.log(LFForm.getFieldValues({fieldId: 8})))</i></li></ul></li>
-            </ol>
-        </div>
-        <h3 class="topicheading">subscribe(eventName, handler, options)</h3>
-        <p>Subscribes to events.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>eventName</i>: Must be one of the following values; "formSubmission", "fieldChange" or "fieldBlur".</li>
-                    <li><i>handler</i>: The function to call when the subscribed event is triggered.</li>
-                    <li><i>options</i>: An identification object to identify the field subscribed to. You may also add an additional string similar to "handlerName" in the object to more easily identify the handler.</li>
-                </ul>
-            </li>
-            <li><b>Output:</b> None.</li>
-        </ul>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To subscribe to a "fieldChange" event and log messages in the console when the field is changed (the handler name will also be used for <i>unsubscribe</i>.)</p>
-            <ul>
-                <li><i>LFForm.subscribe('fieldChange', function(){ console.log('fieldChange value changed - subscribe to field'); } ,{fieldId:2, handlerName: "subscribeHandler"});</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading">unsubscribe(eventName, options)</h3>
-        <p>Unsubscribes from events.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>eventName</i>: Must be one of the following values; "formSubmission", "fieldChange" or "fieldBlur".</li>
-                    <li><i>options</i>: An identification object to identify the handler</li>
-                </ul>
-            </li>
-            <li><b>Output:</b> None.</li>
-        </ul>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To unsubscribe from a "fieldChange" event that has been subscribed to earlier.</p>
-            <ul>
-                <li><i>LFForm.unsubscribe('fieldChange',{handlerName: "subscribeHandler"});</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading">onFieldChange(handler, options)</h3>
-        <p>Subscribes to the change event for specific fields.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>handler</i>: The function to call when a specific field changes.</li>
-                    <li><i>options</i>: An identification object to identify field subscribed to.</li>
-                </ul>
-            </li>
-            <li><b>Output:</b> None.</li>
-        </ul>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To change a field with ID 47 when the field with ID 4 changes:</p>
-            <ul>
-                <li><i>LFForm.onFieldChange(function(){ LFForm.setFieldValues({fieldId: 47}, LFForm.getFieldValues({fieldId: 4})) }, {fieldId: 4})</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading">onFieldBlur(handler, options)</h3>
-        <p>Subscribes to the blur event for specific fields.</p>
-        <ul>
-            <li><b>input:</b>
-                <ul>
-                    <li><i>handler</i>: The function to call when a specific field blurs (loses focus).</li>
-                    <li><i>options</i>: An identification object to identify the field to subscribe to.</li>
-                </ul>
-            </li>
-            <li style="font-weight: normal;"><b>Output:</b> None.</li>
-        </ul>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To set the value of the field with ID 3 to the value of the field with ID 2 when the field with ID 2 loses focus:</p>
-            <ul>
-                <li><i>LFForm.onFieldBlur(function () {  LFForm.setFieldValues({fieldId: 3},  LFForm.getFieldValues({fieldId: 2}));}, {fieldId: 2});</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading">onFormSubmision(handler, options)</h3>
-        <p>Subscribes to the formSubmission event.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>handler</i>: function to call when submission is triggered</li>
-                    <li><i>options</i>: {handlerName: "submissionHandler1"}</li>
-                </ul>
-            </li>
-            <li><b>Output:</b> A <i>promise</i> that resolves when the change is completed or errors are returned.</li>
-        </ul>
-        <p class="note"><b>Note:</b> If the handler returns an object with "error" property (for example {error: "There is something wrong on the form. Cannot submit."}), the submission is stopped and the error will be displayed as a toast on the page.</p>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To show an error on submit when the value of the single line field with ID 2 is "no":</p>
-            <ul>
-                <li><i>LFForm.onFormSubmission(function(){if (LFForm.getFieldValues({fieldId:2 }) === "no")return {error: "There is an error. Do something before submitting again."};},{handlerName: "submissionHandler"});</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading">changeFieldSettings(idObject, changes)</h3>
-        <p>Sets the specified settings of a specified field.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>idObject</i>: An identification object.</li>
-                    <li><i>changes</i>: An object with the property to change as the key and the value as value.<p class="ex"><b>Example:</b> {label: "new label", description: "new text above", subtext: "new text below", placeholder: "new placeholder", autoCompleteValues: ["a", "b", "c"]}</p></li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or errors are returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <p class="note"><b>Note:</b> Currently supports the following field settings: label, description (and textAbove), subtext (and textBelow), tooltip, placeholder, autoCompleteValues (only for single line fields), and content (for customHTML fields, also supports HTMLContent).</p>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To change the field label, text above, text below, placeholder, tooltip and auto suggestions of a single line field with ID 15.
-			</p>
-            <ul>
-                <li><i>LFForm.changeFieldSettings({fieldId: 15},{label: "new label", description: "new text above", subtext: "new text below", placeholder: "new placeholder", tooltip: "new tooltip", autoCompleteValues: ["a", "b", "c"]});</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading" MadCap:conditions="Default.Do not include">changeFieldOptions(idObject, changes)</h3>
-        <p MadCap:conditions="Default.Do not include">Changes the options for checkbox, radio button, and dropdown fields to the values specified by the <i>changes</i> parameter.</p>
-        <ul>
-            <li MadCap:conditions="Default.Do not include"><b>Input</b>
-                <ul>
-                    <li MadCap:conditions="Default.Do not include"><i>idObject</i>: An identification object.</li>
-                    <li MadCap:conditions="Default.Do not include"><i>changes</i>:  An array of new options. This can be either a string array or an array in the format <i>{label: "new label", value: "newVal"}</i>.</li>
-                </ul>
-            </li>
-            <li MadCap:conditions="Default.Do not include"><b>Output:</b>
-                <ul>
-                    <li MadCap:conditions="Default.Do not include">A <i>promise</i> that resolves when the change is completed or errors are returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <div class="ex" MadCap:conditions="Default.Do not include">
-            <p><b>Example:</b>
-            </p>
-            <p>To change the options for a radio button field with ID&#160;8.</p>
-            <ul>
-                <li><i>LFForm.changeFieldOptions({fieldId:8}, [{label: "a", value: "a"},{label: "Choice 1", value: "Choice 1"}]);</i>
-                </li>
-            </ul>
-        </div>
-        <h3 class="topicheading">changeFormSettings(changes)</h3>
-        <p>Sets form-level settings.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>changes</i>: An object with the property to change as the key and their value as value.<p class="ex"><b>Example:</b> {title: "new form Title", description: "new form description"}</p></li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or errors are returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <p class="note"><b>Note:</b> Currently supports changing only the form title and description.</p>
-        <div class="ex">
-            <p><b>Example:</b>
-            </p>
-            <p>To change the Form title and description:</p>
-            <ul>
-                <li>LFForm.changeFormSettings({title: "new Form Title", description: "new form description"});</li>
-            </ul>
-        </div>
-        <h3 class="topicheading">enableFields(idObject1, idObject2...)</h3>
-        <p>Enables the field specified by each <i>idObject</i> provided.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>idObject</i>: One or more identification objects, separated by a comma. </li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
+                    <li>A promise that resolves after the fields are displayed or errors are returned.</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
             <p><b>Examples:</b>
             </p>
-            <p>To enable a field which is disabled by a field rule:</p>
             <ul>
-                <li>LFForm.enableFields({fieldId: 11});</li>
-            </ul>
-            <p>To enable several fields:</p>
-            <ul>
-                <li>LFForm.enableFields({fieldId: 2},{fieldId: 3});</li>
+                <li><code>LFForm.showFields({fieldId: 10}); //will show the field with an ID of 10.</code>
+                </li>
+                <li><code>LFForm.showFields([{fieldId: 3, index: 1}, {fieldId: 3, index: 3}]); // uses an array to show the second and fourth rows or sets in the table or collection with the ID&#160;of 3.</code>
+                </li>
+                <li><code>LFForm.showFields({fieldId: 3, index: 1}, {fieldId: 3, index: 3}); // uses two ID&#160;objects .</code>
+                </li>
             </ul>
         </div>
-        <h3 class="topicheading">disableFields(idObject1, idObject2...)</h3>
-        <p>Disables the field specified by each <i>idObject</i> provided.</p>
+        <h3 class="topicheading">hideFields</h3>
+        <p>Hides the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.hideFields(id (, id2, id3...))</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>idObject</i>: One or more identification objects, separated by a comma. </li>
+                    <li>id: An identification object or array of identification objects. You can specify multiple objects for this function.</li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
+                    <li>A promise that resolves after fields are hidden or errors are returned.</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
             <p><b>Examples:</b>
             </p>
-            <p>To disable a field which is editable:</p>
             <ul>
-                <li>LFForm.disableFields({fieldId: 12});</li>
-            </ul>
-            <p>To disable several fields:</p>
-            <ul>
-                <li>LFForm.disableFields({fieldId: 2},{fieldId: 3});</li>
+                <li><code>LFForm.hideFields({fieldId: 10});</code>
+                </li>
+                <li><code>LFForm.hideFields([{fieldId: 3, index: 1}, {fieldId: 3, index: 3}]);</code>
+                </li>
+                <li><code>LFForm.hideFields({fieldId: 3, index: 1}, {fieldId: 3, index: 3});</code>
+                </li>
             </ul>
         </div>
-        <h3 class="topicheading">showFields(idObject1, idObject2...)</h3>
-        <p>Shows the field specified by each <i>idObject</i> provided.</p>
+        <h3 class="topicheading">disableFields</h3>
+        <p>Disables the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.disableFields(id (, id2, id3...))</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>idObject</i>: One or more identification objects, separated by a comma.</li>
+                    <li>id: An identification object or array of identification objects. You can specify multiple objects for this function.</li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
+                    <li>A promise that resolves after fields are disabled or errors are returned.</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
             <p><b>Examples:</b>
             </p>
-            <p>To show a field:</p>
             <ul>
-                <li>LFForm.showFields({fieldId: 13});</li>
-            </ul>
-            <p>To show several fields:</p>
-            <ul>
-                <li>LFForm.showFields({fieldId: 2},{fieldId: 3});</li>
+                <li><code>LFForm.disableFields({fieldId: 10});</code>
+                </li>
+                <li><code>LFForm.disableFields([{fieldId: 3, index: 1}, {fieldId: 3, index: 3}]);</code>
+                </li>
+                <li><code>LFForm.disableFields({fieldId: 3, index: 1}, {fieldId: 3, index: 3});</code>
+                </li>
             </ul>
         </div>
-        <h3 class="topicheading">hideFields(idObject1, idObject2...)</h3>
-        <p>Hides the field specified by  each <i>idObject</i> provided.</p>
+        <h3 class="topicheading">enableFields</h3>
+        <p>Enables the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.enableFields(id (, id2, id3...))</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>idObject</i>: One or more identification objects, separated by a comma.</li>
+                    <li>id: An identification object or array of identification objects. You can specify multiple objects for this function.</li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
+                    <li>A promise that resolves after fields are enabled or errors are returned.</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
             <p><b>Examples:</b>
             </p>
-            <p>To hide a field:</p>
             <ul>
-                <li>LFForm.hideFields({fieldId: 14});</li>
-            </ul>
-            <p>To hide several fields:</p>
-            <ul>
-                <li>LFForm.hideFields({fieldId: 2},{fieldId: 3});</li>
+                <li><code>LFForm.enableFields({fieldId: 10});</code>
+                </li>
+                <li><code>LFForm.enableFields([{fieldId: 3, index: 1}, {fieldId: 3, index: 3}]);</code>
+                </li>
+                <li><code>LFForm.enableFields({fieldId: 3, index: 1}, {fieldId: 3, index: 3});</code>
+                </li>
             </ul>
         </div>
-        <h3 class="topicheading">addRow(idObject, count)</h3>
-        <p>Add the specified number of rows to a table or collection.</p>
+        <h3 class="topicheading">changeFieldSettings</h3>
+        <p>Changes settings on the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.changeFieldSettings(id, settingChanges)</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>idObject</i>: An identification object.</li>
-                    <li><i>count</i>: The number of rows to add.</li>
+                    <li>id: An identification object or array of identification objects.</li>
+                    <li>settingChanges: An object with the property to change as the key and the value to change to as the value.
+						<p>Currently supported properties (keys):
+						<ul><li>label: Change the field label. Accepts a string.</li><li>description (alias: textAbove): Change the field description. Accepts a string.</li><li>subtext (alias: textBelow): Change the field subtext. Accepts a string.</li><li>tooltip: Change the field tooltip. Accepts a string.</li><li>placeholder: Change the field placeholder. Accept a string.</li><li>autoCompleteValues: Only for Single Line fields. Change the auto complete dropdown options. Accepts an array of strings.</li><li>content (alias: default, HTMLContent): Only for Custom HTML fields. Change the content of custom HTML. Accepts a string.</li><li>CSSClasses (alias: cssClasses, classNames): Change the field CSS classes. Accepts a string or an array of strings. You can specify multiple CSS classes with a space-separated string.</li></ul></p></li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <h3 class="topicheading">addSet(idObject, count)</h3>
-        <p>Adds the specified number of sets to a table or collection.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>idObject</i>: An identification object.</li>
-                    <li><i>count</i>: The number of sets to add.</li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <h3 class="topicheading">deleteRow(idObject, index1, index2...)</h3>
-        <p>Delete the row at the specified index locations from a a table or collection.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>idObject</i>: An identification object.</li>
-                </ul>
-                <ul>
-                    <li><i>index</i>: One or more indexes of the row(s) to remove, separated by a comma.</li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
-                </ul>
-            </li>
-        </ul>
-        <h3 class="topicheading">deleteSet(idObject, index1, index2...)</h3>
-        <p>Deletes the set at the specified index locations from a table or collection.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>idObject</i>: An identification object.</li>
-                    <li><i>index</i>: One or more indexes of the set(s) to remove, separated by a comma.</li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the change is completed or an error is returned.</li>
+                    <li>A promise that resolves after settings changes have been applied or errors are returned</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
-            <p><b>Examples for addSet, addRow, deleteSet and deteRow:</b>
+            <p><b>Examples:</b>
             </p>
-            <p>To add two sets to a collection:</p>
             <ul>
-                <li>LFForm.addSet({fieldId: 1}, 2);</li>
-            </ul>
-            <p>To add two rows to a table:</p>
-            <ul>
-                <li>LFForm.addRow({fieldId: 1}, 2);</li>
-            </ul>
-            <p>To delete the first set of a collection:</p>
-            <ul>
-                <li>LFForm.deleteSet({fieldId: 1}, 0);</li>
-            </ul>
-            <p>To delete the first row of a table:</p>
-            <ul>
-                <li>LFForm.deleteRow({fieldId: 1}, 0);</li>
+                <li><code>LFForm.changeFieldSettings(
+	{fieldId: 10}, 
+	{label: "New Label", description: "New Description", 
+		subtext: "New Subtext", tooltip: "New Tooltip", 
+		placeholder: "New Placeholder"}
+);</code>
+                </li>
+                <li><code>LFForm.changeFieldSettings(
+	[{variableName: "Single_Line"}, {variableName: "Single_Line_1"}], 
+	{autoCompleteValues: ["one", "two", "three"]}
+);</code>
+                </li>
+                <li><code>LFForm.changeFieldSettings(
+	{fieldId: 12}, 
+	{content: "&lt;a src='https://www.laserfiche.com'&gt;Laserfiche&lt;/a&gt;"}
+);</code>
+                </li>
+                <li><code>LFForm.changeFieldSettings({fieldId: 10}, {CSSClasses: "red solidBorder"});</code>
+                </li>
+                <li><code>LFForm.changeFieldSettings({fieldId: 10}, {CSSClasses: ["blue", "noBorder"]});</code>
+                </li>
             </ul>
         </div>
-        <h3 class="topicheading">onLookupTrigger(handler, options)</h3>
-        <p>This event is triggered when a look up call is about to be started.</p>
+        <h3 class="topicheading">changeFormSettings</h3>
+        <p>Change the settings on the form.</p>
         <ul>
+            <li><b>Signature:</b> LFForm.changeFormSettings(changes)</li>
             <li><b>Input:</b>
                 <ul>
-                    <li><i>handler</i>: The function to call when a lookup completes.</li>
-                    <li><i>options</i>: A lookupRuleID.</li>
+                    <li>changes: An object with the property to change as the key and the value to change to as value.
+						<p>Currently supported properties (keys):
+						<ul><li>title: Change the form title. Accepts a string.</li><li>description: Change the form description. Accepts a string.</li></ul></p></li>
                 </ul>
             </li>
             <li><b>Output:</b>
                 <ul>
-                    <li>If {cancelLookup: true} is returned, the lookup call will be canceled.</li>
-                </ul>
-            </li>
-        </ul>
-        <h3 class="topicheading">onLookupDone(handler, options)</h3>
-        <p>This event is triggered when a look up call is completed.</p>
-        <ul>
-            <li><b>Input:</b>
-                <ul>
-                    <li><i>handler</i>: The function to call when a lookup completes.</li>
-                    <li><i>options</i>: A lookupRuleID.</li>
-                </ul>
-            </li>
-            <li><b>Output:</b>
-                <ul>
-                    <li>A <i>promise</i> that resolves when the <i>handler</i> has completed or an error is returned.</li>
+                    <li>A promise that resolves after the form settings changes have been applied or errors are returned.</li>
                 </ul>
             </li>
         </ul>
         <div class="ex">
-            <p><b>Examples for onLookupTrigger and onLookupDone:</b>
+            <p><b>Example:</b>
             </p>
-            <p>When lookup rule 1 is triggered, it will log a message in the console (the lookupRuleId is the id of the lookup rule in the lookup rule list):</p>
+            <p><code>LFForm.changeFormSettings({title: "New Form Title", description: "New Form Description"});</code>
+            </p>
+        </div>
+        <h3 class="topicheading">addRow, addSet</h3>
+        <p>Adds new rows or sets to a  table or collection.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.addRow(id, count); LFForm.addSet(id, count);</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>id: An identification object or array of identification objects. Only tables or collections can be targetted for these APIs.</li>
+                    <li>count: The number of rows or sets to add.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>A promise that resolves after the rows or sets have been added.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
             <ul>
-                <li>LFForm.onLookupTrigger(function () { console.log('lookup rule 1 is triggered'); }, {lookupRuleId: 1});</li>
+                <li><code>LFForm.addRow({variableName: "Expense_Table"}, 3);</code>
+                </li>
+                <li><code>LFForm.addSet({variableName: "Info_Collection"}, 2);</code>
+                </li>
             </ul>
-            <p>When lookup rule 1 is done, it will log a message in the console (the lookupRuleId is the id of the lookup rule in the lookup rule list):</p>
+        </div>
+        <h3 class="topicheading">deleteRow, deleteSet</h3>
+        <p>Deletes the specified rows or sets from a table or collection.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.deleteRow(id, index (, index2, index3...)); LFForm.deleteSet(id, index (, index2, index3...));</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>id: An identification object or array of identification objects. Only tables or collections can be targetted for these APIs.</li>
+                    <li>index: The index of the row or set to remove. The index starts at 0. You can specify multiple indices.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>A promise that resolves after the rows or sets have been deleted.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
             <ul>
-                <li>LFForm.onLookupDone(function () { console.log('lookup rule 1 is done'); }, {lookupRuleId: 1});</li>
+                <li><code>LFForm.deleteRow({variableName: "Expense_Table"}, 0); // Deletes the first row of Expense_Table.</code>
+                </li>
+                <li><code>LFForm.deleteSet({variableName: "Info_Collection"}, 0, 1, 2); // Deletes the first 3 sets of the Info_Collection.</code>
+                </li>
             </ul>
+        </div>
+        <h3 class="topicheading">addCSSClasses</h3>
+        <p>Adds CSS classes to the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.addCSSClasses(id, CSSClasses)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>id: An identification object or array of identification objects.</li>
+                    <li>CSSClasses: The CSS classes to add. Can be a string or an array of strings. You can specify multiple CSS Classes with a space-separated string.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>A promise that resolves after the CSSClasses have been added.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
+            <ul>
+                <li><code>LFForm.addCSSClasses({fieldId: 1}, "red"); // adds class "red" to fields with fieldId 1.</code>
+                </li>
+                <li><code>LFForm.addCSSClasses([{fieldId: 1}, {fieldId: 2}], "red solidBorder"); 
+	// adds classes "red" and "solidBorder" to fields with fieldId 1 and 2.</code>
+                </li>
+                <li><code>LFForm.addCSSClasses([{fieldId: 1}, {fieldId: 2}], ["red", "solidBorder"]);
+	// adds classes "red" and "solidBorder" to fields with fieldId 1 and 2.</code>
+                </li>
+            </ul>
+            <p class="note"><b>Note:</b> Adding CSS classes that were already on the field will not add duplicate classes.</p>
+        </div>
+        <h3 class="topicheading">removeCSSClasses</h3>
+        <p>Removes the specified CSS classes from the specified fields. This function can affect <a href="#Table/Co">table/collection row/set templates</a>.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.removeCSSClasses(id, CSSClasses)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>id: An identification object or array of identification objects.</li>
+                    <li>CSSClasses: The CSS classes to remove. Can be a string or an array of strings. You can specify multiple CSS Classes with a space-separated string.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>A promise that resolves after CSSClasses have been removed.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
+            <ul>
+                <li><code>LFForm.removeCSSClasses({fieldId: 1}, "red"); // removes class "red" from fields with fieldId 1.</code>
+                </li>
+                <li><code>LFForm.removeCSSClasses([{fieldId: 1}, {fieldId: 2}], "red solidBorder");
+    // removes classes "red" and "solidBorder" from fields with fieldId 1 and 2.</code>
+                </li>
+                <li><code>LFForm.removeCSSClasses([{fieldId: 1}, {fieldId: 2}], ["red", "solidBorder"]);
+    // removes classes "red" and "solidBorder" from fields with fieldId 1 and 2.</code>
+                </li>
+            </ul>
+            <p class="note"><b>Note:</b> Attempting to remove CSS classes that were not on the field will be ignored.</p>
+        </div>
+        <h3 class="topicheading">findFields</h3>
+        <p>Finds any fields that satisfy the specified arbitrary conditions.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.findFields(predicate)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>predicate: A function that takes in the field State and should return true for fields you want to find, and false for fields you don't want to find.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>An array of fields that satisfy the predicate.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
+            <ul>
+                <li><code>LFForm.findFields(f =&gt; f.settings.label === "First Name"); // Finds all fields whose label is "First Name".</code>
+                </li>
+                <li><code>LFForm.findFields(f =&gt; f.settings.required); // Finds all required fields.</code>
+                </li>
+            </ul>
+        </div>
+        <h3 class="topicheading">findFieldsByClassName</h3>
+        <p>Finds fields with the specified CSS class.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.findFieldsByClassName(className)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>className: The CSS class that is assigned to the fields you want to find.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>An array of fields with the specified CSS class.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><code>LFForm.findFieldsByClassName("blue");</code>
+            </p>
+        </div>
+        <h3 class="topicheading">findFieldsByFieldId</h3>
+        <p>Finds the fields with the specified field ID.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.findFieldsByFieldId(fieldId)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>fieldId: The field ID of the fields you want to find.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>An array of fields with specified field ID.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><code>LFForm.findFieldsByFieldId(2);</code>
+            </p>
+        </div>
+        <h3 class="topicheading">findFieldsByVariableName</h3>
+        <p>Finds the fields with the specified variable name.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.findFieldsByVariableName(variableName)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>variableName: The variable name of the fields you want to find.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>An array of fields with the specified variable name.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><code>LFForm.findFieldsByVariableName("Single_Line");</code>
+            </p>
+        </div>
+        <h3 class="topicheading">findFieldsByVariableId</h3>
+        <p>Finds the fields with the specified variable ID.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.findFieldsByVariableId(variableId)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>variableId: The variable ID of the fields you want to find.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b>
+                <ul>
+                    <li>An array of fields with the specified variable ID.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><code>LFForm.findFieldsByVariableId("90e0b201-5268-4ace-9f65-8ac32d12b58a");</code>
+            </p>
+        </div>
+        <h3 class="topicheading">subscribe</h3>
+        <p>Subscribe to an event for a specific field.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.subscribe(eventName, handler, options)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>eventName: The name of the event. Currently supports "formSubmission", "fieldChange", "fieldBlur", "lookupTrigger", and "lookupDone" events.</li>
+                    <li>handler: The function to call when events are triggered.</li>
+                    <li>options: An identification object to identify the field to subscribe to. You could also add "handlerName" in the object to more easily identify the handler.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
+            <ul>
+                <li><code>LFForm.subscribe("fieldChange", () =&gt; { console.log("change"); }, {variableName: "Single_Line"});</code>
+                </li>
+                <li><code>LFForm.subscribe("formSubmission", () =&gt; { console.log("submitting"); }, {handlerName: "printSubmission"})</code>
+                </li>
+            </ul>
+        </div>
+        <h3 class="topicheading">unsubscribe</h3>
+        <p>Unsubscribe from events.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.unsubscribe(eventName, options)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>eventName: The name of the event. Currently supports "formSubmission", "fieldChange", "fieldBlur", "lookupTrigger", and "lookupDone" events.</li>
+                    <li>options: An identification object to identify the handler.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Examples:</b>
+            </p>
+            <ul>
+                <li><code>LFForm.unsubscribe("fieldChange", {variableName: "Single_Line"});</code>
+                </li>
+                <li><code>LFForm.subscribe("formSubmission", {handlerName: "printSubmission"});</code>
+                </li>
+            </ul>
+        </div>
+        <h3 class="topicheading">onFormSubmission</h3>
+        <p>Subscribe to the formSubmission event.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.onFormSubmission(handler, options)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>handler: The function to call when a submission is triggered.</li>
+                    <li>options: Optional. Can be used to specify the handler name. For example, <code>{handlerName: "submissionHandler1"}</code></li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><pre class="code">LFForm.onFormSubmission(function () {
+    if (LFForm.getFieldValues({fieldId: 3}) === "ERROR") {
+        return {error: "Please fix the error before submitting."};
+    }
+});</pre>
+            </p>
+            <p class="note"><b>Note:</b> If the handler returns an object with an "error" property (for example <code>{error: "There is something wrong on the form. Cannot submit."})</code>, the submission is stopped and the error will be displayed as a popup message on the page.</p>
+        </div>
+        <h3 class="topicheading">onFieldChange</h3>
+        <p>Subscribe to the change event for the specified fields.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.onFieldChange(handler, options)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>handler: The function to call when a specific field changes.</li>
+                    <li>options: An object that identifies the field to subscribe to and to specify the handlerName if needed.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><code>LFForm.onFieldChange(() =&gt; console.log("change"), {variableName: "Single_Line"});</code>
+            </p>
+        </div>
+        <h3 class="topicheading">onFieldBlur</h3>
+        <p>Subscribe to the blur event for the specified fields.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.onFieldBlur(handler, options);</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>handler: The function to call when a specific field blurs.</li>
+                    <li>options: An object that identifies the field to subscribe to and to specify the handlerName if needed.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><code>LFForm.onFieldBlur(() =&gt; console.log("blur"), {variableName: "Single_Line"});</code>
+            </p>
+        </div>
+        <h3 class="topicheading">onLookupTrigger</h3>
+        <p>Subscribe to a lookup trigger event.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.onLookupTrigger(handler, options)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>handler: The function to call when a lookup is triggered.</li>
+                    <li>options: An object that identifies which lookup rule this handler would be called for and to specify the handlerName if needed.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><pre class="Code">LFForm.onLookupTrigger(function () {
+    if (LFForm.getFieldValues({variableName: "TriggerField"}) === "NoCall") {
+        return {cancelLookup: true};
+    }
+}, {lookupId: 3}); // When lookup rule 3 is triggered, 
+                   // if field with variable name "TriggerField" has value of "NoCall", 
+                   // cancel the lookup call.</pre>
+            </p>
+            <p class="note"><b>Note:</b> if the handler returns an object with the "cancelLookup" property set to true, the lookup call will be cancelled.</p>
+        </div>
+        <h3 class="topicheading">onLookupDone</h3>
+        <p>Subscribe to the lookup done event.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.onLookupDone(handler, options)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>handler: The function to call when a lookup is triggered.</li>
+                    <li>options: An object that identifies which rule this handler would be called for and to specify the handlerName if needed.</li>
+                </ul>
+            </li>
+            <li><b>Output:</b> none</li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
+            </p>
+            <p><pre class="Code">LFForm.onLookupDone(function () {
+    if (LFForm.getFieldValues({variableName: "Lookup_Target"}) === "Hello") {
+        LFForm.setFieldValues({variableName: "Lookup_Target_AutoComplete"}, "World!");
+    }
+}, {lookupId: 2}); // after lookup rule 2 is done, check for Lookup_Target value. 
+                   // If it is "Hello", set the Lookup_Target_AutoComplete to "World!"</pre>
+            </p>
         </div>
     </body>
 </html>

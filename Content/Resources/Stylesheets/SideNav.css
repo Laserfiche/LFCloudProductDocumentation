@@ -1,5 +1,30 @@
 ﻿/*<meta />*/
 
+a.Button1 {
+  background-color: #155ABE;
+  border-radius: 4px;
+  min-width: 55px;
+  display: inline-block;
+  border-box: 55px;
+  color: white !important;
+  margin-left: 2px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 10px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+a.Button1:hover {
+  background-color: #1C77F8;
+}
+
+a.Button1:active {
+  position: relative;
+  top: 2px;
+  left: 1px;
+}
+
 body
 {
 	font-family: Arial;

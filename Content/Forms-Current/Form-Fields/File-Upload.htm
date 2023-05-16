@@ -9,22 +9,55 @@
         <h2>Field settings</h2>
         <p><b>To edit a file upload field</b>
         </p>
-        <ol>
-            <li>Select the field on the canvas and click <b>Edit</b>.</li>
-            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert variables</b> button to insert a variable into the label.</li>
-            <li>
-                <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
-            <li>Under <b>Field options,</b> select from the following additional options:<ul><li><b>Required</b> if users must fill in this field before submitting the form. If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </li><li><b>Read-only</b> if users should not be allowed to modify this field. </li><li><b>Show uploaded images</b> to include the image a form user uploads on the form. You can select a small, medium, large, extra large, or custom-sized thumbnail of the image. For custom options, the default width is 200 pixels if you do not set a width. <p class="note"><b>Note</b>: Users cannot view uploaded TIFF images. Users can only view uploaded PDF images on Chrome, Firefox, and Microsoft Edge.</p></li></ul></li>
-            <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-            <li>Under <b>File extensions allowed</b>, specify the three letter file extensions (e.g., .pdf, .jpg, .exe) that the field will accept. If you specify multiple file extensions, separate them with commas. If this setting is left blank, any file extensions will be accepted. </li>
-            <li>Under <b>Maximum file size</b>, specify the maximum file size, up to the maximum specified by the <a href="../../Resources/Service-Limits.htm">service limits</a>. </li>
-            <li>Under <b>Button label</b>, enter the text that will appear on the button users will click to upload files. </li>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+        <div id="tabs">
             <ul>
-                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
-                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign to this field.</li>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
             </ul>
-            <li>When you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
-        </ol>
+            <div id="tabs-1">
+                <ol>
+                    <li>Select the field on the canvas, and the options will appear in the right pane.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. </li>
+                    <li>
+                        <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Forms will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert variable</b> button to include a variable with this text.</li>
+                    <li>Under <b>File options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. Select <b>Show uploaded images</b> to allow authenticated users to see a preview if the file is a supported image type. If <b>Show uploaded images</b> is selected, choose which <b>Thumbnail Size</b> to be displayed on the form for each image. Select <b>Previous data or new lookup data will be read-only, but user-added sets will be editable</b> to make information loaded through automation read-only, but still allowing the user to edit information on user-added elements.</li>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li>Under <b>Field Size</b>, select the field size that you would like to use.</li>
+                    <li>Under <b>Button label</b>, edit the text of the button displayed.</li>
+                    <li>Under <b>Max file size</b> specify the maximum file size allowed in MB. The maximum allowed is 250 MB, and this is the default value.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>File upload limit</b> specify the maximum number of files that can be uploaded. The default value is 10 files.</li>
+                        <li>Under <b>File extensions allowed</b>, specify the three letter file extensions (e.g., .pdf, .jpg, .exe) that the field will accept. If this setting is left blank, any file extensions will be accepted.</li>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.</li>
+                        <li>Under <b>CSS&#160;classes</b>, specify the  CSS&#160;classes to assign this field. <a href="../Javascript-and-CSS/CSS Selectors.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about using CSS.</a></li>
+                    </ul>
+                    <li>To configure field specific rules, click the <b>Rules</b> tab.</li>
+                    <li>Your field changes will be applied to the form automatically.</li>
+                </ol>
+            </div>
+            <div id="tabs-2">
+                <ol>
+                    <li>Select the field on the canvas and click <b>Edit</b>.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert variables</b> button to insert a variable into the label.</li>
+                    <li>
+                        <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Field options,</b> select from the following additional options:<ul><li><b>Required</b> if users must fill in this field before submitting the form. If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </li><li><b>Read-only</b> if users should not be allowed to modify this field. </li><li><b>Show uploaded images</b> to include the image a form user uploads on the form. You can select a small, medium, large, extra large, or custom-sized thumbnail of the image. For custom options, the default width is 200 pixels if you do not set a width. <p class="note"><b>Note</b>: Users cannot view uploaded TIFF images. Users can only view uploaded PDF images on Chrome, Firefox, and Microsoft Edge.</p></li></ul></li>
+                    <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>File extensions allowed</b>, specify the three letter file extensions (e.g., .pdf, .jpg, .exe) that the field will accept. If you specify multiple file extensions, separate them with commas. If this setting is left blank, any file extensions will be accepted. </li>
+                    <li>Under <b>Maximum file size</b>, specify the maximum file size, up to the maximum specified by the <a href="../../Resources/Service-Limits.htm">service limits</a>. </li>
+                    <li>Under <b>Button label</b>, enter the text that will appear on the button users will click to upload files. </li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign to this field.</li>
+                    </ul>
+                    <li>When you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                </ol>
+            </div>
+        </div>
     </body>
 </html>

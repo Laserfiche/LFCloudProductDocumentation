@@ -54,12 +54,12 @@
         <h2 class="topicheading"><a name="Editing"></a>Editing the Form's Title and Description</h2>
         <div id="tabs">
             <ul>
-                <li><a href="#tabs-1">Classic form designer</a>
+                <li><a href="#tabs-1">Form designer</a>
                 </li>
-                <li><a href="#tabs-2">Form designer</a>
+                <li><a href="#tabs-2">Classic form designer</a>
                 </li>
             </ul>
-            <div id="tabs-1">
+            <div id="tabs-2">
                 <ol>
                     <li>Click the form's title, then click <b>Edit</b>.</li>
                     <li>Edit the title and description. Click the variable button <img src="../Resources/Forms Images/VariableButton.png" alt="VariableButton" title="Click this button to use variables" style="width: 36px;height: 30px;" /> to use <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variables</a> in your description.</li>
@@ -67,7 +67,7 @@
                     <li>When you are finished, click <b>Done</b>.</li>
                 </ol>
             </div>
-            <div id="tabs-2">
+            <div id="tabs-1">
                 <ol>
                     <li>Click on the form in the canvas</li>
                     <li>In the details pane on the right you can modify settings for the form. <ol><li> On the <b>Basic</b> tab, edit the <b>Form Title</b> and <b>Description</b>, set a maximum width for form content, enable pagination, and set basic alignment characteristics for labels on the form. </li><li>On the <b>Rules</b> tab, all field rules, lookup rules, and custom error messages used on the form will be displayed. Click <b>Add Rule</b> under each type to create a new rule of that type.</li></ol></li>
@@ -79,7 +79,19 @@
             <li>Click the <b>Copy</b> button <img src="../Resources/Forms Images/copybuttonnew.png" /> to copy a form, including all of the fields with their corresponding <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variables</a>. The new form will be in the same format (Classic or Modern) as the original.</li>
             <li>Click the <b>Delete</b> button <img src="../Resources/Forms Images/TrashButton.png" alt="Delete button" title="Click this button to delete" /> to delete a form. </li>
         </ul>
+        <h2 class="topicheading">Converting a Classic Form to the Designer</h2>
+        <p>To convert a form created in the classic designer to the new format, simply click the <b>Convert form</b> button on the toolbar, provide a new name for the form, and click <b>Convert</b>. </p>
+        <p style="text-align: center;">
+            <img src="../Resources/Forms Images/convert-form-button.png" style=" border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <p class="note"><b>Note:</b> Any custom CSS or JavaScript will not be included. Any JavaScript used on the classic form will have to be re-written to use the <a href="Javascript-and-CSS/TheLFFormObject.htm" title="Click here to read more." alt="Click here to read more.">LFForm object</a>.</p>
         <h2 class="topicheading"><a name="Changing"></a>Changing a Form's Name, Width, Label Positions, and More</h2>
+        <p>In the form designer:</p>
+        <ul>
+            <li>To change the form name, click the pencil icon near the form name in the toolbar. To change the form description, width, saved page orientation, and label alignment, click on the form in the canvas. These options will show and can be modified in the right detail pane.</li>
+            <li MadCap:conditions="Default.Do not include">If you have created a custom layout that you wish to remain unchanged when viewed on a mobile or other small screen device, check the option to <b>Disable automatic layout adjustment for small screens</b>. Otherwise, the form will be automatically optimized for use on mobile devices.
+			<p class="note"><b>Note:</b> By default, forms are set to be responsive, meaning the form will adjust its layout depending on the browser's width. Using a responsive design lets users easily view and fill out the form on mobile devices. If the browser is less than 640px, each field's label will move above the field. If the browser is greater than 640px but less than the form width you configured in the Form Settings, the label and field width will be re-sized to fit the browser.</p></li>
+        </ul>
         <p>In the classic form designer, click the <b>Form Settings</b> button <img src="../Resources/Forms Images/Settings.png" /> on the top right of the forms page to do the following:</p>
         <ul>
             <li><b>Name</b>:&#160;Rename the form.</li>
@@ -92,10 +104,6 @@
             <li><b>Alignment</b>:&#160;Align the field labels to the left, right, or top of the fields.</li>
             <li><b>Width</b>: Adjust the width of the field labels that have been aligned to the left or right.</li>
             <li MadCap:conditions="Default.For Next Version"><b>Validation level</b>:&#160;Modify the level of server validation upon receiving a submitted form.<ul><li>Choose between no validation, validating user inputs only, or validating all inputs.</li><li>In addition to user inputs, the <b>Validate all</b> option will validate read-only fields, fields with formulas, and lookup fields.</li><li MadCap:conditions="Default.Do not include"><b>Validate all</b> also affects forms submitted through automated processes like Workflow.</li></ul></li>
-        </ul>
-        <p>In the form designer:</p>
-        <ul>
-            <li>To change the form name, description, width, saved page orientation, and label alignment, click on the form in the canvas. These options will show and can be modified in the right detail pane.</li>
         </ul>
         <p>
             <MadCap:toggler targets="Video">See a video on how to create multi-page forms.</MadCap:toggler>
@@ -121,7 +129,7 @@
             </li>
             <li><a href="Custom-Error-Messages-Form.htm" title="Click here to learn more." alt="Click here to learn more.">Custom Error Messages in a Form</a>
             </li>
-            <li><a href="Javascript-and-CSS/Customizing a Form with CSS and Javascript.htm">Customizing a Form with CSS&#160;and JavaScript</a>
+            <li><a href="Javascript-and-CSS/Customizing a Form with CSS and Javascript.htm">Customizing a Classic Form with CSS&#160;and JavaScript</a>
             </li>
         </ul>
     </body>

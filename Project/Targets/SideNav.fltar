@@ -7,14 +7,15 @@
   GlossaryTermConversion="marked"
   Skin="/Project/Skins/SideNav.flskn"
   MasterToc="/Project/TOCs/Master.fltoc"
-  ConditionTagExpression="exclude[Default.API or Default.BlogOnly or &quot;Default.Do not include&quot; or Default.Exclude or Default.Forms or &quot;Default.In Progress&quot; or Default.SolutionProviderOnly]"
+  ConditionTagExpression="exclude[Default.API or Default.BlogOnly or &quot;Default.Do not include&quot; or Default.Exclude or Default.Forms or &quot;Default.In Progress&quot; or Default.OnPrem or Default.PrintOnly or Default.SolutionProviderOnly]"
   CentralLinkIds=""
   TargetLanguage="en-us,fr-ca_../fr-ca/Laserfiche Cloud.flprj,es-mx_../es-mx/Laserfiche Cloud.flprj"
-  MasterPage="/Content/MasterPages/SideNav.flmsp"
+  MasterPage="/Content/Resources/MasterPages/SideNav.flmsp"
   MasterStylesheet="/Content/Resources/Stylesheets/SideNav.css"
   SearchEngine="GoogleSearch"
   EnableSitemap="false"
-  GoogleSearchContextKey="30fdfbcda9d594193">
+  GoogleSearchContextKey="30fdfbcda9d594193"
+  ContentInclusionType="Toc">
   <PrintedOutput
     CollapseMargins="true"
     GenerateTOCProxy="true"

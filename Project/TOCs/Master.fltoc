@@ -188,10 +188,6 @@
       <TocEntry
         Title="2015">
         <TocEntry
-          Title="December 2015"
-          Link="/Content/December-2015-update.htm"
-          conditions="Default.Exclude" />
-        <TocEntry
           Title="August 2015"
           Link="/Content/August-2015-update.htm" />
         <TocEntry
@@ -727,14 +723,6 @@
         Title="Migrating Data From A Self-Hosted Laserfiche Repository Into Laserfiche Cloud"
         Link="/Content/repositoryimport.htm"
         StartSection="false" />
-      <TocEntry
-        Title="Signing In with an Email vs User Name"
-        Link="/Content/RootAccountVSUserAccount.htm"
-        conditions="Default.Exclude" />
-      <TocEntry
-        Title="Subscribing to Email Notifications"
-        Link="/Content/email-subscription.htm"
-        conditions="Default.Exclude" />
       <TocEntry
         Title="Service Limits"
         Link="/Content/Service-Limits.htm" />

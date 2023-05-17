@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<CatapultTarget
-  Version="2"
-  Comment=""
-  Type="WebHelp"
-  Destinations=""
-  GlossaryTermConversion="marked"
-  MasterStylesheet="/Content/Resources/Stylesheets/Stylesheets/LF.css"
-  MasterPage="/Content/MasterPages/WebHelp.flmsp"></CatapultTarget>

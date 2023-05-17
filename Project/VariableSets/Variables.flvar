@@ -233,4 +233,8 @@
     Type="DateTime"
     LastUpdated="2023-04-05T15:01:25.2647075-07:00"
     EvaluatedDefinition="yyyy">yyyy</Variable>
+  <Variable
+    Name="Project Name"
+    Comment=""
+    EvaluatedDefinition="Cloud Help">Cloud Help</Variable>
 </CatapultVariableSet>

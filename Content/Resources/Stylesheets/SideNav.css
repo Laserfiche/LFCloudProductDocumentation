@@ -479,6 +479,7 @@ h3
 	line-height: 1.5em;
 	font-weight: bold;
 	color: #005ABC;
+	text-decoration: none;
 	margin-bottom: 10px;
 }
 
@@ -491,7 +492,6 @@ h3
 .row a,
 .row h2 a
 {
-	color: #555555;
 	text-decoration: none;
 }
 

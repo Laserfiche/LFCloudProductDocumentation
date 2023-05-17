@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <CatapultSkin
-  Version="3"
+  Version="6"
   SkinType="WebHelp2"
   ComponentType="MasterPage"
   TemplateName="Fluid"
@@ -76,6 +76,92 @@
           </Properties>
         </Style>
       </Medium>
+      <Style
+        Name="Search Micro Content Response Button">
+        <Properties>
+          <Property
+            Name="BackgroundRepeat">no-repeat</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Side Navigation Menu Item (selected)">
+        <Classes>
+          <StyleClass
+            Name="3rd Level">
+            <Properties>
+              <Property
+                Name="BorderTop">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderRight">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderLeft">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderBottom">solid 1px #ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="1st Level">
+            <Properties>
+              <Property
+                Name="BorderRight">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderLeft">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderTop">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderBottom">solid 1px #ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="4th Level">
+            <Properties>
+              <Property
+                Name="BorderTopLeftRadius">0px</Property>
+              <Property
+                Name="BorderLeft">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderRight">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderTop">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderBottom">solid 1px #ffffff</Property>
+            </Properties>
+          </StyleClass>
+          <StyleClass
+            Name="2nd Level">
+            <Properties>
+              <Property
+                Name="BorderLeft">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderRight">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderTop">solid 1px #ffffff</Property>
+              <Property
+                Name="BorderBottom">solid 1px #ffffff</Property>
+            </Properties>
+          </StyleClass>
+        </Classes>
+        <Properties>
+          <Property
+            Name="BorderLeft">solid 1px #ffffff</Property>
+          <Property
+            Name="BorderRight">solid 1px #ffffff</Property>
+          <Property
+            Name="BorderTop">solid 1px #ffffff</Property>
+          <Property
+            Name="BorderBottom">solid 1px #ffffff</Property>
+        </Properties>
+      </Style>
+      <Style
+        Name="Side Navigation Menu Item">
+        <Properties></Properties>
+        <Classes>
+          <StyleClass
+            Name="1st Level">
+            <Properties></Properties>
+          </StyleClass>
+        </Classes>
+      </Style>
     </Styles>
     <Stylesheet></Stylesheet>
   </Stylesheet>

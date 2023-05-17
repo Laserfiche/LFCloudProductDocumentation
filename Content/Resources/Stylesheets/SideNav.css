@@ -1,5 +1,18 @@
 ﻿/*<meta />*/
 
+/*additional sidenav indentation*/
+ul.sidenav ul ul ul ul ul > li > a 
+{
+   margin-left: 10em;
+}
+
+
+ul.sidenav ul ul ul ul ul ul > li > a
+{
+   margin-left: 12em;
+}
+/*end additional sidenav indentation*/
+
 a.Button1 {
   background-color: #155ABE;
   border-radius: 4px;
@@ -564,6 +577,17 @@ td.tableheading
 }
 
 td.tabletext
+{
+	border: thin none;
+	border-bottom: thin solid #E6E6E6;
+	border-bottom-width: thin;
+	border-left: none;
+	border-right: none;
+	border-top: none;
+	border-width: thin;
+}
+
+td
 {
 	border: thin none;
 	border-bottom: thin solid #E6E6E6;

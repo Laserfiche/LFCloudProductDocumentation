@@ -16,8 +16,9 @@ steps:
 - script: |
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
-- task: CmdLine@2
+- task: CmdLine@1
   inputs:
-    script: 'C:\Program Files\MadCap Software\MadCap Flare 18\Flare.app\Madbuild.exe -project "$Workspace$\Source\LingoTranslation_Cloud_Branch\Laserfiche Cloud.flprj" -target "SideNav"'
-    failOnStderr: true
-  displayName: 'Run a multi-line script'
+    filename: 'C:\Program Files\MadCap Software\MadCap Flare 18\Flare.app\Madbuild.exe'
+    arguments: '-project Laserfiche Cloud.flprj -target SideNav'
+    workingFolder: '$(Build.SourcesDirectory)\'
+    failOnStandardError: true

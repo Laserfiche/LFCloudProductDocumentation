@@ -809,49 +809,33 @@
       Link="/Content/Customizing WebLink.htm"
       conditions="Default.Reviewed by QA,Default.Written">
       <TocEntry
-        Title="Laserfiche Public Portal Designer"
-        Link="/Content/WebLink_Designer.htm"
-        conditions="Default.Reviewed by QA,Default.Written">
-        <TocEntry
-          Title="Theme"
-          Link="/Content/Theme.htm"
-          conditions="Default.Reviewed by QA,Default.Written">
-          <TocEntry
-            Title="Colors"
-            conditions="Default.Reviewed by QA,Default.Written" />
-          <TocEntry
-            Title="Images"
-            conditions="Default.Reviewed by QA,Default.Written" />
-        </TocEntry>
-        <TocEntry
-          Title="Welcome Page"
-          Link="/Content/Welcome_Page_Tab.htm"
-          conditions="Default.Reviewed by QA,Default.Written">
-          <TocEntry
-            Title="Custom Links"
-            conditions="Default.Reviewed by QA,Default.Written"></TocEntry>
-        </TocEntry>
-        <TocEntry
-          Title="Navigation"
-          Link="/Content/Navigation_Tab.htm"
-          conditions="Default.Written,Default.Reviewed by QA" />
-        <TocEntry
-          Title="Document Viewer"
-          Link="/Content/Document_View_Tab.htm"
-          conditions="Default.Reviewed by QA,Default.Written" />
-        <TocEntry
-          Title="Search Results"
-          Link="/Content/Search_Results_Tab.htm"
-          conditions="Default.Reviewed by QA,Default.Written" />
-        <TocEntry
-          Title="Search Options"
-          Link="/Content/Search_Options_Tab.htm"
-          conditions="Default.Reviewed by QA,Default.Written" />
-        <TocEntry
-          Title="Public User"
-          Link="/Content/public-User.htm"
-          conditions="Default.Written,Default.Reviewed by QA" />
-      </TocEntry>
+        Title="Theme"
+        Link="/Content/Theme.htm"
+        conditions="Default.Reviewed by QA,Default.Written"></TocEntry>
+      <TocEntry
+        Title="Welcome Page"
+        Link="/Content/Welcome_Page_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written"></TocEntry>
+      <TocEntry
+        Title="Navigation"
+        Link="/Content/Navigation_Tab.htm"
+        conditions="Default.Written,Default.Reviewed by QA" />
+      <TocEntry
+        Title="Document Viewer"
+        Link="/Content/Document_View_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written" />
+      <TocEntry
+        Title="Search Results"
+        Link="/Content/Search_Results_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written" />
+      <TocEntry
+        Title="Search Options"
+        Link="/Content/Search_Options_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written" />
+      <TocEntry
+        Title="Public User"
+        Link="/Content/public-User.htm"
+        conditions="Default.Written,Default.Reviewed by QA" />
     </TocEntry>
   </TocEntry>
   <TocEntry
@@ -1235,11 +1219,11 @@
               Title="Page Range"
               Link="/Content/Resources/Workflow/Activities/Page-Range.htm"
               conditions="Default.Complete" />
-            <TocEntry
-              Title="Parallel"
-              Link="/Content/Resources/Workflow/Activities/Parallel.htm"
-              conditions="Default.Complete" />
           </TocEntry>
+          <TocEntry
+            Title="Parallel"
+            Link="/Content/Resources/Workflow/Activities/Parallel.htm"
+            conditions="Default.Complete" />
           <TocEntry
             Title="Pattern Matching"
             Link="/Content/Resources/Workflow/Activities/Pattern-Matching.htm"
@@ -1543,7 +1527,11 @@
             </TocEntry>
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Service-Tasks.htm"></TocEntry>
+              Link="/Content/Forms-Current/Service-Tasks.htm">
+              <TocEntry
+                Title="[%=System.LinkedHeader%]"
+                Link="/Content/Forms-On-Premises/Configuring-Repository-Profiles.htm" />
+            </TocEntry>
             <TocEntry
               Title="[%=System.LinkedHeader%]"
               Link="/Content/Forms-Current/Building-Sub-processes.htm" />
@@ -1672,7 +1660,10 @@
           Link="/Content/Forms-Current/Javascript-and-CSS/scripting-in-forms-desgner.htm">
           <TocEntry
             Title="The LFForm Object"
-            Link="/Content/Forms-Current/Javascript-and-CSS/TheLFFormObject.htm" />
+            Link="/Content/Forms-Current/Javascript-and-CSS/TheLFFormObject.htm"></TocEntry>
+          <TocEntry
+            Title="Styles in the Forms Designer"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Styles-in-the-Form-Designer.htm" />
         </TocEntry>
         <TocEntry
           Title="Customizing a Classic Form with CSS and Javascript"
@@ -2020,41 +2011,32 @@
     </TocEntry>
     <TocEntry
       Title="Custom Reports"
-      Link="/Content/Resources/Custom-Reports/Custom-Reports.htm"
-      conditions="Default.Do not include">
+      Link="/Content/Resources/Custom-Reports/Custom-Reports.htm">
       <TocEntry
-        Title="Designing Custom Reports"
-        Link="/Content/Resources/Custom-Reports/Designing-Custom-Reports.htm"
-        conditions="Default.Do not include">
+        Title="Designing Custom Reports">
         <TocEntry
-          Title="Values"
-          Link="/Content/Resources/Custom-Reports/Values.htm"
-          conditions="Default.Do not include" />
+          Title="Creating Custom Reports"
+          Link="/Content/Resources/Custom-Reports/Creating-Custom-Reports.htm" />
         <TocEntry
-          Title="Groups"
-          Link="/Content/Resources/Custom-Reports/Groups.htm"
-          conditions="Default.Do not include" />
+          Title="Viewing Custom Reports and Drilldowns"
+          Link="/Content/Resources/Custom-Reports/Viewing-Custom-Reports.htm" />
         <TocEntry
-          Title="Filters and Sorting"
-          Link="/Content/Resources/Custom-Reports/Filters-and-Sorting.htm"
-          conditions="Default.Do not include" />
-        <TocEntry
-          Title="Drilldowns"
-          Link="/Content/Resources/Custom-Reports/Drilldowns.htm"
-          conditions="Default.Do not include" />
-        <TocEntry
-          Title="Toolbar Actions and Chart Types"
-          Link="/Content/Resources/Custom-Reports/Toolbar-Actions-and-Chart-Types.htm"
-          conditions="Default.Do not include" />
+          Title="Managing Custom Reports"
+          Link="/Content/Resources/Custom-Reports/Managing-Custom-Reports.htm"></TocEntry>
       </TocEntry>
       <TocEntry
-        Title="Viewing Custom Reports and Drilldowns"
-        Link="/Content/Resources/Custom-Reports/Viewing-Custom-Reports-and-Drilldowns.htm"
-        conditions="Default.Do not include" />
+        Title="Groups"
+        Link="/Content/Resources/Custom-Reports/Groups.htm" />
       <TocEntry
-        Title="Managing Custom Reports"
-        Link="/Content/Resources/Custom-Reports/Managing-Custom-Reports.htm"
-        conditions="Default.Do not include"></TocEntry>
+        Title="Values"
+        Link="/Content/Resources/Custom-Reports/Values.htm" />
+      <TocEntry
+        Title="Fields"
+        Link="/Content/Resources/Custom-Reports/Fields.htm"
+        StartSection="false" />
+      <TocEntry
+        Title="Toolbar Actions"
+        Link="/Content/Resources/Custom-Reports/Custom-Reports-Toolbar-Actions.htm" />
     </TocEntry>
     <TocEntry
       Title="Integrations">
@@ -2182,6 +2164,9 @@
           </TocEntry>
         </TocEntry>
         <TocEntry
+          Title="Ellucian Colleague Integration"
+          Link="/Content/Resources/Integrations/ellucian-colleague-integration.htm" />
+        <TocEntry
           Title="Microsoft Dynamics CRM Integration"
           conditions="Default.Do not include">
           <TocEntry
@@ -2249,6 +2234,9 @@
         Title="Holidays"
         Link="/Content/Resources/Settings/Holidays.htm"
         conditions="Default.Complete" />
+      <TocEntry
+        Title="Email Display Names"
+        Link="/Content/Resources/Settings/email-display-names.htm" />
     </TocEntry>
     <TocEntry
       Title="Regular Expression Reference"

@@ -8,9 +8,9 @@
         <p>Use the configuration file found here:&#160;<b>C:\Program Files\Laserfiche\EmailArchive\config.xml</b> to configure:</p>
         <ul>
             <li>Running the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> service on multiple threads</li>
-            <li>A location where the database file can cache any emails the service cannot process immediately or that fail to import. The database file will also cache pieces of large emails that have been sent in parts until the parts arrive or a timeout period has been reached. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about mail caching</a>.</li>
+            <li>A location where the database file can cache any emails the service cannot process immediately or that fail to import. The database file will also cache pieces of large emails that have been sent in parts until the parts arrive or a timeout period has been reached. <a href="email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about mail caching</a>.</li>
             <li>TLS settings </li>
-            <p class="note"><b>Note:</b> The TLS options are also configurable in the <b><a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-SMTP.htm" title="Click here to learn more." alt="Click here to learn more."><b>Email Archive Service Settings</b></a></b>. </p>
+            <p class="note"><b>Note:</b> The TLS options are also configurable in the <b>Email Archive Service Settings</b>. </p>
         </ul>
         <p class="note"><b>Note:</b> You must restart the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> service for changes to the Config.xml file to take effect.</p>
         <p><b>Options in the Config.xml file</b>
@@ -75,13 +75,13 @@
                     <td class="tabletext">Location*</td>
                     <td class="tabletext">String</td>
                     <td class="tabletext">&#160;</td>
-                    <td class="tabletext">The location of the database file that caches emails. If this option is left empty, C:\ProgramData\Laserfiche\EmailArchiveService\cache.db will be used. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</td>
+                    <td class="tabletext">The location of the database file that caches emails. If this option is left empty, C:\ProgramData\Laserfiche\EmailArchiveService\cache.db will be used. <a href="email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</td>
                 </tr>
                 <tr>
                     <td class="tabletext">QueueCapability</td>
                     <td class="tabletext">Integer</td>
                     <td class="tabletext">1000</td>
-                    <td class="tabletext">The capability for incoming emails to be processed. If there are more incoming emails than specified in this parameter, they will be put into a database file to be cached first and will then be processed when the service is idle. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</td>
+                    <td class="tabletext">The capability for incoming emails to be processed. If there are more incoming emails than specified in this parameter, they will be put into a database file to be cached first and will then be processed when the service is idle. <a href="email-archive-cache.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</td>
                 </tr>
                 <tr>
                     <td class="tabletext">PartialMessageReceiveTimeout*</td>
@@ -106,7 +106,7 @@
                     <td class="tabletext">Integer</td>
                     <td class="tabletext">25</td>
                     <td class="tabletext">
-                        <MadCap:concept term="Import Agent" />Available in <MadCap:variable name="DoNotTranslate.Import Agent" /> 10.3.1 and later: The TCP port for <MadCap:variable name="DoNotTranslate.SMTP" /> communication. This option is configurable through  <b><a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-SMTP.htm" title="Click here to learn more." alt="Click here to learn more.">Email Archive Service Settings</a></b> accessed from the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Configuration dialog box. Restart the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Service after modifying the value. Additionally, ensure you have a firewall exception for this port.  </td>
+                        <MadCap:concept term="Import Agent" />Available in <MadCap:variable name="DoNotTranslate.Import Agent" /> 10.3.1 and later: The TCP port for <MadCap:variable name="DoNotTranslate.SMTP" /> communication. This option is configurable through  <b>Email Archive Service Settings</b> accessed from the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Configuration dialog box. Restart the <MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" /> Service after modifying the value. Additionally, ensure you have a firewall exception for this port.  </td>
                 </tr>
             </tbody>
         </table>

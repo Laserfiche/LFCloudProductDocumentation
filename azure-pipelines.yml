@@ -14,6 +14,7 @@ steps:
   inputs:
     script: 'C:\Program" "Files\MadCap" "Software\MadCap" "Flare" "18\Flare.app\Madbuild.exe -project Laserfiche" "Cloud.flprj -target SideNav'
     workingDirectory: '$(Build.SourcesDirectory)\'
+    failOnStderr: false
 
 - task: CopyFiles@2
   inputs:

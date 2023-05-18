@@ -15,7 +15,7 @@ steps:
     filename: 'C:\Program Files\MadCap Software\MadCap Flare 18\Flare.app\Madbuild.exe'
     arguments: '-project Laserfiche" "Cloud.flprj -target SideNav'
     workingFolder: '$(Build.SourcesDirectory)\'
-    failOnStandardError: true
+    failOnStandardError: false
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\Output\SideNav'

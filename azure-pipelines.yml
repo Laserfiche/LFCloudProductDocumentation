@@ -10,12 +10,11 @@ pool:
   name: Doc Build Agents
 
 steps:
-- task: CmdLine@1
+- task: CmdLine@2
   inputs:
-    filename: 'C:\Program Files\MadCap Software\MadCap Flare 18\Flare.app\Madbuild.exe'
-    arguments: '-project Laserfiche" "Cloud.flprj -target SideNav'
-    workingFolder: '$(Build.SourcesDirectory)\'
-    failOnStandardError: false
+    script: 'C:\Program" "Files\MadCap" "Software\MadCap" "Flare" "18\Flare.app\Madbuild.exe -project Laserfiche" "Cloud.flprj -target SideNav'
+    workingDirectory: '$(Build.SourcesDirectory)\'
+
 - task: CopyFiles@2
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\Output\SideNav'

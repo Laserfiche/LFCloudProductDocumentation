@@ -13,6 +13,6 @@ steps:
 - task: CmdLine@1
   inputs:
     filename: 'C:\Program Files\MadCap Software\MadCap Flare 18\Flare.app\Madbuild.exe'
-    arguments: '-project Laserfiche Cloud.flprj -target SideNav'
+    arguments: '-project Laserfiche" "Cloud.flprj -target SideNav'
     workingFolder: '$(Build.SourcesDirectory)\'
     failOnStandardError: true

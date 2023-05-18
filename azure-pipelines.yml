@@ -16,3 +16,9 @@ steps:
     arguments: '-project Laserfiche" "Cloud.flprj -target SideNav'
     workingFolder: '$(Build.SourcesDirectory)\'
     failOnStandardError: true
+- task: CopyFiles@2
+  inputs:
+    SourceFolder: '$(Build.SourcesDirectory)\Output\SideNav'
+    Contents: '**'
+    TargetFolder: '\\laserfiche.com\fileserver\buildserver\builds\Documentation\Cloud\LFCloudProductDocumentation'
+    OverWrite: true

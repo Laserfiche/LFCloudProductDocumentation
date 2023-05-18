@@ -7,15 +7,9 @@ trigger:
 - master
 
 pool:
-  name: default
+  name: Doc Build Agents
 
 steps:
-- script: echo Hello, world!
-  displayName: 'Run a one-line script'
-
-- script: |
-    echo Add other tasks to build, test, and deploy your project.
-    echo See https://aka.ms/yaml
 - task: CmdLine@1
   inputs:
     filename: 'C:\Program Files\MadCap Software\MadCap Flare 18\Flare.app\Madbuild.exe'

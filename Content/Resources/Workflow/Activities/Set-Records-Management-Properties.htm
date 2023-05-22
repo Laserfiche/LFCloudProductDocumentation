@@ -19,7 +19,7 @@
             <li>
                 <MadCap:snippetText src="../../Snippets/Connection Profile.flsnp" />
             </li>
-            <li>In the <b>Action</b> property box, set the action you want to perform. The following sections describe each action in detail.</li>
+            <li>In the <b>Action</b> property box, set the action you want to perform. Each action is described in detail following this section.</li>
             <li>In the <b>Apply Properties To</b> property box, select the entries on which the actions are applied.<p class="ex"><b>Example</b>: You import a Word document in Laserfiche. You complete the document two weeks before importing it, and want to update the filing date so the date reflects when the document was completed. To use that document, you would add a <b>Find Entry</b> activity to your workflow definition. You would then reference the entry using the <b>Output Entry</b> of the <b>Find Entry</b> activity in the <b>Apply Properties To</b> property box.</p></li>
         </ol>
         <h2>Set Filing Date</h2>
@@ -28,16 +28,16 @@
         <p>
             <img src="../../../Images/set-filing-date.png" />
         </p>
-        <h2>Set Event Dates</h2>
+        <h2>Set Event Date</h2>
         <p>An event is an occurrence that causes a record with an Event, Time+Event, or Interval+Event cutoff instruction to be cut off, or that may trigger an alternate retention schedule. You can use this activity to set an event date associated with a record folder's cutoff instructions, or with an alternate retention schedule. See <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Performing-Records-Management-Actions.htm#SettinganEventDate" title="Click here to learn more." alt="Click here to learn more." target="_blank">Setting an Event Date</a> to learn more about this action in Records Management.</p>
         <p class="ex"><b>Example</b>: The following configuration cuts off the record in the <b>Apply Properties To</b> property box on the date on which the workflow runs:</p>
         <p>
             <img src="../../../Images/set-event-date.png" />
         </p>
         <h2>Cutoff</h2>
-        <p>Cutting off a record or record folder means the record or record folder is closed and cannot be modified or deleted. It also marks the beginning of the retention schedule. As long as no disposition actions have been performed, records and record folders can be uncut off. See <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Performing-Records-Management-Actions.htm#CuttingOffaRecordorRecordFolder" title="Click here to learn more." alt="Click here to learn more.">Cutting Off a Record or Record Folder</a> to learn more about this action in Records Management.</p>
+        <p>Cutting off a record or record folder means the record or record folder is closed and cannot be modified or deleted. It also marks the beginning of the retention schedule. As long as no disposition actions have been performed, records and record folders can be uncut off. See <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#Performing-Records-Management-Actions.htm#CuttingOffaRecordorRecordFolder" title="Click here to learn more." alt="Click here to learn more." target="_blank">Cutting Off a Record or Record Folder</a> to learn more about this action in Records Management.</p>
         <h2>Set Retention Schedules</h2>
-        <p>A retention schedule is a collection of rules that governs how records are to be stored and for how long. A retention schedule is created and defined in the Laserfiche Administration Console. The action in this activity allows you to select one of the retention schedules configured under <b>Retention Schedules</b> in <b>Laserfiche Administration Console</b> and then apply that to the record in the <b>Apply Properties To</b> property box of the activity.</p>
+        <p>A retention schedule is a collection of rules that governs how records are to be stored and for how long. A retention schedule is created and defined in the Laserfiche Repository Administration area. The action in this activity allows you to select one of the retention schedules configured under <b>Retention Schedules</b> in <b>Laserfiche Administration Console</b> and then apply that to the record in the <b>Apply Properties To</b> property box of the activity.</p>
         <p class="ex"><b>Example</b>: The following configuration makes the record in the <b>Apply Properties To</b> property box eligible for destruction, along with the metadata of the record, after 1 year and 10 months. If the retention event does not occur, the alternate event is taken.</p>
         <p>
             <img src="../../../Images/set-retention-schedule.png" />

@@ -17,6 +17,9 @@
       Title="[%=System.LinkedTitle%]"
       Link="/Content/Solution-Template-Marketplace.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
     <TocEntry
+      Title="Learning Paths"
+      Link="/Content/LearningPaths.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    <TocEntry
       Title="Video Resources"
       Link="/Content/Videos.htm">
       <TocEntry

@@ -1,14 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head>
-        <link href="../Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
-    </head>
+    <head>&#160;</head>
     <body>
-		<p><a name="ConditionStartingEvents"></a>
-			<MadCap:toggler targets="StartingEvent">Creating a Starting Event
+        <p><a name="ConditionStartingEvents"></a>
+            <MadCap:toggler targets="StartingEvent">Creating a Starting Event
 			</MadCap:toggler>
-		</p>
-		<div MadCap:targetName="StartingEvent"><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Creating-a-Starting-Event-Cloud-20202/Creating-a-Starting-Event-Cloud-20202.html"></iframe>
-		</div>
+        </p>
+        <div MadCap:targetName="StartingEvent"><iframe width="100%" height="557" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Creating-a-Starting-Event-Cloud-20202/Creating-a-Starting-Event-Cloud-20202.html"></iframe>
+        </div>
     </body>
 </html>

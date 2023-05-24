@@ -1,41 +1,45 @@
-﻿/*<meta />*/
+/*<meta />*/
 
 /*additional sidenav indentation*/
-ul.sidenav ul ul ul ul ul > li > a 
-{
-   margin-left: 10em;
-}
 
+ul.sidenav ul ul ul ul ul > li > a
+{
+	margin-left: 10em;
+}
 
 ul.sidenav ul ul ul ul ul ul > li > a
 {
-   margin-left: 12em;
+	margin-left: 12em;
 }
+
 /*end additional sidenav indentation*/
 
-a.Button1 {
-  background-color: #155ABE;
-  border-radius: 4px;
-  min-width: 55px;
-  display: inline-block;
-  border-box: 55px;
-  color: white !important;
-  margin-left: 2px;
-  margin-right: 10px;
-  text-align: center;
-  padding: 10px;
-  font-weight: bold;
-  text-decoration: none;
+a.Button1
+{
+	background-color: #155ABE;
+	border-radius: 4px;
+	min-width: 55px;
+	display: inline-block;
+	border-box: 55px;
+	color: white !important;
+	margin-left: 2px;
+	margin-right: 10px;
+	text-align: center;
+	padding: 10px;
+	font-weight: bold;
+	text-decoration: none;
 }
 
-a.Button1:hover {
-  background-color: #1C77F8;
+a.Button1:hover
+{
+	background-color: #1C77F8;
 }
 
-a.Button1:active {
-  position: relative;
-  top: 2px;
-  left: 1px;
+a.Button1:active
+{
+	position: relative;
+	top: 2px;
+	left: 1px;
 }
 
 body
@@ -85,9 +89,11 @@ a
 {
 	color: #E35205;
 }
-a.nav-link.active {
-  border-bottom: 3px #E35205 solid;
-  color: #E35205 !important;
+
+a.nav-link.active
+{
+	border-bottom: 3px #E35205 solid;
+	color: #E35205 !important;
 }
 
 MadCap|expanding
@@ -199,6 +205,11 @@ h2
 h3
 {
 	color: #083E66;
+}
+
+MadCap|xref
+{
+	color: #E35205;
 }
 
 /**welcome page boxes**/
@@ -676,3 +687,4 @@ span.Code
 	background-color: #f0f0f0;
 	color: #555555;
 }
+

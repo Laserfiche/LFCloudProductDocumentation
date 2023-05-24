@@ -15,7 +15,9 @@
   SearchEngine="GoogleSearch"
   EnableSitemap="false"
   GoogleSearchContextKey="30fdfbcda9d594193"
-  ContentInclusionType="Toc">
+  ContentInclusionType="Toc"
+  PreCompileScaledImages="false"
+  TopNavTocPath="true">
   <PrintedOutput
     CollapseMargins="true"
     GenerateTOCProxy="true"

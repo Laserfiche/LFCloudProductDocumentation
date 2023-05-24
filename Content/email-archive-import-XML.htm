@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" xml:lang="en-us">
     <head><title></title>
-        <link href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/Resources/Stylesheets/Laserfiche Email Archiving1.css" rel="stylesheet" />
     </head>
     <body>
         <h2 class="Heading2">
@@ -46,11 +45,11 @@
         <p class="Code">&lt;AttachmentSettings CollisionHandling="0" <b>RetainExtension="true"</b> LinkMessageWithDistributionList="false" LinkMessageWithAttachments="false" ApplyMailFieldsToAttachments="false" IgnoreInlineAttachment="true" FileDistributionList="false" AttachmentHandling="0"/&gt;</p>
         <h3>File conversion list</h3>
         <p>This attribute specifies the extensions of the types of files that will be converted to <MadCap:variable name="DoNotTranslate.Laserfiche" /> pages on import. By default, the <b>ImportConversionList</b> attribute is not set and will default to this list: "tif,tiff,bmp,pcx,jpg,jpeg,txt,gif,png".</p>
-        <p class="note"><b>Note:</b> The file types specified in this attribute will override the <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm%3FTocPath%3DTrustee%2520Attributes|Lists%2520of%2520Trustee%2520Attributes|Exporting%2520and%2520Importing|_____2" target="_blank" title="Click to learn more." alt="Click to learn more.">ImportConversionList trustee attribute</a> in Laserfiche. </p>
+        <p class="note"><b>Note:</b> The file types specified in this attribute will override the <a href="https://doc.laserfiche.com/laserfiche.documentation/11/administration/en-us/Default.htm#../Subsystems/Default/Content/B_Feature Topics/Importing eDocs.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">ImportConversionList trustee attribute</a> in Laserfiche. </p>
         <p class="Code">&lt;ImportSettings <b>ImportConversionList=" "</b> TextLinesPerPage="2147483647" KeepPDFFile="true" PDFImportResolution="0" GeneratePagesOnPDFImport="false" PDFImportMonochrome="false" PreservePDFAnnotations="true" BurnPDFAnnotationsOnImage="false" ExtractEdocText="true"/&gt;</p>
         <h2><a name="Import"></a>Import rules </h2>
-        <p>If you have configured your profile to use <MadCap:variable name="DoNotTranslate.SMTP" />, then the Import Rule tab of the <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-profile.htm#For" title="Click here to learn more." alt="Click here to learn more."><MadCap:concept term="Email Archive" /><MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" />Create Profile</a> dialog has an advanced option that lets you configure more precise import rules using <MadCap:variable name="DoNotTranslate.XML" />. Import rules are optional. If no import rule is configured, then the profile will be applied to all emails. </p>
-        <p class="note"><b>Note:</b> The option to configure profiles to use <MadCap:variable name="DoNotTranslate.SMTP" /> is being deprecated. <a href="../../../../Import Agent/Trunk/English/Import Agent Flare Project/Content/email-archive-convert-SMTP-to-IMAP.htm" title="Click here to learn more." alt="Click here to learn more.">Learn how to convert profiles from <MadCap:variable name="DoNotTranslate.SMTP" /> to IMAP</a>.</p>
+        <p>If you have configured your profile to use <MadCap:variable name="DoNotTranslate.SMTP" />, then the Import Rule tab of the <a href="email-archive-profile.htm#For" title="Click here to learn more." alt="Click here to learn more."><MadCap:concept term="Email Archive" /><MadCap:variable name="DoNotTranslate.Laserfiche Email Archive" />Create Profile</a> dialog has an advanced option that lets you configure more precise import rules using <MadCap:variable name="DoNotTranslate.XML" />. Import rules are optional. If no import rule is configured, then the profile will be applied to all emails. </p>
+        <p class="note"><b>Note:</b> The option to configure profiles to use <MadCap:variable name="DoNotTranslate.SMTP" /> is being deprecated.</p>
         <p>The RuleDef element contains import rules that control the type of emails the profile will process. </p>
         <table class="tablesorter" style="">
             <col style="width: 92pt;" />

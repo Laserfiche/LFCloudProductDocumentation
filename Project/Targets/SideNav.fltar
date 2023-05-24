@@ -22,4 +22,5 @@
     GenerateIndexProxy="true"
     GenerateGlossaryProxy="true"
     OutputFormat="doc" />
+  <Destinations></Destinations>
 </CatapultTarget>

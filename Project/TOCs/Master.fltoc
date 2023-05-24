@@ -866,10 +866,6 @@
       StartSection="false"
       ReplaceMergeNode="false"></TocEntry>
     <TocEntry
-      Title="[%=System.LinkedHeader%]"
-      Link="/Content/Service-Limits.htm"
-      conditions="Default.Complete" />
-    <TocEntry
       Title="Workflows"
       Link="/Content/Resources/Workflow/Workflow.htm">
       <TocEntry

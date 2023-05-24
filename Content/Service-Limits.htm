@@ -679,6 +679,11 @@
                     <td class="tabletext">In addition to rate limiting, the Laserfiche API will limit the number of concurrent calls for certain operations that a user can run.<ul><li>1 concurrent long operations per user<ul><li>Long operations are defined as those APIs which involve the Task APIs. Currently, copying and deleting entries fall under this category.</li></ul><p><b>Note:</b> Service Principal users can run 10 concurrent long operations</p></li></ul><ul><li>2 concurrent open searches per user<ul><li>After a search operation is completed, it remains open in order to have the results of the search cached. Follow best practices of deleting search operations when the results are no longer needed.</li></ul><ul><li>The Simple Search route will only count against your open search limit while the search is running. The results of a Simple Search are not cached, so will not count against the limit after the search is complete.</li></ul><p><b>Note:</b> Service Principal users can have 6 concurrent open searches</p></li></ul><ul><li>At the account level, there is also a global limit imposed across all users of an organization<ul><li>15 concurrent long operations per organization</li><li>9 concurrent open searches per organization</li></ul></li></ul></td>
                     <td>&#160;</td>
                 </tr>
+                <tr>
+                    <td class="tabletext">Request and Response size Limits</td>
+                    <td class="tabletext">In general, the Laserfiche API will limit the size of JSON request and response bodies to 5 MB. APIs that return a stream of data, like Export related APIs, do not fall under this limit.</td>
+                    <td>&#160;</td>
+                </tr>
             </tbody>
         </table>
     </body>

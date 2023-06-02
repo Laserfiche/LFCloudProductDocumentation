@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head>&#160;</head>
+    <head>
+        <link href="Resources/Stylesheets/Copy of LF for admin test.css" rel="stylesheet" type="text/css" />
+    </head>
     <body>
         <h1>Installing and Configuring the  Laserfiche Integration with Microsoft Teams</h1>
         <p>Before your organization can use the Laserfiche App for Microsoft Teams, you must install the app, grant users access to it, and configure OAuth in the Laserfiche Developer Console. </p>
@@ -31,9 +33,9 @@
             <li><b>Optional:</b> Install and pin the&#160;Laserfiche app on behalf of users. <a href="https://docs.microsoft.com/en-us/microsoftteams/teams-app-setup-policies" title="Click to go to the Microsoft Teams help files. " alt="Click to go to the Microsoft Teams help files. " target="_blank">Learn more</a>. <ol style="list-style-type: lower-alpha;"><li> In the <a href="https://admin.teams.microsoft.com/" title="Click to go to the sign in page. " alt="Click to go to the sign in page. " target="_blank">Microsoft Teams administration center</a>, go to <b>Teams apps</b> &gt; <b>Setup policies</b>.</li><li>Select <b>Add</b> and provide a name and description for the policy. </li><li>Under <b>Installed apps</b>, click <b>Add apps</b>. </li><li>Under <b>Add installed apps</b>, search for Laserfiche, and click <b>Add</b>. Then, click <b>Add</b> at the bottom of the pane.</li><li>To pin the Laserfiche app, under <b>Add pinned apps</b>, click <b>Add apps</b>. </li><li>Search for Laserfiche, and click <b>Add</b>. Then, click <b>Add</b> at the bottom of the pane. </li><li>Use the <b>Move up</b> and <b>Move down</b> options to arrange the apps in the order you want them to appear to your users. </li><li>Click <b>Save</b>.</li></ol></li>
             <li><b>Optional:</b> Control who has access to Laserfiche in Microsoft Teams. By default, all users in your organization can access the Laserfiche app. To restrict and control who has permission to use the <MadCap:variable name="DoNotTranslate.Laserfiche" /> Integration, refer to <a href="https://docs.microsoft.com/en-us/microsoftteams/teams-app-permission-policies" title="Click to see the Microsoft Teams help files. " alt="Click to see the Microsoft Teams help files. " target="_blank">Manage app permission policies in Teams</a> .</li>
         </ol>
-        <h2 MadCap:conditions="Default.Exclude">Configuring the Laserfiche Integration with Microsoft Teams to Use OAuth</h2>
-        <p MadCap:conditions="Default.Exclude">For the Laserfiche App for Microsoft Teams to work with OAuth, you must configure OAuth in the Laserfiche Developer Console, and users will need to sign in to the Laserfiche App using the same account ID as configured in the Laserfiche Developer Console. Thus, for the app to support multi-tenant, you must follow the instructions below for all accounts that use the Laserfiche Integration with Microsoft Teams.</p>
-        <ol MadCap:conditions="Default.Exclude">
+        <h2>Configuring the Laserfiche Integration with Microsoft Teams to Use OAuth</h2>
+        <p>For the Laserfiche App for Microsoft Teams to work with OAuth, you must configure OAuth in the Laserfiche Developer Console, and users will need to sign in to the Laserfiche App using the same account ID as configured in the Laserfiche Developer Console. Thus, for the app to support multi-tenant, you must follow the instructions below for all accounts that use the Laserfiche Integration with Microsoft Teams.</p>
+        <ol>
             <li>Download the manifest file located in <a href="https://support.laserfiche.com/kb/1014433" target="_blank" title="Click to go to KB 1014433" alt="Click to go to KB 1014433">KB 1014433</a>.
                </li>
             <li>Sign into the Laserfiche Developer Console. Depending on where your Laserfiche Cloud data resides, your developer console will be in one of the following locations:</li>

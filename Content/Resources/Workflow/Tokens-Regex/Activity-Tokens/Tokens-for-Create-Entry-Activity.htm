@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1093" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
     <head>
     </head>
     <body>
@@ -53,11 +53,6 @@
                     <td class="tabletext">%(CreateEntry_OutputEntry_Server)</td>
                 </tr>
                 <tr>
-                    <td>OutputEntry_Guid</td>
-                    <td class="tabletext">The GUID (Globally Unique Identifier) of the new entry.</td>
-                    <td class="tabletext">%(CreateEntry_OutputEntry_Guid)</td>
-                </tr>
-                <tr>
                     <td>ParentEntry_Name</td>
                     <td class="tabletext">The name of the folder in which the new entry was created.</td>
                     <td class="tabletext">%(CreateEntry_ParentEntry_Name)</td>
@@ -66,6 +61,11 @@
                     <td>ParentEntry_Id</td>
                     <td class="tabletext">The Laserfiche ID of the folder in which the new entry was created.</td>
                     <td class="tabletext">%(CreateEntry_ParentEntry_Id)</td>
+                </tr>
+                <tr>
+                    <td>ParentEntry_Path</td>
+                    <td class="tabletext">The folder path of the folder in which the new entry was created.</td>
+                    <td class="tabletext">%(CreateEntry_ParentEntry_Path)</td>
                 </tr>
                 <tr>
                     <td>ParentEntry_FullPath</td>
@@ -81,11 +81,6 @@
                     <td>ParentEntry_Server</td>
                     <td class="tabletext">The Laserfiche Server that contains the folder in which the new entry was created.</td>
                     <td class="tabletext">%(CreateEntry_ParentEntry_Server)</td>
-                </tr>
-                <tr>
-                    <td>ParentEntry_Guid</td>
-                    <td class="tabletext">The GUID (Globally Unique Identifier) of the folder in which the new entry was created.</td>
-                    <td class="tabletext">%(CreateEntry_ParentEntry_Guid)</td>
                 </tr>
                 <tr>
                     <td>Created Parent Folder</td>

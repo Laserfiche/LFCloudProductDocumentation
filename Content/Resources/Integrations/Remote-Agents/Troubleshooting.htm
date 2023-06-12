@@ -17,13 +17,18 @@
             <li><b>History</b>: This section describes the progress of the worker's work items. For example, if the work item involves looking up a data source, it can indicate whether the data query successfully ran.</li>
         </ul>
         <h2 class="topicheading">Viewing the Version of a Remote Agent Worker</h2>
-        <ol>
-            <li>From the configuration page for your remote agent, click the Workers tab. For each registered worker take note of the displayed version number.<p><img src="../images/worker-version.png" title="screenshot showing remote agent worker version" alt="screenshot showing remote agent worker version" style="border-style:solid; border-width:1px; width:100%; " /></p></li>
-        </ol>
+        <ul>
+            <li>From the configuration page for your remote agent, click the Workers tab. For each registered worker take note of the displayed version number.</li>
+            <p>
+                <img src="../../Images/RegisteredWorker.png" title="screenshot showing remote agent worker version" alt="screenshot showing remote agent worker version" style="border-style: solid;border-width: 1px;width: 616px;height: 336px;" />
+            </p>
+            <p class="note"><b>Note:</b> Ensure your remote agent workers are version 11.4.2208.01001 or higher.</p>
+        </ul>
         <h2>Viewing the Event Log for a Remote Agent Worker</h2>
-        <ol>
+        <ul>
             <li>From the configuration page for your remote agent, click the Workers tab. For a specific registered worker, expand the <b>Events</b> section, to view a log of when major events occur for the selected worker.</li>
-        </ol>
+            <li>From the text log for the running service, located at one of the following folders depending on your choice during installation:<ul><li><p>C:\Users\{UserName}\AppData\Roaming\Laserfiche\BPMServer\Laserfiche.ProcessAutomation.LocalAgent</p><p><b>or</b></p></li><li><p>C:\ProgramData\Laserfiche\BPMServer\Laserfiche.ProcessAutomation.LocalAgent</p></li></ul></li>
+        </ul>
         <h3>Common Error Events</h3>
         <p>View the <b>Events</b> of a registered worker to see a log of major events.</p>
         <table style="width: 100%;">
@@ -51,7 +56,8 @@
                         <ul>
                             <li>11.4.2208.01001 (updated in November 2022)</li>
                             <li>11.5.2211.22001 (updated in December 2022)</li>
-							<li>11.5.2301.02001 (updated in January 2023)</li>
+                            <li>11.5.2301.02001 (updated in January 2023)</li>
+							<li>11.6.2302.03003 (Updated in February 2023)</li>
                         </ul>
                         <p>Current version number for the Dedicated Bot Remote Agent Bot Worker:</p>
                         <ul>

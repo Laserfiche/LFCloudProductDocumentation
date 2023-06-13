@@ -22,7 +22,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td>EntriesFoundCount</td>
                     <td class="tabletext">The number of entries found with the Find Entries activity. (Legacy format)</td>
                     <td class="tabletext">%(FindEntries_EntriesFoundCount)</td>
@@ -35,7 +35,7 @@
             </tbody>
         </table>
         <p>The "FindEntries" portion of the syntax changes to match the activity's name.</p>
-        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are removed from the name. For example, if you rename the activity "Look-For-Forms", the syntax for the Result Count token is "%(LookForForms_Result Count)".</div>
+        <div class="note"><b>Note</b>: All non-alphanumeric characters, except underscores, are rleemoved from the name. For example, if you rename the activity "Look-For-Forms", the syntax for the Result Count token is "%(LookForForms_Result Count)".</div>
         <p style="font-weight: bold;">Tokens for each entry found</p>
         <p>More tokens are available after you use this activity with the <b>For Each Entry</b> activity. The <b>For Each Entry</b> activity runs one time per entry. Each time it runs, the tokens are replaced by information relevant to the entry it is currently processing.</p>
         <table id="myTable2" class="tablesorter" border="0" summary="This table lists the ContactRecord tokens availabe in Laser App that can be used when configuring your integration.">
@@ -85,11 +85,6 @@
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_Server)</td>
                 </tr>
                 <tr>
-                    <td>CurrentEntry_Guid</td>
-                    <td class="tabletext">The GUID (Globally Unique Identifier) of the current entry.</td>
-                    <td class="tabletext">%(ForEachEntry_CurrentEntry_Guid)</td>
-                </tr>
-                <tr>
                     <td>CurrentEntry_CheckOutComment</td>
                     <td class="tabletext">The comment associated with the current version of the entry.</td>
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckOutComment)</td>
@@ -98,6 +93,11 @@
                     <td>CurrentEntry_CheckedOutBy</td>
                     <td class="tabletext">The user account that checked out the entry.</td>
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckedOutBy)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_CheckedOutDate</td>
+                    <td class="tabletext">The date when the entry was checked out.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_CheckedOutDate)</td>
                 </tr>
                 <tr>
                     <td>CurrentEntry_CheckedOutBySID	</td>
@@ -165,9 +165,9 @@
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_ElectronicFileSize)</td>
                 </tr>
                 <tr>
-                    <td>CurrentEntry_EntryLock</td>
+                    <td>CurrentEntry_EntryLockType</td>
                     <td class="tabletext">Specifies whether the found entry is currently locked.</td>
-                    <td class="tabletext">%(ForEachEntry_CurrentEntry_EntryLock)</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_EntryLockType)</td>
                 </tr>
                 <tr>
                     <td>CurrentEntry_EventDate</td>
@@ -208,6 +208,11 @@
                     <td>CurrentEntry_HasElectronicDocument</td>
                     <td class="tabletext">Indicates whether the found entry is associated with an electronic file.</td>
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_HasElectronicDocument)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_HasHold</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is currently has a hold.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_HasHold)</td>
                 </tr>
                 <tr>
                     <td>CurrentEntry_HasImage</td>
@@ -260,11 +265,6 @@
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_IsDispositioned)</td>
                 </tr>
                 <tr>
-                    <td>CurrentEntry_IsFrozen</td>
-                    <td class="tabletext">Indicates whether the found entry is a record that is currently frozen.</td>
-                    <td class="tabletext">%(ForEachEntry_CurrentEntry_IsFrozen)</td>
-                </tr>
-                <tr>
                     <td>CurrentEntry_IsIndexed</td>
                     <td class="tabletext">Indicates whether the found entry is indexed.</td>
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_IsIndexed)</td>
@@ -308,6 +308,11 @@
                     <td>CurrentEntry_LastReviewDate	</td>
                     <td class="tabletext">The last time that a vital record was reviewed.</td>
                     <td class="tabletext">%(ForEachEntry_CurrentEntry_LastReviewDate)</td>
+                </tr>
+                <tr>
+                    <td>CurrentEntry_LatestVersionComment</td>
+                    <td class="tabletext">The latest version comment of a document under version control.</td>
+                    <td class="tabletext">%(ForEachEntry_CurrentEntry_LatestVersionComment)</td>
                 </tr>
                 <tr>
                     <td>CurrentEntry_LatestVersionNumber</td>

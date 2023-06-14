@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="5" MadCap:lastHeight="1150" MadCap:lastWidth="1146" MadCap:conditions="Default.Complete">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
     <head>
     </head>
     <body>
@@ -47,50 +47,40 @@
                     <td class="tabletext">The repository the moved entry is in.</td>
                     <td class="tabletext">%(MoveEntry_OutputEntry_Repository)</td>
                 </tr>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td>OutputEntry_Server</td>
                     <td class="tabletext">The Laserfiche Server that contains the moved entry.</td>
                     <td class="tabletext">%(MoveEntry_OutputEntry_Server)</td>
                 </tr>
                 <tr>
-                    <td>OutputEntry_Guid</td>
-                    <td class="tabletext">The GUID (Globally Unique Identifier) of the moved entry.</td>
-                    <td class="tabletext">	%(MoveEntry_OutputEntry_Guid)</td>
-                </tr>
-                <tr>
-                    <td>ParentEntry_Name</td>
+                    <td>ParentFolder_Name</td>
                     <td class="tabletext">	The name of the folder the entry was moved into.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_Name)</td>
+                    <td class="tabletext">%(MoveEntry_ParentFolder_Name)</td>
                 </tr>
                 <tr>
-                    <td>ParentEntry_Id</td>
+                    <td>ParentFolder_Id</td>
                     <td class="tabletext">The Laserfiche ID of the folder the entry was moved into.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_Id)</td>
+                    <td class="tabletext">%(MoveEntry_ParentFolder_Id)</td>
                 </tr>
                 <tr>
-                    <td>ParentEntry_Path</td>
+                    <td>ParentFolder_Path</td>
                     <td class="tabletext">The folder path of the folder the entry was moved into.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_Path)</td>
+                    <td class="tabletext">%(MoveEntry_ParentFolder_Path)</td>
                 </tr>
                 <tr>
-                    <td>ParentEntry_FullPath</td>
+                    <td>ParentFolder_FullPath</td>
                     <td class="tabletext">The folder path of the folder the entry was moved into, including the folder's name.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_FullPath)</td>
+                    <td class="tabletext">%(MoveEntry_ParentFolder_FullPath)</td>
                 </tr>
                 <tr>
-                    <td>ParentEntry_Repository</td>
+                    <td>ParentFolder_Repository</td>
                     <td class="tabletext">The repository that contains the folder the entry was moved into.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_Repository)</td>
+                    <td class="tabletext">%(MoveEntry_ParentFolder_Repository)</td>
                 </tr>
-                <tr>
-                    <td>ParentEntry_Server</td>
+                <tr MadCap:conditions="Default.Do not include">
+                    <td>ParentFolder_Server</td>
                     <td class="tabletext">The Laserfiche Server that contains the folder the entry was moved into.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_Server)</td>
-                </tr>
-                <tr>
-                    <td>ParentEntry_Guid</td>
-                    <td class="tabletext">The GUID (Globally Unique Identifier) of the folder the entry was moved into.</td>
-                    <td class="tabletext">%(MoveEntry_ParentEntry_Guid)</td>
+                    <td class="tabletext">%(MoveEntry_ParentFolder_Server)</td>
                 </tr>
                 <tr>
                     <td>Created Parent Folder</td>

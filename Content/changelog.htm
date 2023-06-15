@@ -6,6 +6,81 @@
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p style="font-weight: bold;">June 15, 2023</p>
+        <p style="font-weight: normal;">Starting Rules</p>
+        <ul>
+            <li style="font-weight: normal;">Fixed an issue that caused the rule schedule to not be displayed in the summary page when editing/creating/importing a starting rule. (430111, 442555)</li>
+            <li style="font-weight: normal;">Fixed an issue that was preventing additional conditions from being added to a rule when editing a starting rule. (429417, 442555)</li>
+        </ul>
+        <p style="font-weight: normal;">Business Processes</p>
+        <ul>
+            <li>
+                <p>For limited release - The single line field in the form designer now features an A.I. assistant to help build and explain a regular expression based on a prompt.</p>
+            </li>
+            <li style="font-weight: normal;">Made performance improvements that will prevent random Forms submission failure. (425698, 425708)</li>
+        </ul>
+        <p style="font-weight: normal;">Workflow</p>
+        <ul>
+            <li style="font-weight: normal;">Fixed an issue that prevented conditional statements from comparing against a zero (0) value. (442291, 442289)</li>
+        </ul>
+        <p style="font-weight: normal;">Capture Profiles</p>
+        <ul>
+            <li><a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Capture-Profiles/Smart-Invoice-Capture-Profile.htm" target="_blank">Smart Invoice Capture</a> now automates the extraction of four new fields from invoices: the shipping address, subtotal, tax amount, and tax ID. (425904)</li>
+            <li>Improved error logging has been added to Capture Profiles. (427788)</li>
+        </ul>
+        <p style="font-weight: bold;">June 9, 2023</p>
+        <p style="font-weight: normal;">Microsoft Teams Integration</p>
+        <ul>
+            <li style="font-weight: normal;">You can now save files to repositories in multiple regions for a single manifest. (425523)</li>
+        </ul>
+        <p style="font-weight: bold;">June 8, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue that stopped formulas from populating tables/collections when triggered by fields outside the table/collection.  (430584)</li>
+        </ul>
+        <p style="font-weight: bold;">June 5, 2023</p>
+        <p>Business Processes<br /></p>
+        <ul>
+            <li>User interface improvements to the save to repository service task. (423523)</li>
+            <li>Token fields for output values are now clickable and searchable. (415324)</li>
+            <li>Fileset repository search is no longer case sensitive. (427924)</li>
+            <li> Fileset instances within report drill downs are now viewable. (427593)</li>
+            <li>In team projects, business process rules that were created by other team members can now be opened in project resources. (415778)</li>
+            <li>Fixed a font size issue in Message Start Event. (424915)</li>
+            <li>Classic form preview page is now loading in Safari on MacOS. (421449)</li>
+            <li>Correct columns are now displaying in survey submission report CSVs after new items are added to the survey edit page. (424293)</li>
+            <li>Time format is now sowing correctly on the monitor page for locale setting French (Canada). (424707)</li>
+            <li>Fixed issue that could cause slow performance when loading forms tasks. (425245)</li>
+            <li>Fixed an issue with Test Wait Duration in sub-processes that use task reminders in user tasks. (426495)</li>
+            <li>Email notifications now being sent when processes are suspended in an instance configured with invalid STR access. (427525)</li>
+            <li>Improved response time on lookup rules within a collection. (321714)</li>
+            <li>Fixed an issue with column resizing when hidden columns are used. (410876)</li>
+        </ul>
+        <p>Rules</p>
+        <ul>
+            <li>Query testing now displays the total number of results that would be returned from the query. (418271)</li>
+        </ul>
+        <p>Workflow</p>
+        <ul>
+            <li>Fixed an issue with evaluation of folder contents conditions using input parameter tokens. (423916)</li>
+            <li>Resolved an issue with configuring conditions using the "is in" operand for numbers. (339857)</li>
+        </ul>
+        <p style="font-weight: bold;"><a href="2023.06.htm">June 1, 2023</a>
+        </p>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>A validation error is now displayed when a user attempts to upload a document with any pages that exceed the OCR limits (10 MB or 10,000 pixels width or height). This validation now also occurs when reprocessing documents to use the newer OCR. (420500)</li>
+            <li>When processing a multi-page TIFF, and only one page fails, an error message is now displayed letting the user know the document failed. (420825)</li>
+            <li>All help links on the Smart Invoice Profile pages are now correctly linked to the <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#../Subsystems/ProcessAutomation/Content/Resources/Capture-Profiles/Smart-Invoice-Capture-Profile.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Smart Invoice Profiles documentation</a>. (425890)</li>
+        </ul>
+        <p>Laserfiche Integration with Microsoft Teams </p>
+        <ul>
+            <li>For organizations using the Laserfiche Integration with Microsoft Teams, your integration has been updated to use OAuth. If you are not using the Laserfiche Integration with Microsoft Teams, but want to start using it, follow the instructions here: <a href="Microsoft-Teams-and-Laserfiche-Installation.htm">Installing and Configuring the Laserfiche Integration with Microsoft Teams</a>.</li>
+        </ul>
+        <p>Web Client</p>
+        <ul>
+            <li>Removed support for changing the language display to Thai or Italian.</li>
+        </ul>
         <p style="font-weight: bold;">May 18, 2023</p>
         <p>Business Processes</p>
         <ul>
@@ -20,19 +95,13 @@
         <p style="font-weight: bold;">May 16, 2023</p>
         <p>Capture Profiles</p>
         <ul>
-            <li>
-                <p>Smart Invoice Capture Profiles now have updated models with improved overall performance. (426520)</p>
-            </li>
+            <li>Smart Invoice Capture Profiles now have updated models with improved overall performance. (426520)</li>
         </ul>
         <p style="font-weight: bold;">May 15, 2023</p>
         <p>Business Processes</p>
         <ul>
-            <li>
-                <p>Save to repository tasks can no longer be marked suspended after completed. (424511)</p>
-            </li>
-            <li>
-                <p>Users denied access to process automation are now able to reassign tasks to process automation teams. (424940)</p>
-            </li>
+            <li>Save to repository tasks can no longer be marked suspended after completed. (424511)</li>
+            <li>Users denied access to process automation are now able to reassign tasks to process automation teams. (424940)</li>
         </ul>
         <p style="font-weight: bold;">May 9, 2023</p>
         <p>Process Automation</p>
@@ -445,7 +514,7 @@
             <li>Fixed a lookup rule failure with single-line fields on MacOS Safari browsers. (406705)</li>
         </ul>
         <p style="font-weight: bold;">December 13, 2022</p>
-        <p style="font-weight: normal;">Public Portal</p>
+        <p>Public Portal</p>
         <ul>
             <li style="font-weight: normal;">Downloading a PDF&#160;from public portal on an iOS device when popups were blocked was unsuccessful. This issue has been resolved. (385993)</li>
             <li style="font-weight: normal;">Resolved an issue where streaming large mp3 files in public portal did not work. (394037) </li>

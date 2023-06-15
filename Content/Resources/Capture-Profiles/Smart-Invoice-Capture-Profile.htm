@@ -1,11 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:lastBlockDepth="8" MadCap:lastHeight="5377" MadCap:lastWidth="1296">
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" style="mc-master-page: url('../../MasterPages/WebHelp.flmsp');" MadCap:conditions="Default.Complete">
     <head>
     </head>
     <body>
         <h1>Smart Invoice Profiles</h1>
-        <p>A smart invoice profile  uses machine learning to automatically capture the invoice date, invoice number, purchase order number, and total amount due, in typed or handwritten form, and can also  determine the vendor of the invoice by comparing invoice data to a vendor lookup table. Similar to other capture profiles, the <a href="../Workflow/Activities/Run-Capture-Profile.htm">Run Capture Profile</a> Workflow activity runs this smart invoice profile and outputs tokens for the captured data to be used later in the workflow. This activity can also retrieve information from a vendor <a href="../Entities/lookup-tables.htm">lookup table</a> to automatically <a href="Smart-Invoice-Capture-Profile.htm#Vendor">gather vendor information</a> from invoices.</p>
-        <p class="note"><b>Note:</b> Currently, making changes to the default smart invoice profile and saving it fails.  If you need to configure a smart invoice profile, create a new one. </p>
+        <p>A <MadCap:toggler targets="smart invoice">smart invoice profile</MadCap:toggler>  uses machine learning to automatically capture the invoice date, invoice number, purchase order number, and total amount due, in typed or handwritten form, and can also  determine the vendor of the invoice by comparing invoice data to a vendor <a href="../Entities/lookup-tables.htm">lookup table</a>. Optionally, the profile can also capture the shipping address, invoice subtotal, tax amount, and tax ID. Similar to other capture profiles, the <a href="../Workflow/Activities/Run-Capture-Profile.htm">Run Capture Profile</a> Workflow activity runs this smart invoice profile and outputs tokens for the captured data to be used later in the workflow. </p>
+        <p MadCap:targetName="smart invoice">
+            <img src="../../Images/Capture-Profiles/SmartInvoiceProfiles.png" title="Smart Invoice Profiles can now capture additional fields." alt="Smart Invoice Profiles" />
+        </p>
+        <p class="note"><b>Note:</b> Currently, making changes to the default smart invoice profile (named <b>Invoices</b>) and saving it fails.  If you need to configure a smart invoice profile, create a new one. </p>
         <h2 class="topicheading">Creating a Smart Invoice Profile</h2>
         <p><b>To create a smart invoice profile</b>
         </p>
@@ -13,7 +16,8 @@
             <li>On the Capture Profiles page, click <b>Smart Invoice Profiles</b> in the left pane. You can also click the <b>New</b> button or click the drop-down and select <b>Smart Invoice Profile</b>.</li>
             <li>Click <b>New</b> or click the drop-down next to <b>New</b> and select <b>Smart Invoice Profile</b>. </li>
             <li>Give the profile a name and description, then click <b>Create</b>.</li>
-            <li>If you want to identify the invoice vendor and retrieve additional vendor information from the invoice, select <b>Include vendor information</b>, then select the table containing the vendor information.</li>
+            <li>The invoice date, invoice number, PO number, and total amount will be automatically captured. Select one or more checkboxes next to the additional fields you want captured: shipping address, subtotal, tax amount, or tax ID.</li>
+            <li>If you want to identify the invoice vendor and retrieve additional vendor information from the invoice, select <b>Capture vendor information</b>, then select the table containing the vendor information.</li>
             <li>The <b>Include a token with the 10 best matches</b> option will return multi-value tokens for the ten vendors with the closest match, not just the first vendor match. These tokens are: <i>Top10VendorName, Top10VendorId</i>, and <i>Top10VendorConfidence</i>. This allows an invoice reviewer to quickly choose alternate vendor information if there are close matches. </li>
             <li>When finished, save <img src="../../Images/Capture-Profiles/SaveButton.PNG" />, <a href="#Test">test</a>, <img src="../../Images/Capture-Profiles/Test.png" /> and publish <img src="../../Images/Capture-Profiles/PublishButton.PNG" /> the profile.</li>
         </ol>

@@ -731,7 +731,11 @@
       <TocEntry
         Title="Migrating Data From A Self-Hosted Laserfiche Repository Into Laserfiche Cloud"
         Link="/Content/repositoryimport.htm"
-        StartSection="false" />
+        StartSection="false">
+        <TocEntry
+          Title="Monitoring the Data Migration Process"
+          Link="/Content/repo-import-monitor.htm" />
+      </TocEntry>
       <TocEntry
         Title="Setting a Default Application"
         Link="/Content/default-application.htm" />

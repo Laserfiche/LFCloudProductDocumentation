@@ -7,7 +7,7 @@
         <p>This configuration of <a href="Run-Business-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">the Run Rule activity</a> allows you to reference an <a href="../../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">entity query</a>, perform the custom query on various inputs in the process, and produce some result. You can then use the results of the query elsewhere in your workflow process.</p>
         <p>To configure an entity query rule:</p>
         <ol>
-            <li>Drag the <b>Run Rule</b> activity from the toolbox pane and drop it in the designer pane.</li>
+            <li>Drag the <b>Run Rule</b> activity from the toolbox pane and drop it in the Designer pane.</li>
             <li>
                 <MadCap:snippetText src="../../Snippets/Activity Name and Description Sentence.flsnp">
                 </MadCap:snippetText>
@@ -15,7 +15,7 @@
             <li>In the <b>Rule</b> property box, select <b>Entity Query Rule</b>.</li>
             <li>Select the rule and version.&#160;The version corresponds to the "Major"&#160;<a href="../../Rules/Versioning-for-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">version number</a> for the  rule.</li>
             <li>Under <b>Input Values</b>, specify the <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a> and/or hard-coded values you want to use for each input parameter in the WHERE&#160;clause.<p class="ex"><b>Example</b>: Because the <i>Name</i> member uses the input parameter <i>%(name)</i>, you can define the parameter in the properties pane. In the following example, the input parameter has the token value <i>%(Name)</i>.</p><p><img src="../../../Images/queryrulesample.png" /></p><p><img src="../../../Images/inputvaluesquery.png" /></p></li>
-            <li>Under <b>Output Values</b>, specify the name and <a href="../Tokens-Regex/Token-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">tag</a> of the <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a> that contains the result of the rule from each statement in the SELECT&#160;clause.<p class="ex"><b>Example</b>: The following output parameters <i>Teacher_Name</i> and <i>Teacher_Type</i> are referenced in the properties pane in the workflow designer.</p><p><img src="../../../Images/selectdmr.png" /></p><p><img src="../../../Images/outputvaluesquery.png" /></p></li>
+            <li>Under <b>Output Values</b>, specify the name and <a href="../Tokens-Regex/Token-Tags.htm" title="Click here to learn more." alt="Click here to learn more.">tag</a> of the <a href="../Tokens-Regex/Tokens.htm" title="Click here to learn more." alt="Click here to learn more.">token</a> that contains the result of the rule from each statement in the SELECT&#160;clause.<p class="ex"><b>Example</b>: The following output parameters <i>Teacher_Name</i> and <i>Teacher_Type</i> are referenced in the properties pane in the Workflow Designer.</p><p><img src="../../../Images/selectdmr.png" /></p><p><img src="../../../Images/outputvaluesquery.png" /></p></li>
             <li>Under <b>Rows to Return</b>, specify the number of outputs to return.</li>
         </ol>
     </body>

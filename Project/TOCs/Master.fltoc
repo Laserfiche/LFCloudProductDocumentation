@@ -12,7 +12,7 @@
       Link="/Content/Software_Requirements.htm" />
     <TocEntry
       Title="Service Limits"
-      Link="/Content/Service-Limits.htm" />
+      Link="/Content/service/Service-Limits.htm" />
     <TocEntry
       Title="Overview of Laserfiche Cloud"
       Link="/Content/Overview.htm" />
@@ -42,7 +42,7 @@
       Title="Release History">
       <TocEntry
         Title="Recent Changes"
-        Link="/Content/changelog.htm"
+        Link="/Content/service/changelog.htm"
         ReplaceMergeNode="false"></TocEntry>
       <TocEntry
         Title="2023">

@@ -1,4 +1,4 @@
-/*<meta />*/
+﻿/*<meta />*/
 
 /*additional sidenav indentation*/
 
@@ -85,15 +85,9 @@ p.note
 	font-family: Arial;
 }
 
-a
-{
-	color: #E35205;
-}
-
 a.nav-link.active
 {
-	border-bottom: 3px #E35205 solid;
-	color: #E35205 !important;
+	border-bottom: 3px solid;
 }
 
 MadCap|expanding
@@ -189,7 +183,7 @@ MadCap|helpControlMenuItem.Highlighted
 
 .title-bar-container
 {
-	border-bottom: 4px solid #E35205;
+	border-bottom: 4px solid;
 }
 
 h1
@@ -207,10 +201,6 @@ h3
 	color: #083E66;
 }
 
-MadCap|xref
-{
-	color: #E35205;
-}
 
 /**welcome page boxes**/
 
@@ -496,7 +486,7 @@ MadCap|xref
 	}
 }
 
-.row .columns h2,
+.welcome-row .columns h2,
 .pathfindHeader
 {
 	font-size: 18px;
@@ -513,10 +503,11 @@ MadCap|xref
 	padding-right: 2em;
 }
 
-.row a,
-.row h2 a
+.welcome-row a,
+.welcome-row h2 a
 {
 	text-decoration: none;
+	color: #555555;
 }
 
 .columns:hover
@@ -687,4 +678,3 @@ span.Code
 	background-color: #f0f0f0;
 	color: #555555;
 }
-

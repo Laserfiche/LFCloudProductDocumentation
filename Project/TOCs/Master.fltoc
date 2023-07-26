@@ -47,6 +47,9 @@
       <TocEntry
         Title="2023">
         <TocEntry
+          Title="July 2023"
+          Link="/Content/2023.07.htm" />
+        <TocEntry
           Title="June 2023"
           Link="/Content/2023.06.htm" />
         <TocEntry
@@ -739,6 +742,16 @@
       <TocEntry
         Title="Setting a Default Application"
         Link="/Content/default-application.htm" />
+      <TocEntry
+        Title="Current Notable Issues"
+        Link="/Content/KnownIssues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Disclaimer"
+        Link="/Content/Copyright.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Third Party License Agreements"
+          Link="/Content/ThirdPartyLicenseAgreements.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
     </TocEntry>
   </TocEntry>
   <TocEntry

@@ -6,23 +6,49 @@
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p style="font-weight: bold;">August 1, 2023</p>
+        <p>Business Processes       </p>
+        <ul>
+            <li>
+                Fixed an issue with business process instances storing blank forms within the repository. (475566)</li>
+        </ul>
+        <p style="font-weight: bold;">July 18, 2023</p>
+        <p>Web Client
+        </p>
+        <ul>
+            <li>
+                When using the "within" option in a Text search, the context hits list will now display the correct results that are within the specified proximity to one another. (413786)
+            </li>
+        </ul>
+        <p style="font-weight: bold;">July 13, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Resolved an issue where importing a process updated in an alternate account caused form designer forms to be converted to classic form format. (469830)</li>
+            <li>Resolved an issue in the form designer where a table populated from a lookup included extra rows if the number of lookup values are less than the row count of the table. (471298)</li>
+            <li>Resolved an issue in the form designer where a calculation within a collection that depends on a value from a lookup cleared the field value. (426261, 426264)</li>
+            <li>Resolved an issue in the form designer where the ROW() function in a table would return incorrect values. (471427)</li>
+        </ul>
+        <p style="font-weight: bold;">July 10, 2023</p>
+        <ul>
+            <li>
+Added the Laserfiche Status and Support links to the My Account menu. (430006, 430010)
+            </li>
+            <li>Resolved an issue that could prevent MSG files from displaying correctly. (430836)
+            </li>
+            <li>Generating pages from some PDFs could result in a "Incorrect operator definition" error. This issue has been resolved. (428318)
+            </li>
+            <li>In some cases, Laserfiche could stop responding when displaying search highlights for searches using the within search parameter. This issue has been resolved. (430451)
+            </li>
+        </ul>
         <p><a href="2023.07.htm"><b>July 6, 2023</b></a>
         </p>
         <p>Account Administration</p>
         <ul>
             <li>Select Solution Providers can now access a Repository Import Monitor site, allowing them to monitor the migration process for customers that are migrating repository data from self-hosted Laserfiche to Laserfiche Cloud. To view the site, select Repository Import Monitor from the app picker or the Overview page.</li>
         </ul>
-        <p style="font-weight: normal;">Capture Profiles</p>
-        <ul>
-            <li>
-                <p>Smart Invoice Capture optional field extraction is no longer disabled when lookup tables are not configured. (470347)</p>
-            </li>
-        </ul>
         <p style="font-weight: normal;">Integrations</p>
         <ul>
-            <li>
-                <p>Web Service Connections now support OAuth 2.0 protocol and custom headers.</p>
-            </li>
+            <li>Web Service Connections now support OAuth 2.0 protocol and custom headers.</li>
         </ul>
         <p style="font-weight: bold;"><MadCap:variable name="DoNotTranslate.LF Mobile" style="font-weight: normal;" />
         </p>
@@ -39,13 +65,20 @@
             <li>Session timeout is no longer displayed when attempting to save an offline copy of a folder. (429953)</li>
             <li>An unexpected error is no longer displayed when attempting to  view a PDF as an electronic file. (430039)</li>
             <li>The sign in button now says Laserfiche Cloud instead of Cloud. (469291)</li>
+            <li>Users are no longer prompted to sign in to the app  when viewing a task after their previous session timed out. (313683)</li>
+            <li>Taking a picture using the Scene Optimizer option on Samsung devices and uploading it to Laserfiche  no longer closes the app unexpectedly. (368578)</li>
         </ul>
         <p style="font-weight: normal;">Web Client</p>
         <ul>
             <li>Resolved an issue in which using the %(FileModified) token during import could result in a "Bad field value. [9017]" error. (423492)</li>
             <li>In some cases, jumping to a specific entry in a list by typing failed. This issue has been resolved. (430021)</li>
             <li>Resolved an issue that could result in a "The value of start must be at least PageRange.MIN_PAGE_NUMBER (1). (Parameter 'start')" error when importing a file as a new version of an existing document. (430095)</li>
-            <li>Resolved an issue that could result in a ""The value of start must be at least MIN_PAGE_NUMBER" error when sharing a document using direct share. (467259)</li>
+            <li>Resolved an issue that could result in a "The value of start must be at least MIN_PAGE_NUMBER" error when sharing a document using direct share. (467259)</li>
+        </ul>
+        <p style="font-weight: bold;">June 30, 2023</p>
+        <p style="font-weight: normal;">Capture Profiles</p>
+        <ul>
+            <li>Smart Invoice Capture optional field extraction is no longer disabled when lookup tables are not configured. (470347)</li>
         </ul>
         <p style="font-weight: bold;">June 22, 2023</p>
         <p>Business Processes</p>

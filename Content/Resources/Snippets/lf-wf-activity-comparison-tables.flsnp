@@ -39,7 +39,7 @@
                     <tr class="even">
                         <td>Ellucian Banner integration through Ethos</td>
                         <td>✓</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                     </tr>
                     <tr class="odd">
                         <td>In-App Notifications</td>
@@ -65,17 +65,17 @@
                         <td>Capture Profiles</td>
                         <td>✓
                         </td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                     </tr>
                     <tr class="odd">
                         <td>Smart Invoice Capture</td>
                         <td>✓</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                     </tr>
                     <tr class="even">
                         <td>Workflow Bots</td>
                         <td>✓</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                     </tr>
                     <tr class="odd">
                         <td>Surveys</td>
@@ -133,7 +133,7 @@
                         <td>Execute Application Action</td>
                         <td>✓
                         </td>
-                        <td>Coming Soon						</td>
+                        <td>&#160;</td>
                     </tr>
                     <tr class="odd">
                         <td>Replace Lookup Table Data</td>
@@ -335,7 +335,7 @@
                     <tr class="even">
                         <td>Schedule PDF&#160;generation</td>
                         <td>&#160;</td>
-                        <td>Coming Soon</td>
+                        <td>✓</td>
                     </tr>
                     <tr class="odd">
                         <td>Schedule OCR</td>
@@ -618,19 +618,19 @@
                     </tr>
                     <tr class="odd">
                         <td>Find Group</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                         <td>✓
                         </td>
                     </tr>
                     <tr class="even">
                         <td>Find Manager</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                         <td>✓
                         </td>
                     </tr>
                     <tr class="odd">
                         <td>Find User</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                         <td>✓
                         </td>
                     </tr>
@@ -736,7 +736,7 @@
                     </tr>
                     <tr class="odd">
                         <td>Read XML</td>
-                        <td>Coming Soon</td>
+                        <td>&#160;</td>
                         <td>✓
                         </td>
                     </tr>

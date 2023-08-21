@@ -53,7 +53,7 @@
         Name="Side Navigation Menu">
         <Properties>
           <Property
-            Name="BackgroundColor">#083E66</Property>
+            Name="BackgroundColor">#ffffff</Property>
         </Properties>
       </Style>
       <Medium
@@ -150,17 +150,29 @@
             Name="BorderTop">solid 1px #ffffff</Property>
           <Property
             Name="BorderBottom">solid 1px #ffffff</Property>
+          <Property
+            Name="BackgroundColor">#d3d3d3</Property>
         </Properties>
       </Style>
       <Style
         Name="Side Navigation Menu Item">
-        <Properties></Properties>
+        <Properties>
+          <Property
+            Name="Color">#000000</Property>
+        </Properties>
         <Classes>
           <StyleClass
             Name="1st Level">
             <Properties></Properties>
           </StyleClass>
         </Classes>
+      </Style>
+      <Style
+        Name="Side Navigation Menu Item (hover)">
+        <Properties>
+          <Property
+            Name="BackgroundColor">#dcdcdc</Property>
+        </Properties>
       </Style>
     </Styles>
     <Stylesheet></Stylesheet>

@@ -65,7 +65,7 @@
         <h2><a name="constraints"></a>Migration Constraints</h2>
         <p>	The migration tools and processes do not transfer information pertaining to certain self-hosted Laserfiche repository features that are either not applicable or not available to a Laserfiche Cloud repository. The presence of this information in the repository does not stop the migration but may affect what data is migrated and the security configuration of the migrated data. The following types of repository data are not currently migrated:</p>
         <ul>
-            <li>Security configuration for unmapped users: Privileges, feature rights, and access rights on entries, templates, and fields are not preserved for users that are not mapped prior to processing the repository database. Be advisded that this configuration cannot be easily added after the repository has been migrated. </li>
+            <li>Security configuration for unmapped users: Privileges, feature rights, and access rights on entries, templates, and fields are not preserved for users that are not mapped prior to processing the repository database. Associated security settings cannot be migrated after the repository migration is complete. </li>
             <li>Business processes history</li>
             <li>Digital signatures and digital certificates</li>
             <li>Folder filter expressions: This is a security feature that is used for access control. Laserfiche Cloud does not support folder filter expressions. Carefully evaluate how repository access controls may need to be redesigned in your Laserfiche Cloud repository if folder filter expressions are used in your self-hosted Laserfiche repository.</li>

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title>Error Events | Laserfiche Forms | Process Automation</title>
         <meta name="description" content="Use error events to start or stop process flows based on whether errors occur." />
@@ -17,7 +17,7 @@
         </ol>
         <h2 class="topicheading">Error End Event</h2>
         <p>Error end events are represented by the following symbol:<img src="../Resources/Forms Images/error_end_event.PNG" /></p>
-        <p>Error end events generate a custom error and then ends the current process flow. The custom error can be caught by error start events and error catch events.</p>
+        <p>Error end events generate a custom error and then end the current process flow. The custom error can be caught by error start events and error catch events.</p>
         <p>Custom errors that are not caught by an error start event or error catch event will not terminate the process flow, but will be logged in the instance log.</p>
         <h2>Using Error Start and End Events</h2>
         <p>The following example shows how you can use error start events and error end events in a process. In a sales process, the initial submission of a form containing details of a potential sale starts three different process flows. In the first flow, the legal department reviews the prospective sale for any issues. In the second flow, the sales department verifies the client's information. If the client's information is not updated in the Customer Relations Management (CRM) system, an error end event happens. A third process flow starts off a proof-of-concept (POC)&#160;demonstration.</p>

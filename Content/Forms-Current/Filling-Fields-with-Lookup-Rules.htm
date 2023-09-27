@@ -5,7 +5,7 @@
     </head>
     <body>
         <h1>Automatically Filling Fields with Lookup Rules</h1>
-        <p> Lookup rules for form fields attempt to access data from your pre-configured <a href="../Resources/Rules/Rules.htm" title="Click here to learn more." alt="Click here to learn more.">rules</a>, and use this data for pre-populating fields or auto-suggesting field values. If you have data in an external database, you must import the relevant data into <a href="../Resources/Entities/lookup-tables.htm" target="_blank" title="Click here to learn more." alt="Click here to learn more.">lookup tables</a> before you can use lookups on that data.</p>
+        <p> Lookup rules for form fields attempt to access data from your pre-configured <a href="../Resources/Rules/Rules.htm" title="Click here to learn more." alt="Click here to learn more.">rules</a>, and use this data for pre-populating fields or auto-suggesting field values. If you have data in an external database, you must import the relevant data into <a href="../Resources/Entities/lookup-tables.htm" title="Click here to learn more." alt="Click here to learn more.">lookup tables</a> before you can use lookups on that data.</p>
         <p>Business processes can look up data from  <a href="../Resources/Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">lookup table queries</a>, <a href="../Resources/Rules/Formulas/Getting-Started-with-Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">formulas</a>, <a href="../Resources/Integrations/integrationplatform.htm" title="Click here to learn more." alt="Click here to learn more.">application connections</a>, <a href="../Resources/Rules/web-request-rule.htm" title="Click here to learn more." alt="Click here to learn more.">web request rules</a>, and <a href="../Resources/Rules/Decision-Tables/Getting-Started-with-Decision-Tables.htm" title="Click here to learn more." alt="Click here to learn more.">decision tables</a>. </p>
         <p>To configure lookup rules, click on the <b>Lookup Rules</b> tab in the <a href="Key-Concepts-in-Forms.htm#Form" title="Click here to learn more." alt="Click here to learn more.">form designer</a>.</p>
         <p class="note"><b>Note:</b>&#160;Currently only web request rules using an application connection type will appear in the drop down selector for lookup type.</p>
@@ -30,7 +30,7 @@
         <ol>
             <li>In the form designer, navigate to the <b>Lookup Rules</b> tab.</li>
             <li>Click <b>Add rule</b>, or, if there are no lookup rules yet, <b>New lookup rule</b>.</li>
-            <li>Under <b>Select rule type</b>, select <b>Lookup Table</b>.</li>
+            <li>Under <b>Select rule type</b>, select <b>Lookup Table Query</b>.</li>
             <li>In the next dropdown menu, select the query that you want to use.</li>
             <li>Depending on the selected query, you may have to select which fields should match input parameters in order for auto-filling to occur. Select the relevant fields in the drop-down menu in each <b>When</b> condition.</li>
             <li>Click <b>Add output parameter</b>.</li>
@@ -48,7 +48,7 @@
             <li>Under <b>Select rule type</b>, select <b>Formula</b>.</li>
             <li>In the next drop-down menu, select the name of the formula you want to use.</li>
             <li>In the drop-down menu after <b>When</b>, select the field whose value should be the <a href="../Resources/Rules/Formulas/Defining-the-Input-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">input parameter</a> in the formula. Do this for each <b>When</b> statement that appears. The formula will perform calculations on the input values.</li>
-            <li><b>Optional</b>: If you have more than input parameter that must match for the calculation to take place, you can check the <b>Show Auto Fill Button</b> option if you do not want the process to automatically recalculate field values when the fields that must match have their values changed. If you clear this option, then the form will have an autofill button that the user can click to rerun their calculation after they change any relevant values.</li>
+            <li><b>Optional</b>: If you have more than one input parameter that must match for the calculation to take place, you can clear the <b>Show Auto Fill Button</b> option if you do not want the process to automatically recalculate field values when the fields that must match have their values changed. If you clear this option, then the form will have an autofill button that the user can click to rerun their calculation after they change any relevant values.</li>
             <li>Click <b>Add output parameter</b>.</li>
             <li>In the drop-down menu after <b>Fill</b>, select the field that should be filled with the formula's output.</li>
             <li>In the drop-down menu after <b>with</b>, select the <a href="../Resources/Rules/Formulas/Specifying-Output-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">output parameter</a> that will fill the previously specified field.</li>

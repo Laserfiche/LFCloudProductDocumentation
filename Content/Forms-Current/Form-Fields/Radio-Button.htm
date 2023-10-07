@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
     <head><title>Radio Button Field | Laserfiche Forms | Process Automation</title>
         <meta name="description" content="Use a radio button field in your Laserfiche form if users must select only one among several fixed choices." />
@@ -11,31 +11,61 @@
             <li>Use a checkbox field if you want the user to be able to select more than one option.</li>
             <li>Use a drop-down field if you want the user to select only one option from a long list of options.</li>
         </ul>
+        <p class="note"><b>Note:</b> If the total number of choices in a checkbox or radio button field exceeds 100, only the selected choices will be saved.</p>
         <h2>Field Settings</h2>
         <p><b>To edit a radio button, checkbox, or drop-down field</b>
         </p>
-        <ol>
-            <li>Select the field on the canvas and click <b>Edit</b>.</li>
-            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert variables</b> button to insert a variable into the label.</li>
-            <li>
-                <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the a variable name based on the field label.</li>
-            <li>Under <b>Field options,</b> select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field.</li>
-            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
-            <li>Under <b>Text above field</b> and <b>Text below field</b>, enter any additional text that should appear with the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
-            <li>For checkbox and radio button fields, under <b>Layout</b>, specify how the field choices will be displayed (in columns or side-by-side).</li>
-            <li>For drop-down fields, under <b>Field width</b> specify whether the field should be small, medium, large, or x-large in width</li>
-            <li><a name="ChoicesAndValues"></a>Under <b>Choices</b>, specify the options users will choose from in this field.<![CDATA[   ]]><p class="note"><b>Note:</b> The choices you specify for a drop-down, checkbox, or radio button must be different from each other. The same choice cannot be listed twice in the same field. </p></li>
-            <li>Select <b>Assign values to choices</b> if you want the value to be stored for reporting or otherwise used in the process.   Assigning values to choices is especially useful if there is a monetary amount associated with a choice, and you want to use that amount to <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more."><a name="perform"></a>perform calculations</a>. It's also necessary if you want to save field values as metadata in a <a href="../Service-Tasks.htm#Save" title="Click here to learn more." alt="Click here to learn more.">Save to Repository service task</a>.</li>
-            <p class="note"><b>Note:</b> If multiple checkboxes are selected, the {/dataset/Checkbox} variable stores all the values in a single variable.</p>
-            <li>If you are <a href="../../Forms-Deprecated/Using Lookup Rules.htm">populating some choices from an external database</a> and you want to append the choices specified in step 8 to the database-populated choices, select <b>Append choices to lookup results</b>.</li>
-            <li>For checkboxes and radio buttons, you can include an "Other" field in the list by selecting <b>Add "Other" choice</b>.</li>
-            <li>Under <b>Default value</b>, select the default choice(s) for the field. For checkbox fields, you can select more than one default choice.</li>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+        <div id="tabs">
             <ul>
-                <li>In the <b>Advanced</b> tab under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
-                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
             </ul>
-            <li>Click <b>Done</b> to save your changes.</li>
-        </ol>
+            <div id="tabs-1">
+                <ol>
+                    <li>Select the field on the canvas, and the <b>Basic</b> tab options will appear in the right pane.</li>
+                    <li>Under <b>Field Label</b>, enter the field label that will appear next to the field on the form. </li>
+                    <li>
+                        <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Forms will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Text above field</b> and <b>Text below field</b>, enter any additional text that should appear with the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                    <li>Under <b>File options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. </li>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li><a name="ChoicesAndValues"></a>Under <b>Choices</b>, specify the options users will choose from in this field.
+						<p class="note"><b>Note:</b> The choices you specify for a drop-down, checkbox, or radio button must be different from each other. The same choice cannot be listed twice in the same field. </p><ul><li>Use the <b>Search choices</b> field to edit specific choices in a long list.</li><li>Use the arrows to to the left of the <b>Label</b> column to rearrange the order of the choices.</li><li>Edit the labels in the Labels column by clicking in the text field for that choice.</li><li><b>Optional:</b> Select one choice to be the default selection for the form. Checkbox fields allow more than one default to be selected.</li><li>Click <b>Add choice</b> to add a new choice to the bottom of the list.</li><li>Click <b>Clear default value</b> to remove the <b>Default</b> previously selected.</li><li>Click <b>Import choices with a .csv or .txt file</b> to open a text file containing a list, and append that list to the existing choices.<div class="note"><b>Note:</b> The format of the CSV file should be:<br /><pre xml:space="preserve">Choice 1,Value_1,false
+Choice 2,Value_2,false
+Choice 3,Value_3,false</pre></div></li><li>Click <b>Export choices as .csv file</b> if you would like to save a copy of the choices as a .csv text file.</li><li>Select <b>Use a dropdown when the choice count exceeds the choice limit</b> to automatically render the list as a drop-down on the form for long lists, set the <b>Choice Limit</b> to the number of choices that will be displayed before the list is converted. Does not apply to drop-drown fields.</li><li>Select <b>Assign values to choices</b> to add a <b>Value</b> column and the ability to assign a value for use instead of the choice label. This is useful when further processing will be performed, and a shorter URL friendly value is needed. Checkbox fields have a <b>Value</b> column by default.</li><li>Select <b>Append choices to lookup results</b> to allow a lookup rule to add to the list, rather than replacing the list, of choices.</li><li>Select <b>Add 'Other' choice</b> to allow the user to enter a custom value in case the list does not contain exactly what they are looking for.</li></ul></li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.
+						<ul><li>Under <b>Layout</b> specify the number of columns to display choices in. Does not apply to drop-down fields.</li><li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.</li><li>Under <b>CSS&#160;classes</b>, specify the  CSS&#160;classes to assign this field. <a href="../Javascript-and-CSS/CSS Selectors.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about using CSS.</a></li></ul></li>
+                    <li>To configure field specific rules, click the <b>Rules</b> tab.</li>
+                    <li>Your field changes will be applied to the form automatically.</li>
+                </ol>
+            </div>
+            <div id="tabs-2">
+                <ol>
+                    <li>Select the field on the canvas and click <b>Edit</b>.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert variables</b> button to insert a variable into the label.</li>
+                    <li>
+                        <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the a variable name based on the field label.</li>
+                    <li>Under <b>Field options,</b> select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field.</li>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li>Under <b>Text above field</b> and <b>Text below field</b>, enter any additional text that should appear with the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                    <li>For checkbox and radio button fields, under <b>Layout</b>, specify how the field choices will be displayed (in columns or side-by-side).</li>
+                    <li>For drop-down fields, under <b>Field width</b> specify whether the field should be small, medium, large, or x-large in width</li>
+                    <li><a name="ChoicesAndValues"></a>Under <b>Choices</b>, specify the options users will choose from in this field.<![CDATA[   ]]><p class="note"><b>Note:</b> The choices you specify for a drop-down, checkbox, or radio button must be different from each other. The same choice cannot be listed twice in the same field. </p></li>
+                    <li>Select <b>Assign values to choices</b> if you want the value to be stored for reporting or otherwise used in the process.   Assigning values to choices is especially useful if there is a monetary amount associated with a choice, and you want to use that amount to <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more."><a name="perform"></a>perform calculations</a>. It's also necessary if you want to save field values as metadata in a <a href="../Service-Tasks.htm#Save" title="Click here to learn more." alt="Click here to learn more.">Save to Repository service task</a>.</li>
+                    <p class="note"><b>Note:</b> If multiple checkboxes are selected, the {/dataset/Checkbox} variable stores all the values in a single variable.</p>
+                    <li>If you are <a href="../../Forms-Deprecated/Using Lookup Rules.htm">populating some choices from an external database</a> and you want to append the choices specified in step 8 to the database-populated choices, select <b>Append choices to lookup results</b>.</li>
+                    <li>For checkboxes and radio buttons, you can include an "Other" field in the list by selecting <b>Add "Other" choice</b>.</li>
+                    <li>Under <b>Default value</b>, select the default choice(s) for the field. For checkbox fields, you can select more than one default choice.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>In the <b>Advanced</b> tab under <b>Tooltip</b>, specify the help text that will appear when users hover over the field.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                    </ul>
+                    <li>Click <b>Done</b> to save your changes.</li>
+                </ol>
+            </div>
+        </div>
     </body>
 </html>

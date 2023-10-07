@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <CatapultToc
   Version="1">
   <TocEntry
@@ -1663,6 +1663,9 @@
             Link="/Content/Forms-Current/Form-Fields/Table.htm" />
         </TocEntry>
         <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Forms-Current/Previewing-a-Form.htm" />
+      <TocEntry
           Title="[%=System.LinkedHeader%]"
           Link="/Content/Forms-Current/Applying-a-Theme-to-a-Form.htm" />
         <TocEntry

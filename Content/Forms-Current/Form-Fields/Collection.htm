@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title>Collections |  Laserfiche Forms | Process Automation</title>
         <meta name="description" content="Explains how to create collections in Laserfiche Forms. Collections consist of multiple sets of repeating fields." />
     </head>
     <body>
-        <h1>Collection</h1>
+        <h1>Collections</h1>
         <p>Collections are a structural element you can use to group fields together so they can be repeated as a set. To use a collection, drag it onto the canvas and then drag fields into the collection.</p>
         <div class="ex">
             <p><b>Example:</b> You want to gather the name, age, and gender of each of the form submitter's children. By placing these fields into a collection, the person filling out the form can click an "Add" button to input the name, age, and gender of more than one child.</p>
@@ -15,39 +15,79 @@
         <h2 class="topicheading">Settings</h2>
         <p><b>To edit a collection</b>
         </p>
-        <ol>
-            <li>Select the collection on the canvas and click <b>Edit</b> in Classic mode, in Modern mode the options will appear in the right pane once selected.</li>
-            <li>Under <b>Field label</b>, enter the name that will appear above the collection on the form. Click <b>Insert variables</b> to insert a <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> in the label.<p class="note"><b>Note</b>: The header for a collection in a form is an <b>h2</b> header, not an <b>h1</b> header. Only the header of the form can be an <b>h1</b> header.</p></li>
-            <li>
-                <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.<br /><p class="ex"><b>Tip:</b> If you added this collection as a variable from another form, and then edited the original collection by adding more fields, you can add those extra fields to this collection by clicking <b>Add a field from variable</b>. </p></li>
-            <li>In Classic mode, under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text. In Modern mode, only the <b>Field Description</b> is available.</li>
-            <li>Under <b>Collection options</b> for Classic mode or the <b>Advanced</b> tab for Modern mode, you can choose if a collection will have a fixed number of sets or if users can add sets.</li>
+        <div id="tabs">
             <ul>
-                <li><b>Range of sets:</b> Select this option to allow the collection to have a range of sets. This option is helpful in the following situations</li>
-                <ul>
-                    <li>&#160;If you want the collection to have a set minimum number of sets and then allow users add up to a maximum number of sets. </li>
-                    <li>If the collection is being populated with data from a data source or a variable, then you might not know the exact number of sets being populated, so setting a range allows for some flexibility. In this situation, the minimum number of sets specified will always be displayed, even if you don't have enough values from the data source or variable to fill them (blank sets will be added until the minimum is reached). Users can always manually add sets up to the maximum number specified. If the number of sets returned by the data source or variable is the maximum number of sets or higher, the number of sets will be capped at the maximum, and users won't be able to add sets. </li>
-                    <p class="ex"><b>Tip:</b> Leave the maximum value blank to return all sets from the data source or variable, or to let users add an unlimited number of sets. </p>
-                </ul>
-                <li><b>Fixed number of sets:</b> Select this option to specify the number of sets in the collection. If the collection is being populated from a data source or variable, the results will be capped at this number of sets. If fewer than this number of sets are returned from a data source or variable, the remaining sets will be left blank. Users cannot add sets with this option. </li>
-                <li>Classic mode only: <b>Append sets to the sets populated by a data source or variable:</b> Select this option if you want to return all sets from a data source or variable and then  append sets to the bottom of that list. In the <b>Min</b> text box, specify the number of sets that will be automatically added to whatever sets are returned by the data source or variable. In the <b>Max</b> text box, specify the total number of sets that can be added to the sets returned by the data source or variable. Users will be able to add up to this number of sets by clicking the link for adding sets. Set both these numbers to zero if you only want to display  all the lookup or variable results and not let users add to the collection. </li>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
             </ul>
-            <div class="note" MadCap:conditions="Default.Needs Review">
-                <p><b>Note for Classic mode:</b> If the collection is a variable from another form, it is populated differently depending on whether it has lookup rules.</p>
-                <ul>
-                    <li>If a lookup is configured for the collection, the looked up values will replace all existing values.  </li>
-                    <li> If an auto-suggest lookup rule is configured and the suggestions are different from the variable values, the field will be blank. </li>
-                    <li> If an auto-suggest lookup rule is configured and the variable has a value that is in the list of auto-suggested values, the value won't change. </li>
-                    <li>If no lookup is configured for the collection, the variable values will be displayed according to the options configured above.</li>
-                </ul>
+            <div id="tabs-1">
+                <ol>
+                    <li>Select the field on the canvas, and the options will appear in the right pane.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. </li>
+                    <li>
+                        <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Forms will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Text Above Field</b> and <b>Text Below Field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>Set deletion</b>, select <b>Confirm deletion</b> to display a confirmation dialog when a user attempts to delete a set.</li>
+                    <li>Under <b>Collection View Settings</b>, the following options are available:</li>
+                    <ul>
+                        <li>Select <b>Enable pagination</b> to set the <b>Pagination Page Size</b> and control the number of sets displayed at one time.</li>
+                        <li>Select <b>Enable search</b> to allow the user to search for data within the collection. The sets displayed will be limited to sets that contain data matching the entered parameter.</li>
+                        <li>Select <b>Enable filter</b> to allow the collection data to be filtered through a custom filter dialog.</li>
+                    </ul>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>Set Settings</b>, select how the collection will control the number of sets and how the sets can be added to the collection.</li>
+                        <ul>
+                            <li>Select <b>Range of sets</b> to specify that the collection can have a minimum and/or maximum number of sets.</li>
+                            <li>Select <b>Fixed number of sets</b> to specify exactly how many sets the collection will contain.</li>
+                            <li>Select <b>Append sets to the sets populated by a data source or variable</b> to specify how many sets can be added to the existing collection, and set a maximum number of sets if desired.</li>
+                            <li>For the range of and append sets options, you may also change the <b>Text for Add Set Link</b>.</li>
+                        </ul>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                        <li>Under <b>CSS&#160;classes</b>, specify the  CSS&#160;classes to assign this field. <a href="../Javascript-and-CSS/CSS Selectors.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more about using CSS.</a></li>
+                        <li>To configure field specific rules, click the <b>Rules</b> tab.</li>
+                        <li>Your field changes will be applied to the form automatically.</li>
+                    </ul>
+                </ol>
             </div>
-            <li>If you had selected <b>Range of sets</b> or <b>Append sets to the sets populated by a data source or variable</b> in the previous step, you can also edit the text that appears on the button for adding more sets. Do this by editing the text under <b>Text for add set link</b>.</li>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.<ul><li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this collection.</li></ul></li>
-            <li>In Classic mode, when you are finished editing the settings, click <b>Done</b>. Your changes will be saved automatically.</li>
-        </ol>
-        <h2 class="topicheading">Collections and variables</h2>
-        <p>When you add an existing field to a collection, the field will lose its <a href="../Variables.htm" title="Click here to learn more about Business Process variables ." alt="Click here to learn more about Business Process variables.">variable</a>. Since a collection is a set of repeatable fields, the collection itself will have a variable with sub-values for the fields it contains.</p>
-        <p class="note"><b>Note</b>:The <a href="../Service-Tasks.htm#Save" title="Click here to learn more." alt="Click here to learn more.">Save to Repository service task</a> supports process variables that can retrieve values from a specific row in a table or a set in a collection that can be used in a document name or template field. For example, suppose you design a table with a <a href="Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">Single Line</a> field and a <a href="File-Upload.htm" title="Click here to learn more." alt="Click here to learn more.">File Upload</a> field. If the table has 2 rows of values, setting the file upload document name in the Save to Repository service task to <span style="font-family: 'Courier New';">{/dataset/Table_variable_name/Single_Line_variable_name[Row()]}</span> will cause the first file to use the first row's value and the second file to use the second row's value.</p>
+            <div id="tabs-2">
+                <ol>
+                    <li>Select the collection on the canvas and click <b>Edit</b> in Classic mode, in Modern mode the options will appear in the right pane once selected.</li>
+                    <li>Under <b>Field label</b>, enter the name that will appear above the collection on the form. Click <b>Insert variables</b> to insert a <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> in the label.<p class="note"><b>Note</b>: The header for a collection in a form is an <b>h2</b> header, not an <b>h1</b> header. Only the header of the form can be an <b>h1</b> header.</p></li>
+                    <li>
+                        <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.<br /><p class="ex"><b>Tip:</b> If you added this collection as a variable from another form, and then edited the original collection by adding more fields, you can add those extra fields to this collection by clicking <b>Add a field from variable</b>. </p></li>
+                    <li>In Classic mode, under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text. In Modern mode, only the <b>Field Description</b> is available.</li>
+                    <li>Under <b>Collection options</b> for Classic mode or the <b>Advanced</b> tab for Modern mode, you can choose if a collection will have a fixed number of sets or if users can add sets.</li>
+                    <ul>
+                        <li><b>Range of sets:</b> Select this option to allow the collection to have a range of sets. This option is helpful in the following situations</li>
+                        <ul>
+                            <li>&#160;If you want the collection to have a set minimum number of sets and then allow users add up to a maximum number of sets. </li>
+                            <li>If the collection is being populated with data from a data source or a variable, then you might not know the exact number of sets being populated, so setting a range allows for some flexibility. In this situation, the minimum number of sets specified will always be displayed, even if you don't have enough values from the data source or variable to fill them (blank sets will be added until the minimum is reached). Users can always manually add sets up to the maximum number specified. If the number of sets returned by the data source or variable is the maximum number of sets or higher, the number of sets will be capped at the maximum, and users won't be able to add sets. </li>
+                            <p class="ex"><b>Tip:</b> Leave the maximum value blank to return all sets from the data source or variable, or to let users add an unlimited number of sets. </p>
+                        </ul>
+                        <li><b>Fixed number of sets:</b> Select this option to specify the number of sets in the collection. If the collection is being populated from a data source or variable, the results will be capped at this number of sets. If fewer than this number of sets are returned from a data source or variable, the remaining sets will be left blank. Users cannot add sets with this option. </li>
+                        <li>Classic mode only: <b>Append sets to the sets populated by a data source or variable:</b> Select this option if you want to return all sets from a data source or variable and then  append sets to the bottom of that list. In the <b>Min</b> text box, specify the number of sets that will be automatically added to whatever sets are returned by the data source or variable. In the <b>Max</b> text box, specify the total number of sets that can be added to the sets returned by the data source or variable. Users will be able to add up to this number of sets by clicking the link for adding sets. Set both these numbers to zero if you only want to display  all the lookup or variable results and not let users add to the collection. </li>
+                    </ul>
+                    <div class="note" MadCap:conditions="Default.Needs Review">
+                        <p><b>Note for Classic mode:</b> If the collection is a variable from another form, it is populated differently depending on whether it has lookup rules.</p>
+                        <ul>
+                            <li>If a lookup is configured for the collection, the looked up values will replace all existing values.  </li>
+                            <li> If an auto-suggest lookup rule is configured and the suggestions are different from the variable values, the field will be blank. </li>
+                            <li> If an auto-suggest lookup rule is configured and the variable has a value that is in the list of auto-suggested values, the value won't change. </li>
+                            <li>If no lookup is configured for the collection, the variable values will be displayed according to the options configured above.</li>
+                        </ul>
+                    </div>
+                    <li>If you had selected <b>Range of sets</b> or <b>Append sets to the sets populated by a data source or variable</b> in the previous step, you can also edit the text that appears on the button for adding more sets. Do this by editing the text under <b>Text for add set link</b>.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.<ul><li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this collection.</li></ul></li>
+                    <li>In Classic mode, when you are finished editing the settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                </ol>
+                <h2 class="topicheading">Collections and variables</h2>
+                <p>When you add an existing field to a collection, the field will lose its <a href="../Variables.htm" title="Click here to learn more about Business Process variables ." alt="Click here to learn more about Business Process variables.">variable</a>. Since a collection is a set of repeatable fields, the collection itself will have a variable with sub-values for the fields it contains.</p>
+                <p class="note"><b>Note</b>:The <a href="../Service-Tasks.htm#Save" title="Click here to learn more." alt="Click here to learn more.">Save to Repository service task</a> supports process variables that can retrieve values from a specific row in a table or a set in a collection that can be used in a document name or template field. For example, suppose you design a table with a <a href="Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">Single Line</a> field and a <a href="File-Upload.htm" title="Click here to learn more." alt="Click here to learn more.">File Upload</a> field. If the table has 2 rows of values, setting the file upload document name in the Save to Repository service task to <span style="font-family: 'Courier New';">{/dataset/Table_variable_name/Single_Line_variable_name[Row()]}</span> will cause the first file to use the first row's value and the second file to use the second row's value.</p>
+            </div>
+        </div>
         <MadCap:snippetBlock src="../../Resources/Snippets/migrating-form-tables-into-word-documents.flsnp" />
     </body>
 </html>

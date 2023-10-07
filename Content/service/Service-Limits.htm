@@ -348,9 +348,21 @@
                     </td>
                 </tr>
                 <tr>
+                    <td class="tabletext">Regular Expression Builder</td>
+                    <td class="tabletext">
+                        <p>The Regular Expression Builder can be used to write or test an expression:</p>
+                        <ul>
+                            <li>3 times per minute</li>
+                            <li>60 times per hour</li>
+                            <li>300 times per day</li>
+                        </ul>
+                    </td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
                     <td class="tabletext">Form File Upload</td>
                     <td class="tabletext">
-                        <p>A form upload field will allow a maximum aggregate file size of:</p>
+                        <p>A form upload field will allow a maximum single file size of:</p>
                         <ul>
                             <li>25 MB</li>
                         </ul>
@@ -398,6 +410,10 @@
                 <tr MadCap:conditions="">
                     <td class="tabletext">Monitor Page Reports</td>
                     <td class="tabletext">
+                        <p>The maximum number of rows that can be downloaded in a report:</p>
+                        <ul>
+                            <li>10000</li>
+                        </ul>
                         <p>Downloading a process report that includes details for radio button, checkbox, and drop-down fields with more than 200 options will only display the options that have been selected.</p>
                         <p>Additionally, if an "Other" option is enabled, the report will only include the first 30 characters entered in the field. </p>
                     </td>
@@ -727,7 +743,7 @@ HTTPS protocol</p>
                 </tr>
                 <tr>
                     <td class="tabletext">Concurrency Limits</td>
-                    <td class="tabletext">In addition to rate limiting, the Laserfiche API will limit the number of concurrent calls for certain operations that a user can run.<ul><li>1 concurrent long operations per user<ul><li>Long operations are defined as those APIs which involve the Task APIs. Currently, copying and deleting entries fall under this category.</li></ul><p><b>Note:</b> Service Principal users can run 10 concurrent long operations</p></li></ul><ul><li>2 concurrent open searches per user<ul><li>After a search operation is completed, it remains open in order to have the results of the search cached. Follow best practices of deleting search operations when the results are no longer needed.</li></ul><ul><li>The Simple Search route will only count against your open search limit while the search is running. The results of a Simple Search are not cached, so will not count against the limit after the search is complete.</li></ul><p><b>Note:</b> Service Principal users can have 6 concurrent open searches</p></li></ul><ul><li>At the account level, there is also a global limit imposed across all users of an organization<ul><li>15 concurrent long operations per organization</li><li>9 concurrent open searches per organization</li></ul></li></ul></td>
+                    <td class="tabletext">In addition to rate limiting, the Laserfiche API will limit the number of concurrent calls for certain operations that a user can run.<ul><li>1 concurrent long operations per user<ul><li>Long operations are defined as those APIs which involve the Task APIs. Currently, copying and deleting entries fall under this category.</li></ul><p><b>Note:</b> Service Principal users can run 10 concurrent long operations</p></li><li>2 concurrent open searches per user<ul><li>After a search operation is completed, it remains open in order to have the results of the search cached. Follow best practices of deleting search operations when the results are no longer needed.</li></ul><ul><li>The Simple Search route will only count against your open search limit while the search is running. The results of a Simple Search are not cached, so will not count against the limit after the search is complete.</li></ul></li><li>2 concurrent import operations per user</li><li>2 concurrent export operations per user</li><p><b>Note:</b> Service Principal users can have 6 concurrent open searches, import operations, and export operations.</p></ul><ul><li>At the account level, there is also a global limit imposed across all users of an organization<ul><li>15 concurrent long operations per organization</li><li>9 concurrent open searches per organization</li><li>9 concurrent import operations per organization</li><li>9 concurrent export operations per organization</li></ul></li></ul></td>
                     <td>&#160;</td>
                 </tr>
                 <tr>
@@ -736,6 +752,31 @@ HTTPS protocol</p>
                         <p>In general, the Laserfiche API will limit the size of JSON request and response bodies to 5 MB. APIs that return a stream of data, like Export related APIs, do not fall under this limit.</p>
                         <p>File upload (document import) size limit: 100 MB</p>
                     </td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Maximum number of parts per request to CreateMultipartUploadUrls</td>
+                    <td class="tabletext">100</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Maximum number of allowed upload URLs created through CreateMultipartUploadUrls for a single file</td>
+                    <td class="tabletext">1,000</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Expiration limit for upload URLs returned by CreateMultipartUploadUrls</td>
+                    <td class="tabletext">15 minutes</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Supported size limits for each chunk uploaded to an upload URL returned by CreateMultipartUploadUrls</td>
+                    <td class="tabletext">5 MB to 5 GB. There is no minimum size limit on the last part.</td>
+                    <td>&#160;</td>
+                </tr>
+                <tr>
+                    <td class="tabletext">Maximum file size for file imported through ImportUploadedParts</td>
+                    <td class="tabletext">64 GB</td>
                     <td>&#160;</td>
                 </tr>
             </tbody>

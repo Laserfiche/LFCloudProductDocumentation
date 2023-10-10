@@ -217,6 +217,9 @@
     <TocEntry
       Title="Managing Tasks"
       Link="/Content/Managing-Tasks-in-the-Inbox.htm" />
+    <TocEntry
+      Title="Editing Account Settings"
+      Link="/Content/Editing-Account-Settings.htm" />
   </TocEntry>
   <TocEntry
     Title="Documents">

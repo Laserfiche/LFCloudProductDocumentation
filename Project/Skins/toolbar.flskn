@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<CatapultSkin
+  Version="6"
+  SkinType="Component"
+  Comment="HTML5 Toolbar skin"
+  ComponentType="TopicToolbar"
+  EnableResponsiveOutput="True">
+  <Stylesheet />
+  <TopicToolbar
+    EnableCustomLayout="true"
+    Buttons="SelectLanguage|RemoveHighlight|CurrentTopicIndex|Print">
+    <Script>function generateNavBox() {
+        var topic = document.getElementsByClassName('topicheading');
+        if ($('div.roadmapbar').length == 0 &amp;&amp; $(topic).length &gt; 0) {
+            $('&lt;div class="sidebar"&gt;&lt;span class="sidebarheading"&gt;In this topic&lt;/span&gt;&lt;div class="sidebartoc"&gt;&lt;ul class="innerstep"&gt;&lt;/ul&gt;&lt;/div&gt;&lt;/div&gt;').insertBefore('h1');
+        }
+        $(topic).each(function () {
+            var topicName = $(this).text();
+            var linkName = topicName.replace(/\s/g, '');
+            $('&lt;a name="' + linkName + '"&gt;&lt;/a&gt;').prependTo(this);
+            $('&lt;li&gt;&lt;a class="topiclink navlinks" href="#' + linkName + '"&gt;' + topicName + '&lt;/a&gt;&lt;/li&gt;').appendTo('ul.innerstep'); //nests the subheading under its heading in the navigation box
+        });
+        for (var i = 1; i &lt; topic.length; i++) {
+            $('&lt;div&gt;&lt;span class="totop" onclick="location.href=\'#top\'"&gt;To the top&lt;/span&gt;&lt;/div&gt;').insertBefore(topic[i]);
+        }
+    }
+</Script>
+  </TopicToolbar>
+  <Strings />
+</CatapultSkin>

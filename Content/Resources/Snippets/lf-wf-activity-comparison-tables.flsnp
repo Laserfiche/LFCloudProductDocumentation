@@ -283,7 +283,7 @@
                     </tr>
                     <tr class="even">
                         <td>Fill Out PDF Form</td>
-                        <td>&#160;</td>
+                        <td>✓<a href="#14">(14)</a></td>
                         <td>✓
                         </td>
                     </tr>
@@ -1051,6 +1051,7 @@
                     <li><a name="11"></a>Use of the Laserfiche SDK is supported through the SaaS Run Script Rule activity.</li>
                     <li><a name="12"></a>Workflows started by business processes can accept incoming data from processes.</li>
                     <li><a name="13"></a>Workflows can invoke business processes and pass over token data.</li>
+                    <li><a name="14"></a>Workflows can use the <a href="../Workflow/Activities/Setting-Up-a-Document-Merge-Rule.htm">Run Rule</a> activity to update a PDF using a document merge rule.</li>
                 </ol>
             </p>
         </div>

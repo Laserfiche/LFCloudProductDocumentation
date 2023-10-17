@@ -5,8 +5,9 @@
     </head>
     <body>
         <h1>
-            <MadCap:concept term="Forms" />Custom HTML</h1>
-        <p>In the form designer, the Custom HTML&#160;field is not a field that users can insert data into. Instead, the Custom HTML element lets form creators insert static rich-text or custom HTML that will be displayed on the form a read-only element.</p>
+            <MadCap:concept term="Forms" />
+            Custom HTML</h1>
+        <p>In the form designer, the Custom HTML&#160;field is not a field that users can insert data into. Instead, the Custom HTML element lets form creators insert static rich-text or custom HTML that will be displayed on the form as a read-only element.</p>
         <p>With the Custom HTML field, you can:</p>
         <ul>
             <li>Add rich text to your form. With this field, you can style instructions for sections of your form.</li>
@@ -20,6 +21,7 @@
             <li>Under <b>Content</b>, enter text and use the rich text editor to format text the way you want. You can also insert <a href="../Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm#Insertin" title="Insert variables in a custom html block" alt="Insert variables in a custom html block">variables</a> and <a href="../Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm#Adding" title="Insert pictures in a custom HTML block" alt="Insert pictures in a custom HTML block">images</a>.</li>
             <li>If you want to add HTML formatting that's not provided by the rich text editor buttons, switch to the HTML&#160;view by clicking the <b>HTML</b> tab. Enter the desired HTML.</li>
             <p class="note"><b>Note</b>: If you use headers in custom HTML, be aware that the header for a field in a form is an <b>h2</b> header, not an <b>h1</b> header. Only the header of the form can be an <b>h1</b> header.</p>
+            <p class="note"><b>Note:</b> In the form designer, the Custom HTML field prevents access to the window and document objects in HTML events. For example, you will be unable to use document.getElementById or window.postMessage types of JavaScript calls. Refer to <a href="https://answers.laserfiche.com/questions/210704/Clickable-custom-button-to-showhide-fields-in-Modern-Forms-designer#211933" target="_blank" title="Click here to learn more." alt="Click here to learn more.">this answers post</a> to learn more about how to safely use HTML events in the form designer.  Any unsupported code will display errors in the browser developer console.</p>
             <li>When you are finished, click <b>Done</b> (Classic mode only). Your changes will be saved to the form automatically.</li>
         </ol>
         <p class="w"><b>Warning:</b> The html &lt;pre&gt; tag may not correctly display the spacing and line breaks that you specify. See this <a href="https://support.laserfiche.com/KB/1013348" target="_top">KB article</a> for more information.</p>

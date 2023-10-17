@@ -6,6 +6,158 @@
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p style="font-weight: bold;">October 9, 2023</p>
+        <p style="font-weight: normal;">Bots</p>
+        <ul>
+            <li>
+                <p>Security updates and enhancements.</p>
+            </li>
+        </ul>
+        <p style="font-weight: bold;"><b><a href="2023.10.htm">October 5, 2023</a></b>
+        </p>
+        <p>Rules </p>
+        <ul>
+            <li>Checkboxes in Document Merge Rules now allow additional boolean input types. (474384) </li>
+        </ul>
+        <p>Business Processes </p>
+        <ul>
+            <li>Submission IP addresses are now available as a column in the Business Process Monitoring page. </li>
+            <li>Fixed an issue in Business Process Settings where navigating to a form from a particular resource opened to a blank page when within a project. (420020)</li>
+            <li>Radio button and checkbox fields within forms have been changed to only save selected choices if total choices exceed 100. (47639) </li>
+            <li>Rows to Return feature has been added to Lookup Table Queries for improved performance of customer queries. (481216) </li>
+            <li>Form Designer Updates: </li>
+            <ul>
+                <li>A change to the Custom HTML field now prevents the use of any type of window.postMessage JavaScript calls. Refer to <a href="https://answers.laserfiche.com/questions/210704/Clickable-custom-button-to-showhide-fields-in-Modern-Forms-designer#211933">this answers post</a> to learn more about how to safely use HTML events in the form designer. Note: Any unsupported code will display errors in the browser developer console.  </li>
+                <li>Values in number fields can now be cleared using JavaScript. (472854) </li>
+                <li>Validation is no longer triggered for required fields when adding fields in tables or collections. (479911) </li>
+                <li>Duplicating fields no longer cause duplicated field IDs. (480598) </li>
+                <li>Resolved an issue that was generating a “Invalid read-only field trigger” error. (481409) </li>
+                <li>Right Pane validation is now displayed for saved forms with invalid range field rules. (481637) </li>
+                <li>Resolved a timing issue that displayed a blank value when selecting a drop-down field that is populated by a lookup. (482584) </li>
+                <li>Resolved an issue that prevented lookup rules from functioning if pagination is later enabled. (484104, 484103) </li>
+                <li>Resolved an issue that prevented a form from receiving lookup rule values. (484278, 484263) </li>
+            </ul>
+        </ul>
+        <p>Teams </p>
+        <ul>
+            <li>Modifying a team's users no longer erases the team description. (486342) </li>
+        </ul>
+        <p>Capture Profiles </p>
+        <ul>
+            <li>The <b>Add/Remove Sample Documents</b> dialog box can no longer be closed until the documents are finished creating. (474338) </li>
+            <li>When uploading sample documents, any pages larger than 10 MB will now be compressed.  (474733) </li>
+        </ul>
+        <p>Laserfiche iOS and Android App </p>
+        <ul>
+            <li>Files can now be uploaded to a classic form successfully if the <b>Prevent Cross-Site Request Forgery with a CSRF token</b> option is disabled in Laserfiche Forms. (480930) </li>
+            <li>User tasks can now successfully be reassigned in Forms if the <b>Prevent Cross-Site Request Forgery with a CSRF token</b> option is disabled. (482480) </li>
+        </ul>
+        <p>Web Client </p>
+        <ul>
+            <li>Administrators can now disable the automatic transcription of audio and video files for the repository. (474835) </li>
+            <li>Resolved an issue in which date searches fail with a “Date/time out of range. [9170]” error for some locales. (487492) </li>
+            <li>Security enhancements. </li>
+        </ul>
+        <p>Public Portal </p>
+        <ul>
+            <li>Resolved an issue that could prevent users from selecting all entries in a view for downloading. (481875) </li>
+            <li>Security enhancements. </li>
+        </ul>
+        <p>Account Administration</p>
+        <ul>
+            <li>Security enhancements.</li>
+        </ul>
+        <p style="font-weight: bold;">October 2, 2023</p>
+        <p>Workflow</p>
+        <ul>
+            <li><b>Note:</b>&#160;Users will need to clear the browser cache before continuing to use Workflow, otherwise the below issues may not be resolved.</li>
+            <li>Resolved an issue that prevented changing the tag for Workflow input parameters. (485533)</li>
+            <li>Running the designer in a language other than English will no longer translate tokens. (486808)</li>
+        </ul>
+        <p><b>September 21, 2023</b>
+        </p>
+        <p>Account Administration</p>
+        <ul>
+            <li>Laserfiche Cloud customer account names can now contain up to 100 characters, up from 75. (418393)</li>
+            <li>The Plan page now displays the "Laserfiche API" plan limit as Calls / Month. (473749)</li>
+        </ul>
+        <p style="font-weight: bold;">September 20, 2023</p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Added support for international languages and date/time/number formatting.</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Lookup rules are now enabled correctly on save as expected in the classic form designer. (484463)</li>
+        </ul>
+        <p>Workflows</p>
+        <ul>
+            <li>Starting events based on stamp actions now trigger workflows correctly. (485013)</li>
+        </ul>
+        <p style="font-weight: bold;">September 11, 2023</p>
+        <p>Web Client
+        </p>
+        <ul>
+            <li>Security updates and enhancements.</li>
+            <li>Resolved an issue that could prevent saved searches from loading in some repositories that were migrated from a self-hosted Laserfiche system. (482708)</li>
+            <li>Resolved an issue that could result in a "Field not found"&#160;error for users in some cases when searching for documents containing a field to which they do not have access. (476946)</li>
+            <li>Folders containing large numbers of entries now filter column values correctly. (477244)</li>
+            <li>In some cases, deleting a group in the repository could cause all saved searches to stop displaying. This issue has been resolved. (477573)</li>
+        </ul>
+        <p style="font-weight: bold;"><a href="2023.09.htm">September 7, 2023</a>
+        </p>
+        <p><b>Laserfiche Integration with Microsoft Teams</b>
+        </p>
+        <ul>
+            <li>The Laserfiche App for Microsoft Teams has been updated to include security fixes and to support Spanish and French localization. <a href="Microsoft-Teams-and-Laserfiche-Installation.htm">Learn how to update the Laserfiche App</a>.</li>
+        </ul>
+        <p><b>Solution Marketplace</b>
+        </p>
+        <ul>
+            <li>The Solution Marketplace has been updated to include a cleaner design and minor bug fixes.</li>
+        </ul>
+        <p><b>Process Automation Platform</b>
+        </p>
+        <ul>
+            <li>Fixed an issue that had caused the quick searches widget to display an error when the user has an attribute larger than 3000 characters. (480051)</li>
+        </ul>
+        <p><b>Business processes</b>
+        </p>
+        <ul>
+            <li>Resolved an issue where invalid characters in CSS classes were allowed to be used when designing a form. (359939)</li>
+            <li>Resolved an issue where non-formatted/manually typed dates were parsed incorrectly when automatically formatted into their date format. (396296)</li>
+            <li>Added code sanitization to user defined CSS classes. (402679)</li>
+            <li>Resolved an issue when configuring field rules that allowed invalid date ranges when “show time” was enabled on the field. (424188)</li>
+            <li>Resolved an issue where multiple lookup rules configured for the same field would fill the field out of order. (425740)</li>
+            <li>Fixed an issue where formulas using checkbox were not working when "Append choices to lookup results" was enabled. (426628)</li>
+            <li>Resolved an issue where lookup rules would not populate fields within a section in a collection. (476498)</li>
+            <li>Resolved an issue in classic forms where new lines were not rendered in radio/checkbox choice options. (482414)</li>
+            <li>Fixed an issue where a renamed variable in a collection caused formula references to fail. (480895)</li>
+            <li>Resolved an issue where collections used across multiple forms would not remove user deleted sets as a process progressed. (477231)</li>
+            <li>Fixed an issue where the link in a process failure or suspension notification email failed to open the intended instance details. (477301)</li>
+        </ul>
+        <p><b>Laserfiche App</b>
+        </p>
+        <ul>
+            <li>Security improvements. (472557, 475057, 475423, 475424, 475581)</li>
+            <li>In the Laserfiche Android app, users can now authenticate using fingerprint identification multiple times if the first attempt fails. (190437)</li>
+        </ul>
+        <p><b>Account Administration</b>
+        </p>
+        <ul>
+            <li>Users with the Account Administration access right can review the Laserfiche Cloud subscription agreement from the Settings page's Profile tab. (476370)</li>
+        </ul>
+        <p><b>Web Client</b>
+        </p>
+        <ul>
+            <li>Resolved an issue in which some strings in direct share emails were not translated. (426645)</li>
+        </ul>
+        <p><b>Public Portal</b>
+        </p>
+        <ul>
+            <li>Security updates and enhancements.</li>
+            <li>Fixed a potential issue where Public Portal searches did not process quoted search phrases properly. (479605)</li>
+        </ul>
         <p style="font-weight: bold;">August 30, 2023</p>
         <p>Capture Profiles
         </p>
@@ -15,8 +167,8 @@
             </li>
         </ul>
         <p style="font-weight: bold;">August 29, 2023</p>
-        <p>Web Client<![CDATA[
-        ]]></p>
+        <p>Web Client
+        </p>
         <ul>
             <li>Resolved an issue that resulted in saved searches no longer functioning after a migration from self-hosted editions of Laserfiche to Laserfiche Cloud. (480585)</li>
             <li>An issue that could prevent multiple users from simultaneously editing PowerPoint documents when using Office Online has been resolved.</li>
@@ -26,11 +178,11 @@
         </p>
         <ul>
             <li>
-                Smart Invoice Capture Profiles now have updated models with improved overall performance. (479155)<![CDATA[               
-            ]]></li>
+                Smart Invoice Capture Profiles now have updated models with improved overall performance. (479155)               
+            </li>
             <li>
                 Currency signs will automatically be removed from the numerical Subtotal and Tax Amount fields.
-(479155)<![CDATA[            ]]></li>
+(479155)            </li>
         </ul>
         <p style="font-weight: bold;">August 17, 2023</p>
         <p>Workflow</p>

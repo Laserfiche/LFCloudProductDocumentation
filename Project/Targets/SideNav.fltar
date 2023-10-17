@@ -13,11 +13,13 @@
   MasterPage="/Content/Resources/MasterPages/SideNav.flmsp"
   MasterStylesheet="/Content/Resources/Stylesheets/SideNav.css"
   SearchEngine="GoogleSearch"
-  EnableSitemap="false"
+  EnableSitemap="true"
   GoogleSearchContextKey="30fdfbcda9d594193"
   ContentInclusionType="Toc"
   PreCompileScaledImages="false"
-  TopNavTocPath="true">
+  TopNavTocPath="true"
+  TopicToolbarSkin="/Project/Skins/toolbar.flskn"
+  SitemapWebUrl="https://doc.laserfiche.com/laserfiche/">
   <PrintedOutput
     CollapseMargins="true"
     GenerateTOCProxy="true"
@@ -25,4 +27,16 @@
     GenerateGlossaryProxy="true"
     OutputFormat="doc" />
   <Destinations></Destinations>
+  <MicroContentSearch>
+    <FeaturedSnippets
+      type="AllFiles"
+      numberOfResults="1">
+      <microContentSubset />
+    </FeaturedSnippets>
+    <KnowledgePanel
+      type="Empty"
+      numberOfResults="1">
+      <microContentSubset />
+    </KnowledgePanel>
+  </MicroContentSearch>
 </CatapultTarget>

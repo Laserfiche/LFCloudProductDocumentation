@@ -237,8 +237,4 @@
     Name="Project Name"
     Comment=""
     EvaluatedDefinition="Cloud Help">Cloud Help</Variable>
-  <Variable
-    Name="Project"
-    Comment=""
-    EvaluatedDefinition="Cloud">Cloud</Variable>
 </CatapultVariableSet>

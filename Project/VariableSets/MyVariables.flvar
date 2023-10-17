@@ -12,8 +12,4 @@
   <Variable
     Name="LatestVersion"
     Comment="">10</Variable>
-  <Variable
-    Name="Project"
-    Comment=""
-    EvaluatedDefinition="Cloud">Cloud</Variable>
 </CatapultVariableSet>

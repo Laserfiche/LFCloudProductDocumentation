@@ -12,7 +12,7 @@
         <h2 class="topicheading"><a name="Download"></a>Installing and Registering a Worker</h2>
         <h3>System requirements</h3>
         <ul>
-            <li>Windows 10, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019
+            <li>Windows 10, Windows 11, Windows Server 2012 R2, Windows Server 2016, Windows Server 2019, or Windows Server 2022
             </li>
             <li>
                Microsoft Visual C++ 2017 Redistributable (x64) -14.11.25325
@@ -380,19 +380,19 @@ The installation will proceed without displaying any dialogs to the user.
             <p style="font-weight: bold;">Examples:</p>
             <p style="font-weight: bold;">&#160;</p>
             <p style="font-weight: bold;">To register a worker using a registration token, use these argument:</p>
-            <p>../Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe register accountid:<i>accountid</i> token:<i>token</i></p>
+            <p>..\Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe register accountid:<i>accountid</i> token:<i>token</i></p>
             <p>&#160;</p>
             <p><b>Note:</b> accountid is used to retrieve the region-based default server name. </p>
             <p>&#160;</p>
             <p><b>Note:</b> The accountid and token command line parameters are required when registering a token via registration token. </p>
             <p>&#160;</p>
             <p style="font-weight: bold;">To register a worker by signing in to Laserfiche, use this argument:</p>
-            <p>../Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe credential accountid:<i>accountid</i> username:<i>username</i> password:<i>password</i> remoteagentname:<i>remoteagentname</i></p>
+            <p>..\Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe credential accountid:<i>accountid</i> username:<i>username</i> password:<i>password</i> remoteagentname:<i>remoteagentname</i></p>
             <p>&#160;</p>
             <p style="font-weight: normal;"><b>Note:</b> The  accounted, username, password, and remoteagentname command line parameters are required when registering a worker using credentials.</p>
             <p>&#160;</p>
             <p style="font-weight: bold;">To deregister a worker</p>
-            <p>../Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe deregister</p>
+            <p>..\Laserfiche.ProcessAutomation.LocalAgentUnattendedConfig.exe deregister</p>
         </div>
         <h2 class="topicheading"><a name="Running"></a>Running the Worker</h2>
         <p>Once registered, the worker  appears in the <b>Workers</b> tab as a new subsection titled with the name you provided during registration. You may have to refresh the <b>Workers</b> tab to see any recent changes.</p>

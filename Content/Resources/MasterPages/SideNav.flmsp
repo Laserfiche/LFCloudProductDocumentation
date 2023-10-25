@@ -10,11 +10,13 @@
             <div id="shoe">
                 <h3><span style="color: #155abe;"> Was this page helpful?</span>
                 </h3>
-                <p><a class="Button1" href="https://portal.laserfiche.com/w6303/forms/DocFeedbackPositive?Title=[%=System.Title%]&amp;TopicLocation=[%=System.SourceFile%]&amp;Project=[%=Variables.Project Name%]" target="_blank">Yes</a> <a class="Button1" href="https://portal.laserfiche.com/w6303/forms/DocFeedbackNegative?Title=[%=System.Title%]&amp;TopicLocation=[%=System.SourceFile%]&amp;Project=[%=Variables.Project Name%]" target="_blank">No</a></p>
-                <p>
-                </p>
+				<p><a class="Button1" href="https://portal.laserfiche.com/w6303/forms/DocFeedback?feedbackState=pos&amp;Title=[%=System.Title%]&amp;TopicLocation=[%=System.SourceFile%]&amp;Project=[%=Variables.Project Name%]&amp;URL_1=" target="_blank">Yes</a> <a class="Button1" href="https://portal.laserfiche.com/w6303/forms/DocFeedback?Title=[%=System.Title%]&amp;feedbackState=neg&amp;TopicLocation=[%=System.SourceFile%]&amp;Project=[%=Variables.Project Name%]&amp;URL_1=" target="_blank">No</a></p>
+				<p>
+				</p>
                 <nav class="footernav"><a href="https://signin.laserfiche.com/" target="_parent">Laserfiche Cloud</a><a href="https://status.laserfiche.com/" target="_parent">Service Status</a><a href="https://www.laserfiche.com/contact-laserfiche" target="_parent">Contact Laserfiche</a> <a href="../../Copyright.htm">© <MadCap:variable name="Variables.Yr" /> Laserfiche</a></nav>
             </div>
         </div>
+		<script type="text/javascript" src="../Scripts/URLForFeedback.js">
+		</script>
     </body>
 </html>

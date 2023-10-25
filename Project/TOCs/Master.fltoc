@@ -231,7 +231,8 @@
       Link="/Content/Keyboard_Shortcuts.htm" />
     <TocEntry
       Title="Repository Design Principles and Best Practices"
-      conditions="Default.Do not include" />
+      Link="/Content/Repository-Design-Best-Practices.htm"
+      ComputeToc="false" />
     <TocEntry
       Title="Adding Documents and Folders"
       Link="/Content/Adding_Content.htm">
@@ -399,6 +400,13 @@
       Title="Working with Documents and Folders"
       Link="/Content/Working_with_Documents.htm">
       <TocEntry
+        Title="Organizing Documents and Folders"
+        Link="/Content/Organizing_Documents.htm">
+        <TocEntry
+          Title="Best Practices for Designing a Folder Structure"
+          Link="/Content/Best-Practices-Folder-Structure.htm" />
+      </TocEntry>
+      <TocEntry
         Title="Viewing Documents and Folders"
         Link="/Content/Viewing_Documents.htm" />
       <TocEntry
@@ -415,7 +423,7 @@
         Link="/Content/Metadata.htm">
         <TocEntry
           Title="Metadata Design Principles and Best Practices"
-          conditions="Default.Do not include" />
+          Link="/Content/metadata-Design-Best-Practices.htm" />
         <TocEntry
           Title="Fields and Templates"
           Link="/Content/Fields_and_Templates.htm">
@@ -1666,9 +1674,9 @@
             Link="/Content/Forms-Current/Form-Fields/Table.htm" />
         </TocEntry>
         <TocEntry
-        Title="[%=System.LinkedTitle%]"
-        Link="/Content/Forms-Current/Previewing-a-Form.htm" />
-      <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/Previewing-a-Form.htm" />
+        <TocEntry
           Title="[%=System.LinkedHeader%]"
           Link="/Content/Forms-Current/Applying-a-Theme-to-a-Form.htm" />
         <TocEntry

@@ -12,7 +12,7 @@
       Link="/Content/Software_Requirements.htm" />
     <TocEntry
       Title="Service Limits"
-      Link="/Content/Service-Limits.htm" />
+      Link="/Content/service/Service-Limits.htm" />
     <TocEntry
       Title="Overview of Laserfiche Cloud"
       Link="/Content/Overview.htm" />
@@ -42,16 +42,10 @@
       Title="Release History">
       <TocEntry
         Title="Recent Changes"
-        Link="/Content/changelog.htm"
+        Link="/Content/service/changelog.htm"
         ReplaceMergeNode="false"></TocEntry>
       <TocEntry
         Title="2023">
-        <TocEntry
-          Title="October 2023"
-          Link="/Content/2023.10.htm" />
-        <TocEntry
-          Title="September 2023"
-          Link="/Content/2023.09.htm" />
         <TocEntry
           Title="August 2023"
           Link="/Content/2023.08.htm" />
@@ -60,7 +54,7 @@
           Link="/Content/2023.07.htm" />
         <TocEntry
           Title="June 2023"
-          Link="/Content/2023.06.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          Link="/Content/2023.06.htm" />
         <TocEntry
           Title="May 2023"
           Link="/Content/2023.05.htm" />
@@ -209,10 +203,6 @@
       <TocEntry
         Title="2015">
         <TocEntry
-          Title="December 2015"
-          Link="/Content/December-2015-update.htm"
-          conditions="Default.Exclude" />
-        <TocEntry
           Title="August 2015"
           Link="/Content/August-2015-update.htm" />
         <TocEntry
@@ -228,7 +218,7 @@
       Title="Managing Tasks"
       Link="/Content/Managing-Tasks-in-the-Inbox.htm" />
     <TocEntry
-      Title="[%=System.LinkedTitle%]"
+      Title="Editing Account Settings"
       Link="/Content/Editing-Account-Settings.htm" />
   </TocEntry>
   <TocEntry
@@ -241,7 +231,8 @@
       Link="/Content/Keyboard_Shortcuts.htm" />
     <TocEntry
       Title="Repository Design Principles and Best Practices"
-      Link="/Content/Repository-Design-Best-Practices.htm" />
+      Link="/Content/Repository-Design-Best-Practices.htm"
+      ComputeToc="false" />
     <TocEntry
       Title="Adding Documents and Folders"
       Link="/Content/Adding_Content.htm">
@@ -419,11 +410,11 @@
         Title="Viewing Documents and Folders"
         Link="/Content/Viewing_Documents.htm" />
       <TocEntry
+        Title="Organizing Documents and Folders"
+        Link="/Content/Organizing_Documents.htm"></TocEntry>
+      <TocEntry
         Title="Working with Document Contents"
         Link="/Content/Working_with_Doc_Contents.htm"></TocEntry>
-      <TocEntry
-        Title="Working with Audio and Video Media Files"
-        Link="/Content/Working_with_Audio_Video.htm" />
       <TocEntry
         Title="Starred Documents, Recent Documents, and Documents in Use"
         Link="/Content/Starred_Recent_In_Use.htm" />
@@ -432,7 +423,7 @@
         Link="/Content/Metadata.htm">
         <TocEntry
           Title="Metadata Design Principles and Best Practices"
-          Link="/Content/Metadata-Design-Best-Practices.htm" />
+          Link="/Content/metadata-Design-Best-Practices.htm" />
         <TocEntry
           Title="Fields and Templates"
           Link="/Content/Fields_and_Templates.htm">
@@ -630,22 +621,6 @@
         Link="/Content/DeletingDisablingUser.htm"></TocEntry>
     </TocEntry>
     <TocEntry
-      Title="Managing Groups">
-      <TocEntry
-        Title="Creating a Group"
-        ReplaceMergeNode="false"
-        Link="/Content/CreatingGroups.htm"></TocEntry>
-      <TocEntry
-        Title="Adding Users to a Group "
-        Link="/Content/AddingUsersToGroups.htm"></TocEntry>
-      <TocEntry
-        Title="Editing a Group "
-        Link="/Content/EditingAGroup.htm" />
-      <TocEntry
-        Title="Federated Groups"
-        Link="/Content/Federated Groups.htm"></TocEntry>
-    </TocEntry>
-    <TocEntry
       Title="Service Principals Overview"
       Link="/Content/ServicePrincipals.htm">
       <TocEntry
@@ -661,6 +636,22 @@
         Title="Service Principal Key Expiration"
         Link="/Content/Enable_spk_expiration.htm" />
     </TocEntry>
+    <TocEntry
+      Title="Managing Groups">
+      <TocEntry
+        Title="Creating a Group"
+        ReplaceMergeNode="false"
+        Link="/Content/CreatingGroups.htm"></TocEntry>
+      <TocEntry
+        Title="Adding Users to a Group "
+        Link="/Content/AddingUsersToGroups.htm"></TocEntry>
+      <TocEntry
+        Title="Editing a Group "
+        Link="/Content/EditingAGroup.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Federated Groups"
+      Link="/Content/Federated Groups.htm"></TocEntry>
     <TocEntry
       Title="Just-in-Time Provisioning"
       Link="/Content/Just in Time Provisioning.htm"
@@ -763,14 +754,6 @@
           Link="/Content/repo-import-monitor.htm" />
       </TocEntry>
       <TocEntry
-        Title="Signing In with an Email vs User Name"
-        Link="/Content/RootAccountVSUserAccount.htm"
-        conditions="Default.Exclude" />
-      <TocEntry
-        Title="Subscribing to Email Notifications"
-        Link="/Content/email-subscription.htm"
-        conditions="Default.Exclude" />
-      <TocEntry
         Title="Setting a Default Application"
         Link="/Content/default-application.htm" />
       <TocEntry
@@ -778,8 +761,7 @@
         Link="/Content/renaming-repository.htm" />
       <TocEntry
         Title="Current Notable Issues"
-        Link="/Content/KnownIssues.htm"
-        ReplaceMergeNode="false"></TocEntry>
+        Link="/Content/KnownIssues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
       <TocEntry
         Title="Disclaimer"
         Link="/Content/Copyright.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
@@ -853,20 +835,1497 @@
       Link="/Content/Mulesoft-Laserfiche-Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
   </TocEntry>
   <TocEntry
-    Title="Public Portal"
-    Link="../../Subprojects/publicportal/WebLink.flprj#CloudPublicPortalAdmin" />
-  <TocEntry
-    Title="Process Automation"
-    Link="../../Subprojects/BPM/BPM.flprj"></TocEntry>
-  <TocEntry
-    Title="Advanced"
-    conditions="Default.Exclude"
-    ComputeToc="false"
-    ReplaceMergeNode="false">
+    Title="Public Portal">
     <TocEntry
-      Title="Installed Laserfiche Applications and Laserfiche Cloud"
-      Link="/Content/desktop_applications_and_cloud.htm"
-      conditions="Default.Exclude" />
+      Title="What is Public Portal?"
+      Link="/Content/What_is_WebLink.htm"
+      conditions="Default.Written,Default.Reviewed by QA"></TocEntry>
+    <TocEntry
+      Title="Configuring Access to Public Portal"
+      Link="/Content/Configuring-Public-Portal-Access.htm"
+      conditions="Default.Written" />
+    <TocEntry
+      Title="Customizing Public Portal"
+      Link="/Content/Customizing WebLink.htm"
+      conditions="Default.Reviewed by QA,Default.Written">
+      <TocEntry
+        Title="Theme"
+        Link="/Content/Theme.htm"
+        conditions="Default.Reviewed by QA,Default.Written"></TocEntry>
+      <TocEntry
+        Title="Welcome Page"
+        Link="/Content/Welcome_Page_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written"></TocEntry>
+      <TocEntry
+        Title="Navigation"
+        Link="/Content/Navigation_Tab.htm"
+        conditions="Default.Written,Default.Reviewed by QA" />
+      <TocEntry
+        Title="Document Viewer"
+        Link="/Content/Document_View_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written" />
+      <TocEntry
+        Title="Search Results"
+        Link="/Content/Search_Results_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written" />
+      <TocEntry
+        Title="Search Options"
+        Link="/Content/Search_Options_Tab.htm"
+        conditions="Default.Reviewed by QA,Default.Written" />
+      <TocEntry
+        Title="Public User"
+        Link="/Content/public-User.htm"
+        conditions="Default.Written,Default.Reviewed by QA" />
+    </TocEntry>
+  </TocEntry>
+  <TocEntry
+    Title="Process Automation">
+    <TocEntry
+      Title="Getting Started with Process Automation"
+      Link="/Content/Resources/Get-Started.htm"
+      conditions="Default.Complete">
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Resources/How-PA-Components-Work-Together.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+    </TocEntry>
+    <TocEntry
+      Title="Managing Accounts in Process Automation"
+      Link="/Content/Resources/Managing-Account-Administration.htm"
+      conditions="Default.Complete" />
+    <TocEntry
+      Title="Editing Site and Account Settings"
+      Link="/Content/Resources/Editing-Account-Settings.htm"
+      conditions="Default.Complete"></TocEntry>
+    <TocEntry
+      Title="Configuring Entry Access Rights"
+      Link="/Content/Resources/Entry-Access-Rights.htm"
+      conditions="Default.Complete"
+      StartSection="false"
+      ReplaceMergeNode="false"></TocEntry>
+    <TocEntry
+      Title="Workflows"
+      Link="/Content/Resources/Workflow/Workflow.htm">
+      <TocEntry
+        Title="Cloud vs Self Hosted Workflows"
+        Link="/Content/Resources/Workflow/Differences-between-Workflows.htm"></TocEntry>
+      <TocEntry
+        Title="Basic Terminology"
+        Link="/Content/Resources/Workflow/Basic-Terminology.htm"></TocEntry>
+      <TocEntry
+        Title="Designing Workflows"
+        Link="/Content/Resources/Workflow/Designing-Workflows.htm">
+        <TocEntry
+          Title="Create a New Workflow"
+          Link="/Content/Resources/Workflow/Creating-Deleting-Workflows.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Working With Activities"
+            Link="/Content/Resources/Workflow/Working-With-Activities.htm"></TocEntry>
+          <TocEntry
+            Title="Workflow Properties"
+            Link="/Content/Resources/Workflow/Workflow-Properties.htm">
+            <TocEntry
+              Title="Workflow Parameters"
+              Link="/Content/Resources/Workflow/Workflow-Parameters.htm" />
+          </TocEntry>
+          <TocEntry
+            Title="Common Properties"
+            conditions="Default.Complete"
+            Link="/Content/Resources/Workflow/Common-Properties.htm">
+            <TocEntry
+              Title="Specifying the Time Zone"
+              Link="/Content/Resources/Settings/Date-and-Time.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Selecting an Entry"
+              Link="/Content/Resources/Workflow/Selecting-an-Entry.htm"
+              StartSection="false"
+              ComputeToc="false"
+              ReplaceMergeNode="false"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Connection Profiles"
+              Link="/Content/Resources/Workflow/Connection-Profiles.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Configuring Conditions"
+              Link="/Content/Resources/Workflow/Configuring-Conditions.htm"
+              conditions="Default.Complete">
+              <TocEntry
+                Title="Condition Type Options"
+                Link="/Content/Resources/Workflow/Condition-Type-Options.htm"
+                conditions="Default.Complete" />
+            </TocEntry>
+          </TocEntry>
+        </TocEntry>
+        <TocEntry
+          Title="Publish and Test a Workflow"
+          Link="/Content/Resources/Workflow/Testing-Workflows.htm"
+          SectionNumberReset="continue"
+          VolumeNumberReset="same"
+          ChapterNumberReset="continue"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Advanced Testing Concepts"
+            Link="/Content/Resources/Workflow/Advanced-Testing-Concepts.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Rename a Workflow"
+          Link="/Content/Resources/Workflow/Renaming-Workflows.htm"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Edit a Workflow"
+          Link="/Content/Resources/Workflow/Edit-a-Workflow.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Managing Workflows"
+        Link="/Content/Resources/Workflow/Managing-Workflows.htm">
+        <TocEntry
+          Title="Notifications"
+          Link="/Content/Resources/Workflow/Configuring-Notifications.htm"
+          conditions="Default.Complete"></TocEntry>
+        <TocEntry
+          Title="Importing Workflows and Starting Rules"
+          Link="/Content/Resources/Workflow/Importing-Workflows.htm"
+          SectionNumberReset="continue"
+          VolumeNumberReset="same"
+          ChapterNumberReset="continue"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Exporting Workflows and Starting Rules"
+          Link="/Content/Resources/Workflow/Downloading-Workflows.htm"
+          conditions="Default.Complete"
+          SectionNumberReset="continue"
+          VolumeNumberReset="same"
+          ChapterNumberReset="continue" />
+        <TocEntry
+          Title="Deleting Workflows"
+          Link="/Content/Resources/Workflow/Deleting-Workflows.htm"
+          conditions="Default.Complete" />
+      </TocEntry>
+      <TocEntry
+        Title="Monitoring Workflows"
+        Link="/Content/Resources/Workflow/Monitoring-Workflows.htm">
+        <TocEntry
+          Title="Searching for Instances"
+          Link="/Content/Resources/Workflow/Search-Monitor-Workflows.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Viewing Usage Statistics"
+          Link="/Content/Resources/Workflow/Viewing-an-Instance-Overview-from-Manage.htm"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Viewing an Instance Report"
+          Link="/Content/Resources/Workflow/Viewing-an-Instance-Report.htm"
+          conditions="Default.Complete" />
+      </TocEntry>
+      <TocEntry
+        Title="Workflow Reference"
+        Link="/Content/Resources/Workflow/Workflow-Reference.htm">
+        <TocEntry
+          Title="Activities"
+          Link="/Content/Resources/Workflow/Activities/Activities.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Add Sticky Note"
+            Link="/Content/Resources/Workflow/Activities/Add-Sticky-Note.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Add Sticky Note Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Add-Sticky-Note-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Add Text Box"
+            Link="/Content/Resources/Workflow/Activities/Add-Text-Box.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Add Text Box Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Add-Text-Box-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Apply Stamp"
+            Link="/Content/Resources/Workflow/Activities/Apply-Stamp.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Apply Stamp Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Apply-Stamp-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Apply Text Annotation"
+            Link="/Content/Resources/Workflow/Activities/Apply-Text-Annotation.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Apply Text Annotation Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Apply-Text-Annotation-Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Assign Field Values"
+            Link="/Content/Resources/Workflow/Activities/Assign-Field-Values.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Assign Field Values Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Assign-Field-Values-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Assign Rights"
+            Link="/Content/Resources/Workflow/Activities/assign-rights.htm" />
+          <TocEntry
+            Title="Assign Tags"
+            Link="/Content/Resources/Workflow/Activities/Assign-Tags.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Assign Token Values"
+            Link="/Content/Resources/Workflow/Activities/Assign-Token-Values.htm"
+            conditions="Default.Complete"></TocEntry>
+          <TocEntry
+            Title="Attach Electronic Document"
+            Link="/Content/Resources/Workflow/Activities/Attach-Electronic-Document.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Change Starting Entry"
+            Link="/Content/Resources/Workflow/Activities/Change-Starting-Entry.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Change Starting Entry Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Change-Starting-Entry-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Conditional Decision"
+            Link="/Content/Resources/Workflow/Activities/Conditional-Decision.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Conditional Parallel"
+            Link="/Content/Resources/Workflow/Activities/Conditional-Parallel.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Conditional Sequence"
+            Link="/Content/Resources/Workflow/Activities/Conditional-Sequence.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Copy Metadata"
+            Link="/Content/Resources/Workflow/Activities/Copy-Metadata.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Create Entry"
+            Link="/Content/Resources/Workflow/Activities/Create-Entry.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Create Entry Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Create-Entry-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Resources/Workflow/Activities/Create-Link.htm" />
+          <TocEntry
+            Title="Date Token Calculator"
+            Link="/Content/Resources/Workflow/Activities/Date-Token-Calculator.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Deadline"
+            Link="/Content/Resources/Workflow/Activities/Deadline.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Delay"
+            Link="/Content/Resources/Workflow/Activities/Delay.htm"
+            conditions="Default.Complete"></TocEntry>
+          <TocEntry
+            Title="Delete Annotation"
+            Link="/Content/Resources/Workflow/Activities/Delete-Annotation.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Delete Entry"
+            Link="/Content/Resources/Workflow/Activities/Delete-Entry.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Resources/Workflow/Activities/Delete-Links.htm" />
+          <TocEntry
+            Title="Delete Shortcuts"
+            Link="/Content/Resources/Workflow/Activities/Delete-Shortcuts.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Token for Delete Shortcuts Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Delete-Shortcuts-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Download Electronic Document"
+            Link="/Content/Resources/Workflow/Activities/Download-Electronic-Document.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Download Electronic Document"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Download-Electronic-Document.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Email"
+            Link="/Content/Resources/Workflow/Activities/Email.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="End Workflow"
+            Link="/Content/Resources/Workflow/Activities/End-Workflow.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Escalation"
+            Link="/Content/Resources/Workflow/Activities/Escalation.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Escalation Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Escalation-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Find Entries"
+            Link="/Content/Resources/Workflow/Activities/Find-Entries.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Find Entries Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Find-Entries-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Find Entry"
+            Link="/Content/Resources/Workflow/Activities/Find-Entry.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Find Entry Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Find-Entry-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="For Each Entry"
+            Link="/Content/Resources/Workflow/Activities/For-Each-Entry.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for For Each Entry Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-For-Each-Entry-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="For Each Row"
+            Link="/Content/Resources/Workflow/Activities/For-Each-Row.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for For Each Row Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-For-Each-Row-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="For Each Value"
+            Link="/Content/Resources/Workflow/Activities/For-Each-Value.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for For Each Value Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-For-Each-Value-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Invoke Bot"
+            Link="/Content/Resources/Workflow/Activities/Invoke-Bot.htm" />
+          <TocEntry
+            Title="Invoke Business Process"
+            Link="/Content/Resources/Workflow/Activities/Invoke-Business-Process.htm" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Resources/Workflow/Activities/Invoke-Workflow.htm"></TocEntry>
+          <TocEntry
+            Title="Move Entry"
+            Link="/Content/Resources/Workflow/Activities/Move-Entry.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Move Entry Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Move-Entry-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Move Pages"
+            Link="/Content/Resources/Workflow/Activities/Move-Pages.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Token for Move Pages Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Move-Pages-Activity.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Page Range"
+              Link="/Content/Resources/Workflow/Activities/Page-Range.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Parallel"
+            Link="/Content/Resources/Workflow/Activities/Parallel.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Pattern Matching"
+            Link="/Content/Resources/Workflow/Activities/Pattern-Matching.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Read Barcode"
+            Link="/Content/Resources/Workflow/Activities/Read-Barcode.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+            ComputeToc="false"
+            ReplaceMergeNode="false"
+            StartSection="false"
+            SectionNumberReset="continue"
+            VolumeNumberReset="same"
+            ChapterNumberReset="continue"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Read Barcode Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Read-Barcode-Activity.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+              ComputeToc="false"
+              ReplaceMergeNode="false"
+              StartSection="false"
+              SectionNumberReset="continue"
+              VolumeNumberReset="same"
+              ChapterNumberReset="continue"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Rename Entry"
+            Link="/Content/Resources/Workflow/Activities/Rename-Entry.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Rename Entry Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Rename-Entry-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Repeat"
+            Link="/Content/Resources/Workflow/Activities/Repeat.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Token for Repeat Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Repeat-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Replace Lookup Table Data"
+            Link="/Content/Resources/Workflow/Activities/Replace-Lookup-Table-Data.htm" />
+          <TocEntry
+            Title="Rethrow"
+            Link="/Content/Resources/Workflow/Activities/Rethrow.htm"
+            conditions="Default.Complete"></TocEntry>
+          <TocEntry
+            Title="Retrieve Document Text"
+            Link="/Content/Resources/Workflow/Activities/Retrieve-Document-Text.htm"
+            conditions="Default.Complete"
+            ComputeToc="false"
+            ReplaceMergeNode="false">
+            <TocEntry
+              Title="Token for Retrieve Document Text"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Token-for-Retrieve-Document-Text.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Retrieve Field Values"
+            Link="/Content/Resources/Workflow/Activities/Retrieve-Field-Values.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Retrieve Field Values Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Retrieve-Field-Values-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Retrieve Shortcuts"
+            Link="/Content/Resources/Workflow/Activities/Retrieve-Shortcuts.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Retrieve Shortcuts Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Retrieve-Shortcuts-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Run Application Action"
+            Link="/Content/Resources/Integrations/execute-application-action.htm" />
+          <TocEntry
+            Title="Run Capture Profile"
+            Link="/Content/Resources/Workflow/Activities/Run-Capture-Profile.htm"
+            conditions="Default.Complete"></TocEntry>
+          <TocEntry
+            Title="Run Rule"
+            Link="/Content/Resources/Workflow/Activities/Run-Business-Rules.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Configuring a Data Query Rule"
+              Link="/Content/Resources/Workflow/Activities/Setting-Up-a-Data-Query-Rule.htm" />
+            <TocEntry
+              Title="Configuring a Decision Table Rule"
+              Link="/Content/Resources/Workflow/Activities/Setting-Up-A-Decision-Table-Rule.htm" />
+            <TocEntry
+              Title="Configuring a Document Merge Rule"
+              Link="/Content/Resources/Workflow/Activities/Setting-Up-a-Document-Merge-Rule.htm" />
+            <TocEntry
+              Title="Configuring an Entity Query Rule"
+              Link="/Content/Resources/Workflow/Activities/Setting-Up-a-Business-Entity-Query-Rule.htm"
+              conditions="Default.Do not include" />
+            <TocEntry
+              Title="Configuring a Formula Rule"
+              Link="/Content/Resources/Workflow/Activities/Setting-Up-a-Formula-Rule.htm" />
+            <TocEntry
+              Title="Configuring a Lookup Table Query Rule"
+              Link="/Content/Resources/Workflow/Activities/Setting-Up-a-Lookup-Table-Query-Rule.htm" />
+          </TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Resources/Workflow/Activities/Run-Script-Rule.htm" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Resources/Workflow/Activities/Run-Web-Request-Rule.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+          <TocEntry
+            Title="Search Repository"
+            Link="/Content/Resources/Workflow/Activities/search-repository.htm" />
+          <TocEntry
+            Title="Sequence"
+            Link="/Content/Resources/Workflow/Activities/Sequence.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Set Entry Owner"
+            Link="/Content/Resources/Workflow/Activities/Set-Entry-Owner.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Set Entry Owner Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Set-Entry-Owner-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Set Records Management Properties"
+            Link="/Content/Resources/Workflow/Activities/Set-Records-Management-Properties.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Token Calculator"
+            Link="/Content/Resources/Workflow/Activities/Token-Calculator.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Formulas for Token Calculator"
+              Link="/Content/Resources/Workflow/Activities/Formulas-for-Token-Calculator.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Track Tokens"
+            Link="/Content/Resources/Workflow/Activities/Track-Tokens.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Try-Catch"
+            Link="/Content/Resources/Workflow/Activities/Try-Catch.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Try-Catch Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Try-Catch-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Update Word Document"
+            Link="/Content/Resources/Workflow/Activities/Update-Word-Document.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Wait for Entry Change"
+            Link="/Content/Resources/Workflow/Activities/Wait-for-Entry-Change.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Tokens for Wait for Entry Change Activity"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Activity-Tokens/Tokens-for-Wait-for-Entry-Change-Activity.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+        </TocEntry>
+        <TocEntry
+          Title="Tokens"
+          Link="/Content/Resources/Workflow/Tokens-Regex/Tokens.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Using the Token Editor"
+            Link="/Content/Resources/Workflow/Tokens-Regex/Using-Token-Editor.htm"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Token Index"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Token-Index.htm" />
+            <TocEntry
+              Title="Token Functions"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Apply-Function-Options.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Token Formatting"
+              Link="/Content/Resources/Workflow/Tokens-Regex/Token-Formatting.htm">
+              <TocEntry
+                Title="Numeric Formatting"
+                Link="/Content/Resources/Workflow/Tokens-Regex/Numeric-Formatting.htm"
+                conditions="Default.Complete" />
+              <TocEntry
+                Title="Date and Time Formatting"
+                Link="/Content/Resources/Workflow/Tokens-Regex/Date-and-Time-Formatting.htm"
+                conditions="Default.Complete" />
+            </TocEntry>
+          </TocEntry>
+          <TocEntry
+            Title="Using the Token Dialog"
+            Link="/Content/Resources/Workflow/Tokens-Regex/Using-Token-Dialog.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Token Tags"
+            Link="/Content/Resources/Workflow/Tokens-Regex/Token-Tags.htm"
+            conditions="Default.Complete" />
+        </TocEntry>
+        <TocEntry
+          Title="Regular Expressions"
+          Link="/Content/Resources/Workflow/Tokens-Regex/Regular-Expressions.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Common Regular Expression Patterns"
+            Link="/Content/Resources/Workflow/Activities/Common-Regular-Expression-Patterns.htm"
+            conditions="Default.Complete" />
+        </TocEntry>
+        <TocEntry
+          Title="Workflow Templates"
+          Link="/Content/Resources/Workflow/Workflow-Templates/Workflow-Templates-Overview.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Approve or Deny"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Approve-or-Deny-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Create Shortcut"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Create-Shortcut-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Email Entry That Was Created or Changed"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Email-Entry-That-Was-Created-or-Changed-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Metadata Syncing"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Metadata-Syncing-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Notify Project Team"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Notify-Project-Team-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Rename and Move"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Rename-and-Move-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Repeat Routing for Approval"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Repeat-Routing-for-Approval-Template.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Schedule Approval"
+            Link="/Content/Resources/Workflow/Workflow-Templates/Schedule-Approval-Template.htm"
+            conditions="Default.Complete" />
+        </TocEntry>
+        <TocEntry
+          Title="Additional Reading"
+          Link="/Content/Resources/Workflow/Additional-Reading.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Business Processes"
+      Link="/Content/Forms-Current/Laserfiche-Forms-Help.htm">
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Key-Concepts-in-Forms.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Getting Started with Business Processes"
+        Link="/Content/Forms-Current/Business-Processes.htm">
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Building-a-Process.htm">
+          <TocEntry
+            Title="Events"
+            Link="/Content/Forms-Current/Events.htm">
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/Start-Events.htm" />
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/Timer-Catch-Events.htm" />
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/Signal-Throw-and-Catch-Events.htm" />
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/Error-Events.htm" />
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/End-Events.htm" />
+          </TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Activities.htm">
+            <TocEntry
+              Title="User Tasks"
+              Link="/Content/Forms-Current/User-Tasks.htm">
+              <TocEntry
+                Title="[%=System.LinkedHeader%]"
+                Link="/Content/Forms-Current/Direct-Approval.htm" />
+            </TocEntry>
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/Service-Tasks.htm">
+              <TocEntry
+                Title="[%=System.LinkedHeader%]"
+                Link="/Content/Forms-On-Premises/Configuring-Repository-Profiles.htm" />
+            </TocEntry>
+            <TocEntry
+              Title="[%=System.LinkedHeader%]"
+              Link="/Content/Forms-Current/Building-Sub-processes.htm" />
+          </TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Gateways.htm"></TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Outflows.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Using-Conditional-Expressions.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/business-process-library.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Importing-A-Process.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Managing-Processes.htm"></TocEntry>
+        <TocEntry
+          Title="Starting a Process From a Workflow"
+          Link="/Content/Forms-Current/StartingProcessFromWorkflow.htm" />
+        <TocEntry
+          Title="Allowing Access to a Process"
+          Link="/Content/Forms-Current/Public-Facing-Forms.htm" />
+        <TocEntry
+          Title="Configuring Process Notifications"
+          Link="/Content/Forms-Current/process-notification.htm" />
+        <TocEntry
+          Title="Configuring Custom Error Messages in Business Processes"
+          Link="/Content/Forms-Current/Process-Error-Messages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Creating-a-New-Form.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/form-designer-comparison.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Adding-Fields-to-a-Form.htm"
+          ReplaceMergeNode="false">
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Address.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Collection.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Currency.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Custom-HTML.htm"></TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Date-and-Time.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Email.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/File-Upload.htm" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Forms-Current/Form-Fields/Fileset.htm">
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Forms-Current/Form-Fields/Managing-file-sets.htm" />
+          </TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Geolocation.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Multi-Line.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Number.htm"></TocEntry>
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/page-break.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Radio-Button.htm" />
+          <TocEntry
+            Title="Rich Text Fields"
+            Link="/Content/Forms-Current/Form-Fields/Rich-Text.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Section.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Signatures.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Single-Line.htm" />
+          <TocEntry
+            Title="[%=System.LinkedHeader%]"
+            Link="/Content/Forms-Current/Form-Fields/Table.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/Previewing-a-Form.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Applying-a-Theme-to-a-Form.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Using-Regular-Expressions-with-Field-Masks.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Formulas.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Creating-Rules-to-Show-or-Hide-Fields.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Filling-Fields-with-Lookup-Rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/Custom-Error-Messages-Form.htm" />
+        <TocEntry
+          Title="CSS and JavaScript in the Forms Designer"
+          Link="/Content/Forms-Current/Javascript-and-CSS/scripting-in-forms-desgner.htm">
+          <TocEntry
+            Title="The LFForm Object"
+            Link="/Content/Forms-Current/Javascript-and-CSS/TheLFFormObject.htm"></TocEntry>
+          <TocEntry
+            Title="Styles in the Forms Designer"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Styles-in-the-Form-Designer.htm" />
+        </TocEntry>
+        <TocEntry
+          Title="Customizing a Classic Form with CSS and Javascript"
+          Link="/Content/Forms-Current/Javascript-and-CSS/Customizing a Form with CSS and Javascript.htm">
+          <TocEntry
+            Title="Getting Started with CSS"
+            Link="/Content/Forms-Current/Javascript-and-CSS/CSS Selectors.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+          <TocEntry
+            Title="Getting Started with JavaScript"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Selectors.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+          <TocEntry
+            Title="Background and Body Images"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Background Images.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="CSS Customizations for Buttons"
+            Link="/Content/Forms-Current/Javascript-and-CSS/CSS Customizations for Buttons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="CSS Customizations for Fields, Titles, and Descriptions"
+            Link="/Content/Forms-Current/Javascript-and-CSS/CSS Text Customizations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Customizing Required Fields with JavaScript"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Customizing Required Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Customizing Buttons with JavaScript"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Buttons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Customizing Collections with JavaScript"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Customizations for Collections.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Customizing Tables"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Customizing Tables.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Customizing Signature Fields with JavaScript"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Customizations for Signature Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Email Confirmation Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+          <TocEntry
+            Title="Using Lookup-Related Events"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Using Lookup-Related Events.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Customizing the User Task Comments Box"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Customizing the Comments Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Displaying Documents in a Form"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Displaying Documents in a Form.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Included-CSS-and-JavaScript-Libraries.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Cloud-Referencing-Custom-JavaScript-CSS-Files.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="Other Resources"
+            Link="/Content/Forms-Current/Javascript-and-CSS/Other Resources.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Getting-Started-with-Team-Management.htm">
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/process-migration.htm"
+          StartSection="false" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Monitoring-Process-Instances-and-Tasks.htm"></TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Forms-Current/Frequently-Asked-Questions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Analytics and Reports"
+        Link="/Content/Forms-Current/Analytics/Analytics-Reports.htm">
+        <TocEntry
+          Title="Process Completion Rates"
+          Link="/Content/Forms-Current/Analytics/Viewing-Process-Completion-Rates.htm"
+          MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Visualizing Task Loads"
+          Link="/Content/Forms-Current/Analytics/Task-Loads-Heat-Map.htm"
+          MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Viewing In-Progress Instances and Forecasts"
+          Link="/Content/Forms-Current/Analytics/Viewing-In-Progress-Instances.htm"
+          MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Form Reports"
+          Link="/Content/Forms-Current/Analytics/Viewing-Form-Submission-Data.htm"
+          MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Team and User Workloads"
+          Link="/Content/Forms-Current/Analytics/Task-Loads-Teams-Users.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/Analytics/Viewing-Process-Irregularities.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Variables"
+        Link="/Content/Forms-Current/Variables.htm">
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/List-of-Variables.htm" />
+        <TocEntry
+          Title="[%=System.LinkedHeader%]"
+          Link="/Content/Forms-Current/User-Task-Variables.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm" />
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/populating-a-form-with-url-parameters.htm" />
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Best-Practices.htm" />
+      <TocEntry
+        Title="[%=System.LinkedHeader%]"
+        Link="/Content/Forms-Current/Frequently-Asked-Questions.htm"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Bots"
+      Link="/Project/TOCs/RPA.fltoc" />
+    <TocEntry
+      Title="Starting Events"
+      Link="/Content/Resources/Starting-Rules/Starting-Rules.htm"
+      conditions="Default.Complete">
+      <TocEntry
+        Title="Creating a Starting Event Condition"
+        Link="/Content/Resources/Starting-Rules/Creating-Condition-Starting-Rule.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Creating a Starting Event Schedule "
+        Link="/Content/Resources/Starting-Rules/Creating-Schedule-Starting-Rule.htm"
+        conditions="Default.Complete" />
+    </TocEntry>
+    <TocEntry
+      Title="Rules"
+      Link="/Content/Resources/Rules/Rules.htm"
+      conditions="Default.Complete">
+      <TocEntry
+        Title="Creating Rules"
+        Link="/Content/Resources/Rules/Creating-Rules.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Publishing Rules"
+        Link="/Content/Resources/Rules/Publishing-Rules.htm"
+        conditions="Default.Complete"></TocEntry>
+      <TocEntry
+        Title="Versioning for Rules"
+        Link="/Content/Resources/Rules/Versioning-for-Rules.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Searching for Rules"
+        Link="/Content/Resources/Rules/Searching-for-Rules.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Importing and Exporting Rules"
+        Link="/Content/Resources/Rules/Importing-Exporting-Rules.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Viewing Usage Statistics"
+        Link="/Content/Resources/Rules/Viewing-Usage-Statistics.htm"
+        conditions="Default.Do not include" />
+      <TocEntry
+        Title="Getting Started with Decision Tables"
+        Link="/Content/Resources/Rules/Decision-Tables/Getting-Started-with-Decision-Tables.htm"
+        conditions="Default.Complete">
+        <TocEntry
+          Title="Setting Up the Input and Output Fields"
+          Link="/Content/Resources/Rules/Decision-Tables/Setting-Up-Input-and-Output-Fields.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Data Types"
+            Link="/Content/Resources/Rules/Decision-Tables/Data-Types.htm"
+            conditions="Default.Complete" />
+          <TocEntry
+            Title="Operators"
+            Link="/Content/Resources/Rules/Decision-Tables/Operators.htm"
+            conditions="Default.Complete" />
+        </TocEntry>
+        <TocEntry
+          Title="Selecting a Hit Policy"
+          Link="/Content/Resources/Rules/Decision-Tables/Hit-Policy.htm"
+          conditions="Default.Complete">
+          <TocEntry
+            Title="Single Hit Policy"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="Unique Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/unique-hit-policy.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Any Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/any-hit-policy.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="First Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/first-hit-policy.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Priority Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/priority-hit-policy.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Mutliple Hit Policy"
+            conditions="Default.Complete">
+            <TocEntry
+              Title="No Order Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/no-order-hit-policy.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Rule Order Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/rule-order-hit-policy.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Output Order Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/output-order-hit-policy.htm"
+              conditions="Default.Complete" />
+            <TocEntry
+              Title="Single Result Hit Policy"
+              Link="/Content/Resources/Rules/Decision-Tables/hit-policy/single-result-hit-policy.htm"
+              conditions="Default.Complete" />
+          </TocEntry>
+          <TocEntry
+            Title="Ordering the Output Priority"
+            Link="/Content/Resources/Rules/Decision-Tables/Output-Order.htm"
+            conditions="Default.Complete" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Getting Started with Document Merges"
+        Link="/Content/Resources/Rules/Document-Merges/Getting-Started-with-Document-Merges.htm"
+        conditions="Default.Complete">
+        <TocEntry
+          Title="Preparing a Document with Merge Fields"
+          Link="/Content/Resources/Rules/Document-Merges/Preparing-a-Document-with-Merge-Fields.htm"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Preview Test Values on the Document"
+          Link="/Content/Resources/Rules/Document-Merges/Previewing-Test-Values-on-the-Document.htm"
+          conditions="Default.Complete" />
+      </TocEntry>
+      <TocEntry
+        Title="[%=System.LinkedTitle%]"
+        Link="/Content/Resources/Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Specifying a Table"
+          Link="/Content/Resources/Rules/Data-Queries/Specifying-a-Table.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Selecting Columns"
+          Link="/Content/Resources/Rules/Data-Queries/Selecting-Columns.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Filtering Columns by Values"
+          Link="/Content/Resources/Rules/Data-Queries/Searching-Individual-Values-in-a-Column.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Sorting Query Data"
+          Link="/Content/Resources/Rules/Data-Queries/Specifying-Order-of-Data-in-Query-Results.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Resources/Rules/Data-Queries/Organizing-Data-in-a-Column-Using-Operators.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Getting Started with Formulas"
+        Link="/Content/Resources/Rules/Formulas/Getting-Started-with-Formulas.htm"
+        conditions="Default.Complete">
+        <TocEntry
+          Title="Defining the Input Parameters"
+          Link="/Content/Resources/Rules/Formulas/Defining-the-Input-Parameters.htm"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Adding Parameters and Functions to the Canvas"
+          Link="/Content/Resources/Rules/Formulas/Adding-to-the-Canvas.htm"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Specifying Output Parameter"
+          Link="/Content/Resources/Rules/Formulas/Specifying-Output-Parameters.htm"
+          conditions="Default.Complete" />
+        <TocEntry
+          Title="Selecting the Data Type"
+          Link="/Content/Resources/Rules/Formulas/Defining-Data-Types.htm"
+          conditions="Default.Complete" />
+      </TocEntry>
+      <TocEntry
+        Title="Getting Started with Web Requests"
+        Link="/Content/Resources/Rules/web-request-rule.htm" />
+      <TocEntry
+        Title="Getting Started With Scripts"
+        Link="/Content/Resources/Rules/scripts.htm">
+        <TocEntry
+          Title="Creating a C# Script"
+          Link="/Content/Resources/Rules/csharpscript.htm" />
+        <TocEntry
+          Title="Creating a Python Script"
+          Link="/Content/Resources/Rules/pythonscript.htm" />
+        <TocEntry
+          Title="Creating a Node.js Script"
+          Link="/Content/Resources/Rules/nodejsscript.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Troubleshooting"
+        Link="/Content/Resources/Rules/Troubleshooting.htm"
+        conditions="Default.Complete" />
+    </TocEntry>
+    <TocEntry
+      Title="[%=System.LinkedTitle%]"
+      Link="/Content/Resources/Surveys/Form-Surveys.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="Capture Profiles"
+      Link="/Content/Resources/Capture-Profiles/Capture-Profiles.htm"
+      conditions="Default.Complete">
+      <TocEntry
+        Title="Creating and Configuring a Capture Profile"
+        Link="/Content/Resources/Capture-Profiles/Creating-and-Configuring-a-Capture-Profile.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Testing a Capture Profile"
+        Link="/Content/Resources/Capture-Profiles/Testing-a-Capture-Profile.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Saving and Publishing a Capture Profile"
+        Link="/Content/Resources/Capture-Profiles/Saving-and-Publishing-a-Capture-Profile.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Smart Invoice Profiles"
+        Link="/Content/Resources/Capture-Profiles/Smart-Invoice-Capture-Profile.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Capture Profile Groups"
+        Link="/Content/Resources/Capture-Profiles/Capture-Profile-Groups.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Importing and Exporting Capture Profiles"
+        Link="/Content/Resources/Capture-Profiles/Importing-and-Exporting-a-Capture-Profile.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"
+        conditions="Default.Complete" />
+    </TocEntry>
+    <TocEntry
+      Title="Data Management"
+      Link="/Content/Resources/Entities/lookup-tables.htm">
+      <TocEntry
+        Title="Files"
+        Link="/Content/Resources/Assets/Files.htm"
+        conditions="Default.Complete"></TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Custom Reports"
+      Link="/Content/Resources/Custom-Reports/Custom-Reports.htm">
+      <TocEntry
+        Title="Designing Custom Reports">
+        <TocEntry
+          Title="Creating Custom Reports"
+          Link="/Content/Resources/Custom-Reports/Creating-Custom-Reports.htm" />
+        <TocEntry
+          Title="Viewing Custom Reports and Drilldowns"
+          Link="/Content/Resources/Custom-Reports/Viewing-Custom-Reports.htm" />
+        <TocEntry
+          Title="Managing Custom Reports"
+          Link="/Content/Resources/Custom-Reports/Managing-Custom-Reports.htm"></TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Groups"
+        Link="/Content/Resources/Custom-Reports/Groups.htm" />
+      <TocEntry
+        Title="Values"
+        Link="/Content/Resources/Custom-Reports/Values.htm" />
+      <TocEntry
+        Title="Fields"
+        Link="/Content/Resources/Custom-Reports/Fields.htm"
+        StartSection="false" />
+      <TocEntry
+        Title="Toolbar Actions"
+        Link="/Content/Resources/Custom-Reports/Custom-Reports-Toolbar-Actions.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Integrations">
+      <TocEntry
+        Title="Overview"
+        Link="/Content/Resources/Integrations/Integrations-Overview.htm" />
+      <TocEntry
+        Title="Remote Agents"
+        Link="/Content/Resources/Integrations/Remote-Agents/Remote-Agents.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+        <TocEntry
+          Title="Queues"
+          Link="/Content/Resources/Integrations/Remote-Agents/Queues.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Workers"
+          Link="/Content/Resources/Integrations/Remote-Agents/Worker-Agents.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        <TocEntry
+          Title="Troubleshooting Remote Agents"
+          Link="/Content/Resources/Integrations/Remote-Agents/Troubleshooting.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      </TocEntry>
+      <TocEntry
+        Title="Data Sources"
+        Link="/Content/Resources/Integrations/External-Data-Sources/External-Data-Sources.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      <TocEntry
+        Title="Application Connections"
+        Link="/Content/Resources/Integrations/integrationplatform.htm">
+        <TocEntry
+          Title="Ellucian Banner Integration"
+          Link="/Content/Resources/Integrations/ellucian-integration.htm">
+          <TocEntry
+            Title="[%=System.LinkedTitle%]"
+            Link="/Content/Resources/Integrations/ellucian-objects.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          <TocEntry
+            Title="The Ellucian Actions"
+            Link="/Content/Resources/Integrations/ellucian-actions.htm">
+            <TocEntry
+              Title="Update Student"
+              Link="/Content/Resources/Integrations/ellucian_actions/Update-Student.htm" />
+            <TocEntry
+              Title="Search Student by Banner ID"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Student-by-Banner-ID.htm" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Student-by-Banner-ID-and-Email.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Student-by-Banner-Username.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Student-by-Banner-Username-and-Email.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Students-by-Email.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Student-Academic-Credentials-by-Person-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Cumulative-Grade-Point-Averages-by-Person-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Add-Academic-Discipline.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Drop-Academic-Discipline.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Student-Academic-Programs-by-Person-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Disciplines-by-Student-Academic-Program-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Courses-by-Subject-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Courses-by-Subject-ID-and-Academic-Level-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Section-by-CRN-and-Term-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Sections-by-Course-ID-and-Term-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Section-Registrations-by-Person-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Search-Section-Registrations-by-Person-ID-and-Term-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Update-Section-Registration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Get-Marital-Status-List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Get-Ethnicity-List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Get-Term-List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Get-Subject-List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Get-Academic-Level-List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/Get-Discipline-List.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/GQL-Search-Section-Registrations-by-Person-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/GQL-Search-Section-Registrations-by-Person-ID-and-Term-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/GQL-Search-Sections-by-Course-ID-and-Term-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/GQL-Search-Courses-by-Subject-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            <TocEntry
+              Title="[%=System.LinkedTitle%]"
+              Link="/Content/Resources/Integrations/ellucian_actions/GQL-Search-Courses-by-Subject-ID-and-Academic-Level-ID.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          </TocEntry>
+        </TocEntry>
+        <TocEntry
+          Title="Ellucian Colleague Integration"
+          Link="/Content/Resources/Integrations/ellucian-colleague-integration.htm" />
+        <TocEntry
+          Title="Microsoft Dynamics CRM Integration"
+          conditions="Default.Do not include">
+          <TocEntry
+            Title="New Entry"
+            conditions="Default.Do not include" />
+        </TocEntry>
+        <TocEntry
+          Title="Redtail CRM Integration"
+          conditions="Default.Do not include">
+          <TocEntry
+            Title="New Entry"
+            conditions="Default.Do not include" />
+        </TocEntry>
+        <TocEntry
+          Title="Salesforce Integration"
+          conditions="Default.Do not include">
+          <TocEntry
+            Title="New Entry" />
+        </TocEntry>
+      </TocEntry>
+      <TocEntry
+        Title="Web Services"
+        Link="/Content/Resources/Integrations/Web-Services.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Teams"
+      Link="/Content/Resources/Teams/teams.htm">
+      <TocEntry
+        Title="Team Security Features"
+        Link="/Content/Resources/Teams/team-security-features.htm">
+        <TocEntry
+          Title="Determining Access Rights"
+          Link="/Content/Resources/Teams/determining-access-rights.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Managing Teams"
+        Link="/Content/Resources/Teams/creating-a-team.htm"></TocEntry>
+      <TocEntry
+        Title="Projects"
+        Link="/Content/Resources/Teams/projects.htm">
+        <TocEntry
+          Title="Managing Projects"
+          Link="/Content/Resources/Teams/creating-a-project.htm" />
+        <TocEntry
+          Title="Project Resources"
+          Link="/Content/Resources/Teams/project-resources.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Team Notifications"
+        Link="/Content/Resources/Teams/team-notifications.htm"
+        conditions="Default.Do not include"></TocEntry>
+      <TocEntry
+        Title="Navigating Within Teams"
+        Link="/Content/Resources/Teams/navigating-teams.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Settings"
+      Link="/Content/Resources/Settings/Settings.htm"
+      conditions="Default.Complete">
+      <TocEntry
+        Title="Work Schedules"
+        Link="/Content/Resources/Settings/Work-Schedules.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Holidays"
+        Link="/Content/Resources/Settings/Holidays.htm"
+        conditions="Default.Complete" />
+      <TocEntry
+        Title="Email Display Names"
+        Link="/Content/Resources/Settings/email-display-names.htm" />
+    </TocEntry>
+    <TocEntry
+      Title="Regular Expression Reference"
+      Link="/Content/Resources/Regular Expressions/Regular-Expressions.htm">
+      <TocEntry
+        Title="Regular Expressions"
+        Link="/Content/Resources/Regular Expressions/Regular-Expressions.htm">
+        <TocEntry
+          Title="Character Classes"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Character-Classes.htm" />
+        <TocEntry
+          Title="Quantifiers"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Quantifiers.htm" />
+        <TocEntry
+          Title="Character Escapes"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Character-Escapes.htm" />
+        <TocEntry
+          Title="Grouping Constructs"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Grouping-Constructs.htm" />
+        <TocEntry
+          Title="Metacharacters"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Metacharacters.htm" />
+        <TocEntry
+          Title="Alternations"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Alternations.htm" />
+        <TocEntry
+          Title="Options"
+          Link="/Content/Resources/Regular Expressions/Regular-Expression-Characters/Options.htm" />
+      </TocEntry>
+      <TocEntry
+        Title="Common Regular Expression Patterns"
+        Link="/Content/Resources/Regular Expressions/Common-Regular-Expressions.htm" />
+      <TocEntry
+        Title="Helpful Regular Expressions for Repository Administration"
+        Link="/Content/Resources/Regular Expressions/Regular-Expressions-For-Repository-Documents.htm"></TocEntry>
+      <TocEntry
+        Title="Token Formatting"
+        Link="/Content/Resources/Regular Expressions/NET-Formatting/Token-Formatting.htm">
+        <TocEntry
+          Title="Token Formatting in Workflow and Quick Fields - Date and Time"
+          Link="/Content/Resources/Regular Expressions/NET-Formatting/Token-Formatting-Date-And-Time.htm" />
+        <TocEntry
+          Title="Token Formatting in Workflow and Quick Fields - Numeric"
+          Link="/Content/Resources/Regular Expressions/NET-Formatting/Token-Formatting-Numeric.htm" />
+      </TocEntry>
+    </TocEntry>
+    <TocEntry
+      Title="Frequently Asked Questions (FAQ)"
+      Link="/Content/Resources/FAQ.htm"
+      conditions="Default.Complete"></TocEntry>
   </TocEntry>
   <TocEntry
     Title="Frequently Asked Questions (FAQ)"

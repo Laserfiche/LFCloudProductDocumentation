@@ -824,7 +824,10 @@
       Link="/Content/Boomi-Connector.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
     <TocEntry
       Title="[%=System.LinkedTitle%]"
-      Link="/Content/Mulesoft-Laserfiche-Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      Link="/Content/Mulesoft-Laserfiche-Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="Laserfiche SharePoint Online Integration"
+      Link="/Content/sharepoint-online-integration.htm" />
   </TocEntry>
   <TocEntry
     Title="Public Portal">
@@ -1666,9 +1669,9 @@
             Link="/Content/Forms-Current/Form-Fields/Table.htm" />
         </TocEntry>
         <TocEntry
-        Title="[%=System.LinkedTitle%]"
-        Link="/Content/Forms-Current/Previewing-a-Form.htm" />
-      <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/Previewing-a-Form.htm" />
+        <TocEntry
           Title="[%=System.LinkedHeader%]"
           Link="/Content/Forms-Current/Applying-a-Theme-to-a-Form.htm" />
         <TocEntry

@@ -893,10 +893,6 @@
       Link="/Content/Resources/Managing-Account-Administration.htm"
       conditions="Default.Complete" />
     <TocEntry
-      Title="Editing Site and Account Settings"
-      Link="/Content/Resources/Editing-Account-Settings.htm"
-      conditions="Default.Complete"></TocEntry>
-    <TocEntry
       Title="Configuring Entry Access Rights"
       Link="/Content/Resources/Entry-Access-Rights.htm"
       conditions="Default.Complete"

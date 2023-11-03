@@ -6,18 +6,71 @@
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p style="font-weight: bold;">November 2, 2023</p>
+        <p><a href="../2023.11.htm">New Features summary for the Laserfiche Cloud November 2023 Update</a>
+        </p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Users display names may now contain double quotes. (489675)</li>
+            <li>Starting Rules that invoke workflows no longer display duplicated available workflows for selection. (476502)</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Limits have been changed for lookup table columns, rows, characters per row, and file size for improved overall performance. See the Service Limits page for additional information. (481425, 481255)</li>
+            <li>The order of lookup rules is now always maintained when importing business processes from self-hosted Laserfiche Forms to Laserfiche Cloud.  (488310)</li>
+            <li>Form Designer Updates:<ul><li>Duplicating fields can longer cause duplicated IDs. (480598)</li><li>Fixed a display issue where a narrow single line or drop-down field would not show all values clearly when filled from a lookup. (480747)</li></ul></li>
+        </ul>
+        <p>Custom Reports</p>
+        <ul>
+            <li>Additional relative date options added for filtering in reports. (476227)</li>
+            <li>Reports now support multiple columns for sorting in Table in View. (476225)</li>
+        </ul>
+        <p>Web Client</p>
+        <ul>
+            <li>Direct share now supports use of a one-time passcode to secure and retrieve documents. (374332)</li>
+            <li>Resolved issues when generating pages and text from some PDFs. (485295, 486015, 491605, 485045, 485287)</li>
+        </ul>
+        <p>Starting Rules</p>
+        <ul>
+            <li>The starting event creation dialog will no longer close if you click outside its borders. (475956)</li>
+        </ul>
+        <p>Account Administration</p>
+        <ul>
+            <li>The My Account page now has a My Apps tab where you can view the SAML OAuth apps that you have granted access to your Laserfiche account.</li>
+        </ul>
         <p style="font-weight: bold;">October 27, 2023</p>
         <p style="font-weight: normal;">Web Client</p>
         <ul>
             <li>The Everyone group can now be toggled between read-write and read-only repository access. (492029) </li>
             <li>Resolved an issue that could prevent users from downloading Laserfiche Webtools Agent from the Options page. (492860)</li>
         </ul>
+        <p><b>October 20, 2023</b>
+        </p>
+        <p>Documents</p>
+        <ul>
+            <li>OCR service availability and stability improvements. Improved resource sharing optimization between tenants prevents potential monopolizing of the OCR service when processing requests. This feature also introduces <a href="../../../../../../svn/Documentation/LingoTranslation/Branch/Cloud/Content/Service-Limits.htm">daily limits</a> for different types of OCR jobs. This feature will be gradually rolled out to customers over the next few weeks.(395065)</li>
+        </ul>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Generating text for a document will no longer create a separate version as each page of the document is OCRed.
+(372075)            </li>
+        </ul>
+        <p style="font-weight: bold;">October 12, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue that prevented form recovery if a user was completing a form when its process was republished. (488730)</li>
+            <li>Fixed an issue that prevented a Custom HTML button from opening a document in a new window. (489438)</li>
+        </ul>
+        <p><b>October 10, 2023</b>
+        </p>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Security updates and enhancements. </li>
+        </ul>
         <p style="font-weight: bold;">October 9, 2023</p>
         <p style="font-weight: normal;">Bots</p>
         <ul>
-            <li>
-                <p>Security updates and enhancements.</p>
-            </li>
+            <li>Security updates and enhancements.</li>
         </ul>
         <p style="font-weight: bold;"><b><a href="2023.10.htm">October 5, 2023</a></b>
         </p>

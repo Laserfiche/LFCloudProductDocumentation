@@ -47,6 +47,15 @@
       <TocEntry
         Title="2023">
         <TocEntry
+          Title="November 2023"
+          Link="/Content/2023.11.htm" />
+        <TocEntry
+          Title="October 2023"
+          Link="/Content/2023.10.htm"></TocEntry>
+        <TocEntry
+          Title="September 2023"
+          Link="/Content/2023.09.htm"></TocEntry>
+        <TocEntry
           Title="August 2023"
           Link="/Content/2023.08.htm" />
         <TocEntry

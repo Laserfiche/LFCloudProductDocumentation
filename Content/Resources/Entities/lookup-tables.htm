@@ -11,11 +11,12 @@
             <li>Click <b>New</b>.</li>
             <li>Enter a name and description. </li>
             <li>Click <b>Choose File</b> and select the appropriate Excel document or CSV file to use as the source of the lookup table.</li>
+            <p class="note"><b>Note</b>: Upload speed will decrease as imported data sets and their file size increase.</p>
             <li><b>Optional:</b> Select the <b>Enable for Dynamic Fields</b>           option to allow the lookup table to be used as a data source for Laserfiche templates and fields when configuring dynamic fields. </li>
             <li><b>Optional:</b> Select the <b>Read-Only access to data</b> option to prevent modification of lookup table values through query rules. Recommended for cases where the lookup table data will not be updated or will only be updated through the <b>Replace Lookup Table Data</b> workflow activity.</li>
             <li><b>Optional:</b> Select the <b>Preserve Whitespace</b> option to save text as is. When not selected, Laserfiche will trim leading and trailing whitespace and normalize internal whitespace to a single space character.</li>
             <li>Click <b>Next</b> to proceed.</li>
-            <li>Choose which columns to include as part of the upload. When applicable, you will also be presented with an option to control the type of values. For example, if <MadCap:variable name="DoNotTranslate.Laserfiche" /> detects numerical values, you will have the option to choose whether to save the values as text or as a number.<p class="note"><b>Note</b>: Click the <b>Revert</b> button to return to their default values any changes made to column types and selected columns .</p></li>
+            <li>Choose which columns to include as part of the upload. When applicable, you will also be presented with an option to control the type of values. For example, if <MadCap:variable name="DoNotTranslate.Laserfiche" /> detects numerical values, you will have the option to choose whether to save the values as text or as a number.<p class="note"><b>Note</b>: Click the <b>Revert</b> button to return to their default values any changes made to column types and selected columns.</p></li>
             <li>Click <b>Create</b> to complete the upload process.</li>
         </ol>
         <h2>To update a lookup table</h2>
@@ -29,13 +30,14 @@
         </ol>
         <p class="note"><b>Note</b>: Use the download button (<img src="../Images/download.png" />) to download a copy of the data in the lookup table as a CSV file compressed as ZIP. This option can be useful when you want to bulk update the lookup table, but no longer have the original source Excel document or CSV file used to create the lookup table</p>
         <h3>Using a query rule to retrieve or update values </h3>
-        <p>Within Rules, create a Query to retrieve, insert, update or delete data from a lookup table. </p>
+        <p>Within Rules, create a Query to retrieve, insert, update or delete data from a lookup table. <span>Using the Rows to Return field to configure the desired number of rows for the query to return can increase performance.</span></p>
         <ol>
             <li>Within a workflow, use the <a href="../Workflow/Activities/Run-Business-Rules.htm" title="Click to learn more" alt="Click to learn more">Run Rule</a> activity to run the lookup table query rule as part of a workflow. </li>
             <li>Within a business process, use <a href="../../Forms-Current/Filling-Fields-with-Lookup-Rules.htm">Lookup Rules</a> to run a Select-type query rule to pre-populate a form with values from the lookup table.</li>
         </ol>
         <h2>Spreadsheet format</h2>
         <p>The spreadsheet file can be either an Excel Workbook (.xlsx) or a CSV text file.</p>
+        <p>Performance of the imported file is best as a CSV, followed by XLSX, and lastly as a ZIP.</p>
         <p>The first row of the spreadsheet should be the column names.</p>
         <p>If there is more than one worksheet in an Excel workbook, only the first worksheet can be uploaded to the lookup table.</p>
         <p>CSV files can be delimited by commas, semi-colons or tabs. For international compatibility, numbers in CSV files should use a period (“.”) as the decimal separator with no digit grouping (thousands) separator. Dates in CSV files should use the ISO format (YYYY-MM-DD).</p>
@@ -51,7 +53,7 @@
         <p><b>Related Links:</b>
         </p>
         <ul>
-            <li><a href="../../service/Service-Limits.htm" title="Click here to learn more." alt="Click here to learn more.">Process Automation Service Limits</a>: See file size limits for the Excel document or CSV file.</li>
+            <li><a href="../Service-Limits.htm" title="Click here to learn more." alt="Click here to learn more.">Process Automation Service Limits</a>: See file size limits for the Excel document or CSV file.</li>
         </ul>
         <MadCap:snippetBlock src="../Snippets/migrating-form-tables-into-word-documents.flsnp" />
     </body>

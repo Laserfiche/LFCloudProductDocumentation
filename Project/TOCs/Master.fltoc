@@ -726,9 +726,6 @@
           Link="/Content/AttributeMappings.htm" />
       </TocEntry>
       <TocEntry
-        Title="Configure Single Sign-On with TD Ameritrade Veo One"
-        Link="/Content/veo-one.htm"></TocEntry>
-      <TocEntry
         Title="Configure Single Sign-On with Active Directory Federation Services (AD FS)"
         Link="/Content/sso.htm"
         conditions="Default.Exclude"></TocEntry>

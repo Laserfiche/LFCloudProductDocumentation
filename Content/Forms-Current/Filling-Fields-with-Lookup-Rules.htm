@@ -59,11 +59,11 @@
         <p><a href="../Resources/Rules/Decision-Tables/Getting-Started-with-Decision-Tables.htm" title="Click here to learn more." alt="Click here to learn more.">Decision tables</a> can be used to capture logic that is used in processes, without having to configure that logic using gateways, outflows, and sequence flows. This means that the same logical rules can be easily shared across multiple processes, without having to configure anew the logic in the process diagram for each process.</p>
         <p>In the following example, we have a decision table that decides which level of management a purchase order should be routed to, depending on the dollar amount of the purchase. If the purchase is less than $10,000, it is routed to a lower level manager. If it is more than $10,000, it is routed to a higher level manager.</p>
         <p>
-            <img src="../Resources/Forms Images/decisionTable_purchaseOrder.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 583px;height: 140px;" alt="Sample decision table" title="Decision tables can be created in the Rules section of Process Automation" />
+            <img src="../Resources/Images/decisionTable_purchaseOrder_583x140.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 1115px;height: 265px;" alt="Sample decision table" title="Decision tables can be created in the Rules section of Process Automation" />
         </p>
         <p>We use this decision table in a form to fill a field based on the output from the table. The inputs will come from another field in the same form.</p>
         <p>
-            <img src="../Resources/Forms Images/forms_lookups_decisionTable.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 732px;height: 155px;" />
+            <img src="../Resources/Images/forms_lookups_decisionTable_732x155.png" style="border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;width: 1120px;height: 332px;" />
         </p>
         <p>Later on in the process, the value of the Normal Review field can be used to determine where the form is routed. If Normal Review has the value "true", it is routed to a lower level manager. Otherwise, it is routed to a higher level manager.</p>
         <h3>To configure a lookup rule using a decision table</h3>
@@ -74,7 +74,7 @@
             <li>Under <b>Select rule type</b>, select <b>Decision Table</b>.</li>
             <li>In the next drop-down menu, select the name of the decision table you want to use.</li>
             <li>For each <b>When</b> condition that appears, select the field values that should match each of the decision table's input parameters.</li>
-            <li>Click <b>Add output parameter</b>.</li>
+            <li>Click <b>Add output parameter <img src="../Resources/Images/add-output-parameter-icon.png" style="width: 25px;height: 25px;" /></b>.</li>
             <li>From the menu after <b>Fill</b>, select the field that should be filled with one of the output parameters.</li>
             <li>From the menu after <b>with</b>, select the output parameter that will be used to fill the previously selected field.</li>
             <li>To fill another field with an output parameter, click the <b>+</b> button and repeat the previous two steps.</li>

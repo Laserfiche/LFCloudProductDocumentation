@@ -13,21 +13,49 @@
         <h2 class="topicheading">Field settings</h2>
         <p><b>To edit a geolocation field</b>
         </p>
-        <ol>
-            <li>Select the field on the canvas and click <b>Edit</b>.</li>
-            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-            <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
-            <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. </li>
-            <p class="ex"><b>Tip:</b> The read-only setting can be particularly useful with this field if you also set the default value of the field to <b>Use current location</b>. With this configuration, the location coordinates are automatically captured when the form is submitted. </p>
-            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
-            <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-            <li>Under <b>Default value</b>, provide a value that will appear in the field by default. Click the token button to use a token or to select <b>Use current location</b>. If you select the <b>Use current location</b> option, the field will be populated with the user's geolocation as determined at the time they open the form. Alternatively, if the field is read-only, <b>Use current location</b> will use the geolocation as determined at the time that the form is submitted. </li>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+        <div id="tabs">
             <ul>
-                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
             </ul>
-            <li>When you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
-        </ol>
+            <div id="tabs-1">
+                <ol>
+                    <li>Select the field on the canvas.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. </li>
+                    <p class="ex"><b>Tip:</b> The read-only setting can be particularly useful with this field if you also set the default value of the field to <b>Use current location</b>. With this configuration, the location coordinates are automatically captured when the form is submitted. </p>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>Default Location</b>, provide a value that will appear in the field by default for <b>Default Latitude</b> and <b>Default Longitude</b>. Click the token button to use a token or to select <b>Use current location</b>. If you select the <b>Use current location</b> option, the field will be populated with the user's geolocation as determined at the time they open the form. Alternatively, if the field is read-only, <b>Use current location</b> will use the geolocation as determined at the time that the form is submitted. </li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                    </ul>
+                    <li>When you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                </ol>
+            </div>
+            <div id="tabs-2">
+                <ol>
+                    <li>Select the field on the canvas and click <b>Edit</b>.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. </li>
+                    <p class="ex"><b>Tip:</b> The read-only setting can be particularly useful with this field if you also set the default value of the field to <b>Use current location</b>. With this configuration, the location coordinates are automatically captured when the form is submitted. </p>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>Default value</b>, provide a value that will appear in the field by default. Click the token button to use a token or to select <b>Use current location</b>. If you select the <b>Use current location</b> option, the field will be populated with the user's geolocation as determined at the time they open the form. Alternatively, if the field is read-only, <b>Use current location</b> will use the geolocation as determined at the time that the form is submitted. </li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                    </ul>
+                    <li>When you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                </ol>
+            </div>
+        </div>
     </body>
 </html>

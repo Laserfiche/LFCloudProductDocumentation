@@ -47,6 +47,15 @@
       <TocEntry
         Title="2023">
         <TocEntry
+          Title="November 2023"
+          Link="/Content/2023.11.htm" />
+        <TocEntry
+          Title="October 2023"
+          Link="/Content/2023.10.htm"></TocEntry>
+        <TocEntry
+          Title="September 2023"
+          Link="/Content/2023.09.htm"></TocEntry>
+        <TocEntry
           Title="August 2023"
           Link="/Content/2023.08.htm" />
         <TocEntry
@@ -231,7 +240,8 @@
       Link="/Content/Keyboard_Shortcuts.htm" />
     <TocEntry
       Title="Repository Design Principles and Best Practices"
-      conditions="Default.Do not include" />
+      Link="/Content/Repository-Design-Best-Practices.htm"
+      ComputeToc="false" />
     <TocEntry
       Title="Adding Documents and Folders"
       Link="/Content/Adding_Content.htm">
@@ -399,6 +409,13 @@
       Title="Working with Documents and Folders"
       Link="/Content/Working_with_Documents.htm">
       <TocEntry
+        Title="Organizing Documents and Folders"
+        Link="/Content/Organizing_Documents.htm">
+        <TocEntry
+          Title="Best Practices for Designing a Folder Structure"
+          Link="/Content/Best-Practices-Folder-Structure.htm" />
+      </TocEntry>
+      <TocEntry
         Title="Viewing Documents and Folders"
         Link="/Content/Viewing_Documents.htm" />
       <TocEntry
@@ -415,7 +432,7 @@
         Link="/Content/Metadata.htm">
         <TocEntry
           Title="Metadata Design Principles and Best Practices"
-          conditions="Default.Do not include" />
+          Link="/Content/metadata-Design-Best-Practices.htm" />
         <TocEntry
           Title="Fields and Templates"
           Link="/Content/Fields_and_Templates.htm">
@@ -709,9 +726,6 @@
           Link="/Content/AttributeMappings.htm" />
       </TocEntry>
       <TocEntry
-        Title="Configure Single Sign-On with TD Ameritrade Veo One"
-        Link="/Content/veo-one.htm"></TocEntry>
-      <TocEntry
         Title="Configure Single Sign-On with Active Directory Federation Services (AD FS)"
         Link="/Content/sso.htm"
         conditions="Default.Exclude"></TocEntry>
@@ -824,7 +838,10 @@
       Link="/Content/Boomi-Connector.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
     <TocEntry
       Title="[%=System.LinkedTitle%]"
-      Link="/Content/Mulesoft-Laserfiche-Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+      Link="/Content/Mulesoft-Laserfiche-Integration.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+    <TocEntry
+      Title="Laserfiche SharePoint Online Integration"
+      Link="/Content/sharepoint-online-integration.htm" />
   </TocEntry>
   <TocEntry
     Title="Public Portal">
@@ -1662,9 +1679,9 @@
             Link="/Content/Forms-Current/Form-Fields/Table.htm" />
         </TocEntry>
         <TocEntry
-        Title="[%=System.LinkedTitle%]"
-        Link="/Content/Forms-Current/Previewing-a-Form.htm" />
-      <TocEntry
+          Title="[%=System.LinkedTitle%]"
+          Link="/Content/Forms-Current/Previewing-a-Form.htm" />
+        <TocEntry
           Title="[%=System.LinkedHeader%]"
           Link="/Content/Forms-Current/Applying-a-Theme-to-a-Form.htm" />
         <TocEntry

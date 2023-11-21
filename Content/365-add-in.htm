@@ -32,6 +32,14 @@
         </ul>
         <h3 MadCap:conditions="Default.Exclude">Updating the Add-in</h3>
         <p MadCap:conditions="Default.Exclude">The manifest file hosted in the above locations will be updated as needed when there is a new version of the add-in. </p>
+        <h3 MadCap:conditions="Default.Exclude">Configuring the Laserfiche Outlook Add-in for Microsoft 365 to use OAuth</h3>
+        <p MadCap:conditions="Default.Exclude">For the Laserfiche Outlook Add-in for Microsoft 365 to work with OAuth, you must configure OAuth in the Laserfiche Developer Console, and users will need to sign in using the same Laserfiche Cloud account ID as configured in the Laserfiche Developer Console. Follow the instructions below for all accounts that use the Laserfiche Outlook Add-in.</p>
+        <ol>
+            <li MadCap:conditions="Default.Exclude"><a href="https://app.laserfiche.com/officeapps/outlook/v1/static-assets/LaserficheforOutlookAppManifest.json" target="_parent">Download the manifest.json file</a>.</li>
+            <li MadCap:conditions="Default.Exclude">Sign in to your Laserfiche Cloud account. From the app picker, select <b>Developer Console</b>. To sign in to the developer console, you must have the Developer Console Administrator access right. <a href="AddingUsers.htm">Learn how to configure access rights</a>.</li>
+            <li MadCap:conditions="Default.Exclude">Follow the instructions under "Create an Application from a Manifest" in the <a href="https://developer.laserfiche.com/guides/guide_importing-exporting-manifest.html" target="_parent">Import and Export Application Manifest How To Guide</a> using the manifest.json file downloaded in step 1.</li>
+        </ol>
+        <p class="note" MadCap:conditions="Default.Exclude"><b>Note:</b> Do not change the value of clientId or redirectUris, or the OAuth flow will fail.</p>
         <h3>Configuring Repository-wide Default Options</h3>
         <p>Administrators can configure a default location for the imported emails, as well as template and field information and settings for attachment handling. The name, location, and field information can also draw from properties of the email itself. For instance, you can store the time the email was received in a field value, or you could dynamically store the emails in a folder named after the email's sender.</p>
         <ol>
@@ -60,7 +68,7 @@
         </ul>
         <p>Use the following manifest file:</p>
         <ul>
-            <li> <b>https://app.laserfiche.com/officeapps/outlook/v1/manifest.xml</b></li>
+            <li><b>https://app.laserfiche.com/officeapps/outlook/v1/manifest.xml</b></li>
         </ul>
     </body>
 </html>

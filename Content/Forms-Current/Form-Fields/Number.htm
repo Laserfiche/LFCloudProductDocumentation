@@ -10,24 +10,53 @@
         <h2 class="topicheading">Field settings</h2>
         <p><b>To edit a number field</b>
         </p>
-        <ol>
-            <li>Select the field on the canvas and click <b>Edit</b>.</li>
-            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert variables</b> button to insert a variable into the label.</li>
-            <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign a variable name based on the field label.</li>
-            <li>Specify additional details about the field in <b>Field options</b>.<ul><li>Select <b>Required</b> to ensure the user completes the field.  If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required.</li><li>Select <b>Read-only</b> to ensure the user cannot modify the field. They can still view the field unless you hide it using custom JavaScript.</li><li MadCap:conditions="Default.For Next Version">Select the <b>Accept barcode scan</b> option to allow Laserfiche App devices to automatically insert a value into the field by scanning a barcode.</li></ul></li>
-            <li>Type additional text above and below the field in <b>Text above field</b> and <b>Text below field</b>.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
-            <li>Specify the width of the field on the page in <b>Field width</b>. </li>
-            <li>Under <b>Range allowed</b>, specify the minimum and maximum accepted values.</li>
-            <li> In <b>Decimals</b>, specify the number of decimal places that will be shown on the form. You can store up to 30 places in a variable. 0 is the default. </li>
-            <li>Under <b>Number display</b>, select the checkbox to separate every three digits with a comma, as in "1,000"&#160;and "1,000,000".</li>
-            <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default.</li>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+        <div id="tabs">
             <ul>
-                <li MadCap:conditions="Default.In Progress">Under <b>Calculation</b>, specify a <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">formula</a> that will populate the contents of this field.</li>
-                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
-                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign to this field.</li>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
             </ul>
-            <li>Click <b>Done</b> to save your changes.</li>
-        </ol>
+            <div id="tabs-1">
+                <ol>
+                    <li>Select the field on the canvas, and the options will appear in the right pane.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert variables</b> button to insert a variable into the label.</li>
+                    <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign a variable name based on the field label.</li>
+                    <li>Type additional text above and below the field in <b>Text above field</b> and <b>Text below field</b>.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                    <li>Specify additional details about the field in <b>Display Options</b>.<ul><li>Select <b>Required</b> to ensure the user completes the field.  If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required.</li><li>Select <b>Read-only</b> to ensure the user cannot modify the field. They can still view the field unless you hide it using custom JavaScript.</li><li>Select the <b>Accept barcode scan</b> option to allow Laserfiche App devices to automatically insert a value into the field by scanning a barcode.</li></ul></li>
+                    <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li MadCap:conditions="Default.In Progress">Under <b>Calculation</b>, specify a <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">formula</a> that will populate the contents of this field.</li>
+                        <li>Under <b>Range Limiting</b>, specify the minimum and maximum accepted values.</li>
+                        <li> In <b>Decimals</b>, specify the number of decimal places that will be shown on the form. You can store up to 30 places in a variable. 0 is the default. </li>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign to this field.</li>
+                    </ul>
+                    <li>Click <b>Save</b> to save your changes.</li>
+                </ol>
+            </div>
+            <div id="tabs-2">
+                <ol>
+                    <li>Select the field on the canvas and click <b>Edit</b>.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form.  Click the <b>Insert variables</b> button to insert a variable into the label.</li>
+                    <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign a variable name based on the field label.</li>
+                    <li>Specify additional details about the field in <b>Field options</b>.<ul><li>Select <b>Required</b> to ensure the user completes the field.  If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required.</li><li>Select <b>Read-only</b> to ensure the user cannot modify the field. They can still view the field unless you hide it using custom JavaScript.</li><li MadCap:conditions="Default.For Next Version">Select the <b>Accept barcode scan</b> option to allow Laserfiche App devices to automatically insert a value into the field by scanning a barcode.</li></ul></li>
+                    <li>Type additional text above and below the field in <b>Text above field</b> and <b>Text below field</b>.  Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                    <li>Specify the width of the field on the page in <b>Field width</b>. </li>
+                    <li>Under <b>Range allowed</b>, specify the minimum and maximum accepted values.</li>
+                    <li> In <b>Decimals</b>, specify the number of decimal places that will be shown on the form. You can store up to 30 places in a variable. 0 is the default. </li>
+                    <li>Under <b>Number display</b>, select the checkbox to separate every three digits with a comma, as in "1,000"&#160;and "1,000,000".</li>
+                    <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li MadCap:conditions="Default.In Progress">Under <b>Calculation</b>, specify a <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">formula</a> that will populate the contents of this field.</li>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign to this field.</li>
+                    </ul>
+                    <li>Click <b>Done</b> to save your changes.</li>
+                </ol>
+            </div>
+        </div>
     </body>
 </html>

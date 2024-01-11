@@ -2,14 +2,47 @@
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-        <link href="../Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" /><title>Recent Changes</title>
+        <link href="Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" /><title>Recent Changes</title>
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p style="font-weight: bold;">January 11, 2024</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue to prevent save to repository tasks from failing when generating larger PDF files at save time. (504307, 503577)</li>
+        </ul>
+        <p style="font-weight: bold;">January 4, 2024</p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Fixed issue related to Form Developer’s ability to create Project based Business Process as a Team Developer. (487671)</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Inbox filter options now support paging. (500521)</li>
+            <li>Fixed issue related to inclusive gateway merging. (499317)</li>
+            <li>Fixed issue related to cookies causing Forms page to not load. (495104)</li>
+            <li>Fixed issue related to different instances being shown on Monitor page depending on time zone. (492886)</li>
+            <li>File set import from repository now only requires repository rights. (490818)</li>
+            <li>Improved error messaging around repository file uploads. (490786)</li>
+            <li>Security improvements to team management. (470243)</li>
+            <li>Fixed issue related to Save To Repository file uploads. (501440)</li>
+            <li>Fixed issue causing Business Process fields to not show/hide correctly when using Spanish (Spain) language in browser. (498952)</li>
+            <li>Fixed issue related to SUMIF calculations not updating after row deletion in a table. (496600)</li>
+            <li>Fixed issue related to dropdown styling. (495559)</li>
+            <li>Fixed issue related to theme images not loading. (493873)</li>
+            <li>Fixed issue related to read-only single-line fields displaying an error after deletion from a lookup rule. (493523)</li>
+            <li>Fixed issue related to decimal values not being recorded in number fields when processes are started Using the Laserfiche Mobile app on iOS or a mobile web browser. (492700)</li>
+            <li>Fixed issue related to logos yielding an error when trying to save a form. (398177)</li>
+        </ul>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Security fixes</li>
+            <li>Improved performance</li>
+        </ul>
         <p style="font-weight: bold;">December 6, 2023</p>
         <p>Laserfiche Outlook Add-in for Microsoft 365</p>
         <ul>
-            <li>The Laserfiche Outlook Add-in for Microsoft 365 now uses OAuth authentication to connect to Laserfiche. Existing accounts should automatically switch over to using OAuth without additional <a href="../365-add-in.htm#Configur">administrator configuration</a>. Users signing in through the add-in may be prompted to grant consent for the add-in to access Laserfiche.</li>
+            <li>The Laserfiche Outlook Add-in for Microsoft 365 now uses OAuth authentication to connect to Laserfiche. Existing accounts should automatically switch over to using OAuth without additional <a href="365-add-in.htm#Configur">administrator configuration</a>. Users signing in through the add-in may be prompted to grant consent for the add-in to access Laserfiche.</li>
         </ul>
         <p style="font-weight: bold;">December 5, 2023</p>
         <p>Business Processes</p>
@@ -18,7 +51,7 @@
         </ul>
         <p>Capture Profiles</p>
         <ul>
-            <li>Security updates and enhancements</li>
+            <li>Security updates and enhancements. </li>
         </ul>
         <p style="font-weight: bold;">November 21, 2023</p>
         <p>Business Processes</p>
@@ -36,7 +69,7 @@
             <li>Team Developers and External Developers can now delete business processes within appropriate team projects when they have the minimum account right of Access to Process Automation. (487807)</li>
         </ul>
         <p style="font-weight: bold;">November 2, 2023</p>
-        <p><a href="../2023.11.htm">New Features summary for the Laserfiche Cloud November 2023 Update</a>
+        <p><a href="2023.11.htm">New Features summary for the Laserfiche Cloud November 2023 Update</a>
         </p>
         <p>Process Automation</p>
         <ul>
@@ -67,8 +100,17 @@
         <ul>
             <li>The My Account page now has a My Apps tab where you can view the SAML OAuth apps that you have granted access to your Laserfiche account.</li>
         </ul>
+        <p>Laserfiche App</p>
+        <ul>
+            <li>
+                To successfully sign into Laserfiche Cloud using the app, you must update to the latest version of the app. 
+            </li>
+            <li>
+				For additional app updates, see <a href="https://support.laserfiche.com/kb/1014494/list-of-changes-for-the-november-3-2023-laserfiche-windows-and-android-app" target="_blank">KB 1014494</a>.
+			</li>
+        </ul>
         <p style="font-weight: bold;">October 27, 2023</p>
-        <p style="font-weight: normal;">Web Client</p>
+        <p>Web Client</p>
         <ul>
             <li>The Everyone group can now be toggled between read-write and read-only repository access. (492029) </li>
             <li>Resolved an issue that could prevent users from downloading Laserfiche Webtools Agent from the Options page. (492860)</li>
@@ -77,12 +119,12 @@
         </p>
         <p>Documents</p>
         <ul>
-            <li>OCR service availability and stability improvements. Improved resource sharing optimization between tenants prevents potential monopolizing of the OCR service when processing requests. This feature also introduces <a href="../../../../../../svn/Documentation/LingoTranslation/Branch/Cloud/Content/Service-Limits.htm">daily limits</a> for different types of OCR jobs. This feature will be gradually rolled out to customers over the next few weeks.(395065)</li>
+            <li>OCR service availability and stability improvements. Improved resource sharing optimization between tenants prevents potential monopolizing of the OCR service when processing requests. This feature also introduces <a href="Service-Limits.htm">daily limits</a> for different types of OCR jobs. This feature will be gradually rolled out to customers over the next few weeks.(395065)</li>
         </ul>
         <p>Capture Profiles</p>
         <ul>
             <li>Generating text for a document will no longer create a separate version as each page of the document is OCRed.
-(372075)            </li>
+(372075)</li>
         </ul>
         <p style="font-weight: bold;">October 12, 2023</p>
         <p>Business Processes</p>
@@ -96,12 +138,13 @@
         <ul>
             <li>Security updates and enhancements. </li>
         </ul>
-        <p style="font-weight: bold;">October 9, 2023</p>
-        <p style="font-weight: normal;">Bots</p>
+        <p><b>October 9, 2023</b>
+        </p>
+        <p>Bots</p>
         <ul>
-            <li>Security updates and enhancements.</li>
+            <li>Security updates and enhancements. </li>
         </ul>
-        <p style="font-weight: bold;"><b><a href="2023.10.htm">October 5, 2023</a></b>
+        <p><b><a href="2023.10.htm">October 5, 2023</a></b>
         </p>
         <p>Rules </p>
         <ul>

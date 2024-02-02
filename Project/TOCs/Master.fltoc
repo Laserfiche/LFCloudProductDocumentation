@@ -45,6 +45,12 @@
         Link="/Content/service/changelog.htm"
         ReplaceMergeNode="false"></TocEntry>
       <TocEntry
+        Title="2024">
+        <TocEntry
+          Title="February 2024"
+          Link="/Content/2024.02.htm" />
+      </TocEntry>
+      <TocEntry
         Title="2023">
         <TocEntry
           Title="November 2023"

@@ -17,6 +17,21 @@
         <p>Business Processes</p>
         <ul>
             <li>Form Lookup Rules now support Web Request rules from both the form designer and classic form designer. Previously users had to use lookup tables and queries to integrate data with their forms, or they had to implement their own JavaScript to integrate with web APIs. Native access to web request rules in forms lets designers easily integrate 3rd party data sources using potentially complex APIs, including the Laserfiche API. These web request rules are now secured by Laserfiche and the underlying authentication credentials are not exposed to the user like they would be when executed through custom JavaScript.</li>
+            <li>Added the ability to select all process versions in the Task Load Business Process and Work in Progress reports.</li>
+            <li>Files uploaded as attachments to public drafts are no longer automatically deleted. (503361)</li>
+            <li>Processes now terminate correctly instead becoming suspended when invocation limits are reached. (505087)</li>
+            <li>The “pipe” (“|”) character is no longer replaced with a comma character when passed in an input parameter to a Workflow Service Task. (506499)</li>
+            <li>Fixed a problem where a space in a choice label would prevent the ability to edit the checkbox variable. (508139)</li>
+            <li>Fixed a checkbox issue where editing the value of the "Other" choice created a new option with the updated value rather than just updating the value. (508140)</li>
+            <li>Resolved an issue where certain form data would not be selectable when running reports. (509293)</li>
+            <li>Resolved an issue whereediting a checkbox variable was not correctly propogated to the user task. (509805)</li>
+            <li>Fixed an issue that prevented variable values from being displayed properly as Section labels, text above fields, or text below fields. (510268)</li>
+            <li>Team Analysts are now able to reassign tasks as expected. (423625)</li>
+            <li>Form Designer:<ul><li>The field rule designer now handles localization of numbers correctly when the browser is set to languages other than English. (498953)</li><li>Fixed an issue where SUMIF calculations within a table referencing a checkbox did not include values listed after a deleted row. (507071)</li><li>Resolved an issue with fields in nested subsections when using a field rule to show both the parent and child sections. (507998)</li><li>Fixed an error when trying to assign a theme with no logo. (512554)</li></ul></li>
+        </ul>
+        <p>Process Automation</p>
+        <ul>
+            <li>Saved Searches displayed on the Home page now includes searches inherited from both Everyone and Groups. (415276, 506234)</li>
         </ul>
         <p><b>March 6, 2024</b>
         </p>

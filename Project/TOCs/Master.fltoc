@@ -787,7 +787,8 @@
     </TocEntry>
   </TocEntry>
   <TocEntry
-    Title="Integrations">
+    Title="Integrations"
+    Link="/Content/Integrations.htm">
     <TocEntry
       Title="Saving Laser App Forms to Laserfiche"
       Link="/Content/LaserApp.htm">

@@ -21,4 +21,5 @@ steps:
     SourceFolder: '$(Build.SourcesDirectory)\Output\SideNav'
     Contents: '**'
     TargetFolder: '\\laserfiche.com\fileserver\buildserver\builds\Documentation\Cloud\LFCloudProductDocumentation'
+    CleanTargetFolder: true
     OverWrite: true

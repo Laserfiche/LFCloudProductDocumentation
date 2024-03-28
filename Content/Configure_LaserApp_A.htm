@@ -5,7 +5,7 @@
     <body>
         <h1>Configuring and Using the <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Integration</h1>
         <p>To use the <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> integration, you will first need to add an STP&#160;Alias and associate it with a form. You can then configure properties for the forms that will be stored in <MadCap:variable name="DoNotTranslate.Laserfiche" />. Once this has been done, users can use the integration to store <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> forms to <MadCap:variable name="DoNotTranslate.Laserfiche" />.</p>
-        <h2 style="topicheading">Adding an STP Alias</h2>
+        <h2 class="topicheading">Adding an STP Alias</h2>
         <ol>
             <li>Browse to the <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Manager Login page and log in.</li>
             <li>Click the <b>Administration</b> tab.</li>
@@ -14,7 +14,7 @@
             <li>In the <b>STP Alias Configuration</b> dialog box:<ol style="list-style-type: lower-alpha;"><li>In <b>Alias/Configuration Name</b>, specify a label to identify this STP&#160;alias.</li><li>In <b>Button Text</b>, specify the desired toolbar button label. When you open a form, the form tab contains this toolbar button.</li><li>In <b>Posting Format</b>, specify <b>XML w/ PDF</b> or <b>XML w/ fillable PDF</b>.</li><li>In <b>Set Test Mode</b>, specify the desired option.</li><li>In <b>Destination URL</b>, select the URL&#160;to your web service. The URL should look similar to the following, with <i>000ab000</i> replaced with the actual value in your URL:</li><p class="ex"> https://app.laserfiche.com/LaserAppReceiver/ReceivePDFLAAnywhere?repo=<i>r-000ab000</i></p><p class="note"><b>Note:</b> Your administrator must contact <MadCap:variable name="DoNotTranslate.Laser App" /> to add your URL to the <b>Destination URL</b> drop-down list.</p></ol></li>
             <li>Click <b>OK</b>.</li>
         </ol>
-        <h2 style="topicheading">Associating an STP Alias with a Form</h2>
+        <h2 class="topicheading">Associating an STP Alias with a Form</h2>
         <ol>
             <li>Browse to the <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Manager Login page and log in.</li>
             <li>On the <b>Dashboard</b> tab, click <b>Search for Forms</b>.</li>
@@ -23,7 +23,7 @@
             <li>In the <b>Associate Forms with STP Alias</b> dialog box, select the STP&#160;Alias you created above and click <b>Save</b>.</li>
         </ol>
         <p class="note"><b>Note:</b> Use the <b>Edit Bindings</b> button on the <b>Administration</b> tab to associate multiple forms with an STP Alias at once. You can also use the <b>Edit Bindings</b> page to remove forms from an STP&#160;Alias.</p>
-        <h2 style="topicheading">Configuring <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Integration Settings</h2>
+        <h2 class="topicheading">Configuring <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Integration Settings</h2>
         <p>The Integrations section of Repository Administration allows administrators to configure the way your <MadCap:variable name="DoNotTranslate.Laser App" /> forms will be stored in <MadCap:variable name="DoNotTranslate.Laserfiche" />. These settings should be configured before users store forms in <MadCap:variable name="DoNotTranslate.Laserfiche" />. You can set field mapping, the target folder, and the document name. Administrators can also use <MadCap:variable name="DoNotTranslate.Laser App" /> tokens to set these properties dynamically. </p>
         <ol>
             <li>If you are not already in the repository administration section of <MadCap:variable name="DoNotTranslate.Laserfiche" />, click your user name in the upper right corner and select <b>Repository Administration</b>.</li>
@@ -38,7 +38,7 @@
             <li>In the <b>Document Name</b> option, type the name of the saved <MadCap:variable name="DoNotTranslate.Laser App" /> forms. To set the name dynamically, click the token button and select a token that corresponds to the <MadCap:variable name="DoNotTranslate.Laser App" /> information you want to store, or type the token name.</li>
             <li>Click <b>Save</b> at the top of the page to save your configuration changes.</li>
         </ol>
-        <h2 style="topicheading">Using the <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Integration to Store Forms in <MadCap:variable name="DoNotTranslate.Laserfiche" /></h2>
+        <h2 class="topicheading">Using the <MadCap:variable name="DoNotTranslate.Laser App Anywhere" /> Integration to Store Forms in <MadCap:variable name="DoNotTranslate.Laserfiche" /></h2>
         <p>Once an administrator has configured the <MadCap:variable name="DoNotTranslate.Laser App" /> integration settings, users can download the integration to store forms in <MadCap:variable name="DoNotTranslate.Laserfiche" />. The integration must be downloaded by ever user who will use the <MadCap:variable name="DoNotTranslate.Laser App" /> integration, and is downloaded in the <MadCap:variable name="DoNotTranslate.Laserfiche" /> repository.</p>
         <ol>
             <li>In <MadCap:variable name="DoNotTranslate.Laser App Anywhere" />, go to the <b>Dashboard</b>.</li>

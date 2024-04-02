@@ -986,28 +986,17 @@ HTTPS protocol</p>
                     <td>&#160;</td>
                 </tr>
                 <tr>
-                    <td class="tabletext">Maximum number of parts per request to CreateMultipartUploadUrls</td>
-                    <td class="tabletext">100</td>
+                    <td class="tabletext">CreateMultipartUploadUrls Limits</td>
+                    <td class="tabletext">
+                        <p>The maximum number of parts per request to CreateMultipartUploadUrls is:</p>
+                        <ul>
+                            <li>100</li>
+                        </ul>The maximum number of allowed upload URLs created through CreateMultipartUploadUrls for a single file is:<ul><li>1,000</li></ul>The expiration limit for upload URLs returned by CreateMultipartUploadUrls is:<ul><li>15 minutes</li></ul>The supported size limits for each chunk uploaded to an upload URL returned by CreateMultipartUploadUrls is:<ul><li>5 MB to 5 GB</li></ul><b>Note</b>: There is no minimum size limit on the last part.</td>
                     <td>&#160;</td>
                 </tr>
                 <tr>
-                    <td class="tabletext">Maximum number of allowed upload URLs created through CreateMultipartUploadUrls for a single file</td>
-                    <td class="tabletext">1,000</td>
-                    <td>&#160;</td>
-                </tr>
-                <tr>
-                    <td class="tabletext">Expiration limit for upload URLs returned by CreateMultipartUploadUrls</td>
-                    <td class="tabletext">15 minutes</td>
-                    <td>&#160;</td>
-                </tr>
-                <tr>
-                    <td class="tabletext">Supported size limits for each chunk uploaded to an upload URL returned by CreateMultipartUploadUrls</td>
-                    <td class="tabletext">5 MB to 5 GB. There is no minimum size limit on the last part.</td>
-                    <td>&#160;</td>
-                </tr>
-                <tr>
-                    <td class="tabletext">Maximum file size for file imported through ImportUploadedParts</td>
-                    <td class="tabletext">64 GB</td>
+                    <td class="tabletext">ImportUploadedParts Limits</td>
+                    <td class="tabletext">The Maximum file size for a file imported through ImportUploadedParts is:<ul><li>64 GB</li></ul></td>
                     <td>&#160;</td>
                 </tr>
             </tbody>

@@ -11,23 +11,21 @@
         </p>
         <div id="tabs">
             <ul>
-                <li><a href="#tabs-1">Form designer</a>
+                <li><a href="#designer">Form designer</a>
                 </li>
-                <li><a href="#tabs-2">Classic form designer</a>
+                <li><a href="#classic">Classic form designer</a>
                 </li>
             </ul>
-            <div id="tabs-1">
+            <div id="designer">
                 <ol>
-                    <li>Select the field on the canvas and click <b>Edit </b>in Classic Form Designer mode, in Form Designer mode the options will appear in the right pane once selected.</li>
+                    <li>Select the field on the canvas and the options will appear in the right pane once selected.</li>
                     <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert variables</b> button to insert a variable into the label.</li>
                     <li>
                         <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the a variable name based on the field label.</li>
-                    <li>Under <b>Field options,</b>  select <b>Required</b> in the Classic forms designer, or <b>Display Options</b> in the form designer if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. For date fields, select <b>Show Time</b> to allow users to specify a time along with the calendar date.</li>
+                    <li>Under <b>Field options,</b>  select <b>Display Options</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. For date fields, select <b>Show Time</b> to allow users to specify a time along with the calendar date.</li>
                     <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
                     <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-                    <li>Classic mode only: under <b>Field width</b>, specify how wide the field will appear on the page.</li>
                     <li>Under <b>Date format</b>, specify how the date will appear using .NET formatting. This is the same formatting used to edit Workflow date tokens. <a href="../../Resources/Workflow/Tokens-Regex/Date-and-Time-Formatting.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
-                    <li>In Classic Form Designer, under <b>Year range</b>, specify the range of years that the date must fall within. In Form Designer, on the <b>Advanced</b> tab set the minimum or maximum date and/or time allowed.</li>
                     <li>If you are editing a time field or a date field with <b>Show Time</b> selected: Under <b>Time format</b>, specify how the time will appear.</li>
                     <li><b>Time fields only:</b> Under <b>Time range</b>, specify the hours that the time must fall within.</li>
                     <li>Under <b>Default Date</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Use the <b>Insert variables</b> button to insert a date already associated with the process or form, or to insert the Date variable. Additionally, you can check the <b>Current Date</b> box to use today's date.</li>
@@ -35,24 +33,28 @@
                     <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
                     <ul>
                         <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>. </li>
+                        <li>Under <b>Date Validation</b>, select from the following options:<ul><li><b>No earlier than</b>, prevents users from selecting a date/time earlier than specified. Select one of the options and set available specifics accordingly.</li><li><b>No later than</b>, prevents users from selecting a date/time earlier than specified. Select one of the options and set available specifics accordingly.</li><li><b>Only allow specific dates</b>, The two available options limit dates to either specific days of the week, or can be filtered to a custom set of days using JavaScript.</li><li><b>Custom days using JavaScript examples:<br /><br />Only week 1 or 3 of any month<br /></b><pre class="Code" style="background-color: #d3d3d3;">const useExact = true;<br />const month = date.getMonth()<br />const year = date.getFullYear()<br />const firstWeekday = new Date(year, month, 1).getDay()<br />const lastDateOfMonth = new Date(year, month + 1, 0).getDate()<br />const offsetDate = date.getDate() + firstWeekday - 1<br />const index = 1 // start index at 0 or 1, your choice<br />const weeksInMonth = index + Math.ceil((lastDateOfMonth + firstWeekday - 7) / 7)<br />const week = index + Math.floor(offsetDate / 7)<br /><br />let weekOfMonth<br />if (useExact || week &lt; 2 + index) weekOfMonth = week;<br />else weekOfMonth = week === weeksInMonth ? index + 5 : week;<br /><br />return weekOfMonth === 1 || weekOfMonth === 3;<br /></pre><p><b>Only week 1 or 3 of any month with Sandbox shared function</b></p><p>In the JavaScript page, add your shared function to the window:</p><pre class="Code" xml:space="preserve" style="background-color: #d3d3d3;">window.getWeekOfMonth = function (date, useExact = true) {<br />	const month = date.getMonth()<br />	const year = date.getFullYear()<br />	const firstWeekday = new Date(year, month, 1).getDay()<br />	const lastDateOfMonth = new Date(year, month + 1, 0).getDate()<br />	const offsetDate = date.getDate() + firstWeekday - 1<br />	const index = 1 // start index at 0 or 1, your choice<br />	const weeksInMonth = index + Math.ceil((lastDateOfMonth + firstWeekday - 7) / 7)<br />	const week = index + Math.floor(offsetDate / 7)<br />	
+ 	if (useExact || week &lt; 2 + index) return week;<br />	return week === weeksInMonth ? index + 5 : week;<br />}</pre><p>On your date field(s) add the following:</p><pre class="Code" style="background-color: #d3d3d3;">const weekOfMonth = getWeekOfMonth(date, true);<br />return weekOfMonth === 1 || weekOfMonth === 3;</pre><p><b>Only 1st or 15th of any month</b></p><pre class="Code" style="background-color: #d3d3d3;">const dayOfMonth = date.getDate();<br />return dayOfMonth === 1 || dayOfMonth === 15;</pre><p><b>Use a customer error message (Only in current week)</b></p><pre class="Code" style="background-color: #d3d3d3;">const todayObj = new Date();<br />const todayDate = todayObj.getDate();<br />const todayDay = todayObj.getDay();<br /><br />// get first date of week<br />const firstDayOfWeek = new Date(todayObj.setDate(todayDate - todayDay));<br /><br />// get last date of week<br />const lastDayOfWeek = new Date(firstDayOfWeek);<br />lastDayOfWeek.setDate(lastDayOfWeek.getDate() + 6);<br /><br />// if date is equal or within the first and last dates of the week<br />const allowed = date &gt;= firstDayOfWeek &amp;&amp; date &lt;= lastDayOfWeek;<br />return { allowed, errorMessage: "Date must be within this week" }</pre><p><b>Use a third party library for more complex date calculations</b></p><p><b>Note</b>: No date library is included in the form sandbox by default. You may use any date library, but the preferred library is date-fns.</p><p>Add the external script file to the “External” tab of the JavaScript page:</p><p>https://cdn.jsdelivr.net/npm/date-fns@3/cdn.min.js</p><p>Use the global object in your date fields:</p><pre class="Code" xml:space="preserve" style="background-color: #d3d3d3;">const anyDateObj = LFForm.getFieldValues({ fieldId: 10 }).dateTimeObj;<br />const anyDate = dateFns.toDate(anyDateObj);<br />if (dateFns.isDate(anyDate) === false) return {<br />    allowed: false,<br />    errorMessage: 'Please select Any Date first'<br />};<br />
+return dateFns.differenceInBusinessDays(date, anyDate) &lt;= 10;</pre><p><b>Do not allow previously chosen dates within a collection or table</b></p><pre class="Code" xml:space="preserve" style="background-color: #d3d3d3;">// Any set of date fields from the form<br />const dateValues = LFForm.getFieldValues({<br />   fieldId: 2<br />});<br />const dateAsArray = Array.isArray(dateValues) ? dateValues : [dateValues];<br />return dateAsArray<br />   .filter(d =&gt; d.dateTimeObj !== null &amp;&amp;<br />         new Date(d.dateTimeObj).getTime() === date.getTime()<br />).length === 0</pre></li></ul></li>
                         <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
                         <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
                     </ul>
-                    <li>In Classic mode, when you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                    <li> Your changes will be saved automatically.</li>
                 </ol>
+                <MadCap:snippetBlock src="../../Forms Snippets/supportHtml.flsnp" />
             </div>
-            <div id="tabs-2">
+            <div id="classic">
                 <ol>
-                    <li>Select the field on the canvas and click <b>Edit </b>in Classic Form Designer, in Form Designer the options will appear in the right pane once selected.</li>
+                    <li>Select the field on the canvas and click <b>Edit</b>.</li>
                     <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert variables</b> button to insert a variable into the label.</li>
                     <li>
                         <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the a variable name based on the field label.</li>
-                    <li>Under <b>Field options,</b>  select <b>Required</b> in the Classic forms designer, or <b>Display Options</b> in the form designer if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. For date fields, select <b>Show Time</b> to allow users to specify a time along with the calendar date.</li>
+                    <li>Under <b>Field options,</b>  select <b>Required</b>  if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. For date fields, select <b>Show Time</b> to allow users to specify a time along with the calendar date.</li>
                     <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
                     <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-                    <li>Classic mode only: under <b>Field width</b>, specify how wide the field will appear on the page.</li>
+                    <li>Under <b>Field width</b>, specify how wide the field will appear on the page.</li>
                     <li>Under <b>Date format</b>, specify how the date will appear using .NET formatting. This is the same formatting used to edit Workflow date tokens. <a href="../../Resources/Workflow/Tokens-Regex/Date-and-Time-Formatting.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
-                    <li>In Classic mode, under <b>Year range</b>, specify the range of years that the date must fall within. In Form Designer, on the <b>Advanced</b> tab set the minimum or maximum date and/or time allowed.</li>
+                    <li>Under <b>Year range</b>, specify the range of years that the date must fall within.</li>
                     <li>If you are editing a time field or a date field with <b>Show Time</b> selected: Under <b>Time format</b>, specify how the time will appear.</li>
                     <li><b>Time fields only:</b> Under <b>Time range</b>, specify the hours that the time must fall within.</li>
                     <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Use the <b>Insert variables</b> button to insert a date already associated with the process or form, or to insert the Date variable.</li>
@@ -63,32 +65,9 @@
                         <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
                         <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
                     </ul>
-                    <li>In Classic mode, when you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                    <li>When you are finished editing the field settings, click <b>Done</b>.</li>
                 </ol>
             </div>
         </div>
-        <ol>
-            <li>Select the field on the canvas and click <b>Edit </b>in Classic Form Designer, in Form Designer the options will appear in the right pane once selected.</li>
-            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert variables</b> button to insert a variable into the label.</li>
-            <li>
-                <MadCap:concept term="Forms" />Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the a variable name based on the field label.</li>
-            <li>Under <b>Field options,</b>  select <b>Required</b> in the Classic forms designer, or <b>Display Options</b> in the form designer if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. For date fields, select <b>Show Time</b> to allow users to specify a time along with the calendar date.</li>
-            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
-            <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-            <li>Classic mode only: under <b>Field width</b>, specify how wide the field will appear on the page.</li>
-            <li>Under <b>Date format</b>, specify how the date will appear using .NET formatting. This is the same formatting used to edit Workflow date tokens. <a href="../../Resources/Workflow/Tokens-Regex/Date-and-Time-Formatting.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
-            <li>In Classic Form Designer, under <b>Year range</b>, specify the range of years that the date must fall within. In Form Designer, on the <b>Advanced</b> tab set the minimum or maximum date and/or time allowed.</li>
-            <li>If you are editing a time field or a date field with <b>Show Time</b> selected: Under <b>Time format</b>, specify how the time will appear.</li>
-            <li><b>Time fields only:</b> Under <b>Time range</b>, specify the hours that the time must fall within.</li>
-            <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Use the <b>Insert variables</b> button to insert a date already associated with the process or form, or to insert the Date variable.</li>
-            <p><b>Note:</b> If the field is set to read-only, the Date variable will be replaced by the date the form is submitted. If the field is not read-only, the Date variable will be replaced by the date the form is first opened. </p>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
-            <ul>
-                <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>. </li>
-                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert variables</b> button to insert a variable into the text.</li>
-                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
-            </ul>
-            <li>In Classic mode, when you are finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
-        </ol>
     </body>
 </html>

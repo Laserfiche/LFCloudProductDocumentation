@@ -10,7 +10,7 @@
         <p>In this section, we provide examples of common customizations of the signature field and its associated dialog box.</p>
         <h2>Changing Language from "Signature"&#160;to "Initials"</h2>
         <p>You may want  users to enter their initials instead of their signatures in the signature field. To this end, you can modify the language in the signature field and the dialog to replace "Sign" with "Initial".</p>
-        <p>The following JavaScript snippet implements this modification:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+        <p>The following JavaScript snippet implements this modification:</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function () {
   //Change signature button label
   $('.Sign_Sig').attr('value','Initials');
   
@@ -28,7 +28,7 @@
             <img src="../Resources/Images/forms_initial-dialog.PNG" style="border-style: solid;border-width: 1px;width: 407px;height: 259px;" title="The prompt for typing initials has also been changed." alt="New signature dialog box with different title and with the default tab being the tab for typing initials." />
         </p>
         <h2>Forcing Users to Draw Signatures</h2>
-        <p>By default, both typing and drawing signatures are valid options in the modal dialog that appears when you click <b>Sign</b>, and the dialog focuses on <b>Type</b> at first. You can choose to show only one tab and hide the other. The following JavaScript snippet hides the <b>Type</b> tab and has the dialog automatically focus on the <b>Draw</b> tab when opened:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(){  
+        <p>By default, both typing and drawing signatures are valid options in the modal dialog that appears when you click <b>Sign</b>, and the dialog focuses on <b>Type</b> at first. You can choose to show only one tab and hide the other. The following JavaScript snippet hides the <b>Type</b> tab and has the dialog automatically focus on the <b>Draw</b> tab when opened:</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function(){  
   $("#sigNav a:eq(0)").hide();
   $("#form-signature-dlg").on("shown.bs.modal", function(){$("#sigNav a:eq(1)").click();});
 });</code></pre>

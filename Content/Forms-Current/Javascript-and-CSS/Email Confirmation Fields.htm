@@ -10,7 +10,7 @@
             <li><a href="CSS Selectors.htm#Adding">Assign the custom class</a> <code>email</code> to the first email field.</li>
             <li>Assign the custom class <code>confirm</code> to the second email field.</li>
             <li>Paste the following code in the JavaScript area of the <b>CSS and JavaScript</b> page, replacing the warning text with your own choice of warning text:
-					<pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+					<pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function () {
     $('.email, .confirm').on('blur input', function () {
         if ($('.email input').val() != $('.confirm input').val()) {
             $('.Submit').attr("disabled", "disabled");

@@ -34,7 +34,7 @@
         <p>
             <img src="../Resources/Images/forms_collection-copy-field-dynamic2.gif" />
         </p>
-        <p>The following JavaScript snippet implements this customization.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function() {
+        <p>The following JavaScript snippet implements this customization.</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function() {
   $('a[ref-id="q20"]').click(function() { //after "Add" button is clicked
     var setCount = $(".cf-collection-block .rpx").length; //count number of repeating sets
     var newfieldid = "Field72(" + setCount + ")"; //id of "Just Apples" field that was just added
@@ -65,7 +65,7 @@
         <p>
             <img src="../Resources/Images/forms_collection-duplicate-dynamic.gif" alt="" />
         </p>
-        <p>The JavaScript we used to implement this is as follows. It assumes that the Billing Address collection has been <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>billing</code>, the Shipping Address has been assigned the custom class <code>shipping</code>, and the checkbox has been assigned the class <code>sameAddress</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () { 
+        <p>The JavaScript we used to implement this is as follows. It assumes that the Billing Address collection has been <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>billing</code>, the Shipping Address has been assigned the custom class <code>shipping</code>, and the checkbox has been assigned the class <code>sameAddress</code>.</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function () { 
   $('.sameAddress').change(function() { //checks for changes in the checkbox
     if ($(this).find('input[value="Yes"]').is(':checked')) {
       //make list of all inputs in Shipping Address collection
@@ -98,7 +98,7 @@
         <p>
             <img src="../Resources/Images/forms_collection-dynamic-fill.gif" alt="" />
         </p>
-        <p>We implement this using the following JavaScript snippet. The code assumes that you have <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>reportInfo</code> to the collection and that the id of the "Reviewer" field is <code>q58</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+        <p>We implement this using the following JavaScript snippet. The code assumes that you have <a href="CSS Selectors.htm#Adding">assigned the custom class</a> <code>reportInfo</code> to the collection and that the id of the "Reviewer" field is <code>q58</code>.</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function () {
   $('.reportInfo').on('change', '[type="radio"]', reqChange);
 
 

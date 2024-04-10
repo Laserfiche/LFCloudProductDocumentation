@@ -633,7 +633,7 @@
         Link="/Content/EnablingMFA.htm"></TocEntry>
       <TocEntry
         Title="Batch Import of Users"
-        Link="/Content/BatchImportofUsers.htm"></TocEntry>
+        Link="/Content/BatchImportLFUsers.htm"></TocEntry>
       <TocEntry
         Title="User License Types"
         Link="/Content/userlicensetypes.htm" />
@@ -683,9 +683,6 @@
       <TocEntry
         Title="Attribute Mapping "
         Link="/Content/AttributeMapping.htm" />
-      <TocEntry
-        Title="Batch Import"
-        Link="/Content/BatchImportLFUsers.htm"></TocEntry>
       <TocEntry
         Title="Configure Advanced SSO Options"
         Link="/Content/Configure Advanced SSO options in Laserfiche Cloud.htm"></TocEntry>

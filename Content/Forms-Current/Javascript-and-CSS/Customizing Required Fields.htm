@@ -11,7 +11,7 @@
         <p>
             <img src="../Resources/Images/forms_dyn-req-field.PNG" style="border-style: solid;border-width: 1px;" alt="Form with checkbox that makes signature field required when checkbox is selected." title="By default, fields are not required." />
         </p>
-        <p>The following JavaScript snippet implements this dynamic behavior:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+        <p>The following JavaScript snippet implements this dynamic behavior:</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function () {
     $('.checkbox input').change(function () { 
         if ($(this).is(':checked')) { //if box is selected
             $('.req label').append('&lt;span class="cf-required"&gt;*&lt;/span&gt;');
@@ -34,8 +34,8 @@
         <p class="note" style="font-weight: normal;"><b>Note</b>: When using JavaScript to dynamically make fields required or not, avoid setting the fields in question as "Required" on the form designer Layout page. &#160;This minimizes any potentially problematic interactions between the two different ways of making fields required.</p>
         <h2 class="topicheading">Hide "Next" Button on Paginated Form Until Required Fields Completed</h2>
         <p>
-            <MadCap:concept term="Forms" />If you have a multi-page form, you may want users to fill out all the required fields on one page before proceeding to the next page. The following example accomplishes this for Forms 10.2 or later.</p>
-        <p>First, make sure that your form uses a progress bar instead of tabs (so that users cannot click to other tabs at their own will). Then, insert the following JavaScript snippet:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(){
+            <MadCap:concept term="Forms" />If you have a multi-page form, you may want users to fill out all the required fields on one page before proceeding to the next page.</p>
+        <p>First, make sure that your form uses a progress bar instead of tabs (so that users cannot click to other tabs at their own will). Then, insert the following JavaScript snippet:</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function(){
   $("#form1").change(validate); //run validate function if anything on form changes
   validate();
   $('.cf-next-btn').click(validate); //run validate function when next button clicked

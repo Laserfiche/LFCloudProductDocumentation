@@ -18,7 +18,7 @@
         </p>
         <p>As an example, we show you how to color each row in a table depending on the radio button selection in that row. It shows you how the <code>.each</code> function may be used.</p>
         <h4>Coloring rows based on radio button selection</h4>
-        <p>This JavaScript snippet causes a table row to be colored gray when "choice 1" is selected, and white when it is not.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function () {
+        <p>This JavaScript snippet causes a table row to be colored gray when "choice 1" is selected, and white when it is not.</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function () {
   
   rowcolorchange();
   
@@ -47,7 +47,7 @@
         <p>The following JavaScript snippet assigns a non-white color to all odd-numbered rows in a table. It works for both tables with a fixed number of rows and tables where the user can append additional rows. It requires you to first <a href="CSS Selectors.htm#Adding">assign the class</a> <code>rowcolortable</code> to the table.</p>
         <p>
             <MadCap:concept term="Forms" />In a table, each row is represented by a <b>tr</b> element. The function <code>altColor</code> assigns the color <b>#ff0000</b> (red) to all "odd" <b>tr</b> elements, meaning the first element, third element, fifth element, and so on. It also assigns the color <b>#ffffff</b> (the default white) to all "even" <b>tr</b> elements.</p>
-        <p>The rest of the code specifies the events that cause <code>altColor</code> to be called. When the document is loaded, <code>altColor</code> is called immediately, to color any existing table rows. When the user clicks on the button that adds a new row, <code>altColor</code> is called again, to color any new rows added. This button is identified by its class, <code>cf-table-add-row</code>. When the user clicks on the button that removes a row, <code>altColor</code> is called. This button is identified by the class <code>form-del-field</code>.</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function() {
+        <p>The rest of the code specifies the events that cause <code>altColor</code> to be called. When the document is loaded, <code>altColor</code> is called immediately, to color any existing table rows. When the user clicks on the button that adds a new row, <code>altColor</code> is called again, to color any new rows added. This button is identified by its class, <code>cf-table-add-row</code>. When the user clicks on the button that removes a row, <code>altColor</code> is called. This button is identified by the class <code>form-del-field</code>.</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function() {
   
   altColor();
 
@@ -74,7 +74,7 @@
         <p>
             <img src="../../Resources/Images/forms_table-add-rows-dynamic.gif" />
         </p>
-        <p>The JavaScript used for this was the following:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(){
+        <p>The JavaScript used for this was the following:</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function(){
   $('.numberDays input').change(function(){ 
     var rowNumber = $(this).val();
     $('.myTable .form-del-field').trigger('click');

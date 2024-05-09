@@ -52,7 +52,7 @@
                     <td class="tabletext">The Laserfiche Server that contains the found entry.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_Server)</td>
                 </tr>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td>OutputEntry_Guid</td>
                     <td class="tabletext">The GUID (Globally Unique Identifier) of the found entry.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_Guid)</td>
@@ -76,6 +76,11 @@
                     <td>OutputEntry_CheckedOutBySID</td>
                     <td class="tabletext">The Security Identifier of the user account that checked out the entry.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_CheckedOutBySID)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_CheckedOutDate</td>
+                    <td class="tabletext">The date when the entry was checked out.</td>
+                    <td class="tabletext">%(FindEntry_OutputEntry_CheckedOutDate)</td>
                 </tr>
                 <tr>
                     <td>OutputEntry_ClassificationLevel</td>
@@ -138,9 +143,9 @@
                     <td class="tabletext">%(FindEntry_OutputEntry_ElectronicFileSize)</td>
                 </tr>
                 <tr>
-                    <td>OutputEntry_EntryLock</td>
+                    <td>OutputEntry_EntryLockType</td>
                     <td class="tabletext">Specifies whether the found entry is currently locked.</td>
-                    <td class="tabletext">%(FindEntry_OutputEntry_EntryLock)</td>
+                    <td class="tabletext">%(FindEntry_OutputEntry_EntryLockType)</td>
                 </tr>
                 <tr>
                     <td>OutputEntry_EventDate</td>
@@ -181,6 +186,11 @@
                     <td>OutputEntry_HasElectronicDocument</td>
                     <td class="tabletext">Indicates whether the found entry is associated with an electronic file.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_HasElectronicDocument)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_HasHold</td>
+                    <td class="tabletext">Indicates whether the found entry is a record that is currently has a hold.</td>
+                    <td class="tabletext">%(FindEntry_OutputEntry_HasHold)</td>
                 </tr>
                 <tr>
                     <td>OutputEntry_HasImage</td>
@@ -232,7 +242,7 @@
                     <td class="tabletext">Indicates whether the found entry is a record that is in final disposition.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_IsDispositioned)</td>
                 </tr>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td>OutputEntry_IsFrozen</td>
                     <td class="tabletext">Indicates whether the found entry is a record that is currently frozen.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_IsFrozen)</td>
@@ -281,6 +291,11 @@
                     <td>OutputEntry_LastReviewDate</td>
                     <td class="tabletext">The last time that a vital record was reviewed.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_LastReviewDate)</td>
+                </tr>
+                <tr>
+                    <td>OutputEntry_LatestVersionComment</td>
+                    <td class="tabletext">The latest version comment of a document under version control.</td>
+                    <td class="tabletext">%(FindEntry_OutputEntry_LatestVersionComment)</td>
                 </tr>
                 <tr>
                     <td>OutputEntry_LatestVersionNumber</td>
@@ -417,12 +432,12 @@
                     <td class="tabletext">Whether the found entry is a record series, folder, or document.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_Type)</td>
                 </tr>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td>OutputEntry_Volume</td>
                     <td class="tabletext">The name of the Laserfiche volume that contains the pages of the found document.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_Volume)</td>
                 </tr>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td>OutputEntry_VolumeId</td>
                     <td class="tabletext">The ID of the Laserfiche volume that contains the pages of the found document.</td>
                     <td class="tabletext">%(FindEntry_OutputEntry_VolumeId)</td>

@@ -10,7 +10,7 @@
         <h2>Showing and Hiding Buttons</h2>
         <p>You may want certain buttons, such as a Next or Submit button, to appear only when a certain condition is met. For example, I may want to prevent the user from submitting a form until certain fields are filled in with an input of the correct format. This conditional showing or hiding of buttons can be done through JavaScript.</p>
         <h4>Hiding the Submit button unless there is a signature</h4>
-        <p>The following JavaScript snippet hides the submit button unless there is a signature in a signature box.</p><pre><code class="language-javascript">$(document).ready(function () {
+        <p>The following JavaScript snippet hides the submit button unless there is a signature in a signature box.</p><pre class="Code"><code class="language-javascript">$(document).ready(function () {
   $('.Submit').hide(); //hide the submit button by default
   $('.signSignatureBtn').click(function () 
     $('.Submit').show(); //show the submit button after signing
@@ -37,7 +37,7 @@
         <p>
             <img src="../Resources/Images/forms_radio-button-hide-submit.PNG" style="border-style: solid;border-width: 1px;width: 522px;height: 237px;" alt="Assigning the custom CSS class hideSubmit to the radio button field." title="Assigning meaningful class names will help future forms administrators understand old instances of custom JavaScript." />
         </p>
-        <p>Then, add the following JavaScript to your form:</p><pre xml:space="preserve"><code class="language-javascript">$(document).ready(function(){
+        <p>Then, add the following JavaScript to your form:</p><pre xml:space="preserve" class="Code"><code class="language-javascript">$(document).ready(function(){
   // apply event handler to radio inputs
   $('.hideSubmit input').change(function(){
     // if 1 or more YES selections are found

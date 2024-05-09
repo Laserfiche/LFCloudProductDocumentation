@@ -1,11 +1,630 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head>
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
-        <link href="Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" /><title>Recent Changes</title>
+    <head><title>Recent Changes</title>
     </head>
     <body>
         <h1>Recent Changes</h1>
+        <p><b>May 9, 2024</b>
+        </p>
+        <p>Account Administration</p>
+        <ul>
+            <li>Performance enhancements for bulk actions (Enable, Disable, Delete, Add to group, Set user license type, and Require password change) on the Users page. The enhancements also include additional notification messages for bulk actions.</li>
+        </ul>
+        <p><b>May 2, 2024</b>
+        </p>
+        <ul>
+            <li><a href="../2024.05.htm">Laserfiche Cloud May 2024 Updates</a>
+            </li>
+        </ul>
+        <p>Workflow</p>
+        <ul>
+            <li>Fixed an issue that caused the Set Records Management Properties activity to be unable to show retention schedule information after a schedule created earlier than the desired schedule was deleted. (508392)</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Setting a task reminder wait time based on a variable is now handled correctly, and occurs as specified. (516694)</li>
+            <li>Expanded the top-level domain name length that can be passed from a workflow to support new domains. (517061)</li>
+            <li>The "Save draft" button on the task page is no longer disabled when "Automatically load the next task..." is selected, and "Only display the form" is not selected. (518142)</li>
+            <li>Public portal forms now display the submission preview when the On event completion, Show submitted form option is selected. (519780)</li>
+            <li>Form Designer<ul><li>Completed full localization of the date picker on forms and in the designer. (324926)</li><li>Fixed an issue that prevented a barcode scan from being saved on form submission. (494734)</li><li>Field rules on a table now evaluate properly when a table initially starts with no rows. (515755)</li><li>Formulas with numbers now handle empty field values and update the calculations correctly. (517426)</li><li>Sections can no longer be collapsed or expanded when the option to allow it is not selected. (517773)</li></ul></li>
+        </ul>
+        <p>Rules</p>
+        <ul>
+            <li>Web Request no longer automatically appends charset=utf-8 encoding to all application/json content-type headers and now provides functionality to leave the encoding blank or specify a value. (518189)</li>
+        </ul>
+        <p><b>April 30, 2024</b>
+        </p>
+        <p>Web Client</p>
+        <ul>
+            <li>Document summarization with Laserfiche AI is now available for all Cloud customers. For more information, see <a href="../Working_with_Doc_Contents.htm#Working2">Working with Document Summaries</a>.</li>
+        </ul>
+        <p><b>April 25, 2024</b>
+        </p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue that caused save to repository tasks to become suspended if a multiline field was filled with more than 3072 characters. (518958)</li>
+        </ul>
+        <p><b>April 19, 2024</b>
+        </p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Corrected a problem where the displayed timzone on tasks would not respect the timezone selected by the user in account settings. (518396)</li>
+        </ul>
+        <p><b>April 12, 2024</b>
+        </p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue with date range validation when using a token in forms. (515709)</li>
+            <li>Importing a self-hosted based process with an empty Team rule no longer causes the process to suspend when run. (517200)</li>
+            <li>Fixed an issue that prevented importing a process when a save to repository task and file upload task are not re-mapped during the import process. (517421)</li>
+        </ul>
+        <p>Developer Console</p>
+        <ul>
+            <li>Added option to generate a username and password for use with Laserfiche APIs. (510452)</li>
+        </ul>
+        <p><b>April 4, 2024</b>
+        </p>
+        <ul>
+            <li><a href="../2024.04.htm">Laserfiche Cloud April 2024 Updates</a>
+            </li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>The order of Lookup Rules are now maintained when Business Processes are imported from Self-Hosted to Cloud. (488310)</li>
+            <li>Resolved an issue related to Forms not submitting when using a WaitForTrigger status in a task. (509773)</li>
+            <li>Read-only email fields now contain selectable text. (512396)</li>
+            <li>Work schedules now continue to be available in processes after they're renamed. (513838)</li>
+            <li>Resolved an issue related to the Form Reports page not loading. (514551)</li>
+        </ul>
+        <p>Form Designer</p>
+        <ul>
+            <li>Resolved an issue related to linked drafts not opening correctly in Modern Forms on iOS devices. (514582)</li>
+            <li>Forms now support a custom JavaScript function to run validation on dates. (503979)</li>
+            <li>Signature fields can now be read-only when signed in a previous user task step. (512066)</li>
+        </ul>
+        <p>Process Automation</p>
+        <ul>
+            <li>Resolved an issue related to the number of task counts being displayed incorrectly. (510012)</li>
+        </ul>
+        <p>Web Client</p>
+        <ul>
+            <li>
+                (Preview)&#160;Added the ability to generate summaries of documents using Laserfiche AI.
+            </li>
+            <li>
+                In some cases, email files with EML&#160;extensions would display non-ascii characters incorrectly. This issue has been resolved. (514090)
+            </li>
+            <li>
+                Improved performance on the Options page. (516091)
+            </li>
+        </ul>
+        <p><b>March 18, 2024</b>
+        </p>
+        <p>Home Page</p>
+        <ul>
+            <li>Resolved an issue where the text of all saved searches combined exceeded a threshold, causing a "Data at the root level is invalid." error on the home page for a few customers. (513342)</li>
+        </ul>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>
+                Fixed an issue where some error messages displayed unresolved placeholder text. (511527)</li>
+            <li>The text viewer in the test results view has three updates:  (419592) <ul><li>Fixed an issue with spacing between words.</li><li>The tooltips displayed when hovering over zones/anchors have been updated with different text and include all zones/anchors that use the specific word you're hovering over. </li><li>The coloring has been updated to show when zones/anchors overlap the same word. </li></ul></li>
+            <li>Additional minor bug and accessibility fixes.    &#160;</li>
+        </ul>
+        <p><b>March 14, 2024</b>
+        </p>
+        <p>Business Processes - Form Designer</p>
+        <ul>
+            <li>Required fields that are displayed based on field rule conditions no longer show a validation error prior to customer input. (512307)</li>
+            <li>Assigning a theme without a logo image to a form no longer causes console error messages. (512554)</li>
+            <li>Variables used in field labels or Custom HTML fields now display the value correctly. (513291)</li>
+        </ul>
+        <p><b>March 8, 2024</b>
+        </p>
+        <p>Account Administration</p>
+        <ul>
+            <li>Laserfiche no longer sends an email verification email when batch importing federated users through the <b>Import from CSV</b> feature. Administrators can click on the "Verify" link in the email column to send a verification email to a user and  users can verify their email from their profile page.</li>
+        </ul>
+        <p><a href="../2024.03.htm"><b>March 7, 2024</b></a>
+        </p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Form Lookup Rules now support Web Request rules from both the form designer and classic form designer. Previously users had to use lookup tables and queries to integrate data with their forms, or they had to implement their own JavaScript to integrate with web APIs. Native access to web request rules in forms lets designers easily integrate 3rd party data sources using potentially complex APIs, including the Laserfiche API. These web request rules are now secured by Laserfiche and the underlying authentication credentials are not exposed to the user like they would be when executed through custom JavaScript.</li>
+            <li>Added the ability to select all process versions in the Task Load Business Process and Work in Progress reports.</li>
+            <li>Files uploaded as attachments to public drafts are no longer automatically deleted. (503361)</li>
+            <li>Processes now terminate correctly instead becoming suspended when invocation limits are reached. (505087)</li>
+            <li>The “pipe” (“|”) character is no longer replaced with a comma character when passed in an input parameter to a Workflow Service Task. (506499)</li>
+            <li>Fixed a problem where a space in a choice label would prevent the ability to edit the checkbox variable. (508139)</li>
+            <li>Fixed a checkbox issue where editing the value of the "Other" choice created a new option with the updated value rather than just updating the value. (508140)</li>
+            <li>Resolved an issue where certain form data would not be selectable when running reports. (509293)</li>
+            <li>Resolved an issue whereediting a checkbox variable was not correctly propogated to the user task. (509805)</li>
+            <li>Fixed an issue that prevented variable values from being displayed properly as Section labels, text above fields, or text below fields. (510268)</li>
+            <li>Team Analysts are now able to reassign tasks as expected. (423625)</li>
+            <li>Form Designer:<ul><li>The field rule designer now handles localization of numbers correctly when the browser is set to languages other than English. (498953)</li><li>Fixed an issue where SUMIF calculations within a table referencing a checkbox did not include values listed after a deleted row. (507071)</li><li>Resolved an issue with fields in nested subsections when using a field rule to show both the parent and child sections. (507998)</li><li>Fixed an error when trying to assign a theme with no logo. (512554)</li></ul></li>
+        </ul>
+        <p>Process Automation</p>
+        <ul>
+            <li>Saved Searches displayed on the Home page now includes searches inherited from both Everyone and Groups. (415276, 506234)</li>
+        </ul>
+        <p><b>March 6, 2024</b>
+        </p>
+        <p>Account Administration</p>
+        <ul>
+            <li>As part of service stability optimizations, account administrators can no longer choose to bulk email multiple users at the same time. The changes include:<ul><li>The <b>Verify email</b> and <b>Send password email</b> options have been removed from the toolbar and right-click shortcut menu. Administrators can click on the "Verify" link in the email column to send a verification email to a user and  users can verify their email from their profile page. Users can reset their password using the Forgot password option on the sign-in page.</li><li> The <b>Import from CSV</b> feature's <b>Import Users</b> dialog no longer includes the <b>Send a password setup email</b> and  <b>Send email verification</b> options. Administrators can choose to include a password for users in the CSV file. Newly imported users can reset their password using the Forgot password option on the sign-in page. If so desired, administrators can also select the <b>Force password change</b> option on the new users after the import process. </li><li>When deleting an identity provider, the action will not send an email to affected users. Affected users can reset their password using the Forgot password option on the sign-in page. </li><li>The <b>Force password change</b> option now resets passwords without sending an email. Affected users can reset their password during the next sign-in attempt.</li></ul></li>
+        </ul>
+        <p><b>February 21, 2024</b>
+        </p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Resolved an issue where certain form data would not be selectable when running reports. (509293)</li>
+        </ul>
+        <p><b>February 19, 2024</b>
+        </p>
+        <p>OCR Services</p>
+        <ul>
+            <li>Processing large multi-page documents no longer creates multiple versions of the entry. (509120)</li>
+        </ul>
+        <p><b>February 15, 2024</b>
+        </p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Updated the import dialogs for Teams and Capture Profiles to allow drag and drop file upload functionality.</li>
+            <li>Saved searches displayed on the Home page now show searches inherited from the Everyone group as well as the individual user saved searches. (415276)</li>
+        </ul>
+        <p>Workflow</p>
+        <ul>
+            <li>Revised the Email activity to allow up to 20 attachments. The 25 GB encoded maximum attachment size limit remains unchanged.</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Improved the message displayed for forms that are no longer available. (500485)</li>
+            <li>A process created within a team project and moved to the Global space can now be invoked by a workflow. (503697)</li>
+            <li>Reverting a process version now completes successfully with no errors. (504123)</li>
+        </ul>
+        <p>Form Designer</p>
+        <ul>
+            <li>Resolved an issue where importing a forms process would allow uploading duplicate logos and report a database exception when trying to modify the imported forms. (398177)</li>
+            <li>SUMIF calculations referencing tables now update correctly after a row in the table is deleted. (496600)</li>
+            <li>Now able to set values for dropdowns using URL parameters. (503582)</li>
+            <li>Resolved an issue where typing in the middle of a multi-line field would cause the cursor to move to the end causing new text to be added to the end of the field. (505560)</li>
+        </ul>
+        <p style="font-weight: bold;"><a href="../2024.02.htm">February 1, 2024</a>
+        </p>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Capture Profile zones will now return a blank value when a zone's anchor is not found on the page, rather than capturing the text at the zone's location (377659)</li>
+        </ul>
+        <p>Laserfiche API</p>
+        <ul>
+            <li>Fixed a responsive layout issue with the New button on the Developer Console’s Applications page. Previously, the button could display off screen at smaller browser resolutions or viewport sizes. (492111)</li>
+            <li>Modified the font style for improved visibility on the “Create a new app” page in the Developer Console. (492112)</li>
+            <li>Fixed an issue that could cause the Developer Console to create a service app instead of a web app. (498621)</li>
+            <li>Fixed an issue in the Laserfiche API Swagger Playground where the “Available authorizations” pop-up dialog may not display available OAuth scopes. (499291)</li>
+        </ul>
+        <p>Laserfiche App</p>
+        <ul>
+            <li>The Laserfiche app online user help files have been reorganized into Android and iOS categories and include new URLs and an updated user interface. (504875)<ul><li><a href="https://doc.laserfiche.com/laserfiche.documentation/11/laserfichemobile/en-us/ios/Content/App_Topics/Getting-Started.htm" target="_blank" title="Learn more about Laserfiche for iOS." alt="Learn more about Laserfiche for iOS.">iOS Help Files</a></li><li><a href="https://doc.laserfiche.com/laserfiche.documentation/11/laserfichemobile/en-us/android/Content/App_Topics/Getting-Started.htm" target="_blank" title="Learn more about Laserfiche for Android." alt="Learn more about Laserfiche for Android.">Android Online Help Files</a></li></ul></li>
+            <li>February 1, 2024 is the end-of-life date for the Laserfiche Windows app. <a href="https://answers.laserfiche.com/questions/214238/Endoflife-Announcement-for-Laserfiche-Windows-App" target="_blank" title="Learn more about the end-of-life for Laserfiche Windows app." alt="Learn more about the end-of-life for Laserfiche Windows app.">Laserfiche will no longer develop, repair, maintain, or test the Laserfiche Windows app</a>. The app will no longer be available for download.</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue where a task that included PDF&#160;attachments would cause save to repository tasks to create blank pages in the saved PDF. (505142)</li>
+        </ul>
+        <p><b>January 18, 2024</b>
+        </p>
+        <p>Laserfiche Outlook Add-in for Microsoft 365</p>
+        <ul>
+            <li>Fixed an issue regarding inline attachments (embedded images) when importing through the add-in.  (494809)</li>
+            <li>Fixed an issue with importing .msg email attachments. (501481)</li>
+            <li>Fixed an issue regarding inline attachments being saved as regular attachments. (501628)</li>
+        </ul>
+        <p style="font-weight: bold;">January 12, 2024</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue to prevent save to repository tasks from failing when generating larger PDF files at save time. (504307, 503577)</li>
+        </ul>
+        <p style="font-weight: bold;">January 4, 2024</p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Fixed issue related to Form Developer’s ability to create Project based Business Process as a Team Developer. (487671)</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Inbox filter options now support paging. (500521)</li>
+            <li>Fixed issue related to inclusive gateway merging. (499317)</li>
+            <li>Fixed issue related to cookies causing Forms page to not load. (495104)</li>
+            <li>Fixed issue related to different instances being shown on Monitor page depending on time zone. (492886)</li>
+            <li>File set import from repository now only requires repository rights. (490818)</li>
+            <li>Improved error messaging around repository file uploads. (490786)</li>
+            <li>Security improvements to team management. (470243)</li>
+            <li>Fixed issue related to Save To Repository file uploads. (501440)</li>
+            <li>Fixed issue causing Business Process fields to not show/hide correctly when using Spanish (Spain) language in browser. (498952)</li>
+            <li>Fixed issue related to SUMIF calculations not updating after row deletion in a table. (496600)</li>
+            <li>Fixed issue related to dropdown styling. (495559)</li>
+            <li>Fixed issue related to theme images not loading. (493873)</li>
+            <li>Fixed issue related to read-only single-line fields displaying an error after deletion from a lookup rule. (493523)</li>
+            <li>Fixed issue related to decimal values not being recorded in number fields when processes are started Using the Laserfiche Mobile app on iOS or a mobile web browser. (492700)</li>
+            <li>Fixed issue related to logos yielding an error when trying to save a form. (398177)</li>
+        </ul>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Security fixes</li>
+            <li>Improved performance</li>
+        </ul>
+        <p style="font-weight: bold;">December 6, 2023</p>
+        <p>Laserfiche Outlook Add-in for Microsoft 365</p>
+        <ul>
+            <li>The Laserfiche Outlook Add-in for Microsoft 365 now uses OAuth authentication to connect to Laserfiche. Existing accounts should automatically switch over to using OAuth without additional <a href="365-add-in.htm#Configur">administrator configuration</a>. Users signing in through the add-in may be prompted to grant consent for the add-in to access Laserfiche.</li>
+        </ul>
+        <p style="font-weight: bold;">December 5, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Resolved an issue where file upload fields in the form designer would not respect account file upload limits higher than the global 25 MB limit. (498586)</li>
+        </ul>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Security updates and enhancements. </li>
+        </ul>
+        <p style="font-weight: bold;">November 21, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Email fields in modern forms now require both hostname and domain name to be validated. (495670)</li>
+        </ul>
+        <p style="font-weight: bold;">November 7, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue that prevented forms from loading when third-party cookies containing non-ASCII characters in the header were present. (405104, 494837)</li>
+        </ul>
+        <p>Process Automation</p>
+        <ul>
+            <li>Resolved an issue that caused workflows or business processes to be terminated when being started by other process automation entities. (494601)</li>
+            <li>Team Developers and External Developers can now delete business processes within appropriate team projects when they have the minimum account right of Access to Process Automation. (487807)</li>
+        </ul>
+        <p style="font-weight: bold;">November 2, 2023</p>
+        <p><a href="../2023.11.htm">New Features summary for the Laserfiche Cloud November 2023 Update</a>
+        </p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Users display names may now contain double quotes. (489675)</li>
+            <li>Starting Rules that invoke workflows no longer display duplicated available workflows for selection. (476502)</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Limits have been changed for lookup table columns, rows, characters per row, and file size for improved overall performance. See the Service Limits page for additional information. (481425, 481255)</li>
+            <li>The order of lookup rules is now always maintained when importing business processes from self-hosted Laserfiche Forms to Laserfiche Cloud.  (488310)</li>
+            <li>Form Designer Updates:<ul><li>Duplicating fields can longer cause duplicated IDs. (480598)</li><li>Fixed a display issue where a narrow single line or drop-down field would not show all values clearly when filled from a lookup. (480747)</li></ul></li>
+        </ul>
+        <p>Custom Reports</p>
+        <ul>
+            <li>Additional relative date options added for filtering in reports. (476227)</li>
+            <li>Reports now support multiple columns for sorting in Table in View. (476225)</li>
+        </ul>
+        <p>Web Client</p>
+        <ul>
+            <li>Direct share now supports use of a one-time passcode to secure and retrieve documents. (374332)</li>
+            <li>Resolved issues when generating pages and text from some PDFs. (485295, 486015, 491605, 485045, 485287)</li>
+        </ul>
+        <p>Starting Rules</p>
+        <ul>
+            <li>The starting event creation dialog will no longer close if you click outside its borders. (475956)</li>
+        </ul>
+        <p>Account Administration</p>
+        <ul>
+            <li>The My Account page now has a My Apps tab where you can view the SAML OAuth apps that you have granted access to your Laserfiche account.</li>
+        </ul>
+        <p>Laserfiche App</p>
+        <ul>
+            <li>
+                To successfully sign into Laserfiche Cloud using the app, you must update to the latest version of the app. 
+            </li>
+            <li>
+				For additional app updates, see <a href="https://support.laserfiche.com/kb/1014494/list-of-changes-for-the-november-3-2023-laserfiche-windows-and-android-app" target="_blank">KB 1014494</a>.
+			</li>
+        </ul>
+        <p style="font-weight: bold;">October 27, 2023</p>
+        <p>Web Client</p>
+        <ul>
+            <li>The Everyone group can now be toggled between read-write and read-only repository access. (492029) </li>
+            <li>Resolved an issue that could prevent users from downloading Laserfiche Webtools Agent from the Options page. (492860)</li>
+        </ul>
+        <p><b>October 20, 2023</b>
+        </p>
+        <p>Documents</p>
+        <ul>
+            <li>OCR service availability and stability improvements. Improved resource sharing optimization between tenants prevents potential monopolizing of the OCR service when processing requests. This feature also introduces <a href="Service-Limits.htm">daily limits</a> for different types of OCR jobs. This feature will be gradually rolled out to customers over the next few weeks.(395065)</li>
+        </ul>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Generating text for a document will no longer create a separate version as each page of the document is OCRed.
+(372075)</li>
+        </ul>
+        <p style="font-weight: bold;">October 12, 2023</p>
+        <p>Business Processes</p>
+        <ul>
+            <li>Fixed an issue that prevented form recovery if a user was completing a form when its process was republished. (488730)</li>
+            <li>Fixed an issue that prevented a Custom HTML button from opening a document in a new window. (489438)</li>
+        </ul>
+        <p><b>October 10, 2023</b>
+        </p>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>Security updates and enhancements. </li>
+        </ul>
+        <p><b>October 9, 2023</b>
+        </p>
+        <p>Bots</p>
+        <ul>
+            <li>Security updates and enhancements. </li>
+        </ul>
+        <p><b><a href="../2023.10.htm">October 5, 2023</a></b>
+        </p>
+        <p>Rules </p>
+        <ul>
+            <li>Checkboxes in Document Merge Rules now allow additional boolean input types. (474384) </li>
+        </ul>
+        <p>Business Processes </p>
+        <ul>
+            <li>Submission IP addresses are now available as a column in the Business Process Monitoring page. </li>
+            <li>Fixed an issue in Business Process Settings where navigating to a form from a particular resource opened to a blank page when within a project. (420020)</li>
+            <li>Radio button and checkbox fields within forms have been changed to only save selected choices if total choices exceed 100. (47639) </li>
+            <li>Rows to Return feature has been added to Lookup Table Queries for improved performance of customer queries. (481216) </li>
+            <li>Form Designer Updates: </li>
+            <ul>
+                <li>A change to the Custom HTML field now prevents the use of any type of window.postMessage JavaScript calls. Refer to <a href="https://answers.laserfiche.com/questions/210704/Clickable-custom-button-to-showhide-fields-in-Modern-Forms-designer#211933">this answers post</a> to learn more about how to safely use HTML events in the form designer. Note: Any unsupported code will display errors in the browser developer console.  </li>
+                <li>Values in number fields can now be cleared using JavaScript. (472854) </li>
+                <li>Validation is no longer triggered for required fields when adding fields in tables or collections. (479911) </li>
+                <li>Duplicating fields no longer cause duplicated field IDs. (480598) </li>
+                <li>Resolved an issue that was generating a “Invalid read-only field trigger” error. (481409) </li>
+                <li>Right Pane validation is now displayed for saved forms with invalid range field rules. (481637) </li>
+                <li>Resolved a timing issue that displayed a blank value when selecting a drop-down field that is populated by a lookup. (482584) </li>
+                <li>Resolved an issue that prevented lookup rules from functioning if pagination is later enabled. (484104, 484103) </li>
+                <li>Resolved an issue that prevented a form from receiving lookup rule values. (484278, 484263) </li>
+            </ul>
+        </ul>
+        <p>Teams </p>
+        <ul>
+            <li>Modifying a team's users no longer erases the team description. (486342) </li>
+        </ul>
+        <p>Capture Profiles </p>
+        <ul>
+            <li>The <b>Add/Remove Sample Documents</b> dialog box can no longer be closed until the documents are finished creating. (474338) </li>
+            <li>When uploading sample documents, any pages larger than 10 MB will now be compressed.  (474733) </li>
+        </ul>
+        <p>Laserfiche iOS and Android App </p>
+        <ul>
+            <li>Files can now be uploaded to a classic form successfully if the <b>Prevent Cross-Site Request Forgery with a CSRF token</b> option is disabled in Laserfiche Forms. (480930) </li>
+            <li>User tasks can now successfully be reassigned in Forms if the <b>Prevent Cross-Site Request Forgery with a CSRF token</b> option is disabled. (482480) </li>
+        </ul>
+        <p>Web Client </p>
+        <ul>
+            <li>Administrators can now disable the automatic transcription of audio and video files for the repository. (474835) </li>
+            <li>Resolved an issue in which date searches fail with a “Date/time out of range. [9170]” error for some locales. (487492) </li>
+            <li>Security enhancements. </li>
+        </ul>
+        <p>Public Portal </p>
+        <ul>
+            <li>Resolved an issue that could prevent users from selecting all entries in a view for downloading. (481875) </li>
+            <li>Security enhancements. </li>
+        </ul>
+        <p>Account Administration</p>
+        <ul>
+            <li>Security enhancements.</li>
+        </ul>
+        <p style="font-weight: bold;">October 2, 2023</p>
+        <p>Workflow</p>
+        <ul>
+            <li><b>Note:</b>&#160;Users will need to clear the browser cache before continuing to use Workflow, otherwise the below issues may not be resolved.</li>
+            <li>Resolved an issue that prevented changing the tag for Workflow input parameters. (485533)</li>
+            <li>Running the designer in a language other than English will no longer translate tokens. (486808)</li>
+        </ul>
+        <p><b>September 21, 2023</b>
+        </p>
+        <p>Account Administration</p>
+        <ul>
+            <li>Laserfiche Cloud customer account names can now contain up to 100 characters, up from 75. (418393)</li>
+            <li>The Plan page now displays the "Laserfiche API" plan limit as Calls / Month. (473749)</li>
+        </ul>
+        <p style="font-weight: bold;">September 20, 2023</p>
+        <p>Process Automation</p>
+        <ul>
+            <li>Added support for international languages and date/time/number formatting.</li>
+        </ul>
+        <p>Business Processes</p>
+        <ul>
+            <li>Lookup rules are now enabled correctly on save as expected in the classic form designer. (484463)</li>
+        </ul>
+        <p>Workflows</p>
+        <ul>
+            <li>Starting events based on stamp actions now trigger workflows correctly. (485013)</li>
+        </ul>
+        <p style="font-weight: bold;">September 11, 2023</p>
+        <p>Web Client
+        </p>
+        <ul>
+            <li>Security updates and enhancements.</li>
+            <li>Resolved an issue that could prevent saved searches from loading in some repositories that were migrated from a self-hosted Laserfiche system. (482708)</li>
+            <li>Resolved an issue that could result in a "Field not found"&#160;error for users in some cases when searching for documents containing a field to which they do not have access. (476946)</li>
+            <li>Folders containing large numbers of entries now filter column values correctly. (477244)</li>
+            <li>In some cases, deleting a group in the repository could cause all saved searches to stop displaying. This issue has been resolved. (477573)</li>
+        </ul>
+        <p style="font-weight: bold;"><a href="../2023.09.htm">September 7, 2023</a>
+        </p>
+        <p><b>Laserfiche Integration with Microsoft Teams</b>
+        </p>
+        <ul>
+            <li>The Laserfiche App for Microsoft Teams has been updated to include security fixes and to support Spanish and French localization. <a href="Microsoft-Teams-and-Laserfiche-Installation.htm">Learn how to update the Laserfiche App</a>.</li>
+        </ul>
+        <p><b>Solution Marketplace</b>
+        </p>
+        <ul>
+            <li>The Solution Marketplace has been updated to include a cleaner design and minor bug fixes.</li>
+        </ul>
+        <p><b>Process Automation Platform</b>
+        </p>
+        <ul>
+            <li>Fixed an issue that had caused the quick searches widget to display an error when the user has an attribute larger than 3000 characters. (480051)</li>
+        </ul>
+        <p><b>Business processes</b>
+        </p>
+        <ul>
+            <li>Resolved an issue where invalid characters in CSS classes were allowed to be used when designing a form. (359939)</li>
+            <li>Resolved an issue where non-formatted/manually typed dates were parsed incorrectly when automatically formatted into their date format. (396296)</li>
+            <li>Added code sanitization to user defined CSS classes. (402679)</li>
+            <li>Resolved an issue when configuring field rules that allowed invalid date ranges when “show time” was enabled on the field. (424188)</li>
+            <li>Resolved an issue where multiple lookup rules configured for the same field would fill the field out of order. (425740)</li>
+            <li>Fixed an issue where formulas using checkbox were not working when "Append choices to lookup results" was enabled. (426628)</li>
+            <li>Resolved an issue where lookup rules would not populate fields within a section in a collection. (476498)</li>
+            <li>Resolved an issue in classic forms where new lines were not rendered in radio/checkbox choice options. (482414)</li>
+            <li>Fixed an issue where a renamed variable in a collection caused formula references to fail. (480895)</li>
+            <li>Resolved an issue where collections used across multiple forms would not remove user deleted sets as a process progressed. (477231)</li>
+            <li>Fixed an issue where the link in a process failure or suspension notification email failed to open the intended instance details. (477301)</li>
+        </ul>
+        <p><b>Laserfiche App</b>
+        </p>
+        <ul>
+            <li>Security improvements. (472557, 475057, 475423, 475424, 475581)</li>
+            <li>In the Laserfiche Android app, users can now authenticate using fingerprint identification multiple times if the first attempt fails. (190437)</li>
+        </ul>
+        <p><b>Account Administration</b>
+        </p>
+        <ul>
+            <li>Users with the Account Administration access right can review the Laserfiche Cloud subscription agreement from the Settings page's Profile tab. (476370)</li>
+        </ul>
+        <p><b>Web Client</b>
+        </p>
+        <ul>
+            <li>Resolved an issue in which some strings in direct share emails were not translated. (426645)</li>
+        </ul>
+        <p><b>Public Portal</b>
+        </p>
+        <ul>
+            <li>Security updates and enhancements.</li>
+            <li>Fixed a potential issue where Public Portal searches did not process quoted search phrases properly. (479605)</li>
+        </ul>
+        <p style="font-weight: bold;">August 30, 2023</p>
+        <p>Capture Profiles
+        </p>
+        <ul>
+            <li>
+                Security fixes and performance improvements. (479148, 473331, 473684)
+            </li>
+        </ul>
+        <p style="font-weight: bold;">August 29, 2023</p>
+        <p>Web Client
+        </p>
+        <ul>
+            <li>Resolved an issue that resulted in saved searches no longer functioning after a migration from self-hosted editions of Laserfiche to Laserfiche Cloud. (480585)</li>
+            <li>An issue that could prevent multiple users from simultaneously editing PowerPoint documents when using Office Online has been resolved.</li>
+        </ul>
+        <p style="font-weight: bold;">August 28, 2023</p>
+        <p>Capture Profiles
+        </p>
+        <ul>
+            <li>
+                Smart Invoice Capture Profiles now have updated models with improved overall performance. (479155)               
+            </li>
+            <li>
+                Currency signs will automatically be removed from the numerical Subtotal and Tax Amount fields.
+(479155)            </li>
+        </ul>
+        <p style="font-weight: bold;">August 17, 2023</p>
+        <p>Workflow</p>
+        <ul>
+            <li>Importing a workflow with one or more rules to a new environment no longer creates a mismatch in the rule version. (413727)</li>
+            <li>Fixed an issue that caused a workflow that exceeded instance loop counts to become idle. (475544)</li>
+            <li>Clicking on a previously configured Assign Field Values activity no longer clears the previously specified template dropdown value. (476669)</li>
+        </ul>
+        <p><b>August 9, 2023</b>
+        </p>
+        <p>Business Profiles</p>
+        <ul>
+            <li>
+                Resolved an issue that prevented formulas from processing on fields with a lookup rule. (476706, 476524)
+            </li>
+            <li>
+                Resolved an issue that caused a JavaScript error message with save to repository tasks. (474876, 474948)
+            </li>
+        </ul>
+        <p><b>August 8, 2023</b>
+        </p>
+        <p>Capture Profiles</p>
+        <ul>
+            <li>
+                Improved processing for large images. (476495)
+            </li>
+        </ul>
+        <p style="font-weight: bold;"><a href="../2023.08.htm">August 3, 2023</a>
+        </p>
+        <ul>
+            <li>
+                Security improvements throughout the suite.
+            </li>
+        </ul>
+        <p style="font-weight: normal;">Laserfiche iOS and Android App</p>
+        <ul>
+            <li>
+                Users without repository access are now able to sign into Laserfiche Cloud and access Process Automation successfully. (331622)
+            </li>
+            <li>
+                Occasionally, a "Failed to read file" error displayed when attempting to submit an offline form containing an upload field. This has been resolved. (371730)
+            </li>
+            <li>
+                Signing out of the app and back into Forms now successfully directs you to the app view instead of the web view. (474320)
+            </li>
+            <li>
+                The  iOS app no longer closes unexpectedly when uploading an HTML file to the repository. (429648)
+            </li>
+        </ul>
+        <p style="font-weight: normal;">Capture Profiles</p>
+        <ul>
+            <li>
+                Adding a sample document no longer fails when deleting multiple sample documents at the same time. (428346)
+            </li>
+            <li>
+                The Capture Profile Designer loading performance has been improved. (429706)
+            </li>
+        </ul>
+        <p>Workflows </p>
+        <ul>
+            <li>Revised the designer to correctly state the number of attachments (4) in the Email activity. (316109) </li>
+            <li>Changed the "Open selected workflow" button behavior to open a new workflow designer tab in the same web browser tab. (470259) </li>
+            <li>Using zero (0) in conditionals for integer/numerical objects now works. (442291) </li>
+            <li>In the Track Tokens activity, clearing all on global tokens no longer clears other activity's token selections. (423198) </li>
+            <li>Resolved an issue preventing a saved search from running following a previous saved search in the workflow monitor. (425044) </li>
+        </ul>
+        <p>Starting Events </p>
+        <ul>
+            <li>Schedule starting events will no longer occasionally run twice. (429692)  </li>
+            <li>Condition starting events with certain sets of fields now load the field list correctly. (472140) </li>
+        </ul>
+        <p>Rules </p>
+        <ul>
+            <li>In Web Request, The HTTP Request Header field size for web request rules has been increased to allow better visibility of the header string. (414988) </li>
+            <li>PDFs with calculations will no longer show “NaN” in document merge rules. (426144) </li>
+            <li>Resolved an issue preventing Boolean values from properly displaying in query results. (469310) </li>
+        </ul>
+        <p>Business Processes </p>
+        <ul>
+            <li>Added a 'refresh' button in the history tab of the instance drilldown page. (470122) </li>
+            <li>Fixed an issue that displayed the wrong error message when a deleted field is still in use in a save to repository task. (428506) </li>
+            <li>Form designer forms are no longer converted to classic form format when importing an  updated version of a business process. (469830) </li>
+            <li>An inserted token from the variable picker is now placed correctly in the process diagram. (470059) </li>
+            <li>Fixed an issue where a read-only field with a formula would not compute when the locale was set to Spanish (Spain) for both form designer and classic forms. (473142, 473143, 473040) </li>
+            <li>Form designer: <ul><li>Resolved an issue where the layout designer would warn a user of a field rule targeting the same field multiple times when the other field rules were disabled. (371014) </li><li>Resolved an issue where fields populated by lookup results would not respect the default value if lookup results contained the default value. (372204) </li><li>Resolved an issue where reCAPTCHA was shown on every page regardless of which page the Submit action was on. (410977) </li><li>Resolved an issue where radio buttons were not being processed properly in formulas when used in conjunction with IF functions and Time fields. (416788) </li><li>Fixed an issue where submission actions were hidden off screen when used on some iOS devices and some display resolutions. (419606) </li><li>Fixed an issue where read-only fields were difficult to distinguish from editable fields. (420321) </li><li>Fixed an issue where formulas in a table or collection would clear readonly fields when certain criteria were met. (426264, 426261) </li><li>Formula using checkbox is not working when Append choices to lookup results is enabled (426628) </li><li>Fixed an issue where save to repository tasks would not display form logos when converted from classic forms to designer forms. (427950) </li><li>Fixed an issue where multiline fields would not retain new lines when the values were sent via email. (430223) </li><li>Resolved an issue where a submitted form that contained custom JavaScript created a blank page when printed or downloaded from the thank you page. (443107, 430532) </li><li>Fixed an issue to show the Save Draft button on every form page rather than only with the submit action buttons. (469547) </li><li>Submission is now properly blocked while a file is uploading and tells the user "Uploading file" instead of "Retrieving field values". (469979) </li><li>Resolved an issue where subsequent lookup rule triggers that would otherwise shrink a table or collection kept the original table size. (471298) </li><li>Resolved an issue where field rules on a checkbox would not fire when the checkbox was filled via a lookup rule. (471617) </li><li>Invalid characters in CSS classes no longer generate JavaScript errors on preview, now cause a validation error in the designer. (359939) </li><li>When saving PDF in Forms using Edge or Chrome, page breaks remove data (426568) </li><li>Lookup rule filling multiple columns as new sets in a repeatable adds extra rows for every column that returns empty array (472596) </li><li>Resolved an issue where formulas in number fields would not be triggered when filling a form on iOS devices. (474144, 474056) </li></ul></li>
+        </ul>
+        <p>Web Client
+        </p>
+        <ul>
+            <li>
+                When using the "within" option in a Text search, the context hits list will now display the correct results that are within the specified proximity to one another. (413786)
+</li>
+            <li>Resolved an issue that could cause some imports to fail. (471573)</li>
+            <li>The recent folders list, accessible from the path bar in the web client, now correctly shows recently-opened folders. (471574)</li>
+        </ul>
+        <p>Account Administration</p>
+        <ul>
+            <li>Solution Providers can now access a Repository Import Monitor site, allowing them to monitor the migration process for customers that are migrating repository data from self-hosted Laserfiche to Laserfiche Cloud. To view the site, select Repository Import Monitor from the app picker or the Overview page. This service was previously available as a preview to select Solution Providers.</li>
+        </ul>
         <p style="font-weight: bold;">July 13, 2023</p>
         <p>Business Processes</p>
         <ul>
@@ -26,7 +645,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>In some cases, Laserfiche could stop responding when displaying search highlights for searches using the within search parameter. This issue has been resolved. (430451)
             </li>
         </ul>
-        <p><a href="2023.07.htm"><b>July 6, 2023</b></a>
+        <p><a href="../2023.07.htm"><b>July 6, 2023</b></a>
         </p>
         <p>Account Administration</p>
         <ul>
@@ -51,6 +670,8 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Session timeout is no longer displayed when attempting to save an offline copy of a folder. (429953)</li>
             <li>An unexpected error is no longer displayed when attempting to  view a PDF as an electronic file. (430039)</li>
             <li>The sign in button now says Laserfiche Cloud instead of Cloud. (469291)</li>
+            <li>Users are no longer prompted to sign in to the app  when viewing a task after their previous session timed out. (313683)</li>
+            <li>Taking a picture using the Scene Optimizer option on Samsung devices and uploading it to Laserfiche  no longer closes the app unexpectedly. (368578)</li>
         </ul>
         <p style="font-weight: normal;">Web Client</p>
         <ul>
@@ -128,7 +749,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Fixed an issue with evaluation of folder contents conditions using input parameter tokens. (423916)</li>
             <li>Resolved an issue with configuring conditions using the "is in" operand for numbers. (339857)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2023.06.htm">June 1, 2023</a>
+        <p style="font-weight: bold;"><a href="../2023.06.htm">June 1, 2023</a>
         </p>
         <p>Capture Profiles</p>
         <ul>
@@ -175,7 +796,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         <ul>
             <li>Corrected an issue introduced with our regular May release that disabled remote agent workers version 11.3 and earlier. (426045)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2023.05.htm">May 8, 2023</a>
+        <p style="font-weight: bold;"><a href="../2023.05.htm">May 8, 2023</a>
         </p>
         <p>Account Administration</p>
         <ul>
@@ -236,7 +857,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
                Laserfiche bots now support Chrome 111.9.5563.65. (421690)
             </li>
         </ul>
-        <p style="font-weight: bold;"><a href="2023.04.htm">April 10, 2023</a>
+        <p style="font-weight: bold;"><a href="../2023.04.htm">April 10, 2023</a>
         </p>
         <p>Business Processes:</p>
         <ul>
@@ -331,7 +952,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         <ul>
             <li>Fixed an issue where a missing MIME attribute caused a cascading failure from a capture profile into workflows. (416666)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2023.03.htm">March 2, 2023</a>
+        <p style="font-weight: bold;"><a href="../2023.03.htm">March 2, 2023</a>
         </p>
         <p>Process Automation Platform</p>
         <ul>
@@ -476,7 +1097,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         <ul>
             <li>February 4, 11 P.M. Pacific Time: As a temporary measure to maintain service stability, business processes no longer generate images or perform text extraction when importing PDFs into repositories.</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2023.02.htm">February 2, 2023</a>
+        <p style="font-weight: bold;"><a href="../2023.02.htm">February 2, 2023</a>
         </p>
         <p>Process Automation</p>
         <ul>
@@ -563,13 +1184,13 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Service stability optimizations. (408823)</li>
             <li>Fixed a potential issue that could cause the Laserfiche app for mobile devices to incorrectly display field names. (408998)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2023.01.htm">January 5, 2023</a>
+        <p style="font-weight: bold;"><a href="../2023.01.htm">January 5, 2023</a>
         </p>
         <p>Documents</p>
         <ul>
             <li>Service scalability improvements. (408483)</li>
             <li>Resolved a potential issue that could prevent importing of certain EML file format emails. (407395)</li>
-            <li>The <a href="search_engine_update.htm">search engine update</a> previously available in advanced preview is now widely available.</li>
+            <li>The <a href="../search_engine_update.htm">search engine update</a> previously available in advanced preview is now widely available.</li>
         </ul>
         <p style="font-weight: bold;">December 15, 2022</p>
         <p style="font-weight: normal;">Business Process</p>
@@ -587,7 +1208,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         </p>
         <p>Documents</p>
         <ul>
-            <li><a href="search_engine_update.htm">Search engine update</a> (advanced preview).
+            <li><a href="../search_engine_update.htm">Search engine update</a> (advanced preview).
 </li>
         </ul>
         <p><b>December 8, 2022</b>
@@ -630,7 +1251,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Backend optimizations for search result load times. (399044)</li>
             <li>Resolved a potential timing mismatch issue when applying stamps. (399421)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2022.12.htm">December 1, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.12.htm">December 1, 2022</a>
         </p>
         <p>Web Client</p>
         <ul>
@@ -691,7 +1312,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Web Request URI now has a maximum character count of 2048.	(401978)</li>
             <li>Fixed an issue preventing the ability to create rules which use assets. (402144)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2022.11.htm">November 3, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.11.htm">November 3, 2022</a>
         </p>
         <p>Process Automation</p>
         <ul>
@@ -776,7 +1397,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         <ul>
             <li>The list of recent documents can now be viewed by participant users. (393994)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2022.10.htm">October 6, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.10.htm">October 6, 2022</a>
         </p>
         <p>Account Control Service</p>
         <ul>
@@ -832,7 +1453,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Variables on imported classic forms now properly load the variable list in all regions. (394343)</li>
             <li>Prevented a minor possibility of an instance being mistakenly marked completed after a specific combination of a task timeout and a save to repository task interaction. (394950)</li>
         </ul>
-        <p><a href="2022.09.htm"><b>September 1, 2022</b></a>
+        <p><a href="../2022.09.htm"><b>September 1, 2022</b></a>
         </p>
         <p>Solution Marketplace</p>
         <ul>
@@ -856,7 +1477,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         <ul>
             <li>Resolved a potential issue that could prevent form submissions involving date fields with date formats that require leading zeros. The issue could affect forms built with the Forms designer.  (387981)</li>
         </ul>
-        <p><a href="2022.08.htm"><b>August 4, 2022</b></a>
+        <p><a href="../2022.08.htm"><b>August 4, 2022</b></a>
         </p>
         <p>Additional updates:</p>
         <p>Business Processes</p>
@@ -887,7 +1508,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
         <p><b>July 12, 2022</b>
         </p>
         <p>Addressed an issue with saving lookup table query rules. (386237)</p>
-        <p><a href="2022.07.htm"><b>July 7, 2022</b></a>
+        <p><a href="../2022.07.htm"><b>July 7, 2022</b></a>
         </p>
         <p>Additional Updates:</p>
         <p>Capture Profiles</p>
@@ -918,7 +1539,7 @@ Added the Laserfiche Status and Support links to the My Account menu. (430006, 4
             <li>Teams:<ul><li>External process developers are no longer prevented from viewing formula rules. (373490)</li></ul></li>
             <li>Business Processes<ul><li>Certain submitted forms did not properly record the time part in datetime fields. This issue is resolved. (380632)</li><li>The YEARFRAC formula now properly returns 0 for certain date ranges. (381095)</li><li>The WEEKDAY and TIMEVALUE formulas now properly support date parameters as string. (381105, 381120)</li><li>Resolved a custom JavaScript incompatibility in the Form Designer. (381446)</li><li>File set field security updates. (376469, 379968)</li><li>In rare circumstances, missed signal catch events could result in duplicate user tasks. This issue is resolved. (381058)</li></ul></li>
         </ul>
-        <p><a href="2022.06.htm" style="font-weight: bold;">June 9, 2022</a>
+        <p><a href="../2022.06.htm" style="font-weight: bold;">June 9, 2022</a>
         </p>
         <p>Web Client</p>
         <ul>
@@ -1093,7 +1714,7 @@ Bugs fixed:
                         Capture profiles cannot be published unless they have at least one zone configured. (374943)
                     </li></ul></li>
         </ul>
-        <p style="font-weight: bold;"><a href="2022.04.htm">April 11, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.04.htm">April 11, 2022</a>
         </p>
         <p>Known issues:</p>
         <ul>
@@ -1128,9 +1749,9 @@ Bugs fixed:
             <li>The sign-in dialog box is no longer displayed again when scanned documents are being stored to a repository using the web client and Laserfiche Cloud. (362638)</li>
             <li>Using a custom URL now successfully launches Windows desktop scanning. (359236)</li>
         </ul>
-        <p style="font-weight: bold;"><a href="2022.03.htm">March 8, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.03.htm">March 8, 2022</a>
         </p>
-        <p style="font-weight: bold;"><a href="2022.02.htm">February 3, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.02.htm">February 3, 2022</a>
         </p>
         <p style="font-weight: bold;">January 24, 2022</p>
         <ul>
@@ -1138,7 +1759,7 @@ Bugs fixed:
                 <p style="font-weight: normal;">The Solution Marketplace at <a href="http://marketplace.laserfiche.com/" target="_blank" title="Click to go to the site" alt="Click to go to the site">marketplace.laserfiche.com</a> has been updated to provide direct links to solution templates in Laserfiche Process Automation. </p>
             </li>
         </ul>
-        <p style="font-weight: bold;"><a href="2022.01.htm">January 7, 2022</a>
+        <p style="font-weight: bold;"><a href="../2022.01.htm">January 7, 2022</a>
         </p>
         <p>Process Automation</p>
         <ul>
@@ -1176,7 +1797,7 @@ Bugs fixed:
         <ul>
             <li style="font-weight: normal;">Laserfiche Mobile<ul><li style="font-weight: normal;">Added a <b>Syncing</b> message indicating that a form, draft, or task is still syncing, making it easier to see the item is still syncing.</li><li style="font-weight: normal;"><b>Offline</b> is now appended to the title of open forms, tasks, and drafts that are offline, making it easier to see when you are working offline.</li><li style="font-weight: normal;">Bugs Fixed:<ul><li style="font-weight: normal;">The web client search syntax now works correctly in the Laserfiche app. (255876)</li><li style="font-weight: normal;">In the Windows app, after sorting the task inbox by teams, the app no longer closes unexpectedly and the Tasks tab is no longer inoperable after relaunching the app. (277418)</li><li style="font-weight: normal;">In the Windows app, the app no longer closes unexpectedly when uploading a file to a form via the <b>Upload from Repository</b> option. (320043)</li></ul></li></ul></li>
         </ul>
-        <p style="font-weight: bold;"><a href="2021.4.htm">October 8, 2021</a>
+        <p style="font-weight: bold;"><a href="../2021.4.htm">October 8, 2021</a>
         </p>
         <ul>
             <li>Business Processes
@@ -1209,9 +1830,9 @@ Bugs fixed:
         <p style="font-weight: bold;">July 8, 2021</p>
         <ul>
             <li>Added the ability to control file set types, limits, and statuses with lookup rules in business processes.</li>
-            <li><a href="2021.3.htm">Added the ability to convert forms to the new format from the classic form designer. </a>
+            <li><a href="../2021.3.htm">Added the ability to convert forms to the new format from the classic form designer. </a>
             </li>
-            <li><a href="2021.3.htm">Added a survey dashboard on the home page for easy access to create and manage surveys.</a>
+            <li><a href="../2021.3.htm">Added a survey dashboard on the home page for easy access to create and manage surveys.</a>
             </li>
             <li>Added the ability to print a form at any time.</li>
             <li>Fixed an issue where the form save button would remain disabled after certain types of changes were made to a form in the classic designer. (324985)</li>
@@ -1264,7 +1885,7 @@ Bugs fixed:
         <p><b>April 8, 2021</b>
         </p>
         <ul>
-            <li><a href="2021.2.htm">New Features in&#160;Laserfiche Cloud 2021.2</a>
+            <li><a href="../2021.2.htm">New Features in&#160;Laserfiche Cloud 2021.2</a>
             </li>
         </ul>
         <p style="font-weight: bold;">March 29, 2021</p>
@@ -1297,14 +1918,14 @@ Bugs fixed:
         </ul>
         <p style="font-weight: bold;">January 8, 2021</p>
         <ul>
-            <li><a href="2021.1.htm">New Features in&#160;<MadCap:variable name="DoNotTranslate.LF Cloud" /> 2021.1</a>
+            <li><a href="../2021.1.htm">New Features in&#160;<MadCap:variable name="DoNotTranslate.LF Cloud" /> 2021.1</a>
             </li>
             <li><a href="https://support.laserfiche.com/kb/1014260" target="_blank">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2021.1</a>
             </li>
         </ul>
         <p style="font-weight: bold;">November 5, 2020</p>
         <ul>
-            <li><a href="Scanning.htm#https://support.laserfiche.com/kb/1014236/release-notes-for-laserfiche-cloud-2020-4-1">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.4.1</a><![CDATA[
+            <li><a href="../Scanning.htm#https://support.laserfiche.com/kb/1014236/release-notes-for-laserfiche-cloud-2020-4-1">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.4.1</a><![CDATA[
 				]]></li>
         </ul>
         <p style="font-weight: bold;">October 26, 2020</p>
@@ -1328,7 +1949,7 @@ Bugs fixed:
         </ul>
         <p style="font-weight: bold;">October 8, 2020</p>
         <ul>
-            <li><a href="2020.4.htm">New Features in&#160;<MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.4</a>
+            <li><a href="../2020.4.htm">New Features in&#160;<MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.4</a>
             </li>
             <li><a href="https://support.laserfiche.com/kb/1014228" target="_blank">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.4</a>
             </li>
@@ -1353,7 +1974,7 @@ Bugs fixed:
         <p style="font-weight: normal;">Updated workflow for better performance and scalability.</p>
         <p style="font-weight: bold;">July 10, 2020</p>
         <ul>
-            <li><a href="2020.3.htm">New Features in <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.3</a>
+            <li><a href="../2020.3.htm">New Features in <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.3</a>
             </li>
             <li><a href="https://support.laserfiche.com/kb/1014182" target="_blank">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.3</a>
             </li>
@@ -1412,13 +2033,13 @@ Bugs fixed:
         </ul>
         <p style="font-weight: bold;">April 30, 2020</p>
         <p style="font-weight: normal;">Internal service monitoring improvements for Capture Profiles. (241157)</p>
-        <p style="font-weight: bold;">April 28, 20202</p>
+        <p style="font-weight: bold;">April 28, 2020</p>
         <p style="font-weight: normal;">Internal service monitoring improvements for forms via the mobile app. (240555)</p>
         <p style="font-weight: bold;">April 27, 2020</p>
         <p>Infrastructure updates for performance and stability. (240361)</p>
         <p style="font-weight: bold;">April 23, 2020</p>
         <ul>
-            <li><a href="2020.2.htm">New Features in <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.2</a>
+            <li><a href="../2020.2.htm">New Features in <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.2</a>
             </li>
             <li><a href="https://support.laserfiche.com/kb/1014148" target="_blank">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.2</a>
             </li>
@@ -1488,7 +2109,7 @@ Bugs fixed:
         <p><b>January 9, 2020</b>
         </p>
         <ul>
-            <li><a href="2020.1.htm">New Features in <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.1</a>
+            <li><a href="../2020.1.htm">New Features in <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.1</a>
             </li>
             <li><a href="https://support.laserfiche.com/kb/1014107" target="_blank">Release Notes for <MadCap:variable name="DoNotTranslate.LF Cloud" /> 2020.1</a>
             </li>

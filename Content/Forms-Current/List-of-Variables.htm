@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
     <head><title>Variables List | Laserfiche Forms | Process Automation</title>
         <meta name="description" content="Variables store information collected in a form or data about specific steps, actions, or users in a business process. Use variables to determine future behavior in a process based on past data." />
@@ -45,7 +45,7 @@
                     <td class="tabletext">{/dataset/_process_end_date}</td>
                     <td class="tabletext">The date the form or survey is set to expire and become unavailable.</td>
                 </tr>
-                <tr>
+                <tr MadCap:conditions="Default.Do not include">
                     <td class="tabletext">Current Step ID</td>
                     <td class="tabletext">{/_current_step_id}</td>
                     <td class="tabletext">The ID of the currently running step in the process.</td>
@@ -228,7 +228,7 @@
             </tbody>
         </table>
         <p>&#160;</p>
-        <h2 class="topicheading">Save to Repository</h2>
+        <h2 class="topicheading">Previously Saved Form</h2>
         <p>These variables refer to the repository entry created by a Save To Repository task, and refer to the last saved data within the repository.</p>
         <table>
             <col />

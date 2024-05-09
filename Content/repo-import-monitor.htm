@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Monitoring the Data Transfer Process when Importing Data from Self-hosted Laserfiche to Laserfiche Cloud</h1>
+        <p>Solution Providers can use the <b>Repository Import Monitor</b> application to view the status of migrations for their customers. Authorized Solution Providers may also be able to perform certain administrative functions like generating a registration code for the <a href="repositoryimport.htm">Repository Export Client</a>.</p>
+        <p>Select the Repository Import Monitor (<img src="Images/repoimportapppicker.png" title="Screenshot of Repository Import Monitor in app picker" alt="Screenshot of Repository Import Monitor in app picker" style="border-style:solid; border-width:1px" />) item from the app picker or from the Overview page.</p>
+        <p>The default view provides a list of your customers. Use the <b>Status</b> filter
+  located above the list to view customers with a specific migration process or use the <b>Filter accounts</b> search field to type in a specific customer name.</p>
+        <p>Click on a customer to view information related to that customer's repository import.</p>
+        <p>The <MadCap:toggler targets="generaltab">General tab</MadCap:toggler> provides a high level overview of the current status of the data import process. By default, you must contact Laserfiche Support to initiate an import and generate a registration code. In certain situations, authorized solution providers may also be able to initiate an import process to generate a registration code. The <b>Next Action</b> section of the page will automatically update depending on the current migration process.  For example, on the "Initiated" step, there will be an option the download the <a href="repositoryimport.htm">Repository Export Client</a>. During the "Uploading" step, the section will contain a link to the Log tab, or if the migration process is complete, the section will contain an option to download a report.</p>
+        <p MadCap:targetName="generaltab">
+            <img src="Images/repoimportmonitorgeneraltab.png" title="Screenshot of Repository Import Monitor general tab" alt="Screenshot of Repository Import Monitor general tab" style="border-style:solid;border-width:1px;width:100%" />
+        </p>
+        <p>The <MadCap:toggler targets="logtab">Log tab</MadCap:toggler> provides a more detailed time line of actions performed during the import process.</p>
+        <p MadCap:targetName="logtab">
+            <img src="Images/repoimportmonitorlogtab.png" title="Screenshot of Repository Import Monitor log tab" alt="Screenshot of Repository Import Monitor log tab" style="border-style:solid;border-width:1px;width:100%" />
+        </p>
+        <p>The <MadCap:toggler targets="troubleshootingtab">Troubleshooting tab</MadCap:toggler> allows authorized Solution Providers to try to resume an import process if the data upload was interrupted. They can also attempt to retry certain aspects of the migration should they encounter errors during those steps. Please see <a href="https://support.laserfiche.com/kb/1014402" target="_parent">Knowledge Base article 1014402</a> for details on supported actions.</p>
+        <p MadCap:targetName="troubleshootingtab">
+            <img src="Images/repoimportmonitortroubleshootingtab.png" title="Screenshot of Repository Import Monitor troubleshooting tab" alt="Screenshot of Repository Import Monitor troubleshooting tab" style="border-style:solid;border-width:1px;width:100%" />
+        </p>
+    </body>
+</html>

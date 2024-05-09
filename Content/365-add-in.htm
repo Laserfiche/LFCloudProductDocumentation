@@ -6,12 +6,12 @@
         <h1>Installing the Laserfiche Outlook Add-in for Microsoft 365</h1>
         <p>The Laserfiche Outlook Add-in enables saving emails and attachments directly to Laserfiche Cloud repositories. Available for use with Office 365 accounts, the Laserfiche Outlook Add-in can archive correspondence along with their metadata to start Laserfiche workflows or processes.</p>
         <p class="note"><b>Note:</b> The Laserfiche Outlook Add-in for Microsoft 365 is  a separate offering from the <a href="Saving_from_Office.htm">Laserfiche Office Integration</a>. The Laserfiche Outlook Add-in for Microsoft 365 and the Laserfiche Office Integration can both be installed at the same time and can coexist side-by-side.</p>
-        <h2>Requirements</h2>
+        <h2 class="topicheading">Requirements</h2>
         <ul>
             <li>Outlook 365 desktop client (Version 2101 or later) or Outlook on the web using modern browsers (Chrome, Firefox, Edge, and Safari)</li>
             <li>User mailbox in Exchange Online. <ul><li><a href="how-to-check-for-exchange-online-mailbox.htm">How to check if you have a mailbox in Exchange Online</a></li></ul></li>
         </ul>
-        <h2>Installation</h2>
+        <h2 class="topicheading">Installation</h2>
         <p>Microsoft 365 add-ins are deployed through the use of an XML manifest file:</p>
         <ul>
             <li>Administrators can deploy the manifest through the Microsoft 365 admin center.</li>
@@ -32,6 +32,14 @@
         </ul>
         <h3 MadCap:conditions="Default.Exclude">Updating the Add-in</h3>
         <p MadCap:conditions="Default.Exclude">The manifest file hosted in the above locations will be updated as needed when there is a new version of the add-in. </p>
+        <h3><a name="Configur"></a>Configuring the Laserfiche Outlook Add-in for Microsoft 365 to use OAuth</h3>
+        <p>For the Laserfiche Outlook Add-in for Microsoft 365 to work with OAuth, you must configure OAuth in the Laserfiche Developer Console, and users will need to sign in using the same Laserfiche Cloud account ID as configured in the Laserfiche Developer Console. Follow the instructions below for all accounts that use the Laserfiche Outlook Add-in.</p>
+        <ol>
+            <li><a href="https://app.laserfiche.com/officeapps/outlook/v1/static-assets/LaserficheforOutlookAppManifest.json">Download the manifest.json file</a>.</li>
+            <li>Sign in to your Laserfiche Cloud account. From the app picker, select <b>Developer Console</b>. To sign in to the developer console, you must have the Developer Console Administrator access right. <a href="AddingUsers.htm">Learn how to configure access rights</a>.</li>
+            <li>Follow the instructions under "Create an Application from a Manifest" in the <a href="https://developer.laserfiche.com/guides/guide_importing-exporting-manifest.html" target="_parent">Import and Export Application Manifest How To Guide</a> using the manifest.json file downloaded in step 1.</li>
+        </ol>
+        <p class="note"><b>Note:</b> Do not change the value of clientId or redirectUris, or the OAuth flow will fail.</p>
         <h3>Configuring Repository-wide Default Options</h3>
         <p>Administrators can configure a default location for the imported emails, as well as template and field information and settings for attachment handling. The name, location, and field information can also draw from properties of the email itself. For instance, you can store the time the email was received in a field value, or you could dynamically store the emails in a folder named after the email's sender.</p>
         <ol>
@@ -52,7 +60,7 @@
             <li>Verify that the user's mailbox is in Exchange Online</li>
             <li>Verify that the add-in has been deployed to the correct user or user group</li>
         </ul>
-        <h2>Manual Installation </h2>
+        <h2 class="topicheading">Manual Installation </h2>
         <p>Deploying the add-in through the Microsoft 365 admin center is the recommended installation method. In rare situations, your organization may allow users to manually install add-ins themselves by side-loading the add-in. Please see Microsoft's documentation on how to side-load an add-in through the Outlook client:</p>
         <ul>
             <li><a href="https://docs.microsoft.com/en-us/office/dev/add-ins/outlook/sideload-outlook-add-ins-for-testing#sideload-manually" target="_blank">Sideload Outlook add-ins for testing</a>
@@ -60,7 +68,8 @@
         </ul>
         <p>Use the following manifest file:</p>
         <ul>
-            <li> <b>https://app.laserfiche.com/officeapps/outlook/v1/manifest.xml</b></li>
+            <li><b>https://app.laserfiche.com/officeapps/outlook/v1/manifest.xml</b>
+            </li>
         </ul>
     </body>
 </html>

@@ -5,7 +5,7 @@
     <body>
         <h1>Metadata Syncing Template</h1>
         <p>This workflow runs when fields  change on an entry. If the fields change on a folder, the fields on all the documents in that folder will be updated to match. If the fields change on a document, the fields for that document’s folder and all the other documents in that folder will be updated to match. This workflow automatically ensures fields remain consistent so users can be confident the fields on whatever entry they are looking at are up to date.</p>
-        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about Workflow templates.</a>
+        <p><a href="Workflow-Templates-Overview.htm" title="Click to learn more." alt="Click to learn more.">Learn more about workflow templates.</a>
         </p>
         <h2>How it works</h2>
         <p>A <a href="../Activities/Conditional-Decision.htm" title="Click to learn more." alt="Click to learn more.">Conditional Decision</a> activity defines two possible courses of action depending on if the entry is a document or folder.</p>
@@ -25,7 +25,7 @@
         <p class="note"><b>Note:</b> Because no condition is specified on the “Entry is a folder” branch of the Conditional Decision activity, that branch will act as an exception branch and will run if the entry is not a document. Since the starting event specifies the entry must be a folder or document, the “Entry is a folder” branch should only process folders. If you edit this workflow to run on other types of entries, you will need to update these conditions, and potentially add an exception branch to the activity.</p>
         <h2>Important note</h2>
         <p>Ensure the <b>Exclude Process Automation User</b> checkbox is selected in the starting event when you run this workflow. Otherwise, the workflow will start itself continuously, quickly slowing your Workflow Server.</p>
-        <p>Why? The workflow will start itself because the workflow starts when fields are changed. When the workflow synchs the fields, it makes additional changes to the fields, which in turn satisfy the starting event, starting the workflow again. If you exclude the Workflow user, any changes that the workflows makes to fields will be ignored, and the workflow will only run when a user changes fields.</p>
+        <p>Why? The workflow will start itself because the workflow starts when fields are changed. When the workflow synchs the fields, it makes additional changes to the fields, which in turn satisfy the starting event, starting the workflow again. If you exclude the workflow user, any changes that the workflows makes to fields will be ignored, and the workflow will only run when a user changes fields.</p>
         <h2>To run this workflow template in the provided test environment</h2>
         <ol>
             <li>

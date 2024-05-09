@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css" />
+        <link href="Resources/Stylesheets/TopNav.css" rel="stylesheet" type="text/css" /><title>Laserfiche Cloud August 2023</title>
+    </head>
+    <body>
+        <h1><MadCap:variable name="DoNotTranslate.LF Cloud" /> August 2023 Updates</h1>
+        <p>The <MadCap:variable name="DoNotTranslate.LF Cloud" /> August 2023 update, released on August 3, 2023, includes the following new features.</p>
+        <p>Watch an overview of the new features here:</p>
+        <p><iframe width="100%" height="650" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/New-Features-in-Cloud-202308/New-Features-in-Cloud-202308_player.html"></iframe>
+        </p>
+        <h2>Form Designer Updates</h2>
+        <h3>Regular Expression Builder</h3>
+        <p>The Forms designer now includes a new Regular Expression Builder to help designers build and troubleshoot regular expressions. This Regular Expression Builder uses artificial intelligence, and translates your natural language description into a regular expression, or interprets an existing regular expression. It reduces design and troubleshooting time for forms, enables you to take advantage of regular expressions, simplifies the understanding of complex regular expressions, and provides clear explanations as to why a specific phrase fails to meet the required pattern of the regular expression.</p>
+        <h3>Preview Forms at Any Stage in the Process</h3>
+        <p>You can now preview and test the behavior of field rules at any stage in a process without needing to run the entire process. When previewing a form, a new dropdown menu is displayed, letting you select the desired process stage and step. Changing these dropdown values triggers the re-evaluation of field rules, modifying the form's behavior accordingly, just as it would in the actual process flow. This feature also displays the proper submission actions determined by the process, providing you with an accurate representation of their form's appearance and functionality, so they can easily verify exactly what submitters will see at every step.</p>
+        <h3>File Upload Previews</h3>
+        <p>Preview uploaded files by clicking the eye button. Forms can also be set to display uploaded files directly as thumbnails.</p>
+        <h3>Pagination Updates</h3>
+        <p>When applying pagination to forms, page headings can be displayed as either tabs, a progress bar, or drop-down. Designers can choose whether to show or hide previous and next page buttons, and if submission actions like reCAPTCHA, action buttons, and comment boxes should be displayed on every page. Additionally, validation can now be enforced on each page before proceeding to the next page of the form.</p>
+        <h3>Mobile Responsiveness</h3>
+        <p>Forms created using the layout designer now display mobile-responsive layouts without the need for manual customization. This new feature dynamically collapses side-by-side fields, tables, and collections into stacked fields, ensuring optimal display when used on mobile devices. This is automatically enabled for all new forms, and can be manually enabled for existing ones.</p>
+        <h3>Searching Within Tables and Collections</h3>
+        <p>Tables and collections can be searched when submitting a form, bringing up the relevant rows based on a specific search term, and helping users filter through large datasets.</p>
+        <h3>Limit File Sizes for Upload</h3>
+        <p>A maximum file size can be set that encompasses all files within a file upload. This lets you manage and control the cumulative size of uploaded files and is especially useful in avoiding service limit issues when emailing batches of uploaded files outside of Laserfiche. It also helps to prevent misuse of file upload fields in public forms.</p>
+        <h3>Checkbox, Radio, and Dropdown Enhancements for Large Lists</h3>
+        <p>Lists of labels, values, and default selections can now be bulk imported from CSV files, saving time and eliminating the need for manual data entry.</p>
+        <p>Radio buttons and checkboxes can now be set to convert into dropdowns when the number of items reaches a specified limit. This is particularly relevant when the list of items is being filled dynamically, such as from a lookup, and presents a large quantity of choices to users in a clear easily filterable manner.</p>
+        <h2>Business Process Updates</h2>
+        <h3>Additional Troubleshooting Options</h3>
+        <p>Troubleshooting is a key aspect of building business processes – no matter how much thought is put into process design, there will always be something you find when it starts being used. This release adds a number of enhancements aimed at simplifying this necessary step.</p>
+        <p>Most notably, user tasks for in-progress or completed instances can now be directly restarted from the instance details page. This is helpful in cases where a user task needs to be resumed due to other issues in the process. For in-progress or suspended user tasks, the original task will become interrupted. When the instance is terminated/completed/cancelled, restarting the user task will set the instance status back to in- progress. The newly restarted user task step will also have a new step history along with indications of who restarted the task, when, and comments.</p>
+        <p>To more easily troubleshoot and fix issues at the instance level, new action buttons have been added to the instance details and instance graph page of an in-progress instance. This can be accessed via the Monitor and Report pages and allows retrying, skipping, interrupting, stopping, or refreshing the problematic instance.</p>
+        <p>Lastly, process administrators can now manually update a file upload variable value for in progress instances by deleting and adding new files to the value. This is helpful in instances where there is an issue with the originally uploaded file(s).</p>
+        <h3>More flexibility saving files and action histories to the repository</h3>
+        <p>Additional options are available to the process designer when saving the process action history and uploaded files to the repository. The action history can now be set to be saved before or after the form, or as a separate document. Uploaded files can be specifically included or excluded to prevent saving duplicate files to the repository when the business process contains multiple Save to Repository service tasks.</p>
+        <h3>Geolocation Metadata</h3>
+        <p>Forms can now set the repository location metadata for documents when they are saved to the repository. This allows information captured with a Forms geolocation field, such as where the form was filled out or where attachments were uploaded, to be used in searches within the repository.</p>
+        <h2>Workflow Updates</h2>
+        <h3>Highlight and Copy Workflow Instance Information</h3>
+        <p>Users can highlight to copy and paste information from a workflow instance (Entries, Activities, Message, Tokens tab). This will allow for easier extraction of data from a workflow instance or troubleshooting without needing to re-type information.</p>
+        <h2>Public Portal Updates</h2>
+        <p>Users can now view the Support page from the Public Portal Designer by clicking on the link on the Account Menu Dropdown. In addition, they can also click on the link for the ‘Laserfiche Status’ page to view status of our products.</p>
+        <h2>New Solution Templates</h2>
+        <p>Storing documents in Salesforce is expensive and Laserfiche offers a more affordable storage solution without compromising use of the Salesforce system. This new Salesforce Document Import process serves as an example for migrating content from Salesforce to Laserfiche using workflow and built in integration tools. This process can be implemented just using workflow or can be further integrated into Laserfiche using Business Processes.</p>
+        <p>If you are interested in sharing your solutions with the wider Laserfiche community, please visit the <a href="https://marketplace.laserfiche.com/home" target="_parent">Laserfiche Solution Marketplace</a> and follow the <b>Submit a Solution</b> link at the top of the page.</p>
+        <h2>Additional Changes</h2>
+        <p>Please see the <a href="service/changelog.htm">recent changes page</a> for a listing of additional fixes and changes.</p>
+    </body>
+</html>

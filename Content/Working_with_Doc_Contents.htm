@@ -33,77 +33,8 @@
         <h3>Making Changes to a Microsoft Office Document</h3>
         <p>Once the Office Integration has been installed, you can open Microsoft Office documents by selecting them in the folder browser, and they will open in the appropriate Microsoft Office application. You may make changes to the document and its metadata. Saving the document will result in the changes automatically being applied to the document in the repository. Your document will remain checked out until you close the document. You may also manually check in the document or undo the check out within the repository. Laserfiche stores a local copy of the document (at C:\Users\<i>&lt;CURRENT_USER&gt;</i>\AppData\Local\Laserfiche\LFOfficePlugin) in case of network interruptions and to keep the document checked out for longer periods of time.</p>
         <p>The Office Integration has a number of features to help you work with your documents. To access them in your Office application, select the Laserfiche tab. You can choose to immediately save the document to Laserfiche, manually check it in, make version comments if the document is under version control, and modify field, tag, version, and link information directly from the Office integration. You can also add tokens to your Office document that will draw information directly from your repository, such as the document's name or creator, and field values.</p>
-        <h2 class="topicheading"><a name="Working2"></a>Working with Audio and Video Files</h2>
-        <p>In addition to viewing audio and videos directly in the browser (see Streaming Audio and Video Files for more information), Laserfiche can also transcribe audio and video files. This makes their content searchable, and can be viewed side-by-side with the video. For example, you could transcribe a recorded meeting in which the "Anderson project"&#160;was mentioned, and then later locate that video using full-text searches. </p>
-        <p>Video and audio files imported on or after June 9, 2022 will automatically be transcribed. Media files that were imported before that date need to be manually transcribed to become searchable or to be viewed alongside the video. To request a transcript of an un-transcribed media file, either select the document in the folder browser or open it in the document viewer, then select the <b>More Actions</b> button (<img src="Resources/Images/more-actions-button.png" />). Select <b>Request Transcript</b> to add the document to the transcription queue. Note that transcription requests, both manual and automatic, are not instantaneous; it may take some time for the transcription process to be completed, depending on both the number of documents in the queue and the size of the documents. </p>
-        <p>Once a document has been transcribed, you can view the transcript in the document viewer (see <a href="Viewing_Documents.htm#Streamin">Viewing Audio and Video Files</a> for more information), or perform searches for audio and video content and jump directly to the portion of the file containing your keyword (see <a href="Search.htm">Searching</a> for more information).</p>
-        <p class="note"><b>Note:</b>&#160;The availability of transcription, and the number of hours of transcription you have available, depend on your Laserfiche Cloud plan.</p>
-        <h3>Supported Languages and Formats</h3>
-        <p>Laserfiche transcription supports the following file formats and languages.</p>
-        <MadCap:dropDown>
-            <MadCap:dropDownHead>
-                <MadCap:dropDownHotspot>Formats</MadCap:dropDownHotspot>
-            </MadCap:dropDownHead>
-            <MadCap:dropDownBody>
-                <ul>
-                    <li>
-						AMR
-                    </li>
-                    <li>
-                        FLAC
-                    </li>
-                    <li>
-                        MP3
-                    </li>
-                    <li>
-                        MP4
-</li>
-                    <li>M4A                    </li>
-                    <li>
-                        Ogg
-                    </li>
-                    <li>
-                        WebM
-                    </li>
-                    <li>
-                        WAV
-                    </li>
-                </ul>
-            </MadCap:dropDownBody>
-        </MadCap:dropDown>
-        <MadCap:dropDown>
-            <MadCap:dropDownHead>
-                <MadCap:dropDownHotspot>Languages</MadCap:dropDownHotspot>
-            </MadCap:dropDownHead>
-            <MadCap:dropDownBody>
-                <ul>
-                    <li>Afrikaans</li>
-                    <li>Arabic (Gulf and Modern Standard)</li>
-                    <li>Chinese (Simplified and Traditional)</li>
-                    <li>Danish</li>
-                    <li>Dutch</li>
-                    <li>English (Australian, British, Indian, Irish, New Zealander, Scottish, South African, United States, and Welsh)</li>
-                    <li>French (French and Canadian)</li>
-                    <li>Farsi</li>
-                    <li>German (German and Swiss)</li>
-                    <li>Hebrew</li>
-                    <li>Hindi (Indian)</li>
-                    <li>Indonesian</li>
-                    <li>Italian</li>
-                    <li>Japanese</li>
-                    <li>Korean</li>
-                    <li>Malay</li>
-                    <li>Portuguese (Portuguese and Brazilian)</li>
-                    <li>Russian</li>
-                    <li>Spanish</li>
-                    <li>Tamil</li>
-                    <li>Telugu</li>
-                    <li>Thai</li>
-                    <li>Turkish
-						</li>
-                </ul>
-            </MadCap:dropDownBody>
-        </MadCap:dropDown>
+        <h2 class="topicheading">Working with Audio and Video Files</h2>
+        <p>In addition to allowing you to view audio and videos directly in the browser, Laserfiche can also transcribe audio and video files. This makes their content searchable, and can be viewed side-by-side with the video. See <a href="Working_with_Audio_Video.htm">Working with Audio and Video Files</a> for more information.</p>
         <h2 class="topicheading">Working with Other Electronic Files</h2>
         <p>You can make changes to other types of electronic files by checking out the document and opening it for editing. The document will be saved locally on your computer. When you are done making changes, check the document back in. You will be prompted to upload the updated version of the document, which will replace the existing file.</p>
         <h2 class="topicheading">Working with Document Metadata</h2>
@@ -113,5 +44,42 @@
         <p>By default, text will be generated from electronic files and PDFs when they are imported into the repository. (In addition, text will be generated for scanned documents, documents printed using Snapshot, and documents imported using Import Agent.) If an electronic file or PDF has been imported into the repository without text generated, or if you need to update the text, you can  manually generate text. </p>
         <p>To do so, select the document in the folder browser. Click the <b>More</b> button (<img src="Resources/Images/fb_more_button.png" alt="The More button, three vertical dots." title="The More button allows you to access additional commands in the toolbar." />) and select <b>Generate Text</b>. If the document already has pages, you will be prompted to confirm that you want to overwrite those existing pages. </p>
         <p class="note"><b>Note:</b>&#160;Text cannot be generated for documents with pages but without an electronic file or PDF portion if they are already in the repository.</p>
+        <h2 class="topicheading"><a name="Working2"></a>Working with Document Summaries</h2>
+        <p>When working with documents in the repository, users may want to quickly verify that they have found the correct document in the repository without needing to open and read it. Document summarization, powered by Laserfiche AI, allows you to generate a summary of the document that can be viewed when <a href="Navigating.htm">browsing in the folder browser</a> or when <a href="Viewing_Documents.htm">viewing documents in the document viewer</a>. The summary can also be included when generating a URL for a document or sending a document via email.</p>
+        <p>Document summarization is supported for imaged documents, PDFs, Office documents, and audio and video files. It requires text pages; when running summarization on a document without text pages, Laserfiche will attempt to generate them. If a file is an audio or video file, it must be transcribed before it can be summarized. See Working with Audio and Video Files for more information.</p>
+        <h3>Security Considerations</h3>
+        <p>Users must have the following rights on the documents they are working with to use document summaries:
+		<ul><li><b>Create a summary:</b> <b>Append Data</b> <a href="Access_Rights.htm">entry access right</a></li><li><b>View a summary:</b> <b>Read</b> and <b>See Through Redactions</b> entry access rights</li><li><b>Re-create a summary on a document that already has one:</b> <b>Modify Contents</b> entry access right</li><li><b>Delete a summary:</b> <b>Delete Document Pages</b> entry access right</li></ul></p>
+        <h3>Creating a Document Summary</h3>
+        <p>To generate a document summary, do one of the following:
+		<ul><li>Select or open the document and then select the <b>Summary</b> tab in the right-hand pane. Select the <b>Create Summary</b> button.</li><li>Select or open the document and then select the <b>More Actions</b> button on the toolbar. Select <b>Create Summary</b>.</li></ul></p>
+        <p>This will start an automatic summarization process. If the document later changes, the summary will not be automatically updated; see <a href="#Re-creat">Re-creating a Document Summary</a>, below, for more information.</p>
+        <p class="note"><b>Note:</b> Document summarization can only be performed on individual documents. It cannot be performed on folders or on multiple documents at once.</p>
+        <p class="note"><b>Note:</b> As document summarization requires text pages in the document, text will be generated if it has not been generated before.</p>
+        <h3>Viewing a Document Summary</h3>
+        <p>To view an existing summary on a document, select the document in the folder browser or open it in the document viewer. In the right-hand pane, select the <b>Summary</b> tab, where the summary will appear.</p>
+        <h3>Deleting a Document Summary</h3>
+        <p>To delete an existing summary on a document, do one of the following:
+		<ul><li>Select or open the document and then select the <b>Summary</b> tab on the right-hand pane. Select the <b>Delete</b> icon above the summary.</li><li>Select or open the document and then select the <b>More Actions</b> button on the toolbar. Select <b>Delete Summary</b>.</li></ul></p>
+        <p class="note"><b>Note:</b> Deleting a summary cannot be undone; the summary will not be sent to the recycle bin. However, a new summary can be generated.</p>
+        <h3><a name="Re-creat"></a>Re-creating a Document Summary</h3>
+        <p>When a document is updated in the repository, the summary will not be automatically updated. To update it based on new or changed content, you can re-create the summary. To do so, do one of the following:
+		<ul><li>Select or open the document and then select the <b>Summary</b> tab on the right-hand pane. Select the <b>Create Summary</b> icon above the summary.</li><li>Select or open the document and then select the <b>More Actions</b> button on the toolbar. Select <b>Create Summary</b>.</li></ul></p>
+        <p class="note"><b>Note:</b> Re-creating a summary cannot be undone.</p>
+        <h3>Copying a Summary when Generating a Document URL</h3>
+        <p>When generating a URL to a document to share with other users, you can optionally include the document summary to provide additional context. To do so, select the document in the folder browser or open it in the document viewer. In the right-hand pane, select the <b>Summary</b> tab, and then select the <b>Copy URL with Summary</b> icon.</p>
+        <h3>Including a Summary when Sending a Document via Email</h3>
+        <p>When sending a document or documents via email, you can also include a summary to provide a brief overview of the shared documents by selecting the <b>Include Summary</b> option in the <b>Email Basket</b> dialog box. For more information, see <a href="Printing_and_Exporting.htm">Sharing, Downloading, and Printing Documents</a>.</p>
+        <h3>Administering Document Summaries</h3>
+        <p>Document summarization is enabled by default on Laserfiche Cloud repositories. Administrators with the <b>Manage Repository Configuration</b> <a href="Privileges.htm">privilege</a> can choose to disable it for the entire repository. This will hide all existing summaries and will prevent users from creating new ones. However, if you re-enable document summarization, existing summaries will be displayed and will not need to be re-generated. </p>
+        <p>To disable or enable document summarization for the repository, open Repository Administration for your repository. In the <b>General</b> tab, select <b>Show Advanced</b>. In the <b>Summary</b> option, select or clear <b>Allow document summarization using Laserfiche AI</b>.</p>
+        <p>To view the number of summaries you can create from documents, open Account Administration and select <b>the</b> Plan tab. You can view the number of summaries you can generate each year in the <b>Overview</b> section. Under <b>Usage</b>, you can view the number of document summaries you can generate.</p>
+        <h3>Known Issues</h3>
+        <ul>
+            <li>Users without the <b>See Through Redactions</b> entry access right for a document will not be able to view the summary for that document even if it contains no redactions.</li>
+            <li>If a document contains words in multiple languages, it may generate a summary in either of those languages, even if there is only one word in one of the languages. If this happens, you can re-create the summary to try again.</li>
+            <li>Summaries will be based on the first 10,000 words of the document.</li>
+            <li>If you are creating a summary for a document that does not contain text pages, text pages will first be generated. This may cause the summarization to fail because text page generation was not yet finished. If this happens, wait a few minutes and try again.</li>
+        </ul>
     </body>
 </html>

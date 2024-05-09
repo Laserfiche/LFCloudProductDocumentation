@@ -4,17 +4,12 @@
     </head>
     <body>
         <h1>Requesting a <MadCap:variable name="DoNotTranslate.DocuSign" /> Signature on a <MadCap:variable name="DoNotTranslate.Laserfiche" /> Document</h1>
+        <p>This topic focuses on how users can request a DocuSign signature from with a Laserfiche repository. If you are an administrator focused on setting up the integration, please see the <a href="DocuSign_Config.htm">Configuring DocuSign Settings</a> topic for more information.</p>
         <p>You can send  documents in <MadCap:variable name="DoNotTranslate.Laserfiche" /> to <MadCap:variable name="DoNotTranslate.DocuSign" /> to be signed. <MadCap:variable name="DoNotTranslate.Laserfiche" /> will export the selected documents to <MadCap:variable name="DoNotTranslate.DocuSign" />. Designated recipients will receive an email message notifying them that documents are awaiting their signature. If you have configured <MadCap:variable name="DoNotTranslate.Laserfiche" /> to store information from <MadCap:variable name="DoNotTranslate.DocuSign" /> in the document, that information will be updated once the document has been signed, declined, voided, sent, or delivered; see <a href="DocuSign_Config.htm#Configur">Configuring <MadCap:variable name="DoNotTranslate.DocuSign" /> Settings</a> for more information.</p>
         <h2 class="topicheading">Enabling the <MadCap:variable name="DoNotTranslate.DocuSign" /> Integration</h2>
         <p>Before you can request a signature, you must associate your <MadCap:variable name="DoNotTranslate.Laserfiche" /> user account with a <MadCap:variable name="DoNotTranslate.DocuSign" /> account. To do so, log in to <MadCap:variable name="DoNotTranslate.Laserfiche" /> and go to the repository. In the upper left corner, click your user name and select <b>Options</b>. Select <b>Advanced</b>, and then provide your <MadCap:variable name="DoNotTranslate.DocuSign" /> email address and password in the <b><MadCap:variable name="DoNotTranslate.DocuSign" /> Account</b> section. Click <b>Validate</b> to validate your credentials.</p>
         <h2 class="topicheading">Requesting a Signature on a Document</h2>
-        <p>
-            <MadCap:toggler targets="Video">See a video about requesting a DocuSign signature</MadCap:toggler>
-        </p>
-        <div MadCap:targetName="Video">
-            <p>Requesting a DocuSign Signature</p>
-            <div><iframe width="100%" height="500" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/RequestingADocuSignSignature202211/RequestingADocuSignSignature202211.html"></iframe>
-            </div>
+        <div><iframe width="100%" height="500" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/RequestingADocuSignSignature202211/RequestingADocuSignSignature202211.html"></iframe>
         </div>
         <ol>
             <li>Select one or more documents in the Folder Browser.</li>
@@ -23,10 +18,14 @@
             <li>To remove documents from the envelope, hover over a document and click the red x.</li>
             <li>In the <b><MadCap:variable name="DoNotTranslate.DocuSign" /> Template</b> drop-down list, select the appropriate <MadCap:variable name="DoNotTranslate.DocuSign" /> template. <MadCap:variable name="DoNotTranslate.DocuSign" /> templates define signing instructions for specific sets of documents.
             <p class="note"><b>Note:</b> Make sure that the number of selected documents and document order is compatible with the desired <MadCap:variable name="DoNotTranslate.DocuSign" /> template.</p></li>
-            <li>The <b>Recipients</b> section will contain one or more rows. Specify the name and -mail address of each person from whom you want to request a signature. Laserfiche can access your <MadCap:variable name="DoNotTranslate.DocuSign" /> Address book to facilitate auto-completion of names and e-mail addresses.</li>
+            <li>The <b>Recipients</b> section will contain one or more rows. Specify the name and email address of each person from whom you want to request a signature. Laserfiche can access your <MadCap:variable name="DoNotTranslate.DocuSign" /> Address book to facilitate auto-completion of names and email addresses.</li>
             <p class="note"><b>Note:</b> Depending on the selected <MadCap:variable name="DoNotTranslate.DocuSign" /> template, some recipients can be left blank. Required recipients are marked and must be filled in before sending to <MadCap:variable name="DoNotTranslate.DocuSign" />.</p>
             <li>In the <b>Message</b> tab, customize the contents of the email notification. A default subject and message may be associated with the template.</li>
             <li>Click <b>Request Signature</b> to send the selected documents to <MadCap:variable name="DoNotTranslate.DocuSign" />. Designated recipients will receive an email message from <MadCap:variable name="DoNotTranslate.DocuSign" /> asking them to review and sign the submitted documents.</li>
         </ol>
+        <p><b>Related Topics</b>
+        </p>
+        <p><a href="DocuSign_Config.htm">Configuring the Laserfiche DocuSign Integration</a>
+        </p>
     </body>
 </html>

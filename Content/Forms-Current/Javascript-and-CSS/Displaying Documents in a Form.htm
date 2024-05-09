@@ -6,10 +6,10 @@
     <body>
         <h1>
             <MadCap:concept term="Forms" />Displaying Documents in a Form</h1>
-        <p>You may want to display documents in a form while the user is filling out the form. This can be done by embedding the document in an IFrame on the form page. Insert the following custom HTML code using the Custom HTML option in the Layout page of the form designer:</p><pre xml:space="preserve"><code>&lt;iframe height=620px width= 870px src=DocumentURL&gt;&lt;/iframe&gt;</code></pre>
+        <p>You may want to display documents in a form while the user is filling out the form. This can be done by embedding the document in an IFrame on the form page. Insert the following custom HTML code using the Custom HTML option in the Layout page of the form designer:</p><pre xml:space="preserve" class="Code"><code>&lt;iframe height=620px width= 870px src=DocumentURL&gt;&lt;/iframe&gt;</code></pre>
         <p>Any publicly accessible URL beginning with <i>https:</i> can be inserted in place of <i>DocumentURL</i> in the example above. You may use URLs that refer to pages that do not require authentication, do not interact with the parent frame, or that require user interaction to display the content. For example, a URL pointing to a page hosted on Laserfiche WebLink or Public Portal would work for this purpose.</p>
         <p>You can adjust the height and width used in the above sample to suit your users' needs.</p>
         <p>It is also possible to change the document displayed based on a user's input elsewhere on the form. The Laserfiche Solution Exchange offers some <a href="https://www.laserfiche.com/solutionexchange/simplify-the-employee-policy-acknowledgment-process/" target="_blank">sample code</a> showing you how to do this.</p>
-        <p class="note"><b>Note:</b>&#160;The use of iframes in forms may interact in unexpected ways with the <a href="../Service-Tasks.htm#Save" title="Learn more about the STR activity" alt="Learn more about the STR activity">Save to Repository activity</a>, as the STR activity will not have access to the user cookies or browser local storage when it attempts to load the iframe.</p>
+        <p class="note"><b>Note:</b>&#160;The use of iframes in forms may interact in unexpected ways with the <a href="../Service-Tasks.htm#Save" title="Learn more about the STR activity" alt="Learn more about the STR activity">Save to Repository service task</a>, as the STR activity will not have access to the user cookies or browser local storage when it attempts to load the iframe.</p>
     </body>
 </html>

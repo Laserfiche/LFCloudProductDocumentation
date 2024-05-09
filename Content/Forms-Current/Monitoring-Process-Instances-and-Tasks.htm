@@ -6,18 +6,18 @@
     <body>
         <h1>Monitoring Process Instances, Tasks, and Drafts</h1>
         <p>On the <b>Monitor</b> page, you can view information about process instances, tasks, or drafts, either in aggregate or for individual instances.</p>
-        <p style="font-weight: normal;">View <a href="Key-Concepts-in-Forms.htm#Process3" title="Click here to learn more." alt="Click here to learn more.">instance</a> statuses by clicking on the magnifying glass icon on the left. You can:</p>
+        <p style="font-weight: normal;">View <a href="Key-Concepts-in-Forms.htm#Process3" title="Click here to learn more." alt="Click here to learn more.">instance</a> statuses by clicking on the magnifying glass icon on the left and running a search or choosing the instance from the Process dropdown. You can:</p>
         <ul>
             <li style="font-weight: normal;">Filter instances and activities by their status, keywords, priority, and status, among others.</li>
             <li style="font-weight: normal;">Click an instance to see more details, including actions taken in previous steps  and  values for field and process <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variables</a>.</li>
         </ul>
-        <p style="font-weight: normal;">View <a href="User-Tasks.htm" title="Click here to learn more." alt="Click here to learn more.">user task</a> statuses by clicking the clipboard icon on the left. You can:</p>
+        <p style="font-weight: normal;">View <a href="User-Tasks.htm" title="Click here to learn more." alt="Click here to learn more.">user task</a> statuses by clicking the clipboard icon on the left and running a search or choosing the process from the Process dropdown. You can:</p>
         <ul>
             <li style="font-weight: normal;">Filter for tasks based on status, due date, and more.</li>
             <li style="font-weight: normal;">Click on a task for more details.</li>
             <li style="font-weight: normal;">Select multiple tasks to reassign them or change their due dates in bulk.</li>
         </ul>
-        <p style="font-weight: normal;">View form <a href="#workdrafts">drafts</a> by clicking on the pencil icon on the left. You can:</p>
+        <p style="font-weight: normal;">View form <a href="#workdrafts">drafts</a> by clicking on the pencil icon on the left and running a search or choosing the process from the Process dropdown. You can:</p>
         <ul>
             <li style="font-weight: normal;">Filter drafts by their process, draft type, date saved, and draft name, among others.</li>
             <li style="font-weight: normal;">Click a draft to delete it, and for public drafts you can see more details, update email addresses, and resend notification messages.</li>
@@ -26,7 +26,7 @@
         <p>You can download a report summarizing the instances or tasks in a specific process. This can be downloaded as an Excel file or a CSV file.</p>
         <p class="note"><b>Note</b>: The report will only contain those columns that are displayed in the search results, in addition to any other optional information you selected to include in step 3. Before downloading a report, <a href="#Customiz" title="Click here to learn more." alt="Click here to learn more.">customize your column display</a> to include the columns you want in the report.</p>
         <ol>
-            <li>On the <b>Search instances</b> or <b>Search tasks</b> page, select your desired process under <b>Process</b>. Select other search criteria as desired.</li>
+            <li>On the <b>Search instances</b> or <b>Search tasks</b> pane, select your desired process under <b>Process</b>. Select other search criteria as desired.</li>
             <li>Click <b>Search</b>.</li>
             <li>In the main pane, click the <b>Download</b> icon in the toolbar. This opens a <b>Download Report</b> dialog box.<ul><li>Select the type of file you want the report to be saved as.</li><li>Select whether to download the file immediately or to email the file as a link.<ul><li>If you select the latter, enter the email address that you want the link sent to.</li></ul></li><li>Select the optional information that you want included in the report.</li></ul></li>
             <li>Click <b>Download</b> when you're done.</li>
@@ -105,7 +105,7 @@
             <li>Select the desired task on which you want to resend an email notification. </li>
             <li>Do one of the following:<ul><li>Click <b>Resend email notification</b> <img src="Resources/Images/resendnotif.png" title="screenshot of resend email notification icon" alt="screenshot of resend email notification icon" style="border-style:solid;border-width:1px" /> in the top right of the page to resend the email. The button will be active for tasks that were configured for email notification.</li><li>Right-click on the task and select the <b>Resend email notification</b> option from the context menu.</li></ul></li>
         </ol>
-        <h2 class="topicheading">Skip, retry or interrupt steps</h2>
+        <h2 class="topicheading">Retry, skip, interrupt, or restart steps</h2>
         <p style="font-weight: bold;">To Retry a step in the process</p>
         <ol>
             <li>Select the instance or instances that you want to retry at the suspended step or in progress steps.</li>
@@ -121,7 +121,7 @@
             <li>Click <b>Skip</b> to skip the step(s).<br /><br /><img src="Resources/Images/SkipStepDialog.PNG" title="The Skip step dialog window." alt="The Skip step dialog window." style="width: 100%" /></li>
         </ol>
         <p class="note">Note: Before skipping a converging gateway, skip or interrupt each active branch to achieve the desired outflow.</p>
-        <p style="font-weight: bold;">Interrupt</p>
+        <p style="font-weight: bold;">To Interrupt a step in the process</p>
         <ol>
             <li>Select the instances you want to interrupt. All in progress and suspended processes can be interrupted.</li>
             <li>Click the interrupt button <img src="Resources/Images/interrupt_step.png" />in the top right of the page.</li>
@@ -130,6 +130,13 @@
             <li>Click <b>Interrupt</b> to interrupt the step(s).<br /><br /><img src="Resources/Images/Interrupt-Dialog.PNG" title="The Interrupt step dialog window." alt="The Interrupt step dialog window." style="width: 100%;" /></li>
         </ol>
         <p class="note"><b>Note:</b> If the last active step in a process instance is interrupted, the instance will be listed as Completed in the status report.</p>
+        <p style="font-weight: bold;">To Restart a user task in the process</p>
+        <ol>
+            <li>Click the instance with a stuck or problematic user task that you want to restart.</li>
+            <li>Click the <b>More</b> icon <img src="../Resources/Images/bp-more-icon.png" style="width: 32px;height: 34px;" /> on the problematic step and choose <b>Restart</b>.</li>
+            <li><b>Optional:</b> Write a comment about the reason for the restart.</li>
+            <li>Click <b>Restart</b> in the confirmation dialog.<br /></li>
+        </ol>
         <h3>Using Skip and Interrupt Effectively</h3>
         <p>Skip and Interrupt allow a Process Administrator or Business Manager to handle cases when a step will not be completed in a timely manner, as when an user task is assigned to someone who is not available and the task can not be reassigned. If there are multiple paths through the process via <a href="Gateways.htm">gateways</a>, then there is the possibility that the incomplete task may be skipped or interrupted to allow completion of the rest of the process. However, under certain conditions, this could result in later steps to be triggered multiple times.</p>
         <p class="ex">To avoid this, ensure all tasks that precede a converging gateway have been completed, skipped, or interrupted prior to skipping the gateway. If the gateway is skipped, and a step is later completed or skipped, then the gateway will trigger following steps again.</p>
@@ -190,8 +197,8 @@
         </ol>
         <h2 class="topicheading"><a name="Suspende"></a>Suspended tasks</h2>
         <p>A task is suspended if the actions necessary for the task could not be carried out. For example, if you have a service task but your instance could not connect to the relevant server, that task will be suspended. A <a href="User-Tasks.htm" title="Click here to learn more." alt="Click here to learn more.">user task</a> may also be suspended if, for example, a necessary form is missing.</p>
-        <p>If an instance contains suspended tasks, you can retry it by selecting the instance from the <b>Instances</b> page and clicking <b>Retry</b> in the top right corner. You can selected multiple suspended tasks and click <b>Retry</b> to retry them in bulk. You can also retry a suspended task when you are <a href="#Viewing2" title="Click here to learn more." alt="Click here to learn more.">viewing an instance's history</a>.</p>
-        <p>To troubleshoot an instance with suspended tasks, select the instance on the Instances page and click <b>View error log</b> in the top right corner.</p>
+        <p>If an instance contains suspended tasks, you can retry it by selecting the instance from the <b>Instances</b> page and clicking <b>Retry</b> in the top right corner. You can select multiple suspended tasks and click <b>Retry</b> to retry them in bulk. You can also retry a suspended task when you are <a href="#Viewing2" title="Click here to learn more." alt="Click here to learn more.">viewing an instance's history.</a></p>
+        <p>To troubleshoot an instance with suspended tasks, select the instance on the Instances page and click <b>View error log</b> in the top right corner. <span style="color: #000000;">You can also troubleshoot the instance using the monitoring action buttons on the instance details, instance graph, and report pages. </span></p>
         <p>You can filter for instances with suspended tasks by selecting <b>Contains suspended tasks</b> in the <b>Search instances</b> pane.</p>
         <p class="note"><b>Note:</b> Only processes with suspended tasks can be retried.  If more than one task is suspended, all of them will be retried.</p>
         <h2 class="topicheading" MadCap:conditions="Default.Do not include">Interacting with instances that run workflows</h2>

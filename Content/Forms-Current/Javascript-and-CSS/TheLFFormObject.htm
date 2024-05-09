@@ -188,7 +188,7 @@
                     <li>id: An identification object or array of identification objects.</li>
                     <li>settingChanges: An object with the property to change as the key and the value to change to as the value.
 						<p>Currently supported properties (keys):
-						<ul><li>label: Change the field label. Accepts a string.</li><li>description (alias: textAbove): Change the field description. Accepts a string.</li><li>subtext (alias: textBelow): Change the field subtext. Accepts a string.</li><li>tooltip: Change the field tooltip. Accepts a string.</li><li>placeholder: Change the field placeholder. Accept a string.</li><li>autoCompleteValues: Only for Single Line fields. Change the auto complete dropdown options. Accepts an array of strings.</li><li>content (alias: default, HTMLContent): Only for Custom HTML fields. Change the content of custom HTML. Accepts a string.</li><li>CSSClasses (alias: cssClasses, classNames): Change the field CSS classes. Accepts a string or an array of strings. You can specify multiple CSS classes with a space-separated string.</li></ul></p></li>
+						<ul><li>label: Change the field label. Accepts a string. Also supports table column labels and page names.</li><li>description (alias: textAbove): Change the field description. Accepts a string.</li><li>subtext (alias: textBelow): Change the field subtext. Accepts a string.</li><li>tooltip: Change the field tooltip. Accepts a string.</li><li>placeholder: Change the field placeholder. Accept a string.</li><li>autoCompleteValues: Only for Single Line fields. Change the auto complete dropdown options. Accepts an array of strings.</li><li>content (alias: default, HTMLContent): Only for Custom HTML fields. Change the content of custom HTML. Accepts a string.</li><li>CSSClasses (alias: cssClasses, classNames): Change the field CSS classes. Accepts a string or an array of strings. You can specify multiple CSS classes with a space-separated string.</li><li>buttonLabel (alias: signButtonLabel, uploadButtonLabel): Only for File Upload and Signature fields. Change the button label. Accepts a string</li><li>rowLabels (alias: addButtonLabel, addRowButtonLabel, addSetButtonLabel): Only for Table fields. Changes the row labels. If fixed row count, accepts an array of strings. If dynamic row count, Accepts a string.</li><li>addButtonLabel (alias: addRowButtonLabel, addSetButtonLabel): Only for Table and Collection fields. Changes the add row/set label. Accepts a string. Still supports {n} dynamic numbering</li><li>prevButton: Only for Page fields. Changes the previous button label. Accepts a string.</li><li>nextButton: Only for Page fields. Changes the next button label. Accepts a string.</li><li>addressOptions: Only for Address fields. Changes the address sub labels and its visibility. Accepts an array of object with this format: {subField: “address1”, label: “New Label”, show: true}<p class="note"><b>Note:</b> subField expects a string with "address1", "address2", "city", "country", "province" and/or "zipcode" properties.</p></li></ul></p></li>
                 </ul>
             </li>
             <li><b>Output:</b>
@@ -222,6 +222,18 @@
                 </li>
                 <li><code>LFForm.changeFieldSettings({fieldId: 10}, {CSSClasses: ["blue", "noBorder"]});</code>
                 </li>
+                <li><code>LFForm.changeFieldSettings( {fieldId: 10}, {buttonLabel: “Upload”} );</code>
+                </li>
+                <li><code>LFForm.changeFieldSettings( {fieldId: 10}, {rowLabels: [“First {n}”, “Second {n}”, “Third {n}”]} ); </code>
+                </li>
+                <li><code>LFForm.changeFieldSettings( {fieldId: 10}, {rowLabels: “Row {n}”} ); </code>
+                </li>
+                <li><code>LFForm.changeFieldSettings( {fieldId: 10}, {addButtonLabel: “+ Add Row”} ); </code>
+                </li>
+                <li><code>LFForm.changeFieldSettings( {fieldId: 10}, {label: “First Page”, prevButton: “Back”, nextButton: “Forward”} ); </code>
+                </li>
+                <li><code>LFForm.changeFieldSettings( {fieldId: 10}, {addressOptions: [{subField: “address1”, label: “Address”}, {subField: “address2”, show: false}, {subField: “city”, label: “City”}, {subField: “province”, label: “State”}, {subField: “zipcode”, label: “Zip Code”, show: true}, {subField: “country”, show: false}]} );</code>
+                </li>
             </ul>
         </div>
         <h3 class="topicheading">changeFormSettings</h3>
@@ -232,7 +244,7 @@
                 <ul>
                     <li>changes: An object with the property to change as the key and the value to change to as value.
 						<p>Currently supported properties (keys):
-						<ul><li>title: Change the form title. Accepts a string.</li><li>description: Change the form description. Accepts a string.</li></ul></p></li>
+						<ul><li>title: Change the form title. Accepts a string.</li><li>description: Change the form description. Accepts a string.</li><li>pagination: Change the page label and previous/next button labels. Accepts an array of objects in the following format <code>{ pageId: 1, label: “First Page”, prevButton: “Back”, nextButton: “Forward” }</code></li></ul></p></li>
                 </ul>
             </li>
             <li><b>Output:</b>
@@ -242,10 +254,61 @@
             </li>
         </ul>
         <div class="ex">
+            <p><b>Examples:</b>
+            </p>
+            <ul>
+                <li><code>LFForm.changeFormSettings({title: "New Form Title", description: "New Form Description"});</code>
+                </li>
+                <li><code>LFForm.changeFormSettings({pagination: [{pageId: 1, label: “First Page”}, {pageId: 2, label: “Second Page”, prevButton: “Back”, nextButton: “Forward”}]});</code>
+                </li>
+            </ul>
+        </div>
+        <h3 class="topicheading">changeActionButton</h3>
+        <p>Change the label of a single action button. Buttons include the <b>Submit</b>, <b>Approve</b>, and <b>Reject</b> submission actions, the <b>Save as Draft</b> button, and user defined custom submission action buttons on forms used by message start events and user tasks.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.changeActionButton(button, changes)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>button: A string that identifies the button by the <b>Button CSS Class</b> defined in the <a href="../User-Tasks.htm">user task settings</a> <b>Form</b> tab.<p>Currently supported class names: <ul><li>Submit</li><li>Approve</li><li>Reject</li><li>SaveAsDraft</li><li>User defined submission action button class names</li></ul></p></li>
+                    <li>changes: An object with attributes to change.<p>Currently supported properties (keys): <ul><li>label: Option label. Accepts a string.</li></ul></p></li>
+                </ul>
+            </li>
+            <li><b>Output: </b>
+                <ul>
+                    <li>A promise that resolves after the change to the action button has been applied or errors are returned.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
             <p><b>Example:</b>
             </p>
-            <p><code>LFForm.changeFormSettings({title: "New Form Title", description: "New Form Description"});</code>
+            <ul>
+                <li><code>LFForm.changeActionButton("Submit", {label: "New Submit"});</code>
+                </li>
+            </ul>
+        </div>
+        <h3 class="topicheading">changeActionButtons</h3>
+        <p>Change the label of a list of action buttons. Buttons include the <b>Submit</b>, <b>Approve</b>, and <b>Reject</b> submission actions, the <b>Save as Draft</b> button, and user defined custom submission action buttons on forms used by message start events and user tasks.</p>
+        <ul>
+            <li><b>Signature:</b> LFForm.changeActionButtons(changes)</li>
+            <li><b>Input:</b>
+                <ul>
+                    <li>changes: An array of objects with attributes to change.<p>Currently supported keys: <ul><li>action: A string that identifies the button by the <b>Button CSS Class</b> defined in the <a href="../User-Tasks.htm">user task settings</a> <b>Form</b> tab.<p>Currently supported class names: <ul><li>Submit</li><li>Approve</li><li>Reject</li><li>SaveAsDraft</li><li>User defined submission action button class names</li></ul></p></li><li>label: Option label. Accepts a string.</li></ul></p></li>
+                </ul>
+            </li>
+            <li><b>Output: </b>
+                <ul>
+                    <li>A promise that resolves after the changes to action buttons have been applied or errors are returned.</li>
+                </ul>
+            </li>
+        </ul>
+        <div class="ex">
+            <p><b>Example:</b>
             </p>
+            <ul>
+                <li><code>LFForm.changeActionButtons([{action: "Submit", label: "New Submit"}, {action: "Approve", label: "New Approve"}]);</code>
+                </li>
+            </ul>
         </div>
         <h3 class="topicheading">addRow, addSet</h3>
         <p>Adds new rows or sets to a  table or collection.</p>
@@ -593,11 +656,11 @@
     if (LFForm.getFieldValues({variableName: "TriggerField"}) === "NoCall") {
         return {cancelLookup: true};
     }
-}, {lookupId: 3}); // When lookup rule 3 is triggered, 
+}, {lookupRuleId: 3}); // When lookup rule 3 is triggered, 
                    // if field with variable name "TriggerField" has value of "NoCall", 
                    // cancel the lookup call.</pre>
             </p>
-            <p class="note"><b>Note:</b> if the handler returns an object with the "cancelLookup" property set to true, the lookup call will be cancelled.</p>
+            <p class="note"><b>Note:</b> if the handler returns an object with the "cancelLookup" property set to true, the lookup call will be canceled.</p>
         </div>
         <h3 class="topicheading">onLookupDone</h3>
         <p>Subscribe to the lookup done event.</p>
@@ -618,7 +681,7 @@
     if (LFForm.getFieldValues({variableName: "Lookup_Target"}) === "Hello") {
         LFForm.setFieldValues({variableName: "Lookup_Target_AutoComplete"}, "World!");
     }
-}, {lookupId: 2}); // after lookup rule 2 is done, check for Lookup_Target value. 
+}, {lookupRuleId: 2}); // after lookup rule 2 is done, check for Lookup_Target value. 
                    // If it is "Hello", set the Lookup_Target_AutoComplete to "World!"</pre>
             </p>
         </div>

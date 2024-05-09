@@ -1,38 +1,142 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head><title>Single Line Fields | Laserfiche Forms | Process Automation</title>
+    <head>
+        <link href="../../Resources/TableStyles/NewStyle.css" rel="stylesheet" MadCap:stylesheetType="table" /><title>Single Line Fields | Laserfiche Forms | Process Automation</title>
         <meta name="description" content="Use single-line fields if the data should be entered as a short line of text." />
     </head>
     <body>
         <h1>Single Line Fields</h1>
         <p>
             <MadCap:concept term="Forms" />Single line fields are the least specialized of all the field types. They accept numbers and characters, making them well-suited for accepting names, numbers, and many other values. If there is a chance that the user filling in this field will enter a combination of characters and numbers, you should use a single line field rather than a more specialized one.</p>
-        <p>Single line fields are also incredibly useful because you can use <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">regular expressions</a> with them to restrict what the fields accept. In addition, single line fields can accept HTML&#160;input.</p>
+        <p>Single line fields are also incredibly useful because you can use either <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">regular expressions</a> or <a href="../Using-Regular-Expressions-with-Field-Masks.htm" title="Click to learn more." alt="Click to learn more.">simplified field masks</a> (in the form designer)  to restrict what the fields accept.</p>
         <p class="ex"><b>Example:</b> You can use regular expressions with single line fields to ensure that phone numbers or Social Security numbers are entered with the proper formatting. <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Common-Regular-Expressions.htm">Learn more</a></p>
         <p class="note"><b>Note</b>: The characters "&amp;", "#", or "&lt;" cannot be entered in a field if they are also followed by another character. However, you can enter one of those characters if it is followed by a space.</p>
         <h2 class="topicheading">Field settings</h2>
         <p><b>To edit a single line field</b>
         </p>
-        <ol>
-            <li>Select the field on the canvas and click <b>Edit</b>.</li>
-            <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable in the label.</li>
-            <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
-            <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. Select <b>Accept barcode scan</b> if you want to allow Laserfiche app users to fill the field by scanning a barcode.</li>
-            <p class="ex"><b>Example:</b> Sue has a "Case ID" field that is auto-populated from the company database using a <a href="../../Forms-Deprecated/Using Lookup Rules.htm" title="Click here to learn more." alt="Click here to learn more.">lookup rule</a>. To ensure nobody can change the case ID on the form, Sue makes this field read-only. </p>
-            <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
-            <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-            <li id="field-width">Under <b>Field width</b>, select whether the field should be <b>Small</b>, <b>Medium</b>, <b>Large</b>, or <b>X-Large</b> in width. </li>
-            <li>Under <b>Character limit</b>, enter the maximum number of characters the field will accept. By default, this number is 20,000.</li>
-            <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Click the <b>Insert Variables</b> button to use a variable as a default value.</li>
-            <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+        <div id="tabs">
             <ul>
-                <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
-                <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
-                <li>Under <b>Auto suggestions</b>, enter any suggestions that should appear as users fill in this field.</li>
-                <li>Under <b>Regular expression for validation</b>, specify a regular expression to limit the values that this field will accept. <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">Learn more about regular expressions</a></li>
-                <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
             </ul>
-            <li>When you have finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
-        </ol>
+            <div id="tabs-1">
+                <ol>
+                    <li>Select the field on the canvas, and the options will appear in the right pane.</li>
+                    <li>Under <b>Field Label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable in the label.</li>
+                    <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Text Above Field</b> and <b>Text Below Field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li>Under <b>Display Options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. Select <b>Accept barcode scan</b> if you want to allow Laserfiche app users to fill the field by scanning a barcode.</li>
+                    <p class="ex"><b>Example:</b> Sue has a "Case ID" field that is auto-populated from the company database using a <a href="../../Forms-Deprecated/Using Lookup Rules.htm" title="Click here to learn more." alt="Click here to learn more.">lookup rule</a>. To ensure nobody can change the case ID on the form, Sue makes this field read-only. </p>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li>Under <b>Placeholder Text</b>, enter the value that will appear in the field by default. This text will not be saved in a submission and is for disply-only to assist the user. Click the <b>Insert Variables</b> button to use a variable as part of the placeholder text.</li>
+                    <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Click the <b>Insert Variables</b> button to use a variable as a default value.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                        <li>Under <b>Character limit</b>, enter the maximum number of characters the field will accept. By default, this number is 20,000.</li>
+                        <li>Under <b>Auto suggestions</b>, enter any suggestions that should appear as users fill in this field.</li>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                        <li>Under <b>CSS&#160;classes</b>, specify one or more CSS&#160;classes to assign to this field.</li>
+                        <li>Under <b>Perform Custom Input Validation</b>, select either to <b>Use a regular expression</b> or <b>Use an input mask</b> to limit the values that this field will accept. <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">Learn more about regular expressions</a>. </li>
+                        <li>&#160;If enabled for your account, click the question mark icon to access the <b>Regular Expression Builder</b>.<ul><li>Select <b>Write a regular expression that validates</b> and describe what you want to validate in the field. For example,  "a telephone number" or "a phrase in title case." The definition can be as specific as necessary. Click <b>Write Expression</b> to generate an expression and full description of how it works. Click <b>Use Expression</b> to close the dialog and save the expression for field.</li><li>Select <b>Troubleshoot regular expression</b> to test or learn more about how the expression is evaluating an input. <p class="note"><b>Note:</b> The Regular Expression Builder is subject to <a href="../../Resources/Service-Limits.htm#bp-limits" title="Click here for more information." alt="Click here for more information.">service limits</a> and may be disabled by account administrators.</p></li></ul></li>
+                        <li>If using an input mask, create the mask using the characters defined on the <a href="../Using-Regular-Expressions-with-Field-Masks.htm" title="Click to learn more." alt="Click to learn more.">Field Masks page</a>.</li>
+                    </ul>
+                    <li>Your changes will be applied automatically.</li>
+                </ol>
+            </div>
+            <div id="tabs-2">
+                <ol>
+                    <li>Select the field on the canvas and click <b>Edit</b>.</li>
+                    <li>Under <b>Field label</b>, enter the field label that will appear next to the field on the form. Click the <b>Insert Variables</b> button to include a variable in the label.</li>
+                    <li>Under <b>Variable</b>, specify a name for the field <a href="../Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variable</a> associated with this field. If you do not specify a variable name, Laserfiche will automatically assign the field one based on its label.</li>
+                    <li>Under <b>Field options,</b>  select <b>Required</b> if users must fill in this field before submitting the form. Select <b>Read-only</b> if users should not be allowed to modify this field. Select <b>Accept barcode scan</b> if you want to allow Laserfiche app users to fill the field by scanning a barcode.</li>
+                    <p class="ex"><b>Example:</b> Sue has a "Case ID" field that is auto-populated from the company database using a <a href="../../Forms-Deprecated/Using Lookup Rules.htm" title="Click here to learn more." alt="Click here to learn more.">lookup rule</a>. To ensure nobody can change the case ID on the form, Sue makes this field read-only. </p>
+                    <p class="note"><b>Note:</b> If a required field is hidden with a <a href="../Creating-Rules-to-Show-or-Hide-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">field rule</a>, it is no longer required. A required field is only required when it appears on the form. </p>
+                    <li>Under <b>Text above field</b> and <b>Text below field</b>, you can enter any additional text that should appear with the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                    <li id="field-width">Under <b>Field width</b>, select whether the field should be <b>Small</b>, <b>Medium</b>, <b>Large</b>, or <b>X-Large</b> in width. </li>
+                    <li>Under <b>Character limit</b>, enter the maximum number of characters the field will accept. By default, this number is 20,000.</li>
+                    <li>Under <b>Default value</b>, enter the value that will appear in the field by default. If this option is blank, the field will appear empty by default. Click the <b>Insert Variables</b> button to use a variable as a default value.</li>
+                    <li>To configure advanced options, click the <b>Advanced</b> tab.</li>
+                    <ul>
+                        <li>Under <b>Calculation</b>, specify a formula that will populate the contents of this field. <a href="../Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                        <li>Under <b>Tooltip</b>, specify the help text that will appear when users hover over the field. Click the <b>Insert Variables</b> button to include a variable with this text.</li>
+                        <li>Under <b>Auto suggestions</b>, enter any suggestions that should appear as users fill in this field.</li>
+                        <li>Under Regular expression for validation, specify a regular expression to limit the values that this field will accept. <a target="_blank" href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-US/administration/#../Subsystems/regex/Content/Regular-Expressions.htm%3FTocPath%3DRegular%2520Expression%2520Reference|Regular%2520Expressions|_____0" title="Click here to learn more." alt="Click here to learn more.">Learn more about regular expressions</a>.</li>
+                        <li>Under <b>CSS&#160;class</b>, specify a CSS&#160;class to assign this field.</li>
+                    </ul>
+                    <li>When you have finished editing the field settings, click <b>Done</b>. Your changes will be saved automatically.</li>
+                </ol>
+            </div>
+        </div>
+        <h3>Simplified input mask information</h3>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/NewStyle.css');" class="TableStyle-NewStyle" cellspacing="0">
+            <thead>
+                <tr class="TableStyle-NewStyle-Head-Header1">
+                    <th class="TableStyle-NewStyle-HeadE-Column1-Header1">Mask character</th>
+                    <th class="TableStyle-NewStyle-HeadD-Column1-Header1">Character description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">0</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single digit, required. This element will accept any single digit between 0 and 9.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">9</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single digit or space, optional.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">#</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single digit, space, plus (+) or minus (-) sign, optional.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">L</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single letter, required. This mask element is equivalent to [a-zA-Z] in regular expressions.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">?</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single letter, optional. This mask element is equivalent to [a-zA-Z]? in regular expressions.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">A</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single alphanumeric character, required. This mask element behaves similar to the "a" element.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">a</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">Any single alphanumeric character, optional. This mask element behaves similar to the "A" element.</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyB-Column1-Body1">\</td>
+                    <td class="TableStyle-NewStyle-BodyA-Column1-Body1">Escape. Escapes a mask character, turning it into a literal. "\\" is the escape sequence for a backslash. "\A" results in a literal "A"</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-weight: bold;">Examples:</p>
+        <table style="width: 100%;margin-left: 0;margin-right: auto;mc-table-style: url('../../Resources/TableStyles/NewStyle.css');" class="TableStyle-NewStyle" cellspacing="0">
+            <col style="width: 316px;" class="TableStyle-NewStyle-Column-Column1" />
+            <col class="TableStyle-NewStyle-Column-Column1" />
+            <thead>
+                <tr class="TableStyle-NewStyle-Head-Header1">
+                    <th class="TableStyle-NewStyle-HeadE-Column1-Header1">Use case</th>
+                    <th class="TableStyle-NewStyle-HeadD-Column1-Header1">Masking syntax</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">US format phone number</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">(000) 000-0000</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyE-Column1-Body1">Social Security Number</td>
+                    <td class="TableStyle-NewStyle-BodyD-Column1-Body1">000-00-0000</td>
+                </tr>
+                <tr class="TableStyle-NewStyle-Body-Body1">
+                    <td class="TableStyle-NewStyle-BodyB-Column1-Body1">Canadian Postal Code</td>
+                    <td class="TableStyle-NewStyle-BodyA-Column1-Body1">L0L 0L0</td>
+                </tr>
+            </tbody>
+        </table>
     </body>
 </html>

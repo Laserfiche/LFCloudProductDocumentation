@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title></title>
+    </head>
+    <body>
+        <h1>Metadata Design Principles and Best Practices</h1>
+        <p>Metadata provides ways to associate additional information with a document. Laserfiche provides a granular and flexible metadata system that can be used to associate any useful information with a document.</p>
+        <h2>Fields and Templates</h2>
+        <p>Fields allow you to store any text information you might need alongside your document. You could create fields to store a filing date, an invoice due amount, an account ID, the name and email address of a contact, or a set of notes.</p>
+        <h3>When to Use Fields</h3>
+        <p>Fields and templates are primarily useful in the following circumstances:</p>
+        <ul>
+            <li>
+                <p><b>Search:</b> Fields provide a way to include search terms for entries in the repository. These are most useful when the search term isn't present in the document text itself, or when searching the document text could result in too many false positives. For example, an invoice document might not include information about the user assigned to the account, but you might want to be able to search based on that user; you could use a field to store that value. </p>
+            </li>
+            <li>
+                <p><b>Processing:</b>&#160;Forms processes and workflows often rely on field values to route and otherwise manage documents.</p>
+            </li>
+            <li>
+                <p><b>Reporting:</b> You can run reports on field information on documents. These reports can be exported as spreadsheets for further analysis.</p>
+            </li>
+            <li>
+                <p><b>Reference:</b>&#160;Additional information that might be useful when viewing the document. Reference information should be kept to a minimum.</p>
+            </li>
+        </ul>
+        <p>While fields have a wide variety of use cases, you should always make sure that you know the purpose of a field when you're creating it. If you don't have a clear use case, don't create a field for the information. If a template has a very large number of fields in it, it will slow down document capture as the information must be located before it can be stored--or, if it must be manually populated, users won't fill in the field value. Too many fields can also overwhelm users looking for relevant information, as they must scroll through dozens or hundreds of fields to find it.</p>
+        <h2>Further Information</h2>
+        <p>The following pages provide more information on repository design considerations:</p>
+        <ul>
+            <li>
+                <p><a href="Repository-Design-Best-Practices.htm">Repository Design Principles and Best Practices</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="Best-Practices-Folder-Structure.htm">Best Practices for Designing a Folder Structure</a>
+                </p>
+            </li>
+            <li>
+                <p><a href="Security-Principles-and-Best-Practices.htm">Security Principles and Best Practices</a>
+                </p>
+            </li>
+        </ul>
+    </body>
+</html>

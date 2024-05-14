@@ -1540,306 +1540,306 @@
     </TocEntry>
     <TocEntry
       Title="Business Processes"
-      Link="/Content/Forms-Current/Laserfiche-Forms-Help.htm">
+      Link="/Content/Resources/BusinessProcesses/Laserfiche-Forms-Help.htm">
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Key-Concepts-in-Forms.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Resources/BusinessProcesses/Key-Concepts-in-Forms.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="Getting Started with Business Processes"
-        Link="/Content/Forms-Current/Business-Processes.htm">
+        Link="/Content/Resources/BusinessProcesses/Business-Processes.htm">
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Building-a-Process.htm">
+          Link="/Content/Resources/BusinessProcesses/Building-a-Process.htm">
           <TocEntry
             Title="Events"
-            Link="/Content/Forms-Current/Events.htm">
+            Link="/Content/Resources/BusinessProcesses/Events.htm">
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Start-Events.htm" />
+              Link="/Content/Resources/BusinessProcesses/Start-Events.htm" />
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Timer-Catch-Events.htm" />
+              Link="/Content/Resources/BusinessProcesses/Timer-Catch-Events.htm" />
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Signal-Throw-and-Catch-Events.htm" />
+              Link="/Content/Resources/BusinessProcesses/Signal-Throw-and-Catch-Events.htm" />
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Error-Events.htm" />
+              Link="/Content/Resources/BusinessProcesses/Error-Events.htm" />
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/End-Events.htm" />
+              Link="/Content/Resources/BusinessProcesses/End-Events.htm" />
           </TocEntry>
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Activities.htm">
+            Link="/Content/Resources/BusinessProcesses/Activities.htm">
             <TocEntry
               Title="User Tasks"
-              Link="/Content/Forms-Current/User-Tasks.htm">
+              Link="/Content/Resources/BusinessProcesses/User-Tasks.htm">
               <TocEntry
                 Title="[%=System.LinkedHeader%]"
-                Link="/Content/Forms-Current/Direct-Approval.htm" />
+                Link="/Content/Resources/BusinessProcesses/Direct-Approval.htm" />
             </TocEntry>
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Service-Tasks.htm">
+              Link="/Content/Resources/BusinessProcesses/Service-Tasks.htm">
               <TocEntry
                 Title="[%=System.LinkedHeader%]"
-                Link="/Content/Forms-On-Premises/Configuring-Repository-Profiles.htm" />
+                Link="/Content/Resources/BusinessProcesses/Configuring-Repository-Profiles.htm" />
             </TocEntry>
             <TocEntry
               Title="[%=System.LinkedHeader%]"
-              Link="/Content/Forms-Current/Building-Sub-processes.htm" />
+              Link="/Content/Resources/BusinessProcesses/Building-Sub-processes.htm" />
           </TocEntry>
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Gateways.htm"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Gateways.htm"></TocEntry>
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Outflows.htm" />
+            Link="/Content/Resources/BusinessProcesses/Outflows.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Using-Conditional-Expressions.htm" />
+            Link="/Content/Resources/BusinessProcesses/Using-Conditional-Expressions.htm" />
         </TocEntry>
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/business-process-library.htm" />
+          Link="/Content/Resources/BusinessProcesses/business-process-library.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Importing-A-Process.htm" />
+          Link="/Content/Resources/BusinessProcesses/Importing-A-Process.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Managing-Processes.htm"></TocEntry>
+          Link="/Content/Resources/BusinessProcesses/Managing-Processes.htm"></TocEntry>
         <TocEntry
           Title="Starting a Process From a Workflow"
-          Link="/Content/Forms-Current/StartingProcessFromWorkflow.htm" />
+          Link="/Content/Resources/BusinessProcesses/StartingProcessFromWorkflow.htm" />
         <TocEntry
           Title="Allowing Access to a Process"
-          Link="/Content/Forms-Current/Public-Facing-Forms.htm" />
+          Link="/Content/Resources/BusinessProcesses/Public-Facing-Forms.htm" />
         <TocEntry
           Title="Configuring Process Notifications"
-          Link="/Content/Forms-Current/process-notification.htm" />
+          Link="/Content/Resources/BusinessProcesses/process-notification.htm" />
         <TocEntry
           Title="Configuring Custom Error Messages in Business Processes"
-          Link="/Content/Forms-Current/Process-Error-Messages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          Link="/Content/Resources/BusinessProcesses/Process-Error-Messages.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       </TocEntry>
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Creating-a-New-Form.htm">
+        Link="/Content/Resources/BusinessProcesses/Creating-a-New-Form.htm">
         <TocEntry
           Title="[%=System.LinkedTitle%]"
-          Link="/Content/Forms-Current/form-designer-comparison.htm" />
+          Link="/Content/Resources/BusinessProcesses/form-designer-comparison.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Adding-Fields-to-a-Form.htm"
+          Link="/Content/Resources/BusinessProcesses/Adding-Fields-to-a-Form.htm"
           ReplaceMergeNode="false">
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Address.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Address.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Collection.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Collection.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Currency.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Currency.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Custom-HTML.htm"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Custom-HTML.htm"></TocEntry>
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Date-and-Time.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Date-and-Time.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Email.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Email.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/File-Upload.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/File-Upload.htm" />
           <TocEntry
             Title="[%=System.LinkedTitle%]"
-            Link="/Content/Forms-Current/Form-Fields/Fileset.htm">
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Fileset.htm">
             <TocEntry
               Title="[%=System.LinkedTitle%]"
-              Link="/Content/Forms-Current/Form-Fields/Managing-file-sets.htm" />
+              Link="/Content/Resources/BusinessProcesses/Form-Fields/Managing-file-sets.htm" />
           </TocEntry>
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Geolocation.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Geolocation.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Multi-Line.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Multi-Line.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Number.htm"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Number.htm"></TocEntry>
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/page-break.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/page-break.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Radio-Button.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Radio-Button.htm" />
           <TocEntry
             Title="Rich Text Fields"
-            Link="/Content/Forms-Current/Form-Fields/Rich-Text.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Rich-Text.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Section.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Section.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Signatures.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Signatures.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Single-Line.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Single-Line.htm" />
           <TocEntry
             Title="[%=System.LinkedHeader%]"
-            Link="/Content/Forms-Current/Form-Fields/Table.htm" />
+            Link="/Content/Resources/BusinessProcesses/Form-Fields/Table.htm" />
         </TocEntry>
         <TocEntry
           Title="[%=System.LinkedTitle%]"
-          Link="/Content/Forms-Current/Previewing-a-Form.htm" />
+          Link="/Content/Resources/BusinessProcesses/Previewing-a-Form.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Applying-a-Theme-to-a-Form.htm" />
+          Link="/Content/Resources/BusinessProcesses/Applying-a-Theme-to-a-Form.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Using-Regular-Expressions-with-Field-Masks.htm" />
+          Link="/Content/Resources/BusinessProcesses/Using-Regular-Expressions-with-Field-Masks.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Formulas.htm" />
+          Link="/Content/Resources/BusinessProcesses/Formulas.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Creating-Rules-to-Show-or-Hide-Fields.htm" />
+          Link="/Content/Resources/BusinessProcesses/Creating-Rules-to-Show-or-Hide-Fields.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Filling-Fields-with-Lookup-Rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          Link="/Content/Resources/BusinessProcesses/Filling-Fields-with-Lookup-Rules.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/Custom-Error-Messages-Form.htm" />
+          Link="/Content/Resources/BusinessProcesses/Custom-Error-Messages-Form.htm" />
         <TocEntry
           Title="CSS and JavaScript in the Forms Designer"
-          Link="/Content/Forms-Current/Javascript-and-CSS/scripting-in-forms-desgner.htm">
+          Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/scripting-in-forms-desgner.htm">
           <TocEntry
             Title="The LFForm Object"
-            Link="/Content/Forms-Current/Javascript-and-CSS/TheLFFormObject.htm"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/TheLFFormObject.htm"></TocEntry>
           <TocEntry
             Title="Styles in the Forms Designer"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Styles-in-the-Form-Designer.htm" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Styles-in-the-Form-Designer.htm" />
         </TocEntry>
         <TocEntry
           Title="Customizing a Classic Form with CSS and Javascript"
-          Link="/Content/Forms-Current/Javascript-and-CSS/Customizing a Form with CSS and Javascript.htm">
+          Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Customizing a Form with CSS and Javascript.htm">
           <TocEntry
             Title="Getting Started with CSS"
-            Link="/Content/Forms-Current/Javascript-and-CSS/CSS Selectors.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/CSS Selectors.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
           <TocEntry
             Title="Getting Started with JavaScript"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Selectors.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Javascript Selectors.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
           <TocEntry
             Title="Background and Body Images"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Background Images.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Background Images.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="CSS Customizations for Buttons"
-            Link="/Content/Forms-Current/Javascript-and-CSS/CSS Customizations for Buttons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/CSS Customizations for Buttons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="CSS Customizations for Fields, Titles, and Descriptions"
-            Link="/Content/Forms-Current/Javascript-and-CSS/CSS Text Customizations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/CSS Text Customizations.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Customizing Required Fields with JavaScript"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Customizing Required Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Customizing Required Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Customizing Buttons with JavaScript"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Buttons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Javascript Buttons.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Customizing Collections with JavaScript"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Customizations for Collections.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Javascript Customizations for Collections.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Customizing Tables"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Customizing Tables.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Customizing Tables.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Customizing Signature Fields with JavaScript"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Javascript Customizations for Signature Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Javascript Customizations for Signature Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="[%=System.LinkedTitle%]"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Email Confirmation Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Email Confirmation Fields.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd"></TocEntry>
           <TocEntry
             Title="Using Lookup-Related Events"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Using Lookup-Related Events.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Using Lookup-Related Events.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Customizing the User Task Comments Box"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Customizing the Comments Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Customizing the Comments Box.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Displaying Documents in a Form"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Displaying Documents in a Form.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Displaying Documents in a Form.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="[%=System.LinkedTitle%]"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Included-CSS-and-JavaScript-Libraries.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Included-CSS-and-JavaScript-Libraries.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="[%=System.LinkedTitle%]"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Cloud-Referencing-Custom-JavaScript-CSS-Files.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Cloud-Referencing-Custom-JavaScript-CSS-Files.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
           <TocEntry
             Title="Other Resources"
-            Link="/Content/Forms-Current/Javascript-and-CSS/Other Resources.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+            Link="/Content/Resources/BusinessProcesses/Javascript-and-CSS/Other Resources.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         </TocEntry>
       </TocEntry>
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Getting-Started-with-Team-Management.htm">
+        Link="/Content/Resources/BusinessProcesses/Getting-Started-with-Team-Management.htm">
         <TocEntry
           Title="[%=System.LinkedTitle%]"
-          Link="/Content/Forms-Current/process-migration.htm"
+          Link="/Content/Resources/BusinessProcesses/process-migration.htm"
           StartSection="false" />
       </TocEntry>
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Monitoring-Process-Instances-and-Tasks.htm"></TocEntry>
+        Link="/Content/Resources/BusinessProcesses/Monitoring-Process-Instances-and-Tasks.htm"></TocEntry>
       <TocEntry
         Title="[%=System.LinkedTitle%]"
-        Link="/Content/Forms-Current/Frequently-Asked-Questions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+        Link="/Content/Resources/BusinessProcesses/Frequently-Asked-Questions.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
       <TocEntry
         Title="Analytics and Reports"
-        Link="/Content/Forms-Current/Analytics/Analytics-Reports.htm">
+        Link="/Content/Resources/BusinessProcesses/Analytics/Analytics-Reports.htm">
         <TocEntry
           Title="Process Completion Rates"
-          Link="/Content/Forms-Current/Analytics/Viewing-Process-Completion-Rates.htm"
+          Link="/Content/Resources/BusinessProcesses/Analytics/Viewing-Process-Completion-Rates.htm"
           MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
           Title="Visualizing Task Loads"
-          Link="/Content/Forms-Current/Analytics/Task-Loads-Heat-Map.htm"
+          Link="/Content/Resources/BusinessProcesses/Analytics/Task-Loads-Heat-Map.htm"
           MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
           Title="Viewing In-Progress Instances and Forecasts"
-          Link="/Content/Forms-Current/Analytics/Viewing-In-Progress-Instances.htm"
+          Link="/Content/Resources/BusinessProcesses/Analytics/Viewing-In-Progress-Instances.htm"
           MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
           Title="Form Reports"
-          Link="/Content/Forms-Current/Analytics/Viewing-Form-Submission-Data.htm"
+          Link="/Content/Resources/BusinessProcesses/Analytics/Viewing-Form-Submission-Data.htm"
           MadCap:generatedToc="true" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
           Title="Team and User Workloads"
-          Link="/Content/Forms-Current/Analytics/Task-Loads-Teams-Users.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
+          Link="/Content/Resources/BusinessProcesses/Analytics/Task-Loads-Teams-Users.htm" xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" />
         <TocEntry
           Title="[%=System.LinkedTitle%]"
-          Link="/Content/Forms-Current/Analytics/Viewing-Process-Irregularities.htm" />
+          Link="/Content/Resources/BusinessProcesses/Analytics/Viewing-Process-Irregularities.htm" />
       </TocEntry>
       <TocEntry
         Title="Variables"
-        Link="/Content/Forms-Current/Variables.htm">
+        Link="/Content/Resources/BusinessProcesses/Variables.htm">
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/List-of-Variables.htm" />
+          Link="/Content/Resources/BusinessProcesses/List-of-Variables.htm" />
         <TocEntry
           Title="[%=System.LinkedHeader%]"
-          Link="/Content/Forms-Current/User-Task-Variables.htm" />
+          Link="/Content/Resources/BusinessProcesses/User-Task-Variables.htm" />
       </TocEntry>
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm" />
+        Link="/Content/Resources/BusinessProcesses/Using-the-Rich-Text-Editor-for-Custom-HTML-fields-and-Email-Notifications.htm" />
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/populating-a-form-with-url-parameters.htm" />
+        Link="/Content/Resources/BusinessProcesses/populating-a-form-with-url-parameters.htm" />
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Best-Practices.htm" />
+        Link="/Content/Resources/BusinessProcesses/Best-Practices.htm" />
       <TocEntry
         Title="[%=System.LinkedHeader%]"
-        Link="/Content/Forms-Current/Frequently-Asked-Questions.htm"></TocEntry>
+        Link="/Content/Resources/BusinessProcesses/Frequently-Asked-Questions.htm"></TocEntry>
     </TocEntry>
     <TocEntry
       Title="Bots"

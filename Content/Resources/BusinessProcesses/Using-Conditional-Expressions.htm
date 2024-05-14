@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd" MadCap:conditions="Default.Complete">
+    <head><title>Conditional Expressions | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Conditional expressions determine which outgoing paths a process flow takes when exiting a gateway or activity." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Using Conditional Expressions</h1>
+        <p>Conditional expressions are used in a <a href="Building-a-Process.htm" title="Click here to learn more." alt="Click here to learn more.">business process</a> to determine the next steps that an instance of a process should take. For example, a form may be routed to different individuals for approval depending on the values of fields in the form.</p>
+        <p>Conditional expressions let you define the conditions that must be met for a particular outflow path to be taken or for a specific priority to be assigned to a task. Conditional expressions are necessary when several potential paths can be followed after a <a href="Gateways.htm" title="Click here to learn more." alt="Click here to learn more.">gateway </a>or <a href="Activities.htm" title="Click here to learn more." alt="Click here to learn more.">activity</a>. </p>
+        <p>When you click in the <b>Conditional Expression</b> text box, the conditional expression builder appears. This allows you to define the condition according to the XPath language. The conditional expression builder translates the information you enter into an XPath statement.</p>
+        <p>
+            <img src="Resources/Images/usingconditional2.png" alt="Conditional expression builder" title="You can specify a complex logical expression by linking multiple conditions with a logical operator." />
+        </p>
+        <p>In the conditional expression builder, specify the conditions that must be met for the action to occur. You can create conditional expressions based on:</p>
+        <ul>
+            <li><b><a href="User-Task-Variables.htm" title="Click here to learn more." alt="Click here to learn more.">Actions taken during a user task</a>.</b> You can specify an action from a previous user task based on its label, such as "Rejected", "Approved", etc.</li>
+            <li><b><a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">Process Variables</a>.</b> In addition to user task actions, you can create conditions based on the process initiator.</li>
+            <li><b>Field values.</b> You can also use a variable from fields. </li>
+            <p class="ex"><b>Example:</b> An expense report form used in your process contains a "Total Amount" <a href="../../BusinessProcesses/Form-Fields/Currency.htm" title="Click here to learn more." alt="Click here to learn more.">currency field</a>, and you assigned a variable called "total" to this field. You want to route the form to a manager if the total amount is greater than $100, so you create a conditional expression that says, "If total (<b>action</b>) is greater than (<b>operator</b>) $100 (<b>value</b>), take this outflow path."</p>
+        </ul>
+        <p class="note"><b>Note:</b> If you have multiple conditions that determine whether a path is taken, you can insert operators (e.g., "and," "or") into your conditional expressions.</p>
+        <p>By default, conditional expressions are case-sensitive. Once you've created a conditional expression, you can modify it to make the expression case-insensitive.</p>
+        <h2 class="topicheading">Making a Conditional Expression Case-insensitive
+        </h2>
+        <ol>
+            <li>Using the conditional expression builder, create a conditional expression that uses the value that should be case-insensitive. The following image shows a match for a single line field to the value "test".            <p><img src="Resources/Images/usingconditional3.png" alt="Conditional expression builder configured to match a single line field to the value &quot;test&quot;." title="When configured this way, the conditional expression is case-sensitive." /></p></li>
+            <li>After building the expression and clicking <b>Insert</b>, the statement for the conditional expression will appear in the text area below the conditional expression builder.</li>
+            <li>Edit the statement to fit the following structure: <b>matches(/dataset/attribute_name, "value", "i")</b><p><img src="Resources/Images/usingconditional4.png" alt="Modified conditional expression" title="Using the &quot;matches&quot; syntax makes the expression case-insensitive." /></p></li>
+        </ol>
+        <h2 class="topicheading">Using Dates in Conditional Expressions</h2>
+        <p>When specifying a date in a conditional expression, you'll need to use the expected date format <b>yyyy-MM-dd</b> (e.g., 2013-12-01).</p>
+        <h2 class="topicheading">Converting Strings to Numbers in Conditional Expressions</h2>
+        <p>The values in <a href="../../BusinessProcesses/Form-Fields/Number.htm" title="Click here to learn more." alt="Click here to learn more.">number</a> and <a href="../../BusinessProcesses/Form-Fields/Currency.htm" title="Click here to learn more." alt="Click here to learn more.">currency fields</a> are automatically treated as numbers when XPath statements are evaluated. If you want the value in a <a href="../../BusinessProcesses/Form-Fields/Single-Line.htm" title="Click here to learn more." alt="Click here to learn more.">single line field</a> to be evaluated as a number instead of as a string (letters), use the number()&#160;function to force the strings to numbers in number variables. For example, if "/dataset/Single_Line" is a string, you can type "/dataset/number(Single_Line)" to force the string to a number.</p>
+        <p>If you are already using a number, instead of a number variable, be sure to remove quotation marks from the value. </p>
+        <p>
+            <img src="Resources/Images/usingconditional1.png" alt="Quotation marks around number that should be removed for numerical comparison." title="Only remove these marks if a specific number is used. Do not remove them if a variable that takes on numerical values is used." />
+        </p>
+        <p><b>Related Topics</b>
+        </p>
+        <ul>
+            <li><a href="Building-a-Process.htm" title="Click here to learn more." alt="Click here to learn more.">Building a  process</a>
+            </li>
+            <li><a href="Gateways.htm" title="Click here to learn more." alt="Click here to learn more.">Gateways</a>
+            </li>
+            <li><a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">Variables</a>
+            </li>
+        </ul>
+    </body>
+</html>

@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Using Lookup Rules to Retrieve Data from Rules | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Use data from rules to automatically fill fields in your form." />
+    </head>
+    <body>
+        <h1>Automatically Filling Fields with Lookup Rules</h1>
+        <p> Lookup rules for form fields attempt to access data from your pre-configured <a href="../Rules/Rules.htm" title="Click here to learn more." alt="Click here to learn more.">rules</a>, and use this data for pre-populating fields or auto-suggesting field values. If you have data in an external database, you must import the relevant data into <a href="../Entities/lookup-tables.htm" title="Click here to learn more." alt="Click here to learn more.">lookup tables</a> before you can use lookups on that data.</p>
+        <p>Business processes can look up data from  <a href="../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">lookup table queries</a>, <a href="../Rules/Formulas/Getting-Started-with-Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">formulas</a>, <a href="../Integrations/integrationplatform.htm" title="Click here to learn more." alt="Click here to learn more.">application connections</a>, <a href="../Rules/web-request-rule.htm" title="Click here to learn more." alt="Click here to learn more.">web request rules</a>, and <a href="../Rules/Decision-Tables/Getting-Started-with-Decision-Tables.htm" title="Click here to learn more." alt="Click here to learn more.">decision tables</a>. </p>
+        <p>To configure lookup rules, click on the <b>Lookup Rules</b> tab in the <a href="Key-Concepts-in-Forms.htm#Form" title="Click here to learn more." alt="Click here to learn more.">form designer</a>.</p>
+        <p>For best performance, turn on pagination for filling a table/collection and use drop-downs instead of checkbox or radio buttons.</p>
+        <h2 class="topicheading">Lookups with Lookup Tables</h2>
+        <p>If you have table-like data from an external source, this should be inserted into a lookup table. Then, you can create a <a href="../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">query</a> that business processes can use for lookups.</p>
+        <p>Using lookups with queries, you can autofill fields or auto-suggest field values in the following ways:</p>
+        <ul>
+            <li>Auto-fill a checkbox, dropdown, or radio button field with the values of a lookup table column.</li>
+            <li>For a single-value fields like a single line fields and number fields, auto-suggest field values as the user is filling the field.</li>
+            <li>If the  lookup table member has only one value, auto-populate a single-value field with that value.</li>
+        </ul>
+        <p>In the following example, we have constructed a query  that contains data about possible choices of coffee beans, which has a WHERE clause with an input value of %(Beans) that has "Set as input parameter" selected. We want to auto-populate a drop-down menu on the form with the possible origins of those beans (Kenya, Panama, etc.), as listed in the query.</p>
+        <p>
+            <img src="Resources/Images/BE-query_coffeebeans.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 820px;height: 295px;" alt="Table showing business entity query" title="Business entity queries are a kind of business rule based on data stored in a business entity." />
+        </p>
+        <p>In the form designer, we have a drop-down field named "Coffee Origins" that offers choices based on the values of CoffeeTypes_Origin in this query. We have configured the form to use the lookup table named Beans, and to fill the Coffee Origins field with values from the column CoffeeTypes_Origin.</p>
+        <p>
+            <img src="Resources/Images/forms_lookup_dropdown_BEQuery.PNG" style="max-width: 100%; max-height: 100%;" alt="Lookup rule using a business entity query" title="The procedure for configuring lookup rules based on other types of business rules is similar." />
+        </p>
+        <h3>To configure a lookup from a  query</h3>
+        <p>These instructions assume that the data you intend to use is already stored in one or more lookup tables, and you have <a href="../Rules/Data-Queries/Getting-Started-with-Data-Queries.htm" title="Click here to learn more." alt="Click here to learn more.">created</a> and <a href="../Rules/Publishing-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">published</a> a query that can pull that data from those tables.</p>
+        <ol>
+            <li>In the form designer, navigate to the <b>Lookup Rules</b> tab.</li>
+            <li>Click <b>Add rule</b>, or, if there are no lookup rules yet, <b>New lookup rule</b>.</li>
+            <li>Under <b>Select rule type</b>, select <b>Lookup Table Query</b>.</li>
+            <li>In the next dropdown menu, select the query that you want to use.</li>
+            <li>Depending on the selected query, you may have to select which fields should match input parameters in order for auto-filling to occur. Select the relevant fields in the drop-down menu in each <b>When</b> condition.</li>
+            <li>Click <b>Add output parameter <img src="../Images/add-output-parameter-icon.png" style="width: 25px;height: 25px;" />.</b></li>
+            <li>For each field that you want to auto-fill, specify a <b>Fill</b> condition.<ol style="list-style-type: lower-alpha;"><li>From the menu after <b>Fill</b>, select the field that you want to fill (or to have auto-suggestions for).</li><li>From the menu after <b>with</b>, select the column of the query that should be used for the auto-population or auto-suggestion.</li><li>Click <b>+</b> to add more <b>Fill</b> conditions.</li></ol></li>
+            <li>You may not want to enable to lookup rule right away, especially if you plan to work on it more. Turn off the <b>Enable lookup rule</b> toggle to disable the rule for now. When the form is saved, the lookup rules will be saved whether they are enabled or not.</li>
+            <li>To add more rules that use this query, click the <b>+</b> icon and repeat steps 2-9 for each rule you want to add.</li>
+        </ol>
+        <h2 class="topicheading">Lookups Using Formulas</h2>
+        <p>In process automation, you can configure and store <a href="../Rules/Formulas/Getting-Started-with-Formulas.htm" title="Click here to learn more." alt="Click here to learn more.">formulas</a> to be used across different applications. This saves you the trouble of having to configure the same formula repeatedly to be used in different kinds of processes. With lookup rules, you can automatically fill a field using a formula that has been stored as a rule. For example, if your organization has a complicated formula that calculates the total reimbursement an employee will get for the travel expenses submitted on a form, they can store this formula as a rule and use it in multiple forms or workflows.</p>
+        <h3>To use a formula in a lookup rule</h3>
+        <p>These instructions assume that you have already created the formula as a  rule and <a href="../Rules/Publishing-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">published</a> it.</p>
+        <ol>
+            <li>In the form designer, navigate to the <b>Lookup Rules</b> tab.</li>
+            <li>Click <b>Add rule</b>, or, if there are no lookup rules yet, <b>New lookup rule</b>.</li>
+            <li>Under <b>Select rule type</b>, select <b>Formula</b>.</li>
+            <li>In the next drop-down menu, select the name of the formula you want to use.</li>
+            <li>In the drop-down menu after <b>When</b>, select the field whose value should be the <a href="../Rules/Formulas/Defining-the-Input-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">input parameter</a> in the formula. Do this for each <b>When</b> statement that appears. The formula will perform calculations on the input values.</li>
+            <li><b>Optional</b>: If you have more than one input parameter that must match for the calculation to take place, you can clear the <b>Show Auto Fill Button</b> option if you do not want the process to automatically recalculate field values when the fields that must match have their values changed. If you clear this option, then the form will have an autofill button that the user can click to rerun their calculation after they change any relevant values.</li>
+            <li>Click <b>Add output parameter</b>.</li>
+            <li>In the drop-down menu after <b>Fill</b>, select the field that should be filled with the formula's output.</li>
+            <li>In the drop-down menu after <b>with</b>, select the <a href="../Rules/Formulas/Specifying-Output-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">output parameter</a> that will fill the previously specified field.</li>
+            <li>If you want more fields to be filled with the output parameter, click the <b>+</b> icon and repeat the previous step.</li>
+        </ol>
+        <h2 class="topicheading">Lookups Using Decision Tables</h2>
+        <p><a href="../Rules/Decision-Tables/Getting-Started-with-Decision-Tables.htm" title="Click here to learn more." alt="Click here to learn more.">Decision tables</a> can be used to capture logic that is used in processes, without having to configure that logic using gateways, outflows, and sequence flows. This means that the same logical rules can be easily shared across multiple processes, without having to configure anew the logic in the process diagram for each process.</p>
+        <p>In the following example, we have a decision table that decides which level of management a purchase order should be routed to, depending on the dollar amount of the purchase. If the purchase is less than $10,000, it is routed to a lower level manager. If it is more than $10,000, it is routed to a higher level manager.</p>
+        <p>
+            <img src="../Images/decisionTable_purchaseOrder_583x140.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 763px;height: 182px;" alt="Sample decision table" title="Decision tables can be created in the Rules section of Process Automation" />
+        </p>
+        <p>We use this decision table in a form to fill a field based on the output from the table. The inputs will come from another field in the same form.</p>
+        <p>
+            <img src="../Images/forms_lookups_decisionTable_732x155.png" style="width: 769px;height: 229px;border-left-style: solid;border-left-width: 1px;border-right-style: solid;border-right-width: 1px;border-top-style: solid;border-top-width: 1px;border-bottom-style: solid;border-bottom-width: 1px;" />
+        </p>
+        <p>Later on in the process, the value of the Normal Review field can be used to determine where the form is routed. If Normal Review has the value "true", it is routed to a lower level manager. Otherwise, it is routed to a higher level manager.</p>
+        <h3>To configure a lookup rule using a decision table</h3>
+        <p>These instructions assume that you have already <a href="../Rules/Decision-Tables/Setting-Up-Input-and-Output-Fields.htm" title="Click here to learn more." alt="Click here to learn more.">configured the decision table</a> and <a href="../Rules/Publishing-Rules.htm" title="Click here to learn more." alt="Click here to learn more.">published</a> it.</p>
+        <ol>
+            <li>In the form designer, navigate to the <b>Lookup Rules</b> tab.</li>
+            <li>Click <b>Add rule</b>, or, if there are no lookup rules yet, <b>New lookup rule</b>.</li>
+            <li>Under <b>Select rule type</b>, select <b>Decision Table</b>.</li>
+            <li>In the next drop-down menu, select the name of the decision table you want to use.</li>
+            <li>For each <b>When</b> condition that appears, select the field values that should match each of the decision table's input parameters.</li>
+            <li>Click <b>Add output parameter</b>.</li>
+            <li>From the menu after <b>Fill</b>, select the field that should be filled with one of the output parameters.</li>
+            <li>From the menu after <b>with</b>, select the output parameter that will be used to fill the previously selected field.</li>
+            <li>To fill another field with an output parameter, click the <b>+</b> button and repeat the previous two steps.</li>
+        </ol>
+        <h2 class="topicheading">Lookups Using an Application Connection</h2>
+        <p><a href="../Integrations/Integrations-Overview.htm" title="Click here to learn more." alt="Click here to learn more.">Application connections</a> can be used to retrieve information from an external application like a CRM, and fill fields with that information.</p>
+        <ol>
+            <li>In the form designer, navigate to the <b>Lookup Rules</b> tab.</li>
+            <li>Click <b>Add rule</b>, or, if there are no lookup rules yet, <b>New lookup rule</b>.</li>
+            <li>Under <b>Select rule type</b>, select <b>Application Connection</b>.</li>
+            <li>In the next dropdown select the application connection to use.</li>
+            <li>Under <b>Please select an action</b>, select the action to use for the rule. </li>
+            <li>For the <b>When</b> condition, select the form field or variable that contains the item needed to complete the action. </li>
+            <li>Click <b>Add output parameter</b>.</li>
+            <li>In the drop-down menu after <b>Fill</b>, select the field that should be filled with the action's output.</li>
+            <li>In the drop-down menu after <b>with</b>, select the <a href="../Rules/Formulas/Specifying-Output-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">output parameter</a> that will fill the previously specified field.</li>
+            <li>If you want more fields to be filled with the output parameter, click the <b>+</b> icon and repeat the previous step.</li>
+        </ol>
+        <h2 class="topicheading">Lookups using a web request</h2>
+        <p>Similar to the application connection lookup, <a href="../Rules/web-request-rule.htm" title="Click here to learn more." alt="Click here to learn more.">web request rules</a> that use an application connection can be used to retrieve information from an external application like a CRM, and fill fields with that information. However, the application connection type is limited to using predefined objects along with a limited number of custom objects with standard CRUD operations. A web request rule through an application connection can send any request, and can also be highly customized using a graphQL&#160;query.</p>
+        <ol>
+            <li>In the form designer, navigate to the <b>Lookup Rules</b> tab.</li>
+            <li>Click <b>Add rule</b>, or, if there are no lookup rules yet, <b>New lookup rule</b>.</li>
+            <li>Under <b>Select rule type</b>, select <b>Web Request</b>.</li>
+            <li>In the next dropdown select the rule to use. <p class="note"><b>Note:</b> Only web request rules using an application connection will appear in the dropdown.</p></li>
+            <li>For the <b>When</b> condition, select the form field or variable that contains the item needed to complete the action. </li>
+            <li>Click <b>Add output parameter</b>.</li>
+            <li>In the drop-down menu after <b>Fill</b>, select the field that should be filled with the action's output.</li>
+            <li>In the drop-down menu after <b>with</b>, select the <a href="../Rules/Formulas/Specifying-Output-Parameters.htm" title="Click here to learn more." alt="Click here to learn more.">output parameter</a> that will fill the previously specified field.</li>
+            <li>If you want more fields to be filled with the output parameter, click the <b>+</b> icon and repeat the previous step.</li>
+        </ol>
+        <h2 class="topicheading">Other Autofill Methods</h2>
+        <p>Lookup rules are most appropriate for auto-filling fields when you want field data to match data from an external source of data. Providing default values is another way to help users fill out a form more quickly and accurately. You can provide default values by specifying them under <b>Default value</b> when you add a field to a form, or by <a href="populating-a-form-with-url-parameters.htm" title="Click here to learn more." alt="Click here to learn more.">putting parameters in the form's URL</a>.</p>
+        <h2 class="topicheading">Versioning</h2>
+        <p><a href="../Rules/Rules.htm" title="Click here to learn more." alt="Click here to learn more.">Rules</a> in process automation are versioned. The versioning of rules interacts with lookup rules as follows.</p>
+        <ul>
+            <li>When the lookup rule is first created, it uses the latest version of the process automation rule by default. You can choose to use an earlier version of the process automation rule.</li>
+            <li>If a process automation rule in an existing lookup rule is updated, you can choose to update to the new version of the process automation rule, or remain with the originally selected version.</li>
+            <li>If you choose to use the latest version of a process automation rule in your lookup rule, then save your lookup rules and refresh the page, you will no longer have the option of switching back to an earlier version of the process automation rule.</li>
+        </ul>
+    </body>
+</html>

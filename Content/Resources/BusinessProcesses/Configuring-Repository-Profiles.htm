@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configuring Repository Profiles</h1>
+        <p>
+            <MadCap:concept term="Forms" />Repository profiles are used in Save to Repository <a href="Service-Tasks.htm" title="Click here to learn more." alt="Click here to learn more.">service tasks</a> and contain the Laserfiche Server, repository, and credentials that Laserfiche Forms will use when performing the service task.</p>
+        <p><b>To create or edit a repository profile</b>
+        </p>
+        <ol>
+            <li>In the settings window for the Save to Repository service task, click <b>New Profile</b> or <b>Edit</b> next to <b>Repository profile</b>.</li>
+            <li>In the <b>Profile name</b> field, specify a name for the profile.</li>
+            <li>In the <b>Laserfiche Server</b> field, enter the name of the Laserfiche Server associated with the desired repository.</li>
+            <li>After selecting a Laserfiche Server, click in the <b>Repository</b>  text box and then click the drop-down arrow to see the available repositories. Select one.</li>
+            <li>In the <b>User name</b> and <b>Password</b> fields, specify the credentials that Laserfiche Forms should use to authenticate to the specified repository. </li>
+            <li>
+               To configure the Forms Server to secure network communications when connecting to Laserfiche, select the <b>Use SSL connection</b> checkbox.
+            </li>
+            <li>When you are finished, click <b>Verify and save</b>.</li>
+        </ol>
+        <h2>Generating a TIF from a Saved PDF</h2>
+        <p>Within the repository profile user options, you can automatically generate a TIF from an incoming PDF.</p>
+        <ol>
+            <li>Open the <b>Options</b> section in web client for the specific repository profile user. </li>
+            <li>Go to <b>New Document</b>.</li>
+            <li>Select <b>Generate pages when importing PDFs</b> to generate a TIF from an incoming PDF.<p><img src="Resources/Images/Generate-PDF.png" /></p></li>
+            <li>Click <b>Save</b>.</li>
+        </ol>
+    </body>
+</html>

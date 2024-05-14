@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Process Migration</title>
+    </head>
+    <body>
+        <h1>Process Migration</h1>
+        <p>Processes can be moved between the Global context and a team project if needed to control access based on your team structure. <a href="../Teams/projects.htm" title="Learn more about Projects." alt="Learn more about Projects.">Projects</a> let you organize access to resources and limit access to data collected by those resources.</p>
+        <h2>To migrate a process from the Global context into a team project:</h2>
+        <ol>
+            <li>Locate and select the process to be moved within the business processes - manage page.<br />(Add a simple screenshot showing Manage header and Migrate button.)</li>
+            <li>Click the <b>Migrate</b> button in the toolbar above the process list (icon image).</li>
+            <li>A dialog will open. To cancel migration, simply close the dialog before the final <b>Confirm</b> button.</li>
+            <li><b>Step 1:&#160;Team and Project:</b>
+                <ol>
+                    <li>Select the team from the dropdown or type the team name to search for the team.</li>
+                    <li>Select the project from the dropdown or type the project name to search.</li>
+                    <li>Click <b>Next</b>.</li>
+                </ol>
+            </li>
+            <li><b>Step 2: Resources:</b>
+                <ol>
+                    <li>If there are any other process automation resources linked to this process (lookup tables for instance), they will be listed here. By default, if the security settings for the selected team does not already allow access to Global resources, these resources will be added to the <b><a href="../Teams/creating-a-project.htm#Project" title="Click here for additional information" alt="Click here for additional information">Project Access to Global Resources</a></b> area of the team settings.
+                    <ol><li>To prevent one or more of the listed resources from being added to the project security settings, uncheck the box next to its name in the list.<p class="note"><b>Note:</b>&#160;If you deselect or otherwise deny access to any of the resources listed in this dialog, the process will be suspended any time it attempts to access that resource. Once the process has been moved, you must create a resource to replace any missing resources within the project or otherwise revise the process to avoid this issue.</p></li></ol></li>
+                    <li>Click <b>Next</b>.</li>
+                </ol>
+            </li>
+            <li><b>Step 3:&#160;Summary</b>
+                <ol>
+                    <li>This page provides information about the migration before the process is moved. </li>
+                    <li><b>Optional</b>: If you select the <b>Once migration is complete, go to the <i>project name</i> management page.</b> option, once complete the page will redirect to the process Manage page within the project where the process will now be listed. Otherwise, the main Manage page will be displayed.</li>
+                    <li>Click <b>Confirm</b> to complete the migration.</li>
+                </ol>
+            </li>
+        </ol>
+        <h2>To migrate a process from a team project into the Global context:</h2>
+        <ol>
+            <li>Navigate to the process <b>Manage</b> page within the project.</li>
+            <li>Locate and select the process to migrate (screenshot)</li>
+            <li>Click the <b>Migrate</b> button.</li>
+            <li>A dialog will display any project related resources.  To cancel migration, simply close the dialog before clicking <b>Confirm</b>. 
+			<p class="note"><b>Note:</b> Any resources located within the project will not be available to the process once it has migrated to global and the process will be suspended any time it attempts to access a listed resource.  Once the process has been moved, you must create a global resource to replace any missing resources  or otherwise revise the process to avoid this issue.</p></li>
+            <li><b>Optional</b>: If you select the <b>Once migration is complete, go to the <i>Global</i> management page.</b> option, once complete the page will redirect to the main process Manage page, otherwise the project Manage page will be displayed.</li>
+            <li>Click <b>Confirm</b> to complete the migration.</li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

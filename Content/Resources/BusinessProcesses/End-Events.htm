@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>End Events | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="End events terminate a process flow. Learn about generic end events and terminate end events." />
+    </head>
+    <body>
+        <h1>End Events</h1>
+        <p>Every <a href="Key-Concepts-in-Forms.htm#Process" title="Click here to learn more." alt="Click here to learn more.">process flow</a> in your process must end with an end event. A generic end event and an error end event terminate only the process flows they are attached to. A terminate end event terminates the entire process, including any <a href="Building-Sub-processes.htm" title="Click here to learn more." alt="Click here to learn more.">sub-processes</a> and process flows, even if these do not end in terminate end events.</p>
+        <h2 class="topicheading">Generic End Event</h2>
+        <p>End events mark the end of a process. Once a process flow reaches an end event, the process flow ends. However, if there are other process flows still in progress, those will continue until they also reach an end event.</p>
+        <p>An end event is represented by the following symbol: <img src="Resources/Images/end-event-icon.PNG" /></p>
+        <h2 class="topicheading"><a name="Terminat"></a>Terminate End Event</h2>
+        <p>Once a process reaches a terminate end event, the entire process will be terminated, including sub-processes and process flows that do not end in terminate end events.</p>
+        <p>A terminate end event is represented by the following symbol: <img src="Resources/Images/terminate-end-event-icon.PNG" /></p>
+        <p class="ex" MadCap:conditions="Default.Do not include"><b>Example</b>: Within a company, you can use a form to submit an information request from the company's Enterprise Resource Planning (ERP) system. When the form is submitted, it is routed both to a manager for review, and to a Workflow service task which attempts to retrieve the ERP&#160;information. If the format of the request is invalid (e.g. it may ask for information that does not exist), the service task routes the process flow to a terminate end event. This means that no matter what happens in other process flows (whether the manager approves or rejects the request), all process flows are terminated. This makes sense because there is no point in asking the manager to approve a request for non-existent information. The other process flows in the process end in generic end events. This means, for example, that when a manager approves or rejects the request, the Workflow service task that retrieves ERP information will not be interrupted.</p>
+        <img src="Resources/Images/ERP_terminate-end-event.png" style="width: 429px;height: 364px;" alt="Sample process with a terminate end event." title="Use a terminate end event if you want all process flows and sub-processes in the process to end." MadCap:conditions="Default.Do not include" />
+        <h2>Error End Event</h2>
+        <p>See the <a href="Error-Events.htm" title="Click here to learn more." alt="Click here to learn more.">Error Events</a> page for more details.</p>
+    </body>
+</html>

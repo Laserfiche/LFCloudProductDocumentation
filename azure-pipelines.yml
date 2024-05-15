@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- BP_Revisions
+- master
 
 pool:
   name: Doc Build Agents
@@ -20,6 +20,6 @@ steps:
   inputs:
     SourceFolder: '$(Build.SourcesDirectory)\Output\SideNav'
     Contents: '**'
-    TargetFolder: '\\v-dev-2016-27\wwwroot\LFCloudProductDocumentation'
+    TargetFolder: '\\laserfiche.com\fileserver\buildserver\builds\Documentation\Cloud\LFCloudProductDocumentation'
     CleanTargetFolder: true
     OverWrite: true

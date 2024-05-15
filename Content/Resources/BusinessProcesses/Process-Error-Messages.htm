@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Custom Error Messages in Business Processes | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Create rules to display error messages when process variables satisfy certain conditions." />
+    </head>
+    <body>
+        <h1>Process Error Messages</h1>
+        <p>You can define custom error messages to be displayed when <a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">variables</a> in a <a href="Business-Processes.htm" title="Click here to learn more." alt="Click here to learn more.">business process</a> violate certain constraints. Custom error messages can contain process variables, and can be imported or exported for easy sharing between different processes.</p>
+        <p>Process error messages are distinct from <a href="Custom-Error-Messages-Form.htm" title="Click here to learn more." alt="Click here to learn more.">custom error messages configured for a form</a>. The latter apply to a specific form, while the former are process-wide.</p>
+        <h2>To configure a new custom process error message</h2>
+        <ol>
+            <li>Open the process modeler for the process of interest.</li>
+            <li>Click on the <b>Process Properties</b> icon <img src="Resources/Images/Settings.png" style="width: 19px;height: 19px;border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;" /> in the top right.</li>
+            <li>In the <b>Error Messages</b> tab, click <b>Add rule</b> to configure a new custom error message. </li>
+            <li>Under <b>Display</b>, specify the message that should be displayed. You can add process variables to the message by clicking <b>Insert variables</b> <img src="Resources/Images/VariableButton.png" style="width: 24px;height: 20px;" />.</li>
+            <li>Under <b>When</b>, select the condition that will cause the error message to be displayed.</li>
+            <li>Under <b>For</b>, select which fields the condition will apply to.<ul><li>If you select <b>All fields</b>, the error message will appear whenever any field in the process meets the specified condition.</li><li>If you select <b>These field type(s)</b>, you must further select a field type that the condition will apply to.</li><li>If you select <b>Fields text does not match required pattern</b>, you must specify a regular expression that picks out the fields you want the condition to apply to. Regular expressions here work the same ways as they do in <a href="Using-Regular-Expressions-with-Field-Masks.htm" title="Click here to learn more." alt="Click here to learn more.">field masks</a>.</li></ul></li>
+        </ol>
+        <p>After configuring your first rule, click <b>Add rule</b> to add more rules. Re-order the rules by using the up and down arrows on the left.</p>
+        <h2>Exporting and importing error messages</h2>
+        <p>Any set of error messages can be exported by clicking the <b>Download</b> icon in the top right corner.</p>
+        <p>Alternatively, click the <b>Upload</b> icon in the top right corner to import a set of error messages that have been exported from another process. Imported error messages cannot add on to an existing set of error messages but will overwrite them.</p>
+        <h2>Related Links</h2>
+        <ul>
+            <li><a href="Business-Processes.htm" title="Click here to learn more." alt="Click here to learn more.">Business Processes</a>
+            </li>
+            <li><a href="Custom-Error-Messages-Form.htm" title="Click here to learn more." alt="Click here to learn more.">Custom Error Messages in a Form</a>
+            </li>
+            <li><a href="Variables.htm" title="Click here to learn more." alt="Click here to learn more.">Variables</a>
+            </li>
+        </ul>
+    </body>
+</html>

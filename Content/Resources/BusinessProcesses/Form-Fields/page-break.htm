@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Page Break | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Create multiple pages or tabs in your Laserfiche Process Automation form by inserting a page break element." />
+    </head>
+    <body>
+        <h1>
+            <MadCap:concept term="Forms" />Page Breaks, Tabs or Progress Bars</h1>
+        <p>Page breaks split a form into multiple pages or tabs. Each field placed in a page is part of that page. Pagination style options include displaying pages as:</p>
+        <ul>
+            <li>Tabs</li>
+            <li>A progress bar</li>
+            <li>A drop-down list</li>
+        </ul>
+        <p>Additional options include whether to display a previous and next button at the bottom of the form to navigate between pages.</p>
+        <p>The message start event submit button and user task action buttons are shown on the final page.</p>
+        <p>When a form is read-only, all pages are shown as in a single page format.</p>
+        <p><b>To edit a single page</b>
+        </p>
+        <ol>
+            <li>Select the page break on the canvas and click <b>Edit</b>.</li>
+            <li>Edit the page name, previous button label, and next button label for that page.<p class="note"><b>Note</b>: The header for a page break in a form is an <b>h2</b> header, not an <b>h1</b> header. Only the header of the form can be an <b>h1</b> header.</p></li>
+        </ol>
+        <p><b>To edit overall pagination settings</b>
+        </p>
+        <div id="tabs">
+            <ul>
+                <li><a href="#tabs-1">Form designer</a>
+                </li>
+                <li><a href="#tabs-2">Classic form designer</a>
+                </li>
+            </ul>
+            <div id="tabs-1">
+                <ol>
+                    <li>Click on the form title in the form designer.</li>
+                    <li>Under Pagination, click the checkbox to <b>Enable pagination</b>.<br /><br />Click <b>Show submission actions on every page</b> to show items such as payment, ReCaptcha, action buttons, and/or the comment box.<br /><br />Click <b>Enforce validation on page progression</b> to ensure all fields are properly filled before moving on to the next page.<br /><br />Click <b>Add page breaks to saved forms</b> to generate page breaks in the form when saving to PDF.</li>
+                    <li>Under <b>Pagination style</b>, configure how to display pages. <b>Navigation tabs</b> and <b>Navigation dropdown</b> allow you to jump between pages by selecting the appropriate tab or drop-down menu option. If you select <b>None</b> or <b>Progress bar</b>, the only way to navigate between pages will be by using the Previous and Next buttons.</li>
+                    <li><b>Optional</b>: If you had selected <b>Navigation tabs</b> or <b>Navigation dropdown</b>, you can also choose to clear the <b>Include previous/next buttons</b> option if you do not want users to navigate between pages using the previous/next buttons.</li>
+                    <li>Under <b>Pages</b>, you can edit the page names for all your pages, the labels on the previous/next buttons for each page, and the order in which the pages appear. To change page order, drag and drop a row using the <img src="../Resources/Images/drag button 103.png" style="width: 13px;height: 15px;" /> symbol to the left of the page name. If you move a page, all fields belonging to that page will be moved with it.</li>
+                </ol>
+            </div>
+            <div id="tabs-2">
+                <ol>
+                    <li>Double-click on the form title in the form designer.</li>
+                    <li>Click the <b>Pagination</b> tab.</li>
+                    <li>Under <b>Pagination style</b>, configure how to display pages. <b>Navigation tabs</b> and <b>Navigation dropdown</b> allow you to jump between pages by selecting the appropriate tab or drop-down menu option. If you select <b>None</b> or <b>Progress bar</b>, the only way to navigate between pages will be by using the Previous and Next buttons.</li>
+                    <li><b>Optional</b>: If you had selected <b>Navigation tabs</b> or <b>Navigation dropdown</b>, you can also choose to clear the <b>Include previous/next buttons</b> option if you do not want users to navigate between pages using the previous/next buttons.</li>
+                    <li><b>Optional</b>: Select the <b>Do not break page on saved forms</b> option to generate a PDF with one long page containing all the fields in a form when you save a form to your repository. Clear this option to generate a PDF that has  pages determined by the page breaks in the form.</li>
+                    <li>Under <b>Pagination settings</b>, you can edit the page names for all your pages, the labels on the previous/next buttons for each page, and the order in which the pages appear. To change page order, drag and drop a row using the <img src="../Resources/Images/drag button 103.png" style="width: 13px;height: 15px;" /> symbol to the left of the page name. If you move a page, all fields belonging to that page will be moved with it.</li>
+                </ol>
+            </div>
+        </div>
+    </body>
+</html>

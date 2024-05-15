@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Field Masks | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Field masks force inputs in a form's field to follow a certain format. Use regular expressions to create field masks." />
+    </head>
+    <body>
+        <h1>Field Masks</h1>
+        <p>Forms are often used to collect information that comes in standardized formats, such as phone numbers. Field masks enforce special formatting for field values like phone numbers and social security numbers. Used with <a target="_blank" href="../Regular Expressions/Regular-Expressions.htm#../Subsystems/regex/Content/Regular-Expressions.htm">regular expressions</a>, they can make it easier for users to enter the right values in a field and see those values in a useful or familiar way.</p>
+        <h3 class="topicheading">Social Security numbers</h3>
+        <p>The standard Social Security number (US) format is: <b>xxx-xx-xxxx</b>, which is represented by the regular expression \d\d\d-\d\d-\d\d\d\d. You can use this regular expression along with a field mask to make it easier for users to enter numbers without having to worry about the dashes.</p>
+        <ol>
+            <li>On the <b>Layout</b> page of the form designer, add a single line field to the canvas. Select the field and click <b>Edit</b>, then click the <b>Advanced</b> tab.</li>
+            <li>Next to <b>Regular expression</b>, enter <b>\d\d\d-\d\d-\d\d\d\d</b>.</li>
+            <li>Click <b>Done</b>.</li>
+        </ol>
+        <h3 class="topicheading">Phone numbers</h3>
+        <p>The standard phone number format (US) is <b>(xxx)xxx-xxxx</b>, which is represented by the regular expression <b>\(\d\d\d\)\d\d\d-\d\d\d\d</b>. You can use this regular expression along with a field mask to make it easier for users to enter a phone number without having to worry about the parenthesis and dashes.</p>
+        <ol>
+            <li>On the <b>Layout </b> page of the form designer, add a single line field to the canvas. Select the field and click <b>Edit</b>, then click the <b>Advanced</b> tab.</li>
+            <li>Next to <b>Regular expression</b>, enter <b><b>\(\d\d\d\)\d\d\d-\d\d\d\d</b></b>.<br /></li>
+            <li>Click <b>Done</b>.</li>
+        </ol>
+    </body>
+</html>

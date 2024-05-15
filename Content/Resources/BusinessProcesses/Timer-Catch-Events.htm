@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Timer Catch Events | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Use timer catch events to delay a process, start process flows based on how much time has passed, or terminate process flows based on how much time has passed." />
+    </head>
+    <body>
+        <h1>Timer Catch Events</h1>
+        <p>Timer catch events  determine what happens in a <a href="Business-Processes.htm" title="Click here to learn more." alt="Click here to learn more.">process</a> based on time considerations. They can be used to:</p>
+        <ul>
+            <li>Delay a process for a specified amount of time</li>
+            <li>Start other <a href="Key-Concepts-in-Forms.htm#Process" title="Click here to learn more." alt="Click here to learn more.">process flows</a> based on how much time has passed</li>
+            <li>Terminate process flows based on how much time has passed</li>
+        </ul>
+        <p>Timer catch events can be attached to user tasks and sub-processes or used independently.</p>
+        <ul>
+            <li>When used independently, timer catch events can delay the process flow for a certain amount of time.</li>
+            <li>When attached to a user task or sub-process, timer catch events can be used to start other process flows when a certain amount of time has passed without the user task or sub-process having completed. As they start other process flows, they can also either terminate the current process flow or let it continue.</li>
+        </ul>
+        <p>In the process designer, timer catch events are represented by the following symbol: <img src="Resources/Images/timer-catch-event-icon.PNG" /></p>
+        <h2 class="topicheading">Examples</h2>
+        <ul>
+            <li>Timer catch events can be used within the main process flow to delay the flow.</li>
+            <p class="ex"><b>Example:</b> During the initial customer interview, salespeople fill out a Potential Customer form. If the lead is promising, they want to follow up with the customer five business days later. A timer catch event within the flow delays the process for five days after the Potential Customer form is submitted and then sends out an email reminding the salesperson to follow up on the lead. </p>
+            <li>Timer catch events can be attached to <a href="User-Tasks.htm" title="Click here to learn more." alt="Click here to learn more.">user tasks</a> to handle deadlines or time constraints. When the deadline has passed, they can cause an alternate flow to be taken. Optionally, they can also interrupt the original process flow.</li>
+            <p class="ex"><b>Example:</b> The following diagram depicts a recruiting process. Susan takes care of screening all job applications her company receives. However, if she doesn't get to an application within five business days, then the application is sent to her assistant, Thomas. The process administrator can choose whether the initial process flow that sent the application to  Susan is canceled if she misses the deadline. If the process administrator chooses the<a href="#InterruptAttachedActivity" title="Click here to learn more." alt="Click here to learn more."><b>Interrupt attached activity</b> option</a> when configuring the timer catch event, Susan will not be able to review the application after five business days, and only Thomas can complete the review (i.e. the lower process flow in the diagram below is interrupted). If the process administrator does not choose the <b>Interrupt attached activity</b> option, then the application can still be screened by Susan even after it is sent to Thomas.</p>
+        </ul>
+        <p style="text-align: center;">
+            <img src="Resources/Images/recruiting_timer-catch.png" style="width: 619px;height: 275px;" alt="Process diagram of timer catch event being used to enforce a deadline." title="See the following instructions for how to configure the Interrupt attached activity option." />
+        </p>
+        <p>
+            <MadCap:toggler targets="DeadlinesInBPs">See a video on Setting Deadlines in Business Processes</MadCap:toggler>
+        </p>
+        <div MadCap:targetName="DeadlinesInBPs"><iframe loading="lazy" width="100%" height="500" src="https://doc.laserfiche.com/laserfiche.documentation/english/videos/Setting-Deadlines-In-Business-Processes-202303/Setting-Deadlines-In-Business-Processes-202303.html"></iframe>
+        </div>
+        <h2>Using  timer catch events to delay the main process flow</h2>
+        <ol>
+            <li>Double-click the timer catch event on the canvas to open its properties window. </li>
+            <li>In the <b>Name</b> text box, name the timer.</li>
+            <li>Under <b>Description</b>, describe the role the event plays in the process.</li>
+            <li>In the <b>Wait</b> drop-down list, specify whether the process should wait until a specified <b>Date and time</b>, <b>After</b> a specified amount of time, or until another time<b> </b>based on a<b> Variable</b>.</li>
+            <li>Based on your choice in step 3, you'll have to fill in more information about the length of time to wait. If you selected <b>After</b> or <b>Variable</b>, the <b>Exclude weekends</b> checkbox will appear. Select this option if days that fall on weekends should be ignored when calculating the number of days to wait.</li>
+        </ol>
+        <h2>Using timer catch events to handle deadlines or time constraints</h2>
+        <ol>
+            <li>Right-click the user task you want to add a deadline to and click <b>Attach timer event</b>.</li>
+            <li>Double-click the  timer that appears on the activity to open its properties window.</li>
+            <li>In the <b>Name</b> text box, name the timer.</li>
+            <li>Under <b>Description</b>, describe the role the event plays in the process.</li>
+            <li>
+               In the <b>Wait</b> drop-down list, specify whether the process should wait until a certain <b>Date and time</b>, <b>After</b> a certain amount of time, or until another time based on a<b> Variable</b>.
+            </li>
+            <li>Based on your choice in step 3, you'll have to fill in more information about the length of time to wait. If you selected <b>After</b> or <b>Variable</b>, the <b>Exclude weekends</b> checkbox will appear. Select this option if days that fall on weekends should be ignored when calculating the number of days to wait.</li>
+            <li><a name="InterruptAttachedActivity"></a>Select the <b>Interrupt attached activity</b> option if, after the specified length of time, the process should interrupt the user task after the specified time period and take the timer's outflow path.<ol><li>If you had instead selected <b>Do not interrupt the attached activity</b>, you have the further option to select  the <b>Repeat timer until attached activity is completed</b> option. If you select this option, the alternate process flow that begins from the timer catch event will run each time the interval specified under <b>Wait</b> has passed. This will happen until the attached activity has completed. For example, if you had configured the timer to send a reminder email after 3 days have passed without the activity being completed, <b>Repeat timer until attached activity is completed</b> will cause a reminder email to be sent after 6 days, 9 days, and so on, until the attached activity has been completed.</li></ol></li>
+            <li>After you have configured your timer catch event, you can connect it with the activities that should occur if the deadline is missed. </li>
+        </ol>
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Starting a Business Process From a Workflow</title>
+        <meta name="description" content="View and administer business processes on one page. On the Forms Manage page, you can download/export, copy, delete, update process instances to a specific version, or enable/disable processes. You can also edit process details (including version history) and configure process notifications." />
+    </head>
+    <body>
+        <h1>Starting a Process From a Workflow</h1>
+        <p>The <b>Invoke business process</b> option makes this process available to other processes in Laserfiche. For other processes to be able to start this process, it must have this item selected, and the process must be published and enabled.</p>
+        <ul>
+            <li>To access the Invoke business process option, from the Manage page, select the process that you would like to make available, and click the <b>Details</b> button.<br /><img src="Resources/Images/detailsbutton.PNG" alt="The process details button" /></li>
+        </ul>
+        <h2 class="topicheading"><a name="param"></a>Parameters</h2>
+        <p>Once enabled, the <b>Process Details</b> dialog will display the list of <b>Input Parameters</b> and <b>Output Parameters</b>. This list will initially be empty. To create parameters:</p>
+        <ol>
+            <li>Click <b>View Parameters</b> to open the <b>Input / Output Parameters</b> dialog.</li>
+            <li>On the <b>Input Parameters</b> tab, Click <b>+ Add Input</b> to add a new input parameter. Input parameters are used when the process is expecting to receive data from a workflow or process.</li>
+            <li>Select a <a href="Variables.htm">process variable</a> to accept the incoming data from the <b>Select a variable</b> dropdown.</li>
+            <li>Once a variable is selected, the <b>Parameter Name</b> will be populated with the variable name. If desired, rename the parameter to make it easy to identify when this process is selected.</li>
+            <li>If all available process variables are to be used for input, click <b>+ Add All Variables</b>. Rename parameters as necessary.
+                <div class="note"><p><b>Note</b>: The <b>Parameter Type</b> column can not be changed, as it relates to the variable type selected.</p></div></li>
+            <li>If the process will be sending data back to the process or workflow, output parameters must be defined on the <b>Output Parameters</b> tab.</li>
+            <li>Click <b>+&#160;Add Output</b> to add a variable to the list. This is very similar to input parameters.
+			<div class="note"><p><b>Note</b>: <a href="List-of-Variables.htm">Process information variables</a> are available for output as well as field variables.</p></div></li>
+            <li>Click <b>OK</b> to close the dialog and update the list of parameters on the Process Details page, and <b>Apply</b> to save the changes to the process.</li>
+        </ol>
+        <p class="note"><b>Note</b>:&#160;For the changes to take effect the process must be re-published after the process has been saved.</p>
+        <h2 class="topicheading" MadCap:conditions="Default.Do not include"><a name="Viewing"></a>Viewing and Modifying Process Details</h2>
+        <p MadCap:conditions="Default.Do not include">You can click on each process' <b>Details</b> button to view information about the process. In the <b>Process Details</b> dialog box, you can edit or view the following:</p>
+        <ul MadCap:conditions="Default.Do not include">
+            <li><b>Name</b>: The name of the process.</li>
+            <li><b>Description</b>: The process description, as provided by the process' creator.</li>
+            <li><b>Process status</b>: Whether the process is enabled or disabled. This does not indicate whether the process is published. Published processes have a version number. If a process does not have a version number displayed on the <b>Manage</b> page, it is unpublished. Processes must be both published and enabled before they can be started.<ul><li>Click on the toggler to enable or disable the process.</li></ul></li>
+            <li><b>Link</b>: The URL of the process' starting form, if there is a starting form.<ul><li>You can modify the URL in the provided text box.</li><li>To copy a link, click <b>Share</b>, then <b>Copy</b>. This copies the full URL to your clipboard.</li><li>To share a link by email, click <b>Share</b>, then <b>Email link</b>.</li></ul></li>
+            <li><b>Instance name</b>: How the process' instance names are formatted.</li>
+            <li><b>Summary details</b>: The process variables that should be shown in the <b><a href="Managing-Tasks-in-the-Inbox.htm" title="Click here to learn more." alt="Click here to learn more."><b>Tasks</b> tab</a></b>.<ul><li>In the left box, select the variables that you want displayed as columns in the Tasks tab.</li></ul></li>
+        </ul>
+        <p MadCap:conditions="Default.Do not include">If you modify any details, make sure to click <b>Save</b> at the bottom of the dialog box. Otherwise, changes will not be applied.</p>
+        <h2 class="topicheading" MadCap:conditions="Default.Do not include">Configuring Process Notifications</h2>
+        <p MadCap:conditions="Default.Do not include">Process notifications are configured in the <b>Details</b> pane on the right.</p>
+        <ol MadCap:conditions="Default.Do not include">
+            <li>Select the process you want to configure notifications for.</li>
+            <li>Expand the <b>Details</b> pane on the right.</li>
+            <li>Open the <b>Notifications</b> tab within the <b>Details</b> pane.</li>
+            <li>You can configure notifications for yourself and the process initiator. Scroll to the role for which you want to configure notifications.</li>
+            <li>Find the event for which you want to configure notifications. Toggle <b>Web</b> or <b>Email</b> notifications on or off for that event.</li>
+            <li>Repeat steps 4-5 as required. Click <b>Save</b> when you're done.</li>
+            <li>If you have turned on email notifications for any role, you can configure whether the notifications arrive as a daily digest or individual emails, or both. To do this, click <b>Configure email notifications</b> at the bottom of the <b>Notifications</b> pane.<ol style="list-style-type: lower-alpha;"><li>In the <b>Configure Email Notifications</b> dialog box, select the format of email notifications for each role that has email notifications.</li><li>Click <b>Save</b> when complete.</li></ol></li>
+        </ol>
+    </body>
+</html>

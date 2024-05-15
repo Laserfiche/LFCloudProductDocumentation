@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head><title>Configure Custom Error Messages | Laserfiche Forms | Process Automation</title>
+        <meta name="description" content="Create custom error messages that display when the values entered on a form don't meet certain criteria." />
+    </head>
+    <body>
+        <h1>Custom Error Messages in a Form</h1>
+        <p>In the <b>Error Messages</b> tab of the form designer, you can configure custom error messages to appear when users enter invalid inputs in form fields. These messages can appear when required fields are not filled in, or when the input for a field does not meet the conditions specified for that field (e.g. a date that is entered in a date field but not formatted properly). You can configure a single error message to appear for all fields of a certain type, a list of individual fields, or fields with labels match a regular expression.</p>
+        <p>As an example, we have a <a href="../../BusinessProcesses/Form-Fields/File-Upload.htm" title="Click here to learn more." alt="Click here to learn more.">file upload field</a> on a form that is configured to accept only files with the extensions <b>jpg</b> and <b>pdf</b>.</p>
+        <p>
+            <img src="Resources/Images/forms_fileupload_extensions.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 517px;height: 449px;" alt="Sample file upload field being edited in form designer" title="Restrict the file types allowed using the File extensions allowed field." />
+        </p>
+        <p>When a user tries to upload a file with a <b>docx</b> extension, we can configure a custom error message to be displayed. We want this message to display for all file upload fields on a form for which we specified a list of allowed file extensions, so we configure an error message that says "This type of file cannot be uploaded" when a user tries to upload files of invalid types on any of the file upload fields.</p>
+        <p>
+            <img src="Resources/Images/forms_customerror_filetype.PNG" style="border-left-style: solid;border-left-width: 1px;border-left-color: ;border-right-style: solid;border-right-width: 1px;border-right-color: ;border-top-style: solid;border-top-width: 1px;border-top-color: ;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: ;width: 327px;height: 182px;" alt="Sample custom error message for invalid file types" title="You can specify which file upload fields this error message applies to." />
+        </p>
+        <h3>To configure a custom error message</h3>
+        <ol>
+            <li>In the form designer, navigate to the <b>Error Messages</b> tab.</li>
+            <li>Click <b>Add Rule</b>.</li>
+            <li>Under <b>Display</b>, type the error message that you want displayed. You can insert tokens like the field label and the types of files allowed as part of the error message.</li>
+            <li>Under <b>When</b>, choose the type of event that should lead to an error message.</li>
+            <li>Under <b>For</b>, select the field types to which the error message rule will be applied.<ul><li>If you select <b>All fields</b>, the rule will be applied to all fields in the form. A violation of the condition under <b>When</b> for any field will lead to an error message for that field</li><li>If you select <b>These field type(s)</b>, you can choose field types that the error message will apply to when the type of event specified in step 3 occurs. Select a field type from the drop-down menu. To add more than one field type that the error message will apply to, click the <b>+</b> button and specify another field type. Repeat this step until you have specified all the fields that particular condition will apply to.</li><li>If you select <b>These individual field(s)</b>, you can choose the specific fields that the error message will apply to. Select one field from the drop-down menu, then click + and select more fields if necessary.</li><li>If you select <b>Fields with label matching</b>, enter a <a href="https://www.laserfiche.com/support/webhelp/Laserfiche/10/en-us/administration/Default.htm#../Subsystems/regex/Content/Regular-Expressions.htm" target="_blank">regular expression</a> in the regular expression box to make the condition apply to all fields with labels matching a certain pattern.</li></ul></li>
+        </ol>
+        <p>&#160;</p>
+    </body>
+</html>

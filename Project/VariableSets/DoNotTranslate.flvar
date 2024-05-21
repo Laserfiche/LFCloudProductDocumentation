@@ -317,15 +317,15 @@
   <Variable
     Name="Azure Active Directory"
     Comment=""
-    EvaluatedDefinition="Azure Active Directory">Azure Active Directory</Variable>
+    EvaluatedDefinition="Azure Active Directory">Microsoft Entra ID</Variable>
   <Variable
     Name="Azure AD"
     Comment=""
-    EvaluatedDefinition="Azure AD">Azure AD</Variable>
+    EvaluatedDefinition="Azure AD">Microsoft Entra ID</Variable>
   <Variable
     Name="Active Directory"
     Comment=""
-    EvaluatedDefinition="Active Directory">Active Directory</Variable>
+    EvaluatedDefinition="Active Directory">Microsoft Entra ID</Variable>
   <Variable
     Name="Laserfiche Bots"
     Comment=""

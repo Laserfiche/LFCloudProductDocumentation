@@ -12,7 +12,7 @@
             <li>Open the Import Agent Configuration Utility.</li>
             <li>Either select an existing profile to modify, or select <b>Profile</b> from the menu and select <b>New</b>. If you've already create a profile, you can choose to either create a new profile or copy an existing profile. Copying a profile is helpful if you need a profile similar to an existing profile and do not want to configure the entire profile from scratch. </li>
             <li>If you chose to create a new profile, the <b>Sign in</b> dialog box will prompt you to provide the credentials Import Agent will use to access Laserfiche.</li>
-            <li>Select the <b>Cloud</b> tab and provide a user&#160;account ID, user name, and password. You can find your account ID in the web client by selecting your user name in the upper right corner and then selecting <b>About</b>.
+            <li>Select the <b>Cloud</b> tab and provide a user&#160;(not built-in system) account ID, username, and password. You can find your account ID in the web client by selecting your user name in the upper right corner and then selecting <b>About</b>.
  We recommend using a <a href="https://doc.laserfiche.com/laserfiche.documentation/en-us/Default.htm#ServicePrincipals.htm" target="_blank" title="Click to learn more." alt="Click to learn more.">Service Principal</a> user, which is a secure, unlicensed user that Laserfiche provides for connecting applications.             <p class="note"><b>Note:</b>&#160;The user you choose to log in as must have sufficient rights to perform certain tasks. If the Laserfiche folder where files will be imported does not exist, the user must have rights to create  it. If you have configured Import Agent to insert or replace content when a  duplicate document is found, the user must have rights to modify the contents of the target document. The user must have rights to create documents in the destination folder, and, if you have configured Import Agent to assign metadata (e.g., templates, fields, tags), the account must have rights to do so.</p></li>
             <li>Click <b>OK</b>.</li>
             <li>Configure each of the following tabs:</li>
@@ -36,6 +36,7 @@
                         </ul>
                         <p class="ex"><b>Example:</b> If you specify that files must match <b>*.tif</b> then only TIFF images will be retrieved. If you specify that files must match <b>AAA*.tif </b>then only TIFF image files whose names start with <b>AAA</b> will be retrieved. The asterisk (<b>*</b>) used in these examples is a wildcard character that represents one or more characters. Import Agent supports two wildcards:&#160;*, representing any one or more characters, and ?, representing any single character.</p>
                         <p class="note"><b>Note:</b> If the profile's post-processing action is set to delete the source files, read-only files will be ignored. If the post-processing action is set to move the source files, read-only files will be imported. <a href="#PostProcessing" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</p>
+                        <li>Under <b>Laserfiche files</b>, you can configure settings for Laserfiche files that are specific to the profile you are configuring. These settings override the global list file settings and Laserfiche briefcase settings configured in the File Type tab of <a href="Import-Agent-Options.htm" target="_parent" title="Click to learn more." alt="Click to learn more.">Import Agent's options</a>. You can configure the profile to<ul><li>Recognize files with LST&#160;extensions as list files</li><li>Recognize files with XML and LSTX extensions as list files</li><li>Recognize files with LFB extensions as list files</li></ul></li>
                     </ol>
                 </div>
                 <li><a name="Properties"></a>
@@ -61,6 +62,7 @@
                     <p>Use the <b>Fields</b> tab to assign a template and/or fields  to imported documents. Configure the tab using any of the following methods:</p>
                     <ul>
                         <li>Assign fields using a template. Select a template and the fields associated with the  selected template will appear.</li>
+                        <p class="note"><b>Note:</b> <a href="https://doc.laserfiche.com/laserfiche.documentation/11/administration/en-us/Default.htm#../Subsystems/LFAdmin/Content/Dynamic_Fields.htm" target="_blank">Dynamic fields</a> are not supported in Import Agent. </p>
                         <li>Assign fields independent of a template. Click <b>Add/remove fields</b> and select fields.</li>
                         <li>Use a combination of the above.</li>
                     </ul>
@@ -89,7 +91,7 @@
                         <li>Choose one the following options.</li>
                         <ul>
                             <li><b>Continuously:</b>Import Agent will  retrieve files continuously.</li>
-                            <p class="ex"><b>Tip:</b> You can configure how often Import Agent will check for new files. <a href="Import-Agent-Options.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</p>
+                            <p class="ex"><b>Tip:</b> You can configure how often Import Agent will check for new files. <a href="Import-Agent-Options.htm#Advanced" title="Click here to learn more." alt="Click here to learn more." target="_blank">Learn more</a>.</p>
                             <li><b>Only at these times:</b>Import Agent will only  import files during a specified time interval. Click <b>Add</b> to define the interval. You can create multiple schedules.</li>
                             <li><b>Disable this profile:</b> The profile will be inactive until this option is cleared.</li>
                         </ul>
@@ -99,10 +101,10 @@
                     <MadCap:toggler targets="Processing">Processing</MadCap:toggler>
                 </li>
                 <div MadCap:targetName="Processing">
-                    <p>Use the <b>Processing</b> tab to specify if text will be retrieved from files, how long text pages will be, and how PDFwill be processed. When configuring this tab, keep in mind that:</p>
+                    <p>Use the <b>Processing</b> tab to specify if text will be retrieved from files, how long text pages will be, and how PDFs will be processed. When configuring this tab, keep in mind that:</p>
                     <ul>
                         <li>All settings are optional.</li>
-                        <li>You can configure OCR settings, such  as language preference and image rotation. <a href="Import-Agent-Options.htm" title="Click here to learn more." alt="Click here to learn more.">Learn more</a>.</li>
+                        <li>You can configure OCR settings, such  as language preference and image rotation. <a href="Import-Agent-Options.htm" title="Click here to learn more." alt="Click here to learn more." target="_parent">Learn more</a>.</li>
                     </ul>
                     <p><b>To configure the Processing tab</b>
                     </p>
@@ -117,11 +119,10 @@
                         <p class="note"><b>Note:</b> If the text file has over 8,388,608 characters, then you must split the file before that character limit is reached to avoid an error. </p>
                         <li>Under <b>PDF file processing</b>, choose if you want to generate Laserfiche image pages when importing PDF files.</li>
                         <ul>
-                            <li><b>Generate Laserfiche pages:</b> Enable Import Agent to generate LaserficheTIFF image pages when importing a PDF file.</li>
+                            <li><b>Generate Laserfiche pages:</b> Enable Import Agent to generate LaserficheTIFF image pages when importing a PDF file. If you know the documents you are importing are color, black and white, or high-quality color, select the corresponding option from this drop-down menu. If you are importing black and white documents, selecting that option can reduce file size and save space. The legacy option uses the default PDF storage process.</li>
                             <ul>
                                 <li><b>Keep original PDF files:</b> Retain the PDF file after generating TIFF image pages. The import process will import the original unaltered PDF along with the TIFF image pages.</li>
                                 <li><b>Preserve PDF annotations on Laserfiche pages:</b> Convert PDF annotations to the equivalent Laserfiche annotations when generating TIFF image pages.</li>
-                                <li><b>Import monochrome images:</b> By default, the import process attempts to verify color information in an imported PDF to determine whether to generate image or monochrome images. Select this option to speed PDF importing and always create monochrome images.</li>
                                 <li><b>Ignore PDF&#160;native text:</b> By default, Import Agent uses native text extraction for PDFs. Select this option to use OCRed text instead of native text.</li>
                                 <li><b>Create pages at DPI:</b> By default, Import Agent generates TIFF images that are 300x300 DPI. Select this checkbox to configure a different DPI value.</li>
                             </ul>
@@ -168,6 +169,7 @@
                             <li><b>Deleted</b> Source files will be deleted.</li>
                             <li><b>Moved to</b> Source files will be moved to another Windows folder. Specify  the full path to a folder on the current machine or use a UNC to specify a folder on a network drive (e.g., <b>\\ComputerName\ShareName\Path</b>). You can enter regular text, click the Token button (<b>&gt;</b>) to use tokens, or use a combination of the two.</li>
                         </ul>
+                        <li>[Optional] Select to delete unmodified files after a specific time frame. This setting deletes successfully imported files based on their last modified dates in Windows, not their import dates. </li>
                         <li>Under <b>Files that failed to import</b>, specify  the full path to a folder on the current machine or use a UNC to specify a folder on a network drive. Files that Import Agent fails to import will be moved to this location.</li>
                         <p class="ex"><b>Tip:</b> You should regularly check this folder. Once you determine why Import Agent failed to import a file, correct the issue then move the file back to the original Windows folder. The file will be imported the next time the profile runs.</p>
                         <li>Under <b>Monitored subfolders</b>, specify if you want to delete subfolders that are empty after their contents have been imported. </li>
@@ -211,7 +213,7 @@
         <p class="note"><b>Note:</b> Profiles are stored as <MadCap:variable name="DoNotTranslate.XML"></MadCap:variable> files under Program Data. (E.g., <b>C:\ProgramData\Laserfiche\ImportAgent\Profiles</b>)</p>
         <h2 class="topicheading">Disabling a Profile</h2>
         <p>You can disable individual profiles to temporarily prevent them from running. To do so, open the profile and navigate to the <b>Schedule</b> tab. Select <b>Disable this profile</b>. The profile will remain, but will not run until you have returned to the Schedule tab and chosen an other schedule option.</p>
-        <p>To disable all profiles at once, stop or pause the Import Agent service. For more information, see <a href="Installing-Import-Agent.htm#Laserfic">Laserfiche Import Agent Service</a>.</p>
+        <p>To disable all profiles at once, stop or pause the Import Agent service. For more information, see <a href="Installing-Import-Agent.htm#Laserfic" title="Click to learn more." alt="Click to learn more.">Laserfiche Import Agent Service</a>.</p>
         <h2 class="topicheading">Deleting a Profile</h2>
         <p>To delete a profile, select the profile and press the Delete (<img src="Resources/Images/ia-delete.png" />)&#160;button, or open the <b>Profile</b> menu and select <b>Delete</b>.</p>
     </body>

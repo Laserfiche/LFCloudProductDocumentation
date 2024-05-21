@@ -9,7 +9,7 @@
         <h2 class="topicheading">General</h2>
         <p><b>Count</b>
         </p>
-        <p>Sets the starting point for the Session Count token. See <a href="Import-Agent-Tokens.htm">Import Agent Tokens</a> for more information.</p>
+        <p>Sets the starting point for the Session Count token. See <a href="Import-Agent-Tokens.htm" title="Click to learn more." alt="Click to learn more.">Import Agent Tokens</a> for more information.</p>
         <p style="font-weight: bold;">Distributed Computing Cluster</p>
         <p>Laserfiche Cloud users should leave the Distributed Computing Cluster section blank.</p>
         <p><b>OCR</b>
@@ -56,20 +56,21 @@ Click <b>Configure</b> open the <b>Image Clean-up Options</b> dialog box and con
         <p>Laserfiche supports import via two Laserfiche-specific formats that allow you to import multiple documents at once:&#160;list files and briefcase files.</p>
         <p>The <b>Recognize files with LST extensions as list files</b> and <b>Recognize files with XML&#160;and LSTX extensions as list files</b> options allow you to import list files, which allow for more precise handling of import in certain cases. For information on the structure of XML import list files, see the schema definition file and sample XML files included in the installation directory (e.g., C:\Program Files\Laserfiche\Import Agent\List File Examples).</p>
         <p>The Recognize files with LFB extensions as Laserfiche briefcases option allows you to import Laserfiche briefcases using Import Agent. See <a href="Printing_and_Exporting.htm#Exportin">Exporting a Collection of Documents and Folders as a Briefcase</a> for more information on briefcases.</p>
-        <h2 class="topicheading">Advanced</h2>
+        <h2 class="topicheading"><a name="Advanced"></a>Advanced</h2>
         <p>Import Agent receives notifications from your operating system that help it determine when files are available for import. In some situations, Import Agent is unable to import a file after receiving a notification (e.g., the file was in use when the notification was sent). To prevent files from being overlooked, Import Agent periodically checks monitored directories. You can specify how often a check should be performed, as well as how long Import Agent should wait before importing files  that have been recently modified. These options are useful in situations where content is being added toa file as it is being created.</p>
         <p class="ex"><b>Example:</b> Your scanner has been configured to create multi-page TIFF images. In this scenario, you should  increase the time interval that Import Agent waits so your scanner has enough time to create all of the document's pages.</p>
         <p class="ex"><b>To configure monitoring options</b>
         </p>
         <ol>
             <li>In the Options menu, open the Advanced tab.</li>
-            <li>            Under <b>File monitoring interval</b>,  specify the number of seconds that must elapse between each time that Import Agent will check for new files.
-            </li>
+            <li>Under <b>File monitoring interval</b>,  specify the number of seconds that must elapse between each time that <MadCap:variable name="DoNotTranslate.Import Agent" /> will check for new files.
+			</li>
             <li>Under <b>New files</b>, specify the number of seconds that must elapse  after a file's been modified before it can be imported into Laserfiche.
-            </li>
-            <li>Under <b>Import Thread Count</b>, specify the number of threads Import Agent will run on. This allows you to run Import Agent on machines with lower processing speeds.</li>
+			</li>
+            <li>Under <b>Import Thread Count</b>, specify the number of threads Import Agent will run on. This allows you to run Import Agent on machines with lower processing speeds. <ul><li>If you are running Import Agent on a powerful machine, you can increase thread count and enable parallel processing in the next step. </li><li>If Import Agent is taking too many resources and affecting the performance of other products, reduce the thread count and clear the parallel processing option in the next step. </li></ul></li>
+            <li>Select <b>Enable parallel processing for each profile,</b> to allow for profiles to run in parallel. </li>
             <li>Click <b>OK</b>.
-                <p class="note"><b>Note:</b> These settings apply to all profiles.</p></li>
+			<p class="note"><b>Note:</b> These settings apply to all profiles.</p></li>
         </ol>
     </body>
 </html>

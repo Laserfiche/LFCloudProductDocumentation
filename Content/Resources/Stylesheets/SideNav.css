@@ -85,6 +85,15 @@ p.note
 	font-family: Arial;
 }
 
+p.training
+{
+    color: #dc5f24;
+    border: 1px solid #dc5f24;
+    background-color: #fef4eb;
+    padding: 12px 18px 15px;
+    font-family: Arial;
+}
+
 a.nav-link.active
 {
 	border-bottom: 3px solid;

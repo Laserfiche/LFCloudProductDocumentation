@@ -1,8 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
-    <head>&#160;</head>
+    <head>
+    </head>
     <body>
-        <h1>Migrating Data From A Self-Hosted Laserfiche Repository Into Laserfiche Cloud</h1>
+        <h1>Migrating Repository Data From A Self-Hosted Laserfiche Repository Into Laserfiche Cloud</h1>
         <p>The <b>Repository Export Client</b> is a batch upload tool that processes and uploads data from a self-hosted Laserfiche repository to a Laserfiche Cloud repository as part of a multi-phase process:</p>
         <ol>
             <li><b>Pre-migration user listing preparation within Laserfiche Cloud:</b> If you want to map existing Laserfiche users in the self-hosted repository to Laserfiche Cloud users, you must create matching Laserfiche Cloud user accounts prior to running the Repository Export Client. When running the Repository Export Client, there is a step that retrieves a list of users from your Laserfiche Cloud account that can be mapped to users in the self-hosted repository.</li>
@@ -32,7 +33,7 @@
             <li><MadCap:variable name="DoNotTranslate.Microsoft SQL&#160;Server" /> 2019</li>
         </ul>
         <p class="note"><b>Note:</b> The Repository Export Client does not support repositories hosted in Oracle Database.</p>
-        <h2>Planning the Migration</h2>
+        <h2 class="topicheading">Pre-migration Planning</h2>
         <p>Repository migrations can be a lengthy process. Careful review of the migration procedure and its limitations can save significant time. Consider the following when planning the migration:</p>
         <ul>
             <li><b>What data will and will not be migrated:</b> Review the <a href="#constraints">Migration Constraints</a> section below to determine if any critical data will not be transferred to Laserfiche Cloud by the migration process or if processes are reliant on features not supported in Laserfiche Cloud.</li>
@@ -42,12 +43,13 @@
             <li><b>User and group account mappings from the self-hosted repository to Laserfiche Cloud:</b> These mappings are needed to preserve security settings, including access rights and must be created in Laserfiche Cloud prior to starting the migration. See below for more information.</li>
         </ul>
         <p>To perform user and group account mappings, navigate to the Laserfiche Cloud Account Administration site and create user and group accounts to match the existing accounts in your self-hosted Laserfiche repository. This pre-migration step is necessary if you want to map existing user and group accounts to corresponding accounts in Laserfiche Cloud. During the configuration process, the Repository Export Client will allow you to manually associate user accounts in the repository with Laserfiche Cloud user accounts. If using single sign-on (SSO) with Laserfiche Cloud, users may need to sign in to Laserfiche Cloud first to have their user account automatically provisioned.</p>
-        <p>Download and install the latest version of the Repository Export Client on the machine hosting the Laserfiche Server (LFS) service. Ensure that sufficient memory is available for the Repository Export Client to operate if the Laserfiche Server service will not be stopped during the migration.</p>
-        <p>Solution providers can view the <a href="repo-import-monitor.htm">Repository Import Monitor</a> site to download the latest version of the Repository Export Client.</p>
+        <h2 class="topicheading">Monitoring Migrations</h2>
+        <p>Solution providers can view the <a href="repo-import-monitor.htm">Repository Import Monitor</a> site to view the status of migrations for their customers. Authorized Solution Providers may also be able to perform certain administrative functions like initiating an import, downloading the latest version of the Repository Export Client, or generating a registration code for the Repository Export Client.</p>
         <p MadCap:conditions="Default.Do not include">Download the latest installation for the Repository Export Client from the following location:</p>
         <p MadCap:conditions="Default.Do not include"><a href="https://repositoryimport.laserfiche.com/api/ClientRequest/Client">https://repositoryimport.laserfiche.com/api/ClientRequest/Client</a>
         </p>
-        <h2>Performing the Migration</h2>
+        <h2 class="topicheading">Performing the Migration</h2>
+        <p>Download and install the latest version of the Repository Export Client on the machine hosting the Laserfiche Server (LFS) service. Ensure that sufficient memory is available for the Repository Export Client to operate if the Laserfiche Server service will not be stopped during the migration.</p>
         <ol>
             <li>Start the Repository Export Client. By default, the utility executable is installed at <b>C:\Program Files\Laserfiche\Repository Export Client\RepositoryExportClient.exe.</b></li>
             <li>On the starting step, use the <MadCap:toggler targets="rec01">Planning option</MadCap:toggler> to view general statistics about your Laserfiche repository. The utility will run a Laserfiche volume consistency check, identify any unsupported volumes or features and calculate the amount of data in your repository. Correct any reported errors that block the migration before continuing to the next step.<img src="Images/rec01.png" style="border-style: solid; border-width: 1px;" MadCap:targetName="rec01" /><p class="note"><b>Important:</b> The repository size estimate is used to estimate how long the migration process may take to complete. It is not an exact value used to determine the actual storage usage in Laserfiche Cloud post migration. On Windows, 1 gigabyte (GB) is defined as 1,073,741,824 bytes. On Laserfiche Cloud, 1 gigabyte (GB) is defined as 1,000,000,000 bytes. The gigabyte number of storage size displayed on Cloud may be larger than your local storage size.</p></li>
@@ -62,8 +64,9 @@
             <li>
                 <MadCap:toggler targets="rec05">On the Map Users step</MadCap:toggler>, map your self-hosted users to Laserfiche Cloud users. The Repository Export Client will display a list of available users in your existing repository and Laserfiche Cloud user accounts and try to automatically map them based on name. The mapping is strictly 1-to-1 for users and groups. Ensure that the appropriate self-hosted users are mapped so that your security settings and associated audit data details will be transferred when migrated to Cloud. Choose <b>Do Not Map</b> if you do not want to map the cloud user to any self-hosted user. Click <b>Save</b> to save the user mapping before proceeding to the next step.<img src="Images/rec05.png" MadCap:targetName="rec05" /></li>
             <li>On the <b>Review</b> step, verify your settings before starting the migration process. Based on your connection speed and repository size, an estimated migration time will be provided to help you plan.</li>
-            <li>On the <b>Process Status</b> step, monitor the export status. It is recommended that you only view the self-hosted repository in read-only mode during the export. Otherwise, you will need to manually take note of any changes to the repository and to manually upload those changes to the cloud after the migration. Once started, the process will overwrite any content you may already have in your Laserfiche Cloud repository. Once the data has finished uploading, a Laserfiche internal process will start to migrate the uploaded data into a Laserfiche Cloud repository. There may be additional processing time after the upload completes before your cloud repository is ready for use.</li>
+            <li>On the <b>Process Status</b> step, monitor the export status. It is recommended that you only view the self-hosted repository in read-only mode during the export. Otherwise, you will need to manually take note of any changes to the repository and to manually upload those changes to the cloud after the migration. Once started, the process will overwrite any content you may already have in your Laserfiche Cloud repository. Once the data has finished uploading, a Laserfiche internal process will start to migrate the uploaded data into a Laserfiche Cloud repository. There may be additional processing time after the upload completes before your cloud repository is fully ready for use.</li>
         </ol>
+        <p class="note"><b>Note:</b> The repository can become available for use during the latter stages of the migration. After the Repository Export Client completes the database upload step, the repository becomes available for use during the volume migration step. However, please be aware that the import process is still in progress and that select documents and repository functions may be limited until the migration is fully completed. Solution Providers can view the migration status from the <a href="repo-import-monitor.htm">Repository Import Monitor</a>.</p>
         <h2><a name="constraints"></a>Migration Constraints</h2>
         <p>	The migration tools and processes do not transfer information pertaining to certain self-hosted Laserfiche repository features that are either not applicable or not available to a Laserfiche Cloud repository. The presence of this information in the repository does not stop the migration but may affect what data is migrated and the security configuration of the migrated data. The following types of repository data are not currently migrated:</p>
         <ul>

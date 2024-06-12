@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<html xmlns:MadCap="http://www.madcapsoftware.com/Schemas/MadCap.xsd">
+    <head>
+    </head>
+    <body>
+        <h1>Configure Encrypted SAML Assertions</h1>
+        <p>Microsoft Entra ID and Okta support the option of encrypting the SAML&#160;assertions emitted to Laserfiche. Both identity providers include an option where you can import a public key certificate from Laserfiche.</p>
+        <p><b>To download the certificate from Laserfiche</b>
+        </p>
+        <ol>
+            <li>Sign in to Laserfiche Cloud and navigate to the Account Administration service.</li>
+            <li>View the <b>Settings</b> page and click on the <b>Single Sign-On</b> tab.</li>
+            <li>Click the <b>Service Provider Information</b> link to view additional information.</li>
+            <li>Locate the <b>Public certificate</b> field and click on the Download link to download the public key certificate that you can import into your identity provider.<img src="Images/ServiceProviderInformation.png" title="screenshot of service provider information dialog" alt="screenshot of service provider information dialog" style="border-style:solid; border-width:1px; width:100%;" /></li>
+        </ol>
+        <p><b>Configure Microsoft Entra SAML token encryption</b>
+        </p>
+        <ol>
+            <li>Sign in to the Microsoft Entra admin center.</li>
+            <li>On the Laserfiche application page, select <b>Token encryption</b>.</li>
+            <li>On the <b>Token encryption</b> page, select <b>Import Certificate</b> to import the certificate downloaded from the Laserfiche Cloud service provider information dialog.</li>
+            <li>Activate encryption by selecting the <b>...</b> menu next to the thumbprint status and select <b>Activate token encryption certificate</b>.</li>
+        </ol>
+        <p><a href="https://learn.microsoft.com/en-us/entra/identity/enterprise-apps/howto-saml-token-encryption?tabs=azure-portal" target="_parent">See Microsoft's documentation for additional information</a>
+        </p>
+        <p><b>Configure Okta Assertion Encryption</b>
+        </p>
+        <ol>
+            <li>Sign in to the Okta Admin Console.&#160;</li>
+            <li>Go to Applications &gt; Applications and select the Laserfiche app integration.</li>
+            <li>Select the <b>General</b> tab. </li>
+            <li>In the <b>SAML&#160;Settings</b> section, select <b>Edit</b>.</li>
+            <li>On the <b>Configure SAML</b>&#160;step, select <b>Show Advanced Settings</b>.</li>
+            <li>Next to the <b>Assertion Encryption</b> field, choose whether the SAML&#160;assertion is encrypted.</li>
+            <li>The <b>Encryption Certificate</b> field appears when <b>Assertion Encryption</b> is set to <b>Encrypted</b>. Upload the certificate downloaded from the Laserfiche Cloud service provider information dialog. </li>
+            <li>Finish the remaining steps in the Application Integration Wizard. </li>
+        </ol>
+        <p><a href="https://help.okta.com/oie/en-us/content/topics/apps/aiw-saml-reference.htm" target="_parent">See Okta's application integration wizard SAML field reference for additional information</a>
+        </p>
+    </body>
+</html>

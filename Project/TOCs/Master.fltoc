@@ -741,6 +741,9 @@
           Link="/Content/AttributeMappings.htm" />
       </TocEntry>
       <TocEntry
+        Title="Configure Encrypted SAML Assertions"
+        Link="/Content/configuring-encrypted-saml-assertions.htm" />
+      <TocEntry
         Title="Configure Single Sign-On with Active Directory Federation Services (AD FS)"
         Link="/Content/sso.htm"
         conditions="Default.Exclude"></TocEntry>

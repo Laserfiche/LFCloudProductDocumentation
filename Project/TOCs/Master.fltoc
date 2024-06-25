@@ -767,9 +767,6 @@
     <TocEntry
       Title="Miscellaneous Topics">
       <TocEntry
-        Title="Granting Temporary Access For Technical Support Purposes"
-        Link="/Content/GrantingTemporaryAccessForTechnicalSupport.htm"></TocEntry>
-      <TocEntry
         Title="Migrating Data From A Self-Hosted Laserfiche Repository Into Laserfiche Cloud"
         Link="/Content/repositoryimport.htm"
         StartSection="false">

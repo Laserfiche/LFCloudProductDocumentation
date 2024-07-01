@@ -67,5 +67,12 @@ Choice 3,Value_3,false</pre></div></li><li>Click <b>Export choices as .csv file<
                 </ol>
             </div>
         </div>
+        <h3>Additional information for checkbox fields</h3>
+        <p>Checkboxes handle values differently than other field types. They require that the value start with a letter and contain no spaces. If a number is used as the first character in the value, <i>V_</i> is automatically added to the beginning of that value. Additionally, if spaces are included in the value, those are replaced by the underscore character. When these values are exported or passed to a rule or workflow, these are automatically stripped from the value, and internal underscores are replaced with spaces.</p>
+        <p>For example, in the following image each <b>Value</b> when passed as a parameter to a workflow or stored in a lookup table via a rule would be <i>Choice 1, Choice 2, </i>or<i> 5</i> with the underscores replaced by spaces within the words, and the number stripped of the <i>V_</i> prefix. </p>
+        <p>
+            <img src="../Resources/Images/chkbx-value-conversion.png" style="border-left-style: solid;border-left-width: 1px;border-left-color: #000000;border-right-style: solid;border-right-width: 1px;border-right-color: #000000;border-top-style: solid;border-top-width: 1px;border-top-color: #000000;border-bottom-style: solid;border-bottom-width: 1px;border-bottom-color: #000000;" />
+        </p>
+        <p class="note"><b>Note:</b>&#160;Underscores not part of the prefix will always be replaced with spaces when passed out. If the value is created as <i>o__ne</i> with two underscores, the resulting passed value will be <i>o&#160;&#160;ne</i> with two spaces.</p>
     </body>
 </html>
